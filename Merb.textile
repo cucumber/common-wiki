@@ -1,0 +1,1 @@
+Cucumber can be used with "Merb":http://merbivore.com/ via the "merb_cucumber":http://github.com/david/merb_cucumber plugin.
