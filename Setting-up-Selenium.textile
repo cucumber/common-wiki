@@ -10,13 +10,13 @@ h2. Step 2: Install Selenium-remote
 
 Unfortunately the jar that the Selenium gem (version 1.1.14) comes with does not work with Firefox 3. So we have to get the latest jar from the Selenium-RC site: 
 
-Download the Selenium nightly build:
+Download the Selenium RC Beta 2:
 
-"http://selenium-rc.seleniumhq.org/download.html":http://selenium-rc.seleniumhq.org/download.html
+"http://seleniumhq.org/download/":http://seleniumhq.org/download/
 
 Once you have extracted the download we copy: 
 
-selenium-remote-control-1.0-SNAPSHOT/selenium-server-1.0-SNAPSHOT/selenium-server.jar
+selenium-remote-control-1.0-beta-2/selenium-server-1.0-beta-2/selenium-server.jar
 
 Over the jar that was installed with the Selenium gem:
 
