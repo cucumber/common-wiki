@@ -1,4 +1,4 @@
-IMPORTANT: See Cucumber-Rails' "README":http://github.com/aslakhellesoy/cucumber-rails/blob/master/README.rdoc for updated instructions for Rails3. This page will be updated with Rails3 info later.
+*{color: red}IMPORTANT*: See Cucumber-Rails' "README":http://github.com/aslakhellesoy/cucumber-rails/blob/master/README.rdoc for updated instructions for Rails3. This page will be updated with Rails3 info later.
 
 Cucumber supports Ruby on Rails out of the box. Currently the following Rails versions are tested with "cucumber-rails-test":http://github.com/aslakhellesoy/cucumber-rails-test
 
@@ -16,16 +16,15 @@ Cucumber supports Ruby on Rails out of the box. Currently the following Rails ve
 
 Older versions will never be supported as it requires too much work. These instructions assume you already have a Rails project, and that you have a shell where the current directory is the root of your Rails app.
 
-h2. Install Cucumber
+h2. Install Cucumber-Rails
 
-<pre><code>[sudo] gem install cucumber</code></pre>
-
-*{color: red}Starting from Cucumber 0.4.5 you will need the cucumber-rails gem*
 <pre><code>[sudo] gem install cucumber-rails</code></pre>
 
-h2. Bootstrap Cucumber
+The <code>cucumber-rails</code> gem depends on the <code>cucumber</code> gem, so you don't need to install that separately.
 
-Cucumber needs to add a few files to your project:
+h2. Bootstrap Cucumber-Rails
+
+Cucumber-Rails needs to add a few files to your project:
 
 <pre><code>ruby script/generate cucumber</code></pre>
 
