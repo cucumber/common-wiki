@@ -9,3 +9,21 @@ Before do
 end
 </code>
 </pre>
+
+If you are using transactional fixtures in Rails then instead of loading your fixtures before each scenario you can load it once by placing the same code in your env.rb file.  For example:
+
+<pre>
+<code>
+# Sets up the Rails environment for Cucumber
+ENV["RAILS_ENV"] = "test"
+require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
+require 'cucumber/rails/world'
+Cucumber::Rails.use_transactional_fixtures
+
+#Seed the DB
+Fixtures.reset_cache
+fixtures = Dir[File.join(RAILS_ROOT, 'spec/fixtures', '*.yml')].map{ |f| File.basename(f, '.yml') }
+Fixtures.create_fixtures('spec/fixtures', fixtures)
+
+</code>
+</pre>
