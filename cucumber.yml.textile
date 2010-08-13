@@ -1,1 +1,15 @@
-See [[Running Features]]
+Cucumber lets you store and reuse commonly used cucumber command line arguments for a project in a <code>cucumber.yml</code> file. This file must be in your project's root directory. (Actually, Cucumber looks for it in the current directory, but this is usually the root directory of your project).
+
+For example, by having this in your cucumber.yml at your project root:
+
+<pre><code>default: --format profile features
+html_report: --format progress --format html --out=features_report.html features  
+</code></pre>
+
+You can reuse the arguments listed above:
+<pre><code>cucumber --profile html_report
+</code></pre>
+
+It is important to point out that by simply running 'cucumber' the default profile will be used (if a cucumber.yml file is found in the current directory).
+
+Also see [[Running Features]] for more details about how to execute your features.
