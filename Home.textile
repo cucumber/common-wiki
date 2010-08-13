@@ -42,7 +42,7 @@ with Cucumber in a few days.
 
 While Cucumber can be thought of as a "testing" tool, the intent of the tool is to support "BDD":http://behaviour-driven.org/.
 This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else, and 
-the production code is then written outside-in, to make them pass.
+the production code is then written "outside-in":http://dannorth.net/whats-in-a-story, to make them pass.
 
 h2. Installation
 
@@ -101,7 +101,7 @@ Work outside-in (the outside being the feature, the inside being the low level c
 
 h3. Business value and MMF
 
-You should discuss the "In order to" part of the feature and pop the "why" stack max 5 times (ask why recursively) 
+You should discuss the "In order to" part of the feature and "pop the why stack":http://www.theregister.co.uk/2007/06/25/thoughtworks_req_manage/ max 5 times (ask why recursively) 
 until you end up with one of the following business values:
 
 * Protect revenue
