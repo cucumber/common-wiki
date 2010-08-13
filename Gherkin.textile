@@ -14,26 +14,19 @@ The following notes are an unofficial (and possibly inaccurate) summary of Gherk
 
 h3. General<p>
 
-h4. Comment Lines
+h4. Headings
 
-Comment lines are allowed anywhere in the file.
-They begin with zero or more spaces, followed by a sharp sign (#)
-and some amount of text.
-
-h4. Headings and Verbs
-
-Each non-comment line in Gherkin begins with a "heading" (eg, <tt>Feature:</tt>)
-or an "action" (eg, <tt>Given</tt>).
+Most Gherkin lines begin with a "heading" (eg, <tt>Feature:</tt>, <tt>Given</tt>).
 The following text is either unparsed or parsed by regular expressions in a "steps" file.
-The heading/action is separated from the following text by one or more spaces,
-which are not passsed to the regular expressions.
+The heading is separated from the following text by one or more spaces,
+which are not passed to the regular expressions.
 
 Gherkin provides parsers for dozens of languages, including (at this writing)
-Arabic, Chinese (Simplified), Danish, Dutch, English, Estonian, French, German, Italian, Japanese,
-Korean, Lithuanian, LOLCAT, Malay, Norwegian, Polish, Portuguese,
+Arabic, Chinese (Simplified), Danish, Dutch, English, Estonian, French, German, Italian,
+Japanese, Korean, Lithuanian, LOLCAT, Malay, Norwegian, Polish, Portuguese,
 Romanian (with and without diacritical marks), Russian,
 Spanish, Swedish, Texan, and Welsh.
-This note lists only the English reserved words;
+This note lists only the English headings;
 for corresponding words in other languages, see <tt>.../lib/cucumber/languages.yml</tt>.
 
 <pre>
@@ -50,3 +43,13 @@ for corresponding words in other languages, see <tt>.../lib/cucumber/languages.y
   then:              Then
   when:              When
 </pre>
+
+h4. Unparsed Lines
+
+Comment lines are allowed anywhere in the file.
+They begin with zero or more spaces, followed by a sharp sign (#)
+and some amount of text.
+
+Lines of descriptive text may follow a <tt>Feature:<tt> line.
+These must be indented and are not parsed.
+The descriptive text may be followed by a <tt>Scenario:<tt> line or a blank line.
