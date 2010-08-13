@@ -26,8 +26,8 @@ For instance, if your shell has a black background and a green font (like the
 "Homebrew" settings for OS X' Terminal.app), you may want to override passed
 steps to be white instead of green. Examples:
 
-<pre>export CUCUMBER_COLORS="passed=white"
-export CUCUMBER_COLORS="passed=white,bold:passed_param=white,bold,underline"
+<pre>export CUCUMBER_COLORS=passed=white
+export CUCUMBER_COLORS=passed=white,bold:passed_param=white,bold,underline
 </pre>
 
 Aslak likes to highlight all parameters in magenta, so he uses this:
