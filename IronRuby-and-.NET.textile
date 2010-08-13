@@ -86,12 +86,11 @@ On my system <code>icucumber.bat</code> looks like this (You may have to change 
 
 <pre><code>@ECHO OFF
 REM This is to tell IronRuby where to find gems.
-SET GEM_PATH=%~dp0..\lib\ruby\gems\1.8
-@"C:\scm\ironruby\build\debug\ir.exe" "%~dp0cucumber" %*
+SET GEM_PATH=c:\ruby\lib\ruby\gems\1.8
+@"C:\ironruby\build\debug\ir.exe" "c:\ruby\bin\cucumber" %* 
 </code></pre>
 
-Tip: <code>%~dp0</code> evaluates to "current script's directory with trailing backslash" in case
-you're wondering what this is.
+Tip: C:\ruby\... is just the path to your Ruby installation, if you've chosen to install it elsewhere, change that part of the script. Also C:\ironruby\... is just the path to your IronRuby installation, so again, if you've chosen to install it elsewhere (like C:\Languages\IronRuby), you should update the script.
 
 Now you should be able to run Cucumber with IronRuby:
 
