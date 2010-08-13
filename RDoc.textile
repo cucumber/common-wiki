@@ -1,4 +1,4 @@
-The RDoc for the latest Cucumber code is here: http://rdoc.info/projects/aslakhellesoy/cucumber
+The RDoc for the latest Cucumber code is hosted on "rdoc.info":http://rdoc.info/projects/aslakhellesoy/cucumber
 This documentation always reflects the HEAD of aslakhellesoy's master branch.
 
 If you want the RDoc for a particular version of Cucumber you must build it yourself:
