@@ -25,7 +25,10 @@ gem update --system
 
 h2. Installing IronRuby
 
-<pre>SVN for IronRuby is old, do refer to http://wiki.github.com/ironruby/ironruby/building for current build process</pre>
+<pre>
+SVN for IronRuby is old.
+Do refer to http://wiki.github.com/ironruby/ironruby/building for current build process
+</pre>
 
 With MRI installed we can install IronRuby. At the time of this writing there is no installer
 for IronRuby, so you have to download the IronRuby sources from the Subversion repository and build 
