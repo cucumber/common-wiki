@@ -4,5 +4,6 @@ Please add any helpful blog posts that you have found or written about all thing
 
 
 |*Post*|*Description*|*Posting Date*|
-|"rails 2 day 3: behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-3-behavior-driven-development/| Tutorial of basic Cucumber usage and workflow.|12-22-08|
+|"One Smart Cucumber":http://joshuahoover.com/2009/01/28/one-smart-cucumber/|Business value|01-28-2009|
 |"rails 2 day 4: rcov and more behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-4-rcov-and-more-behavior-driven-development| Cucumber+RCov Tutorial|12-29-08|
+|"rails 2 day 3: behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-3-behavior-driven-development/| Tutorial of basic Cucumber usage and workflow.|12-22-08|
