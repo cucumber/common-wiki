@@ -7,9 +7,9 @@ and will be yielded as the last argument to the matching step definition's block
 
 Multiline step arguments come in two flavours - tables or strings.
 
-h2. Multiline Tables
+h2. Tables
 
-Multiline Tables are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected 
+Tables as arguments to steps are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected 
 output from a <code>When</code>. Example:
 
 <pre><code>Given the following people exist:
@@ -35,6 +35,45 @@ end
 A plain text table gets stored in a <code>Cucumber::Ast::Table</code> object, which provides several methods to access the
 rows, columns and cells in the table. In the example above we're using the <code>Cucumber::Ast::Table#hashes</code> method
 to iterate over all of the rows.
+
+h3. Diffing tables
+
+As of Cucumber 0.3.90 you can compare a table argument to another table. This is something you would typically do in a When step, and the other table would typically be constructed programmatically from your application's data. This is done with the <code>Cucumber::Ast::Table#diff!(table)</code> method. Here is an example:
+
+<pre>
+Then I should see the following cukes:
+  | Latin           | English      |
+  | Cucumis sativus | Cucumber     |
+  | Cucumis anguria | Burr Gherkin |
+</pre>
+
+And a [[Step Definition]] that uses <code>diff!</code>:
+
+<pre>
+Then /^I should see the following cukes:$/ do |expected_cukes_table|
+  actual_table = [
+    ['Latin', 'English'],
+    ['Cucumis sativus', 'Concombre'],
+    ['Cucumis anguria', 'Cohombro']
+  ]
+  expected_cukes_table.diff!(actual_table)
+end
+</pre>
+
+Cucumber will print the difference:
+
+<pre>
+Then I should see the following cukes: # features/cuke_steps.rb:1
+  | Latin           | English      |
+  | Cucumis sativus | Cucumber     |
+  | Cucumis sativus | Concombre    |
+  | Cucumis anguria | Burr Gherkin |
+  Tables were not identical (RuntimeError)
+  ./features/cuke_steps.rb:7:in `/^I should see the following cukes:$/'
+  features/cuke.feature:3:in `Then I should see the following cukes:'
+</pre>
+
+Missing rows and columns are printed in grey (same colour as comments), and surplus rows and columns are printed in yellow (same colour as undefined steps). When the two tables differ, the step will fail. You can modify this behaviour by passing an options Hash to the <code>diff!</code> method. See [[RDoc]] for details.
 
 h2. Multiline Strings
 
