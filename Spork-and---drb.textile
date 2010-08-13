@@ -8,11 +8,9 @@ Spork provides two simple hooks for preloading your application - one for framew
 
 Keep in mind that all [[hooks]] need to be defined in the <code>Spork.each_run</code> block.  Using Spork works great for [[Ruby on Rails]], which can take a while to load, but <code>--drb</code> and Spork aren't tied to Rails at all. 
 
-The new <code>--drb</code> switch also works great alongside Cucumber's [[Autotest integration]].
-Just add <code>--drb</code> to your autotest profile in [[cucumber.yml]]. This will give you much faster feedback from Autotest.
+The new <code>--drb</code> switch also works great alongside Cucumber's [[Autotest integration]]. Just add <code>--drb</code> to your autotest profile in [[cucumber.yml]]. This will give you much faster feedback from Autotest.
 
 Although Spork was in mind when the <code>--drb</code> switch was added it is important to realize that all that was added
-to Cucumber was a DRb client.  Any DRb server that adheres to this protocol can be used with Cucumber's <code>--drb</code> 
-switch. While Spork is geared towards removing the load time to give you a faster feedback loop you could 
-just as easily use this client with a server that distributes your features to run in parallel. Someone just
-needs to write such a server - hint hint.
+to Cucumber was a DRb client.  Any DRb server that adheres to this protocol can be used with Cucumber's <code>--drb</code> switch. 
+
+While Spork is geared towards removing the load time to give you a faster feedback loop you could just as easily use this client with a server that distributes your features to run in parallel. Someone just needs to write such a server - hint hint.
