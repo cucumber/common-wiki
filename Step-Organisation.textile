@@ -4,7 +4,7 @@ h2. Grouping
 
 Technically it doesn't matter how you name your step files and what steps you put where. You _could_ have one giant file called all_steps.rb and put all your step definitions there. That would be messy.
 
-We recommend creating a steps.rb file for each domain concept. For example, a rule of thumb is to have one file for each major model/database table. In a Curriculum Vitae application we might have:
+We recommend creating a steps.rb file for each domain concept. For example, a good rule of thumb is to have one file for each major model/database table. In a Curriculum Vitae application we might have:
 
 * employee_steps.rb
 * education_steps.rb
