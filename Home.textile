@@ -101,6 +101,8 @@ rake db:migrate
 rake features
 </code></pre>
 
+See [Running Feature] for more info.
+
 h3. Tips
 
 These tips apply to Rails development in general...
