@@ -20,7 +20,7 @@ By using a name that corresponds with the ticket it becomes much easier to follo
 
 h3. Write the feature
 
-Cucumber has its own [[Step Definitions]] that make it relatively easy to write features for Cucumber itself. A good place to start is to look at the <code>features/after_block_exceptions.feature</code>.
+Cucumber has its own Step Definitions that make it relatively easy to write features for Cucumber itself. A good place to start is to look at the "features/after_block_exceptions.feature":http://github.com/aslakhellesoy/cucumber/blob/master/features/exception_in_after_block.feature file.
 
 h3. Push it to your fork
 
