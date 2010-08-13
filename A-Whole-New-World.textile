@@ -1,4 +1,4 @@
-Cucumber runs scenarios in a World. By default, the World is just an instance of Object. If you want to add any behaviour to the world, perhaps some helper methods, or logging, or whatever. You can do this in support/env.rb:
+Cucumber runs scenarios in a World. By default, the World is just an instance of Object. If you want to add any behaviour to the world, perhaps some helper methods, or logging, or whatever you can do this in support/env.rb:
 
 <pre>
 class CustomWorld
@@ -12,59 +12,53 @@ World do
 end
 </pre>
 
-Now you can call <code>a_helper</code> from any step you want. Note that every scenario is run in a separate instance of the world, so there is no implicit state-sharing from scenario to scenario.
+Now you can call <code>a_helper</code> from your step definitions. Note that every scenario is run in a separate instance of the world, so there is no implicit state-sharing from scenario to scenario.
 
-Once you have defined a World class you can extend it with other modules to add additional helper methods. In *version 0.2.3.2 and later* you can simply pass in a module to the World method to extend it.  For example:
+You can also include modules in your World:
 
 <pre>
-World do 
- CustomWorld.new
-end
-
-module FirstModuleHelpers
-  def helper_a
+module MyHelper
+  def some_other_helper
     ...
   end
 end
 
-module SecondModuleHelpers
+class CustomWorld
+  include MyHelper
+
+  def a_helper
+    ...
+  end
+end
+
+World do
+  CustomWorld.new
+end
+</pre>
+
+Several other frameworks such as Webrat or RSpec have modules that provide special methods that you can include in your World this way.
+
+If you don't want to define your own World class (and just use the default <code>Object</code> instances, you can still include modules in your World instances without polluting <code>Object</code> with a global include:
+
+<pre>
+module MyHelper
+  def some_other_helper
+    ...
+  end
+end
+
+module MyOtherHelpers
   def helper_b
     ...
   end
 end
 
-World(FirstModuleHelpers)
-World(SecondModuleHelpers)
-
+World(MyHelper, MyOtherHelpers)
 </pre>
 
-In *versions prior to 0.2.3.2* you can define several World blocks to do this. They will be called in a chain, yielding the result of the previous to the next:
+This will <code>extend</code> each new World object with those modules. 
 
-<pre>
-module FirstModuleHelpers
-  def helper_a
-    ...
-  end
-end
-
-module SecondModuleHelpers
-  def helper_b
-    ...
-  end
-end
-
-World do |world|
-  world.extend(FirstModuleHelpers)
-  world
-end
-
-World do |world|
-  world.extend(SecondModuleHelpers)
-  world
-end
-</pre>
-
-For example, if you use [[Ruby on Rails]], you will get an instance of <code>Cucumber::Rails::World</code>, which gives you access to a lot of Rails' helper methods for routes etc.
+If you use [[Ruby on Rails]], there is already a World set up for you, so you will get an instance of <code>Cucumber::Rails::World</code>, which gives you access to a lot of Rails' helper methods.
 
 h2. Related blog posts
 
