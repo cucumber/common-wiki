@@ -182,7 +182,7 @@ The string argument from each of these methods is compared against all the match
 end
 </code></pre>
 
-The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  Among other things, that means that all the arguments are received as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code.
+The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  Among other things, that means that all the arguments are received as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code>.
 
 In the features provided above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
