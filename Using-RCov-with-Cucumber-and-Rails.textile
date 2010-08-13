@@ -1,0 +1,34 @@
+h2. How to use RCov with Cucumber and Rails
+
+
+This page serves as an easy way to learn how to use cucumber and RCov together.
+
+h3. Quick example
+
+First, Aslak recommends that you use spicycode's RCov instead of the 'official' one, as it currently segfaults too much for most people's taste.
+
+<pre>
+gem sources -a http://gems.github.com
+gem uninstall rcov
+gem install spicycode-rcov
+</pre>
+
+Second, you'll need to open up the cucumber generated task file and add the rcov option.
+
+<pre>
+$:.unshift(RAILS_ROOT + '/vendor/plugins/cucumber/lib')
+require 'cucumber/rake/task'
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "--format pretty"
+  t.rcov = true
+end
+task :features => 'db:test:prepare'
+</pre>
+
+Now when you run rake:features, coverage information will be in rails_root/coverage
+
+.h3 Options
+
+TODO:
+How to run features without rcov
+How to pass rcov options 
