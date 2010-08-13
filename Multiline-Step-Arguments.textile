@@ -9,7 +9,7 @@ Multiline step arguments come in two flavours - tables or strings.
 
 h2. Tables
 
-Tables as arguments to steps are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected output from a <code>When</code>. (This is not to be confused with tables in [[Scenario outlines]] - syntactically identical, but with a different purpose). Example:
+Tables as arguments to steps are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected output from a <code>Then</code>. (This is not to be confused with tables in [[Scenario outlines]] - syntactically identical, but with a different purpose). Example:
 
 <pre><code>Given the following people exist:
   | name  | email           | phone |
@@ -36,7 +36,7 @@ rows, columns and cells in the table. In the example above we're using the <code
 
 h3. Diffing tables
 
-As of Cucumber 0.3.90 you can compare a table argument to another table. This is something you would typically do in a When step, and the other table would typically be constructed programmatically from your application's data. The diffing is done with the <code>Cucumber::Ast::Table#diff!(table)</code> method. Here is an example:
+As of Cucumber 0.3.90 you can compare a table argument to another table. This is something you would typically do in a Then step, and the other table would typically be constructed programmatically from your application's data. The diffing is done with the <code>Cucumber::Ast::Table#diff!(table)</code> method. Here is an example:
 
 <pre>
 Then I should see the following cukes:
