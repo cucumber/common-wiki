@@ -1,4 +1,12 @@
-Cucumber runs scenarios in a World. By default, the World is just an instance of Object. If you want to add any behaviour to the world, perhaps some helper methods, or logging, or whatever you can do this in support/env.rb:
+Cucumber runs scenarios in a World. By default, the World is just an instance of Object.
+
+h2. Step Definitions
+
+All [[Step Definitions]] will run in the context of the current World instance. (A new instance is created for each scenario). This means that <code>self</code> in a Step Definition block will be the World instance. Any <code>@instance_variable</code> instantiated in a Step Definition will be assigned to the World, and can be accessed from other Step Definitions.
+
+h2. A better world
+
+If you want to add any behaviour to the world, perhaps some helper methods, or logging, or whatever you can do this in support/env.rb:
 
 <pre>
 class CustomWorld
