@@ -30,5 +30,5 @@ So when you ask a question, please tell us:
 * What other gems and versions you're using: <code>gem list</code>
 * What command you ran
 * What the output, error message and full backtrace was: Feed cucumber with <code>--backtrace --verbose</code> and rake with <code>--trace</code>.
-* What relevant code you have. Don't _describe_ your code, show it. Please don't paste it in emails, use: "http://gist.github.com/":http://gist.github.com/
+* What relevant code you have. Don't _describe_ your code in twelwe furlongs of prose, just show it. Please don't paste code in emails, use: "http://gist.github.com/":http://gist.github.com/
 * And finally, tell us how to reproduce the error, as described on the [[Contributing]] page.
