@@ -211,7 +211,7 @@ And /some "(.*)" action/ do |a|
 
 h3. What Way do I Run the Tests?
 
-Begin with <pre><code>rake db:migrate
+Unless you are knowlegable enough to be using mocks and stubs then I consider it best to begin with a Rails migration file for the model you are testing followed by:<pre><code>rake db:migrate
 rake db:test:prepare
 </code></pre>
 
