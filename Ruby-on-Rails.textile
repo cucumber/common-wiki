@@ -43,13 +43,17 @@ h2. Run features
 
 <pre><code>rake features</code></pre>
 
-This should result in failing scenarios, because you haven't written any code yet (I hope). Now it's time
-to write some code, or generate some. Try this:
+This should result in failing scenarios, because you haven't written any code yet (I hope). 
 
+Note: You may need to install nokogiri
+<pre><code>sudo gem install nokogiri</code></pre>
+
+Now it's time to write some code, or generate some. Try this:
 <pre><code>script/generate rspec_scaffold Frooble name:string color:string description:text
 rake db:migrate
 rake features
 </code></pre>
+
 
 See [[Running Features]] for more info.
 
