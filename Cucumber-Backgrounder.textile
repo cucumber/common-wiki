@@ -260,4 +260,6 @@ h3.  Need Help?
 
 The best place to go for help, that I know of, is the "RSpec Forum":http://www.ruby-forum.com/forum/32 at "Ruby-Forum.com":http://www.ruby-forum.com.  There you can find access to a number of forums and gateways to mailing lists that are related to Ruby and Ruby on Rails.
 
+If you find a bug in cucumber then you should open a ticket at "Lighthouse":http://rspec.lighthouseapp.com/projects/16211-cucumber/ for it.
+
 2008 November 28 - J. B. Byrne
