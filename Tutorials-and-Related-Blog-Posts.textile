@@ -4,6 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 |*Post*|*Description*|*Posting Date*|
 |"Cucumber Rocks - But it’s not a replacement for unit tests":http://www.pathf.com/blogs/2009/06/cucumber-rocks-but-its-not-a-replacement-for-unit-tests/|Don't put all your eggs in the Cucumber basket!|Jun 10 2009|
+|"Testing Rake tasks with Cucumber":http://www.frykt.no/posts/1-2009-6-7-testing-rake-tasks-with-cucumber|Simple example on how to test rake tasks in Rails|Jun 07 2009|
 |"Cucumber scenarios that depend on Sphinx":http://opensoul.org/2009/6/1/cucumber-scenarios-that-depend-on-sphinx|How to use Cucumber with "ThinkingSphinx":http://freelancing-god.github.com/ts/en/|Jun 01 2009|
 |"Mind the gap":http://content.yudu.com/Library/A15ltd/TestMarch2009/resources/28.htm|Joseph Wilk's article in European Software Tester magazine|May 21 2009|
 |"What's Mining: Cucumber support":http://blogs.jetbrains.com/ruby/2009/05/what’s-mining-cucumber-support|The JetBrains RubyMine team is working on Cucumber support|May 13 2009|
