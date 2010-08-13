@@ -1,4 +1,4 @@
-Cucumber uses Cucumber. All new features and bug fixes should have a corresponding Cucumber feature on a separate Git branch.
+Cucumber uses Cucumber. All new features and bug fixes should have a corresponding Cucumber feature on a separate Git branch. This is important if you want to [[contribute]] or report a bug.
 
 h2. Writing a Cucumber feature
 
