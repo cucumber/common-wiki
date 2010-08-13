@@ -81,10 +81,10 @@ Now you should be able to run Cucumber with IronRuby:
 
 <pre>icucumber --help</pre>
 
-h2. Running the Cucumber C# examples
+h2. Running the examples
 
-Open a command prompt and cd to the Cucumber examples directory for C#. If you have installed MRI to the default
-location you'll find them under <code>C:\ruby\lib\ruby\gems\1.8\gems\cucumber-X.Y.Z\examples</code>. (Replace <code>X.Y.Z</code> with the Cucumber version you installed above)
+Open a command prompt and cd to the Cucumber examples directory. If you have installed MRI to the default
+location you'll find them under <code>C:\ruby\lib\ruby\gems\1.8\gems\cucumber-X.Y.Z\examples</code>. (Replace <code>X.Y.Z</code> with the Cucumber version you installed above).
 
 If you pulled the Cucumber code with Git, you'll find the examples under <code>examples</code>.
 
