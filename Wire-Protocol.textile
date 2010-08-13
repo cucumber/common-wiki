@@ -19,7 +19,7 @@ h3. Response
     { "id": "id2", "regexp": "regex2" }
   ]
 }</pre>
-h2. Invoke Step
+h2. Invoke
 
 h3. Request 
 
@@ -31,6 +31,7 @@ h3. Request
 h3. Response
 
 If the step is invoked successfully then an 'ok' response is returned:
+
 <pre>{
   "version" : "1.0",
   "ok" : ""
@@ -38,6 +39,7 @@ If the step is invoked successfully then an 'ok' response is returned:
 OR
 
 If the step throws an exception then a 'step_failed' response is returned:
+
 <pre>{
   "version" : "1.0",
   "step_failed" : {
