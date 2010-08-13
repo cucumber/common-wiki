@@ -261,7 +261,7 @@ Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wik
 
 Cucumber comes preconfigured for webrat together with webrat test steps.  If you do not know what webrat is and you are doing web application testing then you should "read about it":http://agilewebdevelopment.com/plugins/webrat.
 
-If  webrat is installed in your rails project as a plugin then the webrat step definitions are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you need add this to the features/support/env.rb file:
+If  webrat is installed in your rails project as a plugin then the webrat step definitions are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you may need add this to the features/support/env.rb file, although this may no longer be necessary with cucumber v-2.0+:
 
 <code>require 'webrat' if !defined?(Webrat)</code>
 
@@ -274,7 +274,7 @@ require 'cucumber/rails/rspec'
 # If webrat is a plugin and rspec is used then uncomment this
 #require 'webrat/rspec-rails'</code></pre>
 
-Calls for any additional Ruby libraries that your particular testing environment requires should typically be placed in the <code>./features/support/env.rb</code> file.
+Calls for any additional Ruby libraries that your particular testing environment may require are typically be placed in the <code>./features/support/local_env.rb</code> file.  I advise against putting local customization in <code>support/env.rb</code> as it is typically overwritten by <code>script/generate cucumber</code>.  The same advice applies to <code>support/path.rb</code>.  It is safer to place local customizations in a file called <code>support/local_path.rb</code> instead.  As a matter of good practice you should always run <code>script/generate cucumber</code> whenever you install an updated version.  You should do the same for rspec as well.
 
 Those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest are advised that, as of this writing, cucumber did not hook into the :red :green notifier capability of autotest;  so, no popups when a step fails.  However, there exists a project to add a similar functionality to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
 
