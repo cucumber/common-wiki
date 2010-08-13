@@ -59,6 +59,8 @@ Cucumber can't make a decision about what Step Definition to execute, and wil ra
 
 h3. Guess mode
 
+*{color:red}0.1.99 and later*
+
 Imagine you have these step definitions:
 
 <pre><code>Given /we had (.*)/ do |what|
