@@ -89,7 +89,7 @@ h3. Outcomes and bottom-up scenarios.
 
 The value provided by a system is what you can get out of it - not what you put into it. Just like the value
 is expressed at the top of a feature (In order to...), the value should be in the steps of a scenarios too,
-more precicely in the *Then* steps.
+more precisely in the *Then* steps.
 
 When you're writing a new scenario, I recommend you start with the formulation of the desired outcome. Write the
 *Then* steps first. Then write the *When* step to discover the action/operation and finally write the *Given*
