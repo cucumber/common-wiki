@@ -28,6 +28,12 @@ Over the jar that was installed with the Selenium gem:
 
 GEM_INSTALL_DIR/Selenium-1.1.14/lib/selenium/openqa/selenium-server.jar.txt
 
+such as /usr/local/lib/ruby/gems/1.8/gems/Selenium-1.1.14/lib/selenium/openqa/selenium-server.jar.txt 
+
+if gem env returns:
+INSTALLATION DIRECTORY: /usr/local/lib/ruby/gems/1.8
+
+
 h3. Alternate Solution
 
 You can also patch the binary manually if the above solution does not work for you.
