@@ -36,7 +36,7 @@ h2. Adding a new language
 (or completing an existing one). It's easy! 
 
 # Make a fork of Cucumber and pull it down
-# Add your language's keywords to  "languages.yml":../tree/master/lib/cucumber/languages.yml
+# Add your language's keywords to  "languages.yml":http://github.com/aslakhellesoy/cucumber/blob/master/lib/cucumber/languages.yml
 # Commit and push your changes - then send a pull request at GitHub.
 
 Alternatively - if you don't know Git and just grabbed the Gem:
