@@ -89,6 +89,13 @@ html: --format html --out features.html</code></pre>
 
 Remember that you need AUTOFEATURE=true for autospec to include cucumber features.  See [[Running Features]] and [[Autotest Integration]] for more info.
 
+For autospec, change autotest in the above block to autospec:
+
+<pre><code>autospec-all: --require features --require lib --format progress features
+autospec: --require features --require lib features  
+default: --format pretty
+html: --format html --out features.html</code></pre>
+
 h2. Special tags
 
 There are two special [[tags]] you can use to change how Cucumber runs your scenarios
