@@ -3,6 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Integration test with Cucumber and Webrat":http://www.slideshare.net/gugod/integration-test-with-cucumber-and-webrat|Presentation in Chinese by Wen-tien Chang|Jul 1 2009|
 |"Natural Language Acceptance Testing with Cucumber":http://dobbscodetalk.com/index.php?option=com_myblog&show=Natural-Language-Acceptance-Testing.html&Itemid=29|A nice little writeup in "Dr.Dobbs CodeTalk":http://dobbscodetalk.com/| Jun 27 2009|
 |"Introduction to BDD with Cucumber":http://www.engineyard.com/blog/2009/cucumber-introduction/|Great little introduction|Jun 23 2009|
 |"Cucumber and Celerity":http://drogomir.com/blog/2009/6/16/cucumber-and-celerity-testing-unobtrusive-javascript|Testing unobtrusive Javascript|Jun 16 2009|
