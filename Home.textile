@@ -98,7 +98,7 @@ steps that need to be in place in order for the When/Then to make sense.
 h2. Other pages
 
 * [[Feature-Coupled Steps (Antipattern)]]
-* [[Conjuction-Steps (Antipattern)]]
+* [[Conjuction Steps (Antipattern)]]
 * [[Step Organisation]]
 * [[Spoken languages]]
 * [[Migration From RSpec Stories]]
