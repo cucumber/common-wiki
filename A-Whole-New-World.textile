@@ -13,3 +13,17 @@ end
 </pre>
 
 Now you can call a_helper from any step you want. Note that every scenario gets run in a separate instance of the world, so there is no implicit state-sharing from scenario to scenario.
+
+You can also define several World blocks. They will be called in a chain, yielding the result of the previous to the next:
+
+<pre>
+World do |world|
+  world.extend(FirstModule)
+  world
+end
+
+World do |world|
+  world.extend(SecondModule)
+  world
+end
+</pre>
