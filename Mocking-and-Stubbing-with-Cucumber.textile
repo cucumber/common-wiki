@@ -1,3 +1,3 @@
-h1. Don't
+We recommend you exercise your whole stack when using Cucumber. You *can* set up mocks with expectations in your [[Step Definitions]]. You can read more about how in "Bryan Helkamp's blog post":http://www.brynary.com/2009/2/3/cucumber-step-definition-tip-stubbing-time.
 
-Not sure why...
+We recommend you only mock and stub things like Time and external services like OpenID etc.
