@@ -113,10 +113,11 @@ implement a non-valuable feature. Consider tossing it altogether or pushing it d
 implementing the MMFs ("Minimum Marketable Features":http://www.softwarebynumbers.org/) that will yield the most value.
 
 Here is an example taken from an IRC chat session in "#cucumber":irc://irc.freenode.net/cucumber:
-<pre>
-[5:08pm] Luis_Byclosure: I'm having problems applying the "5 Why" rule, to the feature "login" (imagine an application like youtube)
+<pre>[5:08pm] Luis_Byclosure: I'm having problems applying the "5 Why" rule, to the feature 
+                         "login" (imagine an application like youtube)
 [5:08pm] Luis_Byclosure: how do you explain the business value of the feature "login"?
-[5:09pm] Luis_Byclosure: In order to be recognized among other people, I want to login in the application (?)
+[5:09pm] Luis_Byclosure: In order to be recognized among other people, I want to login 
+                         in the application (?)
 [5:09pm] Luis_Byclosure: why do I want to be recognized among other people?
 [5:11pm] aslakhellesoy: Luis_Byclosure: Why do people have to log in?
 [5:12pm] Luis_Byclosure: aslakhellesoy: I dunno... why? 
@@ -124,25 +125,34 @@ Here is an example taken from an IRC chat session in "#cucumber":irc://irc.freen
 [5:13pm] aslakhellesoy: Why have you decided login is needed?
 [5:13pm] Luis_Byclosure: aslakhellesoy: identify users
 [5:14pm] aslakhellesoy: Why do you have to identify users?
-[5:14pm] Luis_Byclosure: aslakhellesoy: maybe because people like to know who is publishing what
+[5:14pm] Luis_Byclosure: aslakhellesoy: maybe because people like to know who is 
+                         publishing what
 [5:15pm] aslakhellesoy: Why would anyone want to know who's publishing what?
-[5:17pm] Luis_Byclosure: aslakhellesoy: because if people feel that that content belongs to someone, then the content is trustworthy
+[5:17pm] Luis_Byclosure: aslakhellesoy: because if people feel that that content belongs 
+                         to someone, then the content is trustworthy
 [5:17pm] aslakhellesoy: Why does content have to appear trustworthy?
-[5:20pm] Luis_Byclosure: Trustworthy makes people interested in the content and consequently in the website
+[5:20pm] Luis_Byclosure: Trustworthy makes people interested in the content and 
+                         consequently in the website
 [5:20pm] Luis_Byclosure: Why do I want to get people interested in the website?
-[5:20pm] aslakhellesoy:
+[5:20pm] aslakhellesoy: :-)
 [5:21pm] aslakhellesoy: Are you selling something there? Or is it just for fun?
 [5:21pm] Luis_Byclosure: Because more traffic means more money in ads
 [5:21pm] aslakhellesoy: There you go!
-[5:22pm] Luis_Byclosure: Why do I want to get more money in ads? Because I want to increase de revenues.
+[5:22pm] Luis_Byclosure: Why do I want to get more money in ads? Because I want to increase 
+                         de revenues.
 [5:22pm] Luis_Byclosure: And this is the end, right?
-[5:23pm] aslakhellesoy: In order to drive more people to the website and earn more admoney, authors should have to login, so that the content can be displayed with the author and appear more trustworthy.
+[5:23pm] aslakhellesoy: In order to drive more people to the website and earn more admoney, 
+                        authors should have to login, 
+                        so that the content can be displayed with the author and appear 
+                        more trustworthy.
 [5:23pm] aslakhellesoy: Does that make any sense?
 [5:25pm] Luis_Byclosure: Yes, I think so
-[5:26pm] aslakhellesoy: It's easier when you have someone clueless (like me) to ask the stupid why questions
+[5:26pm] aslakhellesoy: It's easier when you have someone clueless (like me) to ask the 
+                        stupid why questions
 [5:26pm] aslakhellesoy: No I know why you want login 
 [5:26pm] Luis_Byclosure: but it is difficult to find the reason for everything
-[5:26pm] aslakhellesoy: And if I was the customer I am in better shape to prioritise this feature among others
+[5:26pm] aslakhellesoy: And if I was the customer I am in better shape to prioritise this 
+                        feature among others
 [5:29pm] Luis_Byclosure: true!
 </pre>
 
