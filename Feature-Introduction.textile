@@ -3,8 +3,9 @@ In Cucumber, every .feature file consists of a header followed by a list of scen
 Every scenario consists of a list of steps, which must start with *Given*, *When*, *Then*, *But* or *And*. See [[Step Organisation]] for details of what the words mean (Cucumber treats them all the same, but you shouldn't). Here is an example:
 
 <pre>Feature: Serve coffee
-In order to earn money on drinks
-Customers should be able to buy coffee
+  In order to earn money
+  Customers should be able to 
+  buy coffee at all times
 
   Scenario: Buy last coffee
     Given there are 1 coffees left in the machine
