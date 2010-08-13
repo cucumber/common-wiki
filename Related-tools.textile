@@ -40,3 +40,4 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Vim-Cucumber":http://github.com/tpope/vim-cucumber/tree/master|Feature syntax highlighting for "Vim":http://www.vim.org/.|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
 |"Webrat TM Bundle":http://github.com/bmabey/webrat-tmbundle/tree/master| Collection of TextMate snippets for the webrat API.|
+|"WatirCraft":http://wiki.github.com/bret/watircraft| Web testing framework with Cucumber integration that builds on Watir.|
