@@ -17,6 +17,8 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Cucumber Nagios":https://code.launchpad.net/cucumber-nagios|Web site monitoring with Cucumber and "Nagios":http://www.nagios.org/|
 |"CucumberTFS":http://github.com/mscottford/cucumbertfs|Converts Team Foundation Server (TFS) scenarios into cucumber scenarios in a single feature file.|
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting and other useful commands for "TextMate":http://macromates.com/.|
+|"CukeBins":http://github.com/paoloambrosio/cukebins|Support for writing Cucumber step definitions in C++, testing C++ code.|
+|"Clucumber":http://github.com/antifuchs/clucumber|Support for writing Cucumber step definitions in Common LISP, testing Common LISP code.|
 |"Cuke4Nuke":http://github.com/richardlawrence/Cuke4Nuke|Support for writing Cucumber step definitions in .NET.|
 |"Cuke4Lua":http://github.com/dgfitch/Cuke4Lua|Wire protocol implementation for "Lua":http://www.lua.org/|
 |"cuke4vs":http://github.com/henritersteeg/cuke4vs|Syntax highlighting, intellisense and other editing support for feature files in Visual Studio 2008.|
