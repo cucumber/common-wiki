@@ -39,3 +39,25 @@ And debugger</pre>
 <pre>Then /^debugger$/ do
   debugger
 end</pre>
+<pre>>: cucumber features/test.feature 
+Feature: Test for debugger
+
+  Scenario: Opening a debugger # features/test.feature:2
+    When I go to the homepage  # features/step_definitions/webrat_steps.rb:10
+[23, 32] in /myproject/vendor/plugins/cucumber/bin/../lib/cucumber/core_ext/instance_exec.rb
+   23          Thread.critical = old_critical
+   24        end
+   25        begin
+   26          ret = send(mname, *args)
+   27        ensure
+=> 28          InstanceExecHelper.module_eval{ remove_method(mname) } rescue nil
+   29        end
+   30        ret
+   31      end
+   32    end
+/Users/tomtt/created/projects/mindapples/mindapples/vendor/plugins/cucumber/lib/cucumber/core_ext/instance_exec.rb:28
+InstanceExecHelper.module_eval{ remove_method(mname) } rescue nil
+(rdb:1) puts response.body.split("\n").select{ |l| l =~ /meta/}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+nil
+(rdb:1)</pre>
