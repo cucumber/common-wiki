@@ -37,7 +37,7 @@ end
 
 h2. Tagged hooks
 
-Sometimes you may want a certain before or after hook to run only for certain scenarios. This can be achieved by associating a <code>Before</code>, <code>After</code> or <code>AfterStep</code> hook with one or more [[tags]]. Example:
+Sometimes you may want a certain hook to run only for certain scenarios. This can be achieved by associating a <code>Before</code>, <code>After</code> or <code>AfterStep</code> hook with one or more [[tags]]. Example:
 
 <pre><code>Before('@cucumis', '@sativus') do
   # This will only run before scenarios tagged
