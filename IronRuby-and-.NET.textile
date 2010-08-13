@@ -54,7 +54,7 @@ h2. Installing required gems
 Since IronRuby doesn't yet know how to install gems you have to install them using MRI:
 
 <pre>gem install cucumber
-ruby gem install rspec
+gem install rspec
 </pre>
 
 h2. Creating a cucumber wrapper script for IronRuby
