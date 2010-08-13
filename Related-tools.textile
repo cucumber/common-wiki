@@ -50,6 +50,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"JetBrains TeamCity Formatter":http://blogs.7digital.com/dev/2009/09/03/cucumber-tests-as-first-class-citizens-in-teamcity/|Format features nicely within the TeamCity CI server|
 |"Swinger":http://github.com/demetriusnunes/swinger/tree/master|Write acceptance tests for Java/Swing Desktop apps using Cucumber!|
 |"Testjour":http://github.com/brynary/testjour|Distributed test running (for Cucumber first).|
+|"VCR":http://github.com/myronmarston/vcr|Easily record and replay HTTP responses for fast, deterministic, accurate tests.  Cucumber integration provided through the use of tags.|
 |"Vim-Cucumber":http://github.com/tpope/vim-cucumber/tree/master|Feature syntax highlighting for "Vim":http://www.vim.org/.|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
 |"Webrat TM Bundle":http://github.com/bmabey/webrat-tmbundle/tree/master| Collection of TextMate snippets for the webrat API.|
