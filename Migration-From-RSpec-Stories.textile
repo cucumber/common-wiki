@@ -150,7 +150,7 @@ Here is a simple example of the conversion process.  Given this story listener:
     Database.truncate_all
   end
   
-  def at_exit
+  at_exit do
     # Global teardown
     TempFileManager.clean_up
   end
