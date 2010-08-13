@@ -2,7 +2,7 @@ When your features are driving a browser using tools like Selenium or Watir you 
 
 This is because your browser is running against a web server that is using a different database connection than cucumber. This is because they run in separate processes. Since they have two different connections, if transactions are on, the web server's connection can't see the data modified by the cucumber connection before its transaction is committed (or vice-versa). With transactions on, transactions are *never* committed to the database (but rolled back at the end of each scenario). Therefore, the web server's connection will never see data from cucumber, and therefore your browser won't either. Likewise, cucumber's connection won't see data from the web server. 
 
-If you're using [[Ruby on Rails]] it's easy to turn off transactions for a feature or particular scenarios (if you're on 0.3.103 or above), just use the <code>@no-txn</code> tag, e.g.
+If you're using [[Ruby on Rails]] it's easy to turn off transactions for a feature or particular scenarios. Just use the <code>@no-txn</code> tag, e.g.
 
 <pre>
 @no-txn
@@ -40,7 +40,6 @@ After('@no-txn') do
   DatabaseCleaner.clean
 end
 </pre>
-
 
 If you're not using Rails you can recreate the entire <code>@no-txn</code> bevhaviour using DatabaseCleaner with the following code:
 
