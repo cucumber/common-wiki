@@ -39,8 +39,8 @@ You usually want to define a task to run all your features without RCov and then
 
 <pre>
 desc "Run all features"
-task :features => "features:all"
 task :features => 'db:test:prepare'
+task :features => "features:all"
 require 'cucumber/rake/task' #I have to add this -mischa
 
 namespace :features do
