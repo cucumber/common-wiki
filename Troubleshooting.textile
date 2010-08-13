@@ -23,7 +23,7 @@ For more info, see "Lighthouse issue #81":http://rspec.lighthouseapp.com/project
 
 If you're running Cucumber thru JRuby, all you have to do is save your feature files in UTF-8 and change the codepage to 65001 as explained above.
 
-<a name="selenium" />
+<a name="selenium"><a/>
 h2. Changes made to models while running features with Selenium, Watir, or other solutions requiring a separate server process are not visible from within step definitions code
 
 When you run Cucumber with Selenium or a similar solution two processes are required:  one for use by Cucumber/features and another one that's used by Selenium (the server process.) By default in Rails, all operations on the database are wrapped within a transaction, that is rolled back after running each scenario.
