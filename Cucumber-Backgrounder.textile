@@ -2,9 +2,11 @@ h2. Or: How I Learned to Stop Worrying and Love Testing
 
 h3. Introduction
 
-This document deals principally with initial set up and first use of the <strong><em> Cucumber-Rails</em></strong> gem, that uses <strong><em>Cucumber</em></strong>, a behaviour driven development (BDD) tool, for designing and implementing a project using the Ruby on Rails (RoR) framework.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development, "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU aka "Cowboy Coding":http://en.wikipedia.org/wiki/Cowboy_coding) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found on this wiki under the heading  [[Ruby on Rails]].  The article "Getting Started with Rails":http://www.ultrasaurus.com/code/2008/12/getting-started-with-rails.html is a useful introductory tutorial dealing with Rails and Cucumber.  
+This document deals principally with initial set up and first use of the <strong><em> Cucumber-Rails</em></strong> gem, that uses <strong><em>Cucumber</em></strong>, a behaviour driven development (BDD) tool, for designing and implementing a project using the Ruby on Rails (RoR) framework.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development, "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU aka "Cowboy Coding":http://en.wikipedia.org/wiki/Cowboy_coding) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found on this wiki under the heading  [[Ruby on Rails]].  The article "Getting Started with Rails":http://www.ultrasaurus.com/code/2008/12/getting-started-with-rails.html is a useful introductory tutorial dealing with Rails and Cucumber.
 
 Since the original version of this article appeared, Cucumber has undergone repeated revisions and refactorings.  Among these was the sensible decision to move portions of the implementation specific to particular frameworks into their own gems.  Consequently, installing Cucumber for a framework now frequently starts with installing the specific framework Cucumber gem, which in turn pulls in the core Cucumber gem as a dependency.  Cucumber now provides support for a wide range of Ruby VMs such as JRuby, alternative application frameworks such as Sinatra, other programming languages such as Python, test environments such as Capybara, and provides i18n language support for feature and step files.  Obtaining these features may require the installation of other gems such as "cucumber-sinatra":http://rubygems.org/gems/cucumber-sinatra.
+
+Readers should always consider that the information contained herein may be out of date and therefore incomplete or erroneous in some respects.  However, any such defects will usually be confined to specific implementation details and should not detract from the validity of the overall presentation.
 
 Note that in this document I often use the terms <em>testing</em> and <em>test</em> where "BDD practitioners":http://dannorth.net/introducing-bdd prefer the terms <em>behaviour</em> and <em>expectation</em>.  When I use the word test in a BDD context I am in fact discussing expressing and verifying expected behaviour.
 
@@ -21,7 +23,7 @@ Given I have installed the gem named "rails"
   And I have installed the gem named "cucumber-rails"
   And I have generated a RoR project named "my_project"
   And the present working directory is the Rails root directory of "my_project"
-  And I have created the file cucumber.yml in the root directory
+  And I have the file cucumber.yml in the config directory of "my_project"
   And the file cucumber.yml contains a valid default profile
 
 When I run "script/generate cucumber"
@@ -35,11 +37,12 @@ Then I should create the directory ./features
   And I should create the file ./features/support/paths.rb
   And I should create the file ./lib/tasks/cucumber.rake
   And I should create the file ./config/environments/environment cucumber.rb
+  And I should create the file ./config/cucumber.yml
   And I should modify ./config/database.yml
   .  .  .
 </pre>
 
-The foregoing gives a sample of the form that feature files often take.  The statements, called <em>feature steps</em>, make up the user interface to Cucumber testing.  These here are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ for illustrative purposes.  In practice, all those Then/And statements likely would be subsumed into one simple Declarative statement; for example: <code>I should create the Cucumber environment</code>, and the messy details of just what a Cucumber environment comprises placed in the step definitions instead. We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
+The foregoing gives a sample of the form that feature files often take.  The statements, called <em>feature steps</em>, make up the user interface to Cucumber testing.  These here are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ for illustrative purposes.  In practice, all those Then/And statements likely would be subsumed into one simple Declarative statement; for example: <code>I should create the Cucumber environment</code>, and the messy details of just what a Cucumber environment should comprise placed in the step definitions instead. We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
 
 The root level of the archetypal RoR project directory tree looks like this:
 
@@ -270,14 +273,37 @@ Given that the forgoing is contained in a file called <code>features/login/login
 
 <pre>
 $ rake cucumber:wip
-$ cucumber --tags=@wip features
-$ cucumber --tags=@authent features/login
+$ cucumber --profile=my_profile --tags=@wip features
+$ cucumber --profile=my_profile --tags=@authent features/login
 </pre>
 
 However, the following will not work, unless you build a custom rake task for it:
 
 <pre>
 $ rake cucumber:authent
+</pre>
+
+There is an obscure <em>gotcha</em> with this particular combination of tags.  The default profile contained in the distributed <code>config/cucumber.yml</code> contains these lines:
+
+<pre>
+<%
+.  .  .
+std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'progress'} --strict --tags ~@wip"
+%>
+default: <%= std_opts %> features
+.  .  .
+</pre>
+
+Note the trailing --tag option <code>--tags ~@wip</code>.  If you do not specify a different profile then the default profile will
+be used.  If this is used then the <code>--tags ~@wip</code> will ignore any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
+
+<pre>
+$ cucumber --tags=@authent
+Using the default profile...
+
+0 scenarios
+0 steps
+0m0.000s
 </pre>
 
 The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the --tags= option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message. 
