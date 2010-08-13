@@ -1,0 +1,1 @@
+Please see the "Multiline Step Arguments":http://wiki.github.com/aslakhellesoy/cucumber/multiline-step-arguments page for information on how to use tables in Cucumber.
