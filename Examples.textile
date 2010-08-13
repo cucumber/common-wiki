@@ -1,4 +1,1 @@
-Here is a list of code examples from open source projects using cucumber:
-
-* "Clearance":http://github.com/thoughtbot/clearance/ /generators/clearance_features/templates/features/
-* "WebJam":http://github.com/webjam/webjam/ /features/
+(Please see [[Projects Using Cucumber]] ; also, many of the [[Tutorials and Related Blog Posts]] have examples)
