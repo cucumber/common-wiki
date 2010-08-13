@@ -1,0 +1,3 @@
+"**EPBT(SAP Enterprise Portal Behavior Testing)**":http://github.com/arnaud/EPBT (Enterprise Portal Behavior Testing) is a testing workbench that permits Portal behavior testing and automated non-regression testing for building, extending and maintaining long-term SAP Portal applications.
+
+It is built on top of "Cucumber":http://github.com/aslakhellesoy/cucumber and "Watir":http://watir.com/.
