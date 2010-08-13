@@ -271,7 +271,7 @@ Feature: .  .  .
   Scenario: C
 </pre>
 
-running the command <code>rake cucumber:wip</code> will run only the steps contained inside Scenario B only, while running <rake cucumber:ok</code> will run the steps within all Scenarios other than B.
+running the command <code>rake cucumber:wip</code> will run only the steps contained inside Scenario B only, while running <code>rake cucumber:ok</code> will run the steps within all Scenarios other than B.
 
 Running Cucumber directly from the command line requires the creation of a <code>cucumber.yml</code> file in the project root directory and it must contain a default profile (for example: <code>default: --require features --format pretty</code>.  When Cucumber is run from the command line it is usually necessary to provide both the directory name containing the root directory of the tree containing feature files and the directory name containing references to the necessary library files.  In the typical project <code>cucumber features -r features</code> will normally suffice.  
 
