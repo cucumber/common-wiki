@@ -1,4 +1,4 @@
-In some situations Scenario tables from a Scenario can get a little verbose. For example when you want to:
+In some situations Scenario tables for a Scenario can get a little verbose. For example when you want to:
 
 * Have a Scenario table value to appear in multiple places in your Scenario steps. 
 * Ignore some matches from the steps in the scenario table.
