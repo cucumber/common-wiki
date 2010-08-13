@@ -1,6 +1,12 @@
+h2. Cucumber-Sinatra Generator
+
+The "Cucumber-Sinatra":http://github.com/bernd/cucumber-sinatra gem will generate a <code>features</code> directory structure and <code>features/support/env.rb</code> in your Sinatra project pre-configured for testing with Cucumber, "RSpec":http://github.com/dchelimsky/rspec, and "Capybara":http://github.com/jnicklas/capybara.
+
+This gem is inspired by the "Cucumber-Rails":http://github.com/aslakhellesoy/cucumber-rails generator.
+
 h2. Webrat
 
-You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Webrat":http://github.com/brynary/webrat/tree/master!
+You can use Cucumber with "Sinatra":http://github.com/sinatra/sinatra and "Webrat":http://github.com/brynary/webrat/tree/master!
 
 Just make sure you have a <code>features/support/env.rb</code> file with the following:
 
