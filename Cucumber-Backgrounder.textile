@@ -6,7 +6,7 @@ This document deals principally with initial set up and first use of the <strong
 
 Since the original version of this article appeared, Cucumber has undergone repeated revisions and refactorings.  Among these was the sensible decision to move portions of the implementation specific to particular frameworks into their own gems.  Consequently, installing Cucumber for a framework now frequently starts with installing the specific framework Cucumber gem, which in turn pulls in the core Cucumber gem as a dependency.
 
-Note that in this document I often use the terms <em>test</em> and <em>testing</em> where "BDD practictioners":http://dannorth.net/introducing-bdd prefer the terms <em>behaviour</em> or <em>expectation</em>.  When I write test I am in fact discussing expressing and verifying expected behaviour.
+Note that in this document I often use the terms <em>testing</em> and <em>test</em> where "BDD practictioners":http://dannorth.net/introducing-bdd prefer the terms <em>behaviour</em> and <em>expectation</em>.  When I write test I am in fact discussing expressing and verifying expected behaviour.
 
 h3. Where to Start?
 
