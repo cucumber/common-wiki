@@ -102,32 +102,7 @@ actual_table.map_column!('Artist') { |text| text.strip.match(/>(.*)</)[1] }
 expected_cukes_table.diff!(actual_table)
 </pre>
 
-Let's consider a more complex example where you have a HTML table with an "Actions" column where each td contains buttons similar to this: 
-
-<pre>
-<form method="post" action="/invoices/10/approve" class="button-to"><div><input id="approve_invoice_10" type="submit" value="Approve" /><input name="authenticity_token" type="hidden" value="WxKGVy3Y5zcvFEiFe66D/odoc3CicfMdAup4vzQfiZ0=" /></div></form>
-<form method="post" action="/invoices/10/delegate" class="button-to"><div><input id="delegate_invoice_10" type="submit" value="Delegate" /><input name="authenticity_token" type="hidden" value="WxKGVy3Y5zcvFEiFe66D/odoc3CicfMdAup4vzQfiZ0=" /></div></form>
-</pre>
-
-You only care about the button texts and you want compare with a plain text table like this:
-
-<pre>
-| Invoice | Action           |
-| 2001    | Approve,Delegate |
-| 2002    | Reject           |
-</pre>
-
-In this case, mapping a column with a Regexp might be a little tricky. In such cases it might be easier to use Nokogiri and a CSS selector:
-
-<pre>
-Then /^I should see the following invoices:$/ do |invoices|
-  t = tableish('table#cuke_table tr', 'td,th')
-  t.map_column!('Action') do |buttons|
-    Nokogiri::HTML("<html>#{buttons}</html>").css('input').map{|b| b['value']}.join(",")
-  end
-  invoices.diff!(t)
-end
-</pre>
+For a more complex example, look at "this commit":http://github.com/aslakhellesoy/cucumber-rails/commit/e03ca01556adcb21354046107f7c7803efb8b3df which uses a Proc to extract each column from the HTML. (This is a spec for the internal <code>_tableish</code> method - in your own code you want to use <code>tableish</code> instead and skip the 1st <code>html</code> argument).
 
 h4. Transforming tables with Transform
 
