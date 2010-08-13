@@ -136,3 +136,9 @@ To run your regular features, you can execute:
 To run your selenium features, you can execute:
 
 <pre><code>cucumber -p selenium</code></pre>
+
+h2. Rails 2.2+ and Sessions
+
+When running Selenium with Rails 2.3.2 (and this appears to be true for 2.2 as well) sessions did not work. They were being saved, but then were lost upon reload. Adding the following to the selenium environment file fixed this problem:
+
+<pre><code>config.action_controller.session = { :session_http_only => false }</code></pre>
