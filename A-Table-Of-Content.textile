@@ -10,6 +10,8 @@ h2. Troubleshooting
 
 h2. Documentation
 
+h2. Integrating cukes with other tools
+
 h2. Contributing
 
 
