@@ -4,6 +4,7 @@ Projects using Cucumber:
 * "Clearance":http://github.com/thoughtbot/clearance/ /generators/clearance_features/templates/features/
 * "WebJam":http://github.com/webjam/webjam/ /features/
 * "Redcar":http://github.com/danlucraft/redcar/tree/master /plugins/*/features
+* "jeweler":http://github.com/technicalpickles/jeweler /features
 
 
 Note: I had initially copied the [[Examples]] page. I created this page because I consider this page to be a more appropriate name.
