@@ -4,9 +4,7 @@ Developing in .NET? You can use Cucumber with IronRuby. You need both IronRuby a
 
 h2. Installing MRI
 
-You'll need MRI to build IronRuby. You also need MRI to install gems since IronRuby can
-not install its own gems yet (although it can use them). When you have installed IronRuby you 
-can use gems installed into MRI from IronRuby.
+You may need MRI to build IronRuby. You also need MRI to install gems if IronRuby is not able to install some gem itself. When you have installed IronRuby you can use gems installed into MRI from IronRuby. See the "IronRuby Gems information page":http://www.ironruby.net/Documentation/Real_Ruby_Applications/RubyGems for details.
 
 Just download the latest Ruby One click installer from RubyForge and run it with the defaults.
 When you open a new command prompt you should be able to run:
@@ -23,54 +21,15 @@ If you already have MRI installed, make sure you have the latest version of Ruby
 gem update --system
 </pre>
 
-h2. Installing IronRuby
+h2. Building and Installing IronRuby
 
-<pre>
-SVN for IronRuby is old.
-Do refer to http://wiki.github.com/ironruby/ironruby/building for current build process
-</pre>
+You can download IronRuby from "http://ironruby.codeplex.com/:"http://ironruby.codeplex.com/
 
-With MRI installed we can install IronRuby. At the time of this writing there is no installer
-for IronRuby, so you have to download the IronRuby sources from the Subversion repository and build 
-it yourself.
-
-If you don't have Subversion installed, install the Subversion command line toolset (or TortoiseSvn
-if you have command line fobia).
-
-h3. Get IronRuby sources
-
-<pre>svn checkout http://ironruby.rubyforge.org/svn/trunk ironruby
-cd ironruby
-</pre>
-
-Note: *checkout* means "pull down a copy of the sources to my local machine". It's not the same
-as checkout in TFS or Visual SourceSafe (which I truly hope you have moved past).
-
-h3. Build IronRuby
-
-Open a Visual Studio command prompt and cd to where you downloaded the IronRuby sources. Build it:
-
-<pre>rake compile</pre>
-
-You may need the 'pathname2' gem installed if you see this error when running the rake:
-
-<pre>rake aborted!
-no such file to load -- pathname2</pre>
-
-If you see this message, simply install the 'pathname2' gem:
-
-<pre>gem install pathname2</pre>
-
-When you have completed this step you should be able to run
-
-<pre>build\debug\ir.exe</pre>
-
-This should give you a new prompt (Interactive IronRuby shell). Just type <code>exit</code>
-and hit enter. You have installed IronRuby!
+Refer to "IronRuby GIT wiki":http://wiki.github.com/ironruby/ironruby for downloading the sources and building from the sources.
 
 h2. Installing required gems
 
-Since IronRuby doesn't yet know how to install gems you have to install them using MRI:
+You can install gems with IronRuby using the @igem.bat@ script in the bin folder. See the "IronRuby Gems information page":http://www.ironruby.net/Documentation/Real_Ruby_Applications/RubyGems for details. For now, it is safer to install the cucumber gem using MRI.
 
 <pre>gem install cucumber rspec
 </pre>
