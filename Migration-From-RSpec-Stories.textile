@@ -11,7 +11,7 @@ First, follow the Cucumber installation instructions for Rails. This should leav
     +-env.rb
 </code></pre>
 
-The env.rb loads the environment and is a good place to move any pertinent code from your old stories/helper.rb.
+The env.rb loads the environment and is a good place to move any pertinent code from your old stories/helper.rb. For example, if you had been monkey-patching the Spec::Story::World module to add global story helpers you can move it’s contents directly into env.rb.
 
 h2. Move a plain text story over
 
