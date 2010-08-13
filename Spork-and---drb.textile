@@ -26,3 +26,5 @@ to Cucumber was a DRb client.  Any DRb server that adheres to this protocol can 
 While Spork is geared towards removing the load time to give you a faster feedback loop you could just as easily use this client with a server that distributes your features to run in parallel. Someone just needs to write such a server - hint hint.
 
 Worth checking out is also "testjour":http://github.com/brynary/testjour/tree/master - a distributed runner for Cucumber. It's currently not related to Spork.
+
+For a closer look on how to install and configure your environment to use Spork in a Rails application, there's a nice screencast on BDDCasts: "Using Spork to speed up RSpec and Cucumber":http://bddcasts.com/series/tools/episodes/using-spork-to-speed-up-rspec-and-cucumber.
