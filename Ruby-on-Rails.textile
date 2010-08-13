@@ -17,9 +17,7 @@ As a last resort, download tarballs from GitHub.
 
 h2. Install Other dependencies
 
-<pre><code>gem install hpricot cucumber</code></pre>
-
-Yes, you did already install cucumber as a plugin, but this will install all the dependent libraries you need.
+<pre><code>gem install term-ansicolor treetop diff-lcs hpricot</code></pre>
 
 h2. Bootstrap Cucumber
 
