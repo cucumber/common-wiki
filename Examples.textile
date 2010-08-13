@@ -1,4 +1,4 @@
 Here is a list of code examples from open source using cucumber:
 
-* "Clearance":http://github.com/thoughtbot/clearance/tree/fa424b8fe9fd8f151f32a726982a3fd42940b328/generators/clearance_features/templates/features
-* "WebJam":http://github.com/webjam/webjam/tree/d6b11f21ffabd224d26830c5b34839864d990c11/features
+* "Clearance":http://github.com/thoughtbot/clearance/ /generators/clearance_features/templates/features/
+* "WebJam":http://github.com/webjam/webjam/ /features/
