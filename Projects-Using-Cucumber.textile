@@ -9,6 +9,6 @@ Projects using Cucumber:
 * "radtrack":http://github.com/jgoodsen/radtrack
 * "CarrierWave":http://github.com/jnicklas/carrierwave/ /features
 * "RadiantCMS":http://github.com/radiant/radiant/tree/master/features/
-* "OERPScenario (linked to OpenERP)":https://launchpad.net/oerpsenario
+* "OERPScenario (linked to OpenERP)":https://launchpad.net/oerpsenario/
 
 Note: I had initially copied the [[Examples]] page. I created this page because I consider this page to be a more appropriate name.
