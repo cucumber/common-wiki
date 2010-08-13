@@ -14,7 +14,7 @@ It is important to point out that by simply running 'cucumber' the default profi
 
 h2. Preprocessing with ERb
 
-The cucumber.yml file is interpreted as an ERB file; this allows you to use ruby code to generate values in the cucumber.yml file. So if you have several profiles with similar values you could do something like:
+The cucumber.yml file is preprocessed by ERb; this allows you to use ruby code to generate values in the cucumber.yml file. So if you have several profiles with similar values you could do something like:
 
 <pre>
 <% common = "--tags ~@wip --strict" %>
