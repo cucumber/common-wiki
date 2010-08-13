@@ -2,7 +2,7 @@ Step definitions are defined in ruby files under <code>features/step_definitions
 
 <pre>
 Given /^I have (\d+) cucumbers in my belly$/ do |cukes|
-   # Some Ruby code here
+  # Some Ruby code here
 end
 </pre>
 
@@ -58,8 +58,6 @@ And a plain text step:
 Cucumber can't make a decision about what Step Definition to execute, and wil raise a <code>Cucumber::Ambiguous</code> error telling you to fix the ambiguity.
 
 h3. Guess mode
-
-*{color:red}v0.1.99 and later*
 
 Imagine you have these step definitions:
 
