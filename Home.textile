@@ -48,31 +48,6 @@ While Cucumber can be thought of as a "testing" tool, the intent of the tool is 
 This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else, and 
 the production code is then written "outside-in":http://dannorth.net/whats-in-a-story, to make them pass.
 
-h2. Installation
-
-Also see:
-
-* [[Ruby on Rails]]
-* [[JRuby and Java]]
-* [[IronRuby and .NET]]
-
-After you have installed Ruby, install Cucumber with the following command:
-
-<pre>gem install cucumber</pre>
-
-This is a good time to get familiar with <code>--help</code>  (See also [[Command Line Help]].)
-
-<pre>cucumber --help</pre>
-
-h3. Building the Gem yourself
-
-Get the code via Git (or download a tarball).
-
-<pre><code>git clone git://github.com/aslakhellesoy/cucumber.git
-cd cucumber
-rake install_gem
-</code></pre>
-
 h2. Getting started
 
 There are several ways to get started, depending on the architecture of your application.
