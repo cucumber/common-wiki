@@ -13,7 +13,7 @@ steam: -r features/support -r features/step_definitions -r features/steam --tags
 
 I have common support files (like paths.rb) in features/support and then profile-specific ones such as env.rb in features/plain/support and features/steam/support. Use cucumber's normal generated env.rb for features/plain/support/env.rb and steam's "example env.rb":http://github.com/svenfuchs/steam/blob/master/example/cucumber/env.rb for features/steam/support/env.rb.
 
-To allow the webrat step definitions to function the same between webrat and steam you should replace cucumber's standard webrat_steps.rb file with one I've written to handle webrat and steam automatically: "webrat_compatible_steps.rb":http://github.com/svenfuchs/steam/blob/master/example/cucumber/step_definitions/webrat_compatible_steps.rb
+To allow the webrat step definitions to function the same between webrat and steam you should replace cucumber's standard webrat_steps.rb file with one I've written to handle webrat and steam automatically: "webrat_compatible_steps.rb":http://github.com/svenfuchs/steam/blob/master/example/cucumber/webrat_compatible_steps.rb
 
 The features directory tree should look like this:
 
