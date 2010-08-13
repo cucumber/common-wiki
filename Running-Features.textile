@@ -34,7 +34,7 @@ Cucumber::Rake::Task.new(:features) do |t|
 end
 </code></pre>
 
-If you are using [[Ruby on Rails]] this task is defined for you already.
+If you are using [[Ruby on Rails]] this task is defined for you already.  For more information please see the "detailed page about using rake.":http://wiki.github.com/aslakhellesoy/cucumber/using-rake
 
 h2. Using TextMate
 
