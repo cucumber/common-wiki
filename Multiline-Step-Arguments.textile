@@ -70,11 +70,10 @@ this gets converted to a regular <code>String</code> before it's passed to the s
 
 h2. Substitution in Scenario Outlines
 
-If you use a multiline argument in steps in [[Scenario Outlines]], any <code>&lt; &gt;</code> 
+If you use a multiline argument in steps in [[Scenario Outlines]], any <code>< ></code> 
 delimited tokens will be substituted with values from the example tables. For example:
 
-<pre><code>
-Scenario Outline: Email confirmation
+<pre><code>Scenario Outline: Email confirmation
   Given I have a user account with my name "Jojo Binks"
   When an Admin grants me <Role> rights
   Then I should receive an email with the body:
@@ -91,8 +90,7 @@ Examples:
 
 Or with tables:
 
-<pre><code>
-Scenario Outline: Multiplying with 7
+<pre><code>Scenario Outline: Multiplying with 7
   Given I have the numbers
     | q1   | q2 | product |
     | <x>  |  7 | <y>     |
@@ -115,8 +113,7 @@ end
 
 This can easily be called from a plain text step like this:
 
-<pre><code>
-# feature
+<pre><code># feature
 Given an expense report for Jan 2009 with the following posts:
   | account | description | amount |
   | INT-100 | Taxi        |    114 |
