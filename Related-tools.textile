@@ -31,6 +31,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Greendot":http://github.com/bruce/greendot|Describe apps as state machines, with various outputs (including Cucumber features).|
 |"Groundwork":http://github.com/hectoregm/groundwork/tree/master| Rails Template using Authlogic that comes with Cucumber features|
 |"Gutkumber":http://github.com/danlucraft/gutkumber| Integration testing for "Ruby-GNOME2":http://ruby-gnome2.sourceforge.jp/.|
+|"Hydra":http://github.com/ngauthier/hydra| Distributed testing framework that can run your features in parallel.|
 |[[IronRuby and .NET]]| Test .NET applications with Cucumber|
 |"jEdit Cucumber Mode":http://redshades.rha7.com/post/196080000/jedit-cucumber-mode|jEdit mode to add syntax highlighting for .feature files|
 |[[JRuby and Java]]| Test Java applications with Cucumber|
