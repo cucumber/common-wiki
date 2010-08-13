@@ -24,7 +24,7 @@ This requires a Rakefile with a Cucumber task definition. For example:
 require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new(:features) do |t|
-  t.cucumber_opts = "--format pretty" # You can put any valid cucumber command line options and arguments here.
+  t.cucumber_opts = "--format pretty" # Any valid command line option can go here.
 end
 </code></pre>
 
