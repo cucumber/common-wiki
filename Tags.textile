@@ -62,7 +62,7 @@ Example:  Running scenarios which match @important AND @billing
 
 <pre><code>cucumber --tags @billing --tags @important</code></pre>
 
-You can combine these two methods to create powerful selection criterias:
+You can combine these two methods to create powerful selection criteria:
 
 Example: Running scenarios which match: (@billing OR @WIP) AND @important
 
