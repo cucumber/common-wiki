@@ -16,7 +16,7 @@ Given /^(.*) is logged in$/ do |name|
 end
 </pre>
 
-This is pracical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
+This is practical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
 
 <pre>
 # feature
@@ -64,7 +64,7 @@ But what if you want to call this from a step definition? There are a couple of 
 <pre>
 # ruby
 Given /A simple expense report/ do
-  Given "an expese report for Jan 2009 with the following posts:", table(%{
+  Given "an expense report for Jan 2009 with the following posts:", table(%{
     | account | description | amount |
     | INT-100 | Taxi        |    114 |
     | CUC-101 | Peeler      |     22 |
@@ -77,7 +77,7 @@ Or, if you prefer a more programmatic approach:
 <pre>
 # ruby
 Given /A simple expense report/ do
-  Given "an expese report for Jan 2009 with the following posts:", Cucumber::Ast::Table.new([
+  Given "an expense report for Jan 2009 with the following posts:", Cucumber::Ast::Table.new([
     %w{ account description amount },
     %w{ INT-100 Taxi        114    },
     %w{ CUC-101 Peeler      22     }
