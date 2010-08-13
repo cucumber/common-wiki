@@ -1,5 +1,5 @@
 Cucumber not ripe? Can't find your peeler? These are some common problems people have experienced. -And how to address them.
-
+ 
 h2. Console output isn't right on Windows
 
 Missing "a" characters in the output? Do your "æøå" characters print like garbled "Commodore 64 characters":http://kofler.dot.at/c64/? There are four steps to fix this.
