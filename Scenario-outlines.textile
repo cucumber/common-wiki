@@ -28,7 +28,7 @@ The Scenario outline steps provide a template which is never directly run. Only 
 
 We refer to the Scenario table below a Scenario outline as 'Examples' rather than 'More Examples'. We do this as the table represents all the test examples rather than additional examples.  
 
-In the Scenario outline steps you can use placeholders. Placeholders must be contained in within '<' '>'. For example:
+In the Scenario outline steps you can use placeholders. Placeholders must be contained within '<' '>'. For example:
 
 <pre>
 Given <I'm a placeholder and I'm ok>
