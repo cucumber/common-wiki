@@ -3,6 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Cucumber scenarios that depend on Sphinx":http://opensoul.org/2009/6/1/cucumber-scenarios-that-depend-on-sphinx|How to use Cucumber with "ThinkingSphinx":http://freelancing-god.github.com/ts/en/|Jun 01 2009|
 |"Mind the gap":http://content.yudu.com/Library/A15ltd/TestMarch2009/resources/28.htm|Joseph Wilk's article in European Software Tester magazine|May 21 2009|
 |"What's Mining: Cucumber support":http://blogs.jetbrains.com/ruby/2009/05/what’s-mining-cucumber-support|The JetBrains RubyMine team is working on Cucumber support|May 13 2009|
 |"Rails Test Prescriptions":http://www.railsrx.com|E-book on Rails testing -- free version contains long Cucumber tutorial|May 10 2009|
