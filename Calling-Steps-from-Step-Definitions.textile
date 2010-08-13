@@ -1,7 +1,7 @@
 It is possible to call steps from step definitions:
 
 <pre>
-Given /^A user (.*) exists$/ do |name|
+Given /^The user (.*) exists$/ do |name|
   # ...
 end
 
@@ -10,7 +10,7 @@ Given /^I log in as (.*)$/ do |name|
 end
 
 Given /^(.*) is logged in$/ do |name|
-  Given "A user #{name} exists"
+  Given "The user #{name} exists"
   Given "I log in as #{name}"
 end
 </pre>
@@ -20,4 +20,14 @@ This is pracical if you have several common steps that you want to perform in se
 <pre>
 Scenario: View last incidents
   Given Linda is logged in # This will in fact invoke 2 step definitions
+  When I go to the incident page
+</pre>
+
+Instead of having a lot of repetition:
+
+<pre>
+Scenario: View last incidents
+  Given The user Linda exists
+  And I log in as Linda
+  When I go to the incident page
 </pre>
