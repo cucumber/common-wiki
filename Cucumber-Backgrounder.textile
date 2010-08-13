@@ -187,6 +187,7 @@ Note that you are not required to use a matched subpattern, <code>(.* )</code>, 
 It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
 <pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
+I strongly recommended that, as much as possible, your feature steps should be expressed in complete but simple sentences that follow a <em><strong>Subject</strong></em> <em><strong>Verb</strong></em> <em><strong>Object</strong></em> pattern.
 
 Finally, you can have step definitions call other step definitions.  For example:
 
@@ -232,15 +233,17 @@ Finally, running <code>autotest</code> with the environment variable <code>AUTOF
 
 h3. Anything Else?
 
-For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest.  So, no popups when a step fails.  However, there exists a project to add a similar functionality to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
+The terminology for elements of Behaviour Driven Development differs somewhat from that employed by Test Driven Development.  This article, because of the introductory nature of its contents, tends to blur the semantic distinction between these two competitive philosophies.
 
-Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct steps in such a fashion as to conduct unit tests.  No great harm will result.  However, this is not considered best practice by many and may prove impossible for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
+Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitionss in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and, may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
 Cucumber comes preconfigured with webrat test steps.  If webrat is installed as a plugin in your project then these are available to you for view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem to perform the tests then you need add this to the features/support/env.rb file:
 
 <code>require 'webrat' if !defined?(Webrat)</code>
 
 Calls for any additional Ruby libraries that your particular testing environment requires should typically be placed in the <code>./features/support/env.rb</code> file.
+
+For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest;  So, no popups when a step fails.  However, there exists a project to add a similar functionality to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
 
 h3.  Need Help?
 
