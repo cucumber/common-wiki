@@ -42,7 +42,7 @@ h4. Install dependencies
 
 The plugins' dependencies must be installed separately:
 
-<pre><code>gem install term-ansicolor treetop diff-lcs nokogiri</code></pre>
+<pre><code>gem install term-ansicolor treetop diff-lcs nokogiri builder</code></pre>
 
 h3. Behind a firewall?
 
