@@ -3,5 +3,7 @@ Got questions? Here is where you can get in touch:
 * "Mailing list":http://rubyforge.org/mail/?group_id=797
 * "Lighthouse":http://rspec.lighthouseapp.com/projects/16211-cucumber/overview
 * "IRC":irc://irc.freenode.net/cucumber
+* "Twitter":http://search.twitter.com/search?q=%23cucumber
+* "stackoverflow":http://stackoverflow.com/questions/tagged/cucumber
 
 This is usually better than contacting individual developers directly. If you think you have found a bug, please try the latest gem version as well as the latest code here on GitHub before asking questions. When you file a bug report or ask a question, let us know what versions of relevant software you're using - at the very least the <code>cucumber --version</code> or the SHA of the git commit you built from.
