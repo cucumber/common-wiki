@@ -1,3 +1,45 @@
-Gherkin is the language that Cucumber understands. It is a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html that lets you describe software's behaviour without detailing how that behaviour is implemented. Gherkin serves two purposes - documentation and automated tests. -And a third bonus feature - when it yells in red don't be offended - it's talking to you, telling you what code you should write.
+Gherkin is the language that Cucumber understands.
+It is a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html
+that lets you describe software's behaviour without detailing how that behaviour is implemented.
+Gherkin serves two purposes - documentation and automated tests.
+-And a third bonus feature - when it yells in red don't be offended - it's talking to you, telling you what code you should write.
 
-Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase. The grammar exists in different flavours for several [[Spoken languages]], so that your team can use the [[Given-When-Then]] keywords (plus a few more) in your own language.
+Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase.
+The grammar exists in different flavours for several [[Spoken languages]],
+so that your team can use the [[Given-When-Then]] keywords (plus a few more) in your own language.
+
+h2. Syntax Notes
+
+The following notes are an unofficial (and possibly inaccurate) summary of Gherkin syntax.  YMMV...
+
+h3. General<p>
+
+h4. Comment Lines
+
+Comment lines are allowed anywhere in the file.
+They begin with zero or more spaces, followed by a sharp sign (#).
+
+h4. Reserved Words, etc.
+
+Gherkin provides parsers for dozens of languages, including (at this writing)
+Arabic, Chinese (Simplified), Danish, Dutch, English, Estonian, French, German, Italian, Japanese,
+Korean, Lithuanian, LOLCAT, Malay, Norwegian, Polish, Portuguese,
+Romanian (with and without diacritical marks), Russian,
+Spanish, Swedish, Texan, and Welsh.
+
+This note lists only the English reserved words;
+for corresponding words in other languages, see <tt>.../lib/cucumber/languages.yml</tt>.
+
+<pre>
+  and:               And
+  but:               But
+  examples:          Examples
+  feature:           Feature
+  given:             Given
+  given_scenario:    GivenScenario
+  more_examples:     More Examples
+  scenario:          Scenario
+  scenario_outline:  Scenario Outline
+  then:              Then
+  when:              When
+</pre>
