@@ -13,8 +13,7 @@ Scenario: eat 5 out of 20
 
 Scenario outlines allow us to more concisely express these examples through the use of a template with placeholders:
 
-<pre><code>
-Scenario Outline: eating
+<pre><code>Scenario Outline: eating
   Given there are <start> cucumbers
   When I eat <eat> cucumbers
   Then I should have <left> cucumbers
