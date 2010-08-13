@@ -29,26 +29,33 @@ Once you've done one of the two load methods above (please, don't do both ;-) yo
 #Fixture helper methods
 If you want to also enable the fixture helper methods, such as *users(:admin)*, you need to add the following (pretty much stolen straight from the Rails guts) after loading fixtures in the env.rb file, as above:
 
-<pre>World do |world|
+<pre>
+module FixtureAccess
 
-  (class << world; self; end).class_eval do
-    @@fixture_cache = {}
-    fixtures.each do |table_name|
-      table_name = table_name.to_s.tr('.', '_')
-      define_method(table_name) do |*fixture_symbols|
-        @@fixture_cache[table_name] ||= {}
+  def self.included(base)
+    (class << base; self; end).class_eval do
+      @@fixture_cache = {}
+      fixtures.each do |table_name|
+        table_name = table_name.to_s.tr('.', '_')
+        define_method(table_name) do |*fixture_symbols|
+          @@fixture_cache[table_name] ||= {}
 
-        instances = fixture_symbols.map do |fixture_symbol|
-          if fix = Fixtures.cached_fixtures(ActiveRecord::Base.connection, table_name)[fixture_symbol.to_s]
-            @@fixture_cache[table_name][fixture_symbol] ||= fix.find  # find model.find's the instance
-          else
-            raise StandardError, "No fixture with name '#{fixture_symbol}' found for table '#{table_name}'"
+          instances = fixture_symbols.map do |fixture_symbol|
+            if fix = Fixtures.cached_fixtures(ActiveRecord::Base.connection, table_name)[fixture_symbol.to_s]
+              @@fixture_cache[table_name][fixture_symbol] ||= fix.find  # find model.find's the instance
+            else
+              raise StandardError, "No fixture with name '#{fixture_symbol}' found for table '#{table_name}'"
+            end
           end
+          instances.size == 1 ? instances.first : instances
         end
-        instances.size == 1 ? instances.first : instances
       end
     end
   end
-  world
+
 end
 </pre>
+and then
+<pre>World(FixtureAccess)</pre>
+
+This works for Cucumber *0.2.3.2* and later. For older versions, view "forum post":http://www.ruby-forum.com/topic/187427#822479
