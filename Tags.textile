@@ -43,3 +43,17 @@ Feature: Index projects
 </pre>
 
 Tags are also used in Tagged [[Hooks]], which let you use tags to define what <code>Before</code> and <code>After</code> blocks get run for what scenarios.
+
+h2. Tag limits and WIP
+
+If you're following Kanban principles, you want to limit the work in progress (WIP). The idea is that the fewer features or scenarios that being worked on simultaneously, the quicker you'll be able to implement new features.
+
+Cucumber can enforce this using tag limits. Here is an example:
+
+<pre>
+cucumber --tags @dev:2,@qa:3
+</pre>
+
+This will fail if you have more than 2 <code>@dev</code> tags or more than 3 <code>@qa</code> tags.
+
+Used in conjunction with the <code>--wip</code> switch you can set up your project to enforce the WIP limits of your team.
