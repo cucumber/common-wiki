@@ -21,6 +21,12 @@ For example:
 <pre><code>[git|svn] mv stories/foo.story features/foo.feature
 </code></pre>
 
+You can do this in bash if you are under a Unix system:
+
+<pre><code>
+cd stories
+for file in $(ls *.txt); do svn mv $file ../features/`echo $file | sed s/.txt/.feature/`; done;
+</code></pre>
 Try to run the feature you moved:
 
 <pre><code>rake features
