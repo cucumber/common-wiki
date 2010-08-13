@@ -1,5 +1,7 @@
 h1. Introduction
 
+<script type="text/javascript" src="http://www.ohloh.net/p/34411/widgets/project_users?style=green"></script>
+
 Cucumber is a tool that can execute feature documentation written in plain text. A typical Cucumber feature looks like this:
 
 <pre>Feature: Search courses
