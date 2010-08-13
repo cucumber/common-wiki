@@ -10,9 +10,11 @@ If you contact a developer directly you may not get an answer. If you do get an 
 
 h2. Before you consider asking
 
-Try the latest released gem: <code>gem update cucumber</code>
+Try the latest released gem: 
+<pre>gem update cucumber</pre>
 
-If that doesn't help, try the latest beta gem: <code>gem install aslakhellesoy-cucumber --source http://gems.github.com/</code>
+If that doesn't help, try the latest beta gem: 
+<pre>gem install aslakhellesoy-cucumber --source http://gems.github.com/</pre>
 
 h2. Before you ask
 
