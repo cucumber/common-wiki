@@ -68,7 +68,7 @@ Imagine you have these step definitions:
 <pre><code>Given /we had (.*)/ do |what|
 end
 
-# A really versatile step!
+# A really versatile step definition!
 Given /we had (.*) on the (.*)/ do |what, where|
 end
 </code></pre>
@@ -77,13 +77,15 @@ And a plain text step:
 
 <pre><code>Given we had drinks on the roof</code></pre>
 
-The plain text step will match both step definitions and raise <code>Cucumber::Ambiguous</code>. However,
-if you run Cucumber with <code>--guess</code>, it will guess that you were aiming for the versatile step.
+The plain text step will match the Regexp of both step definitions and raise <code>Cucumber::Ambiguous</code>. However,
+if you run Cucumber with <code>--guess</code>, it will guess that you were aiming for the step definition with 2 match groups.
 
 There is ranking logic that gets invoked when the option is turned on:
-# The step definition with the most capture groups wins
-# If there are 2+ definitions with the same amount of capture groups, the one with the shortest overall captured string length wins
-# If there are still 2+ options the Ambiguous error is raised
+
+# The longest Regexp with 0 capture groups always wins.
+# The Regexp with the most capture groups wins (when there are none with 0 groups)
+# If there are 2+ Regexen with the same number of capture groups, the one with the shortest overall captured string length wins
+# If there are still 2+ options then an Ambiguous error is raised
 
 So if you try <code>--guess</code> with the mice above, you'll still get <code>Cucumber::Ambiguous</code>. Still, using
 guess mode is useful in some situations.
