@@ -53,7 +53,7 @@ This can easily be called from a plain text step like this:
 
 <pre>
 # feature
-Given an expese report for Jan 2009 with the following posts:
+Given an expense report for Jan 2009 with the following posts:
   | account | description | amount |
   | INT-100 | Taxi        |    114 |
   | CUC-101 | Peeler      |     22 |
