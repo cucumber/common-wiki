@@ -1,6 +1,6 @@
 Communication within a team always works better when people can use their spoken language. Cucumber supports several spoken languages. This is Norwegian:
 
-@@@
+<pre><code>
 Egenskap: Summering
   For å slippe å gjøre dumme feil
   Som en regnskapsfører
@@ -18,4 +18,4 @@ Egenskap: Summering
     Og at jeg har tastet inn 1
     Når jeg summerer
     Så skal resultatet være 13
-@@@
+</code></pre>
