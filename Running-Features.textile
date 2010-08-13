@@ -32,14 +32,14 @@ h2. Using the rake task
 
 This requires a Rakefile with a Cucumber task definition. For example:
 
-<code>require 'rubygems'
+<pre><code>require 'rubygems'
 require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new(:features) do |t|
   t.cucumber_opts = "--format pretty"
   t.rcov = true
 end
-</code>
+</code></pre>
 
 If you are using [[Ruby on Rails]] this task is defined for you already.
 
