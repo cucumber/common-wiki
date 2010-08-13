@@ -47,6 +47,15 @@ Open a Visual Studio command prompt and cd to where you downloaded the IronRuby 
 
 <pre>rake compile</pre>
 
+You may need the 'pathname2' gem installed if you see this error when running the rake:
+
+<pre>rake aborted!
+no such file to load -- pathname2</pre>
+
+If you see this message, simply install the 'pathname2' gem:
+
+<pre>gem install pathname2</pre>
+
 When you have completed this step you should be able to run
 
 <pre>build\debug\ir.exe</pre>
