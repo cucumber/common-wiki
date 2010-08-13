@@ -30,6 +30,10 @@ You can also patch the binary manually if the above solution does not work for y
 
 A pre-patched binary can be found linked in the comments.
 
+Some version of webrat also include a selenium server so you may need to patch that as well:
+
+GEM_INSTALL_DIR/webrat-0.4.1/vendor/selenium-server.jar
+
 h2. Step 3: Ubuntu fix (skip if you're not using Ubuntu)
 
 There is a bug with Selenium and Firefox 3 where Selenium cannot find: firefox-bin
