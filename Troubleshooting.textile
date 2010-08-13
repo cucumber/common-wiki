@@ -2,18 +2,20 @@ Cucumber not ripe? Can't find your peeler? These are some common problems people
 
 h2. Console output isn't right on Windows
 
-Missing "a" characters in the output? Do your "æøå" characters print like garbled "Commodore 64 characters":http://kofler.dot.at/c64/? There are three steps to fix this.
+Missing "a" characters in the output? Do your "æøå" characters print like garbled "Commodore 64 characters":http://kofler.dot.at/c64/? There are four steps to fix this.
 
-First - add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. 
+*First* - make sure your .feature files are saved in "UTF-8":http://en.wikipedia.org/wiki/UTF-8 format.
 
-Second - set your command window's font to a font that has the characters you're outputting - for example _Upper Left corner icon menu -> Properties -> Font -> Lucida Grande_.
+*Second* - add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. 
 
-Third - in your command prompt, change the codepage:
+*Third* - set your command window's font to a font that has the characters you're outputting - for example _Upper Left corner icon menu -> Properties -> Font -> Lucida Grande_.
+
+*Fourth* - in your command prompt, change the codepage:
 
 <pre>chcp 1252</pre>
 
 Now you should be able to get aæøå in your output on Windows.
 
-Note that 1252 is not UTF-8 - it's essentially Latin1. You can also try to set it to 65001, which is UTF-8, but this has the "unfortunate side effect":http://www.google.no/search?q=chcp+65001+bat&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a of temporarily neutering all your computer's bat files so they cannot be executed (including cucumber.bat and rake.bat).
+Note that "codepage 1252":http://en.wikipedia.org/wiki/Windows-1252 is not UTF-8 - it's essentially a superset of "ISO-8859-1":http://en.wikipedia.org/wiki/ISO/IEC_8859-1. Ideally you'd set it to 65001, which is UTF-8, but this has the "unfortunate side effect":http://www.google.no/search?q=chcp+65001+bat&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a of temporarily neutering all your computer's bat files so they cannot be executed (including cucumber.bat and rake.bat).
 
 For more info, see "Lighthouse issue #81":http://rspec.lighthouseapp.com/projects/16211/tickets/81-windows-all-the-a-characters-in-the-output-have-gone-on-strike
