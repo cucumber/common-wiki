@@ -121,7 +121,7 @@ end
 
 h4. Transforming tables with Transform
 
-If you want to transform an entire table to another data structure, you can use [[Step Argument Transforms]]
+If you want to transform an entire table to another data structure, you can use [[Step Argument Transforms]].
 
 h4. ActiveRecord
 
