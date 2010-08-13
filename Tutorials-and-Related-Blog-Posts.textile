@@ -4,6 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 
 |*Post*|*Description*|*Posting Date*|
+|"Testing Dash metrics with Cucumber":http://bradley.is/post/82649218/testing-dash-metrics-with-cucumber | Using Cucumber to test metrics | Mar 01 2009 |
 |"Cucumber metrics with Dash":http://bradley.is/post/82409348/cucumber-metrics-with-dash | Gathering progress metrics with Dash | Feb 28 2009 |
 |"Getting started with Cucumber and Sinatra":http://tooky.github.com/2009/02/05/getting-started-with-cucumber-and-sinatra.html | Sinatra loves Cucumbers | Feb 05 2009 |
 |"Web app integration testing for sysadmins with cucumber-nagios":http://holmwood.id.au/~lindsay/2009/02/23/web-app-integration-testing-for-sysadmins-with-cucumber-nagios/|Monitor web sites with Cucumber| Feb 23 2009 |
