@@ -17,6 +17,12 @@ A Scenario or feature can have as many tags as you like. Just separate them with
 Feature: Verify billing
 </pre>
 
+h2. Tag Inheritance
+
+Any tag that exists on a <code>Feature</code> will be inherited by <code>Scenario</code>, <code>Scenario Outline</code> or <code>Examples</code>.
+
+h3. Running a subset of scenarios
+
 You can use the <code>--tags</code> option to tell Cucumber that you only want to run features or scenarios that have (or don't have) certain tags. Examples:
 
 <pre>
