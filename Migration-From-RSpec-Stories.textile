@@ -62,44 +62,6 @@ arguments. This was much cleaner:
 end
 </code></pre>
 
-h2. Resolving duplicate steps
-
-In Cucumber you're not allowed to use a regexp or step name more than once in a step definition, so the
-following will cause an error:
-
-<pre><code>Given /Three (.*) mice/ do |disability|
-end
-
-Given /Three (.*) mice/ do |disability|
-end
-</code></pre>
-
-In the project I migrated we actually had a couple of duplicates in different files, and it was nice to get rid of them.
-We had to use our best judgment to decide which one to yank.
-
-RSpec Story runner would not complain on such duplicates, which was a drawback.
-
-h2. Resolving ambiguous steps
-
-Consider these step definitions:
-
-<pre><code>Given /Three (.*) mice/ do |disability|
-end
-
-Given /Three blind (.*)/ do |animal|
-end
-</code></pre>
-
-And a plain text step:
-
-<pre><code>Given Three blind mice</code></pre>
-
-Which step definition would be picked here? RSpec Story runner would just pick one and not tell you that it discarded the other one.
-Cucumber on the other hand will raise an error and tell you to fix the ambiguity.
-
-In our project we encountered several of those. The recommended solution is to rename your steps and step definitions so 
-they are no longer ambiguous. If you use regexps for step definitions (instead of strings) you have better control over this.
-
 h2. Migrating your Story Listeners
 
 With the story runner StoryListeners were being used to function as setup and teardown mechanisms.  Cucumber has Before and After methods, similar to RSpec's example framework, for setup and teardown between scenarios.  All global setup can be done in the env.rb file, and for global teardown the at_exit hook can be used in the env.rb file as well.
