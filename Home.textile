@@ -34,7 +34,7 @@ Cucumber itself is also written in Ruby, but it can be used to "test" code writt
 ** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU/Linux
 ** "SafariWatir":http://safariwatir.rubyforge.org/ - Runs Safari (OS X only)
 ** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS)
-** "Celerity":http://celerity.rubyforge.org/ - Runs a headless browser with Javascript support (requires JRuby)
+** "Celerity":http://celerity.rubyforge.org/ - Runs a headless browser with Javascript support. Examples "here":http://github.com/alvinschur/celerity-examples/tree/master
 ** "Mechanize":http://www.nepharious.com/blog/2008/11/30/regression-test-webapps-with-cucumber-and-webrat-on-mechanize/ - Runs a headless browser (any OS)
 
 (Cucumber's example directory has examples for some of these)
