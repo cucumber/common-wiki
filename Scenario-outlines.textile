@@ -1,9 +1,4 @@
-In some situations Scenario tables for a Scenario can get a little verbose. For example when you want:
-
-* A Scenario table value to appear in multiple places in your Scenario steps. 
-* To ignore some matches from the steps in the scenario table.
-
-Scenario outlines allow us to more concisely express these examples through the use of a template with placeholders. 
+Repeating scenarios to use different values quickly becomes tedious and repetitive. Scenario outlines allow us to more concisely express these examples through the use of a template with placeholders. 
 
 Lets look at an example first:
 
@@ -23,16 +18,14 @@ Lets look at an example first:
       |  20   |  5  |  15  |
 </code></pre>
 
-The Scenario outline steps provide a template which is never directly run. Only the Scenario table is ever run. 
+The Scenario outline steps provide a template which is never directly run. A Scenario Outline is run once for each row in the <code>Examples</code> section beneath it (not counting the first row).
 
-We refer to the Scenario table below a Scenario outline as 'Examples' rather than 'More Examples'. We do this as the table represents all the test examples rather than additional examples.  
-
-In the Scenario outline steps you can use placeholders. Placeholders must be contained within <code>< ></code>. For example:
+The way this works is via placeholders. Placeholders must be contained within <code>< ></code> in the Scenario Outline's steps. For example:
 
 <pre>Given <I'm a placeholder and I'm ok>
 </pre>
 
-The placeholders indicate that when the Examples row is run they should be substituted with real values from the Scenario table. If a placeholder name is the same as a column title in the Scenario table then this is the value that will replace it.
+The placeholders indicate that when the Examples row is run they should be substituted with real values from the <code>Examples</code> table. If a placeholder name is the same as a column title in the <code>Examples</code> table then this is the value that will replace it.
 
 You can also use placeholders in [[Multiline Step Arguments]].
 
