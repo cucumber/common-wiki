@@ -14,4 +14,4 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Telling a good story - Rspec stories from the trenches":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html| Discussion of common pitfalls when writing plain-text stories/features.| Aug 5 2008|
 |"Imperative Vs Declarative Scenarios in User Stories":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/| Discussion about trade-offs of different scenario writing styles.| May 19 2008 |
 |"rspec plain text stories + webrat = chunky bacon!":http://www.benmabey.com/2008/02/04/rspec-plain-text-stories-webrat-chunky-bacon/| Motivation and tutorial for webrat in features.| Feb 4 2008 |
-|"What's in a Story?":http://dannorth.net/whats-in-a-story| Dan North's first post about the writing stories.|02-11-07|
+|"What's in a Story?":http://dannorth.net/whats-in-a-story| Dan North's first post about the writing stories.|Feb 11 2007|
