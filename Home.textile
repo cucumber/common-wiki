@@ -1,8 +1,10 @@
-!http://cukes.info/images/cucumber_logo.png!:http://cukes.info/ !http://assets2.pragprog.com/images/covers/190x228/betas/achbd.jpg!:http://www.pragprog.com/titles/achbd
+<div style="float:right; margin: 0 0 0.5em 1em"><a href="http://www.pragprog.com/titles/achbd"><img src="http://assets2.pragprog.com/images/covers/190x228/betas/achbd.jpg" style="border: 1px solid silver"/></a></div>
+
+!http://cukes.info/images/cucumber_logo.png!:http://cukes.info/ 
 
 The "official Cucumber web site":http://cukes.info/ has some more marketing blurbs and *CukeTV* episodes!
 
-Cucumber is a tool that can execute plain-text documents as automated functional tests. Here is an example:
+Cucumber is a tool that can execute plain-text documents (readable by business people) as automated functional tests. The language that Cucumber understands is called [[Gherkin]]. Here is an example:
 
 <pre>Feature: Search courses
   In order to ensure better utilization of courses
@@ -10,39 +12,17 @@ Cucumber is a tool that can execute plain-text documents as automated functional
 
   Scenario: Search by topic
     Given there are 240 courses which do not have the topic "biology"
-    And there are 3 courses A,B,C that each have "biology" as one of the topics
+    And there are 2 courses A001, B205 that each have "biology" as one of the topics
     When I search for "biology"
     Then I should see the following courses:
-      | title |
-      | A     |
-      | B     |
-      | C     |
+      | Course code |
+      | A001        |
+      | B205        |
 </pre>
 
-The language that Cucumber understands is called [[Gherkin]]. Cucumber targets non technical business analysts, interaction designers, domain experts, testers (for the plain text part) and programmers (for the step definitions, which are written in Ruby). 
+While Cucumber can be thought of as a "testing" tool, the intent of the tool is to support "BDD":http://behaviour-driven.org/. This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else and verified by business analysts, domain experts, etc. non technical stakeholders. The production code is then written "outside-in":http://dannorth.net/whats-in-a-story, to make the stories pass.
 
-Cucumber itself is also written in Ruby, but it can be used to "test" code written in Ruby or other languages with the help of some extra tools:
-
-* [[JRuby and Java]]
-* [[IronRuby and .NET]]
-* [[IronRuby and Mono]]
-* [[FunFX and Flex]]
-* Web apps in any language - use Cucumber with one of the following:
-** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
-** "Watir":http://wtr.rubyforge.org/ - Drives IE (Windows only)
-** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU/Linux
-** "SafariWatir":http://safariwatir.rubyforge.org/ - Drives Safari (OS X only)
-** "ChromeWatir":http://code.google.com/p/chrome-watir/wiki/ChromeWatir - Drives Google Chrome
-** "Celerity":http://celerity.rubyforge.org/ - Drives a fast headless browser with Javascript support. Examples "here":http://github.com/alvinschur/celerity-examples/tree/master
-** "Culerity":http://github.com/langalex/culerity/ - For when you can't run your app under jRuby
-** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS)
-** "Mechanize":http://www.nepharious.com/blog/2008/11/30/regression-test-webapps-with-cucumber-and-webrat-on-mechanize/ - Runs a headless browser (any OS)
-
-(Cucumber's example directory has examples for some of these)
-
-Cucumber only requires minimal use of Ruby programming, so don't be afraid to try it out even if the code you're developing is in a different language. Most programmers should pick up the required Ruby skills and be productive with Cucumber in a few days.
-
-While Cucumber can be thought of as a "testing" tool, the intent of the tool is to support "BDD":http://behaviour-driven.org/. This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else, and  the production code is then written "outside-in":http://dannorth.net/whats-in-a-story, to make them pass.
+Cucumber itself is written in Ruby, but it can be used to "test" code written in Ruby or other languages including but not limited to Java, C# and Python.  Cucumber only requires minimal use of Ruby programming and <a href="http://tryruby.sophrinix.com/">Ruby is easy</a>, so don't be afraid even if the code you're developing in is not Ruby.
 
 h2. Getting started
 
@@ -52,22 +32,29 @@ Take a look at the "examples":http://github.com/aslakhellesoy/cucumber/tree/mast
 
 <pre><code>rake features</code></pre>
 
-This will print out the feature files in green. Now go into the code the features describe and deliberately make a bug in the code somewhere. Run the features again and look at the output. Note that the backtrace (stack trace) also shows you the line of the plain text feature that fails.
+You'll see feature files printed in green indicating passing tests. Now go into the code the features describe and deliberately make a bug. Run the features again. Note that the backtrace (stack trace) also shows you the line of the plain text feature that fails.
 
 There are several ways to get yourself started in writing tests, depending somewhat on the architecture of your application.  Digest [[Cucumber Backgrounder]] first (especially if you work with Rails).  Then you might want to peek into specific topics regarding the various aspects of setting up Cucumber.
 
-* Runtime environments and Cucumber
-** [[JRuby and Java]]
-** [[IronRuby and .NET]]
-** [[IronRuby and Mono]]
-* Test "drivers" and targets
+* Cucumber and other languages (Cucumber's example directory has examples for some of these)
+** Java Virtual Machine: [[JRuby and Java]]
+** .NET (Microsoft.NET and Mono): [[IronRuby and .NET]], [[IronRuby and Mono]]
+** Adobe Flex: [[FunFX and Flex]]
+** [[Python]]
+** Web apps in any language: Drive a full or headless browser using one of these
+*** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
+*** "Watir":http://wtr.rubyforge.org/ - Drives IE (Windows only), see: [[Setting up FireWatir]]
+*** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU/Linux
+*** "SafariWatir":http://safariwatir.rubyforge.org/ - Drives Safari (OS X only)
+*** "ChromeWatir":http://code.google.com/p/chrome-watir/wiki/ChromeWatir - Drives Google Chrome
+*** "Celerity":http://celerity.rubyforge.org/ - Drives a fast headless browser with Javascript support. Examples "here":http://github.com/alvinschur/celerity-examples/tree/master
+*** "Culerity":http://github.com/langalex/culerity/ - For when you can't run your app under jRuby
+*** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS), see: [[Setting up Selenium]]
+*** "Mechanize":http://www.nepharious.com/blog/2008/11/30/regression-test-webapps-with-cucumber-and-webrat-on-mechanize/ - Runs a headless browser (any OS)
+* Application frameworks
 ** [[Ruby on Rails]]
 ** [[Merb]]
 ** [[Sinatra]]
-** [[FunFX and Flex]]
-** [[Python]]
-** [[Setting up FireWatir]]
-** [[Setting up Selenium]]
 * Pimp my Cuke
 ** [[Custom Formatters]]
 ** [[Console Colours]]
@@ -84,7 +71,7 @@ There are several ways to get yourself started in writing tests, depending somew
 ** [[Autotest Integration]]
 ** [[Related tools]] that work with Cuke
 ** [[Maven cucumber-maven-plugin]]
-** [[Spork and --drb]]
+** [[Spork and --drb]] to distribute your test runs
 
 Tap to the blogosphere via [[Tutorials and Related Blog Posts]].
 
