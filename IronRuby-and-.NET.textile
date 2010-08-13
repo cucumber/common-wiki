@@ -2,6 +2,29 @@ Developing in .NET? You can use Cucumber with IronRuby. You need both IronRuby a
 
 (Mono users - see [[IronRuby and Mono]])
 
+h2. Installing Cucumber with IronRuby 0.9.2
+
+With the latest release of IronRuby, I believe the installation process has been simplified. The following steps appeared to work well:
+<pre>igem install cucumber --no-ri --no-rdoc
+igem install iron-term-ansicolor --no-ri --no-rdoc
+copy IronRuby\bin\iGem.bat IronRuby\bin\iCucumber.bat
+copy IronRuby\Lib\ironruby\gems\1.8\gems\cucumber-0.4.4\bin\cucumber IronRuby\bin\iCucumber
+</pre>
+Edit that file and add the following line to it:
+<pre>require 'rubygems'</pre>
+above all of the other require statements - the beginning of the file should look something like this:
+<pre>require 'rubygems'
+require 'cucumber/rspec_neuter'
+require 'cucumber/cli/main' 
+</pre>
+
+Run the following command to see if everything is working properly:
+<pre>
+icucumber --help
+</pre>
+
+Now skip down to the section that explains how to run the examples
+
 h2. Installing MRI
 
 You may need MRI to build IronRuby. You also need MRI to install gems if IronRuby is not able to install some gem itself. When you have installed IronRuby you can use gems installed into MRI from IronRuby. See the "IronRuby Gems information page":http://www.ironruby.net/Documentation/Real_Ruby_Applications/RubyGems for details.
