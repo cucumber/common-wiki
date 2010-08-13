@@ -1,23 +1,21 @@
 Step argument transforms help your step definitions be more DRY. You can use the <code>Transform</code> method to register a regular expression along with a code block. Before captured Regexp groups get yielded as arguments to step definitions, an attempt is made to match them against any registered <code>Transform</code>. If there is a match, the return value of the block supplied with the transform is yielded as the step definition argument instead. 
 
-<code>Transform</code> can put in a <code>support/transforms.rb</code> file or any other file under the <code>support</code> directory. Here is an example:
-
-<pre>
-# features/support/transforms.rb
-Transform /^user \w+$/ do |step_arg|
-  User.find_by_username /(\w+)$/.match(step_arg)[0]
-end
-</pre>
+It's recommended that you put <code>Transform</code> code in the same file as the step definitions using them. It becomes easier to navigate your code that way. Here is an example:
 
 <pre>
 # features/support/user_steps.rb
+
+Transform /^user \w+$/ do |step_arg|
+  User.find_by_username /(\w+)$/.match(step_arg)[0]
+end
+
 Then /^(user \w+) should be friends with (user \w+)$/ do |user, friend|
   user.should be_friends_with(friend)
 end
 </pre>
 
 <pre>
-# features/befirending.feature
+# features/befriending.feature
 Scenario: befriending
   Given ...
   When ...
