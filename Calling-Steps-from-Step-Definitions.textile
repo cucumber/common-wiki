@@ -1,0 +1,23 @@
+It is possible to call steps from step definitions:
+
+<pre>
+Given /^A user (.*) exists$/ do |name|
+  # ...
+end
+
+Given /^I log in as (.*)$/ do |name|
+  # ...
+end
+
+Given /^(.*) is logged in$/ do |name|
+  Given "A user #{name} exists"
+  Given "I log in as #{name}"
+end
+</pre>
+
+This is pracical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
+
+<code>
+Scenario: View last incidents
+  Given Linda is logged in # This will in fact invoke 2 step definitions
+</code>
