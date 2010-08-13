@@ -24,4 +24,4 @@ Fixtures.create_fixtures(fixtures_folder, fixtures)
 </pre>
 
 #Usage
-Once you've done one of the two load methods above (please, don't do both ;-) you can access your fixture data from the database using *Model.find*.  Example to find the first User model you'd use User.find(:first).  You do not appear to have access via the fixutres helpers; *users(:admin)* for example will not work!
+Once you've done one of the two load methods above (please, don't do both ;-) you can access your fixture data from the database using *Model.find*.  Example to find the first User model you'd use User.find(:first).  You do not appear to have access via the fixtures helpers; *users(:admin)* for example will not work!
