@@ -15,29 +15,29 @@ A developer
 Should employ a BDD methodology and tools
 
 Scenario: Cucumber should be installed and configured
-Given you have installed the gem named "rails"
-  And you have installed the gem named "cucumber-rails"
-  And you have generated a RoR project named "my_project"
-  And your session working directory is the Rails root directory of "my_project"
-  And you have created the file cucumber.yml in the root directory
+Given I have installed the gem named "rails"
+  And I have installed the gem named "cucumber-rails"
+  And I have generated a RoR project named "my_project"
+  And the present working directory is the Rails root directory of "my_project"
+  And I have created the file cucumber.yml in the root directory
   And the file cucumber.yml contains a valid default profile
 
-When you run "script/generate cucumber"
+When I run "script/generate cucumber"
 
-Then it should create the directory ./features
-  And it should create the file ./features/features.feature
-  And it should create the directory ./features/step_definitions
-  And it should create the file ./features/step_definitions/web_steps.rb
-  And it should create the directory ./features/support
-  And it should create the file ./features/support/env.rb
-  And it should create the file ./features/support/paths.rb
-  And it should create the file ./lib/tasks/cucumber.rake
-  And it should create the file ./config/environments/environment cucumber.rb
-  And it should modify ./config/database.yml
+Then I should create the directory ./features
+  And I should create the file ./features/features.feature
+  And I should create the directory ./features/step_definitions
+  And I should create the file ./features/step_definitions/web_steps.rb
+  And I should create the directory ./features/support
+  And I should create the file ./features/support/env.rb
+  And I should create the file ./features/support/paths.rb
+  And I should create the file ./lib/tasks/cucumber.rake
+  And I should create the file ./config/environments/environment cucumber.rb
+  And I should modify ./config/database.yml
   .  .  .
 </pre>
 
-The foregoing is written in the style of the feature statements, called <em>steps</em>, that make up the user interface to Cucumber testing.  We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
+The foregoing give a sample of the form that feature statements take.  These statements, called <em>feature steps</em>, make up the user interface to Cucumber testing.  They are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ for illustrative purposes, in practice all those Then/Ands would be subsumed into the simple Declarive statement <code>I should create the Cucumber environment</code>. We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
 
 The root level of the archetypal RoR project directory tree looks like this:
 
