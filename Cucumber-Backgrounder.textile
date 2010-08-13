@@ -181,15 +181,14 @@ When /some (.*) action/ do |match|
 Then /(*.) other action/ do |match|
 Given /(.*) other (.*)/ do |first,second|
 </code></pre>
-But, this will throw a method missinf exception:
+But, this will throw a method missing exception:
 <pre>
 And /some other act.*/ do 
 </pre>
 
-Because *_And_* is not defined as a steps definition method.  Because the step definition match depends only upon the pattern, and not upon the step method, I have adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files.
-Which raises another interesting point.  If more than one of these matchers are defined anywhere in any of your step_definitions.rb files, and not necessarily in the same file mind you, then cucumber would tell you that it found multiple step definition matches for a single feature step and force you to distinguish them.
+Because *_And_* is not defined as a steps definition method.  Since the step definition match depends only upon the pattern following the method, and not upon the step method itself, I have adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files.
 
-Note that you are not required to use a matched subpattern, <code>(.* )</code>, in the following block.  
+Which raises another interesting point.  If more than one of these matchers are defined anywhere in any of your step_definitions.rb files, and not necessarily in the same file mind you, then cucumber complains that it found multiple step definition matches for a single feature step and forces you to distinguish them.
 
 It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
@@ -208,7 +207,7 @@ When /in an invoiced non-shipped situation/ do
 end
 </code></pre>
 
-Worthy of note is that, inside the step_definitions.rb files, one must enclose the matcher argument to other <strong>Given/When/Then/And</strong> methods with a string delimiter.  Because of this, if you have adopted the practice of demarcating parameter values present in the features.feature file steps with double quote marks, then you must escape these parameters when calling another definition_steps.rb matcher from inside the step_definitions.rb files.  You should also be cautious not to include the quote marks in the step_definitions parameter matchers, for <code>"(.*)"</code> is not the same as <code>(.*)</code> or <code>(".*")</code>.  If you use quotes in the .feature file steps and do not account for them in your corresponding step_definition.rb matcher methods then you will obtain variables that contain leading and trailing quotes as part of their values.
+Worthy of note is that, inside the step_definitions.rb files, one must enclose the matcher argument to other <strong>Given/When/Then</strong> methods with a string delimiter.  Because of this, if you have adopted the practice of demarcating parameter values present in the features.feature file steps with double quote marks, then you must escape these parameters when calling another definition_steps.rb matcher from inside the step_definitions.rb files.  You should also be cautious not to include the quote marks in the step_definitions parameter matchers, for <code>"(.*)"</code> is not the same as <code>(.*)</code> or <code>(".*")</code>.  If you use quotes in the .feature file steps and do not account for them in your corresponding step_definition.rb matcher methods then you will obtain variables that contain leading and trailing quotes as part of their values.
 
 <pre><code>
 Scenario: Quotes surround value elements
