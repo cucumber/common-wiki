@@ -11,10 +11,10 @@ The easiest is to install everything as a gem.
 <pre><code>[sudo] gem install rspec rspec-rails cucumber webrat
 </code></pre>
 
-*important:* Cucumber 0.1.12 and up depends on Webrat 0.3.2.1 or higher, which as of this writing is not yet officially released to Rubyforge's gem repository. In the meanwhile, install Bryan Helkamp's snapshot gem:
+*important:* As of this writing, Cucumber 0.1.13  depends on Webrat code that isn't officially released as a gem on Rubyforge. In the meanwhile, install Aslak Hellesøy's snapshot gem:
 
 <pre><code>gem sources -a http://gems.github.com
-[sudo] gem install brynary-webrat
+[sudo] gem install aslakhellesoy-webrat
 </code></pre>
 
 *Ubuntu/Debian users:* You need to install the following libs for nokogiri to install properly (from "webrat home":http://github.com/brynary/webrat/tree/master):
