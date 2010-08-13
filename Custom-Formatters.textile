@@ -1,6 +1,10 @@
-*{color:red}IMPORTANT! The Formatter API will change (and hopefully stabilise) with Cucumber v0.2.*
+*{color:red}IMPORTANT! These guidelines are for Cucumber v0.2.*
 
-It's easy to write your own custom formatter for Cucumber. Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers). Here is how you'd do that:
+The public API for Cucumber's formatters is defined by all the methods in the <code>Cucumber::Ast::Visitor</code> class, which you should use as your base class.
+
+If you want to write your own custom formatter, just subclass <code>Cucumber::Ast::Visitor</code>. Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers).
+
+Here is how you'd do that:
 
 Save your custom formatter class in <code>features/support</code> (or if you want to put it elsewhere, put a file in that directory that <code>require</code>s your formatter class).
 
@@ -10,26 +14,20 @@ require 'rubygems'
 require 'twitter'
 
 module Silly
-  class TwitterFormatter
-    def initialize(io, step_mother, options={})
+  class TwitterFormatter < Cucumber::Ast::Visitor
+    def initialize(step_mother, io, options)
       # We don't care about these - we're just twittering!
     end
 
-    def scenario_executing(scenario)
-      @failed = false
-    end
-
-    def step_failed(step, regexp, args)
-      @failed = true
-    end
-
-    def scenario_executed(scenario)
-      status = @failed ? 'FAILED' : 'PASSED'
-      message = "#{scenario.name} #{status}"
-      Twitter::Base.new('your email', 'your password').post(message)
+    def visit_step_name(keyword, step_match, status, source_indent, background)
+      if status == :failed
+        step_name = step_match.format_args(lambda{|param| "*#{param}*"})
+        message = "#{step_name} FAILED"
+        Twitter::Base.new('your email', 'your password').post(message)
+      end
     end
   end
 end
 </pre>
 
-Now you can run your features by passing <code>--format Silly::TwitterFormatter</code> to the <code>cucumber</code> command line, Rake task or even in <code>cucumber.yml</code>. You have more methods available than the ones used in this awesome example (but you only need to implement the ones you care about). Look at the sources for some of Cucumber's built-in formatters to discover more methods.
+Now you can run your features by passing <code>--format Silly::TwitterFormatter</code> to the <code>cucumber</code> command line, Rake task or even in <code>cucumber.yml</code> - see [[Running Features]] for all the options. You have more methods available than the ones used in this awesome example (but you only need to implement the ones you care about). Look at the sources for some of Cucumber's built-in formatters to discover more methods.
