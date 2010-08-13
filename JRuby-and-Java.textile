@@ -1,0 +1,53 @@
+Cucumber runs fine on "JRuby":http://jruby.codehaus.org/. This means you can use Cucumber with plain Java code.
+
+h2. Installing Cucumber in JRuby
+
+To get started, you need the JDK, JRuby and Cucumber installed. I'm assuming you already know how to install Java - you probably already have it installed since you're reading this page.
+
+h3. Install JRuby
+
+Just download the latest "binary distribution":http://dist.codehaus.org/jruby/, unpack it and make sure the bin directory is on your <code>PATH</code>. To check that you have installed it properly, try out the following commands:
+
+<pre>jruby --version</pre>
+
+and
+
+<pre>jruby -S rake --version</pre>
+
+h3. Install Cucumber into JRuby
+
+Just use the <code>gem</code> command from JRuby:
+
+<pre>jruby -S gem install cucumber</pre>
+
+To check that you have it installed properly, run:
+
+<pre>jruby -S cucumber --help</pre>
+
+When you run <code>jruby</code> with the <code>-S</code> switch, jruby will look for the script (in this case <code>cucumber</code>) in jruby's <code>bin</code> directory before it starts looking at the <code>PATH</code>. It will find the <code>cucumber</code> ruby script inside JRuby's bin that was created when you installed the gem.
+
+h2. Running the examples
+
+Open a command prompt and cd to the Cucumber examples directory. You'll find them under <code>$JRUBY_HOME/lib/ruby/gems/1.8/gems/cucumber-X.Y.Z/examples</code>. (Replace <code>X.Y.Z</code> with the Cucumber version you installed above).
+
+If you pulled the Cucumber code with Git, you'll find the examples under <code>examples</code>.
+
+h3. Run the plain ruby example
+
+<pre><code>cd i18n\en
+jruby -S cucumber features
+</code></pre>
+
+The Code under test is pure Ruby, so it's not that interesting in the context of JRuby.
+
+h3. Run the Java example
+
+<pre><code>cd java
+jruby -S rake features
+</code></pre>
+
+This will compile the java code and then run Cucumber features against that code.
+
+h2. Using Maven
+
+Apache "Maven":http://maven.apache.org/ is a popular build tool for Java. If you're already using Maven you might be interested in running Cucumber with Maven too. Madaspeak has written a "great blog post":http://binil.wordpress.com/2008/10/29/running-cucumber-on-jrubymaven/ showing how to do this.
