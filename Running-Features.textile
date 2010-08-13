@@ -14,18 +14,15 @@ h4. Defining 'profiles'
 
 Profiles allow you to store and reuse commonly used cucumber arguments for a project in a cucumber.yml file.  For example, by having this in your cucumber.yml at your project root:
 
-<pre><code>
-default: --format profile features
+<pre><code>default: --format profile features
 html_report: --format progress --format html --out=features_report.html features  
 </code></pre>
 
 You can reuse the arguments listed above:
-<pre><code>
-cucumber --profile html_report
+<pre><code>cucumber --profile html_report
 </code></pre>
 
-It is important to point out that by simply running 'cucumber' the default profile will be used.
-
+It is important to point out that by simply running 'cucumber' the default profile will be used (if a cucumber.yml file is found).
 
 h3. Using the rake task (in a rails app)
 
