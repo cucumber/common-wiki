@@ -6,7 +6,11 @@ To get started, you need the JDK, JRuby and Cucumber installed. I'm assuming you
 
 h3. Install JRuby
 
-Just download the latest "binary distribution":http://dist.codehaus.org/jruby/, unpack it and make sure the bin directory is on your <code>PATH</code>. To check that you have installed it properly, try out the following commands:
+Just download the latest "binary distribution":http://dist.codehaus.org/jruby/, unpack it and make sure the bin directory is on your <code>PATH</code>. Run the following command to update RubyGems:
+
+<pre>jruby -S gem update --system</pre>
+
+ To check that you have installed it properly, try out the following commands:
 
 <pre>jruby --version</pre>
 
