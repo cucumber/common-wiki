@@ -1,0 +1,7 @@
+A draft list of useful Cucumber patterns:
+* Sections
+** Description: ability to scope an inspection or webrat step.
+** Examples:
+*** When I follow "next" in the pagination section
+*** Then I should see "logout" in the account section
+** Implementation: a mapping of section names to xpaths that can be used for scoping, a patch of webrat is needed to allow xpaths to be used
