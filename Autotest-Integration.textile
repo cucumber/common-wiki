@@ -8,7 +8,7 @@ If you always want to have the plugin run then you can export the variable in yo
 export AUTOFEATURE=true
 </code></pre>
 
-By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create a 'autotest' profile in your cucumber.yml.  Please see [[Running Features]] for more information about profiles.
+By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create an 'autotest' profile in your cucumber.yml.  Please see [[Running Features]] for more information about profiles.
 
 h3. Why is it disabled by default?
 
