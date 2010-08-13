@@ -27,7 +27,7 @@ Try to run the feature you moved:
 
 At this point you should see a lot of yellow (pending steps). 
 
-If you see a Cucumber::TreetopParser::Feature::SyntaxError, it may be because you have comments in your stories. RSpec Story Runner supports Ruby-style comments but Cucumber doesn't yet.
+If you see a Cucumber::TreetopParser::Feature::SyntaxError, you may have to tweak your file - according to the error message. The syntax (grammar) for RSpec stories and Cucumber features should be similar, but you *might* run into differences.
 
 h2. Move over your step definitions
 
