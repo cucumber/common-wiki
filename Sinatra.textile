@@ -4,27 +4,32 @@ You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Web
 
 Just make sure you have a <code>features/support/env.rb</code> file with the following:
 
-<pre><code># Sinatra
-app_file = File.join(File.dirname(__FILE__), *%w[.. .. app.rb])
+<pre><code>app_file = File.join(File.dirname(__FILE__), *%w[.. .. app.rb])
 require app_file
 # Force the application name because polyglot breaks the auto-detection logic.
 Sinatra::Application.app_file = app_file
 
-# RSpec matchers
 require 'spec/expectations'
-
-# Webrat
+require 'rack/test'
 require 'webrat'
+
 Webrat.configure do |config|
-  config.mode = :sinatra
+  config.mode = :rack
 end
 
-World do
-  session = Webrat::SinatraSession.new
-  session.extend(Webrat::Matchers)
-  session.extend(Webrat::HaveTagMatcher)
-  session
+class MyWorld
+  include Rack::Test::Methods
+  include Webrat::Methods
+  include Webrat::Matchers
+
+  Webrat::Methods.delegate_to_session :response_code, :response_body
+
+  def app
+    Sinatra::Application
+  end
 end
+
+World{MyWorld.new}
 </code></pre>
 
 You may have to set the app_file in your app file. Otherwise Sinatra (at least version 0.9.1.1) won't find the views or layouts (see "this irc log":http://irclogger.com/sinatra/2009-05-08) e.g.,
