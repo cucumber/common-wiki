@@ -2,7 +2,7 @@ Cucumber runs fine on "JRuby":http://jruby.codehaus.org/. This means you can use
 
 h2. Installing Cucumber in JRuby
 
-To get started, you need the JDK, JRuby and Cucumber installed. I'm assuming you already know how to install Java - you probably already have it installed since you're reading this page.
+To get started, you need the JDK, JRuby and Cucumber installed. I'm assuming you already know how to install a JDK - you probably already have it installed since you're reading this page.
 
 h3. Install JRuby
 
