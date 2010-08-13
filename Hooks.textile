@@ -1,13 +1,17 @@
 Cucumber provides a number of hooks which allow us to run blocks at various points in the Cucumber test cycle. You can put them in your <code>support/env.rb</code> file or any other file under the <code>support</code> directory, for example in a file called <code>support/hooks.rb</code>. There is no association between where the hook is defined and which scenario/step it is run for, but you can use tagged hooks (see below) if you want more fine grained control.
 
-All defined hooks are run whenever the relevant event occurs. For example all <code>Before</code> hooks defined throughout the required code will be run before the first step of each scenario.
+All defined hooks are run whenever the relevant event occurs.
 
 h2. Scenario hooks
+
+<code>Before</code> hooks will be run before the first step of each scenario. They will run in the same order of which they are registered.
 
 <pre><code>Before do
   # Do something before each scenario.
 end
 </code></pre>
+
+<code>After</code> hooks will be run after the last step of each scenario. They will run in the *opposite* order of which they are registered.
 
 <pre><code>After do |scenario|
   # Do something after each scenario.
