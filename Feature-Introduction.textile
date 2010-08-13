@@ -52,7 +52,7 @@ Given /there are (\d+) coffees left in the machine/ do |n|
 end
 </pre>
 
-This step definition uses a regular expression with one match group - <code>(\d+)</code>. (It matches any sequence of digits). Therefore, it matches the first line of the scenario. The value of each matched group gets yielded to the block as a string. You must take care to have the same number of regular expression groups and block arguments. Since block arguments are always strings, you have to do any type conversions inside the block.
+This step definition uses a regular expression with one match group - <code>(\d+)</code>. (It matches any sequence of digits). Therefore, it matches the first line of the scenario. The value of each matched group gets yielded to the block as a string. You must take care to have the same number of regular expression groups and block arguments. Since block arguments are always strings, you have to do any type conversions inside the block, or use [[Step Argument Transforms]].
 
 When Cucumber prints the results of the running features it will underline all step arguments so that it's easier to see what part of a step was actually recognised as an argument. It will also print the path and line of the matching step definition. This makes it easy to go from a feature file to any step definition.
 
