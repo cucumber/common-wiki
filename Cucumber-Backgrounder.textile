@@ -8,7 +8,14 @@ Since the original version of this article appeared, Cucumber has undergone repe
 
 h3. Where to Start?
 
-<pre>Given you have installed the gem named "rails"
+<pre>
+Feature: Design and Build a Ruby on Rails web app using Behaviour Driven Development (BDD)
+In order to reduce rework and produce a web app at low cost and high speed
+A developer 
+Should employ a BDD methodology and tools
+
+Scenario: Cucumber should be installed and configured
+Given you have installed the gem named "rails"
   And you have installed the gem named "cucumber-rails"
   And you have generated a RoR project named "my_project"
   And your session working directory is the Rails root directory of "my_project"
