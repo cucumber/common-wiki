@@ -5,7 +5,10 @@ A draft list of useful Cucumber patterns:
 ** Examples:
 *** When I follow "next" in the pagination section
 *** Then I should see "logout" in the account section
-** Implementation: a mapping of section names to xpaths that can be used for scoping, a patch of webrat is needed to allow xpaths to be used
+** Implementation:
+*** A step like <pre>When /^I follow "([^\"]*)" in the (.*)$/</pre>
+*** A mapping of section names to xpaths that can be used for scoping
+*** A patch of webrat is needed to allow xpaths to be used
 * Easy objects
 ** Description: generic step to create objects in a rails app
 ** Motivation: when writing cucumber for rails, you often want to create some objects and set their properties
