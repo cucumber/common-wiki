@@ -1,4 +1,4 @@
-Step definitions are defined in ruby files under <code>features/step_definitions</code>. Here is a simple example:
+Step definitions are defined in ruby files under <code>features/step_definitions/*_steps.rb</code>. Here is a simple example:
 
 <pre>
 Given /^I have (\d+) cucumbers in my belly$/ do |cukes|
