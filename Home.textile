@@ -43,6 +43,7 @@ There are several ways to get yourself started in writing tests, depending somew
 ** [[Python]]
 ** Web apps in any language: Drive a full or headless browser using one of these
 *** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
+*** "Steam":http://github.com/svenfuchs/steam - Drives a fast headless browser with Javascript support. Support for the normal webrat step definitions, see [[Setting up Steam]]
 **** [[PHP|Testing PHP app using Webrat]]
 *** "Watir":http://wtr.rubyforge.org/ - Drives IE (Windows only), see: [[Setting up FireWatir]]
 *** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU/Linux
