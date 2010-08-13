@@ -10,3 +10,21 @@ Then inside of a merb application directory, try:
 *merb-gen cucumber*
 
 I found this walk-through useful - "Writing User Stories with merb_cucumber":http://dermological.blogspot.com/2008/11/writing-user-stories-with-merb-cucumber.html
+
+Looking for Examples?
+-----------------------------
+
+So am I. Therefore I've been scrounging github in search of some. Lots of merb projects out there with empty /features sitting around.
+In my experience, searching github for anything highly particular like this is not useful.
+
+But, please add some when you find them! 
+
+Here are some merb projects that use cucumber (feel free to add/update/delete this list accordingly, I did not rigorously weed through each one but I did only include /features that had actual examples):
+
+* "http://github.com/matthewford/comic-review/tree/master":http://github.com/matthewford/comic-review/tree/master
+* "http://github.com/teamon/merb-base/tree/master":http://github.com/teamon/merb-base/tree/master
+* "http://github.com/mop/mini-blog/tree/master":http://github.com/mop/mini-blog/tree/master
+* "http://github.com/jnicklas/merb_upload/tree/master":http://github.com/jnicklas/merb_upload/tree/master
+* "http://github.com/ngty/ty_cucumber_salad/tree/master":http://github.com/ngty/ty_cucumber_salad/tree/master
+* "http://github.com/teamon/aliquam/tree/master":http://github.com/teamon/aliquam/tree/master
+* cucumber in a merb slice: "http://github.com/balinterdi/philotes/tree/master":http://github.com/balinterdi/philotes/tree/master
