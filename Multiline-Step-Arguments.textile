@@ -1,4 +1,4 @@
-It's possible to pass text with an arbitrary number of lines and formatting to a step definition using *py_string* syntax.  The text should be offset by delimiters consisting of three double-quote marks on lines of their own (indentation is unimportant):
+It's possible to pass text with an arbitrary number of lines and formatting to a step definition using the PyString syntax.  The text should be offset by delimiters consisting of three double-quote marks on lines of their own (indentation is unimportant):
 
 <blockquote>
 <pre>
@@ -30,6 +30,3 @@ Then I should yadda yadda
 In your step definition, there's no need to find this text and match it in your regex.  It will automatically be passed in as a parameter:
 
 bq. @Given /^a blog post body in Markdown$/ do |body|@
-
-
-_(Note from original Wiki page author: the reference for this feature was derived from the Cucumber specs.  Your humble documenter isn't completely sure what he's talking about.  If you want to know what a *py_string* is, somebody clamor until Ben Mabey explains it.)_
