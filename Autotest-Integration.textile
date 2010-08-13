@@ -8,6 +8,8 @@ If you always want to have the plugin run then you can export the variable in yo
 export AUTOFEATURE=true
 </code></pre>
 
+By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create a 'autotest' profile in your cucumber.yml.  Please see [[Running Features]] for more information about profiles.
+
 h3. Why is it disabled by default?
 
 Autotest is geared toward the Red->Green->Refactor cycle on an object level (unit-tests.)  These object level specs/tests are generally highly focused and isolated per object so breaks can be detected on a very detailed level.  The suites are meant to run extremely fast to give the developer quick feedback.  Cucumber on the other hand provides end-to-end application level testing.  By executing the entire stack features can help find integration failures between objects and provide large coverage to prevent regressions.  A side effect of this is that features are generally much slower than object level specs.  Due to their relative slowness and non-focused nature they may not be realistic to run along side the object-level suite.  Of course every project is different and every developer has different workflow preferences.
