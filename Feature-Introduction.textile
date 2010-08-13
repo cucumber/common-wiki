@@ -24,7 +24,7 @@ In addition to scenario, feature may contain a background, scenario outline and 
 | background       | 'Background'             | [[Background]] |
 | scenario         | 'Scenario'               | [[Feature Introduction]] |
 | scenario_outline | 'Scenario Outline'       | [[Scenario outlines]] |
-| examples         | 'Examples' / 'Scenarios' | [[Examples]] |
+| examples         | 'Examples' / 'Scenarios' |  |
 | given            | 'Given'                  | [[Given-When-Then]] |
 | when             | 'When'                   | [[Given-When-Then]] |
 | then             | 'Then'                   | [[Given-When-Then]] |
