@@ -24,7 +24,9 @@ end
 
 h2. Step hooks
 
-<pre><code>AfterStep |scenario| do
+*{color:red}Warning: AfterStep hook does not work with scenarios which have backgrounds (cucumber 0.3.11)*
+
+<pre><code>AfterStep do |scenario|
   # Do something after each step.
 end
 </code></pre>
