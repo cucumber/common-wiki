@@ -33,3 +33,8 @@ It's easy!
 <pre><code>rake treetop:compile spec</code></pre>
 
 That's it! You have a new language that you can pass to <pre><code>--language</code></pre>
+
+h2. Adding examples for a new language
+
+Just copy the <pre>examples/i18n/en</pre> example to a new directory with the same name as the language you added.
+Then translate everything in there. When you're done you should be able to run <pre>rake i18n</pre> from the <pre>examples/i18n</pre> directory.
