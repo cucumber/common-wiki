@@ -26,6 +26,11 @@ Then inside of a merb application directory, try:
 
 *edit your feature*
 
+*rake features*
+
+Tips
+-----------------------------
+
 describe can use multiple given blocks
 
 For example, you can "now":http://ln-s.net/2vB2
@@ -48,7 +53,6 @@ describe "Something", :given => ["some food", "some drink"] do
 end
 </pre></code>
 
-*rake features*
 
 Looking for Examples?
 -----------------------------
