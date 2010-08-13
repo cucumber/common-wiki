@@ -22,6 +22,8 @@ When Cucumber executes the plain text, it will for each step look for a register
 
 The adjective/adverb has *no* significance when Cucumber is registering or looking for Step Definitions.
 
+Also check out [[Using tabular data in features]] for more info on how to pass entire tables to your step definitions.
+
 h2. Undefined steps
 
 When Cucumber can't find a matching Step Definition the step gets marked as yellow, and all subsequent steps in the scenario are skipped. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>
