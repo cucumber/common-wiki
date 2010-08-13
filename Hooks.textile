@@ -43,3 +43,16 @@ at_exit do
   my_heavy_object.undo_it
 end
 </code></pre>
+
+h2. Tagged hooks
+
+*Only available in Cucumber 0.3.0 and above*
+
+Sometimes you may want a certain before or after hook to run only for certain scenarios. This can be achieved by associating a hook with one or more [[tags]]. Example:
+
+<pre><code>
+Before('@cucumis', '@sativus') do
+  # This will only run before scenarios tagged
+  # with @cucumis or @sativus.
+end
+</code></pre>
