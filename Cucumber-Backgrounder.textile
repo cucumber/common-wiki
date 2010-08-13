@@ -255,7 +255,7 @@ h3. What are "tags"?
 
 Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any string found in a feature file that is prefaced with the commercial at (<strong>&#64;</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>&#64;wip</em> tag.  However, any string may used as a tag and any scenario of feature can have multiple tags associated with it.  For example:
 <pre>
-  &#64;wip @authent
+  &#64;wip &#64authent
   Scenario:  A user should authenticate before accessing any resource.
      Given we do have a user named "testuser"
       When I visit "the login page"
@@ -279,7 +279,10 @@ The number of occurrences of a particular tag in your feature set may be control
 
 Limiting the number of occurrences is commonly used in conjunction with the &#64;wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
-Tags may also be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can 
+Tags may also be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following not exercise any scenario having the tag <em>&#64;ignore</em> found in the directory tree rooted at <code>features/wip</code>:
+<pre>
+$ cucumber --require=features --tag=~&#64;ignore features/wip
+</pre>
 
 h3. What Way do I Run the Tests?
 
@@ -291,14 +294,14 @@ However, there is an important environmental consideration to keep in mind when 
 
 Testing with Cucumber can be performed in several fashions.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same tests.  
 
-Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  The Cucumber Rake task recognises the <code>@wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>@wip</strong>.  For example, given a feature file containing:
+Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  As discussed above, the Cucumber Rake task recognises the <code>&#64wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>&#64wip</strong>.  For example, given a feature file containing:
 
 <pre>
 Feature: .  .  .
 
   Scenario: A
 
-  @wip
+  &#64wip
   Scenario: B
 
   Scenario: C
