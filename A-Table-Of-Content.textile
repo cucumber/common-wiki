@@ -34,7 +34,7 @@ Step definition:
 # [[Step Organisation]]
 # [[Fixtures]]
 
-Featuers and Step definitions:
+Features and Step definitions:
 # [[Multiline Step Arguments]]
 # [[Conjunction Steps (Antipattern)]]
 # [[Feature-Coupled Steps (Antipattern)]]
