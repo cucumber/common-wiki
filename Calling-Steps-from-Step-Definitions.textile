@@ -44,7 +44,7 @@ Sometimes you want to call a step that has been designed to take a table as inpu
 <pre>
 # ruby
 Given /^an expense report for (.*) with the following posts:$/ do |date, posts_table|
-  # your code here. posts_table is an instance of Cucumber::Ast::Table
+  # The posts_table variable is an instance of Cucumber::Ast::Table
 end
 </pre>
 
