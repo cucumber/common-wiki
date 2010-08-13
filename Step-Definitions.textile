@@ -33,8 +33,7 @@ Cucumber can't make a decision about what Step Definition to execute, and wil ra
 
 h2. Duplicate Step Definitions
 
-In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files), so the
-following would cause an error:
+In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the Proc), so the following would cause an error:
 
 <pre><code>Given /Three (.*) mice/ do |disability|
   # some code
