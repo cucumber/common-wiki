@@ -96,6 +96,20 @@ rake db:migrate
 rake features
 </code></pre>
 
+h3. Other ways of running features
+
+You can also run specific features directly with cucumber:
+
+<pre><code>cucumber --require features --require lib features/subdir/</code>
+<code>cucumber --require features --require lib features/some-nifty.feature</code></pre>
+
+And using autospec with a similar setting (<code>--require features --require lib</code>), applied in your project's /cucumber.yml  - 
+
+<pre><code>autotest-all: --require features --require lib --format progress features
+autotest: --require features --require lib features  
+default: --format pretty
+html: --format html --out features.html</code></pre>
+
 See [[Running Features]] for more info.
 
 h2. View spec redundancy
