@@ -266,12 +266,12 @@ Cucumber provides a simple method to organize features and scenarios by user det
          .   .  .
 </pre> 
 
-Given that the forgoing is contained in a file called <code>features/login.feature</code> and that the cucumber-rails gem is installed and configured then you can exercise this scenario in any of the following ways:
+Given that the forgoing is contained in a file called <code>features/login/login.feature</code> and that the cucumber-rails gem is installed and configured then you can exercise this scenario, along with any others that are similarly tagged, in any of the following ways:
 
 <pre>
 $ rake cucumber:wip
-$ cucumber --tags=@wip
-$ cucumber --tags=@authent
+$ cucumber --tags=@wip features
+$ cucumber --tags=@authent features/login
 </pre>
 
 However, the following will not work, unless you build a custom rake task for it:
@@ -349,8 +349,9 @@ The best place to go for help, that I know of, is the "Google Cucumber Group":ht
 If you find a bug in Cucumber, or wish a new feature added, then you should open a ticket at "Lighthouse":http://rspec.lighthouseapp.com/projects/16211-cucumber/ for it.
 
 2008 November 28 - J. B. Byrne initial
-2010 January 17 - J. B. Byrne revised
-2010 May 28 - J. B. Byrne revised
+2010 January 17 - J. B. Byrne revised to 0.6.1
+2010 May 28 - J. B. Byrne revised 0.7.3
+2010 July 13 - J. B. Byrne revised to 0.8.4
 
 h3. Postscript.
 
