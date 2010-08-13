@@ -8,7 +8,11 @@ There are a few conventions. Single Gherkin source file contains a description o
 
 h2. Gherkin Syntax
 
-Parser divides the input into [[Feature Introduction|feature introduction, scenarios]] and [[Given-When-Then|steps]].  When you run the feature the trailing portion of each step is matched to a Ruby code block called [[Step Definitions|step definition]].  Feature looks like this
+Like Python and YAML, Gherkin is a line-oriented language that uses indentation to define structure. Line endings serve to terminate statements (eg, steps). Either spaces or tabs may be used for indentation (but spaces are more portable). Most lines start with a keyword.
+
+Parser divides the input into [[Feature Introduction|feature introduction, scenarios]] and [[Given-When-Then|steps]].  When you run the feature the trailing portion of each step is matched to a Ruby code block called [[Step Definitions|step definition]].
+
+A feature looks like this
 
 <pre>Feature: Some terse yet descriptive text of what is desired
   In order to realize a named business value
@@ -28,31 +32,27 @@ Parser divides the input into [[Feature Introduction|feature introduction, scena
       ...
 </pre>
 
-Like Python and YAML, Gherkin is a line-oriented language that uses indentation to define structure. Line endings serve to terminate statements (eg, steps). Either spaces or tabs may be used for indentation (but spaces are more portable).
+* [[Feature Introduction]] - general structure of a feature
+* [[Given-When-Then]] - steps
 
-h3. Headings
+h3. Keywords
 
-Most Gherkin lines begin with a "heading" (eg, <tt>Feature:</tt>, <tt>Given</tt>, ...). The following text is either unparsed or parsed by regular expressions in a "steps" file. The heading is separated from the following text by one or more spaces, which are not passed to the regular expressions.
+Most Gherkin lines begin with a keyword and whitespace. The following text is either unparsed or parsed by regular expressions in a "steps" file.  Gherkin is localized for dozens of languages, see <tt>.../lib/cucumber/languages.yml</tt>.  English localization is
 
-Gherkin provides parsers for dozens of languages, including (at this writing) Arabic, Chinese (Simplified), Danish, Dutch, English, Estonian, French, German, Italian, Japanese, Korean, Lithuanian, LOLCAT, Malay, Norwegian, Polish, Portuguese, Romanian (with and without diacritical marks), Russian, Spanish, Swedish, Texan, and Welsh. This note lists only the English headings; for corresponding words in other languages, see <tt>.../lib/cucumber/languages.yml</tt>.
+| *keyword* | *localized* | *more info, see* |
+| name             | 'English'                | |
+| native           | 'English'                | |
+| encoding         | 'UTF-8'                  | |
+| feature          | 'Feature'                | [[Feature Introduction]] |
+| background       | 'Background'             | [[Background]] |
+| scenario         | 'Scenario'               | [[Feature Introduction]] |
+| scenario_outline | 'Scenario Outline'       | [[Scenario outlines]] |
+| examples         | 'Examples' / 'Scenarios' | [[Examples]] |
+| given            | 'Given'                  | [[Given-When-Then]] |
+| when             | 'When'                   | [[Given-When-Then]] |
+| then             | 'Then'                   | [[Given-When-Then]] |
+| but              | 'But'                    | [[Given-When-Then]] |
 
-<pre>
-  examples:          Examples:
-  feature:           Feature:
-  more_examples:     More Examples:
-  scenario:          Scenario:
-  scenario_outline:  Scenario Outline:
-  background:        Background:
-
-  and:               And
-  but:               But
-  given:             Given
-  then:              Then
-  when:              When
-</pre>
-
-h3. Unparsed Lines
+h3. Comments
 
 Comment lines are allowed anywhere in the file. They begin with zero or more spaces, followed by a sharp sign (@#@) and some amount of text.
-
-Lines of descriptive text may follow a <tt>Feature:</tt> line. These must be indented and are not parsed. The descriptive text may be followed by a <tt>Scenario:</tt> line or a blank line.
