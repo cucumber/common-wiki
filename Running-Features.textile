@@ -39,6 +39,7 @@ Cucumber::Rake::Task.new(:features) do |t|
   t.cucumber_opts = "--format pretty"
   t.rcov = true
 end
+</code>
 
 If you are using [[Ruby on Rails]] this task is defined for you already.
 
