@@ -1,0 +1,18 @@
+From the online Merriam-Webster dictionary:
+
+bq. *con·junc·tion* :an uninflected linguistic form that joins together sentences, clauses, phrases, or words
+
+Don't do this in steps. It makes steps too specialised and hard to reuse. Cucumber has built-in support for conjunctions (And, But) for a reason.
+
+h2. Example
+
+<pre>
+Given I have shades and a brand new Mustang
+</pre>
+
+h2 How to fix
+
+<pre>
+Given I have shades
+And I have a brand new Mustang
+</pre>
