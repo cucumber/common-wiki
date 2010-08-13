@@ -7,8 +7,7 @@ Scenario outlines allow us to more concisely express these examples through the 
 
 Lets look at an example first:
 
-<pre><code>
-Feature: Cucumber stock keeping
+<pre><code>Feature: Cucumber stock keeping
   In order to avoid interruption of cucumber consumption
   As a citizen of Cucumbia
   I want to know how many cucumbers I have left
@@ -30,8 +29,7 @@ We refer to the Scenario table below a Scenario outline as 'Examples' rather tha
 
 In the Scenario outline steps you can use placeholders. Placeholders must be contained within '<' '>'. For example:
 
-<pre>
-Given <I'm a placeholder and I'm ok>
+<pre>Given <I'm a placeholder and I'm ok>
 </pre>
 
 The placeholders indicate that when the Examples row is run they should be substituted with real values from the Scenario table. If a placeholder name is the same as a column title in the Scenario table then this is the value that will replace it.
@@ -40,16 +38,14 @@ The placeholders indicate that when the Examples row is run they should be subst
 
 So when running the first row:
 
-<pre><code>
-  Examples:
+<pre><code>  Examples:
     | start | eat | left |
     |  12   |  5  |  7   |
 </code></pre>
 
 The scenario that is actually run is:
 
-<pre><code>
-Scenario Outline: controlling order
+<pre><code>Scenario Outline: controlling order
   Given there are 12 cucumbers      # <start> replaced with 12
   When I eat 5 cucumbers            # <eat> replaced with 5
   Then I should have 7 cucumbers    # <left> replaced with 7
