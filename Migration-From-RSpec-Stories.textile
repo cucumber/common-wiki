@@ -8,6 +8,7 @@ First, follow the Cucumber installation instructions for Rails. This should leav
 <pre><code>+-features/
   +-step_definitions/
     +-webrat_steps.rb
+  +-support/
     +-env.rb
 </code></pre>
 
