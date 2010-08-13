@@ -99,6 +99,9 @@ Autotest is geared toward the Red->Green->Refactor cycle on an object level (uni
 
 h3. Troubleshooting
 
+
+h4. Missing autotest-rails gem
+
 Some people have reported problems running autotest. One known issue is an error similar to this:
 <pre><code>$ AUTOFEATURE=true autotest 
 > loading autotest/cucumber_rails
@@ -107,3 +110,14 @@ Some people have reported problems running autotest. One known issue is an error
 The error can occur because of a recent split of autotest code so that it misses a required library. Try 
 <pre><code>$ sudo gem install autotest-rails
 </code></pre>
+
+h4. Dirty database
+
+If you use fixtures for your specs, rspec/rails will leave the fixture data in the database after your specs run.  If you depend on a clean database for your features, you can use "DatabaseCleaner":http://github.com/bmabey/database_cleaner/tree/master to wipe your DB before running any features by placing the following in your env.rb:
+
+<pre><code>require 'database_cleaner'
+DatabaseCleaner.strategy = :truncation
+
+DatabaseCleaner.clean</code></pre>
+
+Note that this must be after your environment is loaded, so DatabaseCleaner can find your database adapter.
