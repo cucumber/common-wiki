@@ -1,4 +1,4 @@
-You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Webrat":http://www.brynary.com/uploads/webrat/rdoc/index.html
+You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Webrat":http://www.brynary.com/uploads/webrat/rdoc/index.html!
 
 (For the time being you must use aslakhellesoy's clones of "sinatra":http://github.com/aslakhellesoy/sinatra and "webrat":http://github.com/aslakhellesoy/webrat - hopefully my small changes will be incorporated into the official Git repositories).
 
