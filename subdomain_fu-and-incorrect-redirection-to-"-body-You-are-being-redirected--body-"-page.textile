@@ -5,3 +5,7 @@ Create a file called subdomain_fu.rb under config/initializers with following co
 SubdomainFu.tld_sizes = {
     :development => 0, :test => 1, :production => 1, :cucumber => 1
 }
+
+
+Another error <b>You have a nil object when you didn't expect it! </b> when using subdomain with mail url.
+"Sulution":http://groups.google.com/group/cukes/browse_thread/thread/91efe1ef945ddda3/ba59cd0e7e9aa51f?lnk=gst&q=vijendra#ba59cd0e7e9aa51f
