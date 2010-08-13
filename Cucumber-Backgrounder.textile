@@ -259,7 +259,7 @@ Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wik
 
 Cucumber-Rails preconfigured with support for integration testing using either "Capybara":http://github.com/jnicklas/capybara (script/generate  cucumber --capybara) or "Webrat":http://github.com/brynary/webrat (script/generate cucumber), the default.  If you do not know what Capybara or Webrat are or do,  and you are doing web application testing, then you should find out more about "Capybara":http://github.com/jnicklas/capybara and "Webrat":http://github.com/brynary/webrat, both.
 
-The cucumber generater will set up the necessary support files whichever you choose.
+The cucumber generator will set up the necessary support files whichever you choose.
 
 Calls for any additional Ruby libraries that your particular testing environment may require are typically be placed in the <code>./features/support/local_env.rb</code> file.  I advise against putting local customization in <code>support/env.rb</code> as it is typically overwritten by <code>script/generate cucumber</code>.  As a matter of good practice you should always run <code>script/generate cucumber</code> whenever you install an updated version.  You should do the same for rspec as well.
 
