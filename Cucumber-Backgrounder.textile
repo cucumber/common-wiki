@@ -146,7 +146,7 @@ To Increase Revenue | Reduce Costs | Protect Revenue  (pick one)
       ...
 </code></pre>
 
-For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. Scenario is used in the same fashion.  Given, When, Then, and And are all cucumber <em><strong>methods</strong></em> that take as their argument the string that follows.  These are the steps that cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  These methods are also all equivalent. Consequently, I have adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files.
+For cucumber feature steps the key words used here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. Scenario is used in the same fashion.  Given, When, Then, and And are all cucumber <em><strong>methods</strong></em> that take as their argument the string that follows.  These are the steps that cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  These four methods are also all equivalent.
 <pre><code>
       def Given(name)
         create_step('Given', name, *caller[0].split(':')[1].to_i)
@@ -175,15 +175,19 @@ The string argument from each of these methods is compared against all the match
 end
 </code></pre>
 
-The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features given above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
+The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features provided above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
 When /some (.*) action/ do |match|
 Then /(*.) other action/ do |match|
-And /some other act.*/ do 
 Given /(.*) other (.*)/ do |first,second|
 </code></pre>
+But, this will throw a method missinf exception:
+<pre>
+And /some other act.*/ do 
+</pre>
 
-Which raises an interesting point.  If you had more than one of these matchers defined somewhere in any of your step_definitions.rb files, and not necessarily in the same file mind you, then cucumber would tell you that it found multiple matches for a single feature step and force you to distinguish them.
+Because *_And_* is not defined as a steps definition method.  Because the step definition match depends only upon the pattern, and not upon the step method, I have adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files.
+Which raises another interesting point.  If more than one of these matchers are defined anywhere in any of your step_definitions.rb files, and not necessarily in the same file mind you, then cucumber would tell you that it found multiple step definition matches for a single feature step and force you to distinguish them.
 
 Note that you are not required to use a matched subpattern, <code>(.* )</code>, in the following block.  
 
@@ -193,7 +197,7 @@ It is considered better form by some to surround with double quotation marks, <s
 
 Finally, you can have step definitions call other step definitions.  For example:
 
-<pre><code>And /some "(.*)" action/  do |a|
+<pre><code>When /some "(.*)" action/  do |a|
    ...
 end
 
@@ -211,13 +215,12 @@ Scenario: Quotes surround value elements
   Given some "required" action
 
 # step_definitions
-And /some (.*) action/ do |a|
+When /some (.*) action/ do |a|
   a => "required"
 
-And /some "(.*)" action/ do |a|
+When /some "(.*)" action/ do |a|
   a => required
 </code></pre>
-
 
 h3. What Way do I Run the Tests?
 
@@ -239,7 +242,7 @@ The terminology for elements of Behaviour Driven Development differs somewhat fr
 
 Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitions in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and, may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
-Cucumber 0.1.11 comes preconfigured for webrat together with webrat test steps.  If you have webrat installed as a plugin in your project then these are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you need add this to the features/support/env.rb file:
+Cucumber 0.1.13 comes preconfigured for webrat together with webrat test steps.  If you have webrat installed as a plugin in your project then these are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you need add this to the features/support/env.rb file:
 
 <code>require 'webrat' if !defined?(Webrat)</code>
 
