@@ -1,4 +1,4 @@
-Cucumber lets you store and reuse commonly used cucumber command line arguments for a project in a <code>cucumber.yml</code> file. This file must be in your project's root directory, <code>config</code> or <code>.config</code>.
+Cucumber lets you store and reuse commonly used cucumber command line arguments for a project in a <code>cucumber.yml</code> or <code>cucumber.yaml</code> file. This file must be in your project's root directory, <code>config</code> or <code>.config</code>.
 
 For example, by having this in your <code>config/cucumber.yml</code>:
 
