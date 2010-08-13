@@ -87,8 +87,8 @@ h4. Stripping HTML
 If your HTML Table contains e.g. links and you want to create a table structure containing the link text, you can convert the column values. Example:
 
 <pre>
-actual_table = table_at('#cuke_table').to_a
-actual_table.map_column!('Column with links') { |text| text.strip.match(/>(.*)</)[1] }
+actual_table = table(table_at('#cuke_table').to_a)
+actual_table.map_column!('Artist') { |text| text.strip.match(/>(.*)</)[1] }
 expected_cukes_table.diff!(actual_table)
 </pre>
 
