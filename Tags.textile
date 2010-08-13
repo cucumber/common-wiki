@@ -1,5 +1,3 @@
-*{color:red}Tags are only supported in 0.1.99 and higher*
-
 Tags is a great way to organise your features and scenarios. Consider this example:
 
 <pre>
@@ -35,3 +33,5 @@ Feature: Index projects
 </pre>
 
 Another way to "filter" what you want to run is to use the <code>file.feature:line</code> pattern or the <code>--scenario</code> option as described in [[Running Features]].
+
+Tags are also used in Tagged [[Hooks]].
