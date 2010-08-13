@@ -7,9 +7,9 @@ Projects using Cucumber:
 * "jeweler":http://github.com/technicalpickles/jeweler /features
 * "jekyll":http://github.com/mojombo/jekyll /features
 * "radtrack":http://github.com/jgoodsen/radtrack
-* "CarrierWave":http://github.com/jnicklas/carrierwave/ /features
+* "CarrierWave":http://github.com/jnicklas/carrierwave/ /features/
 * "RadiantCMS":http://github.com/radiant/radiant/tree/master/features/
 * "OERPScenario (linked to OpenERP)":https://launchpad.net/oerpscenario/
-* "WontoMedia":http://github.com/gleneivey/wontomedia/ /features
-
+* "WontoMedia":http://github.com/gleneivey/wontomedia/ /features/
+* "Rails directory":http://github.com/engineyard/rails_dev_directory/tree/master/features/
 Note: I had initially copied the [[Examples]] page. I created this page because I consider this page to be a more appropriate name.
