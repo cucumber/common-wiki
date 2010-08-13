@@ -1,7 +1,7 @@
 Cucumber runs scenarios in a World. By default, the World is just an instance of Object. If you want to add any behaviour to the world, perhaps some helper methods, or logging, or whatever. You can do this in support/env.rb:
 
 <pre>
-class CustomWorld do
+class CustomWorld
   def a_helper
     ...
   end
