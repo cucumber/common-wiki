@@ -33,6 +33,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"RCumber":http://github.com/jgoodsen/rcumber/wikis|Edit and run Cucumber tests directly in your Rails application. Click results and get taken to TextMate.|
 |"Remote Feature":http://github.com/mhennemeyer/remote_feature|Run Cucumber Features that are defined in "Writeboard":http://www.writeboard.com/.|
 |"RSpec":http://rspec.info|Use RSpec's <code>Object.should</code> and <code>Object.should_not</code> to compare values in your step definitions|
+|"rSquery":http://github.com/caifara/rsquery/tree/master|Using jquery matchers and more in selenium, taking the pain out of writing selenium tests.|
 |"Testjour":http://github.com/brynary/testjour|Distributed test running (for Cucumber first).|
 |"Vim-Cucumber":http://github.com/tpope/vim-cucumber/tree/master|Feature syntax highlighting for "Vim":http://www.vim.org/.|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
