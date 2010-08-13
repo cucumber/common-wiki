@@ -3,7 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
-|"Using Cucumber with Sketchup":http://www.cfcl.com/rdm/weblog/archives/001714.htmlRich Morin explores designing 3D models with Cucumber|Nov 03 2009|
+|"Using Cucumber with Sketchup":http://www.cfcl.com/rdm/weblog/archives/001714.html | Rich Morin explores designing 3D models with Cucumber|Nov 03 2009|
 |"Using Cucumber as a scripting language":http://holmwood.id.au/~lindsay/2009/11/01/using-cucumber-as-a-scripting-language/|Lindsay Holmwood explores using Cucumber for general sysadmin scripting tasks|Nov 1 2009|
 |"Testing Couchapps with Cucumber and Culerity":http://upstream-berlin.com/2009/10/25/testing-couchapps-with-cucumber-and-culerity/|CouchDB and CouchApp goodness|Oct 25 2009|
 |"How-to: Use Cucumber with .NET and C# under IronRuby":http://blog.webintellix.com/2009/10/how-to-use-cucumber-with-net-and-c.html|A short introduction|Oct 14 2009|
