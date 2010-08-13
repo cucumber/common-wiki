@@ -16,7 +16,7 @@ From the command line goto your Mozilla Firefox installation folder and type:
 
 <pre><code>firefox -jssh </code></pre>
 
-h2. Step 4: Test your protocol
+h2. Step 4: Test your connection
 
 From the command line type:
 
