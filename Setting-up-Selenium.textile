@@ -1,5 +1,7 @@
 h2. Pre-requisites
 
+*WARNING:* This guide is for setting up Selenium version 1, and is somewhat obsolete. We recommend you use Selenium 2 (WebDriver) instead, through Capybara if you're on Rails.
+
 Selenium-RC requires the Java Runtime Environment (JRE) version 1.5.0 or higher
 
 <p>For webrat -v=0.5.1, you should use selenium-client -v=1.2.16.  Do not use webrat -v=0.5.0.  For webrat -v=0.4.4, you must use selenium-client -v=1.2.14.</p>
