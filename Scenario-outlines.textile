@@ -36,7 +36,7 @@ The placeholders indicate that when the Examples row is run they should be subst
 
 *{color:red}IMPORTANT: Your steps will never have to match a placeholder. They will need to match the values that will replace the placeholder*
 
-So when running the first row:
+So when running the first row of our example:
 
 <pre><code>  Examples:
     | start | eat | left |
