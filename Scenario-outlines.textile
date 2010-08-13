@@ -1,5 +1,3 @@
-h2. Scenario Outlines
-
 In some situations Scenario tables from a Scenario can get a little verbose. For example when you want to:
 
 * Have a Scenario table value to appear in multiple places in your Scenario steps. 
