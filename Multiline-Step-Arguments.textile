@@ -37,7 +37,7 @@ to iterate over all of the rows.
 
 h3. Diffing tables
 
-As of Cucumber 0.3.90 you can compare a table argument to another table. This is something you would typically do in a When step, and the other table would typically be constructed programmatically from your application's data. This is done with the <code>Cucumber::Ast::Table#diff!(table)</code> method. Here is an example:
+As of Cucumber 0.3.90 you can compare a table argument to another table. This is something you would typically do in a When step, and the other table would typically be constructed programmatically from your application's data. The diffing is done with the <code>Cucumber::Ast::Table#diff!(table)</code> method. Here is an example:
 
 <pre>
 Then I should see the following cukes:
