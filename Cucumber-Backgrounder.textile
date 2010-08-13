@@ -257,7 +257,7 @@ If you are testing with intent then you should be using the "ruby-debug gem":htt
 
 Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitions in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
-Cucumber-Rails preconfigured with support for integration testing using either "Capybara":http://github.com/jnicklas/capybara (script/generate  cucumber --capybara) or Webrat (script/generate cucumber), the default.  If you do not know what Capybara or Webrat are or do,  and you are doing web application testing, then you should find out more about "Capybara":http://github.com/jnicklas/capybara and "Webrat":http://github.com/brynary/webrat, both.
+Cucumber-Rails preconfigured with support for integration testing using either "Capybara":http://github.com/jnicklas/capybara (script/generate  cucumber --capybara) or "Webrat":http://github.com/brynary/webrat (script/generate cucumber), the default.  If you do not know what Capybara or Webrat are or do,  and you are doing web application testing, then you should find out more about "Capybara":http://github.com/jnicklas/capybara and "Webrat":http://github.com/brynary/webrat, both.
 
 The cucumber generater will set up the necessary support files whichever you choose.
 
