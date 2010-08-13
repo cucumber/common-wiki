@@ -8,6 +8,7 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Getting started with Cucumber and Sinatra":http://tooky.github.com/2009/02/05/getting-started-with-cucumber-and-sinatra.html | Sinatra loves Cucumbers | Feb 05 2009 |
 |"Web app integration testing for sysadmins with cucumber-nagios":http://holmwood.id.au/~lindsay/2009/02/23/web-app-integration-testing-for-sysadmins-with-cucumber-nagios/|Monitor web sites with Cucumber| Feb 23 2009 |
 |"Using Cucumber to Integrate Distributed Systems and Test Messaging":http://www.benmabey.com/2009/02/17/using-cucumber-to-integrate-distributed-systems-and-test-messaging/| Testing asynchronous messaging | Feb 17 2009|
+|"Integration testing SSL with Cucumber":http://devcaffeine.com/2009/02/16/integration-testing-ssl-with-cucumber/|How to test SSL in Rails| Feb 16 2009|
 |"Leveraging Test Data Builders in Cucumber Steps":http://www.benmabey.com/2009/02/05/leveraging-test-data-builders-in-cucumber-steps/| Step definitions for creating objects from step tables.| Feb 5 2009 |
 |"iPhone GUI testing":http://www.ian.dees.name/tech/iphone-gui-testing.html| Cucumber meets the iPhone | Feb 2 2009 |
 |"Cucumber step definition tip: Stubbing time":http://www.brynary.com/2009/2/3/cucumber-step-definition-tip-stubbing-time| RSpec stubs in Cucumber| Feb 2 2009 |
