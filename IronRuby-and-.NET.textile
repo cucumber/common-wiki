@@ -37,7 +37,7 @@ h3. Build IronRuby
 
 Open a Visual Studio command prompt and cd to where you downloaded the IronRuby sources. Build it:
 
-<pre>rake build</pre>
+<pre>rake compile</pre>
 
 When you have completed this step you should be able to run
 
