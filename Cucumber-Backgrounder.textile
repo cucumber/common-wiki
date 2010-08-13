@@ -151,21 +151,19 @@ To Increase Revenue | Reduce Costs | Protect Revenue  (pick one)
 
 For cucumber feature steps the key words used here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. Scenario is used in the same fashion.  Given, When, Then, and And are all cucumber <em><strong>methods</strong></em> that take as their argument the string that follows.  These are the steps that cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  These four methods are also all equivalent.
 <pre><code>
-      def Given(name)
-        create_step('Given', name, *caller[0].split(':')[1].to_i)
-      end
-
-      def When(name)
-        create_step('When', name, *caller[0].split(':')[1].to_i)
-      end
-
-      def Then(name)
-        create_step('Then', name, *caller[0].split(':')[1].to_i)
-      end
-
-      def And(name)
-        create_step('And', name, *caller[0].split(':')[1].to_i)
-      end</code></pre>
+def Given(name)
+  create_step('Given', name, *caller[0].split(':')[1].to_i)
+end
+def When(name)
+  create_step('When', name, *caller[0].split(':')[1].to_i)
+end
+def Then(name)
+  create_step('Then', name, *caller[0].split(':')[1].to_i)
+end
+def And(name)
+  create_step('And', name, *caller[0].split(':')[1].to_i)
+end
+</code></pre>
 
 The string argument from each of these methods is compared against all the matchers contained in the step_definitions.rb files.  A step definitions matcher looks much like this:
 <pre><code>Given /there are (\d+) froobles/ do |n|
