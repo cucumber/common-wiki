@@ -24,7 +24,7 @@ Cucumber has its own Step Definitions that make it relatively easy to write feat
 
 h3. Push it to your fork
 
-When you're happy with the feature (it reproduces the bug you found, or the new feature you implemented is implemented), commit your code with a commit message that links your commit to the ticket, for example:
+When you're happy with the feature (it reproduces the bug you found, or the new feature you implemented is working), commit your code with a commit message that links your commit to the ticket, for example:
 
 <pre>git commit -m "Implemented artificial intelligence [#982 state:open]"</pre>
 
