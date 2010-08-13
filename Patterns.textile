@@ -30,3 +30,12 @@ A draft list of useful Cucumber patterns:
 end</pre>
 <pre>And I fill in the captcha correctly (manual step)</pre>
 ** Implementation: define a step that matches anything and a unique string that denotes a manual step
+* Debugger
+** Description: a step to go into the debugger
+** Motivation: because puts statements just don't cut it
+** Examples:<pre>Given a user
+And debugger</pre>
+** Implementation:
+<pre>Then /^debugger$/ do
+  debugger
+end</pre>
