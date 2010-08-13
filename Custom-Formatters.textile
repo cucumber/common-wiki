@@ -34,3 +34,4 @@ Now you can run your features by passing <code>--format Silly::TwitterFormatter<
 h2. Other Formatters
 
 # "TeamCityFormatter:":http://github.com/darrell/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
+# "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript, designed for Textmate
