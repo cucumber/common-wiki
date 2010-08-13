@@ -99,7 +99,7 @@ Let's consider a more complex example where you have a HTML table with an "Actio
 <form method="post" action="/invoices/10/delegate" class="button-to"><div><input id="delegate_invoice_10" type="submit" value="Delegate" /><input name="authenticity_token" type="hidden" value="WxKGVy3Y5zcvFEiFe66D/odoc3CicfMdAup4vzQfiZ0=" /></div></form>
 </pre>
 
-If you only want to look at the button texts and compare with a plain text table like this:
+You only care about the button texts and you want compare with a plain text table like this:
 
 <pre>
 | Invoice | Action           |
@@ -107,7 +107,7 @@ If you only want to look at the button texts and compare with a plain text table
 |    2002 | Reject           |
 </pre>
 
-Then you can extract the interesting bits with a dash of Nokogiri and CSS:
+In this case, mapping a column with a Regexp might be a little tricky. In such cases it might be easier to use Nokogiri and a CSS selector:
 
 <pre>
 Then /^I should see the following invoices:$/ do |invoices|
