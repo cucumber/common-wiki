@@ -39,7 +39,7 @@ And debugger</pre>
 <pre>Then /^debugger$/ do
   debugger
 end</pre>
-<pre>
+<pre><code>
 >: cucumber features/test.feature 
 Feature: Test for debugger
   Scenario: Opening a debugger # features/test.feature:2
@@ -60,4 +60,4 @@ InstanceExecHelper.module_eval{ remove_method(mname) } rescue nil
 (rdb:1) puts response.body.split("\n").select{ |l| l =~ /meta/}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 nil
-(rdb:1)</pre>
+(rdb:1)</code></pre>
