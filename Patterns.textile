@@ -3,20 +3,20 @@ A draft list of useful Cucumber patterns:
 ** Description: ability to scope an inspection or webrat step to a part of the html.
 ** Motivation: when an element appears at multiple locations in an html page you want the ability to specify which one a step refers to
 ** Examples:
-<pre>Then I should see "logout" in the account section</pre>
-<pre>When I follow "next" in the pagination section</pre>
+<pre><code>Then I should see "logout" in the account section</code></pre>
+<pre><code>When I follow "next" in the pagination section</code></pre>
 ** Implementation:
-*** Steps like <pre>When /^I follow "([^\"]*)" in the (.*)$/</pre>
+*** Steps like <pre><code>When /^I follow "([^\"]*)" in the (.*)$/</code></pre>
 *** A mapping of section names to xpaths that can be used for scoping
 *** Webrat "needs a patch":https://webrat.lighthouseapp.com/projects/10503/tickets/153-within-should-support-xpath to allow xpaths to be used
 * Easy objects
 ** Description: generic step to create objects in a rails app
 ** Motivation: when writing cucumber for rails, you often want to create some objects and set their properties
 ** Examples:
-*** <pre>Given the following People exist:
+*** <pre><code>Given the following People exist:
 | name | date of birth |
 | john | 20 Jan 1980   |
-| mary | 10 days ago   |</pre>
+| mary | 10 days ago   |</code></pre>
 ** Implementation:
 *** Generic step that has a model name and a table as arguments
 *** Factory used to create an object for each row with the properties defined in the table
@@ -26,19 +26,19 @@ A draft list of useful Cucumber patterns:
 ** Description: have a step that indicates an action that requires a human
 ** Motivation: some things can not be automatically tested (JS UI, captcha) and we still want cucumber to describe how the app should behave
 ** Examples:
-<pre>Then /^.* \(manual step\)$/ do
-end</pre>
-<pre>And I fill in the captcha correctly (manual step)</pre>
+<pre><code>Then /^.* \(manual step\)$/ do
+end</code></pre>
+<pre><code>And I fill in the captcha correctly (manual step)</code></pre>
 ** Implementation: define a step that matches anything and a unique string that denotes a manual step
 * Debugger
 ** Description: a step to go into the debugger
 ** Motivation: because puts statements just don't cut it
-** Examples:<pre>Given a user
-And debugger</pre>
+** Examples:<pre><code>Given a user
+And debugger</code></pre>
 ** Implementation:
-<pre>Then /^debugger$/ do
+<pre><code>Then /^debugger$/ do
   debugger
-end</pre>
+end</code></pre>
 <pre><code>
 >: cucumber features/test.feature 
 Feature: Test for debugger
