@@ -18,7 +18,7 @@ Cucumber is a tool that can execute feature documentation written in plain text.
 </pre>
 
 Cucumber targets non technical business analysts, interaction designers, domain experts, testers (for the plain text part) 
-and programmers (for the steps, which are written in Ruby). 
+and programmers (for the step definitions, which are written in Ruby). 
 
 Cucumber itself is also written in Ruby, but it can be used to "test" code written in Ruby or other languages with the help of some extra tools:
 
