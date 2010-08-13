@@ -5,6 +5,9 @@ Just make sure you have a <code>features/support/env.rb</code> file with the fol
 <pre><code># RSpec matchers
 require 'spec/expectations'
 
+# NOTE: This must come before the require 'webrat', otherwise sinatra will look in the wrong place for it's views.
+require File.dirname(__FILE__) + '/../../your_sinatra_app'
+
 # Webrat
 require 'webrat'
 Webrat.configure do |config|
@@ -14,10 +17,4 @@ end
 World do
   Webrat::SinatraSession.new
 end
-
-# You must do:
-# set :views, File.join(File.dirname(__FILE__), 'views')
-# in the sinatra app or it will try and load the views from the webrat lib directory.
-
-require File.dirname(__FILE__) + '/../../your_sinatra_app'
 </code></pre>
