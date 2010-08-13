@@ -4,9 +4,7 @@ h2. Step 1: Install the Watir gem
 
 h2. Step 2: Install jssh.xpi
 
-Install the jssh.xpi relating to your OS and Firefox version:
-
-http://wiki.openqa.org/display/WTR/FireWatir+Installation
+Install the "jssh.xpi":http://wiki.openqa.org/display/WTR/FireWatir+Installation relating to your OS and Firefox version:
 
 h2. Step 3: Start Firefox with the jssh switch
 
@@ -26,4 +24,4 @@ This should return 'Welcome to the Mozilla JavaScript Shell!'
 
 h2. Step 5: Download and run the tests
 
-http://code.google.com/p/cucumber-and-watir/
+"from here":http://code.google.com/p/cucumber-and-watir/
