@@ -8,6 +8,7 @@ Please add any helpful blog posts that you have found or written about all thing
 |"BDD Step-by-Step Example - part 1":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-1/ | Nicholas’ Blog | Mar 29 2009 |
 |"Testing outbound emails Cucumber":http://drnicwilliams.com/2009/03/26/testing-outbound-emails-with-cucumber/|Emails....| Mar 26 2009 |
 |"Using Cucumber for Acceptance Testing":http://www.pathf.com/blogs/2009/03/using-cucumber-for-acceptance-testing | Using Cucumber for Acceptance Testing | Mar 20 2009 |
+|"Slides from Outside-In Development with Cucumber":http://www.benmabey.com/2009/03/14/slides-from-outside-in-development-with-cucumber/| Ben Mabey's slides from "MWRC presentation":http://mwrc2009.confreaks.com/14-mar-2009-15-00-bdd-with-cucumber-ben-mabey.html|
 |"Story Driven Development Recipes with Cucumber":http://www.infoq.com/news/2009/03/bdd-with-cucumber | Not detailed, but nice to be on InfoQ :-) | Mar 03 2009 |
 |"Using Cucumber with Machinist":http://themomorohoax.com/2009/03/08/rails-machinist-tutorial-machinist-with-cucumber-in-10-minutes | A basic tutorial for people starting out. Explains how to use machinist instead of fixtures with cucumber. | Mar 08 2009 |
 |"Testing Dash metrics with Cucumber":http://bradley.is/post/82649218/testing-dash-metrics-with-cucumber | Using Cucumber to test metrics | Mar 01 2009 |
