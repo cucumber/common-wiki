@@ -15,7 +15,7 @@ Given /^(.*) is logged in$/ do |name|
 end
 </pre>
 
-This is pracical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
+This is practical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
 
 <pre>
 Scenario: View last incidents
