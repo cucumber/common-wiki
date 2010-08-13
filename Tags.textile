@@ -10,6 +10,13 @@ Feature: Verify billing
   Scenario: Several products
 </pre>
 
+A Scenario or feature can have as many tags as you like. Just separate them with spaces:
+
+<pre>
+@billing @bicker @annoy
+Feature: Verify billing
+</pre>
+
 You can use the <code>--tags</code> option to tell Cucumber that you only want to run features or scenarios that have (or don't have) certain tags. Examples:
 
 <pre>
