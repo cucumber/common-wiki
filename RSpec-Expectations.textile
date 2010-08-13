@@ -6,4 +6,4 @@ require 'spec/expectations'
 
 'spec/expectations' also includes 'spec/matchers'. When cucumber sees the Spec::Matchers and Spec::Expectations defined, it will implicitly include them in the World in which the steps are executed.
 
-Do not <code>require 'spec'</code>, because that loads up a bunch of rspec modules that you don't need and might get in your way.
+*Do not* <code>require 'spec'</code>, because that loads up a bunch of rspec modules that you don't need and might get in your way.
