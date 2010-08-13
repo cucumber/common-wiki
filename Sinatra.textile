@@ -2,8 +2,7 @@ You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Web
 
 Just make sure you have a <code>features/support/env.rb</code> file with the following:
 
-<pre><code>
-# RSpec matchers
+<pre><code># RSpec matchers
 require 'spec/expectations'
 
 # Webrat
@@ -16,10 +15,9 @@ World do
   Webrat::SinatraSession.new
 end
 
-# Sinatra - my views are not in the cucumber bin dir!
-$0 = File.dirname(__FILE__) + '/../../your_sinatra_app.rb'
-# Note: The above didn't work for me, I do:
-# set :views, File.join(File.dirname(__FILE__), 'views') in my sinatra app instead, just to be sure.
+# You must do:
+# set :views, File.join(File.dirname(__FILE__), 'views')
+# in the sinatra app or it will try and load the views from the webrat lib directory.
 
 require File.dirname(__FILE__) + '/../../your_sinatra_app'
 </code></pre>
