@@ -37,6 +37,6 @@ end
 
 h2. How to fix
 
-## Break up [[Conjunction Steps (Antipattern)]] steps into individual steps.
 ## Organise steps by domain concept. See [[Step Organisation]].
 ## Rename step.rb files to a domain-related name (rather than feature/scenario-related name).
+## Break up [[Conjunction Steps (Antipattern)]] steps into individual steps.
