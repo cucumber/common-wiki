@@ -46,7 +46,6 @@ for corresponding words in other languages, see <tt>.../lib/cucumber/languages.y
   and:               And
   but:               But
   given:             Given
-  given_scenario:    GivenScenario
   then:              Then
   when:              When
 </pre>
