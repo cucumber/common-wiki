@@ -33,3 +33,11 @@ An archetypal RoR project directory tree looks like this:
 |-- tmp
 `-- vendor
 </code></pre>
+
+Running script/generate cucumber add this layout to the existing structure:
+<pre><code>|-- features
+|   |-- step_definitions
+|   |   `-- webrat_steps.rb
+|   `-- support
+|       `-- env.rb
+</code></pre>
