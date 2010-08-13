@@ -65,3 +65,18 @@ end
 (This was taken from "bmabey's cc.rb setup":http://gist.github.com/27281)
 
 It is important to note that Cucumber's default RCov options are set to %w{--rails --exclude osx\/objc,gems\/}.  So you can just append to rcov_opts if those defaults work for your project.
+
+h3. Focused Coverage
+
+When retro-fitting features to legacy code, it's good to be able to focus the coverage from your scenarios on just one class at a time. You can so this by calling rcov and cucumber directly from the command line:
+
+<pre>
+rcov -t -x \.rb -i app/controllers/my_legacy_controller.rb ./vendor/plugins/cucumber/bin/cucumber -- features/visitor/see_my_shiny_page.feature features/user/see_my_shiny_page.feature 
+</pre>
+
+What do these options mean?
+
+* <code>-t</code> tells rcov to print out a little text summary
+* <code>-x \.rb</code> tells rcov to ignore all ruby files, except...
+* <code>-i</code> tells rcov to watch coverage of the one file you want to focus on
+* <code>--</code> tells rcov to send the final arguments to cucumber, so these are your normal cucumber args, in this case listing the features we want to run to exercise the class we're testing.
