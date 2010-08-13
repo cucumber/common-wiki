@@ -8,7 +8,7 @@ POSIX shell:
 <pre><code>$ export AUTOFEATURE=true</code></pre>
 
 Windows command shell:
-<pre><code>$ set AUTOFEATURE=true</code></pre>
+<pre><code>> set AUTOFEATURE=true</code></pre>
 
 By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create an 'autotest' profile in your cucumber.yml.  Please see [[Running Features]] for more information about profiles.
 
