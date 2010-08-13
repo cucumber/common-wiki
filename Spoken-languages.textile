@@ -23,7 +23,7 @@ You have to tell Cucumber that you're using a different language than English (t
 
 h2. Adding a new language
 
-It's easy! 
+(or completing an existing one). It's easy! 
 
 # Make a fork of Cucumber and pull it down
 # Add your language's keywords to  "languages.yml":../tree/master/lib/cucumber/languages.yml
