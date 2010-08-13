@@ -6,6 +6,6 @@ Got questions? Here is where you can get in touch:
 * "Twitter":http://search.twitter.com/search?q=%23cucumber
 * "stackoverflow":http://stackoverflow.com/questions/tagged/cucumber
 
-If you contact a developer directly you may not get an answer, or if you do get an answer, the answer will most likely be cc'ed to the mailing list. Open source development also means open communication. 
+If you contact a developer directly you may not get an answer. If you do get an answer, the answer will most likely be cc'ed to the mailing list. Open source development also means open communication. 
 
 If you think you have found a bug, please try the latest gem version as well as the latest code here on GitHub before asking questions. When you file a bug report or ask a question, let us know what versions of relevant software you're using - at the very least the <code>cucumber --version</code> or the SHA of the git commit you built from.
