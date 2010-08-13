@@ -17,7 +17,7 @@ the production code is then written outside-in, to make them pass.
 
 h2. Migration from RSpec Stories
 
-See [Migration From RSpec Stories]
+See [[Migration From RSpec Stories]]
 
 h2. Installation
 
