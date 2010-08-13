@@ -42,7 +42,6 @@ end</pre>
 <pre>
 >: cucumber features/test.feature 
 Feature: Test for debugger
-
   Scenario: Opening a debugger # features/test.feature:2
     When I go to the homepage  # features/step_definitions/webrat_steps.rb:10
 [23, 32] in /myproject/vendor/plugins/cucumber/bin/../lib/cucumber/core_ext/instance_exec.rb
