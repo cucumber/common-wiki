@@ -110,7 +110,7 @@ until you end up with one of the following business values:
 
 If you're about to implement a feature that doesn't support one of those values, chances are you're about to
 implement a non-valuable feature. Consider tossing it altogether or pushing it down in your backlog. Focus on
-implementing the MMFs (Minimal Marketable Features) that will yield the most value.
+implementing the MMFs ("Minimum Marketable Features":http://www.softwarebynumbers.org/) that will yield the most value.
 
 h3. Outcomes and bottom-up scenarios.
 
