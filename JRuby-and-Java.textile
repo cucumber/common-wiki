@@ -52,11 +52,32 @@ This will compile the java code and then run Cucumber features against that code
 
 h3. Using Maven
 
-Apache "Maven":http://maven.apache.org/ is a popular build tool for Java. If you're already using Maven you might be interested in running Cucumber with Maven too. Madaspeak has written a "great blog post":http://binil.wordpress.com/2008/10/29/running-cucumber-on-jrubymaven/ showing how to do this.
+Apache "Maven":http://maven.apache.org/ is a popular build tool for Java. If you're already using Maven you might be interested in running Cucumber with Maven too. Check out the "cucumber_java":http://github.com/aslakhellesoy/cucumber_java project, which has a Maven plugin that lets you run Cucumber from Maven.
+
+(An older approach is described in "Madaspeak's great blog post":http://binil.wordpress.com/2008/10/29/running-cucumber-on-jrubymaven/).
 
 h3. Using Ant
 
-Write me please!
+Here is an example task:
+
+<pre><code><target name="cucumber" description="Runs all the cucumber tests">
+  <java classname="org.jruby.Main" fork="true" failonerror="true">
+    <classpath>
+      <fileset dir="lib/runtime">
+        <include name="*.jar"/>
+      </fileset>
+      <pathelement path="lib/extras"/>
+    </classpath>
+    <arg value="-S"/>
+    <arg value="lib/extras/bin/cucumber"/>
+    <arg value="--format"/>
+    <arg value="Sensis::JUnitFormatter"/>
+    <arg value="features"/>
+  </java>
+</target>
+</code></pre>
+
+This is taken from "this blog post":http://csausdev.wordpress.com/2009/05/12/cucumber-jruby-and-ant/. This will create JUnit output if you use the <code>Sensis::JUnitFormatter</code> which you can get "here":http://csausdev.wordpress.com/2009/05/12/junit-formatter-for-cucumber/. (This formatter may be included in Cucumber in a future release).
 
 h2. Seen elsewhere
 
