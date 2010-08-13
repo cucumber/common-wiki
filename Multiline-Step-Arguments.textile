@@ -55,6 +55,7 @@ Then /^I should see the following cukes:$/ do |expected_cukes_table|
     ['Cucumis sativus', 'Concombre'],
     ['Cucumis anguria', 'Burr Gherkin']
   ] # In practice you'd pull this out of a web page, database or some other data store.
+
   expected_cukes_table.diff!(actual_table)
 end
 </pre>
