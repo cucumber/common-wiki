@@ -10,13 +10,14 @@ h3. Using Rubygems
 The easiest is to install everything as a gem.
 <pre><code>[sudo] gem install rspec rspec-rails cucumber webrat
 </code></pre>
-*important:* the latest released version of webrat throws an error. Install webrat as a plugin until the gem is updated. Given that you are installing the plugin rather than the gem - make sure you install nokogiri aswell as this is a webrat dependency. 
-<pre><code>
-script/plugin install git://github.com/brynary/webrat.git
+
+*important:* Cucumber 0.1.12 and up depends on Webrat 0.3.2.1, which as of this writing is not yet released as a gem. Install Webrat as a plugin until the gem is updated or grab Webrat's source code and build the gem yourself. Make sure you install Nokogiri as well as this is a Webrat dependency. 
+
+<pre><code>script/plugin install git://github.com/brynary/webrat.git
 </code></pre>
+
 *Ubuntu/Debian users:* You need to install the following libs for nokogiri to install properly (from "webrat home":http://github.com/brynary/webrat/tree/master) :
-<pre><code>
-sudo apt-get install libxslt1-dev libxml2-dev
+<pre><code>sudo apt-get install libxslt1-dev libxml2-dev
 </code></pre>
 
 If you use gems, you have to make sure everybody on the team has the same version of the gems installed. Also note that you don't *have to* use rspec and rspec-rails and webrat, but we suggest you use them unless you have good reasons to use something else.
