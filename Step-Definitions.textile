@@ -30,11 +30,11 @@ When Cucumber finds a matching Step Definition it will execute it. If the block 
 
 h2. Undefined steps
 
-When Cucumber can't find a matching Step Definition the step gets marked as yellow, and all subsequent steps in the scenario are skipped. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>
+When Cucumber can't find a matching Step Definition the step gets marked as yellow, and all subsequent steps in the scenario are skipped. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
 
 h2. Pending steps
 
-When a Step Definition's Proc invokes the <code>#pending</code> method, the step is marked as yellow. Pending never causes errors - even with <code>--strict</code>, it just reminds you that you have work to do.
+When a Step Definition's Proc invokes the <code>#pending</code> method, the step is marked as yellow (as with undefined ones), reminding you that you have work to do. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
 
 h2. Failed steps
 
