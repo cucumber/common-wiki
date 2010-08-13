@@ -34,7 +34,7 @@ If you pulled the Cucumber code with Git, you'll find the examples under <code>e
 
 h3. Run the plain ruby example
 
-<pre><code>cd i18n\en
+<pre><code>cd i18n/en
 jruby -S cucumber features
 </code></pre>
 
