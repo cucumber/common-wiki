@@ -14,7 +14,10 @@ The following notes are an unofficial (and possibly inaccurate) summary of Gherk
 
 h3. General<p>
 
-h4. Headings
+Like Python and YAML, Gherkin uses indentation to define structure.
+Either spaces or tabs may be used for indentation (but spaces are more portable).
+
+h3. Headings
 
 Most Gherkin lines begin with a "heading" (eg, <tt>Feature:</tt>, <tt>Given</tt>).
 The following text is either unparsed or parsed by regular expressions in a "steps" file.
@@ -44,7 +47,7 @@ for corresponding words in other languages, see <tt>.../lib/cucumber/languages.y
   when:              When
 </pre>
 
-h4. Unparsed Lines
+h3. Unparsed Lines
 
 Comment lines are allowed anywhere in the file.
 They begin with zero or more spaces, followed by a sharp sign (#)
