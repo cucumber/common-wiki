@@ -96,8 +96,8 @@ You should discuss the "In order to" part of the feature and "pop the why stack"
 * Increase revenue
 * Manage cost
 * Increase brand value
-* Making the product remarkable
-* Providing more value to your customers
+* Make the product remarkable
+* Provide more value to your customers
 
 If you're about to implement a feature that doesn't support one of those values, chances are you're about to implement a non-valuable feature. Consider tossing it altogether or pushing it down in your backlog. Focus on implementing the MMFs ("Minimum Marketable Features":http://www.softwarebynumbers.org/) that will yield the most value.
 
