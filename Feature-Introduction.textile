@@ -1,6 +1,6 @@
-In Cucumber, every .feature file consists of a header followed by a list of scenarios. You can write whatever you want up until the first scenario, which starts with the word *Scenario* on a new line (see the languages.yml file for translations in other [[Spoken languages]]). 
+Most Gherkin lines begin with a keyword and whitespace. Every <tt>.feature</tt> file consists of a feature header -- line starting with keyword *Feature* followed by free indented text -- optional background and a list of scenarios. You can write whatever you want up until the first scenario, which starts with the word *Scenario* (or localized equivalent) on a new line.  Gherkin is localized for [[Spoken Languages|dozens of languages]].
 
-Every scenario consists of a list of steps, which must start with one of the keywords *Given*, *When*, *Then*, *But* or *And*. See [[Step Organisation]] for details of what the keywords mean. (Cucumber treats them all the same, but you shouldn't). Here is an example:
+Every scenario consists of a list of steps, which must start with one of the keywords *Given*, *When*, *Then*, *But* or *And*. Cucumber treats them all the same, but you shouldn't. Here is an example:
 
 <pre>Feature: Serve coffee
   In order to earn money
@@ -14,7 +14,25 @@ Every scenario consists of a list of steps, which must start with one of the key
     Then I should be served a coffee
 </pre>
 
-Cucumber will parse this file, and for each step it will look for a matching *step definition*. A step definition is written in Ruby. Each step definition consists of a keyword, a string or regular expression, and a block. Example:
+In addition to scenario, feature may contain a background, scenario outline and examples.  Respective keywords (in English) and places to read more about them below.  You can get list of localized keywords with @cucumber --language [LANG] help@.
+
+| *keyword* | *localized* | *more info, see* |
+| name             | 'English'                | |
+| native           | 'English'                | |
+| encoding         | 'UTF-8'                  | |
+| feature          | 'Feature'                | [[Feature Introduction]] |
+| background       | 'Background'             | [[Background]] |
+| scenario         | 'Scenario'               | [[Feature Introduction]] |
+| scenario_outline | 'Scenario Outline'       | [[Scenario outlines]] |
+| examples         | 'Examples' / 'Scenarios' | [[Examples]] |
+| given            | 'Given'                  | [[Given-When-Then]] |
+| when             | 'When'                   | [[Given-When-Then]] |
+| then             | 'Then'                   | [[Given-When-Then]] |
+| but              | 'But'                    | [[Given-When-Then]] |
+
+h3. Step definitions
+
+For each step Cucumber will will look for a matching *step definition*. A step definition is written in Ruby. Each step definition consists of a keyword, a string or regular expression, and a block. Example:
 
 <pre>
 # features/step_definitions/coffee_steps.rb
@@ -38,4 +56,4 @@ This step definition uses a regular expression with one match group - <code>(\d+
 
 When Cucumber prints the results of the running features it will underline all step arguments so that it's easier to see what part of a step was actually recognised as an argument. It will also print the path and line of the matching step definition. This makes it easy to go from a feature file to any step definition.
 
-Take a look at the examples directory to see more.
+Take a look at [[Step Definitions]] and the examples directory to see more.
