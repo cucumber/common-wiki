@@ -46,7 +46,7 @@ The plugins' dependencies must be installed separately:
 
 h3. Behind a firewall?
 
-As a last resort, download tarballs from GitHub.
+As a last resort, download "tarballs from GitHub":http://github.com/aslakhellesoy/cucumber/downloads.
 
 h2. Create Your Rails Project
 
