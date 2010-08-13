@@ -152,7 +152,7 @@ For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenar
         create_step('And', name, *caller[0].split(':')[1].to_i)
       end</code></pre>
 
-The string from each one of these method is compared against the matchers contained in the step.rb files.  A step matcher looks much like this:
+The string from each one of these method is compared against the matchers contained in the step_definitions.rb files.  A step matcher looks much like this:
 <pre><code>Given /there are (\d+) froobles/ do |n|
   Frooble.transaction do
     Frooble.destroy_all
@@ -163,7 +163,7 @@ The string from each one of these method is compared against the matchers contai
 end
 </code></pre>
 
-The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features given above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step matchers in any step file under the features directory.
+The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features given above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step matchers in any step_definitions.rb file found under the features directory.
 <pre><code>Given /some other action/ do
 When /some (.*) action/ do |match|
 Then /(*.) other action/ do |match|
@@ -171,7 +171,7 @@ And /some other act.*/ do
 Given /(.*) other (.*)/ do |first,second|
 </code></pre>
 
-Which raise an interesting point.  If you had all of these matchers defined somewhere then cucumber would tell you that it found multiple matches for a single feature step and force you to distinguish them.
+Which raise an interesting point.  If you had all of these matchers defined somewhere in step_definitions.rb files then cucumber would tell you that it found multiple matches for a single feature step and force you to distinguish them.
 
 Note that you are not required to use a matched subpattern, (.* ), in the following block.  
 
@@ -192,7 +192,7 @@ When /in an invoiced non-shipped situation/ do
 end
 </code></pre>
 
-Worthy of note is that, inside the step files, one must enclose the arguments to the <strong>Given/When/Then/And</strong> methods with a string delimiter.  Because of this, if you have adopted the practice of demarcating values in the step matchers with double quote marks then you must escape them in the equivalent step strings.  You should also be cautious not to include the quote marks in the value matchers, "(.)" is not the same as (.*).  If you use quotes in the feature files and do not account for them in your matchers then you will get variables that contain leading and trailing quotes as part of their values.
+Worthy of note is that, inside the step_definitions.rb files, one must enclose the arguments to the <strong>Given/When/Then/And</strong> methods with a string delimiter.  Because of this, if you have adopted the practice of demarcating values in the step matchers with double quote marks then you must escape them in the equivalent step strings.  You should also be cautious not to include the quote marks in the value matchers, "(.)" is not the same as (.*).  If you use quotes in the feature files and do not account for them in your matchers then you will get variables that contain leading and trailing quotes as part of their values.
 
 <pre><code>
 Scenario: Quotes surround value elelments
