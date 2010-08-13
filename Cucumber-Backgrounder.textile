@@ -156,7 +156,13 @@ This is a hard discipline to accept but the value with this approach is that you
 
 If you do anticipate feature steps then omitting any matcher for them in the step definitions files causes these steps to be reported as missing by Cucumber, which helpfully provides a suggested method and argument to implement.  Stub step matchers have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/undefined step definitions.
 
-A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</strong></em>.  Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses (steps) that are used to match test step definitions. The conventional arrangement is:
+h3. What is are Features and Scenarios?
+
+A feature can be conceptualized as an indivisible unit of functionality embedded in the project to which it belongs.  For example, an authentication challenge and response user interface is usually considered a feature while an authentication system would comprise many features.   A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</strong></em>.
+
+A scenario is a block of instructions that exercise some behaviour desired or depreciated in the feature to which it belongs.  A scenario might check that the login interface provides input fields for the requisite responses, that failures are logged or otherwise reported. that user ids are locked out after a given number of failed attempts, and so forth.  Each scenario exercises the implementation code  to prove that for each anticipated condition the expected behaviour is indeed produced.
+
+Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses (steps) that are used to match test step definitions. The conventional arrangement is:
 
 <pre>Feature: Some terse yet descriptive text of what is desired
 In order that some business value is realized
@@ -205,7 +211,7 @@ The step definition match depends only upon the pattern following the Given/When
 
 If more than one matcher in all of the step definitions files matches a feature step then Cucumber complains that it found multiple step definition matches for that step and forces you to distinguish them.  You can force Cucumber to make a decision instead by passing the switch <code>--guess</code> on the command line.
 
-It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
+It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, all elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
 <pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
 
@@ -244,7 +250,26 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-The choice of method has no impact on the result but, <em>When</em> and <em>Then</em> used in this fashion seem to me to read more naturally.
+The choice of method has no impact on the result but, <em>When</em> and <em>Then</em> used in this fashion seem to me to read more naturally.  You should also realize that the argument passed to the <em>Then</em> method is a string and that the string may be constructed in any manner.  For example the above <em>Then</em> statement could be passed as: 
+
+<pre>
+When /my matcher named (.*)/ do |match|
+  Then %Q(my other matcher named "#{match}")
+end
+</pre>
+
+This latter format removes the necessity to escape (\) the embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument:
+
+<pre>
+When /my matcher named (.*)/ do |match|
+  steps %Q{
+    Then my other matcher named "#{match}"
+     And the next matcher with value "{match}"
+  }
+end
+</pre>
+
+Keep in mind that cucumber is simply a DSL wrapper around the Ruby language, whose full expressiveness remains available to you in the step definition files.
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Background section are run before each of the scenarios.
 
