@@ -42,6 +42,7 @@ for corresponding words in other languages, see <tt>.../lib/cucumber/languages.y
   more_examples:     More Examples:
   scenario:          Scenario:
   scenario_outline:  Scenario Outline:
+  background:        Background:
 
   and:               And
   but:               But
