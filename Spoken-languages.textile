@@ -50,7 +50,7 @@ Alternatively - if you don't know Git and just grabbed the Gem:
 # Edit the <code>languages.yml</code> in your gem.
 # [[Get in touch]] and attach the updated <code>languages.yml</code> to a new Lighthouse ticket.
 
-That's it! You have a new language that you can pass to Cucumber's <code>--language</code> option.
+That's it! You have a new language that you can specify in a <code># language: xx</code> header in your feature files.
 
 h2. Adding examples for a new language
 
