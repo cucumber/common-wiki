@@ -1,6 +1,6 @@
-Cucumber lets you store and reuse commonly used cucumber command line arguments for a project in a <code>cucumber.yml</code> file. This file must be in your project's root directory. (Actually, Cucumber looks for it in the current directory, but this is usually the root directory of your project).
+Cucumber lets you store and reuse commonly used cucumber command line arguments for a project in a <code>cucumber.yml</code> file. This file must be in your project's root directory, <code>config</code> or <code>.config</code>.
 
-For example, by having this in your cucumber.yml at your project root:
+For example, by having this in your <code>config/cucumber.yml</code>:
 
 <pre><code>default: --format profile features
 html_report: --format progress --format html --out=features_report.html features  
@@ -12,6 +12,14 @@ You can reuse the arguments listed above:
 
 It is important to point out that by simply running 'cucumber' the default profile will be used (if a cucumber.yml file is found in the current directory).
 
-As of commit 06810452b36d876061b9cfbd6c93bfcfcb58c00e on 28 Aug 2009, included in the 0.3.99 and later releases of cucumber, the cucumber.yml file is interpreted as an ERB file; this allows you to use ruby code to generate values in the cucumber.yml file. Someone should post some examples of this sometime.
+h2. Preprocessing with ERb
+
+The cucumber.yml file is interpreted as an ERB file; this allows you to use ruby code to generate values in the cucumber.yml file. So if you have several profiles with similar values you could do something like:
+
+<pre>
+<% common = "--tags ~@wip --strict" %>
+default: <%= common %> features  
+html_report: <%= common %> --format progress --format html --out=features_report.html features  
+</pre>
 
 Also see [[Running Features]] for more details about how to execute your features.
