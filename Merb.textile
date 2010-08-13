@@ -1,43 +1,40 @@
-Install
------------------------------
+h2. Install
 
 Cucumber can be used with "Merb":http://merbivore.com/ via the "merb_cucumber":http://github.com/david/merb_cucumber plugin.
 
 To install merb_cucumber:
 
-*sudo gem install david-merb_cucumber*
+<pre>sudo gem install david-merb_cucumber</pre>
 
-Or you can install "jsmestad-merb_cucumber ":http://github.com/jsmestad/merb_cucumber
+Or you can install "jsmestad-merb_cucumber":http://github.com/jsmestad/merb_cucumber
 
-*sudo gem install jsmestad-merb_cucumber*
+<pre>sudo gem install jsmestad-merb_cucumber</pre>
 
 Here is a brief note from jsmestad.
 
 bq. Note – you must uninstall david-merb_cucumber in order for this gem to take precedence. Merb + Cucumber + Webrat testing stack. Builds upon David’s work, but binds Webrat as a dependency to hopefully ensure a smooth upgrade for future Webrat releases. Also Factory_Girl generators will be added soon.
 
-Usage
------------------------------
+h2. Usage
 
-Then inside of a merb application directory, try:
+The inside of a merb application directory, try:
 
-*merb-gen cucumber*
+<pre>
+merb-gen cucumber
+merb-gen feature FEATURE_NAME
+</pre>
 
-*merb-gen feature FEATURE_NAME*
+Edit your feature, and:
 
-*edit your feature*
+<pre>rake features</pre>
 
-*rake features*
+h2. Tips
 
-Tips
------------------------------
-
-describe can use multiple given blocks
+Describe can use multiple given blocks
 
 For example, you can "now":http://ln-s.net/2vB2
-(since Feb 26, 2009 commit by carllerche)write
+(since Feb 26, 2009 commit by carllerche) write
 
-<code><pre>
-
+<pre><code>
 given "some food" do
   @food = "pizza"
 end
@@ -51,11 +48,9 @@ describe "Something", :given => ["some food", "some drink"] do
     # has @food and @drink set to pizza and beer, respectively
   end
 end
-</pre></code>
+</code></pre>
 
-
-Looking for Examples?
------------------------------
+h2. Looking for Examples?
 
 So am I. Therefore I've been scrounging github in search of some. There are many merb projects out there with empty /features sitting around so searching github can potentially return many false positives. 
 
@@ -72,8 +67,8 @@ Here are some merb projects that use cucumber (feel free to add/update/delete th
 * cucumber in a merb slice: "http://github.com/balinterdi/philotes/tree/master":http://github.com/balinterdi/philotes/tree/master
 * "http://github.com/wolfmanjm/wolfmanblog/tree/master":http://github.com/wolfmanjm/wolfmanblog/tree/master
 
-Tutorials
------------------------------
+h2. Tutorials
+
 * Full-Cycle Feature Development in Merb: "Ruby Advent 2008 Article written by Foy Savas":http://advent2008.hackruby.com/past/2008/12/18/fullcycle_feature_development_in_merb.html
 * Merb-Book cucumber chapter: "http://book.merbist.com/testing-your-application/cucumber":http://book.merbist.com/testing-your-application/cucumber
 * "Writing User Stories with merb_cucumber":http://dermological.blogspot.com/2008/11/writing-user-stories-with-merb-cucumber.html
