@@ -32,8 +32,7 @@ end
 </code></pre>
 
 A plain text table gets stored in a <code>Cucumber::Ast::Table</code> object, which provides several methods to access the
-rows, columns and cells in the table. In the example above we're using the <code>Cucumber::Ast::Table#hashes</code> method
-to iterate over all of the rows.
+rows, columns and cells in the table. In the example above we're using the <code>Cucumber::Ast::Table#hashes</code> method to iterate over all of the rows.
 
 h3. Diffing tables
 
