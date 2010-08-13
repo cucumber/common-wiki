@@ -22,7 +22,7 @@ Cucumber is a tool that can execute plain-text functional descriptions as automa
 
 While Cucumber can be thought of as a "testing" tool, the intent of the tool is to support "BDD":http://behaviour-driven.org/. This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else and verified by business analysts, domain experts, etc. non technical stakeholders. The production code is then written "outside-in":http://dannorth.net/whats-in-a-story, to make the stories pass.
 
-Cucumber itself is written in Ruby, but it can be used to "test" code written in Ruby or other languages including but not limited to Java, C# and Python.  Cucumber only requires minimal use of Ruby programming and <a href="http://tryruby.sophrinix.com/">Ruby is easy</a>, so don't be afraid even if the code you're developing in is not Ruby.
+Cucumber itself is written in Ruby, but it can be used to "test" code written in Ruby or other languages including but not limited to Java, C# and Python.  Cucumber only requires minimal use of Ruby programming and <a href="http://tryruby.org/">Ruby is easy</a>, so don't be afraid even if the code you're developing in is not Ruby.
 
 h2. Getting started
 
