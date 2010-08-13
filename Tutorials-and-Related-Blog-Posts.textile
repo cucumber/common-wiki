@@ -4,7 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 
 |*Post*|*Description*|*Posting Date*|
-|"Getting started with Cucumber and Sinatra":http://tooky.github.com/2009/02/05/getting-started-with-cucumber-and-sinatra.html|Feb 05 2009|
+|"Getting started with Cucumber and Sinatra":http://tooky.github.com/2009/02/05/getting-started-with-cucumber-and-sinatra.htmlSinatra loves Cucumbers|Feb 05 2009|
 |"Web app integration testing for sysadmins with cucumber-nagios":http://holmwood.id.au/~lindsay/2009/02/23/web-app-integration-testing-for-sysadmins-with-cucumber-nagios/|Monitor web sites with Cucumber| Feb 23 2009 |
 |"Using Cucumber to Integrate Distributed Systems and Test Messaging":http://www.benmabey.com/2009/02/17/using-cucumber-to-integrate-distributed-systems-and-test-messaging/| Testing asynchronous messaging | Feb 17 2009|
 |"Leveraging Test Data Builders in Cucumber Steps":http://www.benmabey.com/2009/02/05/leveraging-test-data-builders-in-cucumber-steps/| Step definitions for creating objects from step tables.| Feb 5 2009 |
