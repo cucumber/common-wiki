@@ -3,12 +3,16 @@ in the step definitions. Here is how to get you started.
 
 h2. Install Cucumber, Webrat and RSpec
 
+As of release 1.1.5, rspec-rails is now released as a gem.
+<pre><code>
+[sudo] gem install rspec
+[sudo] gem install rspec-rails
+</code></pre>
+
 If you use Git for your Rails app, add the following plugins:
 
 <pre><code>git submodule add git://github.com/aslakhellesoy/cucumber.git vendor/plugins/cucumber
 git submodule add git://github.com/brynary/webrat.git vendor/plugins/webrat
-git submodule add git://github.com/dchelimsky/rspec.git vendor/plugins/rspec
-git submodule add git://github.com/dchelimsky/rspec-rails.git vendor/plugins/rspec-rails
 </code></pre>
 
 If your own Rails code is *not* in Git, just replace <code>submodule add</code> with <code>clone</code>.
