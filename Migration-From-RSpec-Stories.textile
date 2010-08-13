@@ -32,7 +32,7 @@ h2. Move over your step definitions
 <pre><code>[git|svn] mv stories/steps/*.rb features/steps
 </code></pre>
 
-Remove the 'steps_for' declaration and corresponding block out of your step file, just leaving your Given, When, and Then step definitions.
+Remove the 'steps_for' declaration and corresponding block out of your step files, just leaving your Given, When, and Then step definitions.
 
 Try to run the feature again:
 
