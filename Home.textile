@@ -77,10 +77,8 @@ Each example directory has a Rakefile, and you can run the features in an exampl
 
 <pre><code>rake features</code></pre>
 
-The examples deliberately have errors so you can get a taste of how the error output looks like. You can get help by asking 
-for it:
-
-<pre><code>cucumber --help</code></pre>
+This will print out the feature files in green. Now go into the code the features describe and deliberately make a bug in the code somewhere.
+Run the features again and look at the output. Note that the backtrace (stack trace) also shows you the line of the plain text feature that fails.
 
 h2. Developing with Cucumber and BDD
 
