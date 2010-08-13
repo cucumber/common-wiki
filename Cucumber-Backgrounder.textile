@@ -53,7 +53,8 @@ A source of potential confusion is that the term <em><strong>steps</strong></em>
 
 [[Step Organisation|Step definitions]], keyed by their snippets of text from the feature files, invoke blocks of ruby and rails code that usually contains assertion statements from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is unsurprising that the cucumber generator assumes that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
 
-<pre><code># Sets up the Rails environment for Cucumber
+<pre><code># cucumber-0.1.11
+# Sets up the Rails environment for Cucumber
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 require 'cucumber/rails/world'
@@ -236,9 +237,18 @@ The terminology for elements of Behaviour Driven Development differs somewhat fr
 
 Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitionss in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and, may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
-Cucumber comes preconfigured with webrat test steps.  If webrat is installed as a plugin in your project then these are available to you for view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem to perform the tests then you need add this to the features/support/env.rb file:
+Cucumber 0.1.11 comes preconfigured for webrat together with webrat test steps.  If you have webrat installed as a plugin in your project then these are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you need add this to the features/support/env.rb file:
 
 <code>require 'webrat' if !defined?(Webrat)</code>
+
+Then, comment out these  in env.rb.
+<pre><code># If webrat is a plugin then uncomment this
+#require 'webrat/rails'
+
+# Comment out the next two lines if you're not using RSpec's matchers (should / should_not) in your steps.
+require 'cucumber/rails/rspec'
+# If webrat is a plugin and rspec is used then uncomment this
+#require 'webrat/rspec-rails'</code></pre>
 
 Calls for any additional Ruby libraries that your particular testing environment requires should typically be placed in the <code>./features/support/env.rb</code> file.
 
