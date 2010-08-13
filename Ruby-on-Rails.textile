@@ -53,16 +53,6 @@ rake features
 
 See [[Running Features]] for more info.
 
-h2. Tips
-
-These tips apply to Rails development in general...
-
-* Talk to models directly in *Given* steps to set up a known state. Don't use fixtures.
-* Use Webrat in *When* steps
-* Use *response.should have_tag(...)* (and models) in *Then* steps to verify the *outcomes* (which are on the screen, not only in the database).
-* Organise steps in files named accordingly to resources used
-* Avoid keeping object state in @variables in steps. It will couple your steps and make them harder to reuse.
-
 h2. View spec redundancy
 
 Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree
