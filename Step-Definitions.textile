@@ -22,7 +22,7 @@ When Cucumber executes the plain text, it will for each step look for a register
 
 The adjective/adverb has *no* significance when Cucumber is registering or looking for Step Definitions.
 
-Also check out [[Multiline Step Arguments]] for more info on how to pass entire tables to your step definitions.
+Also check out [[Multiline Step Arguments]] for more info on how to pass entire tables or bigger strings to your step definitions.
 
 h2. Successful steps
 
