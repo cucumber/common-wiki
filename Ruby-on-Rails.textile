@@ -1,4 +1,4 @@
-Cucumber supports Ruby on Rails out of the box. Currently the following Rails versions are known to be working:
+Cucumber supports Ruby on Rails out of the box. Currently the following Rails versions are tested with "cucumber-rails-test":http://github.com/aslakhellesoy/cucumber-rails-test
 
 * v2.3.4
 * v2.3.3
