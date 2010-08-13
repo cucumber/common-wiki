@@ -1,7 +1,6 @@
 Communication within a team always works better when people can use their spoken language. Cucumber supports "several spoken languages":../tree/master/lib/cucumber/languages.yml. This is Norwegian:
 
-<pre><code>
-Egenskap: Summering
+<pre><code>Egenskap: Summering
   For å slippe å gjøre dumme feil
   Som en regnskapsfører
   Vil jeg kunne legge sammen
@@ -19,3 +18,17 @@ Egenskap: Summering
     Når jeg summerer
     Så skal resultatet være 13
 </code></pre>
+
+You have to tell Cucumber that you're using a different language than English (the default):
+<pre><code>cucumber --language no</code></pre>
+
+h2. Adding a new language
+
+It's easy! 
+
+# Make a fork of Cucumber and pull it down
+# Add your language's keywords to  "languages.yml":../tree/master/lib/cucumber/languages.yml
+# Generate the parser for your language:
+<pre><code>rake treetop:compile</code></pre>
+
+That's it! You have a new language that you can pass to <pre><code>--language</code></pre>
