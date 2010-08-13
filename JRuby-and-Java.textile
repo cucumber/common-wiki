@@ -60,4 +60,6 @@ Write me please!
 
 h2. Seen elsewhere
 
-Please add link to examples using Cucumber and Java here
+Please add link to examples using Cucumber and JRuby or Java here:
+
+* <a href="http://andymaleh.blogspot.com/2008/12/glimmers-got-bdd-through-rspec-and.html">Glimmer's Got BDD through RSpec and SWTBot</a>
