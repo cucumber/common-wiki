@@ -25,6 +25,8 @@ cucumber --tags @important   # Runs the first scenario
 cucumber --tags ~@important  # Runs the second scenario (Scenarios without @important)
 </pre>
 
+(Another way to "filter" what you want to run is to use the <code>file.feature:line</code> pattern or the <code>--scenario</code> option as described in [[Running Features]]).
+
 Tags is also a great way to "link" your Cucumber features to other documents. For example, if you have to deal with old school requirements in a different system (Word, Excel, a wiki) you can refer to numbers:
 
 <pre>
@@ -39,6 +41,4 @@ Another creative way to use tags is to keep track of where in the development pr
 Feature: Index projects
 </pre>
 
-Another way to "filter" what you want to run is to use the <code>file.feature:line</code> pattern or the <code>--scenario</code> option as described in [[Running Features]].
-
-Tags are also used in Tagged [[Hooks]].
+Tags are also used in Tagged [[Hooks]], which let you use tags to define what <code>Before</code> and <code>After</code> blocks get run for what scenarios.
