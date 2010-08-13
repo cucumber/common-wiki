@@ -1,4 +1,4 @@
-A wire protocol is under development that will allow Cucumber to invoke step definitions implemented on any platform. 
+Cucumber supports a wire protocol that allows it to invoke step definitions implemented on any platform. 
 
 To use the wire protocol, you install Ruby and write and run your features as you normally would, but instead of writing step_definitions files in Ruby or another supported programming language, you write a simple .wire file, which tells Cucumber where to find your step definitions:
 
@@ -11,7 +11,7 @@ When you run your features, Cucumber will then connect to this TCP socket, ask t
 The details of the protocol are documented in the feature here:
 "http://github.com/aslakhellesoy/cucumber/blob/master/features/wire_protocol.feature":http://github.com/aslakhellesoy/cucumber/blob/master/features/wire_protocol.feature
 
-Please feel free to suggest enhancements to the protocol, especially while it's being developed.
+Please feel free to suggest enhancements to the protocol, or ask for help on the mailing list if you'd like to implement a new server.
 
 h2. Implementations
 * "Cuke4Nuke":http://github.com/richardlawrence/Cuke4Nuke/ (.NET)
