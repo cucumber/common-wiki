@@ -25,6 +25,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"NewGem":http://newgem.rubyforge.org/| Use <code>newgem -i cucumber</code> to generate a bunch of helpful scenario steps for gem development|
 |"Pickle":http://github.com/ianwhite/pickle/tree/master|Easy model creation/reference in cucumber - optionally leveraging your factories/blueprints|
 |"Pickler":http://github.com/tpope/pickler/tree/master|Synchronize user stories in "Pivotal Tracker":http://www.pivotaltracker.com/ with Cucumber features.|
+|"rails_template":http://github.com/hectoregm/rails-templates/tree/master| Rails Template using Authlogic that comes with Cucumber features|
 |"RCumber":http://github.com/jgoodsen/rcumber/wikis|Edit and run Cucumber tests directly in your Rails application. Click results and get taken to TextMate.|
 |"Remote Feature":http://github.com/mhennemeyer/remote_feature|Run Cucumber Features that are defined in "Writeboard":http://www.writeboard.com/.|
 |"RSpec":http://rspec.info|Use RSpec's <code>Object.should</code> and <code>Object.should_not</code> to compare values in your step definitions|
