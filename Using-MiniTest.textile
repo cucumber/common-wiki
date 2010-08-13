@@ -1,0 +1,10 @@
+You can also use MiniTest's  <code>assert</code> methods by defining your own "World":a-whole-new-world block:
+
+<pre>
+require 'minitest/unit'
+
+World do |world|
+  world.extend(MiniTest::Assertions)
+  world
+end
+</pre>
