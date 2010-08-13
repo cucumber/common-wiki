@@ -5,7 +5,7 @@ Gherkin serves two purposes - documentation and automated tests.
 - And a third bonus feature - when it yells in red, don't be offended - it's talking to you, telling you what code you should write.
 
 Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase.
-The grammar exists in different flavours for several [[Spoken languages]],
+The grammar exists in different flavours for many [[Spoken languages]],
 so that your team can use the [[Given-When-Then]] keywords (plus a few more) in your own language.
 
 h2. Syntax Notes
