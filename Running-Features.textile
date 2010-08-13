@@ -24,7 +24,7 @@ You can reuse the arguments listed above:
 <pre><code>cucumber --profile html_report
 </code></pre>
 
-It is important to point out that by simply running 'cucumber' the default profile will be used (if a cucumber.yml file is found).
+It is important to point out that by simply running 'cucumber' the default profile will be used (if a cucumber.yml file is found in the current directory).
 
 h2. Using Rake
 
