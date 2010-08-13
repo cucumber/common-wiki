@@ -11,7 +11,7 @@ h2. Scenario hooks
 end
 </code></pre>
 
-<code>After</code> hooks will be run after the last step of each scenario. They will run in the *opposite* order of which they are registered.
+<code>After</code> hooks will be run after the last step of each scenario, even when there are failing, undefined, pending or skipped steps. They will run in the *opposite* order of which they are registered.
 
 <pre><code>After do |scenario|
   # Do something after each scenario.
