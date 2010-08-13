@@ -14,7 +14,10 @@ Many CI servers can interpret XML files produced by the "Ant JUnit task":http://
 
 If you're using such a CI server we recommend you use Cucumber with the <code>junit</code> formatter.
 
-bq. Example. To get started using cucumber in "Hudson":http://hudson.dev.java.net, just add a build step running '<code>cucumber -f junit --out %WORKSPACE%</code>' and then check the 'Publish JUnit test result report', and enter <code>*.xml</code> in the 'Test report XMLs' field. Save and run.  (Later improve by using a rake task and placing your output in a subfolder).
+bq. Example. To get started using cucumber in "Hudson":http://hudson.dev.java.net, just add a build step running 
+'<code>cucumber -f junit --out %WORKSPACE%</code>' and then check the 
+'Publish JUnit test result report', and enter <code>*.xml</code> in the 'Test report XMLs' field.
+Save and run.  (Later improve by using a rake task and placing your output in a subfolder).
 
 If you're using Ant, you can run cucumber with the "exec":http://ant.apache.org/manual/CoreTasks/exec.html task. If you're using JRuby or "cuke4duke":http://wiki.github.com/aslakhellesoy/cuke4duke you can also take a peek at cuke4duke's "Ant documentation":http://wiki.github.com/aslakhellesoy/cuke4duke/ant
 
