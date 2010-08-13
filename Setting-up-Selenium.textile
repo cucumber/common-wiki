@@ -1,4 +1,6 @@
-<p><strong>Update:</strong> This guide is out of date, a fix is upcoming but in the meantime you do not need the Selenium gem. Also, you must use selenium-client -v=1.2.14. You do not need to overwrite any jars. Make sure all selenium processes are stopped and the correct versions are installed and it should run. The information about multiple environments for selenium/non-selenium tests is still valid and useful.</p>
+<p><strong>Update:</strong> This guide is out of date, a fix is upcoming but in the meantime you do not need the Selenium gem. You do not need to overwrite any jars. Make sure all selenium processes are stopped and the correct versions are installed and it should run. The information about multiple environments for selenium/non-selenium tests is still valid and useful.</p>
+
+<p>For webrat -v=0.5.1, you should use selenium-client -v=1.2.16.  Do not use webrat -v=0.5.0.  For webrat -v=0.4.4, you must use selenium-client -v=1.2.14.</p>
 
 h2. Pre-requisites
 
