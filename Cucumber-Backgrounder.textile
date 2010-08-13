@@ -223,3 +223,5 @@ Finally, running <code>autotest</code> with the environment variable <code>AUTOF
 h3. Anything Else?
 
 For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest.  So, no popups when a test fails.
+
+Recall that cucumber is an <strong><em>integration</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct steps in such a fashion as to conduct unit tests.  No great harm will result.  However, this is not considered best practice by many and may prove impossible for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
