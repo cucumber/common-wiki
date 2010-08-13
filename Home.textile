@@ -30,11 +30,11 @@ Cucumber itself is also written in Ruby, but it can be used to "test" code writt
 * [[FunFX and Flex]]
 * Web apps in any language - use Cucumber with one of the following:
 ** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
-** "Watir":http://wtr.rubyforge.org/ - Runs IE (Windows only)
+** "Watir":http://wtr.rubyforge.org/ - Drives IE (Windows only)
 ** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU/Linux
-** "SafariWatir":http://safariwatir.rubyforge.org/ - Runs Safari (OS X only)
-** "ChromeWatir":http://code.google.com/p/chrome-watir/wiki/ChromeWatir
-** "Celerity":http://celerity.rubyforge.org/ - Runs a headless browser with Javascript support. Examples "here":http://github.com/alvinschur/celerity-examples/tree/master
+** "SafariWatir":http://safariwatir.rubyforge.org/ - Drives Safari (OS X only)
+** "ChromeWatir":http://code.google.com/p/chrome-watir/wiki/ChromeWatir - Drives Google Chrome
+** "Celerity":http://celerity.rubyforge.org/ - Drives a fast headless browser with Javascript support. Examples "here":http://github.com/alvinschur/celerity-examples/tree/master
 ** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS)
 ** "Mechanize":http://www.nepharious.com/blog/2008/11/30/regression-test-webapps-with-cucumber-and-webrat-on-mechanize/ - Runs a headless browser (any OS)
 
