@@ -17,6 +17,6 @@ Snailgun is also useful for more than testing. If you do
 <pre><code>
     snailgun --rails cucumber,test,development
 </code></pre>
-then three environments are started. You can use "fconsole" for a quick-start console, and "fruby script/server" for a quick-start web server.
+then three environments are started. You can use @fconsole@ for a quick-start console, and @fruby script/server@ for a quick-start web server.
 
 More info at "the github snailgun page":http://github.com/candlerb/snailgun
