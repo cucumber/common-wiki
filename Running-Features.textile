@@ -1,0 +1,14 @@
+h3. Using the Gem's 'cucumber' Command
+
+Assuming you've installed cucumber as a gem, run this at a command prompt to see the options for running features:
+
+<pre><code>cucumber --help</code></pre>
+
+For example
+
+<pre><code>cucumber features/authenticate_user.feature --line 44 --format html > features.html</code></pre>
+
+...will run the scenario defined at line 44 of the authenticate_user feature, format it as HTML and pipe it to the features.html file for viewing in a browser.
+
+h3. Using the rake task (in a rails app)
+<pre><code>rake features</code></pre>
