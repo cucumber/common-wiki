@@ -184,7 +184,7 @@ Which raises an interesting point.  If you had more than one of these matchers d
 
 Note that you are not required to use a matched subpattern, <code>(.* )</code>, in the following block.  
 
-It is considered better form by some to surround with double quotation marks, <strong>"</strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
+It is considered better form by some to surround with double quotation marks, <strong>""</strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
 <pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
 
