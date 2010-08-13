@@ -5,8 +5,7 @@ Please add any helpful blog posts that you have found or written about all thing
 |*Post*|*Description*|*Posting Date*|
 |"Outside-in Development with Cucumber and RSpec":http://blog.josephwilk.net/ruby/outside-in-development-with-cucumber-and-rspec.html | Joseph Wilk's slides from "Scotland on Rails":http://scotlandonrails.com/schedule/27-march/working-outside-in-with-cucumber-and-rspec/ | Mar 30 2009 |
 |"BDD Step-by-Step Example - part 2":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-2-refactor/ |Nicholas’ Blog | Mar 29 2009|
-|"BDD Step-by-Step Example - part 1":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-1/ | 
-Nicholas’ Blog | Mar 29 2009 |
+|"BDD Step-by-Step Example - part 1":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-1/ | Nicholas’ Blog | Mar 29 2009 |
 |"Testing outbound emails Cucumber":http://drnicwilliams.com/2009/03/26/testing-outbound-emails-with-cucumber/|Emails....| Mar 26 2009 |
 |"Using Cucumber for Acceptance Testing":http://www.pathf.com/blogs/2009/03/using-cucumber-for-acceptance-testing | Using Cucumber for Acceptance Testing | Mar 20 2009 |
 |"Story Driven Development Recipes with Cucumber":http://www.infoq.com/news/2009/03/bdd-with-cucumber | Not detailed, but nice to be on InfoQ :-) | Mar 03 2009 |
