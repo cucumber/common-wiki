@@ -83,7 +83,7 @@ In most cases you have to construct that table yourself programmatically, but fo
 expected_cukes_table.diff!(table_at('#cuke_table').to_a)
 </pre>
 
-If yout HTML Table contains e.g. links and you want to create a table structure containing the link text, you can convert the column values. Example:
+If your HTML Table contains e.g. links and you want to create a table structure containing the link text, you can convert the column values. Example:
 
 <pre>
 actual_table = table_at('#cuke_table').to_a
