@@ -1,6 +1,6 @@
 *{color:red}This is only possible in 0.1.99 and higher*
 
-Background allows you to add some context to the scenarios in a single feature. A Background is much like a scenario containing a number of steps. The difference is when its run. The background is run before each of your scenarios and before any of your 'Before' hooks.
+Background allows you to add some context to the scenarios in a single feature. A Background is much like a scenario containing a number of steps. The difference is when its run. The background is run before each of your scenarios but after any of your 'Before' hooks.
 
 Example:
 <pre></code>Feature: Multiple site support
