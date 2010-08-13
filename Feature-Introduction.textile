@@ -20,7 +20,7 @@ Cucumber will parse this file, and for each step it will look for a matching *st
 # features/step_definitions/coffee_steps.rb
 
 Then "I should be served coffee" do
-  @cup.contents.should == "coffee"
+  @machine.dispensed_drink.should == "coffee"
 end
 </pre>
 
