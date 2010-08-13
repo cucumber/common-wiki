@@ -11,7 +11,7 @@ _Don't attempt to set it in your <code>support/env.rb</code> file or any other R
 
 The colours that you can change are:
 
-||Key||Default colours||
+|_.Key|_.Default colours|
 |undefined|%{color:yellow}yellow% (v0.2.0 and up)|
 |pending|%{color:yellow}yellow%|
 |pending_param|%{color:yellow;font-weight: bold}yellow,bold%|
