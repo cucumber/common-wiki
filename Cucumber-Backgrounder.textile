@@ -15,7 +15,7 @@ When you run "script/generate cucumber"
 Then you will create a sub-directory called "features"
 </pre>
 
-The forgoing is written in the style of the feature statements that make up the user interface to cucumber testing.  We will return to that topic later.  For the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
+The foregoing is written in the style of the feature statements that make up the user interface to cucumber testing.  We will return to that topic later.  For the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
 
 An archetypal RoR project directory tree looks like this:
 
@@ -186,7 +186,7 @@ And /in an invoiced non-shipped situation/ do
 end
 </code></pre>
 
-Worthy of note here is that, inside the step files, one must enclose the arguments to the Given/When/Then/And methods with a string delimiter.  Because of this, if you have adopted the practice of demarcating values in the step matchers with double quote marks then you must escape them in the equivalent step strings.  You should also be cautious not to include the quote marks in the value matchers, "(.)" is not the same as (.*).  If you use quotes in the feature files and do not account for them in your matchers then you will get variables that contain leading and trailing quotes as part of their values.
+Worthy of note is that, inside the step files, one must enclose the arguments to the <strong>Given/When/Then/And</strong> methods with a string delimiter.  Because of this, if you have adopted the practice of demarcating values in the step matchers with double quote marks then you must escape them in the equivalent step strings.  You should also be cautious not to include the quote marks in the value matchers, "(.)" is not the same as (.*).  If you use quotes in the feature files and do not account for them in your matchers then you will get variables that contain leading and trailing quotes as part of their values.
 
 <pre><code>
 And some "required" action
