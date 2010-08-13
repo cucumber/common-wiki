@@ -16,7 +16,7 @@ For example
 
 ...will run the scenario(s) named "Failed login"
 
-You can also use [[tags]] to specify what to run.
+You can also use [[tags]] to specify what to run, or pass [[Environment Variables]] to Cucumber.
 
 h2. Using Rake
 
