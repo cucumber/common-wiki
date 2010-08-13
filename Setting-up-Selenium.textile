@@ -57,7 +57,7 @@ Run the Cucumber "Selenium example":http://github.com/aslakhellesoy/cucumber/tre
 
 h2. Useful links
 
-"Official Selenium-RC site":"http://selenium-rc.seleniumhq.org/
+"Official Selenium-RC site":http://seleniumhq.org/projects/remote-control/
 
 "Selenium gem at rubyforge":http://selenium.rubyforge.org/
 
