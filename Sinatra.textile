@@ -47,3 +47,24 @@ World do
   Sinatra::TestHarness.new(Sinatra::Application)
 end
 </code></pre>
+
+h2. Rack-Test
+
+You can also use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra using Bryan Helkamp's "rack-test":http://www.github.com/brynary/rack-test and "Webrat":http://www.github.com/brynary/webrat.  You can check out the rspec examples in the "hancock application":http://github.com/atmos/hancock.  Something like the following should be setup in your  <code>features/support/env.rb</code>.
+<pre><code>
+require File.expand_path(File.dirname(__FILE__)+'/../../spec_helper')
+require 'haml'
+
+MyApp::App.set :environment, :development
+
+World do
+  def app
+    @app = Rack::Builder.new do
+      run MyApp::App
+    end
+  end
+  include Rack::Test::Methods
+  include Webrat::Methods
+  include Webrat::Matchers
+end
+</code></pre>
