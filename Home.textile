@@ -15,6 +15,10 @@ While Cucumber can be thought of as a "testing" tool, the intent of the tool is 
 This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else, and 
 the production code is then written outside-in, to make them pass.
 
+h2. Migration from RSpec Stories
+
+See [Migration From RSpec Stories]
+
 h2. Installation
 
 After you have installed Ruby or JRuby - install Cucumber with the following commands:
