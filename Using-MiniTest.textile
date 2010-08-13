@@ -8,3 +8,15 @@ World do |world|
   world
 end
 </pre>
+
+If it doesn't work, try this one:
+
+<pre>
+require 'minitest/unit'
+
+World do
+  extend Mini::Test::Assertions
+end
+</pre>
+
+Also see the minitest cheat cheet "here":http://cheat.errtheblog.com/s/minitest/1
