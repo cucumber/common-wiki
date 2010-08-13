@@ -1,4 +1,4 @@
-It is possible to call steps from step definitions:
+It is possible to call steps from [[Step Definitions]]:
 
 <pre>
 # ruby
