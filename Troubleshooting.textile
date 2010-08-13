@@ -6,9 +6,9 @@ Missing "a" characters in the output? Do your "æøå" characters print like gar
 
 *First* - make sure your .feature files are saved in "UTF-8":http://en.wikipedia.org/wiki/UTF-8 format.
 
-*Second* - add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. 
+*Second* - add <code>require 'cucumber/formatters/unicode'</code> to your <code>features/support/env.rb</code> file. 
 
-*Third* - set your command window's font to a font that has the characters you're outputting - for example _Upper Left corner icon menu -> Properties -> Font -> Lucida Grande_.
+*Third* - set your command window's font to a font that has the characters you're outputting - for example _Upper Left corner icon menu -> Properties -> Font -> Lucida Grande_ - or another truetype (TT) font.
 
 *Fourth* - in your command prompt, change the codepage:
 
