@@ -2,7 +2,7 @@ There are several tools that work together with Cucumber that are developed by o
 
 ||Tool||Description||
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
-|"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting and other useful commands for "Textmate":http://macromates.com/.|
+|"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting and other useful commands for "TextMate":http://macromates.com/.|
 |"Cucumber Growler":http://github.com/paolodona/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber.|
 |"Cucumber Seeds":http://github.com/qrush/cucumber_seeds/tree/master|Cucumber examples.|
 |"Features2Cards":http://github.com/brynary/features2cards|Create PDFs from Cucumber features and scenarios for printing.|
