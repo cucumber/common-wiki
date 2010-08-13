@@ -39,7 +39,7 @@ Then I should create the directory ./features
   .  .  .
 </pre>
 
-The foregoing gives a sample of the form that feature files often take.  The statements, called <em>feature steps</em>, make up the user interface to Cucumber testing.  These here are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ for illustrative purposes.  In practice, all those Then/And statements likely would be subsumed into one simple Declarative statement; for example: <code>I should create the Cucumber environment</code>, and the messy details placed in the step definitions instead. We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
+The foregoing gives a sample of the form that feature files often take.  The statements, called <em>feature steps</em>, make up the user interface to Cucumber testing.  These here are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ for illustrative purposes.  In practice, all those Then/And statements likely would be subsumed into one simple Declarative statement; for example: <code>I should create the Cucumber environment</code>, and the messy details of just what a Cucumber environment comprises placed in the step definitions instead. We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
 
 The root level of the archetypal RoR project directory tree looks like this:
 
