@@ -19,14 +19,19 @@ h4. Comment Lines
 Comment lines are allowed anywhere in the file.
 They begin with zero or more spaces, followed by a sharp sign (#).
 
-h4. Reserved Words, etc.
+h4. Headings and Verbs
+
+Each non-comment line in Gherkin begins with a "heading" (eg, <tt>Feature:</tt>)
+or an "action" (eg, <tt>Given</tt>).
+The following text is either unparsed or parsed by regular expressions in a "steps" file.
+The heading/action is separated from the following text by one or more spaces,
+which are not passsed to the regular expressions.
 
 Gherkin provides parsers for dozens of languages, including (at this writing)
 Arabic, Chinese (Simplified), Danish, Dutch, English, Estonian, French, German, Italian, Japanese,
 Korean, Lithuanian, LOLCAT, Malay, Norwegian, Polish, Portuguese,
 Romanian (with and without diacritical marks), Russian,
 Spanish, Swedish, Texan, and Welsh.
-
 This note lists only the English reserved words;
 for corresponding words in other languages, see <tt>.../lib/cucumber/languages.yml</tt>.
 
