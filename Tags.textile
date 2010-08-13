@@ -46,6 +46,30 @@ Feature: Index projects
 
 Tags are also used in Tagged [[Hooks]], which let you use tags to define what <code>Before</code> and <code>After</code> blocks get run for what scenarios.
 
+h2. Logically ANDing and ORing Tags
+
+As you may have seen in the previous examples Cucumber allows you to use logical ANDs and ORs to help gain greater control of what features to run.
+
+Tags which are comma separated are ANDed:
+
+Example:  Running scenarios which match both @important AND @billing
+
+<pre><code>cucumber --tags @billing,@important</code></pre>
+
+Tags which are passed in separate --tags are ORed
+
+Example:  Running scenarios which match @important OR @billing
+
+<pre><code>cucumber --tags @billing --tags @important</code></pre>
+
+You can combine these two methods to create powerful selection criterias:
+
+Example: Running scenarios which match: (@billing AND @WIP) OR @important
+
+<pre><code>cucumber --tags @billing,@wip --tags @important</code></pre>
+
+You can use this tag logic in your [[Hooks]] as well. 
+
 h2. Tag limits and WIP
 
 If you're following Kanban principles, you want to limit the work in progress (WIP). The idea is that the fewer features or scenarios that being worked on simultaneously, the quicker you'll be able to implement new features.
