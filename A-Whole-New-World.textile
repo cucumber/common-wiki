@@ -15,6 +15,7 @@ end
 Now you can call a_helper from any step you want. Note that every scenario gets run in a separate instance of the world, so there is no implicit state-sharing from scenario to scenario.
 
 Once you have defined a World class you can extend it with other modules to add additional helper methods. In *version 0.2.3.2 and later* after you specify the class with a proc you can then simply pass in a module to the World method to extend it.  For example:
+
 <pre>
 World do 
  CustomWorld.new
