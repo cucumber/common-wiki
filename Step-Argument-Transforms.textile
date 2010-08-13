@@ -8,7 +8,7 @@ end
 
 # step definition file
 Then /^(user \w+) should be friends with (user \w+)$/ do |user, friend|
-  support_user.work_queue.should include(customer_user)
+  user.should be_friends_with(friend)
 end
 
 # feature file
