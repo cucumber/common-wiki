@@ -4,6 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 
 |*Post*|*Description*|*Posting Date*|
+|"Using Cucumber to Integrate Distributed Systems and Test Messaging":http://www.benmabey.com/2009/02/17/using-cucumber-to-integrate-distributed-systems-and-test-messaging/| Testing async. messaging | Feb 17 2009|
 |"Leveraging Test Data Builders in Cucumber Steps":http://www.benmabey.com/2009/02/05/leveraging-test-data-builders-in-cucumber-steps/| Step definitions for creating objects from step tables.| Feb 5 2009 |
 |"iPhone GUI testing":http://www.ian.dees.name/tech/iphone-gui-testing.html| Cucumber meets the iPhone | Feb 2 2009 |
 |"One Smart Cucumber":http://joshuahoover.com/2009/01/28/one-smart-cucumber/|Business value|Jan 28 2009|
