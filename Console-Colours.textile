@@ -1,4 +1,4 @@
-The console output for Cucumber has nice colours, for example:
+The console output for Cucumber colours steps according to how execution went. In addition to that, matched step variables are highlighted. Here is an example of how a single step gets printed:
 
 <notextile>
 <pre><span style="color:green">Given I have</span> <span style="color:green;font-weight:bold">487</span> <span style="color:green">cucumbers in my belly</span> <span style="color:grey"># features/vegetable_features.feature:49</span>
