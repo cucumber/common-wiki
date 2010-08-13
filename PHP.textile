@@ -25,7 +25,7 @@ Here is how to do it:
     When I create a "features" directory
     And I create a "features/support" directory
     And I create a "features/step_definitions" directory 
-    And I put the following in "support/env.rb"
+    And I put the following in "features/support/env.rb"
 </code></pre>
 
 <pre><code>
