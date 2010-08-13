@@ -13,7 +13,7 @@ Please add any helpful blog posts that you have found or written about all thing
 |"One Smart Cucumber":http://joshuahoover.com/2009/01/28/one-smart-cucumber/|Business value|Jan 28 2009|
 |"Testing with the help of machinist, forgery, cucumber, webrat and rspec":http://itsignals.cascadia.com.au/?p=30|Using test data with Cucumber in a Rails app|Jan 7 2009|
 |"rails 2 day 4: rcov and more behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-4-rcov-and-more-behavior-driven-development| Cucumber+RCov Tutorial|Dec 29 2008|
-|"rails 2 day 3: behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-3-behavior-driven-development/| Tutorial of basic Cucumber usage and workflow.|Dec 22 2009|
+|"rails 2 day 3: behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-3-behavior-driven-development/| Tutorial of basic Cucumber usage and workflow.|Dec 22 2008|
 |"Feature Injection and handling technical stories":http://lizkeogh.com/2008/09/10/feature-injection-and-handling-technical-stories/| Explains how to phrase technical stories and focus on business value in all types of stories.| Sept 10 2008|
 |"Telling a good story - Rspec stories from the trenches":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html| Discussion of common pitfalls when writing plain-text stories/features.| Aug 5 2008|
 |"Imperative Vs Declarative Scenarios in User Stories":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/| Discussion about trade-offs of different scenario writing styles.| May 19 2008 |
