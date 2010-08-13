@@ -6,4 +6,4 @@ Projects using Cucumber:
 * "Redcar":http://github.com/danlucraft/redcar/tree/master /plugins/*/features
 
 
-Note: I had initially copied the "Examples" page. I created this page because I consider this page to be a more appropriate name.
+Note: I had initially copied the [[Examples]] page. I created this page because I consider this page to be a more appropriate name.
