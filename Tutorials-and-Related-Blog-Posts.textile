@@ -3,6 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Given, When, Then and how not to do it":http://www.jroller.com/perryn/entry/given_when_then_and_how|Perryn Fowler explains some antipatterns|Nov 24 2009|
 |"GLSEC 2009 Talk - Driving Behaviour w/Cucumber":http://www.mutuallyhuman.com/2009/11/23/glsec-2009-talk-driving-behaviour-w-cucumber|Zach Dennis' beatiful slides give a thorough coverage of BDD, Cucumber, Cuke4Duke and Cuke4Nuke|Nov 23 2009|
 |"InfoQ Interview with Aslak Hellesøy on Cucumber For .NET":http://www.infoq.com/news/2009/11/interview-cucumber-for-dotnet|Aslak compares Cucumber to Fitnesse and explains how Cucumber works on .NET|Nov 12 2009|
 |"Cucumber = plain text + Ruby":http://blogs.msdn.com/tim_lamey/archive/2009/11/11/cucumber-plain-text-ruby.aspx|A short writeup from the Øredev conference and Aslak's live cucumber cocktail mixing|Nov 11 2009|
