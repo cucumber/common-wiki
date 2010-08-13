@@ -27,9 +27,10 @@ Cucumber itself is also written in Ruby, but it can be used to "test" code writt
 * [[JRuby and Java]]
 * [[IronRuby and .NET]]
 * Flex: Use "FunFX":http://github.com/peternic/funfx
-* Web apps in any language - use Cucumber with one of the following: 
+* Web apps in any language - use Cucumber with one of the following:
+** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
 ** "Watir":http://wtr.rubyforge.org/ - Runs IE (Windows only)
-** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU\Linux
+** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU/Linux
 ** "SafariWatir":http://safariwatir.rubyforge.org/ - Runs Safari (OS X only)
 ** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS)
 ** "Celerity":http://celerity.rubyforge.org/ - Runs a headless browser with Javascript support (requires JRuby)
@@ -87,6 +88,7 @@ Once you have set up Cucumber in your project you can get down to action.
 
 When you decide you want to add a new feature or fix a bug, start by writing a new feature or scenario that describes
 how the feature should work. Don't write any code (yet).
+
 
 Now run the features again. The one you wrote should have yellow, pending steps - or failing, red ones. 
 (If you don't get that you're doing something wrong, or the feature is already implemented).
