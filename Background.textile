@@ -1,7 +1,8 @@
 Background allows you to add some context to the scenarios in a single feature. A Background is much like a scenario containing a number of steps. The difference is when it is run. The background is run before each of your scenarios but after any of your Before [[Hooks]].
 
 Example:
-<pre><code>Feature: Multiple site support
+<pre>
+Feature: Multiple site support
   As a Mephisto site owner
   I want to host blogs for different people
   In order to make gigantic piles of money
@@ -26,7 +27,7 @@ Example:
     Given I am logged in as Greg
     When I try to post to "Expensive Therapy"
     Then I should see "Your article was published."
-</code></pre>
+</pre>
 
 For a less explicit alternative to background, check out Tagged [[Hooks]].
 
