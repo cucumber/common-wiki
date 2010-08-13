@@ -4,8 +4,7 @@ in the step definitions. Here is how to get you started.
 h2. Install Cucumber, Webrat and RSpec
 
 As of release 1.1.5, rspec-rails is now released as a gem.
-<pre><code>
-[sudo] gem install rspec
+<pre><code>[sudo] gem install rspec
 [sudo] gem install rspec-rails
 </code></pre>
 
@@ -22,6 +21,14 @@ As a last resort, download tarballs from GitHub.
 h2. Install Other dependencies
 
 <pre><code>gem install term-ansicolor treetop diff-lcs hpricot</code></pre>
+
+h2. Create Your Rails Project
+
+Don't forget to create the rails project if you haven't done so yet with the following command:
+
+<pre><code>rails YourProjectName</code></pre>
+
+Write all commands in the next steps from this project's path.
 
 h2. Bootstrap Cucumber
 
@@ -44,6 +51,12 @@ This will generate a simple plain text feature with associated steps. Don't get 
 generator - you're better off writing these by hand in the long run.
 
 h2. Run features
+
+Require webrat if you are using it. Write the following line at he end of the file YourProject\features\support\env.rb
+
+<pre><code>require 'webrat'</code></pre>
+
+Now you can execute:
 
 <pre><code>rake features</code></pre>
 
