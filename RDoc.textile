@@ -4,7 +4,7 @@ We haven't put up the RDoc for Cucumber online yet, so until that happens, here 
 gem install rdoc
 gem install cucumber
 gem server &
-open http://localhost:8808/doc_root/cucumber-0.3.5/rdoc/Cucumber/Ast/Table.html
+open http://localhost:8808/doc_root/cucumber-0.3.5/rdoc
 </pre>
 
 (You may have to chenge the version number in that URL)
