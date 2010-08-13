@@ -61,14 +61,14 @@ h2. Tagged hooks
 
 Sometimes you may want a certain hook to run only for certain scenarios. This can be achieved by associating a <code>Before</code>, <code>After</code>, <code>Around</code> or <code>AfterStep</code> hook with one or more [[tags]]. You can OR and AND tags in much the same way as you can when running Cucumber from the command line. Examples: 
 
-To OR tags pass the tags in a single string comma separated:
+For OR tags, pass the tags in a single string comma separated:
 
 <pre><code>Before('@cucumis,@sativus') do
   # This will only run before scenarios tagged
   # with @cucumis OR @sativus.
 end</code></pre>
 
-To AND tags pass the tags as separate tag strings:
+For AND tags, pass the tags as separate tag strings:
 
 <pre><code>Before('@cucumis', '@sativus') do
   # This will only run before scenarios tagged
