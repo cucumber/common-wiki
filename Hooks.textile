@@ -22,13 +22,6 @@ end
 end
 </code></pre>
 
-h2. Step hooks
-
-<pre><code>AfterStep do
-  #do something after each step
-end
-</code></pre>
-
 h2. Global hooks
 
 If you want something to happen once before any scenario is run - just put that code at the top-level in your <code>env.rb</code> file (or any other file in your <code>features/support</code> directory. Use <code>Kernel#at_exit</code> for global teardown. Example:
