@@ -64,12 +64,12 @@ You can also customize a number of elements of autotest itself by adding a @.aut
 
 There is one autotest customization which can be very useful when using Cucumber.  Normally, autotest reruns whatever you're working on when it notices a change in any file in the tree.  If you're using Rails, some directories will be automatically ignored.  To tell autotest not to watch some files for changes, add something like this to your project's @.autotest@:
 
-<pre><code>
-  Autotest.add_hook :initialize do |at|
-    # Ignore files in tmp/
-    at.add_exception %r%^\./tmp%
-  end
-</code></pre>
+<pre>
+Autotest.add_hook :initialize do |at|
+  # Ignore files in tmp/
+  at.add_exception %r%^\./tmp%
+end
+</pre>
 
 If you find that autotest runs your features continuously, your features may be changing a file which autotest is monitoring as they run.  Use a setting like this to ignore such files.
 
