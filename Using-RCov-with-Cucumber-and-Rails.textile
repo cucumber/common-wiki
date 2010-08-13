@@ -80,3 +80,5 @@ What do these options mean?
 * <code>-x \.rb</code> tells rcov to ignore all ruby files, except...
 * <code>-i</code> tells rcov to watch coverage of the one file you want to focus on
 * <code>--</code> tells rcov to send the final arguments to cucumber, so these are your normal cucumber args, in this case listing the features we want to run to exercise the class we're testing.
+
+As above, you'll have a full coverage report in <code>./coverage</code>. Open it using <code>open coverage/index.html</code>
