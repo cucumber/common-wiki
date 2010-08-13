@@ -1,4 +1,4 @@
-Communication within a team always works better when people can use their spoken language. Cucumber supports "about 20 spoken languages":../tree/master/lib/cucumber/languages.yml. This is Norwegian:
+Communication within a team always works better when people can use their spoken language. Cucumber supports "about 20 spoken languages":../cucumber/tree/master/lib/cucumber/languages.yml. This is Norwegian:
 
 <pre><code>Egenskap: Summering
   For å slippe å gjøre dumme feil
