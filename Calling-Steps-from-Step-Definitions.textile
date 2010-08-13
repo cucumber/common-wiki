@@ -48,9 +48,11 @@ Scenario: View last incidents
   When I go to the incident page
 </pre>
 
-h2. Calling steps with multiline step arguments (tables and strings)
+h2. Calling steps with multiline step arguments 
 
 Sometimes you want to call a step that has been designed to take [[Multiline Step Arguments]], for example:
+
+h3. Tables
 
 <pre>
 # ruby
@@ -109,3 +111,25 @@ Then /^I should see the links:$/ do |links_table|
   end
 end
 </pre>
+
+h3. Multiline Strings
+
+To call a step that takes a multiline string, such as
+
+<pre>
+# ruby
+Given /^I fill in "([^\"]*)" with$/ do |field, pystring|
+  fill_in(field, :with => pystring)
+end
+</pre>
+
+from a step definition, pass the string after the step:
+
+<pre>
+# ruby
+Given /^document "([^\"]*)" exists with content$/ do |pystring|
+  Given "I go to add a document"
+  And 'I fill in "ditacontent" with', pystring
+  And  'I press "Add to repository"'
+end
+</pre> 
