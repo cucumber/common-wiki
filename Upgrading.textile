@@ -1,3 +1,5 @@
 It's strongly recommended that you get familiar with changes between your current version and the version you're upgrading to. You can always find the changes in "History.txt":http://github.com/aslakhellesoy/cucumber/blob/master/History.txt
 
-For Ruby on Rails projects, always run <code>ruby script/generate cucumber</code> after upgrading the cucumber gem.
+h2. Ruby on Rails
+
+As of Cucumber 0.5.0 you should also install/upgrade the <code>cucmber-rails</code> gem. After doing that you must also run <code>ruby script/generate cucumber</code>. See cucumber-rails' "History.txt":http://github.com/aslakhellesoy/cucumber-rails/blob/master/History.txt for details.
