@@ -1,4 +1,4 @@
-Note that this information will go out of date when Cucumber 0.4 is released. See "here":https://rspec.lighthouseapp.com/projects/16211-cucumber/tickets/438-deprecate-cucumberastvisitor-and-make-formatters-simple-listeners for more details.
+*{color:red}Note that this information will go out of date when Cucumber 0.4 is released. See "here":https://rspec.lighthouseapp.com/projects/16211-cucumber/tickets/438-deprecate-cucumberastvisitor-and-make-formatters-simple-listeners for more details.*
 
 The public API for Cucumber's formatters is defined by all the methods in the <code>Cucumber::Ast::Visitor</code> class, which you should use as your base class.
 
