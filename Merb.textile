@@ -48,6 +48,6 @@ Here are some merb projects that use cucumber (feel free to add/update/delete th
 
 Tutorials
 -----------------------------
-* "Full-Cycle Feature Development in Merb(Ruby Advent 2008)": http://advent2008.hackruby.com/past/2008/12/18/fullcycle_feature_development_in_merb.html
+* Full-Cycle Feature Development in Merb: "Ruby Advent 2008 Article written by Foy Savas":http://advent2008.hackruby.com/past/2008/12/18/fullcycle_feature_development_in_merb.html
 * Merb-Book cucumber chapter: "http://book.merbist.com/testing-your-application/cucumber":http://book.merbist.com/testing-your-application/cucumber
 * "Writing User Stories with merb_cucumber":http://dermological.blogspot.com/2008/11/writing-user-stories-with-merb-cucumber.html
