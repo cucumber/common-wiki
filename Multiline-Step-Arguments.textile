@@ -36,7 +36,11 @@ rows, columns and cells in the table. In the example above we're using the <code
 
 h3. Diffing tables
 
-As of Cucumber 0.3.90 you can compare a table argument to another table. This is something you would typically do in a Then step, and the other table would typically be constructed programmatically from your application's data. The diffing is done with the <code>Cucumber::Ast::Table#diff!(table)</code> method. Here is an example:
+One very powerful feature in Cucumber is comparison of tables. You can compare a table argument to another table that you provide within your step definition. This is something you would typically do in a Then step, and the other table would typically be constructed programmatically from your application's data. 
+
+Beware that the diffing algorithm expects your data to be column-oriented, and that the first row of both tables represents column names. If your tables don't have some similarity in the first row you will not get very useful results.
+
+The diffing is done with the <code>Cucumber::Ast::Table#diff!(table)</code> method. Here is an example:
 
 <pre>
 Then I should see the following cukes:
