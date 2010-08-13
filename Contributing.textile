@@ -1,4 +1,4 @@
-Please follow these guidelines if you want to contribute to Cucumber.
+Please follow these guidelines if you want to contribute to Cucumber or help the cucumber team reproduce a problem.
 
 h2. You have found a bug
 
