@@ -47,7 +47,7 @@ We are now ready to begin testing with cucumber.
 
 h3.  Where do I put Tests?
 
-Cucumber divides testing into two parts, the outward facing features and the inward facing steps.  As discussed elsewhere, [[Feature Introduction|features]] are descriptions of desired outcomes under predefined conditions and following upon specific events.  They are typically used in conjunction with end-user input, and in some cases, may be entirely under end-user (in the form of a domain expert) control. Feature files are given the extension <code>.feature</code>.
+Cucumber divides testing into two parts, the outward facing features and the inward facing steps.  As discussed elsewhere, [[Feature Introduction|features]] are descriptions of desired outcomes (<strong>Then</strong>) under predefined conditions (<strong>Given</strong>) and following upon specific events (<strong>When</strong>).  They are typically used in conjunction with end-user input, and in some cases, may be entirely under end-user (in the form of a domain expert) control. Feature files are given the extension <code>.feature</code>.
 
 [[Step Organisation|Steps]], on the other hand, are ruby (.rb) files that contain matchers, snippets of text from the feature files, and blocks of ruby and rails code together with assertions from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is assumed in the cucumber generator that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
 
