@@ -181,7 +181,7 @@ It is considered better form by some to surround with double quotation marks, <s
 
 Finally, you can have steps call steps.  For example:
 
-<pre><code>And /some "(.*)" action  do |a|
+<pre><code>And /some "(.*)" action/  do |a|
    ...
 end
 
