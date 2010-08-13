@@ -3,6 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Testing outbound emails Cucumber":http://drnicwilliams.com/2009/03/26/testing-outbound-emails-with-cucumber/|Emails....| Mar 26 2009 |
 |"Using Cucumber for Acceptance Testing":http://www.pathf.com/blogs/2009/03/using-cucumber-for-acceptance-testing | Using Cucumber for Acceptance Testing | Mar 20 2009 |
 |"Story Driven Development Recipes with Cucumber":http://www.infoq.com/news/2009/03/bdd-with-cucumber | Not detailed, but nice to be on InfoQ :-) | Mar 03 2009 |
 |"Using Cucumber with Machinist":http://themomorohoax.com/2009/03/08/rails-machinist-tutorial-machinist-with-cucumber-in-10-minutes | A basic tutorial for people starting out. Explains how to use machinist instead of fixtures with cucumber. | Mar 08 2009 |
