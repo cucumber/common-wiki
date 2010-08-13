@@ -41,15 +41,15 @@ the production code is then written outside-in, to make them pass.
 
 h2. Installation
 
-(Rails people - see  [[Ruby on Rails]]).
+Also see:
 
-After you have installed Ruby or JRuby - install Cucumber with the following command:
+* [[Ruby on Rails]]
+* [[JRuby and Java]]
+* [[IronRuby and .NET]]
 
-Ruby:
+After you have installed Ruby, install Cucumber with the following command:
+
 <pre><code>gem install cucumber</code></pre>
-
-JRuby:
-<pre><code>jruby -S gem install cucumber</code></pre>
 
 h3. Building the Gem yourself
 
