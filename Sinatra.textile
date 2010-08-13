@@ -16,6 +16,9 @@ Webrat.configure do |config|
 end
 
 World do
-  Webrat::SinatraSession.new
+  session = Webrat::SinatraSession.new
+  session.extend(Webrat::Matchers)
+  session.extend(Webrat::HaveTagMatcher)
+  session
 end
 </code></pre>
