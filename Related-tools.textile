@@ -1,6 +1,6 @@
 It's always a good sign for a tool when other people huddle around and write tools on top. These are the known 3rd party tools that work together with Cucumber:
 
-||Tool||Description||
+|_.Tool |_.Description |
 |"AutoTest":http://www.zenspider.com/ZSS/Products/ZenTest/|Run Cucumber features in the background with Cucumber's built-in [[Autotest Integration]]|
 |"cheat cucumber":http://cheat.errtheblog.com/s/cucumber/|Cucumber cheatsheet for Chris Wanstrath's "cheat":http://cheat.errtheblog.com/|
 |"Clearance":http://wiki.github.com/thoughtbot/clearance/cucumber-features| Rails Authentication System with Cucumber feature generator|
