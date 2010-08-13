@@ -1,6 +1,7 @@
 It's always a good sign for a tool when other people huddle around and write tools on top. These are the known 3rd party tools that work together with Cucumber:
 
 |_.Tool |_.Description |
+|"Aruba":http://github.com/aslakhellesoy/aruba|Generic step definitions for command line programs|
 |"AutoTest":http://www.zenspider.com/ZSS/Products/ZenTest/|Run Cucumber features in the background with Cucumber's built-in [[Autotest Integration]]|
 |"Bumps":http://github.com/brentsnook/bumps|Pull feature content from and push results to a remote server. Designed for "Google Wave":http://wave.google.com/ but potentially usable with other systems|
 |"Celerity":http://github.com/jarib/celerity|Headless browser with JavaScript support (on JRuby)|
