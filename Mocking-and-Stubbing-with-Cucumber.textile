@@ -6,7 +6,7 @@ Starting with Cucumber 0.8.4 you can use all of RSpec's supported mocking framew
 
 Check out Cucumber's "example":http://github.com/aslakhellesoy/cucumber/tree/master/examples/rspec_doubles/ to see how it's used.
 
-*Be warned: Cucumber 0.8.4 is not yet in Rubygems, so to use cucumber/rspec/doubles you will need to install directly from http://github.com/aslakhellesoy/cucumber.git*
+*Be warned: Cucumber 0.8.4 is not yet in Rubygems, so to use cucumber/rspec/doubles you will need to install directly from "http://github.com/aslakhellesoy/cucumber.git":http://github.com/aslakhellesoy/cucumber.git*
 
 h2. RSpec 1.2.8-1.3.0
 
