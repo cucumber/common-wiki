@@ -29,7 +29,7 @@ Then inside of a merb application directory, try:
 describe can use multiple given blocks
 
 For example, you can "now":http://ln-s.net/2vB2
-write
+(since Feb 26, 2009 commit by carllerche)write
 
 <code><pre>
 
