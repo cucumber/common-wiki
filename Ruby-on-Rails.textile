@@ -35,7 +35,7 @@ Webrat), you can use the feature generator to generate the first few features:
 <pre><code>ruby script/generate feature Frooble name color description</code></pre>
 
 This will generate a simple plain text feature with associated steps. Don't get addicted to this
-generator - you're better off writing these by hand in the long run. See the BDD tips section below.
+generator - you're better off writing these by hand in the long run.
 
 h2. Run features
 
