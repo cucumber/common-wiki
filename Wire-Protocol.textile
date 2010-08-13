@@ -1,0 +1,33 @@
+This page documents the details of the low-level \wire protocol that Cucumber uses to list and invoke steps in a remote process.
+
+This protocol is in flux. Please see "wire protocol":https://rspec.lighthouseapp.com/projects/16211/tickets/428-wire-protocol for discussions around this emerging protocol.
+
+h2. List Step Definitions
+
+h3. Request 
+
+<pre>{ "command" : "LIST_STEP_DEFINITIONS" }</pre>
+h3. Response
+
+<pre>{ "result" : "OK", "step_definitions":  [ { "id": "some id ", "regexp": "regex" } ] }</pre>
+h2. Invoke Step
+
+h3. Request 
+
+<pre>{ "command" : "INVOKE", "args" : { "id" : "some id", "args" : [ "foo", "bar" ] } }</pre>
+h3. Response
+
+If the step is invoked successfully then an OK result is returned:
+<pre>{ "result" : "OK" }</pre>
+OR
+
+If the step throws an exception then a STEP_FAILED result is returned:
+<pre>{ "result" : "STEP_FAILED", "details" : 
+    { "exception" : "some exception type", "message" : "foo", "backtrace" : "bar" } }</pre>
+
+h2. General Failure Response
+
+If the remote process cannot handle a request then it shall return the following response:
+
+<pre>{ "result" : "FAILED", "details" :
+    { "exception" : "some exception type", "message" : "foo", "backtrace" : "bar" } }</pre>
