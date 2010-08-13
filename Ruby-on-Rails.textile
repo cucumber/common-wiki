@@ -68,11 +68,7 @@ generator - you're better off writing these by hand in the long run.
 
 h2. Run features
 
-Require webrat if you are using it. Write the following line at he end of the file YourProject\features\support\env.rb
-
-<pre><code>require 'webrat'</code></pre>
-
-Now you can execute:
+Just run:
 
 <pre><code>rake features</code></pre>
 
