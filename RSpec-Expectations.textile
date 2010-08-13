@@ -7,3 +7,15 @@ require 'spec/expectations'
 <code>'spec/expectations'</code> also includes <code>'spec/matchers'</code>. When cucumber sees the <code>Spec::Matchers</code> and <code>Spec::Expectations</code> modules defined, it will implicitly include them in the World in which the steps are executed.
 
 *Do not* <code>require 'spec'</code>, because that loads up a bunch of RSpec modules that you don't need and might get in your way.
+
+When running Cucumber from Maven (with Cuke4Duke) you need to install the RSpec gem into your Maven repository by declaring it in your POM (see "Cuke4Duke: Installing gems":http://wiki.github.com/aslakhellesoy/cuke4duke/installing-gems)
+
+<pre>
+  <build>
+    <plugins>
+      <plugin>
+        <configuration>
+          <gems>
+	      <gem>install cuke4duke --version 0.2.1 --source http://gems.rubyforge.org/</gem>
+	      <gem>install rspec --version 1.2.9 --source http://gems.rubyforge.org/</gem>
+</pre>
