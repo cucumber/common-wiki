@@ -16,10 +16,15 @@ POSIX shell:
 Windows command shell:
 <pre><code>> set AUTOFEATURE=true</code></pre>
 
-By default the plugin will run all the features in the features dir.  To change the way the features are run with autotest create two profiles in your [[cucumber.yml]]: 
+By default the plugin will run all the features in the features dir, and without color.  To change the way the features are run with autotest create two profiles in your [[cucumber.yml]]: 
 
 * <code>autotest</code> : Used when Autotest wants to run only the failing scenarios.
 * <code>autotest-all</code> : Used when Autotest wants to run all the scenarios (after a red->green transition).
+
+For example, to turn color on when features are run, you would add the following to your [[cucumber.yml]] file:
+
+<pre><code>autotest: --color
+autotest-all: --color</code></pre>
 
 Please see [[Running Features]] for more information about profiles, and the [[Ruby on Rails]] page for extra help when running in that context.
 
