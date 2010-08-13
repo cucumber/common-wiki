@@ -10,6 +10,22 @@ For example
 
 ...will run the scenario defined at line 44 of the authenticate_user feature, format it as HTML and pipe it to the features.html file for viewing in a browser.
 
+h4. Defining 'profiles'
+
+Profiles allow you to store and reuse commonly used cucumber arguments for a project in a cucumber.yml file.  For example, by having this in your cucumber.yml at your project root:
+
+<pre><code>
+default: --format profile features
+html_report: --format progress --format html --out=features_report.html features  
+</code></pre>
+
+You can reuse the arguments listed above:
+<pre><code>
+cucumber --profile html_report
+</code></pre>
+
+It is important to point out that by simply running 'cucumber' the default profile will be used.
+
 
 h3. Using the rake task (in a rails app)
 
