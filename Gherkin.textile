@@ -16,7 +16,8 @@ Gherkin "code" is parsed in two stages.
 First, a Treetop-based parser divides the input file into sections, statements, etc.
 Then, portions of statements are given to Ruby "step" definitions for matching and processing. 
 
-Like Python and YAML, Gherkin uses indentation to define structure.
+Like Python and YAML, Gherkin uses white space to define structure.
+Line endings serve to terminate statements.
 Either spaces or tabs may be used for indentation (but spaces are more portable).
 
 h3. Headings
