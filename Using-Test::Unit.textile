@@ -8,3 +8,5 @@ World do |o|
   o
 end
 </pre>
+
+You can see a full example under the "examples":http://github.com/aslakhellesoy/cucumber/tree/master/examples%2Ftest_unit
