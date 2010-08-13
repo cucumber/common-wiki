@@ -16,7 +16,7 @@ POSIX shell:
 Windows command shell:
 <pre><code>> set AUTOFEATURE=true</code></pre>
 
-By default the plugin will run all the features in the features dir, and without color.  To change the way the features are run with autotest create two profiles in your [[cucumber.yml]]: 
+Options are declared in the config/[[cucumber.yml]] file (which must be present and have a default or autotest profile).  To change the way the features are run with autotest create two profiles in your [[cucumber.yml]]: 
 
 * <code>autotest</code> : Used when Autotest wants to run only the failing scenarios.
 * <code>autotest-all</code> : Used when Autotest wants to run all the scenarios (after a red->green transition).
