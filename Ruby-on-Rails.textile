@@ -66,6 +66,14 @@ You create these with:
 
 <pre><code>ruby script/generate cucumber</code></pre>
 
+We recommend you use [[Spork]] so you can run your features faster: 
+
+<pre><code>ruby script/generate cucumber --spork</code></pre>
+
+For more help on the generator you can just ask for help:
+
+<pre><code>ruby script/generate cucumber --help</code></pre>
+
 Take a look at the generated files. If you need to, you can tweak them later.
 
 h2. Start a feature
