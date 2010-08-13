@@ -9,7 +9,7 @@ Multiline step arguments come in two flavours - tables or strings.
 
 h2. Tables
 
-Tables as arguments to steps are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected output from a <code>When</code>. Example:
+Tables as arguments to steps are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected output from a <code>When</code>. (This is not to be confused with tables in [[Scenario outlines]] - syntactically identical, but with a different purpose). Example:
 
 <pre><code>Given the following people exist:
   | name  | email           | phone |
