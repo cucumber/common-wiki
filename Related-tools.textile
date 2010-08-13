@@ -9,6 +9,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"cheat cucumber":http://cheat.errtheblog.com/s/cucumber/|Cucumber cheatsheet for Chris Wanstrath's "cheat":http://cheat.errtheblog.com/|
 |"Clearance":http://wiki.github.com/thoughtbot/clearance/cucumber-features| Rails Authentication System with Cucumber feature generator|
 |"crb":http://wiki.github.com/maiha/crb| An irb console for cucumber world. (crb = cucumber + irb)|
+|"CuCapp":http://github.com/dparnell/cucapp | Cucumber integration with Cappuccino. |
 |"Cucover":http://github.com/mattwynne/cucover | Coverage-aware lazy / selective Cucumber feature runnner|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
 |"Cucumber Factory":http://github.com/makandra/cucumber_factory/tree/master|Create Rails model records without writing step definitions.|
