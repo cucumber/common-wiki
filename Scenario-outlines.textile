@@ -1,7 +1,6 @@
 Copying and pasting scenarios to use different values quickly becomes tedious and repetitive:
 
-<pre><code>
-Scenario: eat 5 out of 12
+<pre><code>Scenario: eat 5 out of 12
   Given there are 12 cucumbers
   When I eat 5 cucumbers
   Then I should have 7 cucumbers
