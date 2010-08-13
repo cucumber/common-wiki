@@ -60,7 +60,7 @@ After you have installed Ruby, install Cucumber with the following command:
 
 <pre>gem install cucumber</pre>
 
-This is a good time to get familiar with <code>--help</code>
+This is a good time to get familiar with <code>--help</code>  (See also [[Command Line Help]].)
 
 <pre>cucumber --help</pre>
 
