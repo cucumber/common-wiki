@@ -28,8 +28,7 @@ end
 
 Here is another example, where we exit at the first failure (could be useful in some rare cases like [[Continuous Integration]] when fast feedback is important).
 
-<pre><code>
-After do |s| 
+<pre><code>After do |s| 
   # Tell Cucumber to quit after this scenario is done - if it failed.
   Cucumber.wants_to_quit = true if s.failed?
 end
