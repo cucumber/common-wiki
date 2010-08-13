@@ -1,1 +1,1 @@
-Cucumber and H30 (watir, safariwatir, firewatir)
+<a href="http://github.com/richdownie/watircuke/tree/master">watircuke</a>
