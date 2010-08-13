@@ -28,3 +28,20 @@ end
 </pre>
 
 One key thing to remember is to provide some contextual data like "user" so you don't end up transforming every single argument to a step definition. See "this blog post":http://www.engineyard.com/blog/2009/cucumber-step-argument-transforms/ for a more detailed explanation and examples.
+
+Step argument transforms can also be used with tables. A table is matched via a comma-delimited list of the column headers and the 'table:' prefix:
+
+<pre>
+# feature file
+Scenario: setting up via table
+  Given ...
+  When ...
+  Then I should have
+    | name  | age |
+    | corey | 36  |
+
+#support file
+Transform /^table:name,age$/ do |table|
+  table.hashes.map { |hash| hash[:name] }.map {|name| Person.find_by_name name}
+end
+</pre>
