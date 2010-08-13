@@ -1,12 +1,12 @@
-This page documents the details of the low-level \wire protocol that Cucumber uses to list and invoke steps in a remote process.
+This page documents the details of the low-level wire protocol that Cucumber uses to list and invoke steps in a remote process.
 
 *{color:red}This protocol is in flux. Please see "wire protocol":https://rspec.lighthouseapp.com/projects/16211/tickets/428-wire-protocol for discussions around this emerging protocol.*
 
 h2. List Step Definitions
 
 <pre>
-|-- list_step_defintions --->|
-|<--------------------- ok --|
+|-- list_step_definitions --->|
+|<-------------------- ok --|
 </pre>
 
 h3. Request 
@@ -65,6 +65,29 @@ OR If the step throws an exception then a 'step_failed' response is returned:
     "backtrace" : "bar"
   }
 }</pre>
+
+h2. Table Diff
+
+This message is sent by the wire server when it requires Cucumber to to a table diff when invoking a step.
+
+<pre>
+|<------------ diff_table --|
+|-- diff_response --------->|
+</pre>
+
+h3. Request 
+
+<pre>{
+  "version" : "1.0",
+  "diff_table" : "TBD",
+}</pre>
+h3. Response
+
+<pre>{
+  "version" : "1.0",
+  "diff_response" : "TBD"
+}</pre>
+
 
 h2. General Failure Response
 
