@@ -1,10 +1,10 @@
 You can also use "MiniTest":http://blog.zenspider.com/minitest/ <code>assert</code> methods by defining your own "World":a-whole-new-world block:
 
 <pre>
-require 'minitest/unit'
+require 'mini/test'
 
 World do |world|
-  world.extend(MiniTest::Assertions)
+  world.extend(Mini::Test::Assertions)
   world
 end
 </pre>
