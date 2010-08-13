@@ -10,6 +10,7 @@ Please add any helpful blog posts that you have found or written about all thing
 |"The return of the Cucumber":http://www.pathf.com/blogs/2009/06/the-return-of-the-cucumber/|Noel Rappin shares some thoughts on style|Jun 12 2009|
 |"Webrat: Automated Acceptance Testing with RSpec or Cucumber":http://www.agileweboperations.com/webrat-automated-acceptance-testing-with-rspec-or-cucumber/|Side by side comparison of Cucumber and RSpec (in RedMine!)|Jun 11 2009|
 |"Cucumber Rocks - But it’s not a replacement for unit tests":http://www.pathf.com/blogs/2009/06/cucumber-rocks-but-its-not-a-replacement-for-unit-tests/|Don't put all your eggs in the Cucumber basket!|Jun 10 2009|
+|"Cucumber, Webrat ... Who Names These Things?":http://blog.geekdaily.org/2009/06/cucumber-webrat-who-names-these-things.html|Nice little diagram explaining how Cucumber relates to RSpec, Webrat and Selenium|Jun 10 2009|
 |"Testing Rake tasks with Cucumber":http://www.frykt.no/posts/1-2009-6-7-testing-rake-tasks-with-cucumber|Simple example on how to test rake tasks in Rails|Jun 07 2009|
 |"Cucumber scenarios that depend on Sphinx":http://opensoul.org/2009/6/1/cucumber-scenarios-that-depend-on-sphinx|How to use Cucumber with "ThinkingSphinx":http://freelancing-god.github.com/ts/en/|Jun 01 2009|
 |"Mind the gap":http://content.yudu.com/Library/A15ltd/TestMarch2009/resources/28.htm|Joseph Wilk's article in European Software Tester magazine|May 21 2009|
