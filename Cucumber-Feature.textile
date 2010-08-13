@@ -8,7 +8,7 @@ Let's say you have entered a ticket named "Artificial intelligence for Step Defi
 
 h3. Fork and clone the main repository
 
-Go to the "main":http://github.com/aslakhellesoy/cucumber Cucumber Github page and fork the repo. When that's done pull it down to your machine following one of the many "GitHub guides":http://github.com/guides if you're new to this.
+Go to the "main":http://github.com/aslakhellesoy/cucumber Cucumber Github page and fork the repo. When that's done clone it so you get a copy on your machine. Follow one of the many "GitHub guides":http://github.com/guides if you're new to this process.
 
 h3. Create a branch
 
