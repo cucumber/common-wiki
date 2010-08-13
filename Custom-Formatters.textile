@@ -16,6 +16,7 @@ require 'twitter'
 module Silly
   class TwitterFormatter < Cucumber::Ast::Visitor
     def initialize(step_mother, io, options)
+      super(step_mother)
       # We don't care about these - we're just twittering!
     end
 
