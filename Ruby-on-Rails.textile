@@ -1,5 +1,6 @@
 Cucumber supports Ruby on Rails out of the box. Currently the following Rails versions are tested with "cucumber-rails-test":http://github.com/aslakhellesoy/cucumber-rails-test
 
+* v2.3.5
 * v2.3.4
 * v2.3.3
 * v2.3.2
@@ -10,65 +11,22 @@ Cucumber supports Ruby on Rails out of the box. Currently the following Rails ve
 * v2.1.1
 * v2.1.0
 
-Older versions will never be supported as it requires too much work.
+Older versions will never be supported as it requires too much work. These instructions assume you already have a Rails project, and that you have a shell where the current directory is the root of your Rails app.
 
-We strongly recommend you use "Webrat":http://github.com/brynary/webrat in the [[Step Definitions]]. Here is how to get you started.
+h2. Install Cucumber
 
-h2. Install Cucumber, Webrat and RSpec
+<pre><code>[sudo] gem install cucumber</code></pre>
 
-*Ubuntu/Debian users:* Follow these "Nokogiri install instructions":http://hightechsorcery.com/2008/12/howto-install-nokogiri-gem-ubuntu first.
-
-You can use both Rubygems or Rails' plugin mechanism. We usually recommend Rubygems. You can read a longer discussion "here":http://www.ruby-forum.com/topic/167379.
-
-h3. Using Rubygems
-
-The easiest is to install everything as a gem.
-<pre><code>[sudo] gem install rspec rspec-rails cucumber webrat
-</code></pre>
-
-If you use gems, you have to make sure everybody on the team has the same version of the gems installed. Also note that you don't *have to* use rspec and rspec-rails and webrat, but we suggest you use them unless you have good reasons to use something else.
-
-h3. Using plugins
-
-Another option is to install the libraries as Rails plugins. If you use Git for your Rails app, here is how to do that:
-
-<pre><code>git submodule add git://github.com/aslakhellesoy/cucumber.git vendor/plugins/cucumber
-git submodule add git://github.com/brynary/webrat.git vendor/plugins/webrat
-git submodule add git://github.com/dchelimsky/rspec.git vendor/plugins/rspec
-git submodule add git://github.com/dchelimsky/rspec-rails.git vendor/plugins/rspec-rails
-</code></pre>
-
-If your own Rails code is *not* in Git, just replace <code>submodule add</code> with <code>clone</code>.
-If you're behind a proxy, try to replace <code>git://</code> with <code>http://</code> and set the <code>http_proxy</code> environment variable.
-
-h4. Install dependencies
-
-The plugins' dependencies must be installed separately:
-
-<pre><code>gem install term-ansicolor treetop diff-lcs nokogiri builder</code></pre>
-
-h3. Behind a firewall?
-
-As a last resort, download "tarballs from GitHub":http://github.com/aslakhellesoy/cucumber/downloads.
-
-h2. Create Your Rails Project
-
-Create the rails project with the following command:
-
-<pre><code>rails YourProjectName</code></pre>
-
-Don't forget to create the corresponding databases. 
-
-Write all commands in the next steps from this project's path.
+*{color: red}Starting from Cucumber 0.4.5 you will need the cucumber-rails gem*
+<pre><code>[sudo] gem install cucumber-rails</code></pre>
 
 h2. Bootstrap Cucumber
 
-You'll need a Rake task and a couple of files that configure Cucumber for use with Ruby on Rails and Webrat.
-You create these with:
+Cucumber needs to add a few files to your project:
 
 <pre><code>ruby script/generate cucumber</code></pre>
 
-We recommend you use [[Spork and --drb]] so you can run your features faster: 
+If you're on an OS that supports fork (read: !Windows) we recommend you use [[Spork and --drb]] as this lets you start cucumber faster: 
 
 <pre><code>ruby script/generate cucumber --spork</code></pre>
 
@@ -78,10 +36,15 @@ For more help on the generator you can just ask for help:
 
 Take a look at the generated files. If you need to, you can tweak them later.
 
+h2. Install new dependencies
+
+*Ubuntu/Debian users:* Follow these "Nokogiri install instructions":http://hightechsorcery.com/2008/12/howto-install-nokogiri-gem-ubuntu first.
+
+<pre><code>[sudo] rake gems:install</code></pre>
+
 h2. Start a feature
 
-It's really, really recommended that you write your features by hand - in collaboration with your
-customer / business analyst / domain expert / interaction designer. However, to get you started (and so you can see how to use Webrat), you can use the feature generator to generate the first few features:
+It's really, really recommended that you write your features by hand - in collaboration with your customer / business analyst / domain expert / interaction designer. However, to get you started you can use the feature generator to generate the first few features:
 
 <pre><code>ruby script/generate feature Frooble name:string color:string description:text
 </code></pre>
