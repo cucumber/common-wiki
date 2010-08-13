@@ -78,7 +78,7 @@ This will generate a simple plain text feature with associated steps. Don't get 
 generator - you're better off writing these by hand in the long run.
 
 *Important*: The generated feature will fail unless you have set up a layout in your app. This is because Webrat fails to parse HTML
-that isn't well formed. "Here is a simple layout":http://github.com/aslakhellesoy/cucumber_rails/raw/master/app/views/layouts/application.html.erb you can use, but I hope you have a better one yourself.
+that isn't well formed (i.e. has a single <code><html></code> root node). "Here is a simple layout":http://github.com/aslakhellesoy/cucumber_rails/raw/master/app/views/layouts/application.html.erb you can use, but I hope you have a better one yourself.
 
 h2. Run features
 
