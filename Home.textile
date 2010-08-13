@@ -97,7 +97,7 @@ steps that need to be in place in order for the When/Then to make sense.
 
 h2. Other pages
 
-* [[Feature-Coupled Steps]]
+* [[Feature-Coupled Steps (Antipattern)]]
 * [[Spoken languages]]
 * [[Migration From RSpec Stories]]
 * [[Background and Credits]]
