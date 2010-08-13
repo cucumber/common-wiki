@@ -1,0 +1,3 @@
+It's strongly recommended that you get familiar with changes between your current version and the version you're upgrading to. You can always find the changes in "History.txt":http://github.com/aslakhellesoy/cucumber/blob/master/History.txt
+
+For Ruby on Rails projects, always run <code>script/generate cucumber</code> after upgrading the cucumber gem.
