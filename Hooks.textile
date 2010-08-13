@@ -1,26 +1,24 @@
-Cucumber provides a number of hooks which allow us to run blocks at various points in the Cucumber test cycle. There is no association between where the hook is defined and which scenario/step it is run for. You can put them in your <code>support/env.rb</code> file or any other file under the <code>support</code> directory, for example in a file called <code>support/hooks.rb</code>
+Cucumber provides a number of hooks which allow us to run blocks at various points in the Cucumber test cycle. You can put them in your <code>support/env.rb</code> file or any other file under the <code>support</code> directory, for example in a file called <code>support/hooks.rb</code>. There is no association between where the hook is defined and which scenario/step it is run for, but you can use tagged hooks (see below) if you want more fine grained control.
 
-Every hook gets added to a global stack, and then each hook in the stack gets executed before or after the scenario.
-
-All hooks defined are run whenever the relevant event occurs. For example all Before hooks defined throughout the required code will be run for each scenario.
+All defined hooks are run whenever the relevant event occurs. For example all <code>Before</code> hooks defined throughout the required code will be run before the first step of each scenario.
 
 h2. Scenario hooks
 
 <pre><code>Before do
-  # do something before each scenario.
+  # Do something before each scenario.
 end
 </code></pre>
 
-or - if you want to inspect the actual scenario object:
+<pre><code>After do |scenario|
+  # Do something after each scenario.
+  # The +scenario+ argument is optional, but
+  # if you use it, you can inspect status with
+  # the #failed?, #passed? and #exception methods.
 
-<pre><code>Before do |scenario|
-  @scenario = scenario
-  # our After block can look at @scenario to find out stuff later...
-end
-</code></pre>
-
-<pre><code>After do
-  #do something after each scenario
+  if(scenario.failed?)
+    subject = "[Project X] #{scenario.exception.message}"
+    send_failure_email(subject)
+  end
 end
 </code></pre>
 
