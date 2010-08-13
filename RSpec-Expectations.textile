@@ -4,6 +4,6 @@ To use RSpec's expectations (<code>should</code>), make sure the following is in
 require 'spec/expectations'
 </pre>
 
-'spec/expectations' also includes 'spec/matchers'. When cucumber sees the Spec::Matchers and Spec::Expectations defined, it will implicitly include them in the World in which the steps are executed.
+<code>'spec/expectations'</code> also includes <code>'spec/matchers'</code>. When cucumber sees the <code>Spec::Matchers</code> and <code>Spec::Expectations</code> modules defined, it will implicitly include them in the World in which the steps are executed.
 
-*Do not* <code>require 'spec'</code>, because that loads up a bunch of rspec modules that you don't need and might get in your way.
+*Do not* <code>require 'spec'</code>, because that loads up a bunch of RSpec modules that you don't need and might get in your way.
