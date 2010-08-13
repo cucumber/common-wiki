@@ -14,6 +14,12 @@ Here is a brief note from jsmestad.
 
 bq. Note – you must uninstall david-merb_cucumber in order for this gem to take precedence. Merb + Cucumber + Webrat testing stack. Builds upon David’s work, but binds Webrat as a dependency to hopefully ensure a smooth upgrade for future Webrat releases. Also Factory_Girl generators will be added soon.
 
+
+<pre>sudo gem install roman-merb_cucumber</pre>
+
+bq. Note – both justin's and david's merb_cucumber forks didnt work for me (they don't seem to use the bundled directory). Try Roman's
+
+
 h2. Usage
 
 The inside of a merb application directory, try:
