@@ -97,10 +97,10 @@ In this case the bland initial setup has been divided into sub-directories infor
 |   |   |   |-- entity_new
 |   |   |   `-- step_definitions
 |   |   |       `-- entity_new_steps.rb
-|   |   |-- step_definitions
-|   |   |   `-- webrat_steps.rb
-|   |   `-- support
-|   |       `-- env.rb
+|   |-- step_definitions
+|   |   `-- webrat_steps.rb
+|   `-- support
+|       `-- env.rb
 </code></pre>
 
 It is well to be aware that, regardless of the directory structure chosen, cucumber effectively flattens the test directory when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>
