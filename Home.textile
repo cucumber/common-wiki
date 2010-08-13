@@ -27,7 +27,12 @@ Cucumber itself is also written in Ruby, but it can be used to "test" code writt
 * [[JRuby and Java]]
 * [[IronRuby and .NET]]
 * Flex: Use "FunFX":http://github.com/peternic/funfx
-* Web apps in any language: Use "Watir":http://wtr.rubyforge.org/, "Selenium":http://selenium.seleniumhq.org/, "Celerity":http://celerity.rubyforge.org/ or "Mechanize":http://www.nepharious.com/blog/2008/11/30/regression-test-webapps-with-cucumber-and-webrat-on-mechanize/
+* Web apps in any language - use Cucumber with one of the following: 
+** "Watir":http://wtr.rubyforge.org/ - Runs IE (Windows only)
+** "SafariWatir":http://safariwatir.rubyforge.org/ - Runs Safari (OS X only)
+** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS)
+** "Celerity":http://celerity.rubyforge.org/ - Runs a headless browser with Javascript support (requires JRuby)
+** "Mechanize":http://www.nepharious.com/blog/2008/11/30/regression-test-webapps-with-cucumber-and-webrat-on-mechanize/ - Runs a headless browser (any OS)
 
 (Cucumber's example directory has examples for some of these)
 
