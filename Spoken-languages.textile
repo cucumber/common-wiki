@@ -29,11 +29,11 @@ It's easy!
 # Add your language's keywords to  "languages.yml":../tree/master/lib/cucumber/languages.yml
 # Generate the parser for your language:
 
-<pre><code>rake treetop:compile spec</code></pre>
+<pre>rake treetop:compile spec</pre>
 
-That's it! You have a new language that you can pass to <pre><code>--language</code></pre>
+That's it! You have a new language that you can pass to Cucumber's <code>--language</code> option.
 
 h2. Adding examples for a new language
 
-Just copy the <pre>examples/i18n/en</pre> example to a new directory with the same name as the language you added.
-Then translate everything in there. When you're done you should be able to run <pre>rake i18n</pre> from the <pre>examples/i18n</pre> directory.
+Just copy the <code>examples/i18n/en</code example to a new directory with the same name as the language you added.
+Then translate everything in there. When you're done you should be able to run <code>rake i18n</code> from the <code>examples/i18n</code> directory.
