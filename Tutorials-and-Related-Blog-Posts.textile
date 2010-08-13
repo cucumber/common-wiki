@@ -3,6 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Screencast: Testing Flex Apps with Cucumber":http://onrails.org/articles/2009/07/08/screencast-testing-flex-apps-with-cucumber|Get your hands dirty with Flex, FunFX and Cucumber|Jul 08 2009|
 |"Integration test with Cucumber and Webrat":http://www.slideshare.net/gugod/integration-test-with-cucumber-and-webrat|Presentation in Chinese by Wen-tien Chang|Jul 1 2009|
 |"Natural Language Acceptance Testing with Cucumber":http://dobbscodetalk.com/index.php?option=com_myblog&show=Natural-Language-Acceptance-Testing.html&Itemid=29|A nice little writeup in "Dr.Dobbs CodeTalk":http://dobbscodetalk.com/| Jun 27 2009|
 |"Introduction to BDD with Cucumber":http://www.engineyard.com/blog/2009/cucumber-introduction/|Great little introduction|Jun 23 2009|
