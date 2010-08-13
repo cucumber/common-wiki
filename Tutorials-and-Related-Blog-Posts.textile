@@ -3,6 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Testing a WPF UI using Ruby, Cucumber and WiPFlash.dll ":http://codebetter.com/blogs/benhall/archive/2010/03/16/testing-a-wpf-ui-using-ruby-cucumber-and-wipflash-dll.aspx|by Ben Hall|Mar 16 2010|
 |"Testing Excel with Cucumber":http://adomokos.blogspot.com/2010/03/testing-excel-with-cucumber.html|Attila Domokos shows us how to use Cucumber to verify your Excel forumlas.|Mar 14 2010|
 |"Java Skeleton Web App + Cuke":http://jamesladdcode.com/?p=316|Java Cucumber (cuke4duke) Spring 3 and Selenium Test  - Jump Start Web Application. Cucumber is used to drive the WebDriver Browser based tests + more |Mar 7 2010|
 |"Custom User-Agent with Mechanize":http://otaqui.com/blog/541/custom-user-agent-with-cucumber-tests-and-webrat-in-mechanize-mode/|Pete Otaqui explains how to pretend you're a Palm Pre and other devices|Mar 8 2010|
