@@ -1,9 +1,9 @@
-It's possible to pass text with an arbitrary number of lines and formatting to a step definition using the PyString syntax.  The text should be offset by delimiters consisting of three double-quote marks on lines of their own (indentation is unimportant):
+It's possible to pass text with an arbitrary number of lines and formatting to a step definition using the PyString syntax.  (The inspiration for PyString comes from Python where """ is used to delineate docstrings.)  The text should be offset by delimiters consisting of three double-quote marks on lines of their own (indentation is unimportant):
 
 <blockquote>
 <pre>
 <code>
-Given a blog post body in Markdown
+Given a blog post named "Random" with the following body in Markdown
 """
 Some Title, Eh?
 ==============
@@ -21,12 +21,43 @@ felis porttitor nibh, vel auctor tellus nisl at nibh. Etiam urna mauris,
 pharetra in, commodo quis, mattis vel, mi. Maecenas in justo et ipsum hendrerit
 scelerisque.
 """
-When I blah blah blah
-Then I should yadda yadda
+When I view the post
+Then I should see the post in all of it's HTML rendered glory
 </code>
 </pre>
 </blockquote>
 
-In your step definition, there's no need to find this text and match it in your regex.  It will automatically be passed in as a parameter:
+In your step definition, there's no need to find this text and match it in your regexp.  It will automatically be yielded as the last parameter in the step definition.  For example:
 
-bq. @Given /^a blog post body in Markdown$/ do |body|@
+<blockquote>
+<pre>
+<code>
+Given /^a blog post named "([^\"]*)" with the following body in Markdown$/ do |title, markdown_content|
+  Post.create!(:title => title, :body => markdown_content)
+end
+</code>
+</pre>
+</blockquote>
+
+The object that is yielded is in fact a Cucumber::Ast::PyString object that you can treat like a regular String.  By calling #to_s on the PyString you will get an actual String object back.
+
+It is also possible to use PyStrings in conjunction with Scenario Outlines.  For example:
+
+<blockquote>
+<pre>
+<code>
+  Given I have a user account with my name "Jojo Binks"
+  When an Admin grants me <Role> rights
+  Then I should receive an email with the body:
+  """
+  Dear Jojo Binks,
+  You have been granted <Role> rights.  You are <details>. Please be responsible.
+  -The Admins
+  """
+  Examples:
+    |  Role     | details                                         |
+    |  Manager  | now able to manage your employee accounts       |
+    |  Admin    | able to manage any user account on the system   |
+</code>
+</pre>
+</blockquote>
