@@ -13,7 +13,7 @@ gem uninstall rcov
 gem install relevance-rcov
 </pre>
 
-Second, you'll need to open up the cucumber generated task file and set the rcov config option.
+Second, you'll need to add the rcov config option to the rake task in <code>lib/tasks/cucumber.rake</code>.
 
 <pre>
 #lib/tasks/cucumber.rake
