@@ -62,7 +62,6 @@ The root level of the archetypal RoR project directory tree looks like this:
 Running script/generate cucumber adds this layout to the existing structure:
 <pre><code>|-- features
 |-- step_definitions
-|   |-- local_web_steps.rb
 |   `-- web_steps.rb
 `-- support
     |-- env.rb
