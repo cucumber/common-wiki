@@ -31,6 +31,7 @@ namespace :features do
   Cucumber::Rake::Task.new(:selenium) do |t|
     t.profile = "selenium"
   end
+end
 </pre>
 
 h2. Using RCov
