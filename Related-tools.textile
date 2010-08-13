@@ -6,5 +6,5 @@ on your rails project.
 |
 |"Vim-Cucumber":http://github.com/bmabey/vim-cucumber/tree/master|Feature syntax highlighting for Vim.|
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting for Textmate and other useful commands.|
-|"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, Sinatra and other web frameworks.|
+|"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
 |"Webrat TM Bundle":http://github.com/bmabey/webrat-tmbundle/tree/master| Collection of TextMate snippets for the webrat API.|
