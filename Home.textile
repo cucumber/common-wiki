@@ -61,7 +61,6 @@ There are several ways to get yourself started in writing tests, depending somew
 ** [[Custom Formatters]]
 ** [[Console Colours]]
 ** [[Hooks]]
-** "essay help":http://www.realessaywriting.com - essay resources
 ** [[Profiles]]
 ** [[Running Features]]
 ** [[Using Rake]]
