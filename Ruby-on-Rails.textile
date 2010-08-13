@@ -101,3 +101,23 @@ h2. View spec redundancy
 Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree
 of redundancy with view specs. I recommend you delete generated view specs if you run into too much maintenance
 headaches and rely on the features instead of view specs. However, in some cases it can be handy to use both.
+
+h2. Authentication
+
+Some guidance for authentication is provided below. It is recommended that a new user is created, rather than loaded through fixtures or etc.
+
+<pre><code>
+Given /logged in as "(.*)"$/ do |login|
+  @current_user = User.create!(
+        :login=>login,   :password =>              'generic',
+        :email=>"#{login}@example.com", :password_confirmation => 'generic'
+        )
+#  @current_user.activate! # :create syntax for restful_authentication w/ aasm. Tweak as needed.
+
+  visit "/login" 
+  fill_in("login",    :with => login) 
+  fill_in("password", :with => 'generic') 
+  click_button("Log in")
+  response.body.should =~ /Logged/m  
+end
+</code></pre>
