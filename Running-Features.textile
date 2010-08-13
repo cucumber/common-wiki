@@ -48,14 +48,10 @@ h2. Using TextMate
 
 See the "Cucumber.tmbundle":http://github.com/bmabey/cucumber-tmbundle documentation
 
-h2. Using Ant
-
-TODO: Show a simple task
-
-h2. Using Maven
-
-TODO: Show a simple task
-
 h2. Using RCov
 
 "How to use Cucumber with RCov":http://github.com/aslakhellesoy/cucumber/wikis/using-rcov-with-cucumber-and-rails 
+
+h2. Using other build tools
+
+Maven and Ant are described in [[Jruby and Java]]. MSBuild and Nant should be under [[IronRuby and .NET]]. Anything else - please contribute to this wiki!
