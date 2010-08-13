@@ -47,7 +47,7 @@ Then I should see the following cukes:
   | Cucumis anguria | Burr Gherkin |
 </pre>
 
-And a [[Step Definition]] that uses <code>diff!</code>:
+And a Step Definition that uses <code>diff!</code>:
 
 <pre>
 Then /^I should see the following cukes:$/ do |expected_cukes_table|
@@ -62,16 +62,12 @@ end
 
 Cucumber will print the difference:
 
-<pre>
-Then I should see the following cukes: # features/cuke_steps.rb:1
-  | Latin           | English      |
-  | Cucumis sativus | Cucumber     |
-  | Cucumis sativus | Concombre    |
-  | Cucumis anguria | Burr Gherkin |
-  Tables were not identical (RuntimeError)
-  ./features/cuke_steps.rb:7:in `/^I should see the following cukes:$/'
-  features/cuke.feature:3:in `Then I should see the following cukes:'
-</pre>
+| *{color:green}Latin*           | *{color:green}English*      |
+| *{color:yellow}Cucumis sativus* | *{color:yellow}Cucumber*     |
+| *{color:grey}Cucumis sativus* | *{color:grey}Concombre*    |
+| *{color:green}Cucumis anguria* | *{color:green}Burr Gherkin* |
+
+(Due to limitations of this wiki, this will look slightly different in a console).
 
 Missing rows and columns are printed in grey (same colour as comments), and surplus rows and columns are printed in yellow (same colour as undefined steps). When the two tables differ, the step will fail. You can modify this behaviour by passing an options Hash to the <code>diff!</code> method. See [[RDoc]] for details.
 
