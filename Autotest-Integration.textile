@@ -89,7 +89,7 @@ Autotest.add_hook :initialize do |at|
 end
 </pre>
 
-If you find that autotest runs your features continuously, your features may be changing a file which autotest is monitoring as they run.  Use a setting like this to ignore such files.
+If you find that autotest runs your features continuously, your features may be changing a file which autotest is monitoring as they run.  Use a setting like this to ignore such files. You'll likely need to set autotest to ignore "rerun.txt" as well.
 
 For more information on configuring autotest, see the "ZenTest Documentation":http://zentest.rubyforge.org/ZenTest/.
 
