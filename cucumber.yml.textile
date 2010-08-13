@@ -23,3 +23,7 @@ html_report: <%= common %> --format html --out=features_report.html features
 </pre>
 
 Also see [[Running Features]] for more details about how to execute your features.
+
+h2. Environment variables
+
+See [[Environment Variables]]
