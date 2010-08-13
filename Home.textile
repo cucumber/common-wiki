@@ -21,6 +21,8 @@ See [[Migration From RSpec Stories]]
 
 h2. Installation
 
+(Rails people - see  [[Ruby on Rails]]).
+
 After you have installed Ruby or JRuby - install Cucumber with the following commands:
 
 Ruby:
@@ -53,8 +55,6 @@ The examples deliberately have errors so you can get a taste of how the error ou
 for it:
 
 <pre><code>cucumber --help</code></pre>
-
-h2. [[Ruby on Rails]]
 
 h2. BDD with Cucumber
 
