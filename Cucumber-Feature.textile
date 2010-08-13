@@ -1,4 +1,5 @@
 Cucumber uses Cucumber. All new features and bug fixes should have a corresponding Cucumber feature on a separate Git branch. This is important if you are [[contributing]] or reporting a bug.
+cucumber 用户cucumber
 
 *Important:* If you are working on something Ruby on Rails related, please write your features in the "Cucumber Rails":http://github.com/aslakhellesoy/cucumber_rails project.
 
