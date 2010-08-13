@@ -43,7 +43,7 @@ require 'cucumber/rails/rspec'
 require 'webrat/core/matchers'
 </pre>
 
-* *config.gem "rspec", :lib => "spec" ...*  If you are using Rails' config.gem to require rspec and/or rspec-rails in your environment.rb or test.rb this may be causing the problem.  In an ideal world this wouldn't be the case, but try commenting it out to see if it helps resolve the issue.
+* *config.gem "rspec", :lib => "spec" ...*  If you are using Rails' config.gem to require rspec and/or rspec-rails in your environment.rb or test.rb this may be causing the problem.  Try changing the :lib option to false.
 
 
 If you can't track down where 'spec' is being required then you can adding this in your ib/spec/runner/options.rb file right before it blows up:
