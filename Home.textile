@@ -100,5 +100,6 @@ h2. Other pages
 * [[Spoken languages]]
 * [[Migration From RSpec Stories]]
 * [[Background and Credits]]
+* [[Merb]]
 * [[Ruby on Rails]]
 * [[Sinatra]]
