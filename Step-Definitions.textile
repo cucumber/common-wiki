@@ -14,9 +14,9 @@ Then there are Steps. Steps are declared in your <code>features/*.feature</code>
 Given I have 93 cucumbers in my belly
 </pre>
 
-A step is analogous to a method or function _invocation_. In this example, you're "calling" the step definition above with one argument - the string "93". Arguments are identified by matching the regexp in the step definition and sending the capture groups to the step definition's block parameters. 
+A step is analogous to a method or function _invocation_. In this example, you're "calling" the step definition above with one argument - the string "93". Cucumber matches the Step against the Step Definition's Regexp and takes all of the captures from that match and passes them to the Proc.
 
-In addition to a Regexp and a Proc, Step Definitions start with an "adjective":http://www.merriam-webster.com/dictionary/given or an "adverb":http://www.merriam-webster.com/dictionary/when methods. All Step definitions are loaded (and defined) before Cucumber starts to execute the plain text.
+Step Definitions start with an "adjective":http://www.merriam-webster.com/dictionary/given or an "adverb":http://www.merriam-webster.com/dictionary/when methods. All Step definitions are loaded (and defined) before Cucumber starts to execute the plain text.
 
 When Cucumber executes the plain text, it will for each step look for a registered Step Definition with a matching Regexp. If it finds one it will execute its Proc, passing all groups from the Regexp match as arguments to the Proc.
 
