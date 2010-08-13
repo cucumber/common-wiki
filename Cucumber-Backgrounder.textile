@@ -156,7 +156,14 @@ The string from each one of these method is compared against the matchers contai
 end
 </code></pre>
 
-The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features given above we had the statement:
-<code>And some other action</code>
+The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features given above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step matchers in any step file under the features directory.
+<pre><code>Given /some other action/ do
+When /some (.*) action/ do |match|
+Then /(*.) other action/ do |match|
+And /some other act.*/ do 
+Given /(.*) other (.*)/ do |first,second|
+</code></pre>
+
+Which leads us to the next point.  If you had all of these matchers defined somewhere then cucumber would tell you that it found multiple matches and force you to distinguish them.
 
 <pre><code></code></pre>
