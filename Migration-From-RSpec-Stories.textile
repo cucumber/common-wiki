@@ -1,0 +1,95 @@
+h1. Migrating from RSpec Stories to Cucumber
+
+Migrating from RSpec stories is not as hard as you might think. This guide is based on my experience from
+migrating over a relatively large set of stories in a Rails project.
+
+First, follow the Cucumber installation instructions for Rails. This should leave you with a features directory that looks like this:
+
+<pre><code>+-features/
+  +-steps/
+    +-common_webrat.rb
+    +-env.rb
+</code></pre>
+
+h2. Move a plain text story over
+
+For example:
+
+<pre><code>[git|svn] mv stories/foo.story features/foo.feature
+</code></pre>
+
+Try to run the feature you moved:
+
+<pre><code>rake features
+</code></pre>
+
+At this point you should see a lot of yellow (pending steps).
+
+h2. Move over your step definitions
+
+<pre><code>[git|svn] mv stories/steps/*.rb features/steps
+</code></pre>
+
+Try to run the feature again:
+
+<pre><code>rake features
+</code></pre>
+
+If you're like me - you haven't got your steps exactly in the directory that cucumber expects by default
+(features/steps/*.rb), you may want to pass some options to the rake task. 
+
+In my project I had rails-specific steps under steps/rails and watir-specific ones under steps/watir.
+In order to run features without watir I had to do this:
+
+<pre><code>Cucumber::Rake::Task.new(:rails) do |t|
+  t.cucumber_opts = "--format pretty --require features/steps/env.rb --require features/steps/common_webrat.rb"
+  t.step_pattern = "features/steps/rails"
+end
+</code></pre>
+
+Later, I moved the env.rb and common_webrat.rb files under the steps/rails directory and removed the --require
+arguments. This was much cleaner:
+
+<pre><code>Cucumber::Rake::Task.new(:rails) do |t|
+  t.cucumber_opts = "--format pretty"
+  t.step_pattern = "features/steps/rails"
+end
+</code></pre>
+
+h2. Resolving duplicate steps
+
+In Cucumber you're not allowed to use a regexp or step name more than once in a step definition, so the
+following will cause an error:
+
+<pre><code>Given /Three (.*) mice/ do |disability|
+end
+
+Given /Three (.*) mice/ do |disability|
+end
+</code></pre>
+
+In the project I migrated we actually had a couple of duplicates in different files, and it was nice to get rid of them.
+We had to use our best judgment to decide which one to yank.
+
+RSpec Story runner would not complain on such duplicates, which was a drawback.
+
+h2. Resolving ambiguous steps
+
+Consider these step definitions:
+
+<pre><code>Given /Three (.*) mice/ do |disability|
+end
+
+Given /Three blind (.*)/ do |animal|
+end
+</code></pre>
+
+And a plain text step:
+
+<pre><code>Given Three blind mice</code></pre>
+
+Which step definition would be picked here? RSpec Story runner would just pick one and not tell you that it discarded the other one.
+Cucumber on the other hand will raise an error and tell you to fix the ambiguity.
+
+In our project we encountered several of those. The recommended solution is to rename your steps and step definitions so 
+they are no longer ambiguous. If you use regexps for step definitions (instead of strings) you have better control over this.
