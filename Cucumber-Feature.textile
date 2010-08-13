@@ -6,7 +6,7 @@ h2. Writing a Cucumber feature
 
 Let's say you have entered a ticket named "Artificial intelligence for Step Definitions", and that it was assigned the number 982. Here is how you create a feature for it:
 
-h3. Fork and pull the main repository
+h3. Fork and clone the main repository
 
 Go to the "main":http://github.com/aslakhellesoy/cucumber Cucumber Github page and fork the repo. When that's done pull it down to your machine following one of the many "GitHub guides":http://github.com/guides if you're new to this.
 
