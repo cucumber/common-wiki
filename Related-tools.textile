@@ -1,4 +1,4 @@
-There are several tools that work together with Cucumber that are developed by other people:
+It's always a good sign for a tool when other people huddle around and write tools on top. These are the known 3rd party tools that work together with Cucumber:
 
 ||Tool||Description||
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
