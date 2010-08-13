@@ -1,4 +1,3 @@
-todo: need to sort these list items and indent based on related contents
 
 h2. Cucumber
 
@@ -13,6 +12,8 @@ h2. Documentation
 h2. Integrating cukes with other tools
 
 h2. Contributing
+
+todo: need to sort these list items and indent based on related contents
 
 
 # "A Whole New World":http://wiki.github.com/aslakhellesoy/cucumber/a-whole-new-world
