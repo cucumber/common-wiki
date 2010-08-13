@@ -1,0 +1,31 @@
+Cucumber uses Cucumber. All new features and bug fixes should have a corresponding Cucumber feature on a separate Git branch.
+
+h2. Writing a Cucumber feature
+
+Let's say you have entered a ticket named "Artificial intelligence for Step Definitions", and that it was assigned the number 982. Here is how you create a feature for it:
+
+h3. Fork and pull the main repository
+
+Go to the "main":http://github.com/aslakhellesoy/cucumber Cucumber Github page and fork the repo. When that's done pull it down to your machine following one of the many "GitHub guides":http://github.com/guides if you're new to this.
+
+h3. Create a branch
+
+<pre>git checkout -b 982-artificial-intelligence</pre>.
+
+By using a name that corresponds with the ticket it becomes much easier to follow what's going on.
+
+h3. Write the feature
+
+Cucumber has its own [[Step Definitions]] that make it relatively easy to write features for Cucumber itself. A good place to start is to look at the <code>features/after_block_exceptions.feature</code>.
+
+h3. Push it to your fork
+
+When you're happy with the feature (it reproduces the bug you found, or the new feature you implemented is implemented), commit your code with a commit message that links your commit to the ticket, for example:
+
+<pre>git commit -m "Implemented artificial intelligence [#982 state:open]"</pre>
+
+You can read more about commit messages "here":http://hoth.entp.com/2008/4/11/github-and-lighthouse-sitting-in-a-tree
+
+Now, push your commits back to your repo on GitHub:
+
+<pre>git push origin 982-artificial-intelligence</pre>
