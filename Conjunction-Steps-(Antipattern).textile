@@ -10,7 +10,7 @@ h2. Example
 Given I have shades and a brand new Mustang
 </pre>
 
-h2 How to fix
+h2. How to fix
 
 <pre>
 Given I have shades
