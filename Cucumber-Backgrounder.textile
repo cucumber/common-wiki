@@ -280,14 +280,14 @@ However, the following will not work, unless you build a custom rake task for it
 $ rake cucumber:authent
 </pre>
 
-The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the --tags= option, as in <code>$ cucumber --tags=&#64;wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message. 
+The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the --tags= option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message. 
 
 Limiting the number of occurrences is commonly used in conjunction with the &#64;wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
 Tags may also be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following not exercise any scenario having the tag <em>&#64;ignore</em> found in the directory tree rooted at <code>features/wip</code>:
 
 <pre>
-$ cucumber --require=features --tag=~@gnore features/wip
+$ cucumber --require=features --tag=~@ignore features/wip
 </pre>
 
 h3. What Way do I Run the Tests?
@@ -299,16 +299,16 @@ rake db:test:prepare
 
 However, there is an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic (for that see the Cucumber "Aruba":http://github.com/aslakhellesoy/aruba project)  and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist. 
 
-Testing with Cucumber can be performed in several fashions.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same tests.  
+Testing with Cucumber can be performed in several fashions.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same features and step definitions.  
 
-Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  As discussed above, the Cucumber Rake task recognises the <code>&#64wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>&#64wip</strong>.  For example, given a feature file containing:
+Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  As discussed above, the Cucumber Rake task recognises the <code>@wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>&#64wip</strong>.  For example, given a feature file containing:
 
 <pre>
 Feature: .  .  .
 
   Scenario: A
 
-  &#64wip
+  @wip
   Scenario: B
 
   Scenario: C
