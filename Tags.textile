@@ -72,7 +72,7 @@ You can use this tag logic in your [[Hooks]] as well.
 
 _This feature was originally added in version 0.4.3. The logical behaviour of tags was later reversed in version 0.6.0._
 
-h2. Tag limits and WIP
+h2(#tag-limits). Tag limits and WIP
 
 If you're following Kanban principles, you want to limit the work in progress (WIP). The idea is that the fewer features or scenarios that being worked on simultaneously, the quicker you'll be able to implement new features.
 
