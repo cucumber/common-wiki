@@ -34,10 +34,28 @@ An archetypal RoR project directory tree looks like this:
 `-- vendor
 </code></pre>
 
-Running script/generate cucumber add this layout to the existing structure:
+Running script/generate cucumber adds this layout to the existing structure:
 <pre><code>|-- features
 |   |-- step_definitions
 |   |   `-- webrat_steps.rb
 |   `-- support
 |       `-- env.rb
+</code></pre>
+
+We are now ready to begin testing with cucumber.
+
+h3.  Where do I put Tests?
+
+Cucumber divides testing into two parts, the outward facing features and the inward facing steps.  As discussed elsewhere, features are descriptions of desired behaviour under predefined conditions and following upon specific events.  They are typically used in conjunction with end-user input, and in some cases, may be entirely under end-user (in the form of a domain expert) control. Feature files are given the extension .feature.
+
+Steps, on the other hand, are ruby (.rb) files that contain matchers, snippets of text from the feature files, and blocks of ruby and rails coding together with whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is assumed in the cucumber generator that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
+
+<pre><code># Sets up the Rails environment for Cucumber
+ENV["RAILS_ENV"] = "test"
+require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
+require 'cucumber/rails/world'
+Cucumber::Rails.use_transactional_fixtures
+
+# Comment out the next line if you're not using RSpec's matchers (should / should_not) in your steps.
+require 'cucumber/rails/rspec'
 </code></pre>
