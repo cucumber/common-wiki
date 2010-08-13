@@ -106,8 +106,10 @@ h2. Authentication
 
 Some guidance for authentication is provided below. It is recommended that a new user is created, rather than loaded through fixtures or etc.
 
+In the .feature, use a phrase similar to <code>Given a user is logged in as "markEmark"</code>, and add the following to your relevent step definitions.
+
 <pre><code>
-Given /logged in as "(.*)"$/ do |login|
+Given /logged in as "(.*)"/ do |login|
   @current_user = User.create!(
         :login=>login,   :password =>              'generic',
         :email=>"#{login}@example.com", :password_confirmation => 'generic'
