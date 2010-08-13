@@ -273,4 +273,5 @@ The best place to go for help, that I know of, is the "Google Cucumber Group":ht
 
 If you find a bug in cucumber then you should open a ticket at "Lighthouse":http://rspec.lighthouseapp.com/projects/16211-cucumber/ for it.
 
-2008 November 28 - J. B. Byrne
+2008 November 28 - J. B. Byrne initial
+2010 January 17 - J.B. Byrne revised
