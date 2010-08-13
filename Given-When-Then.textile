@@ -6,7 +6,9 @@ Robert C. Martin has written a "great post":http://blog.objectmentor.com/article
 
 h2. Given
 
-The purpose of givens is to put the system in a known state before the user (or external system) starts interacting with the system (in the When steps). Avoid talking about user interaction in givens. Examples:
+The purpose of givens is to *put the system in a known state* before the user (or external system) starts interacting with the system (in the When steps). Avoid talking about user interaction in givens.  If you had worked with usecases, you would call this preconditions.
+
+Examples:
 
 * Create records (model instances) / set up the database state.
 * It's ok to call into the layer "inside" the UI layer here (in Rails: talk to the models).
@@ -16,7 +18,9 @@ And for all the Rails users out there - we recommend using a "Given with a multi
 
 h2. When
 
-The purpose of When steps is to describe the key action the user performs (or, using Robert C. Martin's metaphor, the state transition). Examples:
+The purpose of When steps is to *describe the key action* the user performs (or, using Robert C. Martin's metaphor, the state transition).
+
+Examples:
 
 * Interact with a web page (Webrat/Watir/Selenium _interaction_ etc should mostly go into When steps).
 * Interact with some other user interface element.
@@ -24,11 +28,37 @@ The purpose of When steps is to describe the key action the user performs (or, u
 
 h2. Then
 
-The purpose of Then steps is to observe outcomes. The observations should be related to the business value/benefit in your feature description. The observations should also be on some kind of _output_ - that is something that comes _out_ of the system (report, user interface, message) and not something that is deeply buried inside it (that has no business value).
+The purpose of Then steps is to *observe outcomes*. The observations should be related to the business value/benefit in your feature description. The observations should also be on some kind of _output_ - that is something that comes _out_ of the system (report, user interface, message) and not something that is deeply buried inside it (that has no business value).
 
 Examples:
 
-* Verify that something related to the Given+When is in the output
+* Verify that something related to the Given+When is (or is not) in the output
 * Check that some external system has received the expected message (was an email with specific content sent?)
 
-While it might be tempting to implement Then steps to just look in the database - resist the temptation. You should verify some kind of outcome that is observable for the user (or external system) and databases usually are not.
+While it might be tempting to implement Then steps to just look in the database - resist the temptation. You should only verify outcome that is observable for the user (or external system) and databases usually are not.
+
+h2. And, But
+
+If you have several givens, whens or thens you can write
+
+<pre>  Scenario: Multiple Givens
+    Given one thing
+    Given an other thing
+    Given yet an other thing
+    When I open my eyes
+    Then I see something
+    Then I don't see something else
+</pre>
+
+Or you can make it read more fluently by writing
+
+<pre>  Scenario: Multiple Givens
+    Given one thing
+      And an other thing
+      And yet an other thing
+    When I open my eyes
+    Then I see something
+      But I don't see something else
+</pre>
+
+To Cucumber steps beginning with And or But are exactly the same kind of steps as all the others.
