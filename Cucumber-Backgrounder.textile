@@ -254,6 +254,7 @@ Feature: .  .  .
 h3. What are "tags"?
 
 Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any string found in a feature file that is prefaced with the commercial at (<strong>&#64;</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>&#64;wip</em> tag.  However, any string may used as a tag and any scenario of feature can have multiple tags associated with it.  For example:
+
 <pre>
   &#64;wip &#64;authent
   Scenario:  A user should authenticate before accessing any resource.
@@ -264,6 +265,7 @@ Cucumber provides a simple method to organize features and scenarios by user det
 </pre> 
 
 Given that the forgoing is contained in a file called <code>features/login.feature</code> and that the cucumber-rails gem is installed and configured then you can exercise this scenario in any of the following ways:
+
 <pre>
 $ rake cucumber:wip
 $ cucumber --tags=&#64;wip
@@ -271,6 +273,7 @@ $ cucumber --tags=&#64;authent
 </pre>
 
 However, the following will not work, unless you build a custom rake task for it:
+
 <pre>
 $ rake cucumber:authent
 </pre>
