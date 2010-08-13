@@ -65,8 +65,8 @@ end
 h2. Rack-Test
 
 You can also use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra using Bryan Helkamp's "rack-test":http://www.github.com/brynary/rack-test and "Webrat":http://www.github.com/brynary/webrat.  You can check out the rspec examples in the "hancock application":http://github.com/atmos/hancock.  Something like the following should be setup in your  <code>features/support/env.rb</code>.
-<pre><code>
-require File.expand_path(File.dirname(__FILE__)+'/../../spec_helper')
+
+<pre><code>require File.expand_path(File.dirname(__FILE__)+'/../../spec_helper')
 require 'haml'
 
 MyApp::App.set :environment, :development
