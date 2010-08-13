@@ -27,19 +27,17 @@ h2. Installation
 
 (Rails people - see  [[Ruby on Rails]]).
 
-After you have installed Ruby or JRuby - install Cucumber with the following commands:
+After you have installed Ruby or JRuby - install Cucumber with the following command:
 
 Ruby:
-<pre><code>gem sources --add http://gems.github.com/ 
-gem install aslakhellesoy-cucumber
-</code></pre>
+<pre><code>gem install cucumber</code></pre>
 
 JRuby:
-<pre><code>jruby -S gem sources --add http://gems.github.com/ 
-jruby -S gem install aslakhellesoy-cucumber
-</code></pre>
+<pre><code>jruby -S gem install aslakhellesoy-cucumber</code></pre>
 
-*IMPORTANT* _As of Sept 12 there are "problems with the gem":http://logicalawesome.lighthouseapp.com/projects/8570-github/tickets/945. Please get the code via Git (or download a tarball) and build the gem yourself._
+h3. Building the Gem yourself
+
+Get the code via Git (or download a tarball).
 
 <pre><code>git clone git://github.com/aslakhellesoy/cucumber.git
 cd cucumber
@@ -60,19 +58,24 @@ for it:
 
 <pre><code>cucumber --help</code></pre>
 
-h2. BDD with Cucumber
+h2. Developing with Cucumber and BDD
 
-If you have found a bug or want to add a feature, start by writing a new feature or scenario that describes the
+Once you have set up Cucumber in your project you can get down to action.
+
+When you decide you want to add a new feature or fix a bug, start by writing a new feature or scenario that describes
+how the feature should work. Don't write any code (yet).
 
 Now run the features again. The one you wrote should have yellow, pending steps - or failing, red ones. 
 (If you don't get that you're doing something wrong, or the feature is already implemented).
 
-This is when you start writing code. You might as well get used to doing it this way, because we won't accept
-any patches unless you also have stories or specs for your code. This is because we don't want to end up with a 
-brittle, unmaintainable, undocumented pile of code that nobody understands. (Yes, stores and specs are *documentation* too).
+This is when you start writing code. Start by writing a couple of lines of code to address the failure you got from Cucumber.
+Run cucumber again. Repeat and rinse until you're happy with your feature. When you get down to nitty gritty details, drop
+down one abstraction level and use RSpec to write some specs for your classes. Write the specs first! If you follow this
+process you have a good guard against brittle, unmaintainable, undocumented code that nobody understands. 
+(Yes, stores and specs are *documentation* too).
 
-If you think this sounds annoying, try it out anyway. You'll end up writing better (and less) code this way. Trust me.
-Work outside-in (the outside being the story, the inside being the low level code). Do it the "BDD":http://en.wikipedia.org/wiki/Behavior_driven_development way.
+If you think this sounds annoying, try it out anyway. You'll end up writing better, lesser coupled (and less) code this way. Trust me.
+Work outside-in (the outside being the feature, the inside being the low level code). Do it the "BDD":http://en.wikipedia.org/wiki/Behavior_driven_development way.
 
 h3. Business value and MMF
 
