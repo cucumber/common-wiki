@@ -4,6 +4,7 @@ Got questions? Here is where you can get in touch:
 * "Lighthouse":http://rspec.lighthouseapp.com/projects/16211-cucumber/overview (Bug reports, feature requests, patches)
 * "IRC":irc://irc.freenode.net/cucumber ("log":http://irclogger.com/cucumber/)
 * "Twitter":http://search.twitter.com/search?q=%23cucumber
+* "Identi.ca":http://identi.ca/group/cucumber
 * "stackoverflow":http://stackoverflow.com/questions/tagged/cucumber
 
 If you contact a developer directly you may not get an answer. If you do get an answer, the answer will most likely be cc'ed to the mailing list. Open source development also means open communication. 
