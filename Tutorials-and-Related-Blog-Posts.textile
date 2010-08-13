@@ -4,7 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 |*Post*|*Description*|*Posting Date*|
 |"Cucumber and Celerity":http://drogomir.com/blog/2009/6/16/cucumber-and-celerity-testing-unobtrusive-javascript|Testing unobtrusive Javascript|Jun 16 2009|
-|"Adding XHTML output validation to Cucumber stories":http://swedishcampground.com/adding-xhtml-output-validation-to-cucumber-stories| Use "Easy MArkup Validation":http://tenderlovemaking.com/2009/06/12/easy-markup-validation/ with Cucumber | Jun 16 2009 |
+|"Adding XHTML output validation to Cucumber stories":http://swedishcampground.com/adding-xhtml-output-validation-to-cucumber-stories| Use "Easy Markup Validation":http://tenderlovemaking.com/2009/06/12/easy-markup-validation/ with Cucumber | Jun 16 2009 |
 |"Cucumber and IronRuby: It runs!":http://hotgazpacho.org/2009/06/cucumber-and-ironruby-it-runs/|William Green shares updated adventures with Cucumber on .NET|Jun 14 2009|
 |"The return of the Cucumber":http://www.pathf.com/blogs/2009/06/the-return-of-the-cucumber/|Noel Rappin shares some thoughts on style|Jun 12 2009|
 |"Webrat: Automated Acceptance Testing with RSpec or Cucumber":http://www.agileweboperations.com/webrat-automated-acceptance-testing-with-rspec-or-cucumber/|Side by side comparison of Cucumber and RSpec (in RedMine!)|Jun 11 2009|
