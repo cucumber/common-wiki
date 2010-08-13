@@ -2,7 +2,13 @@ As of release 0.3.10 Cucumber has a new <code>--drb</code> switch.
 
 This switch lets you run your features faster by offloading the startup time of your code to "Spork":http://github.com/timcharper/spork/tree/master. 
 
-You can start Spork and have it preload your application in a separate process. Spork listens for "DRb":http://www.ruby-doc.org/stdlib/libdoc/drb/rdoc/index.html connections, and when you run cucumber with <code>--drb</code> the features will run inside the Spork server instead, and none of your application code will be loaded in the ruby interpreter you run Cucumber with.
+You can start Spork and have it preload your application in a separate process. 
+
+<code>
+spork cuc
+</code>
+
+Spork listens for "DRb":http://www.ruby-doc.org/stdlib/libdoc/drb/rdoc/index.html connections, and when you run cucumber with <code>--drb</code> the features will run inside the Spork server instead, and none of your application code will be loaded in the ruby interpreter you run Cucumber with.
 
 Spork provides two simple hooks for preloading your application - one for framework/stable code (<code>Spork.prefork</code>) and one for the code that *you* write and change often (<code>Spork.each_run</code>). 
 
