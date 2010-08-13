@@ -1,0 +1,22 @@
+Cucumber loves Mono.
+
+h2. Install Mono
+
+Just "grab":http://www.go-mono.com/mono-downloads/download.html Mono 2.2 or higher.
+
+h2. Installing IronRuby
+
+Just stand in any directory and follow these steps:
+
+<pre>
+git clone git://github.com/mletterle/ironruby.git
+cd ironruby
+git checkout -b linux
+git pull origin linux
+cd Merlin/Main/Languages/Ruby
+rake compile mono=1
+</pre>
+
+You have IronRuby running on your Linux/OS X box.
+
+__To be continued__
