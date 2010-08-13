@@ -258,7 +258,7 @@ However, there is an important environmental consideration to keep in mind when 
 
 Testing with Cucumber can be performed in several fashions.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same tests.  
 
-Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  The Cucumber Rake task now recognises the @wip tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>@wip</strong>.  For example, given a feature file containing:
+Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  The Cucumber Rake task now recognises the <code>@wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>@wip</strong>.  For example, given a feature file containing:
 
 <pre>
 Feature: .  .  .
