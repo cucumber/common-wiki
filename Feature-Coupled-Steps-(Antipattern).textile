@@ -1,0 +1,42 @@
+Feature-coupled steps are steps that can't be used across features or scenarios. This is evil because it leads to an explosion of step definitions code duplication and high maintenance costs.
+
+h2. Example
+
+An imaginary resume application could have the following features and step files:
+
+<pre>
+features/
++--edit_work_experience.feature
++--edit_languages.feature
++--edit_education.feature
++--steps/
+   +--edit_work_experience_steps.rb
+   +--edit_languages_steps.rb
+   +--edit_education_steps.rb
+</pre>
+
+The <code>edit_work_experience.feature</code> could have the following scenario:
+
+<pre>
+Scenario: add description
+  Given I have a CV and I'm on the edit description page
+  And I fill in "Description" with "Cucumber BDD tool"
+  When I press "Save"
+  Then I should see "Cucumber BDD tool" under "Descriptions"
+</pre>
+
+The <code>edit_work_experience_steps.rb</code> could be implemented like this:
+
+<pre>
+Given /I have a CV and I'm on the edit description page/ do
+  @employee = Employee.create!(:name => 'Sally')
+  @employee.create_cv
+  visits("/employees/#{@employee.id}/descriptions/new")
+end
+</pre>
+
+h2. How to fix
+
+## Break up [[ConjunctionSteps]] steps into individual steps
+## Organise steps by domain concept [[StepOrganisation]]
+## Rename step.rb files to a domain-related name (rather than feature/scenario-related name)
