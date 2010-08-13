@@ -49,10 +49,10 @@ in the step definitions. Here is how to get you started.
 
 h3. Install Cucumber, Webrat and RSpec
 
-<pre><code>git submodule add cucumber git://github.com/aslakhellesoy/cucumber.git vendor/plugins/cucumber
-git submodule add webrat git://github.com/brynary/webrat.git vendor/plugins/webrat
-git submodule add rspec git://github.com/dchelimsky/rspec.git vendor/plugins/rspec
-git submodule add rspec-rails git://github.com/dchelimsky/rspec-rails.git vendor/plugins/rspec-rails
+<pre><code>git submodule add git://github.com/aslakhellesoy/cucumber.git vendor/plugins/cucumber
+git submodule add git://github.com/brynary/webrat.git vendor/plugins/webrat
+git submodule add git://github.com/dchelimsky/rspec.git vendor/plugins/rspec
+git submodule add git://github.com/dchelimsky/rspec-rails.git vendor/plugins/rspec-rails
 </code></pre>
 
 If your own Rails code is not in Git, just replace "submodule add" with "clone".
