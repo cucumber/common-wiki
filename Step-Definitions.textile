@@ -57,6 +57,35 @@ And a plain text step:
 
 Cucumber can't make a decision about what Step Definition to execute, and wil raise a <code>Cucumber::Ambiguous</code> error telling you to fix the ambiguity.
 
+h3. Guess mode
+
+Imagine you have these step definitions:
+
+<pre><code>Given /we had (.*)/ do |what|
+end
+
+# A really versatile step!
+Given /we had (.*) on the (.*)/ do |what, where|
+end
+</code></pre>
+
+And a plain text step:
+
+<pre><code>Given we had drinks on the roof</code></pre>
+
+The plain text step will match both step definitions and raise <code>Cucumber::Ambiguous</code>. However,
+if you run Cucumber with <code>--guess</code>, it will guess that you were aiming for the versatile step.
+
+There is ranking logic that gets invoked when the option is turned on:
+# The step definition with the most capture groups wins
+# If there are 2+ definitions with the same amount of capture groups, the one with the shortest overall captured string length wins
+# If there are still 2+ options the Ambiguous error is raised
+
+So if you try <code>--guess</code> with the mice above, you'll still get <code>Cucumber::Ambiguous</code>. Still, using
+guess mode is useful in some situations.
+
+Consider guess mode a workaround. We still recommend you try to have unambiguous regular expressions. When you have a lot of step definitions you quickly lose track of the situations where cucumber will apply guessing logic, and that can lead to some surprises.
+
 h2. Redundant Step Definitions
 
 In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the Proc), so the following would cause a <code>Cucumber::Redundant</code> error:
