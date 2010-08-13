@@ -19,7 +19,7 @@ By default the plugin will run all the features in the features dir.  To change 
 * <code>autotest</code> : Used when Autotest wants to run only the failing scenarios.
 * <code>autotest-all</code> : Used when Autotest wants to run all the scenarios (after a red->green transition).
 
-Please see [[Running Features]] for more information about profiles.
+Please see [[Running Features]] for more information about profiles, and the [[Ruby on Rails]] page for extra help when running in that context.
 
 h3. What does it do?
 
