@@ -2,6 +2,8 @@ Cucumber not ripe? Can't find your peeler? These are some common problems people
 
 h2. All the 'a' and 'A' letters are lost in the output on Windows
 
-If <code>$KCODE='u'</code> is set by your code or some of the libraries you are using, you will lose _a_ and _A_ in the console output.
+Solution: Add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. For more info, see "Lighthouse issue #81":http://rspec.lighthouseapp.com/projects/16211/tickets/81-windows-all-the-a-characters-in-the-output-have-gone-on-strike
 
-Solution: Set <code>$KCODE=''</code> in your <code>env.rb</code> file. For more info, see "Lighthouse issue #81":http://rspec.lighthouseapp.com/projects/16211/tickets/81-windows-all-the-a-characters-in-the-output-have-gone-on-strike
+h2. Special characters aren't outputted correctly to the console on Windows
+
+Solution: Add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. Then set your command window's font to a font that has the characters you're outputting - for example <code>Upper Left corner icon menu -> Properties -> Font -> Lucida Grande</code>
