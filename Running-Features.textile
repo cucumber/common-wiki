@@ -8,7 +8,7 @@ Assuming you've installed cucumber as a gem, run this at a command prompt to see
 
 For example
 
-<pre><code>cucumber features/authenticate_user.feature --line 44 --format html > features.html</code></pre>
+<pre><code>cucumber features/authenticate_user.feature:44 --format html > features.html</code></pre>
 
 ...will run the scenario defined at line 44 of the authenticate_user feature, format it as HTML and pipe it to the features.html file for viewing in a browser.
 
