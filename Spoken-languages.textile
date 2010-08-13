@@ -19,8 +19,7 @@ Egenskap: Summering
     Så skal resultatet være 13
 </code></pre>
 
-A <code># language: x</code> header on the first line of a feature file tells Cucumber what spoken language to use.
-If you omit this header, Cucumber will default to English (en), unless you use the <code>--language</code> command line option.
+A <code># language:</code> header on the first line of a feature file tells Cucumber what spoken language to use - for example <code># language: fr</code> for French. If you omit this header, Cucumber will default to English (en), unless you use the <code>--language</code> command line option.
 
 h2. Listing the available languages
 
