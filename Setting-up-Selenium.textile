@@ -51,7 +51,7 @@ you can run the jar directly
 
 h2. Step 5: Run the cucumber example
 
-Run the Cucumber "Selenium example":http://github.com/aslakhellesoy/cucumber/tree/HEAD/examples/selenium
+Run the Cucumber "Selenium example":http://github.com/aslakhellesoy/cucumber/tree/master/examples/selenium
 
 <pre><code>cucumber examples/selenium/features/</pre></code>
 
