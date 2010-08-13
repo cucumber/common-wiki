@@ -181,7 +181,7 @@ It is considered better form by some to surround with double quotation marks, <s
 <pre><code>Given Some determinable "business" situation</code></pre>
 <pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
 
-Finally, you can have steps call steps.  For example:
+Finally, you can have step definitions call other step definitions.  For example:
 
 <pre><code>And /some "(.*)" action/  do |a|
    ...
