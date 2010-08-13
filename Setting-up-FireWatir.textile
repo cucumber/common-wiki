@@ -16,15 +16,13 @@ From the command line goto your Mozilla Firefox installation folder and type:
 
 <pre><code>firefox -jssh </code></pre>
 
-Then close the browser.
-
 h2. Step 4: Test your protocol
 
 From the command line type:
 
 <pre><code>telnet localhost 9997</code></pre>
 
-This should return 'Welcome to Mozilla ....'
+This should return 'Welcome to the Mozilla JavaScript Shell!'
 
 h2. Step 5: Download and run the tests
 
