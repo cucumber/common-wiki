@@ -45,8 +45,7 @@ end
 
 h2. Tagged hooks
 
-**{color:red}This is only possible in 0.1.99 and higher*
-Only available in Cucumber 0.3.0 and above*
+*{color:red}Only available in Cucumber 0.3.0 and above*
 
 Sometimes you may want a certain before or after hook to run only for certain scenarios. This can be achieved by associating a hook with one or more [[tags]]. Example:
 
