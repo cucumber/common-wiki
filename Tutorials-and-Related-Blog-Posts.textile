@@ -3,7 +3,8 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
-|"Capistrano recipes with cucumber":http://pivotallabs.com/users/jdean/blog/articles/763-testing-capistrano-recipes-with-cucumber| Jeff's Blog @ Pivotal labs |April 5th 2009 |
+|"Cucumber On JRuby inside Eclipse":http://ketan.padegaonkar.name/2009/04/10/cucumber-on-jruby-inside-eclipse.html| Allows RCP based apps to be tested with Cucumber|Apr 10 2009|
+|"Capistrano recipes with cucumber":http://pivotallabs.com/users/jdean/blog/articles/763-testing-capistrano-recipes-with-cucumber| Jeff's Blog @ Pivotal labs |Apr 5 2009 |
 |"Outside-in Development with Cucumber and RSpec":http://blog.josephwilk.net/ruby/outside-in-development-with-cucumber-and-rspec.html | Joseph Wilk's slides from "Scotland on Rails":http://scotlandonrails.com/schedule/27-march/working-outside-in-with-cucumber-and-rspec/ | Mar 30 2009 |
 |"BDD Step-by-Step Example - part 2":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-2-refactor/ |Nicholas’ Blog | Mar 29 2009|
 |"BDD Step-by-Step Example - part 1":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-1/ | Nicholas’ Blog | Mar 29 2009 |
