@@ -1,0 +1,31 @@
+It's easy to write your own custom formatter for Cucumber. Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers). Here is how you'd do that:
+
+Save your custom formatter class in <code>features/support</code> (or if you want to put it elsewhere, put a file in that directory that <code>require</code>s your formatter class.
+
+<pre>
+require 'twitter'
+
+module Silly
+  class TwitterFormatter
+    def initialize(io, step_mother, options={})
+      # We don't care about these - we're just twittering!
+    end
+
+    def scenario_executing(scenario)
+      @failed = false
+    end
+
+    def scenario_executed(scenario)
+      status = @failed ? 'FAILED' : 'PASSED'
+      message = "#{scenario.name} #{status}"
+      Twitter::Base.new('your email', 'your password').post(message)
+    end
+
+    def step_failed(step, regexp, args)
+      @failed = true
+    end
+  end
+end
+</pre>
+
+Now you can run your features by passing <code>--format Silly::TwitterFormatter</code>
