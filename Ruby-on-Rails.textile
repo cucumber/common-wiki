@@ -1,5 +1,3 @@
-h1. Ruby on Rails
-
 Cucumber Rails support built-in, and I really recommend using "Webrat":http://github.com/brynary/webrat
 in the step definitions. Here is how to get you started.
 
