@@ -10,6 +10,7 @@ From version 0.1.13 and up you can tweak the colours by defining a <code>$CUCUMB
 The colours that you can change are:
 
 ||Key||Default colours||
+|undefined|%{color:yellow}yellow% (v0.2.0 and up)|
 |pending|%{color:yellow}yellow%|
 |pending_param|%{color:yellow;font-weight: bold}yellow,bold%|
 |failed|%{color:red}red%|
@@ -19,7 +20,7 @@ The colours that you can change are:
 |skipped|%{color:cyan}cyan%|
 |skipped_param|%{color:cyan;font-weight: bold}cyan,bold%|
 |comment|%{color:grey}grey%|
-|tag|%{color:blue}blue%|
+|tag|%{color:blue}blue% (v0.2.0 and up)|
 
 For instance, if your shell has a black background and a green font (like the
 "Homebrew" settings for OS X' Terminal.app), you may want to override passed
