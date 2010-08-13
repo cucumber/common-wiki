@@ -27,3 +27,5 @@ World do |world|
   world
 end
 </pre>
+
+For example, if you use [[Ruby on Rails]], you will get an instance of <code>Cucumber::Rails::World</code>, which gives you access to a lot of Rails' helper methods for routes etc.
