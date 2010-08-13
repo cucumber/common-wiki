@@ -27,7 +27,7 @@ end
 
 h2. Sinatra/Test
 
-You can also use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra using Sinatra's built-in "testing setup":http://www.sinatrarb.com/testing.html and "Test Harness":http://www.sinatrarb.com/testing.html#using_.  Make sure you have the following setup in your <code>features/support/env.rb</code>.
+You can also use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra using Sinatra's built-in "testing setup":http://www.sinatrarb.com/testing.html and "Test Harness":http://www.sinatrarb.com/testing.html#using_.  Make sure you have the following in your <code>features/support/env.rb</code>.
 
 <pre><code>
 require File.dirname(__FILE__) + "/../../your_sinatra_app"
