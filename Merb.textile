@@ -8,8 +8,8 @@ Or you can install "jsmestad-merb_cucumber ":http://github.com/jsmestad/merb_cuc
 *sudo gem install jsmestad-merb_cucumber*
 
 Here is brief note from jsmestad.
-Note – you must uninstall david-merb_cucumber in order for this gem to take precedence.
-Merb + Cucumber + Webrat testing stack. Builds upon David’s work, but binds Webrat as a dependency to hopefully ensure a smooth upgrade for future Webrat releases. Also Factory_Girl generators will be added soon.
+
+bq. Note – you must uninstall david-merb_cucumber in order for this gem to take precedence. Merb + Cucumber + Webrat testing stack. Builds upon David’s work, but binds Webrat as a dependency to hopefully ensure a smooth upgrade for future Webrat releases. Also Factory_Girl generators will be added soon.
 
 
 Then inside of a merb application directory, try:
