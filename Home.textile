@@ -87,6 +87,9 @@ until you end up with one of the following business values:
 * Protect revenue
 * Increase revenue
 * Manage cost
+* Increase brand name value
+* Making the product remarkable
+* Providing more value to your customers
 
 If you're about to implement a feature that doesn't support one of those values, chances are you're about to
 implement a non-valuable feature. Consider tossing it altogether or pushing it down in your backlog. Focus on
