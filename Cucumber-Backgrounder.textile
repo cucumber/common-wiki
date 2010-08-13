@@ -134,7 +134,7 @@ To Increase Revenue | Reduce Costs | Protect Revenue
       ...
 </code></pre>
 
-For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. Scenario is used in the same fashion.  Given, When, Then, and And are cucumber methods that take as their argument the string that follows.  They are also all equivalent:
+For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. Scenario is used in the same fashion.  Given, When, Then, and And are cucumber methods that take as their argument the string that follows.  These are the steps that cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions files.  These methods are also all equivalent:
 <pre><code>
       def Given(name)
         create_step('Given', name, *caller[0].split(':')[1].to_i)
