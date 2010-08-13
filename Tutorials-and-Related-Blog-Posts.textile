@@ -4,6 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 |*Post*|*Description*|*Posting Date*|
 |"Cucumber and IronRuby: It runs!":http://hotgazpacho.org/2009/06/cucumber-and-ironruby-it-runs/|William Green shares updated adventures with Cucumber on .NET|Jun 14 2009|
+|"The return of the Cucumber":http://www.pathf.com/blogs/2009/06/the-return-of-the-cucumber/|Noel Rappin shares some thoughts on style|Jun 12 2009|
 |"Webrat: Automated Acceptance Testing with RSpec or Cucumber":http://www.agileweboperations.com/webrat-automated-acceptance-testing-with-rspec-or-cucumber/|Side by side comparison of Cucumber and RSpec (in RedMine!)|Jun 11 2009|
 |"Cucumber Rocks - But it’s not a replacement for unit tests":http://www.pathf.com/blogs/2009/06/cucumber-rocks-but-its-not-a-replacement-for-unit-tests/|Don't put all your eggs in the Cucumber basket!|Jun 10 2009|
 |"Testing Rake tasks with Cucumber":http://www.frykt.no/posts/1-2009-6-7-testing-rake-tasks-with-cucumber|Simple example on how to test rake tasks in Rails|Jun 07 2009|
