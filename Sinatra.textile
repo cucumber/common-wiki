@@ -1,17 +1,25 @@
 You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Webrat":http://www.brynary.com/uploads/webrat/rdoc/index.html!
 
-(For the time being you must use aslakhellesoy's clones of "sinatra":http://github.com/aslakhellesoy/sinatra and "webrat":http://github.com/aslakhellesoy/webrat - hopefully my small changes will be incorporated into the official Git repositories).
-
 Just make sure you have a <code>features/support/env.rb</code> file with the following:
 
-<pre><code># Sinatra - my views are not in the cucumber bin dir!
-$0 = File.dirname(__FILE__) + '/../../your_sinatra_app.rb'
-require 'spec'
-require 'webrat/sinatra/sinatra_session'
-require 'sinatra/test/common'
-require File.dirname(__FILE__) + '/../../your_sinatra_app'
+<pre><code>
+# RSpec matchers
+require 'spec/expectations'
+
+# Webrat
+require 'webrat'
+Webrat.configure do |config|
+  config.mode = :sinatra
+end
 
 World do
   Webrat::SinatraSession.new
 end
+
+# Sinatra - my views are not in the cucumber bin dir!
+$0 = File.dirname(__FILE__) + '/../../your_sinatra_app.rb'
+# Note: The above didn't work for me, I do:
+# set :views, File.join(File.dirname(__FILE__), 'views') in my sinatra app instead, just to be sure.
+
+require File.dirname(__FILE__) + '/../../your_sinatra_app'
 </code></pre>
