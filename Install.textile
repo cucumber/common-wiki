@@ -1,4 +1,4 @@
-These are standalone install instructions. In order to use Cucumber within some frameworks or specific environnements, see also:
+These are standalone install instructions. In order to use Cucumber within some frameworks or specific environments, see also:
 * install for [[Ruby on Rails]]
 * install for [[JRuby and Java]]
 * install for [[IronRuby and .NET]]
