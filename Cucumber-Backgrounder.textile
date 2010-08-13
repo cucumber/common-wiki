@@ -240,6 +240,8 @@ Cucumber comes preconfigured with webrat test steps.  If webrat is installed as 
 
 <code>require 'webrat' if !defined?(Webrat)</code>
 
+Calls for any additional Ruby libraries that your particular testing environment requires should typically be placed in the <code>./features/support/env.rb</code> file.
+
 h3.  Need Help?
 
 The best place to go for help, that I know of, is the "RSpec Forum":http://www.ruby-forum.com/forum/32 at "Ruby-Forum.com":http://www.ruby-forum.com.  There you can find access to a number of forums and gateways to mailing lists that are related to Ruby and Ruby on Rails.
