@@ -2,4 +2,5 @@ There are several tools that work together with Cucumber that are developed by o
 
 ||Tool||Description||
 |"RCumber":http://github.com/jgoodsen/rcumber/wikis|Rails plugin to edit/run Cucumber tests|
+|"Vim-Cucumber":http://github.com/bmabey/vim-cucumber/tree/master|Cucumber syntax and other goodies for Vim|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, Sinatra and other web frameworks.|
