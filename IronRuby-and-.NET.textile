@@ -15,6 +15,12 @@ and
 
 <pre>rake --version</pre>
 
+If you already have MRI installed, make sure you have the latest version of RubyGems:
+
+<pre>SET HOME=C:\tmp
+gem update --system
+</pre>
+
 h2. Installing IronRuby
 
 With MRI installed we can install IronRuby. At the time of this writing there is no installer
