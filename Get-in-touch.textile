@@ -4,4 +4,4 @@ Got questions? Here is where you can get in touch:
 * "Lighthouse":http://rspec.lighthouseapp.com/projects/16211-cucumber/overview
 * "IRC":irc://irc.freenode.net/cucumber
 
-This is usually better than contacting individual developers directly. If you think you have found a bug, please try the latest gem version as well as the latest code here on GitHub before asking questions. When you file a bug report or ask a question, let us know what versions of relevant software you're using - at the very least the Cucumber version (<code>cucumber --version</code>) or what git commit you built from.
+This is usually better than contacting individual developers directly. If you think you have found a bug, please try the latest gem version as well as the latest code here on GitHub before asking questions. When you file a bug report or ask a question, let us know what versions of relevant software you're using - at the very least the <code>cucumber --version</code> or the SHA of the git commit you built from.
