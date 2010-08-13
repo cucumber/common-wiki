@@ -17,7 +17,7 @@ end
 
 This is pracical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
 
-<code>
+<pre>
 Scenario: View last incidents
   Given Linda is logged in # This will in fact invoke 2 step definitions
-</code>
+</pre>
