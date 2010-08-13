@@ -20,6 +20,13 @@ Keep in mind that all [[hooks]] need to be defined in the <code>Spork.each_run</
 
 The new <code>--drb</code> switch also works great alongside Cucumber's [[Autotest integration]]. Just add <code>--drb</code> to your autotest profile in [[cucumber.yml]]. This will give you much faster feedback from Autotest.
 
+If you need to run spork on a port other than the default (you're on a multi-user system, or you're testing more than one application), you may use the <code>--port</code> switch to specify a different port.  
+
+<code>  spork cucumber --port 12345 & </code>
+<code>  cucumber --drb --port 12345</code>
+
+Alternately, you may specify the environment variable <code>$CUCUMBER_DRB</code> and use spork and cucumber as normal.
+
 Although Spork was in mind when the <code>--drb</code> switch was added it is important to realize that all that was added
 to Cucumber was a DRb client.  Any DRb server that adheres to this protocol can be used with Cucumber's <code>--drb</code> switch. 
 
