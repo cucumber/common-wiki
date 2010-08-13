@@ -1,6 +1,6 @@
 h1. Introduction
 
-*{color:red}Please vote on the logos over at the new "Cucumber website":http://cukes.info*
+*{color:red}Please vote for a logo over at the new "Cucumber website":http://cukes.info*
 
 Cucumber is a tool that can execute feature documentation written in plain text. A typical Cucumber feature looks like this:
 
