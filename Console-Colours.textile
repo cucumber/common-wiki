@@ -22,7 +22,7 @@ The colours that you can change are:
 |skipped|%{color:cyan}cyan%|
 |skipped_param|%{color:cyan;font-weight: bold}cyan,bold%|
 |comment|%{color:grey}grey%|
-|tag|%{color:blue}blue% (v0.2.0 and up)|
+|tag|%{color:cyan}cyan% (v0.2.0 and up)|
 
 For instance, if your shell has a black background and a green font (like the
 "Homebrew" settings for OS X' Terminal.app), you may want to override passed
