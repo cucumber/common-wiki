@@ -7,6 +7,8 @@ The console output for Cucumber colours steps according to how execution went. I
 You can tweak the colours by defining a <code>$CUCUMBER_COLORS</code> variable in your shell, very much like you can tweak the colours of the familiar POSIX command <code>ls</code> with
 "$LSCOLORS or $LS_COLORS":http://mipsisrisc.com/rambling/2008/06/27/lscolorsls_colors-now-with-linux-support/.
 
+(Don't attempt to set it in your <code>support/env.rb</code> file or any other Ruby file. It must be defined _before_ Cucumber starts).
+
 The colours that you can change are:
 
 ||Key||Default colours||
