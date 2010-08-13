@@ -1,4 +1,4 @@
-Most Gherkin lines begin with a keyword and whitespace. Every <tt>.feature</tt> file consists of a feature header -- line starting with keyword *Feature* followed by free indented text -- optional background and a list of scenarios. You can write whatever you want up until the first scenario, which starts with the word *Scenario* (or localized equivalent) on a new line.  Gherkin is localized for [[Spoken Languages|dozens of languages]].
+Every <tt>.feature</tt> file conventionally consists of sigle feature. Line starting with keyword *Feature* followed by free indented text starts a feature. Feature usually contains a list of scenarios. You can write whatever you want up until the first scenario, which starts with the word *Scenario* (or localized equivalent, Gherkin is localized for [[Spoken Languages|dozens of languages]]) on a new line. You can use [[Tags|tagging]] to group features and scenarios together independent of your file and directory structure.
 
 Every scenario consists of a list of steps, which must start with one of the keywords *Given*, *When*, *Then*, *But* or *And*. Cucumber treats them all the same, but you shouldn't. Here is an example:
 
