@@ -22,6 +22,14 @@ Over the jar that was installed with the Selenium gem:
 
 GEM_INSTALL_DIR/Selenium-1.1.14/lib/selenium/openqa/selenium-server.jar.txt
 
+h3. Alternate Solution
+
+You can also patch the binary manually if the above solution does not work for you.
+
+"http://www.spacevatican.org/2008/9/27/selenium-and-firefox-3":http://www.spacevatican.org/2008/9/27/selenium-and-firefox-3
+
+A pre-patched binary can be found linked in the comments.
+
 h2. Step 3: Ubuntu fix (skip if you're not using Ubuntu)
 
 There is a bug with Selenium and Firefox 3 where Selenium cannot find: firefox-bin
