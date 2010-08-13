@@ -35,7 +35,7 @@ See "Running features":http://github.com/aslakhellesoy/cucumber/wikis/running-fe
 
 h3. Options
 
-You usually want to define a task to run all your features without RCov and then have an additional task to run with RCov.  Also, you usually need to specify certain options to RCov, such as output directory, for cruise control and other build purposes.  Below is an example  cucumer.rake file showing how to set options and define multiple cucumber tasks:
+You usually want to define a task to run all your features without RCov and then have an additional task to run with RCov.  Also, you usually need to specify certain options to RCov, such as output directory, for cruise control and other build purposes.  Below is an example  cucumber.rake file showing how to set options and define multiple cucumber tasks:
 
 <pre>
 desc "Run all features"
