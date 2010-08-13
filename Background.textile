@@ -1,4 +1,4 @@
-<a href="https://identitypi.com">Background check</a> allows you to add some context to the scenarios in a single feature. A Background is much like a scenario containing a number of steps. The difference is when it is run. The background is run before each of your scenarios but after any of your Before [[Hooks]].
+Background allows you to add some context to the scenarios in a single feature. A Background is much like a scenario containing a number of steps. The difference is when it is run. The background is run before each of your scenarios but after any of your Before [[Hooks]].
 
 Example:
 <pre></code>Feature: Multiple site support
