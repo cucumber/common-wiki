@@ -41,7 +41,7 @@ Open a Visual Studio command prompt and cd to where you downloaded the IronRuby 
 
 When you have completed this step you should be able to run
 
-<code>build\debug\ir.exe <code>
+<code>build\debug\ir.exe</code>
 
 This should give you a new prompt (Interactive IronRuby shell). Just type <code>exit</code>
 and hit enter. You have installed IronRuby!
