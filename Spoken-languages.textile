@@ -23,9 +23,13 @@ You have to tell Cucumber that you're using a different language than English (t
 
 h2. Listing the available languages
 
+*{color:red}Only available in 0.1.99 and above*
+
 <pre><code>cucumber --language help</code></pre>
 
 h2. Listing the keywords of a particular language
+
+*{color:red}Only available in 0.1.99 and above*
 
 For example Russian:
 
