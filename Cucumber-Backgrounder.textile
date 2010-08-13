@@ -115,7 +115,7 @@ However, in practice it proves important to write each test/feature step <em><st
 
 It is tempting to just <em>skip ahead</em>, particularly with features.  In some cases limited access to domain experts and end users may require that features be completed long before coding the associated step definitions is undertaken. Nonetheless, in the long run, it has proven best practice to write features and step definitions incrementally, using the absolute minimum of code; and then immediately implement the new feature step requirement in application code, also using the minimum code to satisfy it.  This is a hard discipline to accept but the value is that with this approach you will rarely have untested code anywhere in your application.
 
-If you do anticipate feature steps then by omitting any matcher in the step definitions files will cause these steps to be listed as <em>pending</em>.
+If you do anticipate feature steps then omitting any matcher for them in the step definitions files causes these steps to be listed as <em>pending</em>.
 <pre><code>script/generate feature Frooble name color description
       exists  features/step_definitions
       create  features/manage_froobles.feature
