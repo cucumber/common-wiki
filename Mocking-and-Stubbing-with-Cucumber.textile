@@ -2,7 +2,7 @@ We recommend you exercise your whole stack when using Cucumber. You *can* set up
 
 h2. RSpec 2.x
 
-Starting with Cucumber 0.8.4 you can use all of RSpec's supported mocking frameworks (RSpec, Mocha, RR, Flexmock). Just <code>require 'cucumber/rspec/double'</code> ("Test-Double":http://www.martinfowler.com/bliki/TestDouble.html is a more generic term than mocks and stubs).
+Starting with Cucumber 0.8.4 you can use all of RSpec's supported mocking frameworks (RSpec, Mocha, RR, Flexmock). Just <code>require 'cucumber/rspec/doubles'</code> ("Test-Double":http://www.martinfowler.com/bliki/TestDouble.html is a more generic term than mocks and stubs).
 
 Check out Cucumber's "example":http://github.com/aslakhellesoy/cucumber/tree/master/examples/rspec_doubles/ to see how it's used.
 
