@@ -18,8 +18,7 @@ The forgoing is written in the style of the feature statements that make up the 
 
 An archetypal RoR project directory tree looks like this:
 
-<pre> <code>
-MyProject
+<pre><code>MyProject
 |-- README
 |-- Rakefile
 |-- app
