@@ -58,9 +58,22 @@ If you like to write out lots of features at the beginning, you may want to keep
 
 h3. Customizing Autotest Behavior
 
-When autotest runs your features, it looks for an @autotest@ profile in your @cucumber.yml@.  If it finds one, it uses that profile when running your features.  It's useful to use the Pretty formatter in autotest to see exactly what's going on as your scenarios fail.  However, the Pretty formatter may be too much information when autotest does its final run-through of all of your features.  If you define an @autotest-all@ profile, autotest will use this profile instead when it runs all of your features.  You may want to use the Progress formatter for @autotest-all@.
+When autotest runs your features, it looks for an @autotest@ profile in your @cucumber.yml@.  If it finds one, it uses that profile when running your features.  It's useful to use the Pretty formatter in autotest to see exactly what's going on as your scenarios fail.  However, the Pretty formatter may be too much information when autotest does its final run-through of all of your features.  If you define an @autotest-all@ profile, autotest will use this profile instead when it runs all of your features.  You may want to use the Progress formatter for @autotest-all@.  For more information on defining profiles, see [[Running Features]].
 
-For more information on defining profiles, see [[Running Features]].
+You can also customize a number of elements of autotest itself by adding a @.autotest@ file to the root of your project and/or your home directory.  Most of these features are more useful for customizing the way unit tests run; for instance, you can customize the mapping between code files and the tests which test them.
+
+There is one autotest customization which can be very useful when using Cucumber.  Normally, autotest reruns whatever you're working on when it notices a change in any file in the tree.  If you're using Rails, some directories will be automatically ignored.  To tell autotest not to watch some files for changes, add something like this to your project's @.autotest@:
+
+<pre><code>
+  Autotest.add_hook :initialize do |at|
+    # Ignore files in tmp/
+    at.add_exception %r%^\./tmp%
+  end
+</code></pre>
+
+If you find that autotest runs your features continuously, your features may be changing a file which autotest is monitoring as they run.  Use a setting like this to ignore such files.
+
+For more information on configuring autotest, see the "ZenTest Documentation":http://zentest.rubyforge.org/ZenTest/.
 
 h3. Why is it disabled by default?
 
