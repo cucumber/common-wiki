@@ -1,0 +1,22 @@
+Also see:
+
+* [[Ruby on Rails]]
+* [[JRuby and Java]]
+* [[IronRuby and .NET]]
+
+After you have installed Ruby, install Cucumber with the following command:
+
+<pre>gem install cucumber</pre>
+
+This is a good time to get familiar with <code>--help</code>  (See also [[Command Line Help]].)
+
+<pre>cucumber --help</pre>
+
+h3. Building the Gem yourself
+
+Get the code via Git (or download a tarball).
+
+<pre><code>git clone git://github.com/aslakhellesoy/cucumber.git
+cd cucumber
+rake install_gem
+</code></pre>
