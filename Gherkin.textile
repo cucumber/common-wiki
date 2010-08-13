@@ -27,10 +27,10 @@ A Gherkin source file usually looks like this
  6:   Scenario: Some determinable business situation
  7:     Given some precondition
  8:       And some other precondition
- 9:     When some action by the actor
+ 9:      When some action by the actor
 10:       And some other action
 11:       And yet another action
-12:     Then some testable outcome is achieved
+12:      Then some testable outcome is achieved
 13:       And something else we can check happens too
 14: 
 15:   Scenario: A different situation
