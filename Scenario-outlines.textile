@@ -1,7 +1,7 @@
-In some situations Scenario tables for a Scenario can get a little verbose. For example when you want to:
+In some situations Scenario tables for a Scenario can get a little verbose. For example when you want:
 
-* Have a Scenario table value to appear in multiple places in your Scenario steps. 
-* Ignore some matches from the steps in the scenario table.
+* A Scenario table value to appear in multiple places in your Scenario steps. 
+* To ignore some matches from the steps in the scenario table.
 
 Scenario outlines allow us to more concisely express these examples through the use of a template with placeholders. 
 
