@@ -24,7 +24,7 @@ and programmers (for the step definitions, which are written in Ruby).
 
 Cucumber itself is also written in Ruby, but it can be used to "test" code written in Ruby or other languages with the help of some extra tools:
 
-* Java: Use "JRuby":http://binil.wordpress.com/2008/10/29/running-cucumber-on-jrubymaven/ 
+* [[JRuby and Java]]
 * [[IronRuby and .NET]]
 * Flex: Use "FunFX":http://github.com/peternic/funfx
 * Web apps in any language: Use "Watir":http://wtr.rubyforge.org/, "Selenium":http://selenium.seleniumhq.org/ or "Celerity":http://celerity.rubyforge.org/
