@@ -11,6 +11,7 @@ If you contact a developer directly you may not get an answer. If you do get an 
 h2. Before you consider asking
 
 Try the latest released gem: <code>gem update cucumber</code>
+
 If that doesn't help, try the latest beta gem: <code>gem install aslakhellesoy-cucumber --source http://gems.github.com/</code>
 
 h2. Before you ask
