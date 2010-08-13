@@ -1,8 +1,40 @@
-*{color:red}Note that this information will go out of date when Cucumber 0.4 is released. See "here":https://rspec.lighthouseapp.com/projects/16211-cucumber/tickets/438-deprecate-cucumberastvisitor-and-make-formatters-simple-listeners for more details.*
+*{color:red}The API for Cucumber's formatters changed significantly when Cucumber 0.4 was released. See "here":https://rspec.lighthouseapp.com/projects/16211-cucumber/tickets/438-deprecate-cucumberastvisitor-and-make-formatters-simple-listeners for more details.*
 
-The public API for Cucumber's formatters is defined by all the methods in the <code>Cucumber::Ast::Visitor</code> class, which you should use as your base class.
+As Cucumber runs your features, it calls out to any number of listener objects to let them know how it's progressing. These listeners are notified at various points throughout the run of features. You can visualise this by using the 'debug' formatter. For example, look at the listener methods called for this simple feature in Cucumber's own test suite:
 
-If you want to write your own custom formatter, just subclass <code>Cucumber::Ast::Visitor</code>. Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers).
+<pre>
+$cucumber --format debug examples/self_test/sample.feature:6
+
+before_features
+  before_feature
+    before_comment
+      comment_line
+    after_comment
+    before_tags
+      tag_name
+    after_tags
+    feature_name
+    before_feature_element
+      before_tags
+        tag_name
+        tag_name
+      after_tags
+      scenario_name
+      before_steps
+        before_step
+          before_step_result
+            step_name
+          after_step_result
+        after_step
+      after_steps
+    after_feature_element
+  after_feature
+after_features
+</pre> 
+
+If you want to write your own custom formatter, just create a class that implements any of the methods you see in the output from the debug formatter. Let's have an example.
+
+Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers).
 
 Here is how you'd do that:
 
@@ -14,7 +46,7 @@ require 'rubygems'
 require 'twitter'
 
 module Silly
-  class TwitterFormatter < Cucumber::Ast::Visitor
+  class TwitterFormatter
     def initialize(step_mother, io, options)
       super(step_mother)
       # We don't care about these - we're just twittering!
@@ -45,5 +77,5 @@ p. This means that you have to add your <code>support</code> folder to <code>--r
 
 h2. Other Formatters
 
-# "TeamCityFormatter:":http://github.com/darrell/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
+# "TeamCityFormatter:":http://github.com/mattwynne/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
 # "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript for Textmate
