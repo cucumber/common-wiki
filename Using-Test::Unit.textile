@@ -1,4 +1,4 @@
-Don't like RSpec's <pre>should</pre> methods for assertions? No problem, we won't force you to. You can use the familiar Test::Unit <pre>assert</pre> methods by defining your own World block:
+Don't like RSpec's <code>should</code> methods for assertions? No problem, we won't force you to. You can use the familiar Test::Unit <code>assert</code> methods by defining your own "World":a-whole-new-world block:
 
 <pre>
 require 'test/unit/assertions'
