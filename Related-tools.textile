@@ -14,7 +14,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"FeaturesReport":http://www.daniellucraft.com/blog/tag/features_report/|Create a PDF report of Cucumber features.|
 |[[FunFX and Flex]]| Test Adobe Flex applications with Cucumber|
 |"Greendot":http://github.com/bruce/greendot|Describe apps as state machines, with various outputs (including Cucumber features).|
-|[[IronRuby and .NET]]| Test Java applications with Cucumber|
+|[[IronRuby and .NET]]| Test .NET applications with Cucumber|
 |[[JRuby and Java]]| Test Java applications with Cucumber|
 |"Jeweler":http://github.com/technicalpickles/jeweler|Craft the perfect RubyGem - with built-in Cucumber support|
 |"Merb Cucumber":http://github.com/david/merb_cucumber|"Merb":http://merbivore.com/ + Cucumber integration.|
