@@ -33,7 +33,7 @@ end</code></pre>
 * Debugger
 ** Description: a step to go into the debugger
 ** Motivation: because puts statements just don't cut it
-** Examples:<pre><code>Given a user
+** Examples:<pre><code>When I go to the homepage
 And debugger</code></pre>
 ** Implementation:
 <pre><code>Then /^debugger$/ do
