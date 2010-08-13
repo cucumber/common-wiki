@@ -38,7 +38,7 @@ Take a look at the generated files. If you need to, you can tweak them later.
 
 h2. Install new dependencies
 
-<pre><code>[sudo] rake gems:install</code></pre>
+<pre><code>[sudo] rake RAILS_ENV=cucumber gems:install</code></pre>
 
 h2. Start a feature
 
