@@ -1,6 +1,6 @@
 h2. Webrat
 
-You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Webrat":http://www.brynary.com/uploads/webrat/rdoc/index.html!
+You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Webrat":http://github.com/brynary/webrat/tree/master!
 
 Just make sure you have a <code>features/support/env.rb</code> file with the following:
 
