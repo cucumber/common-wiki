@@ -2,13 +2,15 @@ h2. Or: How I Learned to Stop Worrying and Love Testing
 
 h3. Introduction
 
-This document deals principally with initial set up and first use of the <strong><em> Cucumber</em></strong> gem, a behaviour driven development (BDD) tool, for a project using the Ruby on Rails (RoR) framework.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development, "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU aka "Cowboy Coding":http://en.wikipedia.org/wiki/Cowboy_coding) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].  "Getting Started with Rails":http://www.ultrasaurus.com/code/2008/12/getting-started-with-rails.html is a useful introductory tutorial dealing with Rails and Cucumber.  Using cucumber outside the RoR framework will be covered in another document, when I get time to write it and have something useful to say.
+This document deals principally with initial set up and first use of the <strong><em> Cucumber-Rails</em></strong> gem, that uses <strong><em>Cucumber</em></strong>, a behaviour driven development (BDD) tool, for designing and implementing a project using the Ruby on Rails (RoR) framework.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development, "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU aka "Cowboy Coding":http://en.wikipedia.org/wiki/Cowboy_coding) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].  "Getting Started with Rails":http://www.ultrasaurus.com/code/2008/12/getting-started-with-rails.html is a useful introductory tutorial dealing with Rails and Cucumber.  
+
+Since the original version of this article appeared, Cucumber has undergone repeated revisions and refactorings.  Among these was the sensible decision to move framework specific implementations into their own gems.  Consequently, installing Cucumber for a framework now frequently starts with installing the specific framework cucumber gem, which will pull in the core cucumber gem as a dependency.
 
 h3. Where to Start?
 
 <pre>Given you have installed the gem named "rails"
   And you have generated a RoR project named "my_project"
-  And you have installed the gem named "cucumber"
+  And you have installed the gem named "cucumber-rails"
   And your session working directory is the Rails root directory of "my_project"
 
 When you run "script/generate cucumber"
@@ -52,25 +54,9 @@ h3.  Where do I put Tests?
 
 Cucumber divides testing into two parts, the outward facing feature <em>steps</em> and the inward facing <em>step definitions</em>.  As discussed elsewhere, [[Feature Introduction|features]] are descriptions of desired outcomes (<strong>Then</strong>) following upon specific events (<strong>When</strong>) under predefined conditions (<strong>Given</strong>).  They are typically used in conjunction with end-user input and, in some cases, may be entirely under end-user (in the form of a domain expert) control. Feature files are given the extension <code>.feature</code>.  
 
-A source of potential confusion is that the term <em><strong>steps</strong></em>, when used loosely, has two, closely related but vitally distinct, meanings depending on context.  Inside feature.feature files, steps are the textual descriptions which form the body of a scenario.  These are prefaced with Given, When, Then, and And (note as well that the capitalization of these four keywords/method names is significant).  Inside a step_definitions.rb file, steps (which strictly speaking should always be called step definitions) refers to the <em>matcher</em> methods, given exactly the same names (Given, When, or Then, but *not And*),  each provided with a matcher regexp that corresponds to one or more feature steps.  Note that the method name does NOT form part of the matcher.  A Given feature clause can match a When step definition matcher.
+A source of potential confusion is that the term <em><strong>steps</strong></em>, when used loosely, has two, closely related but vitally distinct, meanings depending on context.  Inside feature.feature files, steps are the textual descriptions which form the body of a scenario.  These are prefaced with Given, When, Then, and And (note as well that the capitalization of these four keywords/method names is significant).  Inside a step_definitions.rb file, steps (which strictly speaking should always be called step definitions) refers to the <em>matcher</em> methods, given exactly the same names (Given, When, or Then, but *not And*),  each provided with a matcher regexp that corresponds to one or more feature steps.  Note that the method name does NOT form part of the matcher.  A Given feature clause can match a When step definition matcher.  Over time, clauses from features have come to be referred to simply as <em>features</em> while <em>steps</em> now refers almost exclusively to step-matchers
 
-[[Step Organisation|Step definitions]], keyed by their snippets of text from the feature files, invoke blocks of ruby and rails code that usually contains assertion statements from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is unsurprising that the cucumber generator assumes that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
-
-<pre><code># cucumber-0.1.11
-# Sets up the Rails environment for Cucumber
-ENV["RAILS_ENV"] = "test"
-require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
-require 'cucumber/rails/world'
-Cucumber::Rails.use_transactional_fixtures
-
-require 'webrat/rails'
-
-# Comment out the next two lines if you're not using RSpec's matchers (should / should_not) in your steps.
-require 'cucumber/rails/rspec'
-require 'webrat/rspec-rails'
-</code></pre>
-
-You are not limited to this testing framework however.  If you choose to use Rails built-in TestUnit, or any other testing suite, then you may do that by extending the cucumber working environment as explained in [[Using Test::Unit]].
+[[Step Organisation|Step definitions]], keyed by their snippets of text from the feature files, invoke blocks of ruby and rails code that usually contains assertion statements from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is unsurprising that the cucumber generator once assumed that rspec was available.  This has long since ceased to be the case.  What cucumber does now is detect if the rspec and rspec-rails gems are installed.  If so then the rails generator builds the environment files to suite and if not then it ignores rspec and configures for test-unit instead.
 
 As detailed above, the default features directory tree is fairly shallow.  One can put every feature into a single file in the features directory and every step in a single file in the steps_definition directory (or even in the features directory itself) if one so chooses.  One can choose to have one or more feature files for each feature together with one or more step files for each feature file; or any combination thereof.  However, cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
 
