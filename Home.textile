@@ -2,7 +2,7 @@ h1. Introduction
 
 *{color:red}Please vote for a logo over at the new "Cucumber website":http://cukes.info*
 
-Cucumber is a tool that provides software teams with a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html for describing software's behaviour. Plain text documents written in Cucumber's DSL can be executed as automated functional tests and describe how the features in the system behave. Here is an example:
+Cucumber is a tool that can execute plain-text documents as automated functional tests. Here is an example:
 
 <pre>Feature: Search courses
   In order to ensure better utilisation of courses
@@ -19,8 +19,9 @@ Cucumber is a tool that provides software teams with a "Business Readable, Domai
       | C     |
 </pre>
 
-Cucumber targets non technical business analysts, interaction designers, domain experts, testers (for the plain text part) 
-and programmers (for the step definitions, which are written in Ruby). 
+The language that Cucumber understands is called [[Gherkin]]. Cucumber targets non technical business analysts, 
+interaction designers, domain experts, testers (for the plain text part) and programmers (for the step definitions, which 
+are written in Ruby). 
 
 Cucumber itself is also written in Ruby, but it can be used to "test" code written in Ruby or other languages with the help of some extra tools:
 
