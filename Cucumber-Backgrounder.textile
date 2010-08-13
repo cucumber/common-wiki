@@ -237,7 +237,7 @@ h3. Anything Else?
 
 The terminology for elements of Behaviour Driven Development differs somewhat from that employed by Test Driven Development.  This article, because of the introductory nature of its contents, tends to blur the semantic distinction between these two competitive philosophies.
 
-Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitionss in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and, may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
+Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitions in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and, may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
 Cucumber 0.1.11 comes preconfigured for webrat together with webrat test steps.  If you have webrat installed as a plugin in your project then these are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you need add this to the features/support/env.rb file:
 
@@ -255,6 +255,8 @@ require 'cucumber/rails/rspec'
 Calls for any additional Ruby libraries that your particular testing environment requires should typically be placed in the <code>./features/support/env.rb</code> file.
 
 For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest;  so, no popups when a step fails.  However, there exists a project to add a similar functionality to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
+
+<code>autotest</code> is installed via the "ZenTest":http://www.zenspider.com/ZSS/Products/ZenTest/ gem.
 
 h3.  Need Help?
 
