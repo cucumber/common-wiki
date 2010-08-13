@@ -2,12 +2,12 @@ You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Web
 
 Just make sure you have a <code>features/support/env.rb</code> file with the following:
 
-<pre><code># RSpec matchers
-require 'spec/expectations'
-
-# NOTE: This must come before the require 'webrat', otherwise 
+<pre><code># NOTE: This must come before the require 'webrat', otherwise 
 # sinatra will look in the wrong place for it's views.
 require File.dirname(__FILE__) + '/../../your_sinatra_app'
+
+# RSpec matchers
+require 'spec/expectations'
 
 # Webrat
 require 'webrat'
