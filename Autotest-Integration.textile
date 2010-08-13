@@ -2,6 +2,10 @@ Cucumber comes with an autotest plugin that will hook into the regular autotest 
 
 <pre><code>$ AUTOFEATURE=true autospec</code></pre>
 
+or if you'r not using RSpec:
+
+<pre><code>$ AUTOFEATURE=true autotest</code></pre>
+
 If you always want to have the plugin run then you can export the variable in your .bash_profile or other shell file like so:
 
 POSIX shell:
@@ -10,7 +14,12 @@ POSIX shell:
 Windows command shell:
 <pre><code>> set AUTOFEATURE=true</code></pre>
 
-By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create an 'autotest' profile in your cucumber.yml.  Please see [[Running Features]] for more information about profiles.
+By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create two profiles in your cucumber.yml: 
+
+* <code>autotest</code> : This profile is used when Autotest wants to run only the failing scenarios.
+* <code>autotest-all</code> : This profile is used when Autotest wants to run all the scenarios (right after a red->green transiation).
+
+Please see [[Running Features]] for more information about profiles.
 
 h3. What does it do?
 
