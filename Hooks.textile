@@ -60,3 +60,12 @@ at_exit do
   my_heavy_object.undo_it
 end
 </code></pre>
+
+You may also provide an <code>AfterConfiguration</code> hook that will be run after Cucumber has been configured. The block you provide will be passed the cucumber configuration (an instance of <code>Cucumber::Cli::Configuration</code>). Example:
+
+<pre><code>AfterConfiguration do |config|
+  puts "Features dwell in #{config.feature_dirs}"
+end
+</code></pre>
+
+This hook will run only once; after support has been loaded but before features are loaded. You can use this hook to extend Cucumber, for example you could affect how features are loaded or register [[custom formatters]] programatically.
