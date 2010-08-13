@@ -1,9 +1,19 @@
 Cucumber not ripe? Can't find your peeler? These are some common problems people have experienced. -And how to address them.
 
-h2. All the 'a' and 'A' letters are lost in the output on Windows
+h2. Console output isn't right on Windows
 
-Solution: Add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. For more info, see "Lighthouse issue #81":http://rspec.lighthouseapp.com/projects/16211/tickets/81-windows-all-the-a-characters-in-the-output-have-gone-on-strike
+Missing _a_s in the output? Do your _æ_s, _ø_s and _å_s looke like garbled "Commodore 64 characters"http://kofler.dot.at/c64/ ? There are three steps to fix this.
 
-h2. Special characters aren't outputted correctly to the console on Windows
+First - add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. 
 
-Solution: Add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. Then set your command window's font to a font that has the characters you're outputting - for example <code>Upper Left corner icon menu -> Properties -> Font -> Lucida Grande</code>
+Second - set your command window's font to a font that has the characters you're outputting - for example <code>Upper Left corner icon menu -> Properties -> Font -> Lucida Grande</code>
+
+Third - in your command prompt, change the codepage:
+
+<pre>chcp 1252</pre>
+
+Now you should be able to get aæøå in your output on Windows.
+
+Note that 1252 is not UTF-8 - it's essentially Latin1. You can also try to set it to 65001, which is UTF-8, but this has the "unfortunate side effect":http://www.google.no/search?q=chcp+65001+bat&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a of temporarily neutering all your computer's bat files so they cannot be executed (including cucumber.bat and rake.bat).
+
+For more info, see "Lighthouse issue #81":http://rspec.lighthouseapp.com/projects/16211/tickets/81-windows-all-the-a-characters-in-the-output-have-gone-on-strike
