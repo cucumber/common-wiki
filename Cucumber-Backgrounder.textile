@@ -225,7 +225,7 @@ In a manner similar to my convention of using only using the *When* method for s
 
 <pre>
 When /my matcher named (.*)/ do |match|
-  Then "my other matcher named \"#{match}\"'
+  Then "my other matcher named \"#{match}\""
 end
 
 The choice of method has no impact on the result but, When and Then used in this fashion seem to me to read more naturally.
@@ -271,7 +271,7 @@ For those of you that have used <code>growl</code> or <code>snarl</code> to prov
 
 <code>autotest</code> is installed via the "ZenTest":http://www.zenspider.com/ZSS/Products/ZenTest/ gem.  If you use autotest then take a look at the contents of <code>example_dot_autotest.rb</code> in the ZenTest gem root directory.
 
-Realize that tests either pass or fail and that fail is NOT the same as false.  When, in RSpec, <code>something.should_be 0</code> and it is not, then what is returned is *fail* and not *false*.  In raw cucumber (pardon the pun) one writes <code>fail if false</fail> and not simply <code>false</code>.
+Realize that tests/assertions/expectations either pass or fail and that fail is NOT the same as false, whereas anything but fail is a pass.  When, in RSpec, <code>something.should_be 0</code> and it is not, then what is returned is *fail* and not *false*.  In raw cucumber (pardon the pun) one writes <code>fail if false</code> and not simply <code>false</code>.
 
 h3.  Need Help?
 
