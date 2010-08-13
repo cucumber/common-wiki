@@ -37,19 +37,35 @@ end
 
 h2. Tagged hooks
 
-Sometimes you may want a certain hook to run only for certain scenarios. This can be achieved by associating a <code>Before</code>, <code>After</code> or <code>AfterStep</code> hook with one or more [[tags]]. Example:
+Sometimes you may want a certain hook to run only for certain scenarios. This can be achieved by associating a <code>Before</code>, <code>After</code> or <code>AfterStep</code> hook with one or more [[tags]]. You can OR and AND tags in much the same way as you can when running Cucumber from the command line. Examples: 
+
+To OR tags pass the tags as separate tag strings:
 
 <pre><code>Before('@cucumis', '@sativus') do
   # This will only run before scenarios tagged
-  # with @cucumis or @sativus.
-end
-</code></pre>
+  # with @cucumis OR @sativus.
+end</code></pre>
+
+To AND tags pass the tags in a single string comma separated:
+
+<pre><code>Before('@cucumis,@sativus') do
+  # This will only run before scenarios tagged
+  # with @cucumis AND @sativus.
+end</code></pre>
+
+You create complex tag conditions using both OR and AND on tags:
+
+<pre><code>Before('@cucumis,@sativus', '@cucumis') do
+  # This will only run before scenarios tagged
+  # with (@cucumis AND @sativus) OR @cucumis 
+end</code></pre>
+
+After Step example:
 
 <pre><code>AfterStep('@cucumis', '@sativus') do
   # This will only run before steps within scenarios tagged
   # with @cucumis or @sativus.
-end
-</code></pre>
+end</code></pre>
 
 Think twice before you use this feature, as whatever happens in hooks is invisible to people who only read the features. You should consider using [[background]] as a more explicit alternative if the setup should be readable by non-technical people. 
 
