@@ -107,7 +107,9 @@ Consider, however, that the cucumber feature generator will place the files it p
 
 h3. How do I Write Tests?
 
-Detailed discussion of feature writing and step construction are provided elsewhere (and I will provide links when I get around to it).  None-the-less, a brief outline is provided here.  A <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature consists of multiple Scenarios.  Each Scenario consists of three sections, Given, When and Then.  Each section consists of one or more clauses that are used to match test steps. The conventional arrangement is:
+Detailed discussion of feature writing and step construction are provided elsewhere (and I will provide links when I get around to it).  None-the-less, a brief outline is provided here.  Perhaps the easiest thing to do is to use cucumber's built-in generator to create a feature scaffold and modify it.  
+<pre><code>script/generate feature Frooble name color description</code></pre>
+A <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature consists of multiple Scenarios.  Each Scenario consists of three sections, Given, When and Then.  Each section consists of one or more clauses that are used to match test steps. The conventional arrangement is:
 
 <pre>Feature: Some terse yet descriptive text
 In order to/that <some business value>
