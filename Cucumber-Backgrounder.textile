@@ -62,3 +62,43 @@ require 'cucumber/rails/rspec'
 </code></pre>
 
 You are not limited to this however.  If you choose to use Rails built-in TestUnit or other testing suite then you may do that by extending the cucumber working environment as explained in [[Using Test::Unit]].
+
+The default layout of the features directory is fairly flat.  However, cucumber is programmed with the flexibility to support an much more expressive directory structure.  For instance:
+
+<pre><code>|-- features
+|   |-- entities
+|   |   |-- entity.feature
+|   |   `-- step_definitions
+|   |       |-- anything.rb
+|   |       `-- entity_steps.rb
+|   |-- locations
+|   |   |-- location.feature
+|   |   `-- step_definitions
+|   |       `-- location_steps.rb
+|   |-- sites
+|   |   `-- step_definitions
+|   |-- step_definitions
+|   |   `-- webrat_steps.rb
+|   `-- support
+|       `-- env.rb
+</code></pre>
+
+In this case the bland initial setup has been divided into sub-directories driven by a model-centric view.  However this could equally well have been broken up in to model/controller/view hierarchies:
+<pre><code>|-- features
+|   |-- models
+|   |   |-- entities
+|   |   |   |-- entity.feature
+|   |   |   `-- step_definitions
+|   |   |       |-- anything.rb
+|   |   |       `-- entity_steps.rb
+|   |-- views
+|   |   |   |-- entity_new
+|   |   |   `-- step_definitions
+|   |   |       `-- entity_new_steps.rb
+|   |   |-- step_definitions
+|   |   |   `-- webrat_steps.rb
+|   |   `-- support
+|   |       `-- env.rb
+</code></pre>
+
+<pre><code></code></pre>
