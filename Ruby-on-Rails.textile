@@ -3,22 +3,14 @@ in the step definitions. Here is how to get you started.
 
 h2. Install Cucumber, Webrat and RSpec
 
+*Ubuntu/Debian users:* Follow these "Nokogiri install instructions":http://hightechsorcery.com/2008/12/howto-install-nokogiri-gem-ubuntu first.
+
 You can use both Rubygems or Rails' plugin mechanism. We usually recommend Rubygems. You can read a longer discussion "here":http://www.ruby-forum.com/topic/167379.
 
 h3. Using Rubygems
 
 The easiest is to install everything as a gem.
 <pre><code>[sudo] gem install rspec rspec-rails cucumber webrat
-</code></pre>
-
-*important:* As of this writing, Cucumber 0.1.13  depends on Webrat code that isn't officially released as a gem on Rubyforge. In the meanwhile, install Aslak Hellesøy's snapshot gem:
-
-<pre><code>gem sources -a http://gems.github.com
-[sudo] gem install aslakhellesoy-webrat
-</code></pre>
-
-*Ubuntu/Debian users:* You need to install the following libs for nokogiri to install properly (from "webrat home":http://github.com/brynary/webrat/tree/master):
-<pre><code>sudo apt-get install libxslt1-dev libxml2-dev
 </code></pre>
 
 If you use gems, you have to make sure everybody on the team has the same version of the gems installed. Also note that you don't *have to* use rspec and rspec-rails and webrat, but we suggest you use them unless you have good reasons to use something else.
