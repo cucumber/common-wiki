@@ -1,6 +1,6 @@
-!http://cukes.info/images/cucumber_logo.png!
+!http://cukes.info/images/cucumber_logo.png!:http://cukes.info/ !http://assets2.pragprog.com/images/covers/190x228/betas/achbd.jpg!:http://www.pragprog.com/titles/achbd
 
-Also check out the "official web site":http://cukes.info/ for more marketing blurbs.
+The "official Cucumber web site":http://cukes.info/ has some more marketing blurbs for you...
 
 Cucumber is a tool that can execute plain-text documents as automated functional tests. Here is an example:
 
