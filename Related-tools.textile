@@ -36,6 +36,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"RSpec":http://rspec.info|Use RSpec's <code>Object.should</code> and <code>Object.should_not</code> to compare values in your step definitions|
 |"rSquery":http://github.com/caifara/rsquery/tree/master|Using jquery matchers and more in selenium, taking the pain out of writing selenium tests.|
 |"JetBrains RubyMine":http://blogs.jetbrains.com/ruby/tag/cucumber/| Syntax highlighting and Test Runner UI|
+|"JetBrains TeamCity Formatter":http://blogs.7digital.com/dev/2009/09/03/cucumber-tests-as-first-class-citizens-in-teamcity/|Format features nicely within the TeamCity CI server|
 |"Swinger":http://github.com/demetriusnunes/swinger/tree/master|Write acceptance tests for Java/Swing Desktop apps using Cucumber!|
 |"Testjour":http://github.com/brynary/testjour|Distributed test running (for Cucumber first).|
 |"Vim-Cucumber":http://github.com/tpope/vim-cucumber/tree/master|Feature syntax highlighting for "Vim":http://www.vim.org/.|
