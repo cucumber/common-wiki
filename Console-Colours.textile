@@ -50,3 +50,7 @@ h2. Windows
 Windows users using MRI (the one-click ruby installer) will have to install the <code>win32console></code> gem. (Currently "this doesn't work on Ruby 1.9":http://groups.google.com/group/cukes/browse_thread/thread/14a4ded4d083f7c). 
 
 If you're on JRuby you have to use "wac":http://github.com/aslakhellesoy/wac (Windows ANSI Color).
+
+ex:
+
+@cucumber --color plugins\project\features\drb_service.feature | wac@
