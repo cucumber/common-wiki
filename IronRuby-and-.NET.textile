@@ -91,16 +91,13 @@ location you'll find them under <code>C:\ruby\lib\ruby\gems\1.8\gems\cucumber-X.
 
 h3. Run the plain ruby example
 
-<pre><code>
-cd i18n\en
+<pre><code>cd i18n\en
 icucumber features
 </code></pre>
 
 h3. Run the C# example
 
-<pre><code>
-cd cs
+<pre><code>cd cs
+compile.bat
 icucumber features
 </code></pre>
-
-There is a deliberate error in the C# code. See if you can fix it!
