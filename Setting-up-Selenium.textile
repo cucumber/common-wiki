@@ -112,9 +112,11 @@ end
 
 
 Before do
-  # truncate your tables here, since you can't use transactional fixtures
+  # truncate your tables here, since you can't use transactional fixtures*
 end
 </code></pre>
+
+<small>* For truncating your DB take a look at "DatabaseCleaner":http://github.com/bmabey/database_cleaner/tree/master</small>
 
 In plain.rb, set up the standard webrat features:
 
