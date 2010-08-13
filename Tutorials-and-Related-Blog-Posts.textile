@@ -3,6 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Custom User-Agent with Mechanize":http://otaqui.com/blog/541/custom-user-agent-with-cucumber-tests-and-webrat-in-mechanize-mode/|Pete Otaqui explains how to pretend you're a Palm Pre and other devices|Mar 8 2010|
 |"Pairwise testing with Cucumber":http://blog.josephwilk.net/ruby/pairwise-testing-with-cucumber.html| Joseph Wilk examines how pairwise testing can help handle combinatorial problems in Cucumber|Jan 9th 2010 |
 |"BDD in .NET with Cucumber, Cuke4Nuke and TeamCity":http://gojko.net/2010/01/01/bdd-in-net-with-cucumber-cuke4nuke-and-teamcity/|"Gojko Adzic":http://gojko.net/about/ gives a great introduction to Cucumber on .NET|Jan 1 2010|
 |"Yes Mum, I’ll Behave: Beginning Behaviour Driven Infrastructure":http://www.kartar.net/2009/12/yes-mum-ill-behave-beginning-behaviour-driven-infrastructure/|James Turnbull has a long piece on Cucumber and Nagios|Dec 21 2009|
