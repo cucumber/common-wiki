@@ -116,7 +116,7 @@ Constructing ones first tests, or features as BDD purists prefer, is often accom
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
 
-However, in practice it proves important to write each test/feature step <em><strong>one at a time</strong></em>.  After each feature step is added then you should immediately create the corresponding step definition method.  Following the creation of the actual test/step definition that your new application should satisfy then you should write the minimal application code that gets the new test/step definition to pass before moving on to the next feature step. 
+However, in practice it proves important to write each test/feature step <em><strong>one at a time</strong></em>.  After each feature step is added then you should immediately create the corresponding step definition method.  Following the creation of the actual test/step definition that your new application should satisfy then you should write the minimal application code that gets the new test/step definition to pass before moving on to the next feature step.
 
 It is tempting to just <em>skip ahead</em>, particularly with features.  In some cases limited access to domain experts and end users may require that many feature steps be completed long before coding the associated step definitions is undertaken. Nonetheless, in the long run, it has proven best practice to write features and step definitions incrementally, using the absolute minimum of code; and then immediately implement the new feature step requirement in application code, also using the minimum code to satisfy it.  This is a hard discipline to accept but the value is that with this approach you will rarely have untested code anywhere in your application and your application will only have code that satisfies required features.
 
@@ -187,7 +187,6 @@ Note that you are not required to use a matched subpattern, <code>(.* )</code>, 
 It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
 <pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
-I strongly recommended that, as much as possible, your feature steps should be expressed in complete but simple sentences that follow a <em><strong>Subject</strong></em> <em><strong>Verb</strong></em> <em><strong>Object</strong></em> pattern.
 
 Finally, you can have step definitions call other step definitions.  For example:
 
