@@ -1,3 +1,3 @@
 Gherkin is the language that Cucumber understands. It is a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html that lets you describe software's behaviour without detailing how that behaviour is implemented. Gherkin serves two purposes - documentation and automated tests. -And a third bonus feature - when it yells in red don't be offended - it's talking to you, telling you what code you should write.
 
-Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase. The grammar exists in different flavours for several [[Spoken languages]], where the keywords of the grammar have been localised.
+Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase. The grammar exists in different flavours for several [[Spoken languages]], so that your team can use the [[Given When Then]] keywords (plus a few more) in your own language.
