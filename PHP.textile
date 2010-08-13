@@ -18,6 +18,7 @@ Here is how to do it:
     # Add github's gem source list
     And I run "gem sources -a http://gems.github.com"
     And I run "sudo gem install cucumber mechanize rspec webrat"
+    Then I have installed cucumber
 
   Scenario: Setup a cucumber environment for your php app
     Given I have a php app that is running
