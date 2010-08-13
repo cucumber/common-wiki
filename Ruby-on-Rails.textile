@@ -14,19 +14,23 @@ If you use Git for your Rails app, add the following plugins:
 git submodule add git://github.com/brynary/webrat.git vendor/plugins/webrat
 </code></pre>
 
+[Apparently, the latest thinking is to install webrat and cucumber as gems, not plugins. See http://www.ruby-forum.com/topic/167379. ]
+
 If your own Rails code is *not* in Git, just replace <code>submodule add</code> with <code>clone</code>.
 If you're behind a proxy, try to replace <code>git://</code> with <code>http://</code> and set the <code>http_proxy</code> environment variable.
 As a last resort, download tarballs from GitHub.
 
 h2. Install Other dependencies
 
-<pre><code>gem install term-ansicolor treetop diff-lcs hpricot</code></pre>
+<pre><code>gem install term-ansicolor treetop diff-lcs hpricot nokogiri </code></pre>
 
 h2. Create Your Rails Project
 
-Don't forget to create the rails project and the corresponding databases (if you haven't done so yet) with the following command:
+Create the rails project with the following command:
 
 <pre><code>rails YourProjectName</code></pre>
+
+Don't forget to create the corresponding databases. 
 
 Write all commands in the next steps from this project's path.
 
@@ -37,7 +41,7 @@ You create these with:
 
 <pre><code>ruby script/generate cucumber</code></pre>
 
-Take a look at the generated files. If you need to, you can go and tweak them later.
+Take a look at the generated files. If you need to, you can tweak them later.
 
 h2. Start a feature
 
@@ -61,9 +65,6 @@ Now you can execute:
 <pre><code>rake features</code></pre>
 
 This should result in failing scenarios, because you haven't written any code yet (I hope). 
-
-Note: You may need to install nokogiri
-<pre><code>sudo gem install nokogiri</code></pre>
 
 Now it's time to write some code, or generate some. Try this:
 <pre><code>script/generate rspec_scaffold Frooble name:string color:string description:text
