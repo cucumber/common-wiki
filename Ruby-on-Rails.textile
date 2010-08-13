@@ -3,6 +3,8 @@ in the step definitions. Here is how to get you started.
 
 h2. Install Cucumber, Webrat and RSpec
 
+If you use Git for your Rails app, add the following plugins:
+
 <pre><code>git submodule add git://github.com/aslakhellesoy/cucumber.git vendor/plugins/cucumber
 git submodule add git://github.com/brynary/webrat.git vendor/plugins/webrat
 git submodule add git://github.com/dchelimsky/rspec.git vendor/plugins/rspec
