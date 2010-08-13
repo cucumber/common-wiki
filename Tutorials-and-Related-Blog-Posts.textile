@@ -3,6 +3,8 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Test Driven Deployment - mcollective, puppet, cucumber":http://www.devco.net/archives/2009/11/06/test_driven_deployment_-_mcollective_puppet_cucumber.php | R.I.Pienaar demos driving his system orchestration tool mcollective with Cucumber features | Nov 6 2009 |
+|"Behavior Driven Infrastructure":http://blogs.sun.com/martin/entry/behavior_driven_infrastructure | Martin Englund experiments with Cucumber to verify configuration management sets up machines correctly | Nov 6 2009 |
 |"Using Cucumber with Sketchup":http://www.cfcl.com/rdm/weblog/archives/001714.html | Rich Morin explores designing 3D models with Cucumber|Nov 03 2009|
 |"Using Cucumber as a scripting language":http://holmwood.id.au/~lindsay/2009/11/01/using-cucumber-as-a-scripting-language/|Lindsay Holmwood explores using Cucumber for general sysadmin scripting tasks|Nov 1 2009|
 |"Testing Couchapps with Cucumber and Culerity":http://upstream-berlin.com/2009/10/25/testing-couchapps-with-cucumber-and-culerity/|CouchDB and CouchApp goodness|Oct 25 2009|
