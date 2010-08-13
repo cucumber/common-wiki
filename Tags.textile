@@ -10,7 +10,7 @@ Feature: Verify billing
   Scenario: Several products
 </pre>
 
-You can use the <code>--tags<code> option to tell Cucumber that you only want to run features or scenarios that have (or don't have) certain tags. Examples:
+You can use the <code>--tags</code> option to tell Cucumber that you only want to run features or scenarios that have (or don't have) certain tags. Examples:
 
 <pre>
 cucumber --tags @billing     # Runs both scenarios
