@@ -6,28 +6,56 @@ h2. List Step Definitions
 
 h3. Request 
 
-<pre>{ "request" : "LIST_STEP_DEFINITIONS" }</pre>
+<pre>{
+  "version" : "1.0",
+  "list_step_definitions" : ""
+}</pre>
 h3. Response
 
-<pre>{ "response" : "OK", "step_definitions":  [ { "id": "some id ", "regexp": "regex" } ] }</pre>
+<pre>{
+  "version" : "1.0",
+  "step_definitions": [
+    { "id": "id1", "regexp": "regex1" },
+    { "id": "id2", "regexp": "regex2" }
+  ]
+}</pre>
 h2. Invoke Step
 
 h3. Request 
 
-<pre>{ "request" : "INVOKE", "args" : { "id" : "some id", "args" : [ "foo", "bar" ] } }</pre>
+<pre>{
+  "version" : "1.0",
+  "invoke" : "id1",
+  "params" : [ "foo", "bar" ]
+}</pre>
 h3. Response
 
-If the step is invoked successfully then an OK response is returned:
-<pre>{ "response" : "OK" }</pre>
+If the step is invoked successfully then an 'ok' response is returned:
+<pre>{
+  "version" : "1.0",
+  "ok" : ""
+}</pre>
 OR
 
-If the step throws an exception then a STEP_FAILED response is returned:
-<pre>{ "response" : "STEP_FAILED", "details" : 
-    { "exception" : "some exception type", "message" : "foo", "backtrace" : "bar" } }</pre>
+If the step throws an exception then a 'step_failed' response is returned:
+<pre>{
+  "version" : "1.0",
+  "step_failed" : {
+    "exception" : "some exception type",
+    "message" : "foo",
+    "backtrace" : "bar"
+  }
+}</pre>
 
 h2. General Failure Response
 
-If the remote process cannot handle a request then it shall return the following response:
+If the remote process cannot handle a request then it shall return a 'failed' response:
 
-<pre>{ "response" : "FAILED", "details" :
-    { "exception" : "some exception type", "message" : "foo", "backtrace" : "bar" } }</pre>
+<pre>{
+  "version" : "1.0",
+  "failed" : {
+    "exception" : "some exception type",
+    "message" : "foo",
+    "backtrace" : "bar"
+  }
+}</pre>
