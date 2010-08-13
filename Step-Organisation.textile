@@ -11,9 +11,7 @@ We recommend creating a steps.rb file for each domain concept. For example, a ru
 * experience_steps.rb
 * authentication_steps.rb
 
-The three first ones would contain all the steps related to creating, reading, updating and deleting the various models. The last one steps related to logging in and out.
-
-Each steps.rb file typically contain Given, When and Then steps.
+The three first ones would define all the [[Given-When-Then]] step definitions related to creating, reading, updating and deleting the various models. The last one defines step definitions related to logging in and out.
 
 h2. Step state
 
