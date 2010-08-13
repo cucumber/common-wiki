@@ -54,17 +54,19 @@ Since IronRuby doesn't yet know how to install gems you have to install them usi
 gem install rspec
 </pre>
 
-h2. Creating a cucumber wrapper script for IronRuby
+(Note: until Cucumber 0.1.12 is released you have to get the Cucumber code from Git and build the gem yourself).
 
-When Cucumber is installed, a cucumber.bat script is placed under your MRI's bin directory.
-This script will run cucumber with MRI. We'll make a similar one that will launch Cucumber
+h2. Creating a Cucumber wrapper script for IronRuby
+
+When Cucumber is installed, a <code>cucumber.bat</code> script is placed under your MRI's bin directory.
+This script will run Cucumber with MRI. We'll make a similar one that will launch Cucumber
 with IronRuby.
 
 Create an empty file called <code>icucumber.bat</code> in MRI's bin directory.
 Open it in your favourite text editor (I hope you have installed something better than
 Notepad, but it will do). 
 
-On my system icucumber.bat looks like this (You may have to change the paths).
+On my system <code>icucumber.bat</code> looks like this (You may have to change the path to <code>ir.exe</code>).
 
 <pre><code>@ECHO OFF
 REM This is to tell IronRuby where to find gems.
@@ -75,7 +77,7 @@ SET GEM_PATH=%~dp0..\lib\ruby\gems\1.8
 Tip: <code>%~dp0</code> evaluates to "current script's directory with trailing backslash" in case
 you're wondering what this is.
 
-Now you should be able to run Cucumber:
+Now you should be able to run Cucumber with IronRuby:
 
 <pre>icucumber --help</pre>
 
@@ -92,9 +94,13 @@ h3. Run the plain ruby example
 icucumber features
 </code></pre>
 
+The Code under test is pure Ruby, so it's not that interesting in the context of IronRuby.
+
 h3. Run the C# example
 
 <pre><code>cd cs
 compile.bat
 icucumber features
 </code></pre>
+
+The code under test is C#. Now go ahead and add some Cucumber love to your own C# code!
