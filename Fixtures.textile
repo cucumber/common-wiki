@@ -10,7 +10,7 @@ end
 </code>
 </pre>
 
-If you are using transactional fixtures in Rails then instead of loading your fixtures before each scenario you can load it once by placing the same code in your env.rb file.  For example:
+If you are using transactional fixtures in Rails then instead of loading your fixtures before each scenario you can load it just once by placing the same code in your env.rb file.  This way will be much faster than loading the fixtures before each scenario. For example:
 
 <pre>
 <code>
