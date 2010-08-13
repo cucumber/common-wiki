@@ -1,0 +1,14 @@
+Simple load the @ae@ library.
+
+<pre>
+  require 'ae'
+</pre>
+
+If you want the subjective forms, then require it as well.
+
+<pre>
+  require 'ae'
+  require 'ae/should'
+</pre>
+
+You do not need to add anything to Cucumber's "World", because AE works at the top-level, rather then simply defining a set of assertion methods.
