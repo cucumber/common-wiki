@@ -16,6 +16,7 @@ gem install spicycode-rcov
 Second, you'll need to open up the cucumber generated task file and add the rcov option.
 
 <pre>
+#lib/tasks/cucumber.rake
 $:.unshift(RAILS_ROOT + '/vendor/plugins/cucumber/lib')
 require 'cucumber/rake/task'
 Cucumber::Rake::Task.new(:features) do |t|
@@ -30,5 +31,7 @@ Now when you run rake:features, coverage information will be in rails_root/cover
 .h3 Options
 
 TODO:
+
 How to run features without rcov
+
 How to pass rcov options 
