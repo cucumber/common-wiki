@@ -54,4 +54,4 @@ h2. Using RCov
 
 h2. Using other build tools
 
-Maven and Ant are described in [[Jruby and Java]]. MSBuild and Nant should be under [[IronRuby and .NET]]. Anything else - please contribute to this wiki!
+Maven and Ant are described in [[JRuby and Java]]. MSBuild and Nant should be under [[IronRuby and .NET]]. Anything else - please contribute to this wiki!
