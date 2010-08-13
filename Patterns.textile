@@ -39,7 +39,7 @@ And debugger</pre>
 <pre>Then /^debugger$/ do
   debugger
 end</pre>
-<pre>>: cucumber features/test.feature 
+<pre>: cucumber features/test.feature 
 Feature: Test for debugger
 
   Scenario: Opening a debugger # features/test.feature:2
