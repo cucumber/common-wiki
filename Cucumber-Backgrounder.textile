@@ -49,7 +49,7 @@ h3.  Where do I put Tests?
 
 Cucumber divides testing into two parts, the outward facing features and the inward facing steps.  As discussed elsewhere, [[Feature Introduction|features]] are descriptions of desired outcomes (<strong>Then</strong>) under predefined conditions (<strong>Given</strong>) and following upon specific events (<strong>When</strong>).  They are typically used in conjunction with end-user input, and in some cases, may be entirely under end-user (in the form of a domain expert) control. Feature files are given the extension <code>.feature</code>.
 
-[[Step Organisation|Steps]], on the other hand, are ruby (.rb) files that contain matchers, snippets of text from the feature files, and blocks of ruby and rails code together with assertions from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is assumed in the cucumber generator that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
+[[Step Organisation|Steps]], on the other hand, are ruby (.rb) files that contain matchers, snippets of text from the feature files, together with blocks of ruby and rails code usually containing assertion statements from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is assumed in the cucumber generator that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
 
 <pre><code># Sets up the Rails environment for Cucumber
 ENV["RAILS_ENV"] = "test"
@@ -62,9 +62,9 @@ Cucumber::Rails.use_transactional_fixtures
 require 'cucumber/rails/rspec'
 </code></pre>
 
-You are not limited to this however.  If you choose to use Rails built-in TestUnit, or any other testing suite, then you may do that by extending the cucumber working environment as explained in [[Using Test::Unit]].
+You are not limited to this testing framework however.  If you choose to use Rails built-in TestUnit, or any other testing suite, then you may do that by extending the cucumber working environment as explained in [[Using Test::Unit]].
 
-As detailed above, the default features directory tree is fairly shallow.  One can put every feature into a single file in the features directory and every step in a single file in the steps_definition directory if one so chooses.  Or one can have one or more feature files for each feature together with one or more step files for each feature file, or any combination thereof.  However, cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
+As detailed above, the default features directory tree is fairly shallow.  One can put every feature into a single file in the features directory and every step in a single file in the steps_definition directory (or even in the features directory itself) if one so chooses.  One can choose to have one or more feature files for each feature together with one or more step files for each feature file; or any combination thereof.  However, cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
 
 <pre><code>|-- features
 |   |-- entities
@@ -103,7 +103,7 @@ In this case the bland initial setup has been divided into sub-directories infor
 |       `-- env.rb
 </code></pre>
 
-Consider, however, that the cucumber feature generator will generate the files it produces in conformance with the default layout, with the <code>manage_frooble.feature</code> file placed in ./features and the <code>frooble_steps.rb</code> file in </code>./features/step_definitions</code>.. Also be aware that, regardless of the directory structure employed, cucumber effectively flattens the features directory tree when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
+Consider, however, that the cucumber feature generator will generate the files it produces in conformance with the default layout, with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>. Also be aware that, regardless of the directory structure employed, cucumber effectively flattens the features directory tree when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
 
 h3. How do I Write Tests?
 
