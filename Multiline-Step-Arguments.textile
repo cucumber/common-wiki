@@ -133,9 +133,7 @@ If you are not using Webrat or ActiveRecord, you can build up table structures y
 
 h2. Multiline Strings
 
-Multiline Strings are handy for specifying a larger piece of text. This is done using the PyString syntax. (The inspiration 
-for PyString comes from Python where """ is used to delineate docstrings.)  The text should be offset by delimiters consisting 
-of three double-quote marks on lines of their own:
+Multiline Strings are handy for specifying a larger piece of text. This is done using the PyString syntax. (The inspiration for PyString comes from Python where """ is used to delineate docstrings.)  The text should be offset by delimiters consisting of three double-quote marks on lines of their own:
 
 <pre><code>Given a blog post named "Random" with Markdown body
   """
