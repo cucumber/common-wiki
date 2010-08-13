@@ -153,7 +153,7 @@ Here is an example taken from an IRC chat session in "#cucumber":irc://irc.freen
 [5:25pm] Luis_Byclosure: Yes, I think so
 [5:26pm] aslakhellesoy:  It's easier when you have someone clueless (like me) to ask the 
                          stupid why questions
-[5:26pm] aslakhellesoy:  No I know why you want login 
+[5:26pm] aslakhellesoy:  Now I know why you want login 
 [5:26pm] Luis_Byclosure: but it is difficult to find the reason for everything
 [5:26pm] aslakhellesoy:  And if I was the customer I am in better shape to prioritise this 
                          feature among others
