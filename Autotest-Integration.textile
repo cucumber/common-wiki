@@ -16,8 +16,8 @@ Windows command shell:
 
 By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create two profiles in your cucumber.yml: 
 
-* <code>autotest</code> : This profile is used when Autotest wants to run only the failing scenarios.
-* <code>autotest-all</code> : This profile is used when Autotest wants to run all the scenarios (right after a red->green transiation).
+* <code>autotest</code> : Used when Autotest wants to run only the failing scenarios.
+* <code>autotest-all</code> : Used when Autotest wants to run all the scenarios (after a red->green transition).
 
 Please see [[Running Features]] for more information about profiles.
 
