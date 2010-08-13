@@ -1,4 +1,4 @@
-How do you name step files? What to put in each step? What *not* to put in steps? Here are some guidelines that will lead to better scenarios.
+How do you name step files? What to put in each step? What *not* to put in steps? Here are some guidelines that will lead to better scenarios. If you are new to steps and the general syntax, please read [[Feature Introduction]] first.
 
 h2. Grouping
 
