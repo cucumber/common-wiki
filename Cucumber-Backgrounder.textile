@@ -270,8 +270,8 @@ Given that the forgoing is contained in a file called <code>features/login.featu
 
 <pre>
 $ rake cucumber:wip
-$ cucumber --tags=&#64;wip
-$ cucumber --tags=&#64;authent
+$ cucumber --tags=@wip
+$ cucumber --tags=@authent
 </pre>
 
 However, the following will not work, unless you build a custom rake task for it:
@@ -285,13 +285,15 @@ The number of occurrences of a particular tag in your feature set may be control
 Limiting the number of occurrences is commonly used in conjunction with the &#64;wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
 Tags may also be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following not exercise any scenario having the tag <em>&#64;ignore</em> found in the directory tree rooted at <code>features/wip</code>:
+
 <pre>
-$ cucumber --require=features --tag=~&#64;ignore features/wip
+$ cucumber --require=features --tag=~@gnore features/wip
 </pre>
 
 h3. What Way do I Run the Tests?
 
-Unless you are knowledgeable enough that you use "mocks and stubs":http://rspec.info/documentation/mocks/ then I consider it best to begin with creating a Rails migration file for the model you are testing ( or expressing features for ) followed by:<pre><code>rake db:migrate
+Unless you are knowledgeable enough that you use "mocks and stubs":http://rspec.info/documentation/mocks/ then I consider it best to begin with creating a Rails migration file for the model you are testing ( or expressing features for ) followed by:
+<pre><code>rake db:migrate
 rake db:test:prepare
 </code></pre>
 
