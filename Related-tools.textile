@@ -19,6 +19,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"FeaturesReport":http://github.com/danlucraft/features_reports/tree/master|Create a PDF report of Cucumber features.|
 |[[FunFX and Flex]]| Test Adobe Flex applications with Cucumber|
 |"Greendot":http://github.com/bruce/greendot|Describe apps as state machines, with various outputs (including Cucumber features).|
+|"Groundwork":http://github.com/hectoregm/groundwork/tree/master| Rails Template using Authlogic that comes with Cucumber features|
 |"Gutkumber":http://github.com/danlucraft/gutkumber| Integration testing for "Ruby-GNOME2":http://ruby-gnome2.sourceforge.jp/.|
 |[[IronRuby and .NET]]| Test .NET applications with Cucumber|
 |[[JRuby and Java]]| Test Java applications with Cucumber|
@@ -29,7 +30,6 @@ It's always a good sign for a tool when other people huddle around and write too
 |"NewGem":http://newgem.rubyforge.org/| Use <code>newgem -i cucumber</code> to generate a bunch of helpful scenario steps for gem development|
 |"Pickle":http://github.com/ianwhite/pickle/tree/master|Easy model creation/reference in cucumber - optionally leveraging your factories/blueprints|
 |"Pickler":http://github.com/tpope/pickler/tree/master|Synchronize user stories in "Pivotal Tracker":http://www.pivotaltracker.com/ with Cucumber features.|
-|"rails_template":http://github.com/hectoregm/rails-templates/tree/master| Rails Template using Authlogic that comes with Cucumber features|
 |"RCumber":http://github.com/jgoodsen/rcumber/wikis|Edit and run Cucumber tests directly in your Rails application. Click results and get taken to TextMate.|
 |"Remote Feature":http://github.com/mhennemeyer/remote_feature|Run Cucumber Features that are defined in "Writeboard":http://www.writeboard.com/.|
 |"RSpec":http://rspec.info|Use RSpec's <code>Object.should</code> and <code>Object.should_not</code> to compare values in your step definitions|
