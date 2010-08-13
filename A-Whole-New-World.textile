@@ -41,11 +41,6 @@ World(SecondModuleHelpers)
 In *versions prior to 0.2.3.2* you can define several World blocks to do this. They will be called in a chain, yielding the result of the previous to the next:
 
 <pre>
-World do |world|
-  world.extend(FirstModuleHelpers)
-  world
-end
-
 module FirstModuleHelpers
   def helper_a
     ...
@@ -56,6 +51,11 @@ module SecondModuleHelpers
   def helper_b
     ...
   end
+end
+
+World do |world|
+  world.extend(FirstModuleHelpers)
+  world
 end
 
 World do |world|
