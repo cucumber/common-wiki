@@ -4,6 +4,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"AutoTest":http://www.zenspider.com/ZSS/Products/ZenTest/|Run Cucumber features in the background with Cucumber's built-in [[Autotest Integration]]|
 |"cheat cucumber":http://cheat.errtheblog.com/s/cucumber/|Cucumber cheatsheet for Chris Wanstrath's "cheat":http://cheat.errtheblog.com/|
 |"Clearance":http://wiki.github.com/thoughtbot/clearance/cucumber-features| Rails Authentication System with Cucumber feature generator|
+|"Cucover":http://github.com/mattwynne/cucover Coverage-aware lazy / selective Cucumber feature runnner|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting and other useful commands for "TextMate":http://macromates.com/.|
 |"Cucumber Growler *fixed*":http://github.com/jeanmartin/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber >= 0.2|
@@ -27,7 +28,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"RCumber":http://github.com/jgoodsen/rcumber/wikis|Edit and run Cucumber tests directly in your Rails application. Click results and get taken to TextMate.|
 |"Remote Feature":http://github.com/mhennemeyer/remote_feature|Run Cucumber Features that are defined in "Writeboard":http://www.writeboard.com/.|
 |"RSpec":http://rspec.info|Use RSpec's <code>Object.should</code> and <code>Object.should_not</code> to compare values in your step definitions|
-|"Testjour":http://github.com/brynary/testjour|Distributed test running with autodiscovery via Bonjour (for Cucumber first).|
+|"Testjour":http://github.com/brynary/testjour|Distributed test running (for Cucumber first).|
 |"Vim-Cucumber":http://github.com/tpope/vim-cucumber/tree/master|Feature syntax highlighting for "Vim":http://www.vim.org/.|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
 |"Webrat TM Bundle":http://github.com/bmabey/webrat-tmbundle/tree/master| Collection of TextMate snippets for the webrat API.|
