@@ -94,7 +94,7 @@ Now run the features again. The one you wrote should have yellow, pending steps 
 
 This is when you start writing code. Start by writing a couple of lines of code to address the failure you got from Cucumber.
 Run cucumber again. Repeat and rinse until you're happy with your feature. When you get down to nitty gritty details, drop
-down one abstraction level and use RSpec to write some specs for your classes. Write the specs first! If you follow this
+down one abstraction level and use RSpec, or any Ruby testing framework, to write some specs/tests for your classes. Write the specs first! If you follow this
 process you have a good guard against brittle, unmaintainable, undocumented code that nobody understands. 
 (Yes, features and specs are *documentation* too).
 
