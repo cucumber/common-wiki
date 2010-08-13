@@ -1,1 +1,22 @@
+Step argument transforms help your step definitions be more DRY. You can use the <code>Transform</code> method to register a regular expression along with a code block. Before captured regex groups get yielded as arguments to step definitions, an attempt is made to match them against any registered <code>Transform</code>. If there is a match, the return value of the block supplied with the transform is yielded as the step definition argument instead. Here is an example:
+
+<pre>
+# support file
+Transform /^user \w+$/ do |step_arg|
+  User.find_by_username /(\w+)$/.match(step_arg)[0]
+end
+
+# step definition file
+Then /^(user \w+) should be friends with (user \w+)$/ do |user, friend|
+  support_user.work_queue.should include(customer_user)
+end
+
+# feature file
+Scenario: support assigned a customer
+  Given ...
+  When ...
+  Then user larrytheliquid should be friends with user dastels
+</pre> 
+
+One key thing to remember is to provide some contextual data like "user" so you don't end up transforming every single argument to a step definition. For a more detailed explanation and examples, see the following blog post:
 *stub*
