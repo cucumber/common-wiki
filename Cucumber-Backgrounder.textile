@@ -6,13 +6,16 @@ This document deals principally with initial set up and first use of the <strong
 
 h3. Where to Start?
 
-<pre>Given that you have installed the gem called "Cucumber"
-  And you have generated a RoR project called "MyProject"
-  And your session's working directory is called "MyProject"
+<pre>Given you have installed the gem named "rails"
+  And you have generated a RoR project named "my_project"
+  And you have installed the gem named "cucumber"
+  And your session working directory is the Rails root directory of "my_project"
 
 When you run "script/generate cucumber"
 
-Then you will create a sub-directory called "features"
+Then you will create a sub-directory named "features"
+  And you will create the default feature and step files in the directory named "features"
+  And you will create a rake task named "cucumber.rake" in "lib/tasks"
 </pre>
 
 The foregoing is written in the style of the feature statements, called <em>steps</em>, that make up the user interface to cucumber testing.  We will return to that topic later.  For the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
