@@ -21,6 +21,14 @@ Communication within a team always works better when people can use their spoken
 You have to tell Cucumber that you're using a different language than English (the default):
 <pre><code>cucumber --language no</code></pre>
 
+However, since version 0.3.90 the recommended way to deal with i18n languages is to use a header in your feature file:
+
+<pre><code>
+# language: no
+Egenskap: Summering
+[...]
+</code></pre>
+
 h2. Listing the available languages
 
 <pre><code>cucumber --language help</code></pre>
