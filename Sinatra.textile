@@ -27,6 +27,9 @@ World do
 end
 </code></pre>
 
+You may have to set the app_file in your app file. Otherwise Sinatra (at least version 0.9.1.1) won't find the views or layouts (see "this irc log":http://irclogger.com/sinatra/2009-05-08).
+<pre><code>set :app_file, __FILE__</code></pre>
+
 h2. Sinatra/Test
 
 You can also use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra using Sinatra's built-in "testing setup":http://www.sinatrarb.com/testing.html and "Test Harness":http://www.sinatrarb.com/testing.html#using_.  Make sure you have something like the the following, "tailored":http://www.sinatrarb.com/testing.html#frameworks to Test::Unit, RSpec, Bacon or Test::Spec, in your <code>features/support/env.rb</code>.
