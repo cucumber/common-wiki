@@ -15,7 +15,7 @@ When you run "script/generate cucumber"
 Then you will create a sub-directory called "features"
 </pre>
 
-The forgoing is written in the style of the feature statements that make up the user interface to cucumber testing.  We will return to that topic later for for the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
+The forgoing is written in the style of the feature statements that make up the user interface to cucumber testing.  We will return to that topic later.  For the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
 
 An archetypal RoR project directory tree looks like this:
 
@@ -47,9 +47,9 @@ We are now ready to begin testing with cucumber.
 
 h3.  Where do I put Tests?
 
-Cucumber divides testing into two parts, the outward facing features and the inward facing steps.  As discussed elsewhere, features are descriptions of desired behaviour under predefined conditions and following upon specific events.  They are typically used in conjunction with end-user input, and in some cases, may be entirely under end-user (in the form of a domain expert) control. Feature files are given the extension .feature.
+Cucumber divides testing into two parts, the outward facing features and the inward facing steps.  As discussed elsewhere, features are descriptions of desired behaviour under predefined conditions and following upon specific events.  They are typically used in conjunction with end-user input, and in some cases, may be entirely under end-user (in the form of a domain expert) control. Feature files are given the extension <code>.feature</code>.
 
-Steps, on the other hand, are ruby (.rb) files that contain matchers, snippets of text from the feature files, and blocks of ruby and rails coding together with whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is assumed in the cucumber generator that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
+Steps, on the other hand, are ruby (.rb) files that contain matchers, snippets of text from the feature files, and blocks of ruby and rails code together with assertions from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is assumed in the cucumber generator that rspec is available, as is evidenced in the default contents of <code>features/support/env.rb</code>:
 
 <pre><code># Sets up the Rails environment for Cucumber
 ENV["RAILS_ENV"] = "test"
@@ -62,9 +62,9 @@ Cucumber::Rails.use_transactional_fixtures
 require 'cucumber/rails/rspec'
 </code></pre>
 
-You are not limited to this however.  If you choose to use Rails built-in TestUnit or other testing suite then you may do that by extending the cucumber working environment as explained in [[Using Test::Unit]].
+You are not limited to this however.  If you choose to use Rails built-in TestUnit, or any other testing suite, then you may do that by extending the cucumber working environment as explained in [[Using Test::Unit]].
 
-The default layout of the features directory is fairly flat.  However, cucumber is programmed with the flexibility to support an much more expressive directory structure.  For instance:
+The default layout of the features directory is fairly flat.  However, cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
 
 <pre><code>|-- features
 |   |-- entities
@@ -84,7 +84,7 @@ The default layout of the features directory is fairly flat.  However, cucumber 
 |       `-- env.rb
 </code></pre>
 
-In this case the bland initial setup has been divided into sub-directories driven by model-centric testing.  However this could equally well have been broken up in to model/controller/view hierarchies:
+In this case the bland initial setup has been divided into sub-directories informed by model-centric testing.  However this could equally well have been broken up in to model/controller/view hierarchies:
 
 <pre><code>|-- features
 |   |-- models
@@ -103,6 +103,6 @@ In this case the bland initial setup has been divided into sub-directories drive
 |   |       `-- env.rb
 </code></pre>
 
-I is well to be aware that regardless of the directory structure chosen, cucumber effectively flattens it when running tests.  By this I meant that anything ending in .rb under the start point for a test will be searched for feature matches.  So that a step contained in <coe>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  it is also worth noting that step files can be called anything so long as they end in <code>.rb</code>
+It is well to be aware that, regardless of the directory structure chosen, cucumber effectively flattens the test directory when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>
 
 <pre><code></code></pre>
