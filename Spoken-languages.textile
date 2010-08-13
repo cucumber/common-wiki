@@ -1,4 +1,4 @@
-Communication within a team always works better when people can use their spoken language. Cucumber supports over "30 spoken languages":http://github.com/aslakhellesoy/cucumber/blob/master/lib/cucumber/languages.yml. and the number is steadily growing. This is Norwegian:
+Communication within a team always works better when people can use their spoken language. Cucumber supports around "40 spoken languages":http://github.com/aslakhellesoy/cucumber/blob/master/lib/cucumber/languages.yml. and the number is steadily growing. This is Norwegian:
 
 <pre><code># language: no
 Egenskap: Summering
@@ -19,15 +19,8 @@ Egenskap: Summering
     Så skal resultatet være 13
 </code></pre>
 
-You have to tell Cucumber that you're using a different language than English (the default):
-<pre><code>cucumber --language no</code></pre>
-
-However, since version 0.3.90 the recommended way to deal with i18n languages is to use a header in your feature file. For example:
-<pre><code># language: no
-Egenskap: Summering
-[...]
-    Så skal resultatet være 13
-</code></pre>
+A <code># language: x</code> header on the first line of a feature file tells Cucumber what spoken language to use.
+If you omit this header, Cucumber will default to English (en), unless you use the <code>--language</code> command line option.
 
 h2. Listing the available languages
 
