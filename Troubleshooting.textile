@@ -2,7 +2,7 @@ Cucumber not ripe? Can't find your peeler? These are some common problems people
 
 h2. Console output isn't right on Windows
 
-Missing _a_s in the output? Do your _æ_s, _ø_s and _å_s looke like garbled "Commodore 64 characters":http://kofler.dot.at/c64/ ? There are three steps to fix this.
+Missing _a_s in the output? Do your _æ_s, _ø_s and _å_s looke like garbled "Commodore 64 characters":http://kofler.dot.at/c64/? There are three steps to fix this.
 
 First - add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. 
 
