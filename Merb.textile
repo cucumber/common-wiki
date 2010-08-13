@@ -31,12 +31,11 @@ edit your feature
 Looking for Examples?
 -----------------------------
 
-So am I. Therefore I've been scrounging github in search of some. Lots of merb projects out there with empty /features sitting around.
-In my experience, searching github for anything highly particular like this is not useful.
+So am I. Therefore I've been scrounging github in search of some. There are many merb projects out there with empty /features sitting around so searching github can potentially return many false positives. 
 
 But, please add some when you find them! 
 
-Here are some merb projects that use cucumber (feel free to add/update/delete this list accordingly, I did not rigorously weed through each one but I did only include /features that had actual examples):
+Here are some merb projects that use cucumber (feel free to add/update/delete this list accordingly, I did not rigorously weed through each one but I did only include /features that had actual substantial or interesting/creative examples):
 
 * "http://github.com/matthewford/comic-review/tree/master":http://github.com/matthewford/comic-review/tree/master
 * "http://github.com/teamon/merb-base/tree/master":http://github.com/teamon/merb-base/tree/master
