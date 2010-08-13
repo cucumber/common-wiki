@@ -22,13 +22,11 @@ A draft list of useful Cucumber patterns:
 *** Factory used to create an object for each row with the properties defined in the table
 *** Transforms that map the properties to the correct type
 * Relative times
-* Manual tests
-** Description: have a step that indicates an action that requires human
+* Manual steps
+** Description: have a step that indicates an action that requires a human
 ** Motivation: some things can not be automatically tested (JS UI, captcha) and we still want cucumber to describe how the app should behave
 ** Examples:
 <pre>Then /^.* \(manual step\)$/ do
 end</pre>
 <pre>And I fill in the captcha correctly (manual test)</pre>
-
-
 ** Implementation: define a step that matches anything and a unique string that denotes a manual step
