@@ -1,4 +1,4 @@
-Cucumber provides a number of hooks which allow us to run blocks at various points in the Cucumber test cycle. There is no association between where the hook is defined and which scenario/step it is run for. 
+Cucumber provides a number of hooks which allow us to run blocks at various points in the Cucumber test cycle. There is no association between where the hook is defined and which scenario/step it is run for. You can put them in your <code>support/env.rb</code> file or any other file under the <code>support</code> directory, for example in a file called <code>support/hooks.rb</code>
 
 Every hook gets added to a global stack, and then each hook in the stack gets executed before or after the scenario.
 
