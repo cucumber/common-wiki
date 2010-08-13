@@ -6,7 +6,7 @@ h2. Pending steps
 
 When Cucumber can't find a matching Step Definition the step gets marked as yellow, and all subsequent steps in the scenario are skipped.
 
-h2 Failed stepd
+h2. Failed steps
 
 When a Step Definition's Proc is executed and raises an error, the step is marked as red.
 
