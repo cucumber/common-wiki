@@ -56,6 +56,8 @@ git submodule add rspec-rails git://github.com/dchelimsky/rspec-rails.git vendor
 </code></pre>
 
 If your own Rails code is not in Git, just replace "submodule add" with "clone".
+If you're behind a proxy, try to replace git:// with http:// and set the http_proxy environment variable.
+As a last resort, download tarballs from GitHub.
 
 h3. Install Other dependencies
 
