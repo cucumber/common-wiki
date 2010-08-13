@@ -8,8 +8,8 @@ Cucumber is a tool that can execute feature documentation written in plain text.
 Cucumber targets non technical business analysts, interaction designers, domain experts, testers (for the plain text part) 
 and programmers (for the steps, which are written in Ruby). 
 
-Cucumber itself is also written in Ruby, but it can be used to "test" code written in Ruby, Java (or web applications written 
-in any language). When "IronRuby":http://www.ironruby.net/ matures it can be used to "test" .NET code too.
+Cucumber itself is also written in Ruby, but it can be used to "test" code written in Ruby, Java, or web applications written 
+in any language. When "IronRuby":http://www.ironruby.net/ matures it can be used to "test" .NET code too.
 
 Cucumber only requires minimal use of Ruby programming, so don't be afraid to try it out even if the code you're
 developing is in a different language. Most programmers should pick up the required Ruby skills and be productive
