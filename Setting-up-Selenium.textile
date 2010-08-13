@@ -4,9 +4,7 @@ Selenium-RC requires the Java Runtime Environment (JRE) version 1.5.0 or higher
 
 h2. Step 1: Install the Selenium gem
 
-<pre><code>
-sudo gem install Selenium
-</code></pre>
+<pre><code>sudo gem install Selenium</code></pre>
 
 h2. Step 2: Install Selenium-remote
 
@@ -29,29 +27,21 @@ h2. Step 3: Ubuntu fix (skip if your not using Ubuntu)
 There is a bug with Selenium and Firefox 3 where Selenium cannot find: firefox-bin
 
 To solve this we create a sym link:
-<pre><code>
-sudo ln -s /usr/lib/firefox-3.0.4/firefox /usr/bin/firefox-bin
-</pre></code>
+<pre><code>sudo ln -s /usr/lib/firefox-3.0.4/firefox /usr/bin/firefox-bin</pre></code>
 
 h2. Step 4: Starting Selenium
 
 The Selenium gem installs a script which allows us to get Selenium-RC running
-<pre><code>
-selenium
-</pre></code>
+<pre><code>selenium</pre></code>
 OR 
 you can run the jar directly
-<pre><code>
-java -jar selenium-server.jar.txt
-</pre></code>
+<pre><code>java -jar selenium-server.jar.txt</pre></code>
 
 h2. Step 5: Run the cucumber example
 
 Run the Cucumber Selenium example 
 
-<pre><code>
-cucumber examples/selenium/features/
-</pre></code>
+<pre><code>cucumber examples/selenium/features/</pre></code>
 
 h2. Useful links
 
