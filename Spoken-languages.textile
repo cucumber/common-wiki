@@ -1,4 +1,4 @@
-Communication within a team always works better when people can use their spoken language. Cucumber supports "25 spoken languages":../cucumber/tree/master/lib/cucumber/languages.yml. This is Norwegian:
+Communication within a team always works better when people can use their spoken language. Cucumber supports over "30 spoken languages":../cucumber/tree/master/lib/cucumber/languages.yml. and the number is steadily growing. This is Norwegian:
 
 <pre><code>Egenskap: Summering
   For å ungå at firmaet går konkurs
@@ -23,13 +23,9 @@ You have to tell Cucumber that you're using a different language than English (t
 
 h2. Listing the available languages
 
-*{color:red}Only available in 0.1.99 and above*
-
 <pre><code>cucumber --language help</code></pre>
 
 h2. Listing the keywords of a particular language
-
-*{color:red}Only available in 0.1.99 and above*
 
 For example Russian:
 
