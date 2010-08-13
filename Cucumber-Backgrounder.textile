@@ -61,11 +61,13 @@ The root level of the archetypal RoR project directory tree looks like this:
 
 Running script/generate cucumber adds this layout to the existing structure:
 <pre><code>|-- features
-|   |-- step_definitions
-|   |   `-- web_steps.rb
-|   `-- support
-|       |-- env.rb
-|       `-- paths.rb
+|-- step_definitions
+|   |-- local_web_steps.rb
+|   `-- web_steps.rb
+`-- support
+    |-- env.rb
+    |-- hll_cuke_sample_helpers.rb
+    `-- paths.rb
 </code></pre>
 
 We are now ready to begin testing with Cucumber.
@@ -92,10 +94,22 @@ As detailed above, the default features directory tree is fairly shallow.  One c
 |   |       `-- location_steps.rb
 |   |-- sites
 |   |   `-- step_definitions
-|   |-- step_definitions
-|   |   `-- webrat_steps.rb
-|   `-- support
-|       `-- env.rb
+|-- step_definitions
+|   |-- local_assert_steps.rb
+|   |-- local_crud_response_steps.rb
+|   |-- local_email_steps.rb
+|   |-- local_file_steps.rb
+|   |-- local_script_steps.rb
+|   |-- local_steps.rb
+|   |-- local_web_steps.rb
+|   |-- local_xml_file_steps.rb
+|   `-- web_steps.rb
+`-- support
+    |-- env.rb
+    |-- hll_cuke_sample_helpers.rb
+    |-- local_env.rb
+    `-- paths.rb
+
 </code></pre>
 
 In this case the bland initial setup has been divided into sub-directories informed by model-centric testing.  This could equally well have been broken up in to model/controller/view hierarchies:
@@ -108,13 +122,17 @@ In this case the bland initial setup has been divided into sub-directories infor
 |   |   |       |-- anything.rb
 |   |   |       `-- entity_steps.rb
 |   |-- views
-|   |   |   |-- entity_new
-|   |   |   `-- step_definitions
-|   |   |       `-- entity_new_steps.rb
-|   |-- step_definitions
-|   |   `-- webrat_steps.rb
-|   `-- support
-|       `-- env.rb
+|   |   |-- entity_new
+|   |   `-- step_definitions
+|   |       `-- entity_new_steps.rb
+|-- step_definitions
+|   |-- local_steps.rb
+|   `-- web_steps.rb
+`-- support
+      |-- env.rb
+      |-- hll_cuke_sample_helpers.rb
+      |-- local_env.rb
+       `-- paths.rb
 </code></pre>
 
 Consider, however, that the Cucumber feature scaffold generator will generate the files it produces in conformance with the default layout, with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>. Also be aware that, regardless of the directory structure employed, Cucumber effectively flattens the features directory tree when running tests.  By this I mean that anything ending in .rb under the start point for a Cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
