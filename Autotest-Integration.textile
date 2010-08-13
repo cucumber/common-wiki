@@ -12,6 +12,56 @@ Windows command shell:
 
 By default the plugin will run all the features in the features dir.  To change the way the features are ran with autotest create an 'autotest' profile in your cucumber.yml.  Please see [[Running Features]] for more information about profiles.
 
+h3. What does it do?
+
+In autotest's normal flow, it runs all of your tests and remembers the
+ones which fail.  Each time you save a file, it reruns the failing
+tests along with tests related to the code you just changed.  Once
+everything is green again, it reruns all of the tests over again to
+make sure everything is green.  Then it waits for more changes.
+
+It looks like this:
+
+# Run red tests until they pass.
+# Run all tests.
+
+Once you get all the tests to pass, you're ready to write a new test (or example) to implement.
+
+With Cucumber, autotest does this:
+
+# Run red tests until they pass.
+# Run red scenarios until they pass.
+# Run all tests until they pass.
+# Run all features.
+
+Here's the intended (but flexible) BDD workflow:
+
+# Write a new feature or scenario.
+** Autotest runs your features and finds pending steps.  It remembers those scenarios.
+# Define pending steps.
+** Each time you save, autotest reruns the pending scenarios.  Watch them turn red and blue.
+# Pick a red step.  Write the spec which exercises the (unwritten) implementation behind that step.
+** Autotest sees your new red spec and remembers it.
+# Work on implementing the spec.
+** Each time you save, autotest reruns the red spec.  No need to run any features until you're done with this.  Autotest keeps you drilled down.
+# Finish implementing the spec.
+** When the spec turns green, you're done!  Autotest pops the stack and reruns the scenarios you're working on.
+# Repeat from Step 3 until your scenarios are all green.
+** Now that you've done a chunk of work, Autotest pops the stack again and runs all your specs to make sure nothing's broken.
+# Fix any unit-level regressions.
+** Once your specs are green and the scenarios you were working on are running, Autotest runs your entire feature set.
+# Fix any integration-level regressions.
+** Now your features should all be green.  Congratulations!  Your iteration is done.!
+# Return to step 1.
+
+If you like to write out lots of features at the beginning, you may want to keep them somewhere where they won't run and slowly introduce them, implementing them along the way.  Future versions may provide a way to mark a scenario as "pending" to accomplish something similar.
+
+h3. Customizing Autotest Behavior
+
+When autotest runs your features, it looks for an @autotest@ profile in your @cucumber.yml@.  If it finds one, it uses that profile when running your features.  It's useful to use the Pretty formatter in autotest to see exactly what's going on as your scenarios fail.  However, the Pretty formatter may be too much information when autotest does its final run-through of all of your features.  If you define an @autotest-all@ profile, autotest will use this profile instead when it runs all of your features.  You may want to use the Progress formatter for @autotest-all@.
+
+For more information on defining profiles, see [[Running Features]].
+
 h3. Why is it disabled by default?
 
-Autotest is geared toward the Red->Green->Refactor cycle on an object level (unit-tests.)  These object level specs/tests are generally highly focused and isolated per object so breaks can be detected on a very detailed level.  The suites are meant to run extremely fast to give the developer quick feedback.  Cucumber on the other hand provides end-to-end application level testing.  By executing the entire stack features can help find integration failures between objects and provide large coverage to prevent regressions.  A side effect of this is that features are generally much slower than object level specs.  Due to their relative slowness and non-focused nature they may not be realistic to run along side the object-level suite.  Of course every project is different and every developer has different workflow preferences.
+Autotest is geared toward the Red->Green->Refactor cycle on an object level (unit tests).  These object level specs/tests are generally highly focused and isolated per object so breaks can be detected on a very detailed level.  The suites are meant to run extremely fast to give the developer quick feedback.  Cucumber on the other hand provides end-to-end application level testing.  By executing the entire stack features can help find integration failures between objects and provide large coverage to prevent regressions.  A side effect of this is that features are generally much slower than object level specs.  Due to their relative slowness and non-focused nature they may not be realistic to run along side the object-level suite.  Of course every project is different and every developer has different workflow preferences.
