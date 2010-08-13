@@ -16,7 +16,7 @@ And for all the Rails users out there - we recommend using a "Given with a multi
 
 h2. When
 
-The purpose of When steps is to describe the key action the user performs - or the user interaction. Examples:
+The purpose of When steps is to describe the key action the user performs (or, using Robert C. Martin's metaphor, the state transition). Examples:
 
 * Interact with a web page (Webrat/Watir/Selenium _interaction_ etc should mostly go into When steps).
 * Interact with some other user interface element.
