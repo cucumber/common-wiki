@@ -3,9 +3,9 @@ Don't like RSpec's <code>should</code> methods for assertions? No problem, we wo
 <pre>
 require 'test/unit/assertions'
 
-World do |o|
-  o.extend(Test::Unit::Assertions)
-  o
+World do |world|
+  world.extend(Test::Unit::Assertions)
+  world
 end
 </pre>
 
