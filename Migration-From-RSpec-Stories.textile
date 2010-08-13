@@ -87,7 +87,7 @@ Here is a simple example of the conversion process.  Given this story listener:
       DatabaseCleaner.clean
     end
     alias :scenario_pending :scenario_succeeded
-    alias :scenario_failed :scenario_failed
+    alias :scenario_failed :scenario_succeeded
 
     def run_ended
       # Global teardown
