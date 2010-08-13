@@ -19,7 +19,7 @@ The cucumber.yml file is preprocessed by ERb; this allows you to use ruby code t
 <pre>
 <% common = "--tags ~@wip --strict" %>
 default: <%= common %> features  
-html_report: <%= common %> --format progress --format html --out=features_report.html features  
+html_report: <%= common %> --format html --out=features_report.html features  
 </pre>
 
 Also see [[Running Features]] for more details about how to execute your features.
