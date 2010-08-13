@@ -4,6 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 
 |*Post*|*Description*|*Posting Date*|
+|"iPhone GUI testing":http://www.ian.dees.name/tech/iphone-gui-testing.html| Cucumber meets the iPhone | 02--2-2009 |
 |"One Smart Cucumber":http://joshuahoover.com/2009/01/28/one-smart-cucumber/|Business value|01-28-2009|
 |"rails 2 day 4: rcov and more behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-4-rcov-and-more-behavior-driven-development| Cucumber+RCov Tutorial|12-29-08|
 |"rails 2 day 3: behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-3-behavior-driven-development/| Tutorial of basic Cucumber usage and workflow.|12-22-08|
