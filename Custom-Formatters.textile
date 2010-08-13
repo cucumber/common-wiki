@@ -1,6 +1,6 @@
 It's easy to write your own custom formatter for Cucumber. Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers). Here is how you'd do that:
 
-Save your custom formatter class in <code>features/support</code> (or if you want to put it elsewhere, put a file in that directory that <code>require</code>s your formatter class.
+Save your custom formatter class in <code>features/support</code> (or if you want to put it elsewhere, put a file in that directory that <code>require</code>s your formatter class).
 
 <pre>
 # features/support/twitter_formatter.rb
