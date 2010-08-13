@@ -29,8 +29,7 @@ Given /^(.*) is logged in$/ do |name|
 end
 </pre>
 
-
-This is practical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
+Invoking steps from step definitions is practical if you have several common steps that you want to perform in several scenarios. -Or simply if you want to make your scenarios shorter and more declarative. This allows you to do this in a Scenario:
 
 <pre>
 # feature
