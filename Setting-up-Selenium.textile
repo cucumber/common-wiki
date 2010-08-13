@@ -1,3 +1,5 @@
+<p><strong>Update:</strong> This guide is out of date, a fix is upcoming but in the meantime you do not need the Selenium gem. Also, you must use selenium-client -v=1.2.14. You do not need to overwrite any jars. Make sure all selenium processes are stopped and the correct versions are installed and it should run. The information about multiple environments for selenium/non-selenium tests is still valid and useful.</p>
+
 h2. Pre-requisites
 
 Selenium-RC requires the Java Runtime Environment (JRE) version 1.5.0 or higher
