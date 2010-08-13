@@ -3,7 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
-|"Try adding Cucumber to Watir":http://www.rudyonrails.com/blog/?p=278|Cucumber+Watir tutorial | 20 Apr 2009 |
+|"Try adding Cucumber to Watir":http://www.rudyonrails.com/blog/?p=278|Cucumber+Watir tutorial | 17 Apr 2009 |
 |"Building a better World":http://drnicwilliams.com/2009/04/15/cucumber-building-a-better-world-object/| Dr. Nic explains the Cucumber World and how to upgrade to 0.3.0 | 15 Apr 2009 |
 |"20 articles on Cucumber and a free beverage recipe!":http://www.robbyonrails.com/articles/2009/04/09/20-articles-on-cucumber-and-a-free-beverage-recipe|20 awesome links| 9 Apr 2009|
 |"Cucumber On JRuby inside Eclipse":http://ketan.padegaonkar.name/2009/04/10/cucumber-on-jruby-inside-eclipse.html| Allows RCP based apps to be tested with Cucumber|Apr 10 2009|
