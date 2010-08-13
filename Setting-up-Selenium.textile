@@ -48,3 +48,68 @@ h2. Useful links
 "Official Selenium-RC site":"http://selenium-rc.seleniumhq.org/
 
 "Selenium gem at rubyforge":http://selenium.rubyforge.org/
+
+h2. Setting up Cucumber with a profile for plain HTML and a profile for Selenium
+
+Many apps have features that don't require javascript to work, and running them all in selenium makes things slow.  Since webrat steps support selenium out of the box, you can reuse almost all of your standard step definitions for selenium as well.  Here's a recipe for how you can:
+
+* Run your non-selenium features with transactional fixtures and standard webrat steps
+* Run your entire suite (html and javascript) features with selenium, without transactional fixtures
+* Reuse all (or almost all) or your step definitions between selenium and non-selenium runners
+
+First, setup a directory structure like the following:
+
+<pre><code>features/
+|-- enhanced
+|   `-- ajaxy.feature
+|-- plain
+|   `-- non_ajaxy.feature
+|-- step_definitions
+|   `-- webrat_steps.rb
+`-- support
+    |-- enhanced.rb
+    |-- env.rb
+    `-- plain.rb
+</pre></code>
+
+Create a cucumber.yml file with 2 profiles:
+
+<pre><code>default: -r features/support/env.rb -r features/support/plain.rb -r features/step_definitions features/plain
+selenium: -r features/support/env.rb -r features/support/enhanced.rb -r features/step_definitions features/enhanced features/plain
+</pre></code>
+
+In env.rb, turn on all webrat features:
+
+<pre><code>ENV["RAILS_ENV"] = "test"
+require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
+require 'cucumber/rails/world'
+require 'cucumber/formatters/unicode'
+require 'webrat/rails'
+require 'cucumber/rails/rspec'
+</code></pre>
+
+In enhanced.rb, set up the selenium-specific files:
+
+<pre><code>require "webrat/selenium"
+World do
+  Webrat::Selenium::Rails::World.new
+end
+
+Before do
+  # truncate your tables here, since you can't use transactional fixtures
+end
+</code></pre>
+
+In plain.rb, set up the standard webrat features:
+
+<pre><code># truncate your tables here if you are using the same database as selenium, since selenium doesn't use transactional fixtures
+Cucumber::Rails.use_transactional_fixtures
+</code></pre>
+
+To run your regular features, you can execute:
+
+<pre><code>cucumber</code></pre>
+
+To run your selenium features, you can execute:
+
+<pre><code>cucumber -p selenium</code></pre>
