@@ -4,6 +4,7 @@ Please add any helpful blog posts that you have found or written about all thing
 
 |*Post*|*Description*|*Posting Date*|
 |"Slides: Cucumber meets iPhone":http://en.oreilly.com/oscon2009/public/schedule/detail/8073|"Ian Dees":http://www.ian.dees.name/ is at OSCON showing off a kick-ass way to test iPhone apps|Jul 22 2009|
+|"Slides: Cucumbered":http://blog.josephwilk.net/ruby/futureruby-talk-cucumbered.html|"Joseph Wilk":http://blog.josephwilk.net talking about Cucumber at FutureRuby with an IPhone example |Jul 12 2009|
 |"Screencast: Testing Flex Apps with Cucumber":http://onrails.org/articles/2009/07/08/screencast-testing-flex-apps-with-cucumber|Get your hands dirty with Flex, FunFX and Cucumber|Jul 08 2009|
 |"Integration test with Cucumber and Webrat":http://www.slideshare.net/gugod/integration-test-with-cucumber-and-webrat|Presentation in Chinese by Kang-min Liu|Jul 1 2009|
 |"Natural Language Acceptance Testing with Cucumber":http://dobbscodetalk.com/index.php?option=com_myblog&show=Natural-Language-Acceptance-Testing.html&Itemid=29|A nice little writeup in "Dr.Dobbs CodeTalk":http://dobbscodetalk.com/| Jun 27 2009|
