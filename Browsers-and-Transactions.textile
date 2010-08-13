@@ -36,6 +36,6 @@ end
 </pre>
 
 
-If you're not using Rails you can recreate the entire '@no-tx' bevhaviour using DatabaseCleaner with the following code:
+If you're not using Rails you can recreate the entire <code>@no-txn</code> bevhaviour using DatabaseCleaner with the following code:
 
 <script src="http://gist.github.com/175778.js"></script>
