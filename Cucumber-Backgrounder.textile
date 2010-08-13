@@ -64,7 +64,7 @@ require 'cucumber/rails/rspec'
 
 You are not limited to this however.  If you choose to use Rails built-in TestUnit, or any other testing suite, then you may do that by extending the cucumber working environment as explained in [[Using Test::Unit]].
 
-The default layout of the features directory is fairly flat.  However, cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
+The default layout of the features directory is fairly shallow.  However, cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
 
 <pre><code>|-- features
 |   |-- entities
