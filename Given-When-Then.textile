@@ -24,7 +24,7 @@ The purpose of When steps is to describe the key action the user performs (or, u
 
 h2. Then
 
-The purpose of Then steps is to observe outcomes. This is where you look at "Schrödinger's cat":http://en.wikipedia.org/wiki/Schrodingers_cat. The observations should be related to the business value/benefit in your feature description. The observations should also be on some kind of _output_ - that is something that comes _out_ of the system (report, user interface, message) and not something that is deeply buried inside it (that has no business value).
+The purpose of Then steps is to observe outcomes. The observations should be related to the business value/benefit in your feature description. The observations should also be on some kind of _output_ - that is something that comes _out_ of the system (report, user interface, message) and not something that is deeply buried inside it (that has no business value).
 
 Examples:
 
