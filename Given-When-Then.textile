@@ -6,7 +6,7 @@ Robert C. Martin has written a "great post":http://blog.objectmentor.com/article
 
 h2. Given
 
-The purpose of givens is to put the system in a known state before the user starts interacting with the system (in the When steps). Avoid talking about user interaction in givens. Examples:
+The purpose of givens is to put the system in a known state before the user (or external system) starts interacting with the system (in the When steps). Avoid talking about user interaction in givens. Examples:
 
 * Create records (model instances) / set up the database state.
 * It's ok to call into the layer "inside" the UI layer here (in Rails: talk to the models).
