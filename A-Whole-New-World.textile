@@ -14,16 +14,51 @@ end
 
 Now you can call a_helper from any step you want. Note that every scenario gets run in a separate instance of the world, so there is no implicit state-sharing from scenario to scenario.
 
-You can also define several World blocks. They will be called in a chain, yielding the result of the previous to the next:
+Once you have defined a World class you can extend it with other modules to add additional helper methods. In *version 0.2.3.2 and later* after you specify the class with a proc you can then simply pass in a module to the World method to extend it.  For example:
+<pre>
+World do 
+ CustomWorld.new
+end
+
+module FirstModuleHelpers
+  def helper_a
+    ...
+  end
+end
+
+module SecondModuleHelpers
+  def helper_b
+    ...
+  end
+end
+
+World(FirstModuleHelpers)
+World(SecondModuleHelpers)
+
+</pre>
+
+In *versions prior to 0.2.3.2* you can define several World blocks to do this. They will be called in a chain, yielding the result of the previous to the next:
 
 <pre>
 World do |world|
-  world.extend(FirstModule)
+  world.extend(FirstModuleHelpers)
   world
 end
 
+module FirstModuleHelpers
+  def helper_a
+    ...
+  end
+end
+
+module SecondModuleHelpers
+  def helper_b
+    ...
+  end
+end
+
 World do |world|
-  world.extend(SecondModule)
+  world.extend(SecondModuleHelpers)
   world
 end
 </pre>
