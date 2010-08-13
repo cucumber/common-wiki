@@ -35,8 +35,34 @@ See "Running features":http://github.com/aslakhellesoy/cucumber/wikis/running-fe
 
 h3. Options
 
-TODO:
+h3. Options
 
-How to write a task to run features with.without rcov
+You usually want to define a task to run all your features without RCov and then have an additional task to run with RCov.  Also, you usually need to specify certain options to RCov, such as output directory, for cruise control and other build purposes.  Below is an example  cucumer.rake file showing how to set options and define multiple cucumber tasks:
 
-How to pass rcov options 
+<pre>
+desc "Run all features"
+task :features => "features:all"
+task :features => 'db:test:prepare'
+
+namespace :features do
+  Cucumber::Rake::Task.new(:all) do |t|
+    t.cucumber_opts = "--format pretty"
+  end
+
+  Cucumber::Rake::Task.new(:cruise) do |t|
+    t.cucumber_opts = "--format pretty --out=#{ENV['CC_BUILD_ARTIFACTS']}/features.txt --format html --out=#{ENV['CC_BUILD_ARTIFACTS']}/features.html"
+    t.rcov = true
+    t.rcov_opts = %w{--rails --exclude osx\/objc,gems\/,spec\/}
+    t.rcov_opts << %[-o "#{ENV['CC_BUILD_ARTIFACTS']}/features_rcov"]
+  end
+
+  Cucumber::Rake::Task.new(:rcov) do |t|    
+    t.rcov = true
+    t.rcov_opts = %w{--rails --exclude osx\/objc,gems\/,spec\/}
+    t.rcov_opts << %[-o "features_rcov"]
+  end
+end
+</pre>
+(This was taken from http://gist.github.com/27281)
+
+It is important to note that Cucumber's default RCov options are set to %w{--rails --exclude osx\/objc,gems\/}.  So you can just append to rcov_opts if those defaults work for your project.
