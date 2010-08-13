@@ -256,7 +256,9 @@ If you are testing with intent then you should be using the "ruby-debug gem":htt
 
 Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitions in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
-Cucumber comes preconfigured for webrat together with webrat test steps.  If you have webrat installed as a plugin in your project then these are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you need add this to the features/support/env.rb file:
+Cucumber comes preconfigured for webrat together with webrat test steps.  If you do not know what webrat is and you are doing web application testing then you should "read about it":http://agilewebdevelopment.com/plugins/webrat.
+
+If  webrat is installed in your rails project as a plugin then the webrat step definitions are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you need add this to the features/support/env.rb file:
 
 <code>require 'webrat' if !defined?(Webrat)</code>
 
@@ -268,8 +270,6 @@ Then, comment out these  in env.rb.
 require 'cucumber/rails/rspec'
 # If webrat is a plugin and rspec is used then uncomment this
 #require 'webrat/rspec-rails'</code></pre>
-
-If you do not know what webrat is and you are doing web application testing then you should "read about it":http://agilewebdevelopment.com/plugins/webrat.
 
 Calls for any additional Ruby libraries that your particular testing environment requires should typically be placed in the <code>./features/support/env.rb</code> file.
 
