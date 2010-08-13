@@ -27,6 +27,3 @@ World do |world|
   world
 end
 </pre>
-
-<div class="js-kit-comments" permalink=""></div>
-<script src="http://js-kit.com/comments.js"></script>
