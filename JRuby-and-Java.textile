@@ -24,7 +24,7 @@ To check that you have it installed properly, run:
 
 <pre>jruby -S cucumber --help</pre>
 
-When you run <code>jruby</code> with the <code>-S</code> switch, jruby will look for the script (in this case <code>cucumber</code>) in jruby's <code>bin</code> directory before it starts looking at the <code>PATH</code>. It will find the <code>cucumber</code> ruby script inside JRuby's bin that was created when you installed the gem.
+When you run <code>jruby</code> with the <code>-S</code> switch, jruby will look for the script (in this case <code>cucumber</code>) in jruby's <code>bin</code> directory before it starts looking at the <code>PATH</code>. It will find the <code>cucumber</code> ruby script that was created when you installed the gem inside JRuby's <code>bin</code> directory.
 
 h2. Running the examples
 
