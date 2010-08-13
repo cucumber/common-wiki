@@ -24,10 +24,11 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Using Cucumber with Machinist":http://themomorohoax.com/2009/03/08/rails-machinist-tutorial-machinist-with-cucumber-in-10-minutes | A basic tutorial for people starting out. Explains how to use machinist instead of fixtures with cucumber. | Mar 08 2009 |
 |"Testing Dash metrics with Cucumber":http://bradley.is/post/82649218/testing-dash-metrics-with-cucumber | Using Cucumber to test metrics | Mar 01 2009 |
 |"Cucumber metrics with Dash":http://bradley.is/post/82409348/cucumber-metrics-with-dash | Gathering progress metrics with Dash | Feb 28 2009 |
-|"Getting started with Cucumber and Sinatra":http://tooky.github.com/2009/02/05/getting-started-with-cucumber-and-sinatra.html | Sinatra loves Cucumbers | Feb 05 2009 |
 |"Web app integration testing for sysadmins with cucumber-nagios":http://holmwood.id.au/~lindsay/2009/02/23/web-app-integration-testing-for-sysadmins-with-cucumber-nagios/|Monitor web sites with Cucumber| Feb 23 2009 |
+|"Mixing Cucumber with Test::Unit/Shoulda":http://giantrobots.thoughtbot.com/2009/2/20/mixing-cucumber-with-test-unit|Title says it all|
 |"Using Cucumber to Integrate Distributed Systems and Test Messaging":http://www.benmabey.com/2009/02/17/using-cucumber-to-integrate-distributed-systems-and-test-messaging/| Testing asynchronous messaging | Feb 17 2009|
 |"Integration testing SSL with Cucumber":http://devcaffeine.com/2009/02/16/integration-testing-ssl-with-cucumber/|How to test SSL in Rails| Feb 16 2009|
+|"Getting started with Cucumber and Sinatra":http://tooky.github.com/2009/02/05/getting-started-with-cucumber-and-sinatra.html | Sinatra loves Cucumbers | Feb 05 2009 |
 |"Leveraging Test Data Builders in Cucumber Steps":http://www.benmabey.com/2009/02/05/leveraging-test-data-builders-in-cucumber-steps/| Step definitions for creating objects from step tables.| Feb 5 2009 |
 |"iPhone GUI testing":http://www.ian.dees.name/tech/iphone-gui-testing.html| Cucumber meets the iPhone | Feb 2 2009 |
 |"Ruby-GNOME2 testing":http://www.daniellucraft.com/blog/2009/03/testing-ruby-gnome2-with-cucumber/| Testing Ruby-GNOME2 applications with Cucumber | March 8 2009 |
