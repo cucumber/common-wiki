@@ -45,6 +45,7 @@ There are several ways to get yourself started in writing tests, depending somew
 *** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
 *** "Steam":http://github.com/svenfuchs/steam - Drives a fast headless browser with Javascript support. Support for the normal webrat step definitions, see [[Setting up Steam]]
 *** [[PHP|Testing PHP app using Webrat]]
+*** "WebDriver":http://code.google.com/p/selenium/wiki/RubyBindings - Drives IE, Firefox, Chrome
 *** "Watir":http://wtr.rubyforge.org/ - Drives IE (Windows only), see: [[Setting up FireWatir]]
 *** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU/Linux
 *** "SafariWatir":http://safariwatir.rubyforge.org/ - Drives Safari (OS X only)
