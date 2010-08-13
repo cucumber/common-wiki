@@ -54,6 +54,4 @@ That's it! You have a new language that you can specify in a <code># language: x
 
 h2. Adding examples for a new language
 
-Just copy the <code>examples/i18n/en</code> example to a new directory with the same name as the language you added.
-Then translate everything in there. When you're done you should be able to run <code>rake i18n</code> from the <code>examples/i18n</code> directory. If you want this code back into the official source you have to do those changes in your
-own cloned Git repo.
+Just copy the <code>examples/i18n/en</code> example to a new directory with the same name as the language you added. Then translate everything in there. When you're done you should be able to run <code>rake i18n</code> from the <code>examples/i18n</code> directory. If you want this code back into the official source you have to do those changes in your own cloned Git repo.
