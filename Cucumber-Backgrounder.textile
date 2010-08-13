@@ -256,7 +256,7 @@ Calls for any additional Ruby libraries that your particular testing environment
 
 For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest;  so, no popups when a step fails.  However, there exists a project to add a similar functionality to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
 
-<code>autotest</code> is installed via the "ZenTest":http://www.zenspider.com/ZSS/Products/ZenTest/ gem.
+<code>autotest</code> is installed via the "ZenTest":http://www.zenspider.com/ZSS/Products/ZenTest/ gem.  If you use autotest then take a look at the contents of <code>example_dot_autotest.rb</code> in the ZenTest gem root directory.
 
 h3.  Need Help?
 
