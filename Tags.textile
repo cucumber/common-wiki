@@ -20,9 +20,9 @@ Feature: Verify billing
 You can use the <code>--tags</code> option to tell Cucumber that you only want to run features or scenarios that have (or don't have) certain tags. Examples:
 
 <pre>
-cucumber --tags @billing     # Runs both scenarios
-cucumber --tags @important   # Runs the first scenario
-cucumber --tags ~@important  # Runs the second scenario (Scenarios without @important)
+cucumber --tags @billing            # Runs both scenarios
+cucumber --tags @important          # Runs the first scenario
+cucumber --tags ~@important         # Runs the second scenario (Scenarios without @important)
 cucumber --tags ~@important,~@other # Won't run tasks tagged @important or @other.
 </pre>
 
