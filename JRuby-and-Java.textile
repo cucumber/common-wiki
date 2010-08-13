@@ -28,6 +28,8 @@ When you run <code>jruby</code> with the <code>-S</code> switch, jruby will look
 
 h2. Running the examples
 
+The "examples":http://github.com/aslakhellesoy/cucumber/tree/master/examples are included in the gem.
+
 Open a command prompt and cd to the Cucumber examples directory. You'll find them under <code>$JRUBY_HOME/lib/ruby/gems/1.8/gems/cucumber-X.Y.Z/examples</code>. (Replace <code>X.Y.Z</code> with the Cucumber version you installed above).
 
 If you pulled the Cucumber code with Git, you'll find the examples under <code>examples</code>.
