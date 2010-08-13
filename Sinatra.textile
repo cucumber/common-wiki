@@ -5,7 +5,8 @@ Just make sure you have a <code>features/support/env.rb</code> file with the fol
 <pre><code># RSpec matchers
 require 'spec/expectations'
 
-# NOTE: This must come before the require 'webrat', otherwise sinatra will look in the wrong place for it's views.
+# NOTE: This must come before the require 'webrat', otherwise 
+# sinatra will look in the wrong place for it's views.
 require File.dirname(__FILE__) + '/../../your_sinatra_app'
 
 # Webrat
