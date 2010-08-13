@@ -26,7 +26,7 @@ Lets look at an example first:
 
 The Scenario outline steps provide a template which is never directly run. Only the Scenario table is ever run. 
 
-We refer to the Scenario table below a Scenario outline as 'Examples' rather than 'More Examples'. We do this as the table represents the whole of the test data rather than addition examples.  
+We refer to the Scenario table below a Scenario outline as 'Examples' rather than 'More Examples'. We do this as the table represents all the test examples rather than additional examples.  
 
 In the Scenario outline steps you can use placeholders. Placeholders must be contained in within '<' '>'. For example:
 
