@@ -1,6 +1,6 @@
 We recommend you exercise your whole stack when using Cucumber. You *can* set up mocks with expectations in your [[Step Definitions]]. You can read more about how in "Bryan Helkamp's blog post":http://www.brynary.com/2009/2/3/cucumber-step-definition-tip-stubbing-time.
 
-As of RSpec 1.2.8 if you need to use stubs within Cucumber and you are using the built in mocking/stubbing framework that ships with RSpec you simply need to <pre>require 'spec/stubs/cucumber'</pre> in your env.rb file. Note that message expectations (should_receive) are _not_ automatically verified.
+As of RSpec 1.2.8 if you need to use stubs within Cucumber and you are using the built in mocking/stubbing framework that ships with RSpec you simply need to <code>require 'spec/stubs/cucumber'</code> in your env.rb file. Note that message expectations (should_receive) are _not_ automatically verified.
 
 Existing stubbing/mocking frameworks only support in-process stubbing & mocking, a new kid on the block "cross-stub":http://github.com/ngty/cross-stub provides simple cross process stubbing, which is useful when running cucumber with selenium, culerity, steam, etc. 
 
