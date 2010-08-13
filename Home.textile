@@ -27,7 +27,7 @@ Cucumber itself is also written in Ruby, but it can be used to "test" code writt
 
 * [[JRuby and Java]]
 * [[IronRuby and .NET]]
-* Flex: Use "FunFX":http://github.com/peternic/funfx
+* [[FunFX and Flex]]
 * Web apps in any language - use Cucumber with one of the following:
 ** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
 ** "Watir":http://wtr.rubyforge.org/ - Runs IE (Windows only)
