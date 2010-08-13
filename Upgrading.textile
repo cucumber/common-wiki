@@ -4,7 +4,7 @@ h2. 0.7.x
 
 If you're upgrading from 0.6.x or earlier to 0.7.x you will find that feature file parsing is 50-100 times faster, but it's also a little different. You may have to change your existing features slightly. As of 0.7.0:
 
-* Each feature file *must* start with a <code>Feature:</code> keyword (or a translation). Run cucumber --i18n help and cucumber --i18n LANG for details.
+* Each feature file *must* start with a <code>Feature:</code> keyword (or a translation in one of the [[Spoken languages]]). Run <code>cucumber --i18n help</code> and <code>cucumber --i18n LANG</code> for details.
 ** You may have tags above the <code>Feature:</code> line
 ** You may have comments above the tags or the <code>Feature:</code> line
 * You can now put tags above <code>Examples</code>. This gives you more flexibility with <code>--tags</code> and tagged [[Hooks]].
