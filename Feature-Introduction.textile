@@ -1,0 +1,38 @@
+In Cucumber, every .feature file consists of a header followed by a list of scenarion. You can write whatever you want up until the first scenario, which starts with the word *Scenario* on a new line (see the languages.yml file for translations in other languages). 
+
+Every scenario consists of a list of steps, which must start with *Given*, *When*, *Then*, *But* or *And*. See [Step Organisation] for details of what the words mean (Cucumber treats them all the same, but you shouldn't). Here is an example:
+
+<pre>Feature: Serve coffee
+In order to earn money on drinks
+Customers should be able to buy coffee
+
+  Scenario: Buy last coffee
+    Given there are 1 coffees left in the machine
+    And I have deposited 1$
+    When I press the coffee button
+    Then I should be served a coffee
+</pre>
+
+Cucumber will parse this file, and for each step it will look for a matching *step definition*. A step definition is written in Ruby. Each step definition consists of a keyword, a string or regular expression, and a block. Example:
+
+<pre>
+# features/step_definitions/coffee_steps.rb
+
+Then "I should be served coffee" do
+  @cup.contents.should == "coffee"
+end
+</pre>
+
+Step definitions can also take parameters if you use regular expressions:
+
+<pre>
+# features/step_definitions/coffee_steps.rb
+
+Given /there are (\w+) coffees left in the machine/ do |n|
+  @machine = Machine.new(n.to_i)
+end
+</pre>
+
+This step definition uses a regular expression with one match group, and it matches the first line of the scenario. The value of each matched group gets yielded to the block as a string. You must take care to have the same number of regular expression groups and block arguments. Since block arguments are always strings, you have to do any type conversions inside the block.
+
+When Cucumber prints the results of the running features it will underline all step arguments so that it's easier to see what part of a step was actually recognised as an argument. It will also print the path and line of the matching step definition. This makes it easy to go from a feature file to any step definition.
