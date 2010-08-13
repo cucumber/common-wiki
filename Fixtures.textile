@@ -14,7 +14,7 @@ If you are using transactional fixtures in Rails then instead of loading your fi
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 require 'cucumber/rails/world'
-Cucumber::Rails.use_transactional_fixtures
+Cucumber::Rails::World.use_transactional_fixtures
 
 #Seed the DB
 Fixtures.reset_cache  
