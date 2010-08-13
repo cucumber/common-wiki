@@ -99,4 +99,4 @@ Please add link to examples using Cucumber and JRuby or Java here:
 
 * <a href="http://andymaleh.blogspot.com/2008/12/glimmers-got-bdd-through-rspec-and.html">Glimmer's Got BDD through RSpec and SWTBot</a>
 * <a href="http://andymaleh.blogspot.com/2008/12/first-example-of-glimmer-rspecswtbot.html">First Code Example of Glimmer RSpec/SWTBot Testing</a>
-* <http://blog.demetriusnunes.com/past/2009/6/9/who_said_you_cant_test_swing_apps/>Testing Swing applications with Swinger and Cucumber</a>
+* <a href="http://blog.demetriusnunes.com/past/2009/6/9/who_said_you_cant_test_swing_apps/">Testing Swing applications with Swinger and Cucumber</a>
