@@ -3,8 +3,8 @@ A draft list of useful Cucumber patterns:
 ** Description: ability to scope an inspection or webrat step to a part of the html.
 ** Motivation: when an element appears at multiple locations in an html page you want the ability to specify which one a step refers to
 ** Examples:
-*** When I follow "next" in the pagination section
-*** Then I should see "logout" in the account section
+<pre>When I follow "next" in the pagination section
+Then I should see "logout" in the account section</pre>
 ** Implementation:
 *** Steps like <pre>When /^I follow "([^\"]*)" in the (.*)$/</pre>
 *** A mapping of section names to xpaths that can be used for scoping
