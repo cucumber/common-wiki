@@ -219,10 +219,9 @@ In a manner similar to my convention of using only using the *When* method for s
 When /my matcher named (.*)/ do |match|
   Then "my other matcher named \"#{match}\""
 end
-
-The choice of method has no impact on the result but, When and Then used in this fashion seem to me to read more naturally.
-
 </pre>
+
+The choice of method has no impact on the result but, <em>When</em> and <em>Then</em> used in this fashion seem to me to read more naturally.
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Bacground section are run before each of the scenarios.
 
