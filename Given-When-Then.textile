@@ -12,7 +12,7 @@ The purpose of givens is to put the system in a known state before the user (or 
 * It's ok to call into the layer "inside" the UI layer here (in Rails: talk to the models).
 * Log in a user (An exception to the no-interaction recommendation. Things that "happened earlier" are ok).
 
-And for all the Rails users out there - we recommend using a Given with a multiline table argument to set up records instead of fixtures. This way you can read the scenario and make sense out of it without having to look elsewhere (at the fixtures).
+And for all the Rails users out there - we recommend using a "Given with a multiline table argument":http://github.com/aslakhellesoy/cucumber_rails/tree/master/features/manage_lorries.feature to "set up records":http://github.com/aslakhellesoy/cucumber_rails/tree/master/features/step_definitions/lorry_steps.rb instead of fixtures. This way you can read the scenario and make sense out of it without having to look elsewhere (at the fixtures).
 
 h2. When
 
