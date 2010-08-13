@@ -5,7 +5,7 @@ h1. Introduction
 Cucumber is a tool that can execute plain-text documents as automated functional tests. Here is an example:
 
 <pre>Feature: Search courses
-  In order to ensure better utilisation of courses
+  In order to ensure better utilization of courses
   Potential students should be able to search for courses
 
   Scenario: Search by topic
