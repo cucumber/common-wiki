@@ -9,7 +9,7 @@ Selenium-RC requires the Java Runtime Environment (JRE) version 1.5.0 or higher
 h2. Step 1: Install the Selenium gem
 
 <pre><code>sudo gem install Selenium</code></pre>
-
+<pre><code>sudo gem install selenium-client</code></pre>
 h2. Step 2: Install Selenium-remote
 
 Unfortunately the jar that the Selenium gem (version 1.1.14) comes with does not work with Firefox 3. So we have to get the latest jar from the Selenium-RC site: 
