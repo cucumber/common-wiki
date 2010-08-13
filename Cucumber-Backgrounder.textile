@@ -173,9 +173,11 @@ And /some other act.*/ do
 Given /(.*) other (.*)/ do |first,second|
 </code></pre>
 
-Which raise an interesting point point.  If you had all of these matchers defined somewhere then cucumber would tell you that it found multiple matches and force you to distinguish them.
+Which raise an interesting point point.  If you had all of these matchers defined somewhere then cucumber would tell you that it found multiple matches for a single feature step and force you to distinguish them.
 
-Note that you are not required to use a matched subpattern, (.* ), in the following block.  It is considered better form by some to surround with double quotation marks, <strong>"</strong>, elements in the feature step clauses that meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step files accordingly.  For example:
+Note that you are not required to use a matched subpattern, (.* ), in the following block.  
+
+It is considered better form by some to surround with double quotation marks, <strong>"</strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step files accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
 <pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
 
@@ -185,9 +187,9 @@ Finally, you can have steps call steps.  For example:
    ...
 end
 
-And /in an invoiced non-shipped situation/ do
-  And "some \"invoiced\" action" 
-  And "some \"non-shipped\" action"
+When /in an invoiced non-shipped situation/ do
+  Given "some \"invoiced\" action" 
+  Then "some \"non-shipped\" action"
   ...
 end
 </code></pre>
@@ -195,8 +197,10 @@ end
 Worthy of note is that, inside the step files, one must enclose the arguments to the <strong>Given/When/Then/And</strong> methods with a string delimiter.  Because of this, if you have adopted the practice of demarcating values in the step matchers with double quote marks then you must escape them in the equivalent step strings.  You should also be cautious not to include the quote marks in the value matchers, "(.)" is not the same as (.*).  If you use quotes in the feature files and do not account for them in your matchers then you will get variables that contain leading and trailing quotes as part of their values.
 
 <pre><code>
-And some "required" action
+Scenario: Quotes surround value elelments
+  Given some "required" action
 
+# step_definitions
 And /some (.*) action/ do |a|
   a => "required"
 
@@ -205,6 +209,10 @@ And /some "(.*)" action/ do |a|
 </code></pre>
 
 h3. What Way do I Run the Tests?
+
+Begin with <pre><code>rake db:migrate
+rake db:test:prepare
+</code></pre>
 
 Testing with cucumber can be performed in several fashions.  Be aware that <code>Rake features</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same tests.  
 
