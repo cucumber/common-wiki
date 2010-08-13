@@ -21,6 +21,16 @@ Communication within a team always works better when people can use their spoken
 You have to tell Cucumber that you're using a different language than English (the default):
 <pre><code>cucumber --language no</code></pre>
 
+h2. Listing the available languages
+
+<pre><code>cucumber --language help</code></pre>
+
+h2. Listing the keywords of a particular language
+
+For example Russian:
+
+<pre><code>cucumber --language ru help</code></pre>
+
 h2. Adding a new language
 
 (or completing an existing one). It's easy! 
