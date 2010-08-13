@@ -132,6 +132,16 @@ preserved.
 Cucumber stores multiline strings internally as a <code>Cucumber::Ast::PyString</code> object. However,
 this gets converted to a regular <code>String</code> before it's passed to the step definition.
 
+h3. Diffing multiline strings
+
+If you're using [[RSpec Expectations]], you can compare strings simply with
+
+<pre>
+string_from_step.should == actual_string
+</pre>
+
+If they are different, the step will fail with an error displaying the difference as a "unified diff":http://en.wikipedia.org/wiki/Diff.
+
 h2. Substitution in Scenario Outlines
 
 If you use a multiline argument in steps in [[Scenario Outlines]], any <code>< ></code> 
