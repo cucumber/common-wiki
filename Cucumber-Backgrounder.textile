@@ -103,7 +103,7 @@ In this case the bland initial setup has been divided into sub-directories infor
 |       `-- env.rb
 </code></pre>
 
-It is well to be aware that, regardless of the directory structure chosen, cucumber effectively flattens the test directory when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>
+It is well to be aware that, regardless of the directory structure chosen, cucumber effectively flattens the test directory when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  Consider, however, that the cucumber feature generator will place the files it produces in conformance with the default layout.
 
 Detailed discussion of feature writing and step construction are provided elsewhere (and I will provide links when I get around to it).  None-the-less, a brief outline is provided here.  A <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature consists of multiple Scenarios.  Each Scenario consists of three sections, Given, When and Then.  Each section consists of one or more clauses that are used to match test steps. The conventional arrangement is:
 
@@ -143,7 +143,9 @@ For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenar
         create_step('And', name, *caller[0].split(':')[1].to_i)
       end</code></pre>
 
-<em> If ever their was a case for method_alias then this has to be it. </em>
+<em> If ever there was a case for method_alias then this has to be it. </em>
 
+The string from each one of these method is compared against the matchers contained in the step.rb files.  A step matcher looks much like this:
+<pre><code></code></pre>
 
 <pre><code></code></pre>
