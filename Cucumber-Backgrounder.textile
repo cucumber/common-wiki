@@ -113,7 +113,7 @@ Detailed discussion of feature writing and step construction are provided elsewh
       create  features/manage_froobles.feature
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
-A <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature consists of multiple Scenarios.  Each Scenario consists of three sections, Given, When and Then.  Each section consists of one or more clauses that are used to match test steps. The conventional arrangement is:
+A <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature consists of multiple <strong><em>Scenarios</strong></em>.  Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses that are used to match test steps. The conventional arrangement is:
 
 <pre>Feature: Some terse yet descriptive text
 In order to/that <some business value>
