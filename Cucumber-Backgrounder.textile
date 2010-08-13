@@ -103,11 +103,11 @@ In this case the bland initial setup has been divided into sub-directories infor
 |       `-- env.rb
 </code></pre>
 
-Consider, however, that the cucumber feature generator will place the files it produces in conformance with the default layout, with the <code>manage_frobble.feature</code> file in ./features and the <code>frobble_steps.rb</code> file in </code>./features/step_definitions</code>..  Also be aware that, regardless of the directory structure chosen, cucumber effectively flattens the test directory when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
+Consider, however, that the cucumber feature generator will generate the files it produces in conformance with the default layout, with the <code>manage_frooble.feature</code> file placed in ./features and the <code>frooble_steps.rb</code> file in </code>./features/step_definitions</code>.. Also be aware that, regardless of the directory structure employed, cucumber effectively flattens the features directory tree when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
 
 h3. How do I Write Tests?
 
-Detailed discussion of feature writing and step construction are provided elsewhere ([[Given-When-Then]]).  Perhaps the easiest thing to do is to use cucumber's built-in generator to create a feature scaffold and modify it.  
+Constructing ones first tests, or features as BDD purists prefer, is often accompanied by what can only be described as <em> writer's block</em>.  While detailed discussion of feature writing and step construction are provided elsewhere ([[Given-When-Then]]), perhaps the easiest thing to do for the first time tester/behaviourist is to use cucumber's built-in generator to create a feature scaffold and thenmodify it.  
 <pre><code>script/generate feature Frooble name color description
       exists  features/step_definitions
       create  features/manage_froobles.feature
