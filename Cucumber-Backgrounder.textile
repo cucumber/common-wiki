@@ -305,3 +305,7 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 
 2008 November 28 - J. B. Byrne initial
 2010 January 17 - J.B. Byrne revised
+
+h3. Postscript.
+
+A caution, Cucumber is meant to facilitate expressing required behaviours.  Indirection and excessive adherence to the principle of DRY, particularly in features, is at variance with the intent and the major benefit of the tool.  Requirement expression in features should remain as self evident to the non-technical and as self contained as possible.  Resist the tempation to program features in Cucumber.
