@@ -103,8 +103,8 @@ You only care about the button texts and you want compare with a plain text tabl
 
 <pre>
 | Invoice | Action           |
-|    2001 | Approve,Delegate |
-|    2002 | Reject           |
+| 2001    | Approve,Delegate |
+| 2002    | Reject           |
 </pre>
 
 In this case, mapping a column with a Regexp might be a little tricky. In such cases it might be easier to use Nokogiri and a CSS selector:
