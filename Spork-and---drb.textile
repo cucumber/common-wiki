@@ -1,6 +1,10 @@
 As of release 0.3.10 Cucumber has a new <code>--drb</code> switch.
 
-This switch lets you run your features faster by offloading the startup time of your code to "Spork":http://github.com/timcharper/spork/tree/master. 
+This switch lets you offload the startup time of your code to "Spork":http://github.com/timcharper/spork/tree/master. This is very handy in situations where you only want to run a few scenarios (typically the ones you are working on right now).
+
+It's important to realise that Spork doesn't actually make your scenarios run faster. In fact, they will run slower because of the DRb overhead. What does become faster is startup time (the duration before the first feature runs). Typically this is the time it takes to load all the framework code and other rubygems your application depends upon.
+
+This means that for just a few scenarios, you will see an improvement in time, but if you are running N scenarios you will see a degradation. The value of N depends on your project. The more code that gets loaded at startup, the bigger N will be. It's probably around 10-20 for most projects.
 
 You can start Spork and have it preload your application in a separate process. 
 
