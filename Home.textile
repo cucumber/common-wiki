@@ -73,7 +73,6 @@ There are several ways to get yourself started in writing tests, depending somew
 ** [[Continuous Integration]]
 ** [[Autotest Integration]]
 ** [[Related tools]] that work with Cuke
-** "thesis help":http://www.realthesiswriting.com - thesis resources
 ** [[Maven cucumber-maven-plugin]]
 ** [[Spork and --drb]] to decrease Cucumber's startup time
 ** "Testjour":http://github.com/brynary/testjour to distribute your features between several machines and run them in parallel
