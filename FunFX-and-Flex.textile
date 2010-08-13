@@ -1,4 +1,4 @@
-"FunFX":http://wiki.github.com/peternic/funfx is a Watir / SafariWatir / FireWatir extension that lets you talk to a Flex application straight from Ruby. Here is how you can write Cucumber step definitions that use FunFX:
+"FunFX":http://wiki.github.com/peternic/funfx is a Watir / SafariWatir / FireWatir extension that lets you talk to an "Adobe Flex":http://www.adobe.com/products/flex/ application straight from Ruby. It works wonderfully with Cucumber. Here is an example to get you started:
 
 <pre>
 # features/support/env.rb
