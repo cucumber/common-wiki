@@ -98,6 +98,6 @@ steps that need to be in place in order for the When/Then to make sense.
 
 h2. Other pages
 
-* [[Spoken laguages]]
+* [[Spoken languages]]
 * [[Migration From RSpec Stories]]
 * [[Background and Credits]]
