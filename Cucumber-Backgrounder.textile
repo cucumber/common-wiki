@@ -2,7 +2,7 @@ h2. Or: How I Learned to Stop Worrying and Love Testing
 
 h3. Introduction
 
-This discussion deals principally with the initial set up and use of cucumber features in a Ruby on Rails (RoR) Project.  Discussion of Behaviour Driven (BDD), Test Driven (TDD), and Panic Driven Development (SNAFU) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].
+This discussion deals principally with the initial set up and use of cucumber features in a Ruby on Rails (RoR) Project.  Discussion of "Behaviour Driven (BDD)":http://en.wikipedia.org/wiki/Behavior_driven_development, "Test Driven (TDD)":http://en.wikipedia.org/wiki/Test-driven_development, and "Panic Driven Development (SNAFU)":http://en.wikipedia.org/wiki/SNAFU can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].
 
 h3. Where to Start?
 
