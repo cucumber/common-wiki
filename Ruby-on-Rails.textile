@@ -101,8 +101,8 @@ h3. Other ways of running features
 
 You can also run specific features directly with cucumber:
 
-<pre><code>cucumber --require features --require lib features/subdir/</code>
-<code>cucumber --require features --require lib features/some-nifty.feature</code></pre>
+<pre><code>cucumber --require features --require lib features/subdir/
+cucumber --require features --require lib features/some-nifty.feature</code></pre>
 
 And using autospec with a similar setting (<code>--require features --require lib</code>), applied in your project's /cucumber.yml:
 
@@ -115,9 +115,7 @@ Remember that you need AUTOFEATURE=true for autospec to include cucumber feature
 
 h2. View spec redundancy
 
-Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree
-of redundancy with view specs. I recommend you delete generated view specs if you run into too much maintenance
-headaches and rely on the features instead of view specs. However, in some cases it can be handy to use both.
+Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree of redundancy with view specs. I recommend you delete generated view specs if you run into too much maintenance headaches and rely on the features instead of view specs. However, in some cases it can be handy to use both.
 
 h2. Authentication
 
