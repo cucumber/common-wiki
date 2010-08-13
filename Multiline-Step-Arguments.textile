@@ -1,63 +1,126 @@
-It's possible to pass text with an arbitrary number of lines and formatting to a step definition using the PyString syntax.  (The inspiration for PyString comes from Python where """ is used to delineate docstrings.)  The text should be offset by delimiters consisting of three double-quote marks on lines of their own (indentation is unimportant):
+The regular expression matching in [[Step Definitions]] lets you capture small strings from  your
+steps and receive them in your step definitions. However, there are times when you want to pass
+a richer data structure from a step to a step definition.
 
-<blockquote>
-<pre>
-<code>
-Given a blog post named "Random" with the following body in Markdown
-"""
-Some Title, Eh?
-==============
-Here is the first paragraph of my blog post. Lorem ipsum dolor sit amet,
-consectetur adipiscing elit. Mauris rutrum, dolor a rutrum fringilla, eros justo
-ultricies quam, ac aliquet velit metus ac felis. In id ipsum. Proin hendrerit
-gravida magna. In purus enim, fringilla in, adipiscing at, ultrices et, mi. Nam
-vitae risus sit amet quam tempor rutrum. Nam euismod, justo fringilla auctor
-ullamcorper, orci diam scelerisque augue, a mattis erat massa eget lectus.
-Curabitur cursus.
+This is what multiline step arguments are for. They are written on the lines right underneath a step,
+and will be yielded as the last argument to the matching step definition's block.
 
-And here is the second paragraph. Maecenas sed magna. Pellentesque ut mauris.
-Sed faucibus enim eget arcu. Nam interdum, ligula nec mollis accumsan, tellus
-felis porttitor nibh, vel auctor tellus nisl at nibh. Etiam urna mauris,
-pharetra in, commodo quis, mattis vel, mi. Maecenas in justo et ipsum hendrerit
-scelerisque.
-"""
-When I view the post
-Then I should see the post in all of it's HTML rendered glory
-</code>
-</pre>
-</blockquote>
+Multiline step arguments come in two flavours - tables or strings.
 
-In your step definition, there's no need to find this text and match it in your regexp.  It will automatically be yielded as the last parameter in the step definition.  For example:
+h2. Multiline Tables
 
-<blockquote>
-<pre>
-<code>
-Given /^a blog post named "([^\"]*)" with the following body in Markdown$/ do |title, markdown_content|
+Multiline Tables are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected 
+output from a <code>When</code>. Example:
+
+<pre><code>Given the following people exist:
+  | name  | email           | phone |
+  | Aslak | aslak@email.com | 123   |
+  | Joe   | joe@email.com   | 234   |
+  | Bryan | bryan@email.org | 456   |
+</code></pre>
+
+-and a matching step definition:
+
+<pre><code>Given /the following people exist:/ do |people_table|
+  people_table.hashes.each do |hash|
+    # The first time the +hash+ will contain:
+    #   {'name' => 'Aslak', 'email' => 'aslak@email.com', 'phone' => '123'} 
+    # The second time:
+    #   {'name' => 'Joe', 'email' => 'joe@email.com', 'phone' => '234'}
+    # etc.
+  end
+end
+</code></pre>
+
+A plain text table gets stored in a <code>Cucumber::Ast::Table</code> object, which provides several methods to access the
+rows, columns and cells in the table. In the example above we're using the <code>Cucumber::Ast::Table#hashes</code> method
+to iterate over all of the rows.
+
+h2. Multiline Strings
+
+Multiline Strings are handy for specifying a larger piece of text. This is done using the PyString syntax. (The inspiration 
+for PyString comes from Python where """ is used to delineate docstrings.)  The text should be offset by delimiters consisting 
+of three double-quote marks on lines of their own:
+
+<pre><code>Given a blog post named "Random" with the following body in Markdown
+  """
+  Some Title, Eh?
+  ==============
+  Here is the first paragraph of my blog post. Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit.
+  """
+</code></pre>
+
+In your step definition, there's no need to find this text and match it in your Regexp. It will automatically be yielded as 
+the last parameter in the step definition.  For example:
+
+<pre><code>Given /^a blog post named "([^\"]*)" with the following body in Markdown$/ do |title, markdown_content|
   Post.create!(:title => title, :body => markdown_content)
 end
-</code>
-</pre>
-</blockquote>
+</code></pre>
 
-The object that is yielded is in fact a Cucumber::Ast::PyString object that you can treat like a regular String.  By calling #to_s on the PyString you will get an actual String object back.
+Indentation of the opening <code>"""</code> is unimportant, although common practice is 2 spaces in from
+the enclosing step. The indentation <em>inside</em> the triple quotes <em>do</em> have significance. Each
+line of the string that gets passed to the step definition's block will be de-indented according to the 
+opening <code>"""</code>. Indentation beyond the column of the opening <code>"""</code> will therefore be
+preserved.
 
-It is also possible to use PyStrings in conjunction with "Scenario Outlines":http://wiki.github.com/aslakhellesoy/cucumber/scenario-outlines variables. For example:
+Cucumber stores multiline strings internally as a <code>Cucumber::Ast::PyString</code> object. However,
+this gets converted to a regular <code>String</code> before it's passed to the step definition.
 
-<blockquote>
-<pre>
-<code>
+h2. Substitution in Scenario Outlines
+
+If you use a multiline argument in steps in [[Scenario Outlines]], any <code>&lt; &gt;</code> 
+delimited tokens will be substituted with values from the example tables. For example:
+
+<pre><code>
+Scenario Outline: Email confirmation
   Given I have a user account with my name "Jojo Binks"
   When an Admin grants me <Role> rights
   Then I should receive an email with the body:
-  """
-  Dear Jojo Binks,
-  You have been granted <Role> rights.  You are <details>. Please be responsible.
-  -The Admins
-  """
-  Examples:
-    |  Role     | details                                         |
-    |  Manager  | now able to manage your employee accounts       |
-    |  Admin    | able to manage any user account on the system   |
-</code>
-</pre>
-</blockquote>
+    """
+    Dear Jojo Binks,
+    You have been granted <Role> rights.  You are <details>. Please be responsible.
+    -The Admins
+    """
+Examples:
+  |  Role     | details                                         |
+  |  Manager  | now able to manage your employee accounts       |
+  |  Admin    | able to manage any user account on the system   |
+</code></pre>
+
+Or with tables:
+
+<pre><code>
+Scenario Outline: Multiplying with 7
+  Given I have the numbers
+    | q1   | q2 | product |
+    | <x>  |  7 | <y>     |
+Examples:
+  |  x |  y |
+  |  2 | 14 |
+  | 10 | 70 |
+</code></pre>
+
+h2. Using regular arguments and multiline arguments
+
+It's possible to pass regular arguments in addition to multiline arguments. This is illustrated
+for strings above in the blog example. Here is an example using tables:
+
+<pre><code># ruby
+Given /^an expense report for (.*) with the following posts:$/ do |date, posts_table|
+  # The posts_table variable is an instance of Cucumber::Ast::Table
+end
+</code></pre>
+
+This can easily be called from a plain text step like this:
+
+<pre><code>
+# feature
+Given an expense report for Jan 2009 with the following posts:
+  | account | description | amount |
+  | INT-100 | Taxi        |    114 |
+  | CUC-101 | Peeler      |     22 |
+</code></pre>
+
+Also see [[Calling Steps from Step Definitions]] for a related example.
