@@ -35,7 +35,7 @@ JRuby:
 jruby -S gem install aslakhellesoy-cucumber
 </code></pre>
 
-*IMPORTANT* _As of Sept 12 there are "problems with the gem":http://logicalawesome.lighthouseapp.com/projects/8570-github/tickets/945. Please get the code via Git (or download a tarball) and build the gem yourself. I'm investigating what the problem is. --Aslak_
+*IMPORTANT* _As of Sept 12 there are "problems with the gem":http://logicalawesome.lighthouseapp.com/projects/8570-github/tickets/945. Please get the code via Git (or download a tarball) and build the gem yourself._
 
 <pre><code>git clone git://github.com/aslakhellesoy/cucumber.git
 cd cucumber
