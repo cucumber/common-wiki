@@ -39,7 +39,6 @@ require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new(:features) do |t|
   t.cucumber_opts = "--format pretty"
-  t.rcov = true
 end
 </code></pre>
 
@@ -56,3 +55,6 @@ TODO: Show a simple task
 h2. Using Maven
 
 TODO: Show a simple task
+
+h2. Using RCov
+"How to use Cucumber with RCov":http://github.com/aslakhellesoy/cucumber/wikis/using-rcov-with-cucumber-and-rails 
