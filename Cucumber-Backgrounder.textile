@@ -253,9 +253,9 @@ Feature: .  .  .
 
 h3. What are "tags"?
 
-Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any string found in a feature file that is prefaced with the <strong>&#64;</strong> symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>&#64;wip</em> tag.  However, any string may used as a tag and any scenario of feature can have multiple tags associated with it.  For example:
+Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any string found in a feature file that is prefaced with the commercial at (<strong>&#64;</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>&#64;wip</em> tag.  However, any string may used as a tag and any scenario of feature can have multiple tags associated with it.  For example:
 <pre>
-  @wip @authent
+  &#64;wip @authent
   Scenario:  A user should authenticate before accessing any resource.
      Given we do have a user named "testuser"
       When I visit "the login page"
@@ -266,8 +266,8 @@ Cucumber provides a simple method to organize features and scenarios by user det
 Given that the forgoing is contained in a file called <code>features/login.feature</code> and that the cucumber-rails gem is installed and configured then you can exercise this scenario in any of the following ways:
 <pre>
 $ rake cucumber:wip
-$ cucumber --tags=@wip
-$ cucumber --tags=@authent
+$ cucumber --tags=&#64;wip
+$ cucumber --tags=&#64;authent
 </pre>
 
 However, the following will not work, unless you build a custom rake task for it:
@@ -275,9 +275,11 @@ However, the following will not work, unless you build a custom rake task for it
 $ rake cucumber:authent
 </pre>
 
-The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the --tags= option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message. 
+The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the --tags= option, as in <code>$ cucumber --tags=&#64;wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message. 
 
-Limiting the number of occurrences is commonly used in conjunction with the @wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this feature invaluable.
+Limiting the number of occurrences is commonly used in conjunction with the &#64;wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
+
+Tags may also be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can 
 
 h3. What Way do I Run the Tests?
 
