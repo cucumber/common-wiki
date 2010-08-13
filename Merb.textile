@@ -5,6 +5,7 @@ To install merb_cucumber:
 *sudo gem install david-merb_cucumber*
 
 Then inside of a merb application directory, try:
+
 *merb-gen cucumber*
 
 I found this walk-through useful - "Writing User Stories with merb_cucumber":http://dermological.blogspot.com/2008/11/writing-user-stories-with-merb-cucumber.html
