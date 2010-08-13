@@ -41,7 +41,7 @@ end
 
 The object that is yielded is in fact a Cucumber::Ast::PyString object that you can treat like a regular String.  By calling #to_s on the PyString you will get an actual String object back.
 
-It is also possible to use PyStrings in conjunction with "Scenario Outlines":http://wiki.github.com/aslakhellesoy/cucumber/scenario-outlines.  For example:
+It is also possible to use PyStrings in conjunction with "Scenario Outlines":http://wiki.github.com/aslakhellesoy/cucumber/scenario-outlines variables. For example:
 
 <blockquote>
 <pre>
