@@ -1,4 +1,4 @@
-*Note: this feature is not available yet but will be merged in soon*
+*Note: this feature is currently only in trunk*
 
 Step argument transforms help your step definitions be more DRY. You can use the <code>Transform</code> method to register a regular expression along with a code block. Before captured regex groups get yielded as arguments to step definitions, an attempt is made to match them against any registered <code>Transform</code>. If there is a match, the return value of the block supplied with the transform is yielded as the step definition argument instead. Here is an example:
 
@@ -20,5 +20,4 @@ Scenario: friend'ing
   Then user larrytheliquid should be friends with user dastels
 </pre> 
 
-One key thing to remember is to provide some contextual data like "user" so you don't end up transforming every single argument to a step definition. For a more detailed explanation and examples, see the following blog post:
-*stub*
+One key thing to remember is to provide some contextual data like "user" so you don't end up transforming every single argument to a step definition. See "this blog post":http://www.engineyard.com/blog/2009/cucumber-step-argument-transforms/ for a more detailed explanation and examples.
