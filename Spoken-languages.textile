@@ -2,7 +2,7 @@ Communication within a team always works better when people can use their spoken
 
 <pre><code># language: no
 Egenskap: Summering
-  For å ungå at firmaet går konkurs
+  For å unngå at firmaet går konkurs
   Må regnskapsførerere bruke en regnemaskin for å legge sammen tall
 
   Scenario: to tall
