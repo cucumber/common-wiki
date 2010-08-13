@@ -1,0 +1,11 @@
+h3. Autotest Integration 
+
+Cucumber comes with an autotest plugin that will hook into the regular autotest cycle to run the features after the tests/specs.  The plugin is disabled by default but can be turned on by setting the AUTOFEATURE environment variable to 'true'.  For example:
+
+<pre><code>$ AUTOFEATURE=true autospec</code></pre>
+
+If you always want to have the plugin run then you can export the variable in your .bash_profile or other shell file like so:
+
+<pre><code>
+export AUTOFEATURE=true
+</code></pre>
