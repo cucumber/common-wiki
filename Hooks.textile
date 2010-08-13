@@ -7,7 +7,15 @@ All hooks defined are run whenever the relevant event occurs. For example all Be
 h2. Scenario hooks
 
 <pre><code>Before do
-  #do something before each scenario.
+  # do something before each scenario.
+end
+</code></pre>
+
+or - if you want to inspect the actual scenario object:
+
+<pre><code>Before do |scenario|
+  @scenario = scenario
+  # our After block can look at @scenario to find out stuff later...
 end
 </code></pre>
 
