@@ -69,8 +69,7 @@ Notepad, but it will do).
 
 On my system icucumber.bat looks like this (You may have to change the paths).
 
-<pre><code>
-@ECHO OFF
+<pre><code>@ECHO OFF
 REM This is to tell IronRuby where to find gems.
 SET GEM_PATH=%~dp0..\lib\ruby\gems\1.8
 @"C:\scm\ironruby\build\debug\ir.exe" "%~dp0cucumber" %*
@@ -81,7 +80,7 @@ you're wondering what this is.
 
 Now you should be able to run Cucumber:
 
-<code>icucumber --help<code>
+<code>icucumber --help</code>
 
 h2. Running the Cucumber C# example
 
