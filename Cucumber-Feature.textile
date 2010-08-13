@@ -12,7 +12,9 @@ Go to the "main":http://github.com/aslakhellesoy/cucumber Cucumber Github page a
 
 h3. Create a branch
 
-<pre>git checkout -b 982-artificial-intelligence</pre>.
+Instead of working on the master branch - consider creating a separate branch for your feature:
+
+<pre>git checkout -b 982-artificial-intelligence</pre>
 
 By using a name that corresponds with the ticket it becomes much easier to follow what's going on.
 
