@@ -94,15 +94,3 @@ more precisely in the *Then* steps.
 When you're writing a new scenario, I recommend you start with the formulation of the desired outcome. Write the
 *Then* steps first. Then write the *When* step to discover the action/operation and finally write the *Given*
 steps that need to be in place in order for the When/Then to make sense.
-
-h2. Other pages
-
-* [[Feature-Coupled Steps (Antipattern)]]
-* [[Conjunction Steps (Antipattern)]]
-* [[Step Organisation]]
-* [[Spoken languages]]
-* [[Migration From RSpec Stories]]
-* [[Background and Credits]]
-* [[Merb]]
-* [[Ruby on Rails]]
-* [[Sinatra]]
