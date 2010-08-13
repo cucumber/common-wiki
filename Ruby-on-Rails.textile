@@ -24,7 +24,7 @@ h2. Install Other dependencies
 
 h2. Create Your Rails Project
 
-Don't forget to create the rails project if you haven't done so yet with the following command:
+Don't forget to create the rails project and the corresponding databases (if you haven't done so yet) with the following command:
 
 <pre><code>rails YourProjectName</code></pre>
 
