@@ -12,7 +12,7 @@ For example
 
 ...will run the scenario defined at line 44 of the authenticate_user feature, format it as HTML and pipe it to the features.html file for viewing in a browser.
 
-h3. Defining 'profiles'
+h3. Defining 'profiles' in cucumber.yml
 
 Profiles allow you to store and reuse commonly used cucumber arguments for a project in a cucumber.yml file.  For example, by having this in your cucumber.yml at your project root:
 
