@@ -55,11 +55,11 @@ And a plain text step:
 
 <pre><code>Given Three blind mice</code></pre>
 
-Cucumber can't make a decision about what Step Definition to execute, and wil raise an error telling you to fix the ambiguity.
+Cucumber can't make a decision about what Step Definition to execute, and wil raise a <code>Cucumber::Ambiguous</code> error telling you to fix the ambiguity.
 
-h2. Duplicate Step Definitions
+h2. Redundant Step Definitions
 
-In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the Proc), so the following would cause an error:
+In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the Proc), so the following would cause a <code>Cucumber::Redundant</code> error:
 
 <pre><code>Given /Three (.*) mice/ do |disability|
   # some code
