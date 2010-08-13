@@ -4,7 +4,8 @@ You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Web
 
 Just make sure you have a <pre>features/support/env.rb</pre> file with the following:
 
-<pre><code>$0 = File.dirname(__FILE__) + '/../../your_sinatra_app.rb' # Otherwise Sinatra will look for views in the wrong place
+<pre><code># Sinatra - my views are not in the cucumber bin dir!
+$0 = File.dirname(__FILE__) + '/../../your_sinatra_app.rb'
 require 'spec'
 require 'webrat/sinatra/sinatra_session'
 require 'sinatra/test/common'
