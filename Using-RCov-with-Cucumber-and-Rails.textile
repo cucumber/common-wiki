@@ -13,7 +13,7 @@ gem uninstall rcov
 gem install spicycode-rcov
 </pre>
 
-Second, you'll need to open up the cucumber generated task file and add the rcov option.
+Second, you'll need to open up the cucumber generated task file and set the rcov config option.
 
 <pre>
 #lib/tasks/cucumber.rake
