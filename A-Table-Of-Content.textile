@@ -1,7 +1,6 @@
 h2. Cucumber
 
 # "Home":http://wiki.github.com/aslakhellesoy/cucumber
-# "Background":http://wiki.github.com/aslakhellesoy/cucumber/background
 # "Feature Introduction":http://wiki.github.com/aslakhellesoy/cucumber/feature-introduction
 # "Given-When-Then":http://wiki.github.com/aslakhellesoy/cucumber/given-when-then
 
@@ -20,6 +19,7 @@ h2. Troubleshooting
 
 h2. Documentation
 
+# "Background":background
 # "A Whole New World":http://wiki.github.com/aslakhellesoy/cucumber/a-whole-new-world
 # "Calling Steps from Step Definitions":http://wiki.github.com/aslakhellesoy/cucumber/calling-steps-from-step-definitions
 # "Conjunction Steps (Antipattern)":http://wiki.github.com/aslakhellesoy/cucumber/conjunction-steps-antipattern
