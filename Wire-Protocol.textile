@@ -4,6 +4,11 @@ This page documents the details of the low-level \wire protocol that Cucumber us
 
 h2. List Step Definitions
 
+<pre>
+|-- list_step_defintions --->|
+|<--------------------- ok --|
+</pre>
+
 h3. Request 
 
 <pre>{
@@ -21,6 +26,19 @@ h3. Response
 }</pre>
 h2. Invoke
 
+<pre>
+|-- invoke --------->|
+|<------------- ok --|
+         OR
+|<----- diff_table --|
+|-- diff_response -->|
+|<------------- ok --|
+         OR
+|<---- step_failed --|
+
+</pre>
+
+
 h3. Request 
 
 <pre>{
@@ -36,9 +54,8 @@ If the step is invoked successfully then an 'ok' response is returned:
   "version" : "1.0",
   "ok" : ""
 }</pre>
-OR
 
-If the step throws an exception then a 'step_failed' response is returned:
+OR If the step throws an exception then a 'step_failed' response is returned:
 
 <pre>{
   "version" : "1.0",
