@@ -23,6 +23,8 @@ h2. Installation
 
 After you have installed Ruby or JRuby - install Cucumber with the following commands:
 
+*IMPORTANT* _As of Sept 12 there are problems with the gem. Please get the code via Git (or download a tarball) and build the gem yourself. I'm investigating what the problem is. --Aslak_
+
 Ruby:
 <pre><code>gem sources --add http://gems.github.com/ 
 gem install aslakhellesoy-cucumber
