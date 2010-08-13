@@ -1,7 +1,5 @@
 h1. Introduction
 
-*{color:red}Please vote for a logo over at the new "Cucumber website":http://cukes.info*
-
 Cucumber is a tool that can execute plain-text documents as automated functional tests. Here is an example:
 
 <pre>Feature: Search courses
