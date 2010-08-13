@@ -10,6 +10,8 @@ h3. Help us fix it
 
 The only way we can fix a bug is to reproduce it first. If reproducing the bug requires setting up a project, please write a [[Cucumber Feature]] that demonstrates the bug. When you have done that, mention it in your ticket or send a pull request.
 
+Explain what gem you have (<code>gem list</code>), what command(s) you ran, what the output is etc. 
+
 h2. You want a new feature
 
 Start by creating a ticket. Then, create a [[Cucumber Feature]] and start implementing it. It also helps if you add RSpec specs for the low level code.
