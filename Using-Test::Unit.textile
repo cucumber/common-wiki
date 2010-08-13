@@ -1,0 +1,10 @@
+Don't like RSpec's <pre>should</pre> methods for assertions? No problem, we won't force you to. You can use the familiar Test::Unit <pre>assert</pre> methods by defining your own World block:
+
+<pre>
+require 'test/unit/assertions'
+
+World do |o|
+  o.extend(Test::Unit::Assertions)
+  o
+end
+</pre>
