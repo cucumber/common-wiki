@@ -175,7 +175,7 @@ And /some other act.*/ do
 Given /(.*) other (.*)/ do |first,second|
 </code></pre>
 
-Which raise an interesting point.  If you had more than one of these matchers defined somewhere in any of your step_definitions.rb files, and not necessarily in the same file mind you, then cucumber would tell you that it found multiple matches for a single feature step and force you to distinguish them.
+Which raises an interesting point.  If you had more than one of these matchers defined somewhere in any of your step_definitions.rb files, and not necessarily in the same file mind you, then cucumber would tell you that it found multiple matches for a single feature step and force you to distinguish them.
 
 Note that you are not required to use a matched subpattern, <code>(.* )</code>, in the following block.  
 
