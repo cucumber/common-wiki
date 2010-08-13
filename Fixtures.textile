@@ -1,0 +1,11 @@
+Paste this code snippet into env.rb to load all fixtures from spec/fixtures before each scenario.
+
+<pre>
+<code>
+Before do
+  Fixtures.reset_cache
+  fixtures = Dir[File.join(RAILS_ROOT, 'spec/fixtures', '*.yml')].map{ |f| File.basename(f, '.yml') }
+  Fixtures.create_fixtures('spec/fixtures', fixtures)
+end
+</code>
+</pre>
