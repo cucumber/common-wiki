@@ -33,9 +33,9 @@ end</code></pre>
 * Debugger
 ** Description: a step to go into the debugger
 ** Motivation: because puts statements just don't cut it
-** Examples:<pre><code>When I go to the homepage
-And debugger</code></pre>
 ** Implementation:
+<pre><code>When I go to the homepage
+And debugger</code></pre>
 <pre><code>Then /^debugger$/ do
   debugger
 end</code></pre>
