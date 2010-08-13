@@ -1,6 +1,7 @@
 Here is a list of projects using Cucumber. I find reading them to be a great learning experience.
 
 Projects using Cucumber:
+* "Gemcutter":http://github.com/rubygems/gemcutter
 * "Clearance":http://github.com/thoughtbot/clearance/ /generators/clearance_features/templates/features/
 * "WebJam":http://github.com/webjam/webjam/ /features/
 * "Redcar":http://github.com/danlucraft/redcar/tree/master /plugins/*/features
