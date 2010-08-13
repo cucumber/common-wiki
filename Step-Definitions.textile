@@ -14,20 +14,6 @@ h2. Skipped steps
 
 Steps that follow pending or failed steps are never executed (even if there is a matching Step Definition), and are marked cyan.
 
-h2. Duplicate Step Definitions
-
-In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files), so the
-following would cause an error:
-
-<pre><code>Given /Three (.*) mice/ do |disability|
-  # some code
-end
-
-Given /Three (.*) mice/ do |disability|
-  # some other code
-end
-</code></pre>
-
 h2. Ambiguous steps
 
 Consider these step definitions:
@@ -44,3 +30,17 @@ And a plain text step:
 <pre><code>Given Three blind mice</code></pre>
 
 Cucumber can't make a decision about what Step Definition to execute, and wil raise an error telling you to fix the ambiguity.
+
+h2. Duplicate Step Definitions
+
+In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files), so the
+following would cause an error:
+
+<pre><code>Given /Three (.*) mice/ do |disability|
+  # some code
+end
+
+Given /Three (.*) mice/ do |disability|
+  # some other code
+end
+</code></pre>
