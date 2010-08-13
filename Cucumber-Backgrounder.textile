@@ -56,7 +56,7 @@ Cucumber divides testing into two parts, the outward facing feature <em>steps</e
 
 A source of potential confusion is that the term <em><strong>steps</strong></em>, when used loosely, has two, closely related but vitally distinct, meanings depending on context.  Inside feature.feature files, steps are the textual descriptions which form the body of a scenario.  These are prefaced with Given, When, Then, and And (note as well that the capitalization of these four keywords/method names is significant).  Inside a step_definitions.rb file, steps (which strictly speaking should always be called step definitions) refers to the <em>matcher</em> methods, given exactly the same names (Given, When, or Then, but *not And*),  each provided with a matcher regexp that corresponds to one or more feature steps.  Note that the method name does NOT form part of the matcher.  A Given feature clause can match a When step definition matcher.  Over time, clauses from features have come to be referred to simply as <em>features</em> while <em>steps</em> now refers almost exclusively to step-matchers
 
-[[Step Organisation|Step definitions]], keyed by their snippets of text from the feature files, invoke blocks of ruby and rails code that usually contains assertion statements from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is unsurprising that the cucumber generator once assumed that rspec was available.  This has long since ceased to be the case.  What cucumber does now is detect if the rspec and rspec-rails gems are installed.  If so then the rails generator builds the environment files to suite and if not then it ignores rspec and configures for test-unit instead.
+[[Step Organisation|Step definitions]], keyed by their snippets of text from the feature files, invoke blocks of ruby and rails code that usually contains assertion statements from whatever test system you have installed.  Given that cucumber evolved out of RSpec stories it is unsurprising that the cucumber generator once assumed that rspec was available.  This has long since ceased to be the case.  What cucumber does now is detect if the rspec and rspec-rails gems are installed.  If so then the rails generator builds the environment files to suit and if not then it ignores rspec and configures for test-unit instead.
 
 As detailed above, the default features directory tree is fairly shallow.  One can put every feature into a single file in the features directory and every step in a single file in the steps_definition directory (or even in the features directory itself) if one so chooses.  One can choose to have one or more feature files for each feature together with one or more step files for each feature file; or any combination thereof.  However, cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
 
@@ -243,20 +243,9 @@ If you are testing with intent then you should be using the "ruby-debug gem":htt
 
 Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct step definitions in such a fashion as to conduct unit tests and no great harm will result.  However, this is not considered best practice by many and may prove insupportable for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
-Cucumber comes preconfigured for webrat together with webrat test steps.  If you do not know what webrat is and you are doing web application testing then you should "read about it":http://agilewebdevelopment.com/plugins/webrat.
+Cucumber-Rails preconfigured with support for integration testing using either "Capybara":http://github.com/jnicklas/capybara (script/generate  cucumber --capybara) or Webrat (script/generate cucumber), the default.  If you do not know what Capybara or Webrat are or do,  and you are doing web application testing, then you should find out more about "Capybara":http://github.com/jnicklas/capybara and "Webrat":http://github.com/brynary/webrat, both.
 
-If  webrat is installed in your rails project as a plugin then the webrat step definitions are available to you for functional/view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem instead of a plugin then you may need add this to the features/support/env.rb file, although this may no longer be necessary with cucumber v-2.0+:
-
-<code>require 'webrat' if !defined?(Webrat)</code>
-
-Then, comment out these  in env.rb.
-<pre><code># If webrat is a plugin then uncomment this
-#require 'webrat/rails'
-
-# Comment out the next two lines if you're not using RSpec's matchers (should / should_not) in your steps.
-require 'cucumber/rails/rspec'
-# If webrat is a plugin and rspec is used then uncomment this
-#require 'webrat/rspec-rails'</code></pre>
+The cucumber generater will set up the necessary support files whichever you choose.
 
 Calls for any additional Ruby libraries that your particular testing environment may require are typically be placed in the <code>./features/support/local_env.rb</code> file.  I advise against putting local customization in <code>support/env.rb</code> as it is typically overwritten by <code>script/generate cucumber</code>.  As a matter of good practice you should always run <code>script/generate cucumber</code> whenever you install an updated version.  You should do the same for rspec as well.
 
@@ -266,7 +255,7 @@ Those of you that have used <code>growl</code> or <code>snarl</code> to provide 
 
 h3.  Need Help?
 
-The best place to go for help, that I know of, is the "RSpec Forum":http://www.ruby-forum.com/forum/32 at "Ruby-Forum.com":http://www.ruby-forum.com.  There you can find access to a number of forums and gateways to mailing lists that are related to Ruby and Ruby on Rails.
+The best place to go for help, that I know of, is the "Google Cucumber Group":http://groups.google.com/group/cukes.
 
 If you find a bug in cucumber then you should open a ticket at "Lighthouse":http://rspec.lighthouseapp.com/projects/16211-cucumber/ for it.
 
