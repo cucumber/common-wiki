@@ -156,5 +156,5 @@ The string from each one of these method is compared against the matchers contai
 end
 </code></pre>
 
-The significant thing here is that the method (Given) has as its argument a regexp bounded by  <code>/</code>
+The significant thing here is that the method (Given) tkes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>
 <pre><code></code></pre>
