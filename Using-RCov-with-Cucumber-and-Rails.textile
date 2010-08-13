@@ -5,7 +5,7 @@ This page serves as an easy way to learn how to use cucumber and RCov together.
 
 h3. Quick example
 
-First, Aslak recommends that you use spicycode's RCov instead of the 'official' one, as it currently segfaults too much for most people's taste.
+First, Aslak recommends that you use "spicycode's RCov":http://github.com/spicycode/rcov/tree/master instead of the 'official' one, as it currently segfaults too much for most people's taste.
 
 <pre>
 gem sources -a http://gems.github.com
