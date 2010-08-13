@@ -15,7 +15,7 @@ You can use the <code>--tags</code> option to tell Cucumber that you only want t
 <pre>
 cucumber --tags @billing     # Runs both scenarios
 cucumber --tags @important   # Runs the first scenario
-cucumber --tags ~@important  # Runs the second scenario (Scenario without @important)
+cucumber --tags ~@important  # Runs the second scenario (Scenarios without @important)
 </pre>
 
 Tags is also a great way to "link" your Cucumber features to other documents. For example, if you have to deal with old school requirements in a different system (Word, Excel, a wiki) you can refer to numbers:
