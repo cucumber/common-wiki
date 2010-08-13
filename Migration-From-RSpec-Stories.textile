@@ -23,7 +23,9 @@ Try to run the feature you moved:
 <pre><code>rake features
 </code></pre>
 
-At this point you should see a lot of yellow (pending steps).
+At this point you should see a lot of yellow (pending steps). 
+
+If you see a Cucumber::TreetopParser::Feature::SyntaxError, it may be because you have comments in your stories. RSpec Story Runner supports Ruby-style comments but Cucumber doesn't yet.
 
 h2. Move over your step definitions
 
