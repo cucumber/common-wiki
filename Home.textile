@@ -101,7 +101,7 @@ rake db:migrate
 rake features
 </code></pre>
 
-See [Running Feature] for more info.
+See [Running Features] for more info.
 
 h3. Tips
 
