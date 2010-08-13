@@ -84,3 +84,18 @@ Given /A simple expense report/ do
   ])
 end
 </pre>
+
+You can also simply receive a table and pass it down, here the spanish step is passing its table to the english one:
+<pre>
+# ruby
+Entonces /^debo ver los links:$/ do |links_table|
+  Then "I should see the links:", links_table
+end
+
+# this one really implements the deal
+Then /^I should see the links:$/ do |links_table|
+  links_table.hashes.each do |hash|
+    Then "I should see the link #{hash['link']}"
+  end
+end
+</pre>
