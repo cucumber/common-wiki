@@ -229,3 +229,7 @@ Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wik
 Cucumber comes preconfigured with webrat test steps.  If webrat is installed as a plugin in your project then these are available to you for view tests "out of the box".  If, instead, you have "webrat":http://github.com/brynary/webrat/wikis installed as a gem and you wish to use the gem to perform the tests then you need add this to the features/support/env.rb file:
 
 <code>require 'webrat' if !defined?(Webrat)</code>
+
+h3.  Need Help?
+
+The best place to go for help, that I know of, is the "RSpec Forum":http://www.ruby-forum.com/forum/32 at "Ruby-Forum.com":http://ww.ruby-forum.com.  There you can find access to a number of forums and gateways to mailing lists that are related to Ruby and Ruby on Rails.
