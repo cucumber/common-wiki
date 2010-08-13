@@ -1,20 +1,15 @@
 Paste this code snippet into env.rb to load all fixtures from spec/fixtures before each scenario.
 
-<pre>
-<code>
-Before do
+<pre>Before do
   Fixtures.reset_cache
   fixtures = Dir[File.join(RAILS_ROOT, 'spec/fixtures', '*.yml')].map{ |f| File.basename(f, '.yml') }
   Fixtures.create_fixtures('spec/fixtures', fixtures)
 end
-</code>
 </pre>
 
 If you are using transactional fixtures in Rails then instead of loading your fixtures before each scenario you can load it just once by placing the same code in your env.rb file.  This way will be much faster than loading the fixtures before each scenario. For example:
 
-<pre>
-<code>
-# Sets up the Rails environment for Cucumber
+<pre># Sets up the Rails environment for Cucumber
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 require 'cucumber/rails/world'
@@ -22,8 +17,8 @@ Cucumber::Rails.use_transactional_fixtures
 
 #Seed the DB
 Fixtures.reset_cache
-fixtures = Dir[File.join(RAILS_ROOT, 'spec/fixtures', '*.yml')].map{ |f| File.basename(f, '.yml') }
+fixtures = Dir[File.join(RAILS_ROOT, 'spec/fixtures', '*.yml')].map do |f|
+  File.basename(f, '.yml')
+end
 Fixtures.create_fixtures('spec/fixtures', fixtures)
-
-</code>
 </pre>
