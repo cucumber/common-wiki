@@ -1,0 +1,22 @@
+snailgun-1.0.5 now supports cucumber with an "fcucumber" shortcut. Note that it only works under Unix/Linux systems
+
+snailgun works by preparing one or more processes with Rails and your gem libraries pre-loaded, and then forking this each time you start a new feature run.
+
+Example:
+<pre><code>
+    snailgun --rails cucumber,test
+    fcucumber -q
+</code></pre>
+That's all you need. The first line preloads two processes with different environments (RAILS_ENV=cucumber and RAILS_ENV=test); the second starts cucumber by forking the existing 'cucumber' process. You can also use @frake cucumber@, or @frake test@ for normal unit and functional tests.
+
+NOTE: to make your model classes be loaded afresh on each run you need to set @config.cache_classes = false@ in config/environments/cucumber.rb. Cucumber will give a big warning saying that this is known to be a problem with transactional fixtures. This may or may not affect you.
+
+For a substantial reduction in startup time, remove @:lib=>false@ settings from config/environments/cucumber.rb so that cucumber, webrat, nokogiri etc are preloaded.
+
+Snailgun is also useful for more than testing. If you do
+<pre><code>
+    snailgun --rails cucumber,test,development
+</code></pre>
+then three environments are started. You can use "fconsole" for a quick-start console, and "fruby script/server" for a quick-start web server.
+
+More info at "the github snailgun page":http://github.com/candlerb/snailgun
