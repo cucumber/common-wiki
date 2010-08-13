@@ -1,0 +1,8 @@
+To use RSpec's expectations (<code>should</code>), make sure the following is in features/support/env.rb:
+
+<pre>
+require 'spec/expectations'
+require 'spec/matchers'
+</pre>
+
+When cucumber sees the Spec::Matchers and Spec::Expectations modules defined, it will implicitly include them in the World in which the steps are executed.
