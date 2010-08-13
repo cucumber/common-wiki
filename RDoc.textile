@@ -10,4 +10,4 @@ gem server &
 open http://localhost:8808/doc_root/cucumber-0.3.5/rdoc
 </pre>
 
-(You may have to chenge the version number in that URL)
+(You may have to change the version number in that URL)
