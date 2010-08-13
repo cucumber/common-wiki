@@ -3,6 +3,14 @@
 As Cucumber runs your features, it calls out to any number of listener objects to let them know how it's progressing. These listeners are notified at various points throughout the run of features. You can visualise this by using the 'debug' formatter. For example, look at the listener methods called for this simple feature in Cucumber's own test suite:
 
 <pre>
+# Feature comment
+@one
+Feature: Sample
+
+    @two @three
+  Scenario: Missing
+    Given missing
+
 $cucumber --format debug examples/self_test/sample.feature:6
 
 before_features
