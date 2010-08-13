@@ -3,7 +3,7 @@ in the step definitions. Here is how to get you started.
 
 h2. Install Cucumber, Webrat and RSpec
 
-You can use both Rubygems or Rails' plugin mechanism. We usually recommend Rubygems. You can read a longer discussion "here":http://www.ruby-forum.com/topic/167379
+You can use both Rubygems or Rails' plugin mechanism. We usually recommend Rubygems. You can read a longer discussion "here":http://www.ruby-forum.com/topic/167379.
 
 h3. Using Rubygems
 
