@@ -6,7 +6,9 @@ Given /^I have (\d+) cucumbers in my belly$/ do |cukes|
 end
 </pre>
 
-A step definition is analogous to a _method definition /  function definition_ in any kind of OO/procedural programming language. Then there are Steps. Steps are declared in your <code>features/*.feature</code> files. Here is an example:
+A step definition is analogous to a _method definition /  function definition_ in any kind of OO/procedural programming language. Step definitions can take 0 or more arguments, identified by groups in the Regexp (and an equal number of arguments to the Proc). 
+
+Then there are Steps. Steps are declared in your <code>features/*.feature</code> files. Here is an example:
 
 <pre>
 Given I have 93 cucumbers in my belly
