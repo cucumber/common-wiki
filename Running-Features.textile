@@ -26,7 +26,7 @@ You can reuse the arguments listed above:
 
 It is important to point out that by simply running 'cucumber' the default profile will be used (if a cucumber.yml file is found).
 
-h2. Using the rake task
+h2. Using Rake
 
 <pre><code>rake features</code></pre>
 
