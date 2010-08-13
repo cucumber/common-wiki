@@ -26,6 +26,19 @@ end
 end
 </code></pre>
 
+<code>Around</code> hooks will run "around" a scenario. This can be used to wrap the execution a scenario in a block. The Around hook receives a scenario object and a block (Proc) object. The scenario will be executed when you invoke <code>block.call</code>.
+
+The following example will cause scenarios tagged with <code>@fast</code> to fail if the execution takes longer than 0.5 seconds:
+
+<pre><code>Around('@fast') do |scenario, block|
+  Timeout.timeout(0.5) do
+    block.call
+  end
+end
+</code></pre>
+
+You may want to take a look at "SystemTimer":http://ph7spot.com/musings/system-timer if you want a more reliable <code>timeout</code>.
+
 h2. Step hooks
 
 *{color:red}Warning: AfterStep hook does not work with scenarios which have backgrounds (cucumber 0.3.11)*
