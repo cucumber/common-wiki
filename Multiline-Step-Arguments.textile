@@ -112,4 +112,110 @@ In this case, mapping a column with a Regexp might be a little tricky. In such c
 <pre>
 Then /^I should see the following invoices:$/ do |invoices|
   t = table(element_at("#invoices").to_table)
-  t.map_column%
+  t.map_column!('Handling') do |buttons|
+    Nokogiri::HTML("<html>#{buttons}</html>").css('input').map{|b| b['value']}.join(",")
+  end
+  invoices.diff!(t)
+end
+</pre>
+
+h4. ActiveRecord
+
+You can also easily turn Rails ActiveRecord objects into a table:
+
+<pre>
+expected_cukes_table.diff!(Cuke.find(:all).map(&attributes))
+</pre>
+
+(This is not a recommended practice - your Then steps should compare against what users *see*, and they can't *see* your database).
+
+If you are not using Webrat or ActiveRecord, you can build up table structures yourself. Use your imagination!
+
+h2. Multiline Strings
+
+Multiline Strings are handy for specifying a larger piece of text. This is done using the PyString syntax. (The inspiration for PyString comes from Python where """ is used to delineate docstrings.)  The text should be offset by delimiters consisting of three double-quote marks on lines of their own:
+
+<pre><code>Given a blog post named "Random" with Markdown body
+  """
+  Some Title, Eh?
+  ==============
+  Here is the first paragraph of my blog post. Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit.
+  """
+</code></pre>
+
+In your step definition, there's no need to find this text and match it in your Regexp. It will automatically be yielded as the last parameter in the step definition.  For example:
+
+<pre><code>Given /^a blog post named "([^\"]*)" with Markdown body$/ do |title, markdown|
+  Post.create!(:title => title, :body => markdown)
+end
+</code></pre>
+
+Indentation of the opening <code>"""</code> is unimportant, although common practice is two spaces in from the enclosing step. The indentation <em>inside</em> the triple quotes, however, <em>is</em> significant. Each line of the string passed to the step definition's block will be de-indented according to the opening <code>"""</code>. Indentation beyond the column of the opening <code>"""</code> will therefore be preserved.
+
+Cucumber stores multiline strings internally as a <code>Cucumber::Ast::PyString</code> object. However,
+this gets converted to a regular <code>String</code> before it's passed to the step definition.
+
+h3. Diffing multiline strings
+
+If you're using [[RSpec Expectations]], you can compare strings simply with
+
+<pre>
+string_from_step.should == actual_string
+</pre>
+
+If they are different, the step will fail with an error displaying the difference as a "unified diff":http://en.wikipedia.org/wiki/Diff.
+
+h2. Substitution in Scenario Outlines
+
+If you use a multiline argument in steps in [[Scenario Outlines]], any <code>< ></code> 
+delimited tokens will be substituted with values from the example tables. For example:
+
+<pre><code>Scenario Outline: Email confirmation
+  Given I have a user account with my name "Jojo Binks"
+  When an Admin grants me <Role> rights
+  Then I should receive an email with the body:
+    """
+    Dear Jojo Binks,
+    You have been granted <Role> rights.  You are <details>. Please be responsible.
+    -The Admins
+    """
+  Examples:
+    |  Role     | details                                         |
+    |  Manager  | now able to manage your employee accounts       |
+    |  Admin    | able to manage any user account on the system   |
+</code></pre>
+
+Or with tables:
+
+<pre><code>Scenario Outline: Multiplying with 7
+  Given I have the numbers
+    | q1   | q2 | product |
+    | <x>  |  7 | <y>     |
+  Examples:
+    |  x |  y |
+    |  2 | 14 |
+    | 10 | 70 |
+</code></pre>
+
+h2. Using regular arguments and multiline arguments
+
+It's possible to pass regular arguments in addition to multiline arguments. This is illustrated
+for strings above in the blog example. Here is an example using tables:
+
+<pre><code># ruby
+Given /^an expense report for (.*) with the following posts:$/ do |date, posts_table|
+  # The posts_table variable is an instance of Cucumber::Ast::Table
+end
+</code></pre>
+
+This can easily be called from a plain text step like this:
+
+<pre><code># feature
+Given an expense report for Jan 2009 with the following posts:
+  | account | description | amount |
+  | INT-100 | Taxi        |    114 |
+  | CUC-101 | Peeler      |     22 |
+</code></pre>
+
+Also see [[Calling Steps from Step Definitions]] for a related example.
