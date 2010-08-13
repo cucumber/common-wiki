@@ -1,6 +1,6 @@
 bq. I finally looked into cucumber last week and immediately loved it.  Within a couple hours I had several features written for an existing application. By the end of the next day, our whole team was writing cucumber features, and enjoying it!  Cucumber seems to have brought back an excitement to testing that I haven't felt for a while (since my first few weeks with RSpec).
 
-_--Brandon Keepers_
+_--"Brandon Keepers":http://opensoul.org_
 
 h1. Cucumber
 
