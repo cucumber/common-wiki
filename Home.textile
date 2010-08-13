@@ -167,7 +167,7 @@ by Chris Matts, Liz Keogh and Dan North.
 This brought executable stories a little closer to non-technical users, which is one of the target audiences
 for this kind of tool.
 
-In early summer 2008, David and Aslak had some conversations about stories and "FIT":http://fit.c2.com/. We wanted to incorporate some of its concepts into the RSpec Story runner and together we fleshed out some ideas about how scenarios and tables would look.
+David has a former life as the maintainer of "FitNesse .NET":http://fitnesse.org/FitNesse.DotNet. In early summer 2008, David and Aslak had some conversations about stories and how "FIT":http://fit.c2.com/ style tables could be incorporated into the RSpec Story runner. Together we fleshed out some ideas about how scenarios and tables would look.
 
 At this point, the architecture of the story runner was revisited and reevaluated in light of the looming requirement to use tables. It became clear that the RSpec Story runner had several shortcomings. (Similar shortcomings are common for tools that evolve in unforeseen ways and move into new territory). Some of its biggest problems were:
 
