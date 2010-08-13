@@ -74,7 +74,7 @@ Or, if you prefer a more programmatic approach:
 <pre>
 # ruby
 Given /A simple expense report/ do
-  Given "an expense report for Jan 2009 with the following posts:", Cucumber::Ast::Table.new([
+  Given "an expense report for Jan 2009 with the following posts:", table([
     %w{ account description amount },
     %w{ INT-100 Taxi        114    },
     %w{ CUC-101 Peeler      22     }
