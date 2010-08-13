@@ -1,7 +1,20 @@
 A draft list of useful Cucumber patterns:
-* Sections
-** Description: ability to scope an inspection or webrat step.
+* XPath Sections
+** Description: ability to scope an inspection or webrat step to a part of the html.
+** Motivation: when an element appears at multiple locations in an html page you want the ability to specify which one a step refers to
 ** Examples:
 *** When I follow "next" in the pagination section
 *** Then I should see "logout" in the account section
 ** Implementation: a mapping of section names to xpaths that can be used for scoping, a patch of webrat is needed to allow xpaths to be used
+* Easy objects
+** Description: generic step to create objects in a rails app
+** Motivation: when writing cucumber for rails, you often want to create some objects and set their properties
+** Examples:
+*** <pre>Given the following People exist:
+| name | date of birth |
+| john | 20 Jan 1980   |
+| mary | 10 days ago   |</pre>
+** Implementation:
+*** Generic step that has a model name and a table as arguments
+*** Factory used to create an object for each row with the properties defined in the table
+*** Transforms that map the properties to the correct type
