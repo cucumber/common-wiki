@@ -152,8 +152,6 @@ For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenar
         create_step('And', name, *caller[0].split(':')[1].to_i)
       end</code></pre>
 
-<em> If ever there was a case for method_alias then this has to be it. </em>
-
 The string from each one of these method is compared against the matchers contained in the step.rb files.  A step matcher looks much like this:
 <pre><code>Given /there are (\d+) froobles/ do |n|
   Frooble.transaction do
