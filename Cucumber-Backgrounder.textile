@@ -17,11 +17,11 @@ h3. Where to Start?
 
 When you run "script/generate cucumber"
 
-Then you will create a sub-directory named "features"
-  And you will create the default feature and step files in the directory named "features"
-  And you will create a rake task named "cucumber.rake" in "lib/tasks"
-  And you will created an environment cucumber.rb in config/environments
-  And you will modify config/database.yml
+Then you should create a sub-directory named "features"
+  And you should create the default feature and step files in the directory named "features"
+  And you should create a rake task named "cucumber.rake" in "lib/tasks"
+  And you should created an environment cucumber.rb in config/environments
+  And you should modify config/database.yml
   .  .  .
 </pre>
 
