@@ -8,6 +8,8 @@ This means that for just a few scenarios, you will see an improvement in time, b
 
 Ok - now that you understand the implications you can start Spork and have it preload your application in a separate process. 
 
+The easiest way to set things up is to pass <code>--spork</code> to the cucumber generator when bootstrapping Cucumber for [[Ruby on Rails]]. When you have set up your spork script, start the spork server:
+
 <code>
 spork cuc
 </code>
