@@ -124,7 +124,7 @@ h4. ActiveRecord
 You can also easily turn Rails ActiveRecord objects into a table:
 
 <pre>
-expected_cukes_table.diff!(Cuke.find(:all).map(&attributes))
+expected_cukes_table.diff!(Cuke.find(:all).map(&:attributes))
 </pre>
 
 (This is not a recommended practice - your Then steps should compare against what users *see*, and they can't *see* your database).
