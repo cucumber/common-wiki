@@ -3,7 +3,7 @@ Step argument transforms help your step definitions be more DRY. You can use the
 It's recommended that you put <code>Transform</code> code in the same file as the step definitions using them. It becomes easier to navigate your code that way. Here is an example:
 
 <pre>
-# features/support/user_steps.rb
+# features/step_definitions/user_steps.rb
 
 Transform /^user \w+$/ do |step_arg|
   User.find_by_username /(\w+)$/.match(step_arg)[0]
