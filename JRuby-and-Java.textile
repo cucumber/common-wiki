@@ -1,3 +1,5 @@
+*{color:red}Please check out "Cuke4Duke":http://wiki.github.com/aslakhellesoy for a better way to use Cucumber on the JVM*
+
 Cucumber runs fine on "JRuby":http://jruby.codehaus.org/. This means you can use Cucumber with plain Java code.
 
 h2. Installing Cucumber in JRuby
