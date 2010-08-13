@@ -2,7 +2,7 @@ Gherkin is the language that Cucumber understands.
 It is a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html
 that lets you describe software's behaviour without detailing how that behaviour is implemented.
 Gherkin serves two purposes - documentation and automated tests.
--And a third bonus feature - when it yells in red don't be offended - it's talking to you, telling you what code you should write.
+- And a third bonus feature - when it yells in red, don't be offended - it's talking to you, telling you what code you should write.
 
 Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase.
 The grammar exists in different flavours for several [[Spoken languages]],
@@ -12,7 +12,9 @@ h2. Syntax Notes
 
 The following notes are an unofficial (and possibly inaccurate) summary of Gherkin syntax.  YMMV...
 
-h3. General
+Gherkin "code" is parsed in two stages.
+First, a Treetop-based parser divides the input file into sections, statements, etc.
+Then, portions of statements are given to Ruby "step" definitions for matching and processing. 
 
 Like Python and YAML, Gherkin uses indentation to define structure.
 Either spaces or tabs may be used for indentation (but spaces are more portable).
