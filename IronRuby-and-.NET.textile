@@ -1,5 +1,3 @@
-h1. Using Cucumber with .NET
-
 Developing in .NET? You can use Cucumber with IronRuby. You need both IronRuby and MRI (Matz Ruby Interpreter).
 
 h2. Installing MRI
