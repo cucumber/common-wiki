@@ -3,6 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"Introduction to BDD with Cucumber":http://www.engineyard.com/blog/2009/cucumber-introduction/|Great little introduction|Jun 23 2009|
 |"Cucumber and Celerity":http://drogomir.com/blog/2009/6/16/cucumber-and-celerity-testing-unobtrusive-javascript|Testing unobtrusive Javascript|Jun 16 2009|
 |"Adding XHTML output validation to Cucumber stories":http://swedishcampground.com/adding-xhtml-output-validation-to-cucumber-stories| Use "Easy Markup Validation":http://tenderlovemaking.com/2009/06/12/easy-markup-validation/ with Cucumber | Jun 16 2009 |
 |"Cucumber and IronRuby: It runs!":http://hotgazpacho.org/2009/06/cucumber-and-ironruby-it-runs/|William Green shares updated adventures with Cucumber on .NET|Jun 14 2009|
