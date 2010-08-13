@@ -3,6 +3,7 @@ It's easy to write your own custom formatter for Cucumber. Maybe you want to cre
 Save your custom formatter class in <code>features/support</code> (or if you want to put it elsewhere, put a file in that directory that <code>require</code>s your formatter class.
 
 <pre>
+require 'rubygems'
 require 'twitter'
 
 module Silly
@@ -28,4 +29,6 @@ module Silly
 end
 </pre>
 
-Now you can run your features by passing <code>--format Silly::TwitterFormatter</code>
+Now you can run your features by passing <code>--format Silly::TwitterFormatter</code> to cucumber. You have more methods available than the ones used in this awesome example (but you only need to implement the ones you care about). Look at the sources for some of Cucumber's built-in formatters to discover more methods.
+
+IMPORTANT! The Formatter API will change (and hopefully stabilise) with Cucumber v0.2.
