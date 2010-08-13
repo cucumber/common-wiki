@@ -29,12 +29,20 @@ Once you've done one of the two load methods above (please, don't do both ;-) yo
 
 h2. Fixture helper methods
 
-If you want to also enable the fixture helper methods, such as *users(:admin)*, you need to add the following (pretty much stolen straight from the Rails guts) after loading fixtures in the env.rb file, as above:
+If you want to also enable the fixture helper methods, such as *users(:admin)*, you need to add the following to your env.rb file (pretty much stolen straight from the Rails guts). This includes loading of the fixtures.
 
 <pre>
 module FixtureAccess
 
-  def self.included(base)
+  def self.extended(base)
+
+    Fixtures.reset_cache
+    fixtures_folder = File.join(RAILS_ROOT, 'test', 'fixtures')
+    fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
+    fixtures += Dir[File.join(fixtures_folder, '*.csv')].map {|f| File.basename(f, '.csv') }
+
+    Fixtures.create_fixtures(fixtures_folder, fixtures)    # This will populate the test database tables
+
     (class << base; self; end).class_eval do
       @@fixture_cache = {}
       fixtures.each do |table_name|
