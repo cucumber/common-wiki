@@ -17,9 +17,6 @@ Try the latest released gem:
 
 Use "troubleshooting":http://wiki.github.com/aslakhellesoy/cucumber/troubleshooting tips 
 
-If that doesn't help, try the latest beta gem: 
-<pre>gem install aslakhellesoy-cucumber --source http://gems.github.com/</pre>
-
 h2. Before you ask
 
 It's impossible to give a meaningful answer to "Cucumber doesn't work - what's wrong?" -style questions. You have to tell us more.
