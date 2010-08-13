@@ -42,7 +42,7 @@ Multiline Strings are handy for specifying a larger piece of text. This is done 
 for PyString comes from Python where """ is used to delineate docstrings.)  The text should be offset by delimiters consisting 
 of three double-quote marks on lines of their own:
 
-<pre><code>Given a blog post named "Random" with the following body in Markdown
+<pre><code>Given a blog post named "Random" with Markdown body
   """
   Some Title, Eh?
   ==============
@@ -54,8 +54,8 @@ of three double-quote marks on lines of their own:
 In your step definition, there's no need to find this text and match it in your Regexp. It will automatically be yielded as 
 the last parameter in the step definition.  For example:
 
-<pre><code>Given /^a blog post named "([^\"]*)" with the following body in Markdown$/ do |title, markdown_content|
-  Post.create!(:title => title, :body => markdown_content)
+<pre><code>Given /^a blog post named "([^\"]*)" with Markdown body$/ do |title, markdown|
+  Post.create!(:title => title, :body => markdown)
 end
 </code></pre>
 
