@@ -72,7 +72,7 @@ This should result in a _statu quo_, because you haven't written any code yet (I
 Now it's time to write some code, or generate some. Try this:
 <pre><code>script/generate rspec_scaffold Frooble name:string color:string description:text
 rake db:migrate
-rake features
+rake cucumber
 </code></pre>
 
 h3. Other ways of running features
