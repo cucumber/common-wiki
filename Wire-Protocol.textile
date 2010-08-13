@@ -1,103 +1,21 @@
-This page documents the details of the low-level wire protocol that Cucumber uses to list and invoke steps in a remote process.
+A wire protocol is under development that will allow Cucumber to invoke step definitions implemented on any platform. 
 
-*{color:red}This protocol is in flux. Please see "wire protocol":https://rspec.lighthouseapp.com/projects/16211/tickets/428-wire-protocol for discussions around this emerging protocol.*
+To use the wire protocol, you install Ruby and write and run your features as you normally would, but instead of writing step_definitions files in Ruby or another supported programming language, you write a simple .wire file, which tells Cucumber where to find your step definitions:
 
-h2. List Step Definitions
+bc. 
+  host: localhost
+  port: 98989
 
-<pre>
-|-- list_step_definitions --->|
-|<-------------------- ok --|
-</pre>
+When you run your features, Cucumber will then connect to this TCP socket and ask the service at the other end about the the steps it has defined.
 
-h3. Request 
+The details of the protocol are documented in the feature here:
+"http://github.com/mattwynne/cucumber/blob/wire_protocol/features/wire_protocol.feature":http://github.com/mattwynne/cucumber/blob/wire_protocol/features/wire_protocol.feature
 
-<pre>{
-  "version" : "1.0",
-  "list_step_definitions" : ""
-}</pre>
-h3. Response
+Please feel free to suggest enhancements to the protocol, especially while it's being developed.
 
-<pre>{
-  "version" : "1.0",
-  "step_definitions": [
-    { "id": "id1", "regexp": "regex1" },
-    { "id": "id2", "regexp": "regex2" }
-  ]
-}</pre>
-h2. Invoke
+h2. Implementations
+* "Cuke4Nuke":http://github.com/richardlawrence/Cuke4Nuke/ (.NET)
 
-<pre>
-|-- invoke --------->|
-|<------------- ok --|
-         OR
-|<----- diff_table --|
-|-- diff_response -->|
-|<------------- ok --|
-         OR
-|<---- step_failed --|
-
-</pre>
-
-
-h3. Request 
-
-<pre>{
-  "version" : "1.0",
-  "invoke" : "id1",
-  "params" : [ "foo", "bar" ]
-}</pre>
-h3. Response
-
-If the step is invoked successfully then an 'ok' response is returned:
-
-<pre>{
-  "version" : "1.0",
-  "ok" : ""
-}</pre>
-
-OR If the step throws an exception then a 'step_failed' response is returned:
-
-<pre>{
-  "version" : "1.0",
-  "step_failed" : {
-    "exception" : "some exception type",
-    "message" : "foo",
-    "backtrace" : "bar"
-  }
-}</pre>
-
-h2. Table Diff
-
-This message is sent by the wire server when it requires Cucumber to to a table diff when invoking a step.
-
-<pre>
-|<------------ diff_table --|
-|-- diff_response --------->|
-</pre>
-
-h3. Request 
-
-<pre>{
-  "version" : "1.0",
-  "diff_table" : "TBD",
-}</pre>
-h3. Response
-
-<pre>{
-  "version" : "1.0",
-  "diff_response" : "TBD"
-}</pre>
-
-
-h2. General Failure Response
-
-If the remote process cannot handle a request then it shall return a 'failed' response:
-
-<pre>{
-  "version" : "1.0",
-  "failed" : {
-    "exception" : "some exception type",
-    "message" : "foo",
-    "backtrace" : "bar"
-  }
-}</pre>
+h2. References
+* http://www.richardlawrence.info/2009/09/19/cuke4nuke-cucumber-for-net-teams/
+* https://rspec.lighthouseapp.com/projects/16211/tickets/428-wire-protocol
