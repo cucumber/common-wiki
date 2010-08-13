@@ -2,7 +2,7 @@ Cucumber comes with an autotest plugin that will hook into the regular autotest 
 
 <pre><code>$ AUTOFEATURE=true autospec</code></pre>
 
-or if you'r not using RSpec:
+or if you are not using RSpec:
 
 <pre><code>$ AUTOFEATURE=true autotest</code></pre>
 
