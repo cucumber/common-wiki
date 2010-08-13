@@ -85,3 +85,4 @@ h2. Other Formatters
 
 # "TeamCityFormatter:":http://github.com/mattwynne/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
 # "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript for Textmate (Included in the cucumber core since 0.4.5)
+# "cucumber-json":http://github.com/jnewland/cucumber-json - A cucumber output formatter that outputs JSON 
