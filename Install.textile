@@ -12,7 +12,7 @@ This is a good time to get familiar with <code>--help</code>  (See also [[Comman
 
 <pre>cucumber --help</pre>
 
-h3. Building the Gem yourself
+h2. Building the Gem yourself
 
 Get the code via Git (or download a tarball).
 
