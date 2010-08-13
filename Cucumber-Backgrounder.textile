@@ -2,7 +2,7 @@ h2. Or: How I Learned to Stop Worrying and Love Testing
 
 h3. Introduction
 
-This document deals principally with initial set up and first use of the <strong><em> Cucumber</em></strong> gem, a behaviour driven development (BDD) tool, for a Ruby on Rails (RoR) Project.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development, "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU) (aka "Cowboy Coding":http://en.wikipedia.org/wiki/Cowboy_coding) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].  "Getting Started with Rails":http://www.ultrasaurus.com/code/2008/12/getting-started-with-rails.html is a useful introductory tutorial dealing with Rails and Cucumber.
+This document deals principally with initial set up and first use of the <strong><em> Cucumber</em></strong> gem, a behaviour driven development (BDD) tool, for a project using the Ruby on Rails (RoR) framework.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development, "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU) (aka "Cowboy Coding":http://en.wikipedia.org/wiki/Cowboy_coding) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].  "Getting Started with Rails":http://www.ultrasaurus.com/code/2008/12/getting-started-with-rails.html is a useful introductory tutorial dealing with Rails and Cucumber.  Using cucumber outside the RoR framework will be covered in another document, when I get time to write it and have something useful to say.
 
 h3. Where to Start?
 
@@ -186,7 +186,7 @@ But, this will throw a method missing exception:
 And /some other act.*/ do 
 </pre>
 
-Because *_And_* is not defined as a steps definition method.  Since the step definition match depends only upon the pattern following the method, and not upon the step method itself, I have adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files.
+The exception occurs because *_And_* is not defined as a steps definition method, but only as a feature step method.  The step definition match depends only upon the pattern following the Given/When/Then method and not upon the step method itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance for a matcher.
 
 If more than one matcher in all of the step definitions files matches a feature step then cucumber complains that it found multiple step definition matches for that step and forces you to distinguish them.
 
@@ -220,6 +220,17 @@ When /some (.*) action/ do |a|
 When /some "(.*)" action/ do |a|
   a => required
 </code></pre>
+
+In a manner similar to my convention of using only using the *When* method for step definition matchers, since When, Given, and Then are all equivalent inside the step definitions file I have adopted the convention of calling other step definitions within matchers using the Then method, thus:
+
+<pre>
+When /my matcher named (.*)/ do |match|
+  Then "my other matcher named \"#{match}\"'
+end
+
+The choice of method has no impact on the result but, When and Then used in this fashion seem to me to read more naturally.
+
+</pre>
 
 h3. What Way do I Run the Tests?
 
@@ -259,6 +270,8 @@ Calls for any additional Ruby libraries that your particular testing environment
 For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest;  so, no popups when a step fails.  However, there exists a project to add a similar functionality to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
 
 <code>autotest</code> is installed via the "ZenTest":http://www.zenspider.com/ZSS/Products/ZenTest/ gem.  If you use autotest then take a look at the contents of <code>example_dot_autotest.rb</code> in the ZenTest gem root directory.
+
+Realize that tests either pass or fail and that fail is NOT the same as false.  When, in RSpec, <code>something.should_be 0</code> and it is not, then what is returned is *fail* and not *false*.  In raw cucumber (pardon the pun) one writes <code>fail if false</fail> and not simply <code>false</code>.
 
 h3.  Need Help?
 
