@@ -26,15 +26,15 @@ git submodule add git://github.com/dchelimsky/rspec-rails.git vendor/plugins/rsp
 If your own Rails code is *not* in Git, just replace <code>submodule add</code> with <code>clone</code>.
 If you're behind a proxy, try to replace <code>git://</code> with <code>http://</code> and set the <code>http_proxy</code> environment variable.
 
+h4. Install dependencies
+
+The plugins' dependencies must be installed separately:
+
+<pre><code>gem install term-ansicolor treetop diff-lcs nokogiri</code></pre>
+
 h3. Behind a firewall?
 
 As a last resort, download tarballs from GitHub.
-
-h2. Install Other dependencies
-
-<pre><code>gem install term-ansicolor treetop diff-lcs hpricot</code></pre>
-
-You can also use "Nokogiri":http://nokogiri.rubyforge.org instead of "Hpricot":http://code.whytheluckystiff.net/hpricot/
 
 h2. Create Your Rails Project
 
