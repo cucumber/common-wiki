@@ -147,4 +147,4 @@ When running Selenium with Rails 2.3.2 (and this appears to be true for 2.2 as w
 
 h2. Setup stories
 
-* http://tero.tilus.net/rutinat/2009/08/18/cucumber-running-selenium-on-debian-lenny/
+* "http://tero.tilus.net/rutinat/2009/08/18/cucumber-running-selenium-on-debian-lenny/":http://tero.tilus.net/rutinat/2009/08/18/cucumber-running-selenium-on-debian-lenny/
