@@ -31,3 +31,30 @@ This feature, of using transactions, is only enabled when you have<code>Cucumber
 h2. Sqlite adapter throws SQLite3::BusyException when using Cucumber with Selenium
 
 Cause and solution to this problem is exactly the same as with not being able to see changes made to database when using Cucumber with Selenium. In short, you need to comment out <code>Cucumber::Rails.use_transactional_fixtures</code> from your <code>env.rb</code> file.
+
+h2. gems/rspec-x/lib/spec/runner/options.rb:190:in `parse_format': When using several --format options only one of them can be without a file (RuntimeError)
+
+If you are seeing the above error when trying to run your features it means you are inadvertently requiring RSpec ('spec') somewhere in your Cucumber environment.  This issues arrises from RSpec automatically parsing the command line arguments. The only RSpec file your Cucumber env.rb should be requiring is 'spec/expectations' (the should methods and matchers).  If you are not requiring 'spec' directly in your env.rb then another file is requiring spec.  Some common culprits:
+
+* *require 'webrat/rspec-rails'*  This is meant for using webrat with RSpec only, and not Cucumber.  So, you don't need to require this file. If you are wanting to use RSpec and Webrat with Cucumber (in rails) you just need to have this in your env.rb:
+
+<pre>
+require 'cucumber/rails/rspec'
+require 'webrat/core/matchers'
+</pre>
+
+* *config.gem "rspec", :lib => "spec" ...*  If you are using Rails' config.gem to require rspec and/or rspec-rails in your environment.rb or test.rb this may be causing the problem.  In an ideal world this wouldn't be the case, but try commenting it out to see if it helps resolve the issue.
+
+
+If you can't track down where 'spec' is being required then you can adding this in your ib/spec/runner/options.rb file right before it blows up:
+
+<pre>
+begin
+  raise "Just trying to see a backtrace..."
+rescue Exception => e
+  puts e.backtrace
+end
+</pre>
+
+With the full backtrace you should be able to hunt down the troublesome file that is requiring spec.  If what you run into seems common enough, please add it to the list of culprits here on the wiki.
+
