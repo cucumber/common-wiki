@@ -4,4 +4,4 @@ When you are [[Running Features]] it can sometimes be handy to pass special valu
 cucumber FOO=BAR --format progress features
 </pre>
 
-You can now pick up ENV['FOO'] in ruby (for example in env.rb or a step definition) and take actions according to the value,
+You can now pick up ENV['FOO'] in ruby (for example in env.rb or a step definition) and take actions according to the value.
