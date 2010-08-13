@@ -8,4 +8,4 @@ SubdomainFu.tld_sizes = {
 
 
 Another error <b>You have a nil object when you didn't expect it! </b> when using subdomain with mail url.
-"Sulution":http://groups.google.com/group/cukes/browse_thread/thread/91efe1ef945ddda3/ba59cd0e7e9aa51f?lnk=gst&q=vijendra#ba59cd0e7e9aa51f
+"Solution":http://groups.google.com/group/cukes/browse_thread/thread/91efe1ef945ddda3/ba59cd0e7e9aa51f?lnk=gst&q=vijendra#ba59cd0e7e9aa51f
