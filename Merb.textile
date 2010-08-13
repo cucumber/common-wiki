@@ -1,3 +1,6 @@
+Install
+-----------------------------
+
 Cucumber can be used with "Merb":http://merbivore.com/ via the "merb_cucumber":http://github.com/david/merb_cucumber plugin.
 
 To install merb_cucumber:
@@ -11,6 +14,8 @@ Here is brief note from jsmestad.
 
 bq. Note – you must uninstall david-merb_cucumber in order for this gem to take precedence. Merb + Cucumber + Webrat testing stack. Builds upon David’s work, but binds Webrat as a dependency to hopefully ensure a smooth upgrade for future Webrat releases. Also Factory_Girl generators will be added soon.
 
+Usage
+-----------------------------
 
 Then inside of a merb application directory, try:
 
@@ -36,3 +41,6 @@ Here are some merb projects that use cucumber (feel free to add/update/delete th
 * "http://github.com/teamon/aliquam/tree/master":http://github.com/teamon/aliquam/tree/master
 * cucumber in a merb slice: "http://github.com/balinterdi/philotes/tree/master":http://github.com/balinterdi/philotes/tree/master
 
+Tutorials
+-----------------------------
+* Merb-Book cucumber chapter: "http://book.merbist.com/testing-your-application/cucumber":http://book.merbist.com/testing-your-application/cucumber
