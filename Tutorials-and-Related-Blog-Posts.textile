@@ -4,13 +4,13 @@ Please add any helpful blog posts that you have found or written about all thing
 
 
 |*Post*|*Description*|*Posting Date*|
-|"Leveraging Test Data Builders in Cucumber Steps":http://www.benmabey.com/2009/02/05/leveraging-test-data-builders-in-cucumber-steps/| Step definitions for creating objects from step tables.| 02-5-09|
-|"iPhone GUI testing":http://www.ian.dees.name/tech/iphone-gui-testing.html| Cucumber meets the iPhone | 02-2-09 |
+|"Leveraging Test Data Builders in Cucumber Steps":http://www.benmabey.com/2009/02/05/leveraging-test-data-builders-in-cucumber-steps/| Step definitions for creating objects from step tables.| 02-05-09|
+|"iPhone GUI testing":http://www.ian.dees.name/tech/iphone-gui-testing.html| Cucumber meets the iPhone | 02-02-09 |
 |"One Smart Cucumber":http://joshuahoover.com/2009/01/28/one-smart-cucumber/|Business value|01-28-09|
 |"rails 2 day 4: rcov and more behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-4-rcov-and-more-behavior-driven-development| Cucumber+RCov Tutorial|12-29-08|
 |"rails 2 day 3: behavior-driven development":http://www.ultrasaurus.com/sarahblog/2008/12/rails-2-day-3-behavior-driven-development/| Tutorial of basic Cucumber usage and workflow.|12-22-08|
 |"Feature Injection and handling technical stories":http://lizkeogh.com/2008/09/10/feature-injection-and-handling-technical-stories/| Explains how to phrase technical stories and focus on business value in all types of stories.| 09-10-08|
-|"Telling a good story - Rspec stories from the trenches":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html| Discussion of common pitfalls when writing plain-text stories/features.| 08-5-08|
+|"Telling a good story - Rspec stories from the trenches":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html| Discussion of common pitfalls when writing plain-text stories/features.| 08-05-08|
 |"Imperative Vs Declarative Scenarios in User Stories":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/| Discussion about trade-offs of different scenario writing styles.| 05-19-08|
-|"rspec plain text stories + webrat = chunky bacon!":http://www.benmabey.com/2008/02/04/rspec-plain-text-stories-webrat-chunky-bacon/| Motivation and tutorial for webrat in features.| 02-4-08|
+|"rspec plain text stories + webrat = chunky bacon!":http://www.benmabey.com/2008/02/04/rspec-plain-text-stories-webrat-chunky-bacon/| Motivation and tutorial for webrat in features.| 02-04-08|
 |"What's in a Story?":http://dannorth.net/whats-in-a-story| Dan North's first post about the writing stories.|02-11-07|
