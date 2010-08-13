@@ -1,8 +1,7 @@
 There are several tools that work together with Cucumber that are developed by other people:
 
 ||Tool||Description||
-|"RCumber":http://github.com/jgoodsen/rcumber/wikis|RCumber is a rails plugin that gives your customers a web interface where they can view, edit and run Cucumber tests directly 
-on your rails project.
+|"RCumber":http://github.com/jgoodsen/rcumber/wikis|RCumber is a rails plugin that gives your customers a web interface where they can view, edit and run Cucumber tests directly on your rails project.  Useful for developing Cucumber/Webrat tests.  Clicking on test results takes you directly to that line in textmate.
 |
 |"Vim-Cucumber":http://github.com/bmabey/vim-cucumber/tree/master|Feature syntax highlighting for Vim.|
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting for Textmate and other useful commands.|
