@@ -1,6 +1,6 @@
 In Cucumber, every .feature file consists of a header followed by a list of scenarion. You can write whatever you want up until the first scenario, which starts with the word *Scenario* on a new line (see the languages.yml file for translations in other languages). 
 
-Every scenario consists of a list of steps, which must start with *Given*, *When*, *Then*, *But* or *And*. See [Step Organisation] for details of what the words mean (Cucumber treats them all the same, but you shouldn't). Here is an example:
+Every scenario consists of a list of steps, which must start with *Given*, *When*, *Then*, *But* or *And*. See [[Step Organisation]] for details of what the words mean (Cucumber treats them all the same, but you shouldn't). Here is an example:
 
 <pre>Feature: Serve coffee
 In order to earn money on drinks
@@ -36,3 +36,5 @@ end
 This step definition uses a regular expression with one match group, and it matches the first line of the scenario. The value of each matched group gets yielded to the block as a string. You must take care to have the same number of regular expression groups and block arguments. Since block arguments are always strings, you have to do any type conversions inside the block.
 
 When Cucumber prints the results of the running features it will underline all step arguments so that it's easier to see what part of a step was actually recognised as an argument. It will also print the path and line of the matching step definition. This makes it easy to go from a feature file to any step definition.
+
+Take a look at the examples directory to see more.
