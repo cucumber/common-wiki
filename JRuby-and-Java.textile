@@ -52,7 +52,7 @@ This will compile the java code and then run Cucumber features against that code
 
 h3. Using Maven
 
-Apache "Maven":http://maven.apache.org/ is a popular build tool for Java. If you're already using Maven you might be interested in running Cucumber with Maven too. Check out the "cucumber_java":http://github.com/aslakhellesoy/cucumber_java project, which has a Maven plugin that lets you run Cucumber from Maven.
+Apache "Maven":http://maven.apache.org/ is a popular build tool for Java. If you're already using Maven you might be interested in running Cucumber with Maven too. Check out the "cuke4duke":http://github.com/aslakhellesoy/cuke4duke project, which has a Maven plugin that lets you run Cucumber from Maven.
 
 (An older approach is described in "Madaspeak's great blog post":http://binil.wordpress.com/2008/10/29/running-cucumber-on-jrubymaven/).
 
