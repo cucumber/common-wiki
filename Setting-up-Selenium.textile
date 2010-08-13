@@ -1,59 +1,14 @@
-<p><strong>Update:</strong> This guide is out of date, a fix is upcoming but in the meantime you do not need the Selenium gem. You do not need to overwrite any jars. Make sure all selenium processes are stopped and the correct versions are installed and it should run. The information about multiple environments for selenium/non-selenium tests is still valid and useful.</p>
-
-<p>For webrat -v=0.5.1, you should use selenium-client -v=1.2.16.  Do not use webrat -v=0.5.0.  For webrat -v=0.4.4, you must use selenium-client -v=1.2.14.</p>
-
 h2. Pre-requisites
 
 Selenium-RC requires the Java Runtime Environment (JRE) version 1.5.0 or higher
 
+<p>For webrat -v=0.5.1, you should use selenium-client -v=1.2.16.  Do not use webrat -v=0.5.0.  For webrat -v=0.4.4, you must use selenium-client -v=1.2.14.</p>
 h2. Step 1: Install the Selenium gem
 
 <pre><code>sudo gem install Selenium</code></pre>
 <pre><code>sudo gem install selenium-client</code></pre>
-h2. Step 2: Install Selenium-remote
 
-Unfortunately the jar that the Selenium gem (version 1.1.14) comes with does not work with Firefox 3. So we have to get the latest jar from the Selenium-RC site: 
-
-Download the Selenium RC Beta 2:
-
-"http://seleniumhq.org/download/":http://seleniumhq.org/download/
-or from
-"http://github.com/thinkbohemian/Selenium-RC-Beta-2":http://github.com/thinkbohemian/Selenium-RC-Beta-2
-
-Once you have extracted the download we copy: 
-
-selenium-remote-control-1.0-beta-2/selenium-server-1.0-beta-2/selenium-server.jar
-
-Over the jar that was installed with the Selenium gem:
-
-GEM_INSTALL_DIR/Selenium-1.1.14/lib/selenium/openqa/selenium-server.jar.txt
-
-such as /usr/local/lib/ruby/gems/1.8/gems/Selenium-1.1.14/lib/selenium/openqa/selenium-server.jar.txt 
-
-if gem env returns:
-INSTALLATION DIRECTORY: /usr/local/lib/ruby/gems/1.8
-
-
-h3. Alternate Solution
-
-You can also patch the binary manually if the above solution does not work for you.
-
-"http://www.spacevatican.org/2008/9/27/selenium-and-firefox-3":http://www.spacevatican.org/2008/9/27/selenium-and-firefox-3
-
-A pre-patched binary can be found linked in the comments.
-
-Some versions of webrat also include a selenium server so you may need to patch that as well:
-
-GEM_INSTALL_DIR/webrat-0.4.1/vendor/selenium-server.jar
-
-h2. Step 3: Ubuntu fix (skip if you're not using Ubuntu)
-
-There is a bug with Selenium and Firefox 3 where Selenium cannot find: firefox-bin
-
-To solve this we create a sym link:
-<pre><code>sudo ln -s /usr/lib/firefox-3.0.4/firefox /usr/bin/firefox-bin</code></pre>
-
-h2. Step 4: Starting Selenium
+h2. Step 2: Starting Selenium
 
 The Selenium gem installs a script which allows us to get Selenium-RC running
 <pre><code>selenium</code></pre>
@@ -61,7 +16,7 @@ OR
 you can run the jar directly
 <pre><code>java -jar selenium-server.jar.txt</code></pre>
 
-h2. Step 5: Run the cucumber example
+h2. Step 3: Run the cucumber example
 
 Run the Cucumber "Selenium example":http://github.com/aslakhellesoy/cucumber/tree/master/examples/selenium
 
