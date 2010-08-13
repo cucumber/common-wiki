@@ -71,8 +71,7 @@ Take a look at the generated files. If you need to, you can tweak them later.
 h2. Start a feature
 
 It's really, really recommended that you write your features by hand - in collaboration with your
-customer / business analyst / domain expert / interaction designer. However, to get you started (and so you can see how to use
-Webrat), you can use the feature generator to generate the first few features:
+customer / business analyst / domain expert / interaction designer. However, to get you started (and so you can see how to use Webrat), you can use the feature generator to generate the first few features:
 
 <pre><code>ruby script/generate feature Frooble name:string color:string description:text
 </code></pre>
@@ -85,7 +84,13 @@ that isn't well formed (i.e. has a single <code><html></code> root node). "Here 
 
 h2. Run features
 
-Just run:
+If working on a fresh Rails project, first set up the (empty) database:
+
+<pre><code>rake db:migrate</code></pre>
+
+(Otherwise Cucumber fails with the error <code>no such file to load -- YourProjectName/db/schema.rb</code>.) 
+
+Then run the features:
 
 <pre><code>rake features</code></pre>
 
