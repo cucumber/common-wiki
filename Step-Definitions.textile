@@ -1,6 +1,6 @@
 A Step Definition is the Ruby counterpart of a plain text step. They consist of a Regexp and a Proc and are defined by calling one of the "adjective":http://www.merriam-webster.com/dictionary/given / "adverb":http://www.merriam-webster.com/dictionary/when methods. This happens before Cucumber starts to execute the plain text.
 
-When Cucumber executes the plain text, it will for each step look for a registered Step Definition with a matching Regexp. The adjective/adverb has *no* significance when it comes to recognition. If it finds one it will execute its Proc, passing all groups from the Regexp match as arguments to the Proc.
+When Cucumber executes the plain text, it will for each step look for a registered Step Definition with a matching Regexp. (The adjective/adverb has *no* significance when it comes to recognition). If it finds one it will execute its Proc, passing all groups from the Regexp match as arguments to the Proc.
 
 h2. Pending steps
 
