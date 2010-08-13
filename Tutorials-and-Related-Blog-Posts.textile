@@ -3,6 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
+|"More on Cucumber":http://asciicasts.com/episodes/159-more-on-cucumber| How to use tables and tags. | May 03 2009|
 |"Using Cucumber to test Erlang Servers":http://blog.wolfman.com/articles/2009/5/2/using-cucumber-to-test-erlang-servers| Cucumber, JRuby, JInterface and more | May 2 2009 |
 |"Try adding Cucumber to Watir":http://www.rudyonrails.com/blog/?p=278|Cucumber+Watir tutorial | Apr 17 2009 |
 |"Building a better World":http://drnicwilliams.com/2009/04/15/cucumber-building-a-better-world-object/| Dr. Nic explains the Cucumber World and how to upgrade to 0.3.0 | Apr 15 2009 |
