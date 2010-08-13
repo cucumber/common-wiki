@@ -21,7 +21,9 @@ Usage
 Then inside of a merb application directory, try:
 
 *merb-gen cucumber*
+
 *merb-gen feature FEATURE_NAME*
+
 *rake features*
 
 Looking for Examples?
