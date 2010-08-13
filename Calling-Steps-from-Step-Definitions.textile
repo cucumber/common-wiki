@@ -2,7 +2,7 @@ It is possible to call steps from [[Step Definitions]]:
 
 <pre>
 # ruby
-Given /^The user (.*) exists$/ do |name|
+Given /^the user (.*) exists$/ do |name|
   # ...
 end
 
@@ -11,7 +11,7 @@ Given /^I log in as (.*)$/ do |name|
 end
 
 Given /^(.*) is logged in$/ do |name|
-  Given "The user #{name} exists"
+  Given "the user #{name} exists"
   Given "I log in as #{name}"
 end
 </pre>
@@ -30,7 +30,7 @@ Instead of having a lot of repetition:
 <pre>
 # feature
 Scenario: View last incidents
-  Given The user Linda exists
+  Given the user Linda exists
   And I log in as Linda
   When I go to the incident page
 </pre>
