@@ -44,6 +44,7 @@ Here are some merb projects that use cucumber (feel free to add/update/delete th
 * "http://github.com/ngty/ty_cucumber_salad/tree/master":http://github.com/ngty/ty_cucumber_salad/tree/master
 * "http://github.com/teamon/aliquam/tree/master":http://github.com/teamon/aliquam/tree/master
 * cucumber in a merb slice: "http://github.com/balinterdi/philotes/tree/master":http://github.com/balinterdi/philotes/tree/master
+* "http://github.com/wolfmanjm/wolfmanblog/tree/master":http://github.com/wolfmanjm/wolfmanblog/tree/master
 
 Tutorials
 -----------------------------
