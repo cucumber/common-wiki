@@ -3,6 +3,7 @@ It's always a good sign for a tool when other people huddle around and write too
 ||Tool||Description||
 |"AutoTest":http://www.zenspider.com/ZSS/Products/ZenTest/|Run Cucumber features in the background with Cucumber's built-in [[Autotest Integration]]|
 |"cheat cucumber":http://cheat.errtheblog.com/s/cucumber/|Cucumber cheatsheet for Chris Wanstrath's "cheat":http://cheat.errtheblog.com/|
+|"Clearance":http://wiki.github.com/thoughtbot/clearance/cucumber-features| Rails Authentication System with Cucumber feature generator|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting and other useful commands for "TextMate":http://macromates.com/.|
 |"Cucumber Growler":http://github.com/paolodona/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber.|
