@@ -12,4 +12,6 @@ You can reuse the arguments listed above:
 
 It is important to point out that by simply running 'cucumber' the default profile will be used (if a cucumber.yml file is found in the current directory).
 
+As of commit 06810452b36d876061b9cfbd6c93bfcfcb58c00e on 28 Aug 2009, included in the 0.3.99 and later releases of cucumber, the cucumber.yml file is interpreted as an ERB file; this allows you to use ruby code to generate values in the cucumber.yml file. Someone should post some examples of this sometime.
+
 Also see [[Running Features]] for more details about how to execute your features.
