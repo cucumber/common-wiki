@@ -6,7 +6,7 @@ It's important to realise that Spork doesn't actually make your scenarios run fa
 
 This means that for just a few scenarios, you will see an improvement in time, but if you are running N scenarios you will see a degradation. The value of N depends on your project. The more code that gets loaded at startup, the bigger N will be. It's probably around 10-20 for most projects.
 
-You can start Spork and have it preload your application in a separate process. 
+Ok - now that you understand the implications you can start Spork and have it preload your application in a separate process. 
 
 <code>
 spork cuc
@@ -24,3 +24,5 @@ Although Spork was in mind when the <code>--drb</code> switch was added it is im
 to Cucumber was a DRb client.  Any DRb server that adheres to this protocol can be used with Cucumber's <code>--drb</code> switch. 
 
 While Spork is geared towards removing the load time to give you a faster feedback loop you could just as easily use this client with a server that distributes your features to run in parallel. Someone just needs to write such a server - hint hint.
+
+Worth checking out is also "testjour":http://github.com/brynary/testjour/tree/master - a distributed runner for Cucumber. It's currently not related to Spork.
