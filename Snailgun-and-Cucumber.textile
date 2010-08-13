@@ -1,7 +1,9 @@
 snailgun drastically reduces the startup time of each test run, by preloading a process with Rails and your chosen gems, and then forking it for each run so that only your application files are loaded. Note that it only works under Unix/Linux systems.
 
 snailgun-1.0.5 now supports cucumber with an "fcucumber" shortcut. Example:
-<pre><code>snailgun --rails cucumber
+<pre><code>sudo gem install snailgun
+
+snailgun --rails cucumber
 fcucumber -q
 </code></pre>
 That's all you need. The first line preloads a process with RAILS_ENV=cucumber; the second starts cucumber by forking this process. You can also use @frake cucumber@.
