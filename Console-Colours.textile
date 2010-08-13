@@ -44,3 +44,9 @@ To see what colours and effects are available, just run this in your shell:
 </pre>
 
 Although not listed in the output, you can also use <code>grey</code>.
+
+h2. Windows
+
+Windows users using MRI (the one-click ruby installer) will have to install the <code>win32console></code> gem. (Currently "this doesn't work on Ruby 1.9":http://groups.google.com/group/cukes/browse_thread/thread/14a4ded4d083f7c). 
+
+If you're on JRuby you have to use "wac":http://github.com/aslakhellesoy/wac (Windows ANSI Color).
