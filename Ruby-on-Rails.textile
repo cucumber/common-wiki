@@ -38,8 +38,6 @@ Take a look at the generated files. If you need to, you can tweak them later.
 
 h2. Install new dependencies
 
-*Ubuntu/Debian users:* Follow these "Nokogiri install instructions":http://hightechsorcery.com/2008/12/howto-install-nokogiri-gem-ubuntu first.
-
 <pre><code>[sudo] rake gems:install</code></pre>
 
 h2. Start a feature
