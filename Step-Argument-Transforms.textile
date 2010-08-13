@@ -18,4 +18,13 @@ Scenario: friend'ing
   Then user larrytheliquid should be friends with user dastels
 </pre> 
 
+Note that sometimes you may not need to parse the entire step_arg and may only care about a specific Regexp capture group being matched. For this more common case, you can use an optional syntax for <code>Transform</code> where the block supplied has arguments that correspond to capture groups in the registered regex:
+
+<pre>
+# support file
+Transform /^user (\w+)$/ do |username|
+  User.find_by_username username
+end
+</pre>
+
 One key thing to remember is to provide some contextual data like "user" so you don't end up transforming every single argument to a step definition. See "this blog post":http://www.engineyard.com/blog/2009/cucumber-step-argument-transforms/ for a more detailed explanation and examples.
