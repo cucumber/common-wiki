@@ -8,6 +8,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Cucumber Growler":http://github.com/paolodona/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber.|
 |"Cucumber Nagios":https://code.launchpad.net/cucumber-nagios|Web site monitoring with Cucumber and "Nagios":http://www.nagios.org/|
 |"Culerity":http://github.com/langalex/culerity/tree/master| Integrates Cucumber and Celerity to test Javascript in webapps.|
+|"DatabaseCleaner":http://github.com/bmabey/database_cleaner/tree/master|Different strategies for keeping your DB clean to ensure a clean state.  Has Cucumber support out of the box.|
 |"EmailSpec":http://github.com/bmabey/email-spec|Collection of "RSpec":http://rspec.info/ matchers and Cucumber steps for testing email in a Rails app|
 |"fbrp":http://github.com/diabolo/fbrp/tree/master| Sample rails app of Cucumber showing how to use with restful-authentication.|
 |"Features2Cards":http://github.com/brynary/features2cards|Create PDFs from Cucumber features and scenarios for printing.|
