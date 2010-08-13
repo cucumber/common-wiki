@@ -58,26 +58,36 @@ Apache "Maven":http://maven.apache.org/ is a popular build tool for Java. If you
 
 h3. Using Ant
 
-Here is an example task:
+Here is an example build file:
 
-<pre><code><target name="cucumber" description="Runs all the cucumber tests">
-  <java classname="org.jruby.Main" fork="true" failonerror="true">
-    <classpath>
-      <fileset dir="lib/runtime">
-        <include name="*.jar"/>
-      </fileset>
-      <pathelement path="lib/extras"/>
-    </classpath>
-    <arg value="-S"/>
-    <arg value="lib/extras/bin/cucumber"/>
-    <arg value="--format"/>
-    <arg value="Sensis::JUnitFormatter"/>
-    <arg value="features"/>
-  </java>
-</target>
-</code></pre>
+<pre><code><project name="Cucumber Demo" default="cucumber" basedir=".">
+  <target name ="compile" description="Compile classes">
+    <mkdir dir="build" />
+    <javac srcdir="src" destdir="build" />
+  </target>
 
-This is taken from "this blog post":http://csausdev.wordpress.com/2009/05/12/cucumber-jruby-and-ant/. This will create JUnit output if you use the <code>Sensis::JUnitFormatter</code> which you can get "here":http://csausdev.wordpress.com/2009/05/12/junit-formatter-for-cucumber/. (This formatter may be included in Cucumber in a future release).
+  <target name="cucumber" depends="compile" description="Run Cucumber">
+    <property environment="ENV" />
+    <java classname="org.jruby.Main" fork="true" failonerror="true">
+      <classpath>
+        <pathelement path="${ENV.JRUBY_HOME}/lib/jruby.jar"/>
+        <pathelement path="build"/>
+      </classpath>
+      <jvmarg value="-Djruby.home=${ENV.JRUBY_HOME}"/>
+      <arg value="-S"/>
+      <arg value="cucumber"/>
+      <arg value="--format"/>
+      <arg value="pretty"/>
+      <arg value="--format"/>
+      <arg value="junit"/>
+      <arg value="--out"/>
+      <arg value="build"/>
+      <arg value="features"/>
+    </java>
+  </target>
+</project></pre>
+
+You can find the full example under <pre>examples/java</pre> in the Cucumber source code
 
 h2. Seen elsewhere
 
