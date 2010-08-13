@@ -5,40 +5,49 @@ h2. Cucumber
 # [[Given-When-Then]]
 
 
-h2. Download
-
-h2. Installation
+h2. Download and Installation
 
 # [[Install]]
 
 
-h2. Troubleshooting
+h2. Support
 
+# [[Search]]
 # [[Troubleshooting]]
 
 
 h2. Documentation
 
-# [[Background]]
-# [[A Whole New World]]
-# [[Calling Steps from Step Definitions]]
-# [[Conjunction Steps (Antipattern)]]
-# [[Console Colours]]
+Tutorial:
 # [[Cucumber Backgrounder]]
+
+Feature:
+# [[Given-When-Then]]
+# [[Gherkin]]
+# [[Feature Introduction]]
+# [[Background]]
+# [[Scenario outlines]]
+
+Step definition:
+# [[Step Definitions]]
+# [[Calling Steps from Step Definitions]]
+# [[Step Organisation]]
+# [[Fixtures]]
+
+Featuers and Step definitions:
+# [[Multiline Step Arguments]]
+# [[Conjunction Steps (Antipattern)]]
+# [[Feature-Coupled Steps (Antipattern)]]
+
+Other:
+# [[A Whole New World]]
+# [[Console Colours]]
 # [[Cucumber Feature]]
 # [[cucumber.yml]]
 # [[Custom Formatters]]
-# [[Feature-Coupled Steps (Antipattern)]]
-# [[Fixtures]]
-# [[Gherkin]]
-# [[Multiline Step Arguments]]
-# [[Profiles]]
 # [[Running Features]]
-# [[Scenario outlines]]
-# [[Search]]
-# [[Step Definitions]]
-# [[Step Organisation]]
 # [[Tags]]
+
 
 h2. Examples and code Snippets
 
