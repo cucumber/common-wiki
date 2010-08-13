@@ -89,7 +89,7 @@ As detailed above, the default features directory tree is fairly shallow.  One c
 |       `-- env.rb
 </code></pre>
 
-In this case the bland initial setup has been divided into sub-directories informed by model-centric testing.  However this could equally well have been broken up in to model/controller/view hierarchies:
+In this case the bland initial setup has been divided into sub-directories informed by model-centric testing.  This could equally well have been broken up in to model/controller/view hierarchies:
 
 <pre><code>|-- features
 |   |-- models
