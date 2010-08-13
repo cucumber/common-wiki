@@ -40,6 +40,7 @@ h2. Calling with tables and strings
 *{color:red}This is only possible in 0.1.99 and higher*
 
 Sometimes you want to call a step that has been designed to take a table as input:
+(See [[Using tabular data in features]] for details about tables).
 
 <pre>
 # ruby
