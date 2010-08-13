@@ -5,7 +5,7 @@ Projects using Cucumber:
 * "WebJam":http://github.com/webjam/webjam/ /features/
 * "Redcar":http://github.com/danlucraft/redcar/tree/master /plugins/*/features
 * "jeweler":http://github.com/technicalpickles/jeweler /features
-* "jekyll":http://github.com/technicalpickles/jeweler /features
+* "jekyll":http://github.com/mojombo/jekyll /features
 
 
 Note: I had initially copied the [[Examples]] page. I created this page because I consider this page to be a more appropriate name.
