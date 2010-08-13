@@ -6,8 +6,8 @@ migrating over a relatively large set of stories in a Rails project.
 First, follow the Cucumber installation instructions for Rails. This should leave you with a features directory that looks like this:
 
 <pre><code>+-features/
-  +-steps/
-    +-common_webrat.rb
+  +-step_definitions/
+    +-webrat_steps.rb
     +-env.rb
 </code></pre>
 
