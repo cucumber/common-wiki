@@ -1,0 +1,59 @@
+h2. Pre-requisites
+
+Selenium-RC requires the Java Runtime Environment (JRE) version 1.5.0 or higher
+
+h2. Step 1: Install the Selenium gem
+
+<pre><code>
+sudo gem install Selenium
+</code></pre>
+
+h2. Step 2: Install Selenium-remote
+
+Unfortunately the jar that the Selenium gem (version 1.1.14) comes with does not work with Firefox 3. So we have to get the latest jar from the Selenium-RC site: 
+
+Download the Selenium nightly build:
+
+"http://selenium-rc.seleniumhq.org/download.html":http://selenium-rc.seleniumhq.org/download.html
+
+Once you have extracted the download we copy: 
+
+selenium-remote-control-1.0-SNAPSHOT/selenium-server-1.0-SNAPSHOT/selenium-server.jar
+
+Over the jar that was installed with the Selenium gem:
+
+GEM_INSTALL_DIR/Selenium-1.1.14/lib/selenium/openqa/selenium-server.jar.txt
+
+h2. Step 3: Ubuntu fix (skip if your not using Ubuntu)
+
+There is a bug with Selenium and Firefox 3 where Selenium cannot find: firefox-bin
+
+To solve this we create a sym link:
+<pre><code>
+sudo ln -s /usr/lib/firefox-3.0.4/firefox /usr/bin/firefox-bin
+</pre></code>
+
+h2. Step 4: Starting Selenium
+
+The Selenium gem installs a script which allows us to get Selenium-RC running
+<pre><code>
+selenium
+</pre></code>
+OR 
+you can run the jar directly
+<pre><code>
+java -jar selenium-server.jar.txt
+</pre></code>
+
+h2. Step 5: Run the cucumber example
+
+Run the Cucumber Selenium example 
+
+<pre><code>
+cucumber examples/selenium/features/
+</pre></code>
+
+h2. Useful links
+
+"Official Selenium-RC site":"http://selenium-rc.seleniumhq.org/
+"Selenium gem at rubyforge":http://selenium.rubyforge.org/
