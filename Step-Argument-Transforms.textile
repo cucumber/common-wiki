@@ -29,6 +29,8 @@ end
 
 One key thing to remember is to provide some contextual data like "user" so you don't end up transforming every single argument to a step definition. See "this blog post":http://www.engineyard.com/blog/2009/cucumber-step-argument-transforms/ for a more detailed explanation and examples.
 
+h2. Transforming tables
+
 Step argument transforms can also be used with tables. A table is matched via a comma-delimited list of the column headers and the 'table:' prefix:
 
 <pre>
