@@ -1,5 +1,17 @@
 It's strongly recommended that you get familiar with changes between your current version and the version you're upgrading to. You can always find the changes in "History.txt":http://github.com/aslakhellesoy/cucumber/blob/master/History.txt
 
+h2. 0.7.x
+
+If you're upgrading from 0.6.x or earlier to 0.7.x you will find that feature file parsing is 50-100 times faster, but it's also a little different. You may have to change your existing features slightly. As of 0.7.0:
+
+* Each feature file *must* start with a <code>Feature:</code> keyword (or a translation). Run cucumber --i18n help and cucumber --i18n LANG for details.
+** You may have tags above the <code>Feature:</code> line
+** You may have comments above the tags or the <code>Feature:</code> line
+* You can now put tags above <code>Examples</code>. This gives you more flexibility with <code>--tags</code> and tagged [[Hooks]].
+* You are now allowed to have comments between table rows.
+* You can't have comments at the end of a line # like this
+** # But you can still have tags at the beginning of a line
+
 h2. Ruby on Rails
 
 As of Cucumber 0.5.0 you should also install/upgrade the <code>cucumber-rails</code> gem. After doing that you must also run <code>ruby script/generate cucumber</code>. See cucumber-rails' "History.txt":http://github.com/aslakhellesoy/cucumber-rails/blob/master/History.txt for details, especially the upgrading instructions that are described for the 0.2.0 release of cucumber-rails.
