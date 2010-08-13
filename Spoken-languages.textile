@@ -23,18 +23,12 @@ A <code># language:</code> header on the first line of a feature file tells Cucu
 
 h2. Listing the available languages
 
-<pre><code>cucumber --language help</code></pre>
-
-*{color:red}From version 0.5.0 you must use:*
 <pre><code>cucumber --i18n help</code></pre>
 
 h2. Listing the keywords of a particular language
 
 For example Russian:
 
-<pre><code>cucumber --language ru help</code></pre>
-
-*{color:red}From version 0.5.0 you must use:*
 <pre><code>cucumber --i18n ru</code></pre>
 
 h2. Adding a new language
