@@ -87,8 +87,7 @@ There is ranking logic that gets invoked when the option is turned on:
 # If there are 2+ Regexen with the same number of capture groups, the one with the shortest overall captured string length wins
 # If there are still 2+ options then an Ambiguous error is raised
 
-So if you try <code>--guess</code> with the mice above, you'll still get <code>Cucumber::Ambiguous</code>. Still, using
-guess mode is useful in some situations.
+So if you try <code>--guess</code> with the mice above, Cucumber will pick <code>/Three blind (.*)/</code>, because "mice" is horter than "blind".
 
 Consider guess mode a workaround. We still recommend you try to have unambiguous regular expressions. When you have a lot of step definitions you quickly lose track of the situations where cucumber will apply guessing logic, and that can lead to some surprises.
 
