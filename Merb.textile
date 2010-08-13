@@ -24,7 +24,29 @@ Then inside of a merb application directory, try:
 
 *merb-gen feature FEATURE_NAME*
 
-edit your feature
+*edit your feature*
+
+describe can use multiple given blocks
+
+For example, you can "now":http://ln-s.net/2vB2
+write
+
+<code><pre>
+
+given "some food" do
+  @food = "pizza"
+end
+
+given "some drink" do
+  @drink = "beer"
+end
+
+describe "Something", :given => ["some food", "some drink"] do
+  it "should have dinner" do
+    # has @food and @drink set to pizza and beer, respectively
+  end
+end
+</pre></code>
 
 *rake features*
 
@@ -39,7 +61,8 @@ Here are some merb projects that use cucumber (feel free to add/update/delete th
 
 * "http://github.com/matthewford/comic-review/tree/master":http://github.com/matthewford/comic-review/tree/master
 * "http://github.com/teamon/merb-base/tree/master":http://github.com/teamon/merb-base/tree/master
-* "http://github.com/mop/mini-blog/tree/master":http://github.com/mop/mini-blog/tree/master
+* "h
+ttp://github.com/mop/mini-blog/tree/master":http://github.com/mop/mini-blog/tree/master
 * "http://github.com/jnicklas/merb_upload/tree/master":http://github.com/jnicklas/merb_upload/tree/master
 * "http://github.com/ngty/ty_cucumber_salad/tree/master":http://github.com/ngty/ty_cucumber_salad/tree/master
 * "http://github.com/teamon/aliquam/tree/master":http://github.com/teamon/aliquam/tree/master
