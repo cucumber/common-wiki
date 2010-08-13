@@ -6,7 +6,7 @@ Got questions? Here is where you can get in touch:
 * "Twitter":http://search.twitter.com/search?q=%23cucumber
 * "stackoverflow":http://stackoverflow.com/questions/tagged/cucumber
 
-If you fail a Lighthouse ticket without following the "Before you ask" guidelines below, your ticket may be closed as invalid. If that happens, just comment on the ticket with the missing information to have it reopened.
+If you file a Lighthouse ticket without following the "Before you ask" guidelines below, your ticket may be closed as invalid. If that happens, just comment on the ticket with the missing information to have it reopened.
 
 If you contact a developer directly you may not get an answer. If you do get an answer, the answer will most likely be cc'ed to the mailing list. Open source development also means open communication. 
 
