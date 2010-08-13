@@ -12,7 +12,7 @@ Then /^(user \w+) should be friends with (user \w+)$/ do |user, friend|
 end
 
 # feature file
-Scenario: friending
+Scenario: friend'ing
   Given ...
   When ...
   Then user larrytheliquid should be friends with user dastels
