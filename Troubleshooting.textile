@@ -26,3 +26,7 @@ h2. Changes made to models while running stories with Selenium are not visible f
 If you run Cucumber with Selenium, it creates 2 instances of Rails application - one for use by Cucumber/features and another one that's used by Selenium. By default, all operations on database are wrapped up with transaction, that is rolled back after running each story.
 
 This is happening if you have enabled <code>Cucumber::Rails.use_transactional_fixtures</code> option in your <code>env.rb</code> file. To solve this problem, you need to comment out this option and handle table cleanup yourself, for example using <code>Before</code> block. Please read [[Hooks]] to get an idea how to use it.
+
+h2. Sqlite adapter throws SQLite3::BusyException when using Cucumber with Selenium
+
+Cause and solution to this problem is exactly the same as with not being able to see changes made to database when using Cucumber with Selenium. In short, you need to comment out <code>Cucumber::Rails.use_transactional_fixtures</code> from your <code>env.rb</code> file.
