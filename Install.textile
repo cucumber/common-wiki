@@ -1,8 +1,7 @@
-Also see:
-
-* [[Ruby on Rails]]
-* [[JRuby and Java]]
-* [[IronRuby and .NET]]
+These are standalone install instructions. In order to use Cucumber within some frameworks, see also:
+* install for [[Ruby on Rails]]
+* install for [[JRuby and Java]]
+* install for [[IronRuby and .NET]]
 
 After you have installed Ruby, install Cucumber with the following command:
 
