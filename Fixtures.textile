@@ -24,4 +24,31 @@ Fixtures.create_fixtures(fixtures_folder, fixtures)
 </pre>
 
 #Usage
-Once you've done one of the two load methods above (please, don't do both ;-) you can access your fixture data from the database using *Model.find*.  Example to find the first User model you'd use User.find(:first).  You do not appear to have access via the fixtures helpers; *users(:admin)* for example will not work!
+Once you've done one of the two load methods above (please, don't do both ;-) you can access your fixture data from the database using *Model.find*.  Example to find the first User model you'd use User.find(:first).
+
+#Fixture helper methods
+If you want to also enable the fixture helper methods, such as *users(:admin)*, you need to add the following (pretty much stolen straight from the Rails guts) after loading fixtures in the env.rb file, as above:
+
+<pre>World do |world|
+
+  (class << world; self; end).class_eval do
+    @@fixture_cache = {}
+    fixtures.each do |table_name|
+      table_name = table_name.to_s.tr('.', '_')
+      define_method(table_name) do |*fixture_symbols|
+        @@fixture_cache[table_name] ||= {}
+
+        instances = fixture_symbols.map do |fixture_symbol|
+          if fix = Fixtures.cached_fixtures(ActiveRecord::Base.connection, table_name)[fixture_symbol.to_s]
+            @@fixture_cache[table_name][fixture_symbol] ||= fix.find  # find model.find's the instance
+          else
+            raise StandardError, "No fixture with name '#{fixture_symbol}' found for table '#{table_name}'"
+          end
+        end
+        instances.size == 1 ? instances.first : instances
+      end
+    end
+  end
+  world
+end
+</pre>
