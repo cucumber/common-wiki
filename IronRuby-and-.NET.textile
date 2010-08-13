@@ -46,9 +46,6 @@ When you have completed this step you should be able to run
 This should give you a new prompt (Interactive IronRuby shell). Just type <code>exit</code>
 and hit enter. You have installed IronRuby!
 
-You can now close your Visual Studio command prompt. From here on a regular command prompt
-will suffice.
-
 h2. Installing required gems
 
 Since IronRuby doesn't yet know how to install gems you have to install them using MRI:
@@ -82,12 +79,12 @@ Now you should be able to run Cucumber:
 
 <pre>icucumber --help</pre>
 
-h2. Running the Cucumber C# example
+h2. Running the Cucumber C# examples
 
 Open a command prompt and cd to the Cucumber examples directory for C#. If you have installed MRI to the default
-location you'll find them under <code>C:\ruby\lib\ruby\gems\1.8\gems\cucumber-X.Y.Z\examples</code>
+location you'll find them under <code>C:\ruby\lib\ruby\gems\1.8\gems\cucumber-X.Y.Z\examples</code>. (Replace <code>X.Y.Z</code> with the Cucumber version you installed above)
 
-(Replace <code>X.Y.Z</code> with the Cucumber version you installed above)
+If you pulled the Cucumber code with Git, you'll find the examples under <code>examples</code>.
 
 h3. Run the plain ruby example
 
