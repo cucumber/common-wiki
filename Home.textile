@@ -11,7 +11,7 @@ Cucumber only requires minimal use of Ruby programming, so don't be afraid to tr
 developing is in a different language. Most programmers should pick up the required Ruby skills and be productive
 with Cucumber in a few of days.
 
-While Cucumber can be thought of as a "testing" tool, the intent of the tool is to support "BDD":http://behaviour-driven.org/
+While Cucumber can be thought of as a "testing" tool, the intent of the tool is to support "BDD":http://behaviour-driven.org/.
 This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else, and 
 the production code is then written outside-in, to make them pass.
 
