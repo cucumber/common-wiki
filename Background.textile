@@ -38,7 +38,7 @@ For example, if the user and site names don't matter to the client, you should u
 
 h3. Keep your "Background" section *short*. 
 
-You're expecting the user to actually remember this stuff when reading your scenarios. If the background is more than 4 lines long, can you move some of the irrelevant details into high-level steps?
+You're expecting the user to actually remember this stuff when reading your scenarios. If the background is more than 4 lines long, can you move some of the irrelevant details into high-level steps? See [[Calling Steps from Step Definitions]].
 
 h3. Make your "Background" section *vivid*. 
 
