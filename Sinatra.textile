@@ -2,7 +2,7 @@ You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Web
 
 (For the time being you must use aslakhellesoy's clones of "sinatra":http://github.com/aslakhellesoy/sinatra and "webrat":http://github.com/aslakhellesoy/webrat - hopefully my small changes will be incorporated into the official Git repositories).
 
-Just make sure you have a features/steps/env.rb file with the following:
+Just make sure you have a <pre>features/support/env.rb</pre> file with the following:
 
 <pre><code>$0 = File.dirname(__FILE__) + '/../../your_sinatra_app.rb' # Otherwise Sinatra will look for views in the wrong place
 require 'spec'
