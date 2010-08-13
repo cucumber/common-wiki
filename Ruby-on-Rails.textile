@@ -142,3 +142,19 @@ In the .feature, use a phrase similar to <code>Given a user is logged in as "mar
   response.body.should =~ /Logged/m  
 end
 </code></pre>
+
+h2. Upgrading to Cucumber 0.2 from Earlier Versions
+
+From the release notes:
+
+<pre><code>
+IMPORTANT NOTE FOR RAILS USERS.
+The template used to generate your features/support/env.rb has changed. You have to apply a minor change
+manually for existing Rails projects when you upgrade to this version. Change this:
+
+  require 'webrat/rspec-rails'
+
+to this:
+
+  require 'webrat/core/matchers'
+</code></pre>
