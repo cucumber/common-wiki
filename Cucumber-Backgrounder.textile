@@ -9,15 +9,20 @@ Since the original version of this article appeared, Cucumber has undergone repe
 h3. Where to Start?
 
 <pre>Given you have installed the gem named "rails"
-  And you have generated a RoR project named "my_project"
   And you have installed the gem named "cucumber-rails"
+  And you have generated a RoR project named "my_project"
   And your session working directory is the Rails root directory of "my_project"
+  And you have created the file cucumber.yml in the root directory
+  And the file cucumber.yml contains a valid default profile
 
 When you run "script/generate cucumber"
 
 Then you will create a sub-directory named "features"
   And you will create the default feature and step files in the directory named "features"
   And you will create a rake task named "cucumber.rake" in "lib/tasks"
+  And you will created an environment cucumber.rb in config/environments
+  And you will modify config/database.yml
+  .  .  .
 </pre>
 
 The foregoing is written in the style of the feature statements, called <em>steps</em>, that make up the user interface to cucumber testing.  We will return to that topic later.  For the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
@@ -112,7 +117,7 @@ While scaffolding provides a comforting illusion of progress through its volumin
 
 It is often tempting to just <em>skip ahead</em> and complete as many scenarios and feature steps as one can imagine.  In some cases limited access to domain experts and end users may require that many feature steps be completed long before coding the associated step definitions is undertaken. Nonetheless, in the long run, it has proven best practice to write feature steps and step definitions incrementally, using the absolute minimum of code; and then immediately implement the new feature step requirement in application code, also using the minimum code to satisfy it.  This is a hard discipline to accept but the value is that with this approach you will rarely have untested code anywhere in your application and your application will only have code that satisfies required features.
 
-If you do anticipate feature steps then omitting any matcher for them in the step definitions files causes these steps to be reported as <em>pending</em> in Cucumber 0.1.12.  Later versions of Cucumber may instead report missing matchers as missing and provide an explicit <strong><em>pending</em></strong> method to designate pending step definitions.
+If you do anticipate feature steps then omitting any matcher for them in the step definitions files causes these steps to be reported as missing by Cucumber, which helpfully provides a suggested method and agument to implement.  Stub matchers have an explicit <strong><em>pending</em></strong> method avaiable to designate pending step definitions.
 
 A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</strong></em>.  Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses (steps) that are used to match test step definitions. The conventional arrangement is:
 
@@ -175,7 +180,7 @@ And /some other act.*/ do
 
 The exception occurs because *_And_* is not defined as a steps definition method, but only as a feature step method.  The step definition match depends only upon the pattern following the Given/When/Then method and not upon the step method itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance for a matcher.
 
-If more than one matcher in all of the step definitions files matches a feature step then cucumber complains that it found multiple step definition matches for that step and forces you to distinguish them.
+If more than one matcher in all of the step definitions files matches a feature step then cucumber complains that it found multiple step definition matches for that step and forces you to distinguish them.  You can force cucumber to make a decision instead by passing the switch <code>--guess</em> on the command line.
 
 It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
@@ -219,17 +224,27 @@ The choice of method has no impact on the result but, When and Then used in this
 
 </pre>
 
+If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Bacground section are run before each of the scenarios.
+
+<pre>
+Feature: .  .  .
+  Background: .  .  .
+  Scenario: .  .  .
+</pre>  
+
 h3. What Way do I Run the Tests?
 
 Unless you are knowledgeable enough that you use "mocks and stubs":http://rspec.info/documentation/mocks/ then I consider it best to begin with creating a Rails migration file for the model you are testing ( or expressing features for ) followed by:<pre><code>rake db:migrate
 rake db:test:prepare
 </code></pre>
 
-Testing with cucumber can be performed in several fashions.  Be aware that <code>Rake features</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same tests.  
+However, there is an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist. 
+
+Testing with cucumber can be performed in several fashions.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same tests.  
 
 Running <code>rake features</code> from the command line provides the easiest and most reliable method to run cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  
 
-Running cucumber directly from the command line requires the creation of a <code>cucumber.yml</code> file in the project root directory, even if that file remains empty.  When cucumber is run from the command line it is usually necessary to provide both the directory name containing the root directory of the tree containing feature files and the directory name containing references to the necessary library files.  In the typical project <code>cucumber features -r features</code> will normally suffice.  
+Running cucumber directly from the command line requires the creation of a <code>cucumber.yml</code> file in the project root directory and it must contain a default profile (for example: <code>default: --require features --format pretty</code>.  When cucumber is run from the command line it is usually necessary to provide both the directory name containing the root directory of the tree containing feature files and the directory name containing references to the necessary library files.  In the typical project <code>cucumber features -r features</code> will normally suffice.  
 
 Finally, running <code>autotest</code> with the environment variable <code>AUTOFEATURE=true</code> will run ALL tests, including those in <code>/test</code> and (if present) <code>/spec</code>.  As this will load all test fixtures the test database may be left in an indefinite state when cucumber features are run.  It is wise, as always, to write cucumber steps either so that they do not depend upon an empty database or they place the database in the requisite state.
 
