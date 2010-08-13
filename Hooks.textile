@@ -26,6 +26,16 @@ end
 end
 </code></pre>
 
+Here is another example, where we exit at the first failure (could be useful in some rare cases like [[Continuous Integration]] when fast feedback is important).
+
+<pre><code>
+After do |s| 
+  # Tell Cucumber to quit after this scenario is done - if it failed.
+  Cucumber.wants_to_quit = true if s.failed?
+end
+</code></pre>
+
+
 <code>Around</code> hooks will run "around" a scenario. This can be used to wrap the execution a scenario in a block. The Around hook receives a scenario object and a block (Proc) object. The scenario will be executed when you invoke <code>block.call</code>.
 
 The following example will cause scenarios tagged with <code>@fast</code> to fail if the execution takes longer than 0.5 seconds:
