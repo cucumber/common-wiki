@@ -4,7 +4,7 @@ h2. Step 1: Install the Watir gem
 
 h2. Step 2: Install jssh.xpi
 
-Install the jssh.xpi relating to your OS and Firefox version from here:
+Install the jssh.xpi relating to your OS and Firefox version:
 
 http://wiki.openqa.org/display/WTR/FireWatir+Installation
 
