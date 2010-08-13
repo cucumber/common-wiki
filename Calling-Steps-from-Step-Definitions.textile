@@ -127,7 +127,7 @@ from a step definition, pass the string after the step:
 
 <pre>
 # ruby
-Given /^document "([^\"]*)" exists with content$/ do |pystring|
+Given /^a document exists with content$/ do |pystring|
   Given "I go to add a document"
   And 'I fill in "ditacontent" with', pystring
   And  'I press "Add to repository"'
