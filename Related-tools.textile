@@ -1,6 +1,7 @@
 It's always a good sign for a tool when other people huddle around and write tools on top. These are the known 3rd party tools that work together with Cucumber:
 
 ||Tool||Description||
+|"AutoTest":|Run Cucumber features in the background with Cucumber's built-in [[Autotest Integration]]|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting and other useful commands for "TextMate":http://macromates.com/.|
 |"Cucumber Growler":http://github.com/paolodona/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber.|
@@ -16,6 +17,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Pickler":http://github.com/tpope/pickler/tree/master|Synchronize user stories in "Pivotal Tracker":http://www.pivotaltracker.com/ with Cucumber features.|
 |"RCumber":http://github.com/jgoodsen/rcumber/wikis|Edit and run Cucumber tests directly in your Rails application. Click results and get taken to TextMate.|
 |"Remote Feature":http://github.com/mhennemeyer/remote_feature|Run Cucumber Features that are defined in "Writeboard":http://www.writeboard.com/.|
+|"RSpec":http://rspec.info|Use RSpec's <code>Object.should</code> and <code>Object.should_not</code> to compare values in your step definitions|
 |"Testjour":http://github.com/brynary/testjour|Distributed test running with autodiscovery via Bonjour (for Cucumber first).|
 |"Vim-Cucumber":http://github.com/tpope/vim-cucumber/tree/master|Feature syntax highlighting for "Vim":http://www.vim.org/.|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
