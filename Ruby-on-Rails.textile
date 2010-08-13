@@ -3,26 +3,36 @@ in the step definitions. Here is how to get you started.
 
 h2. Install Cucumber, Webrat and RSpec
 
-As of release 1.1.5, rspec-rails is now released as a gem.
-<pre><code>[sudo] gem install rspec
-[sudo] gem install rspec-rails
+You can use both Rubygems or Rails' plugin mechanism. We usually recommend Rubygems. You can read a longer discussion "here":http://www.ruby-forum.com/topic/167379
+
+h3. Using Rubygems
+The easiest is to install everything as a gem.
+<pre><code>[sudo] gem install rspec rspec-rails cucumber webrat
 </code></pre>
 
-If you use Git for your Rails app, add the following plugins:
+If you use gems, you have to make sure everybody on the team has the same version of the gems installed.
+
+h3. Using plugins
+Another option is to install the libraries as Rails plugins. If you use Git for your Rails app, here is how to do that:
 
 <pre><code>git submodule add git://github.com/aslakhellesoy/cucumber.git vendor/plugins/cucumber
 git submodule add git://github.com/brynary/webrat.git vendor/plugins/webrat
+git submodule add git://github.com/dchelimsky/rspec.git vendor/plugins/rspec
+git submodule add git://github.com/dchelimsky/rspec-rails.git vendor/plugins/rspec-rails
 </code></pre>
-
-[Apparently, the latest thinking is to install webrat and cucumber as gems, not plugins. See http://www.ruby-forum.com/topic/167379. ]
 
 If your own Rails code is *not* in Git, just replace <code>submodule add</code> with <code>clone</code>.
 If you're behind a proxy, try to replace <code>git://</code> with <code>http://</code> and set the <code>http_proxy</code> environment variable.
+
+h3. Behind a firewall?
+
 As a last resort, download tarballs from GitHub.
 
 h2. Install Other dependencies
 
-<pre><code>gem install term-ansicolor treetop diff-lcs hpricot nokogiri </code></pre>
+<pre><code>gem install term-ansicolor treetop diff-lcs hpricot</code></pre>
+
+You can also use "Nokogiri":http://nokogiri.rubyforge.org instead of "Hpricot":http://code.whytheluckystiff.net/hpricot/
 
 h2. Create Your Rails Project
 
@@ -71,7 +81,6 @@ Now it's time to write some code, or generate some. Try this:
 rake db:migrate
 rake features
 </code></pre>
-
 
 See [[Running Features]] for more info.
 
