@@ -12,7 +12,7 @@ h2. Syntax Notes
 
 The following notes are an unofficial (and possibly inaccurate) summary of Gherkin syntax.  YMMV...
 
-h3. General<p>
+h3. General
 
 Like Python and YAML, Gherkin uses indentation to define structure.
 Either spaces or tabs may be used for indentation (but spaces are more portable).
@@ -53,6 +53,6 @@ Comment lines are allowed anywhere in the file.
 They begin with zero or more spaces, followed by a sharp sign (#)
 and some amount of text.
 
-Lines of descriptive text may follow a <tt>Feature:<tt> line.
+Lines of descriptive text may follow a <tt>Feature:</tt> line.
 These must be indented and are not parsed.
-The descriptive text may be followed by a <tt>Scenario:<tt> line or a blank line.
+The descriptive text may be followed by a <tt>Scenario:</tt> line or a blank line.
