@@ -1,27 +1,11 @@
-h2. Step 1: Install the Watir gem
+h2. Step 1: Install the FireWatir gem
 
-<pre><code>gem install watir </code></pre>
+<pre><code>gem install firewatir </code></pre>
 
 h2. Step 2: Install jssh.xpi
 
 Install the "jssh.xpi":http://wiki.openqa.org/display/WTR/FireWatir+Installation relating to your OS and Firefox version:
 
-h2. Step 3: Start Firefox with the jssh switch
-
-This is a one off. 
-
-From the command line goto your Mozilla Firefox installation folder and type:
-
-<pre><code>firefox -jssh </code></pre>
-
-h2. Step 4: Test your connection
-
-From the command line type:
-
-<pre><code>telnet localhost 9997</code></pre>
-
-This should return 'Welcome to the Mozilla JavaScript Shell!'
-
-h2. Step 5: Download and run the tests
+h2. Step 3: Download and run the tests
 
 "from here":http://code.google.com/p/cucumber-and-watir/
