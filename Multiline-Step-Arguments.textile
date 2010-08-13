@@ -82,10 +82,10 @@ delimited tokens will be substituted with values from the example tables. For ex
     You have been granted <Role> rights.  You are <details>. Please be responsible.
     -The Admins
     """
-Examples:
-  |  Role     | details                                         |
-  |  Manager  | now able to manage your employee accounts       |
-  |  Admin    | able to manage any user account on the system   |
+  Examples:
+    |  Role     | details                                         |
+    |  Manager  | now able to manage your employee accounts       |
+    |  Admin    | able to manage any user account on the system   |
 </code></pre>
 
 Or with tables:
@@ -94,10 +94,10 @@ Or with tables:
   Given I have the numbers
     | q1   | q2 | product |
     | <x>  |  7 | <y>     |
-Examples:
-  |  x |  y |
-  |  2 | 14 |
-  | 10 | 70 |
+  Examples:
+    |  x |  y |
+    |  2 | 14 |
+    | 10 | 70 |
 </code></pre>
 
 h2. Using regular arguments and multiline arguments
