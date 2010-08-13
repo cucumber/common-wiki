@@ -17,6 +17,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"CucumberTFS":http://github.com/mscottford/cucumbertfs|Converts Team Foundation Server (TFS) scenarios into cucumber scenarios in a single feature file.|
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting and other useful commands for "TextMate":http://macromates.com/.|
 |"Cuke4Nuke":http://github.com/richardlawrence/Cuke4Nuke|Support for writing Cucumber step definitions in .NET.|
+|"Cuke4Lua":http://github.com/dgfitch/Cuke4Lua|Wire protocol implementation for "Lua":http://www.lua.org/|
 |"cuke4vs":http://github.com/henritersteeg/cuke4vs|Syntax highlighting, intellisense and other editing support for feature files in Visual Studio 2008.|
 |"Culerity":http://github.com/langalex/culerity/tree/master| Integrates Cucumber and Celerity to test Javascript in webapps.|
 |"DatabaseCleaner":http://github.com/bmabey/database_cleaner/tree/master|Different strategies for keeping your DB clean to ensure a clean state.  Has Cucumber support out of the box.|
