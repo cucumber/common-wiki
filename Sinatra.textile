@@ -1,0 +1,16 @@
+You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Webrat":http://www.brynary.com/uploads/webrat/rdoc/index.html
+
+(For the time being you must use aslakhellesoy's clones of "sinatra":http://github.com/aslakhellesoy/sinatra and "webrat":http://github.com/aslakhellesoy/webrat - hopefully my small changes will be incorporated into the official Git repositories).
+
+Just make sure you have a features/steps/env.rb file with the following:
+
+<pre><code>
+require 'spec'
+require 'webrat/sinatra/sinatra_session'
+require 'sinatra/test/common'
+require File.dirname(__FILE__) + '/../../your_sinatra_app'
+
+World do
+  Webrat::SinatraSession.new
+end
+</code></pre>
