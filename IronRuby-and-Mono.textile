@@ -2,7 +2,7 @@ Cucumber loves Mono.
 
 h2. Install Mono
 
-Just "grab":http://www.go-mono.com/mono-downloads/download.html Mono 2.2 or higher.
+Just "grab":http://www.go-mono.com/mono-downloads/download.html Mono 2.4 or higher.
 
 h2. Install IronRuby
 
