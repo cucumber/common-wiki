@@ -11,7 +11,7 @@ The easiest is to install everything as a gem.
 <pre><code>[sudo] gem install rspec rspec-rails cucumber webrat
 </code></pre>
 
-*important:* Cucumber 0.1.12 and up depends on Webrat 0.3.2.1, which as of this writing is not yet released as a gem. Install Webrat as a plugin until the gem is updated or grab Webrat's source code and build the gem yourself. Make sure you install Nokogiri as well as this is a Webrat dependency. 
+*important:* Cucumber 0.1.12 and up depends on changes that were made to Webrat 0.3.2.1, which as of this writing is not yet released as a gem. Install Webrat as a plugin until the gem is updated or grab Webrat's source code and build the gem yourself. Make sure you install Nokogiri as well as this is a Webrat dependency. 
 
 <pre><code>script/plugin install git://github.com/brynary/webrat.git
 </code></pre>
