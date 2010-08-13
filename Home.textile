@@ -194,7 +194,7 @@ being assumed into RSpec proper, or remaining a separate tool like now.
 
 The term "Feature" has been adopted in favour of "Story" because I believe it is a more 
 appropriate term. A feature's scenarios typically grow over time - fed by several user
-stories.
+stories. Or as David puts it: "Stories are the input to your development process - the features are the output".
 
 The name Cucumber means absolutely nothing, it was suggested by my girlfriend who was eating a cucumber sandwich
 while I started to write it.
