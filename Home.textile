@@ -87,7 +87,7 @@ until you end up with one of the following business values:
 * Protect revenue
 * Increase revenue
 * Manage cost
-* Increase brand name value
+* Increase brand value
 * Making the product remarkable
 * Providing more value to your customers
 
