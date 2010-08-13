@@ -6,7 +6,7 @@ Missing _a_s in the output? Do your _æ_s, _ø_s and _å_s looke like garbled "C
 
 First - add <code>require 'cucumber/formatters/unicode'</code> to your <code>env.rb</code> file. 
 
-Second - set your command window's font to a font that has the characters you're outputting - for example <code>Upper Left corner icon menu -> Properties -> Font -> Lucida Grande</code>
+Second - set your command window's font to a font that has the characters you're outputting - for example _Upper Left corner icon menu -> Properties -> Font -> Lucida Grande_.
 
 Third - in your command prompt, change the codepage:
 
