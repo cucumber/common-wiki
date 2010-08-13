@@ -1,5 +1,3 @@
-*{color:red}IMPORTANT! These guidelines are for Cucumber v0.2.*
-
 The public API for Cucumber's formatters is defined by all the methods in the <code>Cucumber::Ast::Visitor</code> class, which you should use as your base class.
 
 If you want to write your own custom formatter, just subclass <code>Cucumber::Ast::Visitor</code>. Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers).
