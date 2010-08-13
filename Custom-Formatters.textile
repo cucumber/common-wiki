@@ -85,4 +85,4 @@ p. This means that you have to add your <code>support</code> folder to <code>--r
 h2. Other Formatters
 
 # "TeamCityFormatter:":http://github.com/mattwynne/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
-# "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript for Textmate
+# "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript for Textmate (Included in the cucumber core since 0.4.5)
