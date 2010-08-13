@@ -1,0 +1,20 @@
+Cucumber provides a number of hooks which allow us to run blocks at various points in the Cucumber test cycle. There is no association between where the hook is defined and which scenario/step it is run for. All hooks defined are run whenever the relevant event occurs. For example all Before hooks defined throughout the required code will be run for each scenario.
+
+h2. Scenario hooks
+
+<pre><code>Before do
+  #do something before each scenario.
+end
+</pre></code>
+
+<pre><code>After do
+  #do something after each scenario
+end
+</pre></code>
+
+h2. Step hooks
+
+<pre><code>AfterStep do
+  #do something after each step
+end
+</pre></code>
