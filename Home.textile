@@ -124,10 +124,10 @@ Here is an example taken from an IRC chat session in "#cucumber":irc://irc.freen
                          in the application (?)
 [5:09pm] Luis_Byclosure: why do I want to be recognized among other people?
 [5:11pm] aslakhellesoy:  Why do people have to log in?
-[5:12pm] Luis_Byclosure: aslakhellesoy: I dunno... why? 
+[5:12pm] Luis_Byclosure: I dunno... why? 
 [5:12pm] aslakhellesoy:  I'm asking you
 [5:13pm] aslakhellesoy:  Why have you decided login is needed?
-[5:13pm] Luis_Byclosure: aslakhellesoy: identify users
+[5:13pm] Luis_Byclosure: identify users
 [5:14pm] aslakhellesoy:  Why do you have to identify users?
 [5:14pm] Luis_Byclosure: maybe because people like to know who is 
                          publishing what
