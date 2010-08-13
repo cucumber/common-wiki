@@ -35,10 +35,9 @@ Scenario: View last incidents
   When I go to the incident page
 </pre>
 
-h2. Calling steps with tables and strings (multiline arguments)
+h2. Calling steps with multiline step arguments (tables and strings)
 
-Sometimes you want to call a step that has been designed to take a table or multiline string as input:
-(See [[Using tabular data in features]] for details about tables).
+Sometimes you want to call a step that has been designed to take [[Multiline Step Arguments]], for example:
 
 <pre>
 # ruby
