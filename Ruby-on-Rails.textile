@@ -128,9 +128,21 @@ html: --format html --out features.html</code></pre>
 
 Remember that you need AUTOFEATURE=true for autospec to include cucumber features.  See [[Running Features]] and [[Autotest Integration]] for more info.
 
-h2. View spec redundancy
+h2. Special tags
 
-Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree of redundancy with view specs. I recommend you delete generated view specs if you run into too much maintenance headaches and rely on the features instead of view specs. However, in some cases it can be handy to use both.
+There are two special [[tags]] you can use to change how Cucumber runs your scenarios
+
+h3. @no-txn
+
+Scenarios tagged with <code>@no-txn</code> will run without a transaction. Beware that this will leave data in your database after that scenario, which can lead to hard-to-debug failures in subsequent scenarios. If you use this, we recommend you create a Before block that will explicitly put your database in a known state, for example using "DatabaseCleaner":http://github.com/bmabey/database_cleaner
+
+h3. @allow-rescue
+
+Scenarios tagged with <code>@allow-rescue</code> will cause Rails to rescue all errors and render error pages, more or less in the same way your application would behave in the default production environment. It's not recommended to do this for all of your scenarios, as this makes it hard to discover errors in your application.
+
+h2. Controller and View spec redundancy
+
+Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree of redundancy with controller and view specs. I recommend you delete generated controller and view specs if you run into too much maintenance headaches and rely on the features instead. However, in some cases it can be handy to use them.
 
 h2. Authentication
 
@@ -155,20 +167,4 @@ In the .feature, use a phrase similar to <code>Given a user is logged in as "mar
   click_button("Log in")
   response.body.should =~ /Logged/m  
 end
-</code></pre>
-
-h2. Upgrading to Cucumber 0.2 from Earlier Versions
-
-From the release notes:
-
-<pre><code>
-IMPORTANT NOTE FOR RAILS USERS.
-The template used to generate your features/support/env.rb has changed. You have to apply a minor change
-manually for existing Rails projects when you upgrade to this version. Change this:
-
-  require 'webrat/rspec-rails'
-
-to this:
-
-  require 'webrat/core/matchers'
 </code></pre>
