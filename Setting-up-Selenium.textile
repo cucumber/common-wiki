@@ -49,13 +49,15 @@ h2. Useful links
 
 "Selenium gem at rubyforge":http://selenium.rubyforge.org/
 
-h2. Setting up Cucumber with a profile for plain HTML and a profile for Selenium
+h2. Cucumber / Selenium / Webrat
 
 Many apps have features that don't require javascript to work, and running them all in selenium makes things slow.  Since webrat steps support selenium out of the box, you can reuse almost all of your standard step definitions for selenium as well.  Here's a recipe for how you can:
 
 * Run your non-selenium features with transactional fixtures and standard webrat steps
 * Run your entire suite (html and javascript) features with selenium, without transactional fixtures
 * Reuse all (or almost all) or your step definitions between selenium and non-selenium runners
+
+*NOTE* - when using this setup, you do _not_ need to start selenium manually.  Webrat will spawn a new selenium process and a mongrel process for you.
 
 First, setup a directory structure like the following:
 
