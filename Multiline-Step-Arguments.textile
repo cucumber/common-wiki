@@ -97,7 +97,6 @@ Let's consider a more complex example where you have a HTML table with an "Actio
 <pre>
 <form method="post" action="/invoices/10/approve" class="button-to"><div><input id="approve_invoice_10" type="submit" value="Approve" /><input name="authenticity_token" type="hidden" value="WxKGVy3Y5zcvFEiFe66D/odoc3CicfMdAup4vzQfiZ0=" /></div></form>
 <form method="post" action="/invoices/10/delegate" class="button-to"><div><input id="delegate_invoice_10" type="submit" value="Delegate" /><input name="authenticity_token" type="hidden" value="WxKGVy3Y5zcvFEiFe66D/odoc3CicfMdAup4vzQfiZ0=" /></div></form>
-        </td>
 </pre>
 
 If you only want to look at the button texts and compare with a plain text table like this:
