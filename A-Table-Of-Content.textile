@@ -1,89 +1,89 @@
 h2. Cucumber
 
 # "Home":http://wiki.github.com/aslakhellesoy/cucumber
-# "Feature Introduction":http://wiki.github.com/aslakhellesoy/cucumber/feature-introduction
-# "Given-When-Then":http://wiki.github.com/aslakhellesoy/cucumber/given-when-then
+# "Feature Introduction":feature-introduction
+# "Given-When-Then":given-when-then
 
 
 h2. Download
 
 h2. Installation
 
-# "Install":http://wiki.github.com/aslakhellesoy/cucumber/install
+# "Install":install
 
 
 h2. Troubleshooting
 
-# "Troubleshooting":http://wiki.github.com/aslakhellesoy/cucumber/troubleshooting
+# "Troubleshooting":troubleshooting
 
 
 h2. Documentation
 
 # "Background":background
-# "A Whole New World":http://wiki.github.com/aslakhellesoy/cucumber/a-whole-new-world
-# "Calling Steps from Step Definitions":http://wiki.github.com/aslakhellesoy/cucumber/calling-steps-from-step-definitions
-# "Conjunction Steps (Antipattern)":http://wiki.github.com/aslakhellesoy/cucumber/conjunction-steps-antipattern
-# "Console Colours":http://wiki.github.com/aslakhellesoy/cucumber/console-colours
-# "Cucumber Backgrounder":http://wiki.github.com/aslakhellesoy/cucumber/cucumber-backgrounder
-# "Cucumber Feature":http://wiki.github.com/aslakhellesoy/cucumber/cucumber-feature
-# "cucumber.yml":http://wiki.github.com/aslakhellesoy/cucumber/cucumberyml
-# "Custom Formatters":http://wiki.github.com/aslakhellesoy/cucumber/custom-formatters
-# "Feature-Coupled Steps (Antipattern)":http://wiki.github.com/aslakhellesoy/cucumber/feature-coupled-steps-antipattern
-# "Fixtures":http://wiki.github.com/aslakhellesoy/cucumber/fixtures
-# "Gherkin":http://wiki.github.com/aslakhellesoy/cucumber/gherkin
-# "Multiline Step Arguments":http://wiki.github.com/aslakhellesoy/cucumber/multiline-step-arguments
-# "Profiles":http://wiki.github.com/aslakhellesoy/cucumber/profiles
-# "Running Features":http://wiki.github.com/aslakhellesoy/cucumber/running-features
-# "Scenario outlines":http://wiki.github.com/aslakhellesoy/cucumber/scenario-outlines
-# "Search":http://wiki.github.com/aslakhellesoy/cucumber/search
-# "Step Definitions":http://wiki.github.com/aslakhellesoy/cucumber/step-definitions
-# "Step Organisation":http://wiki.github.com/aslakhellesoy/cucumber/step-organisation
-# "Tags":http://wiki.github.com/aslakhellesoy/cucumber/tags
+# "A Whole New World":a-whole-new-world
+# "Calling Steps from Step Definitions":calling-steps-from-step-definitions
+# "Conjunction Steps (Antipattern)":conjunction-steps-antipattern
+# "Console Colours":console-colours
+# "Cucumber Backgrounder":cucumber-backgrounder
+# "Cucumber Feature":cucumber-feature
+# "cucumber.yml":cucumberyml
+# "Custom Formatters":custom-formatters
+# "Feature-Coupled Steps (Antipattern)":feature-coupled-steps-antipattern
+# "Fixtures":fixtures
+# "Gherkin":gherkin
+# "Multiline Step Arguments":multiline-step-arguments
+# "Profiles":profiles
+# "Running Features":running-features
+# "Scenario outlines":scenario-outlines
+# "Search":search
+# "Step Definitions":step-definitions
+# "Step Organisation":step-organisation
+# "Tags":tags
 
 h2. Examples and code Snippets
 
-# "Examples":http://wiki.github.com/aslakhellesoy/cucumber/examples
+# "Examples":examples
 
 
 h2. Integrating cukes with other tools
 
-# "Related tools":http://wiki.github.com/aslakhellesoy/cucumber/related-tools
-# "RDoc":http://wiki.github.com/aslakhellesoy/cucumber/rdoc
-# "RSpec Expectations":http://wiki.github.com/aslakhellesoy/cucumber/rspec-expectations
-# "Autotest Integration":http://wiki.github.com/aslakhellesoy/cucumber/autotest-integration
-# "FunFX and Flex":http://wiki.github.com/aslakhellesoy/cucumber/funfx-and-flex
-# "IronRuby and .NET":http://wiki.github.com/aslakhellesoy/cucumber/ironruby-and-net
-# "IronRuby and Mono":http://wiki.github.com/aslakhellesoy/cucumber/ironruby-and-mono
-# "JRuby and Java":http://wiki.github.com/aslakhellesoy/cucumber/jruby-and-java
-# "Maven cucumber-maven-plugin":http://wiki.github.com/aslakhellesoy/cucumber/maven-cucumber-maven-plugin
-# "Merb":http://wiki.github.com/aslakhellesoy/cucumber/merb
-# "Migration From RSpec Stories":http://wiki.github.com/aslakhellesoy/cucumber/migration-from-rspec-stories
-# "Mocking and Stubbing with Cucumber":http://wiki.github.com/aslakhellesoy/cucumber/mocking-and-stubbing-with-cucumber
-# "Ruby on Rails":http://wiki.github.com/aslakhellesoy/cucumber/ruby-on-rails
-# "Using MiniTest":http://wiki.github.com/aslakhellesoy/cucumber/using-minitest
-# "Using Rake":http://wiki.github.com/aslakhellesoy/cucumber/using-rake
-# "Using RCov with Cucumber and Rails":http://wiki.github.com/aslakhellesoy/cucumber/using-rcov-with-cucumber-and-rails
-# "Using Test::Unit":http://wiki.github.com/aslakhellesoy/cucumber/using-testunit
-# "Setting up FireWatir":http://wiki.github.com/aslakhellesoy/cucumber/setting-up-firewatir
-# "Setting up Selenium":http://wiki.github.com/aslakhellesoy/cucumber/setting-up-selenium
-# "Sinatra":http://wiki.github.com/aslakhellesoy/cucumber/sinatra
-# "Spoken languages":http://wiki.github.com/aslakhellesoy/cucumber/spoken-languages
-# "Spork and --drb":http://wiki.github.com/aslakhellesoy/cucumber/spork-and-drb
-# "watircuke":http://wiki.github.com/aslakhellesoy/cucumber/watircuke
-# "Hooks":http://wiki.github.com/aslakhellesoy/cucumber/hooks
-# "Projects Using Cucumber":http://wiki.github.com/aslakhellesoy/cucumber/projects-using-cucumber
-# "Ajax and Cucumber":http://wiki.github.com/aslakhellesoy/cucumber/ajax-and-cucumber
+# "Related tools":related-tools
+# "RDoc":rdoc
+# "RSpec Expectations":rspec-expectations
+# "Autotest Integration":autotest-integration
+# "FunFX and Flex":funfx-and-flex
+# "IronRuby and .NET":ironruby-and-net
+# "IronRuby and Mono":ironruby-and-mono
+# "JRuby and Java":jruby-and-java
+# "Maven cucumber-maven-plugin":maven-cucumber-maven-plugin
+# "Merb":merb
+# "Migration From RSpec Stories":migration-from-rspec-stories
+# "Mocking and Stubbing with Cucumber":mocking-and-stubbing-with-cucumber
+# "Ruby on Rails":ruby-on-rails
+# "Using MiniTest":using-minitest
+# "Using Rake":using-rake
+# "Using RCov with Cucumber and Rails":using-rcov-with-cucumber-and-rails
+# "Using Test::Unit":using-testunit
+# "Setting up FireWatir":setting-up-firewatir
+# "Setting up Selenium":setting-up-selenium
+# "Sinatra":sinatra
+# "Spoken languages":spoken-languages
+# "Spork and --drb":spork-and-drb
+# "watircuke":watircuke
+# "Hooks":hooks
+# "Projects Using Cucumber":projects-using-cucumber
+# "Ajax and Cucumber":ajax-and-cucumber
 
 
 h2. Contributing
 
-# "Contributing":http://wiki.github.com/aslakhellesoy/cucumber/contributing
-# "Get in touch":http://wiki.github.com/aslakhellesoy/cucumber/get-in-touch
+# "Contributing":contributing
+# "Get in touch":get-in-touch
 
 
 h2. Other Links
 
-# "Tutorials and Related Blog Posts":http://wiki.github.com/aslakhellesoy/cucumber/tutorials-and-related-blog-posts
+# "Tutorials and Related Blog Posts":tutorials-and-related-blog-posts
 
 
 todo: need to sort these list items and indent based on related contents
