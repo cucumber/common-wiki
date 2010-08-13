@@ -1,6 +1,6 @@
 This page documents the details of the low-level \wire protocol that Cucumber uses to list and invoke steps in a remote process.
 
-This protocol is in flux. Please see "wire protocol":https://rspec.lighthouseapp.com/projects/16211/tickets/428-wire-protocol for discussions around this emerging protocol.
+*{color:red}This protocol is in flux. Please see "wire protocol":https://rspec.lighthouseapp.com/projects/16211/tickets/428-wire-protocol for discussions around this emerging protocol.*
 
 h2. List Step Definitions
 
