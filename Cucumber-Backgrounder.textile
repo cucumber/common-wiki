@@ -1,0 +1,36 @@
+h2. Or: How I Learned to Stop Worrying and Love Testing
+
+h3. Introduction
+
+This discussion deals principally with the initial set up and use of cucumber features in a Ruby on Rails (RoR) Project.  Discussion of Behaviour Driven (BDD), Test Driven (TDD), and Panic Driven Development (SNAFU) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].
+
+h3. Where to Start?
+
+Given that you have installed the gem called "Cucumber"
+  And you have generated a RoR project called "MyProject"
+  And your session's working directory is called "MyProject"
+
+When you run "script/generate cucumber"
+
+Then you will create a sub-directory called "features"
+
+The forgoing is written in the style of the feature statements that make up the user interface to cucumber testing.  We will return to that topic later for for the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
+
+An archetypal RoR project directory tree looks like this:
+
+<pre> <code>
+MyProject
+|-- README
+|-- Rakefile
+|-- app
+|-- config
+|-- db
+|-- doc
+|-- lib
+|-- log
+|-- public
+|-- script
+|-- test
+|-- tmp
+`-- vendor
+</code></pre>
