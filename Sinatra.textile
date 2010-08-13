@@ -4,9 +4,11 @@ You can use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra and "Web
 
 Just make sure you have a <code>features/support/env.rb</code> file with the following:
 
-<pre><code># NOTE: This must come before the require 'webrat', otherwise 
-# sinatra will look in the wrong place for its views.
-require File.dirname(__FILE__) + '/../../your_sinatra_app'
+<pre><code># Sinatra
+app_file = File.join(File.dirname(__FILE__), *%w[.. .. app.rb])
+require app_file
+# Force the application name because polyglot breaks the auto-detection logic.
+Sinatra::Application.app_file = app_file
 
 # RSpec matchers
 require 'spec/expectations'
