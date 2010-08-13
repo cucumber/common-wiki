@@ -30,6 +30,10 @@ steps to be white instead of green. Examples:
 export CUCUMBER_COLORS="passed=white,bold:passed_param=white,bold,underline"
 </pre>
 
+Aslak likes to highlight all parameters in magenta, so he uses this:
+
+<pre>export CUCUMBER_COLORS=pending_param=magenta:failed_param=magenta:passed_param=magenta:skipped_param=magenta</pre>
+
 (If you're on Windows, use <code>SET</code> instead of <code>export</code>).
 To see what colours and effects are available, just run this in your shell:
 
