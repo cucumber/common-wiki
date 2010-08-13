@@ -34,7 +34,7 @@ Cause and solution to this problem is exactly the same as with not being able to
 
 h2. gems/rspec-x/lib/spec/runner/options.rb:190:in `parse_format': When using several --format options only one of them can be without a file (RuntimeError)
 
-If you are seeing the above error when trying to run your features it means you are inadvertently requiring RSpec ('spec') somewhere in your Cucumber environment.  This issues arrises from RSpec automatically parsing the command line arguments. The only RSpec file your Cucumber env.rb should be requiring is 'spec/expectations' (the should methods and matchers).  If you are not requiring 'spec' directly in your env.rb then another file is requiring spec.  Some common culprits:
+If you are seeing the above error when trying to run your features it means you are inadvertently requiring RSpec ('spec') somewhere in your Cucumber environment.  This issues arises from RSpec automatically parsing the command line arguments. The only RSpec file your Cucumber env.rb should be requiring is 'spec/expectations' (the should methods and matchers). If you usually run your features with the cucumber command line, this can show up, somewhat confusingly, only when running your features with autospec. If you are not requiring 'spec' directly in your env.rb then another file is requiring spec. Some common culprits:
 
 * *require 'webrat/rspec-rails'*  This is meant for using webrat with RSpec only, and not Cucumber.  So, you don't need to require this file. If you are wanting to use RSpec and Webrat with Cucumber (in rails) you just need to have this in your env.rb:
 
