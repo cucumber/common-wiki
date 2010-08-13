@@ -16,6 +16,20 @@ Given /^(.*) is logged in$/ do |name|
 end
 </pre>
 
+As of version 0.4.4 you can also do this:
+
+<pre>
+Given /^(.*) is logged in$/ do |name|
+  # Look ma, no quotes!
+  # Easier to do "extract steps from plain text" refactorings with cut and paste!
+  steps %Q{
+    Given the user #{name} exists
+    Given I log in as #{name}
+  }
+end
+</pre>
+
+
 This is practical if you have several common steps that you want to perform in several scenarios. This allows you to do this in a Scenario:
 
 <pre>
