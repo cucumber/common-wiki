@@ -94,7 +94,7 @@ This is when you start writing code. Start by writing a couple of lines of code 
 Run cucumber again. Repeat and rinse until you're happy with your feature. When you get down to nitty gritty details, drop
 down one abstraction level and use RSpec to write some specs for your classes. Write the specs first! If you follow this
 process you have a good guard against brittle, unmaintainable, undocumented code that nobody understands. 
-(Yes, stories and specs are *documentation* too).
+(Yes, features and specs are *documentation* too).
 
 If you think this sounds annoying, try it out anyway. You'll end up writing better, lesser coupled (and less) code this way. Trust me.
 Work outside-in (the outside being the feature, the inside being the low level code). Do it the "BDD":http://en.wikipedia.org/wiki/Behavior_driven_development way.
