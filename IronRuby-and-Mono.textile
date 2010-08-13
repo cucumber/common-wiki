@@ -4,7 +4,7 @@ h2. Install Mono
 
 Just "grab":http://www.go-mono.com/mono-downloads/download.html Mono 2.2 or higher.
 
-h2. Installing IronRuby
+h2. Install IronRuby
 
 Just stand in any directory and follow these steps:
 
@@ -19,4 +19,4 @@ rake compile mono=1
 
 You have IronRuby running on your Linux/OS X box.
 
-__To be continued__
+_To be continued_
