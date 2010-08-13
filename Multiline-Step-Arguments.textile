@@ -53,7 +53,7 @@ Then /^I should see the following cukes:$/ do |expected_cukes_table|
   actual_table = [
     ['Latin', 'English'],
     ['Cucumis sativus', 'Concombre'],
-    ['Cucumis anguria', 'Cohombro']
+    ['Cucumis anguria', 'Burr Gherkin']
   ]
   expected_cukes_table.diff!(actual_table)
 end
