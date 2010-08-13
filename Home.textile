@@ -12,7 +12,7 @@ Cucumber is a tool that can execute plain-text documents as automated functional
     Given there are 240 courses where neither has the topic "biology"
     And there are 3 courses A,B,C that each have "biology" as one of the topics
     When I search for "biology"
-    Then I should see a the following courses:
+    Then I should see the following courses:
       | title |
       | A     |
       | B     |
