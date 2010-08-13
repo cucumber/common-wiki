@@ -25,7 +25,7 @@ You can do this in bash if you are under a Unix system:
 
 <pre><code>
 cd stories
-for file in $(ls *.txt); do svn mv $file ../features/`echo $file | sed s/.txt/.feature/`; done;
+for file in $(ls *.txt); do [svn|git] mv $file ../features/`echo $file | sed s/.txt/.feature/`; done;
 </code></pre>
 Try to run the feature you moved:
 
