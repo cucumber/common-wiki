@@ -3,9 +3,10 @@ There are several tools that work together with Cucumber that are developed by o
 ||Tool||Description||
 |"Cucumber TM Bundle":http://github.com/bmabey/cucumber-tmbundle/tree/master|Feature syntax highlighting for Textmate and other useful commands.|
 |"Cucumber Growler":http://github.com/paolodona/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber|
-|"Cucumber Seeds":http://github.com/qrush/cucumber_seeds|Looking for example features and steps to get you started with Cucumber? Look no further! Check out some examples and compare your stories to others right here on GitHub. |
-|"RCumber":http://github.com/jgoodsen/rcumber/wikis|RCumber is a rails plugin that gives your customers a web interface where they can view, edit and run Cucumber tests directly on your rails project.  Useful for developing Cucumber/Webrat tests.  Clicking on test results takes you directly to that line in textmate.
 |"Merb Cucumber":http://github.com/david/merb_cucumber|"Merb":http://merbivore.com/ + Cucumber integration|
+|"Pickler":http://github.com/tpope/pickler/tree/master|Synchronize user stories in Pivotal Tracker with Cucumber features.|
+|"RCumber":http://github.com/jgoodsen/rcumber/wikis|RCumber is a rails plugin that gives your customers a web interface where they can view, edit and run Cucumber tests directly on your rails project.  Useful for developing Cucumber/Webrat tests.  Clicking on test results takes you directly to that line in textmate.|
+|"Testjour":http://github.com/brynary/testjour|Distributed test running with autodiscovery via Bonjour (for Cucumber first)|
 |"Vim-Cucumber":http://github.com/bmabey/vim-cucumber/tree/master|Feature syntax highlighting for Vim.|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
 |"Webrat TM Bundle":http://github.com/bmabey/webrat-tmbundle/tree/master| Collection of TextMate snippets for the webrat API.|
