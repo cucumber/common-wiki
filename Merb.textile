@@ -65,8 +65,7 @@ Here are some merb projects that use cucumber (feel free to add/update/delete th
 
 * "http://github.com/matthewford/comic-review/tree/master":http://github.com/matthewford/comic-review/tree/master
 * "http://github.com/teamon/merb-base/tree/master":http://github.com/teamon/merb-base/tree/master
-* "h
-ttp://github.com/mop/mini-blog/tree/master":http://github.com/mop/mini-blog/tree/master
+* "http://github.com/mop/mini-blog/tree/master":http://github.com/mop/mini-blog/tree/master
 * "http://github.com/jnicklas/merb_upload/tree/master":http://github.com/jnicklas/merb_upload/tree/master
 * "http://github.com/ngty/ty_cucumber_salad/tree/master":http://github.com/ngty/ty_cucumber_salad/tree/master
 * "http://github.com/teamon/aliquam/tree/master":http://github.com/teamon/aliquam/tree/master
