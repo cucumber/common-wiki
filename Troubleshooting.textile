@@ -14,6 +14,7 @@ Missing "a" characters in the output? Do your "æøå" characters print like gar
 
 <pre>chcp 1252</pre>
 
+If you want to do this permanently - "look here":http://codesnippets.joyent.com/posts/show/414.
 Now you should be able to get aæøå in your output on Windows.
 
 Note that "codepage 1252":http://en.wikipedia.org/wiki/Windows-1252 is not UTF-8 - it's essentially a superset of "ISO-8859-1":http://en.wikipedia.org/wiki/ISO/IEC_8859-1. Ideally you'd set it to 65001, which is UTF-8, but this has the "unfortunate side effect":http://www.google.no/search?q=chcp+65001+bat&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a of temporarily neutering all your computer's bat files so they cannot be executed (including cucumber.bat and rake.bat).
