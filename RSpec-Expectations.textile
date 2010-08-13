@@ -6,3 +6,5 @@ require 'spec/matchers'
 </pre>
 
 When cucumber sees the Spec::Matchers and Spec::Expectations modules defined, it will implicitly include them in the World in which the steps are executed.
+
+You can also just <code>require 'spec'</code>, but that loads up a bunch of rspec modules that you won't need.
