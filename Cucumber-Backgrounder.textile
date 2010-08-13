@@ -103,7 +103,7 @@ In this case the bland initial setup has been divided into sub-directories infor
 |       `-- env.rb
 </code></pre>
 
-It is well to be aware that, regardless of the directory structure chosen, cucumber effectively flattens the test directory when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  Consider, however, that the cucumber feature generator will place the files it produces in conformance with the default layout.
+Consider, however, that the cucumber feature generator will place the files it produces in conformance with the default layout.  It is well to be aware that, regardless of the directory structure chosen, cucumber effectively flattens the test directory when running tests.  By this I mean that anything ending in .rb under the start point for a cucumber feature run is searched for feature matches.  So that a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
 
 h3. How do I Write Tests?
 
@@ -197,3 +197,17 @@ And /some (.*) action/ do |a|
 And /some "(.*)" action/ do |a|
   a => required
 </code></pre>
+
+h3. What Way do I Run the Tests?
+
+Testing with cucumber can be performed in several fashions.  Be aware that <code>Rake features</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same tests.  
+
+Running <code>rake features</code> from the command line provides the easiest and most reliable method to run cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  
+
+Running cucumber from the command line requires the creation of a <code>cucumber.yml</code> file in the project root directory, even if that file remains empty.  When cucumber is run from the command line it is usually necessary to provide both the directory name containing the feature files and the directory name containing references to the necessary library files.  In the typical project <code>cucumber features -r features</code> will normally suffice.  
+
+Finally, running <code>autotest</code> with the environment variable <code>AUTOFEATURE=true</code> will run ALL tests, including those in <code>/test</code>.  It will also load all test fixtures and this may leave the database in an indefinite state when cucumber features begin to run.  It is wise therefore, to write cucumber steps so that they do not depend upon an empty database or themselves place the database in the requisite state.
+
+h3. Anything Else?
+
+For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest.  So, no popups when a test fails.
