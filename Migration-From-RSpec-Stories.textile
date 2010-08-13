@@ -99,3 +99,59 @@ Cucumber on the other hand will raise an error and tell you to fix the ambiguity
 
 In our project we encountered several of those. The recommended solution is to rename your steps and step definitions so 
 they are no longer ambiguous. If you use regexps for step definitions (instead of strings) you have better control over this.
+
+h2. Migrating your Story Listeners
+
+With the story runner StoryListeners were being used to function as setup and teardown mechanisms.  Cucumber has Before and After methods, similar to RSpec's example framework, for setup and teardown between scenarios.  All global setup can be done in the env.rb file, and for global teardown the at_exit hook can be used in the env.rb file as well.
+
+Here is a simple example of the conversion process.  Given this story listener:
+
+<pre><code>
+  class MyStoryListener
+    def run_started(number_of_scenarios)
+      # Global setup
+      ActionMailer::Base.delivery_method = :test
+      ActionMailer::Base.perform_deliveries = true
+    end
+    
+    def scenario_started(story, scenario)
+      # Scenario setup
+      ActionMailer::Base.deliveries.clear
+    end
+    
+    def scenario_succeeded(*args)
+      # Scenario teardown
+      Database.truncate_all
+    end
+    alias :scenario_pending :scenario_succeeded
+    alias :scenario_failed :scenario_failed
+    
+    def run_ended
+      # Global teardown
+      TempFileManager.clean_up
+    end
+  end
+  </code></pre>
+  
+  
+  The resulting Cucumber conversion would look like this (in your env.rb file):
+<pre><code>
+  # Global setup
+  ActionMailer::Base.delivery_method = :test
+  ActionMailer::Base.perform_deliveries = true
+  
+  Before do
+    # Scenario setup
+    ActionMailer::Base.deliveries.clear
+  end
+  
+  After do
+    # Scenario teardown
+    Database.truncate_all
+  end
+  
+  def at_exit
+    # Global teardown
+    TempFileManager.clean_up
+  end
+</code></pre>
