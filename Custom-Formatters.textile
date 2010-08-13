@@ -17,14 +17,14 @@ module Silly
       @failed = false
     end
 
+    def step_failed(step, regexp, args)
+      @failed = true
+    end
+
     def scenario_executed(scenario)
       status = @failed ? 'FAILED' : 'PASSED'
       message = "#{scenario.name} #{status}"
       Twitter::Base.new('your email', 'your password').post(message)
-    end
-
-    def step_failed(step, regexp, args)
-      @failed = true
     end
   end
 end
