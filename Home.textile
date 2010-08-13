@@ -54,80 +54,9 @@ for it:
 
 <pre><code>cucumber --help</code></pre>
 
-h2. Ruby on Rails
+h2. [[Ruby on Rails]]
 
-Cucumber Rails support built-in, and I really recommend using "Webrat":http://github.com/brynary/webrat
-in the step definitions. Here is how to get you started.
-
-h3. Install Cucumber, Webrat and RSpec
-
-<pre><code>git submodule add git://github.com/aslakhellesoy/cucumber.git vendor/plugins/cucumber
-git submodule add git://github.com/brynary/webrat.git vendor/plugins/webrat
-git submodule add git://github.com/dchelimsky/rspec.git vendor/plugins/rspec
-git submodule add git://github.com/dchelimsky/rspec-rails.git vendor/plugins/rspec-rails
-</code></pre>
-
-If your own Rails code is not in Git, just replace "submodule add" with "clone".
-If you're behind a proxy, try to replace git:// with http:// and set the http_proxy environment variable.
-As a last resort, download tarballs from GitHub.
-
-h3. Install Other dependencies
-
-<pre><code>gem install hpricot cucumber</code></pre>
-
-Yes, you did already install cucumber as a plugin, but this will install all the dependent libraries you need.
-
-h3. Bootstrap Cucumber
-
-You'll need a Rake task and a couple of files that configure Cucumber for use with Ruby on Rails and Webrat.
-You create these with:
-
-<pre><code>ruby script/generate cucumber</code></pre>
-
-Take a look at the generated files. If you need to, you can go and tweak them later.
-
-h3. Start a feature
-
-It's really, really recommended that you write your features by hand - in collaboration with your
-customer / business analyst / domain expert / interaction designer. However, to get you started (and so you can see how to use
-Webrat), you can use the feature generator to generate the first few features:
-
-<pre><code>ruby script/generate feature Frooble name color description</code></pre>
-
-This will generate a simple plain text feature with associated steps. Don't get addicted to this
-generator - you're better off writing these by hand in the long run. See the BDD tips section below.
-
-h3. Run features
-
-<pre><code>rake features</code></pre>
-
-This should result in failing scenarios, because you haven't written any code yet (I hope). Now you it's time
-to write some code, or generate some. Try this:
-
-<pre><code>script/generate rspec_scaffold Frooble name:string color:string description:text
-rake db:migrate
-rake features
-</code></pre>
-
-See [[Running Features]] for more info.
-
-h3. Tips
-
-These tips apply to Rails development in general...
-
-* Talk to models directly in *Given* steps to set up a known state. Don't use fixtures.
-* Use Webrat in *When* steps
-* Use *response.should have_tag(...)* (and models) in *Then* steps to verify the *outcomes* (which are on the screen, not only in the database).
-* Organise steps in files named accordingly to resources used
-* Avoid keeping state in @variables in steps. It will couple your steps and make them harder to reuse.
-
-h3. View spec redundancy
-
-Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree
-of redundancy with view specs. I recommend you delete generated view specs if you run into too much maintenance
-headaches and rely on the features instead of view specs. However, in some cases it can be handy to use both.
-
-h2. BDD
+h2. BDD with Cucumber
 
 If you have found a bug or want to add a feature, start by writing a new feature or scenario that describes the
 
