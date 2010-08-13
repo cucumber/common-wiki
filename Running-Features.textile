@@ -28,6 +28,8 @@ It is important to point out that by simply running 'cucumber' the default profi
 
 h2. Using Rake
 
+From the command line:
+
 <pre><code>rake features</code></pre>
 
 This requires a Rakefile with a Cucumber task definition. For example:
