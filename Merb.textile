@@ -3,7 +3,14 @@ Cucumber can be used with "Merb":http://merbivore.com/ via the "merb_cucumber":h
 To install merb_cucumber:
 
 *sudo gem install david-merb_cucumber*
+----------------------------------------------------------------
+Or you can install jsmestad-merb_cucumber  
+*sudo gem install jsmestad-merb_cucumber*
 
+Note – you must uninstall david-merb_cucumber in order for this gem to take precedence.
+
+Merb + Cucumber + Webrat testing stack. Builds upon David’s work, but binds Webrat as a dependency to hopefully ensure a smooth upgrade for future Webrat releases. Also Factory_Girl generators will be added soon.
+---------------------------------------------------------------
 
 Then inside of a merb application directory, try:
 
@@ -28,3 +35,4 @@ Here are some merb projects that use cucumber (feel free to add/update/delete th
 * "http://github.com/ngty/ty_cucumber_salad/tree/master":http://github.com/ngty/ty_cucumber_salad/tree/master
 * "http://github.com/teamon/aliquam/tree/master":http://github.com/teamon/aliquam/tree/master
 * cucumber in a merb slice: "http://github.com/balinterdi/philotes/tree/master":http://github.com/balinterdi/philotes/tree/master
+
