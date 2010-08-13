@@ -92,10 +92,10 @@ require 'cucumber/rails/rspec'
 
 In enhanced.rb, set up the selenium-specific files:
 
-<pre><code>require "webrat/selenium"
-World do
-  Webrat::Selenium::Rails::World.new
+<pre><code>Webrat.configure do |config|
+  config.mode = :selenium
 end
+
 
 Before do
   # truncate your tables here, since you can't use transactional fixtures
