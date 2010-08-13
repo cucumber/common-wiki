@@ -17,7 +17,7 @@ Then you will create a sub-directory called "features"
 
 The foregoing is written in the style of the feature statements that make up the user interface to cucumber testing.  We will return to that topic later.  For the moment we deal with the logical arrangement of cucumber files within the context of a RoR project.
 
-An archetypal RoR project directory tree looks like this:
+The root level of the archetypal RoR project directory tree looks like this:
 
 <pre><code>MyProject
 |-- README
