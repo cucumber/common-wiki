@@ -3,7 +3,7 @@ Here are a list of Cucumber related blog posts/tutorials.  Please keep in mind t
 Please add any helpful blog posts that you have found or written about all things Cucumber.
 
 |*Post*|*Description*|*Posting Date*|
-|"Cucumber is hot technology at developer event":http://tech.yahoo.com/news/infoworld/20090506/tc_infoworld/74447| Yahoo! Tech News interview with Aslak Hellesøy| May 06 2009 |
+|"Cucumber is hot technology at developer event":http://www.infoworld.com/d/developer-world/cucumber-hot-technology-developer-event-447| InfoWorld interview with Aslak Hellesøy| May 06 2009 |
 |"More on Cucumber":http://asciicasts.com/episodes/159-more-on-cucumber| How to use tables and tags. | May 03 2009|
 |"Using Cucumber to test Erlang Servers":http://blog.wolfman.com/articles/2009/5/2/using-cucumber-to-test-erlang-servers| Cucumber, JRuby, JInterface and more | May 2 2009 |
 |"Try adding Cucumber to Watir":http://www.rudyonrails.com/blog/?p=278|Cucumber+Watir tutorial | Apr 17 2009 |
