@@ -156,7 +156,7 @@ This is a hard discipline to accept but the value with this approach is that you
 
 If you do anticipate feature steps then omitting any matcher for them in the step definitions files causes these steps to be reported as missing by Cucumber, which helpfully provides a suggested method and argument to implement.  Stub step matchers have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/undefined step definitions.
 
-h3. What is are Features and Scenarios?
+h3. What are Features and Scenarios?
 
 A feature can be conceptualized as an indivisible unit of functionality embedded in the project to which it belongs.  For example, an authentication challenge and response user interface is usually considered a feature while an authentication system would comprise many features.   A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</strong></em>.
 
