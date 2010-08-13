@@ -24,6 +24,8 @@ Then inside of a merb application directory, try:
 
 *merb-gen feature FEATURE_NAME*
 
+edit your feature
+
 *rake features*
 
 Looking for Examples?
