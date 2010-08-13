@@ -1,9 +1,8 @@
 Communication within a team always works better when people can use their spoken language. Cucumber supports "about 20 spoken languages":../cucumber/tree/master/lib/cucumber/languages.yml. This is Norwegian:
 
 <pre><code>Egenskap: Summering
-  For å slippe å gjøre dumme feil
-  Som en regnskapsfører
-  Vil jeg kunne legge sammen
+  For å ungå at firmaet går konkurs
+  Må regnskapsførerere bruke en regnemaskin for å legge sammen
 
   Scenario: to tall
     Gitt at jeg har tastet inn 5
