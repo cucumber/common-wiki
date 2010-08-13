@@ -112,7 +112,7 @@ Consider, however, that the cucumber feature generator will generate the files i
 
 h3. How do I Write Tests?
 
-Constructing ones first tests, or features as BDD purists prefer, is often accompanied by what can only be described as <em>"writer's block":http://en.wikipedia.org/wiki/Writer%27s_block</em>.  While detailed discussion of feature writing and step construction are provided elsewhere ([[Given-When-Then]]), perhaps the easiest thing to do for the first time tester/behaviourist is to use cucumber's built-in generator to create a feature scaffold and then modify it.  
+Constructing ones first tests, or features as BDD purists prefer, is often accompanied by what can only be described as <em>"writer's block":http://en.wikipedia.org/wiki/Writer%27s_block</em>.  While detailed discussion of feature writing and step construction are provided elsewhere (see [[Given-When-Then]] and "Telling a Good Story":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html), perhaps the easiest thing to do for the first time tester/behaviourist is to use cucumber's built-in generator to create a feature scaffold and then modify it.  
 <pre><code>script/generate feature Frooble name color description
       exists  features/step_definitions
       create  features/manage_froobles.feature
