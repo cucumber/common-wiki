@@ -1,0 +1,9 @@
+Cucumber relies on 3rd party libraries for anything Javascript related, including AJAX. We recommend one of these to test Javascript functionality:
+
+* "Celerity":http://celerity.rubyforge.org/ / "Culerity":http://github.com/langalex/culerity
+* "Blue Ridge":http://github.com/relevance/blue-ridge
+* "WebDriver":http://code.google.com/p/webdriver/
+* "Watir":http://wtr.rubyforge.org/ or any of its "cousins":http://wtr.rubyforge.org/platforms.html for browsers other than IE.
+* "Selenium":http://seleniumhq.org/
+
+All of these have Ruby APIs (or Java APIs that you can use if you run Cucumber on JRuby), and all you need to do is use these APIs in your [[Step Definitions]].
