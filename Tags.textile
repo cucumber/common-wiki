@@ -24,8 +24,8 @@ cucumber --tags @billing            # Runs both scenarios
 cucumber --tags @important          # Runs the first scenario
 cucumber --tags ~@important         # Runs the second scenario (Scenarios without @important)
 
-cucumber --tags @billing --tags @important    # Runs both scenarios (Scenarios with @important OR @billing)
-cucumber --tags @billing,@important           # Runs the first scenario (Scenarios with @important AND @billing)
+cucumber --tags @billing --tags @important    # Runs the first scenario (Scenarios with @important AND @billing)
+cucumber --tags @billing,@important           # Runs both scenarios (Scenarios with @important OR @billing)
 </pre>
 
 (Another way to "filter" what you want to run is to use the <code>file.feature:line</code> pattern or the <code>--scenario</code> option as described in [[Running Features]]).
@@ -50,25 +50,27 @@ h2. Logically ANDing and ORing Tags
 
 As you may have seen in the previous examples Cucumber allows you to use logical ANDs and ORs to help gain greater control of what features to run.
 
-Tags which are comma separated are ANDed:
+Tags which are comma separated are ORed:
 
-Example:  Running scenarios which match both @important AND @billing
+Example:  Running scenarios which match @important OR @billing
 
 <pre><code>cucumber --tags @billing,@important</code></pre>
 
-Tags which are passed in separate --tags are ORed
+Tags which are passed in separate --tags are ANDed
 
-Example:  Running scenarios which match @important OR @billing
+Example:  Running scenarios which match @important AND @billing
 
 <pre><code>cucumber --tags @billing --tags @important</code></pre>
 
 You can combine these two methods to create powerful selection criterias:
 
-Example: Running scenarios which match: (@billing AND @WIP) OR @important
+Example: Running scenarios which match: (@billing OR @WIP) AND @important
 
 <pre><code>cucumber --tags @billing,@wip --tags @important</code></pre>
 
 You can use this tag logic in your [[Hooks]] as well. 
+
+_This feature was originally added in version 0.4.3. The logical behaviour of tags was later reversed in version 0.6.0._
 
 h2. Tag limits and WIP
 
