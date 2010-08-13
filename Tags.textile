@@ -24,7 +24,7 @@ cucumber --tags @billing            # Runs both scenarios
 cucumber --tags @important          # Runs the first scenario
 cucumber --tags ~@important         # Runs the second scenario (Scenarios without @important)
 
-cucumber --tags @billing --tags @important # Runs both scenarios (Scenarios with @important OR @billing)
+cucumber --tags @billing --tags @important    # Runs both scenarios (Scenarios with @important OR @billing)
 cucumber --tags @billing,@important           # Runs the first scenario (Scenarios with @important AND @billing)
 </pre>
 
