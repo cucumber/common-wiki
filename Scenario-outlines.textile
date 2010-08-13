@@ -1,0 +1,58 @@
+h2. Scenario Outlines
+
+In some situations Scenario tables from a Scenario can get a little verbose. For example when you want to:
+
+* Have a Scenario table value to appear in multiple places in your Scenario steps. 
+* Ignore some matches from the steps in the scenario table.
+
+Scenario outlines allow us to more concisely express these examples through the use of a template with placeholders. 
+
+Lets look at an example first:
+
+<pre><code>
+Feature: Cucumber stock keeping
+  In order to avoid interruption of cucumber consumption
+  As a citizen of Cucumbia
+  I want to know how many cucumbers I have left
+
+  Scenario Outline: eating
+    Given there are <start> cucumbers
+    When I eat <eat> cucumbers
+    Then I should have <left> cucumbers
+
+  Examples:
+    | start | eat | left |
+    |  12   |  5  |  7   |
+    |  20   |  5  |  15  |
+</pre></code>
+
+The Scenario outline steps provide a template which is never directly run. Only the Scenario table is ever run. 
+
+We refer to the Scenario table below a Scenario outline as 'Examples' rather than 'More Examples'. We do this as the table represents the whole of the test data rather than addition examples.  
+
+In the Scenario outline steps you can use placeholders. Placeholders must be contained in within '<' '>'. For example:
+
+<pre>
+Given <I'm a placeholder and I'm ok>
+</pre>
+
+The placeholders indicate that when the Examples row is run they should be substituted with real values from the Scenario table. If a placeholder name is the same as a column title in the Scenario table then this is the value that will replace it.
+
+IMPORTANT: Your steps will never have to match a placeholder. They will need to match the values that will replace the placeholder
+
+So when running the first row:
+
+<pre><code>
+  Examples:
+    | start | eat | left |
+    |  12   |  5  |  7   |
+</code></pre>
+
+The scenario that is actually run is:
+
+<pre><code>
+Scenario Outline: controlling order
+  Given there are 12 cucumbers      # <start> replaced with 12
+  When I eat 5 cucumbers            # <eat> replaced with 5
+  Then I should have 7 cucumbers    # <left> replaced with 7
+</code></pre>
