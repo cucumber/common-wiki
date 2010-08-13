@@ -1,4 +1,4 @@
-h1. Introduction !http://cukes.info/images/cucumber64x64!
+h1. Introduction !http://cukes.info/images/cucumber64x64.png!
 
 Also check out the "official web site":http://cukes.info/ for more marketing blurbs.
 
