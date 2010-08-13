@@ -70,7 +70,11 @@ Cucumber will print the difference:
 
 Missing rows and columns are printed in grey (same colour as comments), and surplus rows and columns are printed in yellow (same colour as undefined steps). When the two tables differ, the step will fail. You can modify this behaviour by passing an options Hash to the <code>diff!</code> method. See [[RDoc]] for details.
 
-The table argument to the <code>diff!</code> method can be another Table, an Array of Array or an Array of Hash (similar to the structure returned by #hashes).
+The table argument to the <code>diff!</code> method can be on of the following:
+
+* Another <code>CucumberAst::Table</code>
+* An <code>Array</code> containing <code>Array</code>s with <code>String</code>s
+* An <code>Array</code> containing <code>Hash</code>es with <code>String => String</code> (similar to the structure returned by #hashes).
 
 In most cases you have to construct that table yourself programmatically, but for convenience, Cucumber ships with a handy method for Webrat users that will turn a HTML table into an Array of Array. Example:
 
