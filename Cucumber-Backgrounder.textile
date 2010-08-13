@@ -294,7 +294,7 @@ default: <%= std_opts %> features
 .  .  .
 </pre>
 
-Note the trailing --tag option <code>--tags ~@wip</code>.  If you do not specify a different profile then the default profile will
+Note the trailing option <code>--tags ~@wip</code>.  If you do not specify a different profile then the default profile will
 be used.  If this is used then the <code>--tags ~@wip</code> will ignore any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
 
 <pre>
