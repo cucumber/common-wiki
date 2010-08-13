@@ -29,6 +29,7 @@ Cucumber itself is also written in Ruby, but it can be used to "test" code writt
 * Flex: Use "FunFX":http://github.com/peternic/funfx
 * Web apps in any language - use Cucumber with one of the following: 
 ** "Watir":http://wtr.rubyforge.org/ - Runs IE (Windows only)
+** "FireWatir":http://wtr.rubyforge.org/ - Drives Firefox on Windows, OSX and GNU\Linux
 ** "SafariWatir":http://safariwatir.rubyforge.org/ - Runs Safari (OS X only)
 ** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS)
 ** "Celerity":http://celerity.rubyforge.org/ - Runs a headless browser with Javascript support (requires JRuby)
