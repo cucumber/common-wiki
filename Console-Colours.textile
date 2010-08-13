@@ -1,8 +1,8 @@
 The console output for Cucumber has nice colours, for example:
 
 <notextile>
-<code><span style="color:green">Given I have</span> <span style="color:green;font-weight:bold">487</span> <span style="color:green">cucumbers in my belly</span> <span style="color:grey"># features/vegetable_features.feature:49</span>
-</code></notextile>
+<pre><span style="color:green">Given I have</span> <span style="color:green;font-weight:bold">487</span> <span style="color:green">cucumbers in my belly</span> <span style="color:grey"># features/vegetable_features.feature:49</span>
+</pre></notextile>
 
 From version 0.1.13 and up uou can tweak the colours by defining a <code>$CUCUMBER_COLORS</code> variable in your shell, very much like you can tweak the colours of the familiar POSIX command <code>ls</code> with
 "$LSCOLORS or $LS_COLORS":http://mipsisrisc.com/rambling/2008/06/27/lscolorsls_colors-now-with-linux-support/.
