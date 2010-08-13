@@ -65,3 +65,7 @@ end
 </pre>
 
 For example, if you use [[Ruby on Rails]], you will get an instance of <code>Cucumber::Rails::World</code>, which gives you access to a lot of Rails' helper methods for routes etc.
+
+h2. Related blog posts
+
+* "Building a better World":http://drnicwilliams.com/2009/04/15/cucumber-building-a-better-world-object/
