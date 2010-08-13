@@ -17,7 +17,8 @@ h3. General<p>
 h4. Comment Lines
 
 Comment lines are allowed anywhere in the file.
-They begin with zero or more spaces, followed by a sharp sign (#).
+They begin with zero or more spaces, followed by a sharp sign (#)
+and some amount of text.
 
 h4. Headings and Verbs
 
@@ -36,15 +37,16 @@ This note lists only the English reserved words;
 for corresponding words in other languages, see <tt>.../lib/cucumber/languages.yml</tt>.
 
 <pre>
+  examples:          Examples:
+  feature:           Feature:
+  more_examples:     More Examples:
+  scenario:          Scenario:
+  scenario_outline:  Scenario Outline:
+
   and:               And
   but:               But
-  examples:          Examples
-  feature:           Feature
   given:             Given
   given_scenario:    GivenScenario
-  more_examples:     More Examples
-  scenario:          Scenario
-  scenario_outline:  Scenario Outline
   then:              Then
   when:              When
 </pre>
