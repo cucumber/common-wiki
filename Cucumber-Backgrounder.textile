@@ -2,7 +2,7 @@ h2. Or: How I Learned to Stop Worrying and Love Testing
 
 h3. Introduction
 
-This discussion deals principally with the initial set up and use of cucumber features in a Ruby on Rails (RoR) Project.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development (BDD), "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU) can be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].
+This discussion deals principally with the initial set up and use of cucumber features in a Ruby on Rails (RoR) Project.  Discussion of "Behaviour Driven":http://en.wikipedia.org/wiki/Behavior_driven_development (BDD), "Test Driven":http://en.wikipedia.org/wiki/Test-driven_development (TDD), and "Panic Driven Development":http://en.wikipedia.org/wiki/SNAFU (SNAFU) acan be found elsewhere.  Details regarding installing the Cucumber gem and its recommended support tools for RoR are found at [[Ruby on Rails]].
 
 h3. Where to Start?
 
@@ -111,7 +111,11 @@ h3. How do I Write Tests?
 
 Constructing ones first tests, or features as BDD purists prefer, is often accompanied by what can only be described as <em>"writer's block":http://en.wikipedia.org/wiki/Writer%27s_block</em>.  While detailed discussion of feature writing and step construction are provided elsewhere ([[Given-When-Then]]), perhaps the easiest thing to do for the first time tester/behaviourist is to use cucumber's built-in generator to create a feature scaffold and then modify it.  
 
-However, in practice it proves important to write each test/feature step <em><strong>one at a time</strong></em>.  After each feature step is added then you should immediately create the corresponding step definition method.  Following the creation of the actual test/step definition that your new application should satisfy then you should write the minimal application code get the new test/step definition to pass before moving on to the next feature step. It is tempting to just <em>skip ahead</em>, particularly with features.  Nonetheless, in the long run, it has proven best practice to write features and step definitions incrementally, using the absolute minimum of code, and then immediately implement the new feature step requirement in application code, also using the minimum code to satisfy it.  This is a hard discipline to accept but the value is that with this approach you will rarely have untested code anywhere in your application.
+However, in practice it proves important to write each test/feature step <em><strong>one at a time</strong></em>.  After each feature step is added then you should immediately create the corresponding step definition method.  Following the creation of the actual test/step definition that your new application should satisfy then you should write the minimal application code get the new test/step definition to pass before moving on to the next feature step. 
+
+It is tempting to just <em>skip ahead</em>, particularly with features.  In some cases limited access to domain experts and end users may require that features be completed long before coding the associated step definitions is undertaken. Nonetheless, in the long run, it has proven best practice to write features and step definitions incrementally, using the absolute minimum of code, and then immediately implement the new feature step requirement in application code, also using the minimum code to satisfy it.  This is a hard discipline to accept but the value is that with this approach you will rarely have untested code anywhere in your application.
+
+If you do anticipate feature steps then by omitting any matcher in the step definitions files will cause these steps to be listed as <em>pending</em>.
 <pre><code>script/generate feature Frooble name color description
       exists  features/step_definitions
       create  features/manage_froobles.feature
@@ -227,7 +231,7 @@ Finally, running <code>autotest</code> with the environment variable <code>AUTOF
 
 h3. Anything Else?
 
-For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest.  So, no popups when a step fails.  However, ther exisits a project to add this to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
+For those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest be advised that as of this writing cucumber did not hook into the :red :green notifier capability of autotest.  So, no popups when a step fails.  However, there exists a project to add a similar functionality to cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
 
 Recall that cucumber is an <strong><em>"integration":http://en.wikipedia.org/wiki/Integration_testing</em></strong> test harness.  It is designed to exercise the entire application stack from view down to the database.  It is certainly possible to write features and construct steps in such a fashion as to conduct unit tests.  No great harm will result.  However, this is not considered best practice by many and may prove impossible for very large projects due to the system overhead it causes and the commensurate delay in obtaining test results.
 
