@@ -136,7 +136,7 @@ To Increase Revenue | Reduce Costs | Protect Revenue  (pick one)
       ...
 </code></pre>
 
-For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. Scenario is used in the same fashion.  Given, When, Then, and And are cucumber <em><strong>methods</strong></em> that take as their argument the string that follows.  These are the steps that cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  These methods are also all equivalent:
+For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. Scenario is used in the same fashion.  Given, When, Then, and And are all cucumber <em><strong>methods</strong></em> that take as their argument the string that follows.  These are the steps that cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  These methods are also all equivalent:
 <pre><code>
       def Given(name)
         create_step('Given', name, *caller[0].split(':')[1].to_i)
@@ -154,7 +154,7 @@ For cucumber the key words use here are <strong>Feature</strong>, <strong>Scenar
         create_step('And', name, *caller[0].split(':')[1].to_i)
       end</code></pre>
 
-The string from each one of these method is compared against the matchers contained in the step_definitions.rb files.  A step matcher looks much like this:
+The string argument from each of these methods is compared against all the matchers contained in the step_definitions.rb files.  A step definitions matcher looks much like this:
 <pre><code>Given /there are (\d+) froobles/ do |n|
   Frooble.transaction do
     Frooble.destroy_all
@@ -165,7 +165,7 @@ The string from each one of these method is compared against the matchers contai
 end
 </code></pre>
 
-The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features given above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step matchers in any step_definitions.rb file found under the features directory.
+The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  For example, in the features given above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
 When /some (.*) action/ do |match|
 Then /(*.) other action/ do |match|
@@ -207,6 +207,7 @@ And /some (.*) action/ do |a|
 And /some "(.*)" action/ do |a|
   a => required
 </code></pre>
+
 
 h3. What Way do I Run the Tests?
 
