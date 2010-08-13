@@ -30,7 +30,7 @@ h2. Getting started
 
 Take a look at the "examples":http://github.com/aslakhellesoy/cucumber/tree/master/examples. Each example directory has a Rakefile, and you can run the features in an example directory with
 
-<pre><code>rake features</code></pre>
+<pre><code>rake cucumber:all</code></pre>
 
 You'll see feature files printed in green indicating passing tests. Now go into the code the features describe and deliberately make a bug. Run the features again. Note that the backtrace (stack trace) also shows you the line of the plain text feature that fails.
 
