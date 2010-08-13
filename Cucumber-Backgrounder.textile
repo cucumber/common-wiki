@@ -107,7 +107,7 @@ Consider, however, that the cucumber feature generator will generate the files i
 
 h3. How do I Write Tests?
 
-Constructing ones first tests, or features as BDD purists prefer, is often accompanied by what can only be described as <em>"writer's block":http://en.wikipedia.org/wiki/Writer%27s_block</em>.  While detailed discussion of feature writing and step construction are provided elsewhere ([[Given-When-Then]]), perhaps the easiest thing to do for the first time tester/behaviourist is to use cucumber's built-in generator to create a feature scaffold and thenmodify it.  
+Constructing ones first tests, or features as BDD purists prefer, is often accompanied by what can only be described as <em>"writer's block":http://en.wikipedia.org/wiki/Writer%27s_block</em>.  While detailed discussion of feature writing and step construction are provided elsewhere ([[Given-When-Then]]), perhaps the easiest thing to do for the first time tester/behaviourist is to use cucumber's built-in generator to create a feature scaffold and then modify it.  
 <pre><code>script/generate feature Frooble name color description
       exists  features/step_definitions
       create  features/manage_froobles.feature
@@ -116,10 +116,10 @@ Constructing ones first tests, or features as BDD purists prefer, is often accom
 A <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature consists of multiple <strong><em>Scenarios</strong></em>.  Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses that are used to match test steps. The conventional arrangement is:
 
 <pre>Feature: Some terse yet descriptive text
-In order to/that <some business value>
-A/an <some actor>
-Should <some beneficial outcome>
-To Increase Revenue | Reduce Costs | Protect Revenue  
+In order to/that some business value is realized
+A some actor
+Should obtain some beneficial outcome which furthers the goal
+To Increase Revenue | Reduce Costs | Protect Revenue  (pick one)
 
   Scenario:   Some determinable business situation
       Given some condition to meet
@@ -233,3 +233,5 @@ Cucumber comes preconfigured with webrat test steps.  If webrat is installed as 
 h3.  Need Help?
 
 The best place to go for help, that I know of, is the "RSpec Forum":http://www.ruby-forum.com/forum/32 at "Ruby-Forum.com":http://ww.ruby-forum.com.  There you can find access to a number of forums and gateways to mailing lists that are related to Ruby and Ruby on Rails.
+
+2008 November 28 - J. B. Byrne
