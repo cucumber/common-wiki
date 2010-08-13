@@ -54,6 +54,6 @@ Cucumber can enforce this using tag limits. Here is an example:
 cucumber --tags @dev:2,@qa:3
 </pre>
 
-This will fail if you have more than 2 <code>@dev</code> tags or more than 3 <code>@qa</code> tags.
+This will make cucumber fail if you have more than 2 <code>@dev</code> tags or more than 3 <code>@qa</code> tags, even if each of your scenarios pass individually.
 
 Used in conjunction with the <code>--wip</code> switch you can set up your project to enforce the WIP limits of your team.
