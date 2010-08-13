@@ -114,7 +114,17 @@ Should <some beneficial outcome>
 To Increase Revenue | Reduce Costs | Protect Revenue  
 
   Scenario:   Some determinable business situation
+      Given some condition to meet
+         And some other condition to meet
+       When some action by the actor
+         And some other action
+         And yet another action
+       Then some testable outcome is achieved
+         And something else we can check happens too
 
+  Scenario:  A different situation
+      ...
+</code></pre>
 
 
 <pre><code></code></pre>
