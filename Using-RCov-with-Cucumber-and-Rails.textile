@@ -37,6 +37,6 @@ h3. Options
 
 TODO:
 
-How to run features without rcov
+How to write a task to run features with.without rcov
 
 How to pass rcov options 
