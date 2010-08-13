@@ -108,16 +108,19 @@ Some guidance for authentication is provided below. It is recommended that a new
 
 In the .feature, use a phrase similar to <code>Given a user is logged in as "markEmark"</code>, and add the following to your relevent step definitions.
 
-<pre><code>
-Given /logged in as "(.*)"/ do |login|
+<pre><code>Given /logged in as "(.*)"/ do |login|
   @current_user = User.create!(
-        :login=>login,   :password =>              'generic',
-        :email=>"#{login}@example.com", :password_confirmation => 'generic'
-        )
-#  @current_user.activate! # :create syntax for restful_authentication w/ aasm. Tweak as needed.
+    :login => login,
+    :password => 'generic',
+    :password_confirmation => 'generic',
+    :email => "#{login}@example.com"
+  )
+
+  # :create syntax for restful_authentication w/ aasm. Tweak as needed.
+  # @current_user.activate! 
 
   visit "/login" 
-  fill_in("login",    :with => login) 
+  fill_in("login", :with => login) 
   fill_in("password", :with => 'generic') 
   click_button("Log in")
   response.body.should =~ /Logged/m  
