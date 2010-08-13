@@ -1,3 +1,5 @@
+*{color: red}This guide is outdated*. See The most recent IronRuby articles in [[Tutorials and related blog posts]].
+
 Developing in .NET? You can use Cucumber with IronRuby. You need both IronRuby and MRI (Matz Ruby Interpreter).
 
 (Mono users - see [[IronRuby and Mono]])
