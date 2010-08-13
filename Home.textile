@@ -149,7 +149,7 @@ Here is an example taken from an IRC chat session in "#cucumber":irc://irc.freen
 [5:29pm] Luis_Byclosure: true!
 </pre>
 
-h3. Outcomes and bottom-up scenarios.
+h3. Outcomes and bottom-up scenarios
 
 The value provided by a system is what you can get out of it - not what you put into it ("Chris Matts":http://www.agilenorth.net/index.php?option=com_content&task=view&id=90&Itemid=43 said that). Just like the value is expressed at the top of a feature (In order to...), the value should be in the steps of a scenarios too, more precisely in the *Then* steps.
 
