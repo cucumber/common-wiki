@@ -83,7 +83,8 @@ The default layout of the features directory is fairly flat.  However, cucumber 
 |       `-- env.rb
 </code></pre>
 
-In this case the bland initial setup has been divided into sub-directories driven by a model-centric view.  However this could equally well have been broken up in to model/controller/view hierarchies:
+In this case the bland initial setup has been divided into sub-directories driven by model-centric testing.  However this could equally well have been broken up in to model/controller/view hierarchies:
+
 <pre><code>|-- features
 |   |-- models
 |   |   |-- entities
