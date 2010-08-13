@@ -11,6 +11,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"FeaturesReport":http://www.daniellucraft.com/blog/tag/features_report/|Create a PDF report of Cucumber features.|
 |"Greendot":http://github.com/bruce/greendot|Describe apps as state machines, with various outputs (including Cucumber features).|
 |"Merb Cucumber":http://github.com/david/merb_cucumber|"Merb":http://merbivore.com/ + Cucumber integration.|
+|"NewGem":http://newgem.rubyforge.org/| Use <code>newgem -i cucumber</code> to generate a bunch of helpful scenario steps for gem development|
 |"Pickle":http://github.com/ianwhite/pickle/tree/master|Easy model creation/reference in cucumber - optionally leveraging your factories/blueprints|
 |"Pickler":http://github.com/tpope/pickler/tree/master|Synchronize user stories in "Pivotal Tracker":http://www.pivotaltracker.com/ with Cucumber features.|
 |"RCumber":http://github.com/jgoodsen/rcumber/wikis|Edit and run Cucumber tests directly in your Rails application. Click results and get taken to TextMate.|
