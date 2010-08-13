@@ -31,8 +31,7 @@ h2. Sinatra/Test
 
 You can also use Cucumber with "Sinatra":http://github.com/bmizerany/sinatra using Sinatra's built-in "testing setup":http://www.sinatrarb.com/testing.html and "Test Harness":http://www.sinatrarb.com/testing.html#using_.  Make sure you have something like the the following, "tailored":http://www.sinatrarb.com/testing.html#frameworks to Test::Unit, RSpec, Bacon or Test::Spec, in your <code>features/support/env.rb</code>.
 
-<pre><code>
-require File.dirname(__FILE__) + "/../../your_sinatra_app"
+<pre><code>require File.dirname(__FILE__) + "/../../your_sinatra_app"
 
 # RSpec matchers
 require 'spec/expectations'
