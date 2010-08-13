@@ -1,4 +1,4 @@
-We haven't put up the RDoc for Cucumber online yet, so until that happens, here is how you can read it on your own machine:
+The RDoc for Cucumber online yet, so until that happens, here is how you can read it on your own machine:
 
 <pre>
 gem install rdoc
