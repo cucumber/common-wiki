@@ -37,11 +37,11 @@ h3. Build IronRuby
 
 Open a Visual Studio command prompt and cd to where you downloaded the IronRuby sources. Build it:
 
-<code>rake build</code>
+<pre>rake build</pre>
 
 When you have completed this step you should be able to run
 
-<code>build\debug\ir.exe</code>
+<pre>build\debug\ir.exe</pre>
 
 This should give you a new prompt (Interactive IronRuby shell). Just type <code>exit</code>
 and hit enter. You have installed IronRuby!
@@ -80,7 +80,7 @@ you're wondering what this is.
 
 Now you should be able to run Cucumber:
 
-<code>icucumber --help</code>
+<pre>icucumber --help</pre>
 
 h2. Running the Cucumber C# example
 
