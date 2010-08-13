@@ -13,7 +13,7 @@ in any language. When "IronRuby":http://www.ironruby.net/ matures it can be used
 
 Cucumber only requires minimal use of Ruby programming, so don't be afraid to try it out even if the code you're
 developing is in a different language. Most programmers should pick up the required Ruby skills and be productive
-with Cucumber in a few of days.
+with Cucumber in a few days.
 
 While Cucumber can be thought of as a "testing" tool, the intent of the tool is to support "BDD":http://behaviour-driven.org/.
 This means that the "tests" (plain text feature descriptions with scenarios) are typically written before anything else, and 
