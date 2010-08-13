@@ -23,7 +23,9 @@ You can use the <code>--tags</code> option to tell Cucumber that you only want t
 cucumber --tags @billing            # Runs both scenarios
 cucumber --tags @important          # Runs the first scenario
 cucumber --tags ~@important         # Runs the second scenario (Scenarios without @important)
-cucumber --tags ~@important,~@other # Won't run tasks tagged @important or @other.
+
+cucumber --tags @billing --tags @important # Runs both scenarios (Scenarios with @important OR @billing)
+cucumber --tags @billing,@important           # Runs the first scenario (Scenarios with @important AND @billing)
 </pre>
 
 (Another way to "filter" what you want to run is to use the <code>file.feature:line</code> pattern or the <code>--scenario</code> option as described in [[Running Features]]).
