@@ -29,7 +29,7 @@ Step definitions can also take parameters if you use regular expressions:
 <pre>
 # features/step_definitions/coffee_steps.rb
 
-Given /there are (\w+) coffees left in the machine/ do |n|
+Given /there are (\d+) coffees left in the machine/ do |n|
   @machine = Machine.new(n.to_i)
 end
 </pre>
