@@ -3,9 +3,9 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
 
 |*Post*|*Description*|*Posting Date*|
-|"Practical Cucumber: Organization":http://collectiveidea.com/blog/archives/2010/09/13/practical-cucumber-organization/|Advice for organizing steps and features|September 13, 2010|
-|"Practical Cucumber: Factory Girl steps":http://collectiveidea.com/blog/archives/2010/09/09/practical-cucumber-factory-girl-steps/|Although they’ve been around for a while, very few people know that factory_girl comes with some really useful cucumber steps.|September 9, 2010|
-|"Practical Cucumber: Scenario-specific steps":http://collectiveidea.com/blog/archives/2010/09/08/practical-cucumber-scenario-specific-steps/|Cucumber steps are meant to be reused.|September 8, 2010|
+|"Practical Cucumber: Organization":http://collectiveidea.com/blog/archives/2010/09/13/practical-cucumber-organization/|Advice for organizing steps and features|Sept 13, 2010|
+|"Practical Cucumber: Factory Girl steps":http://collectiveidea.com/blog/archives/2010/09/09/practical-cucumber-factory-girl-steps/|Although they’ve been around for a while, very few people know that factory_girl comes with some really useful cucumber steps.|Sept 9, 2010|
+|"Practical Cucumber: Scenario-specific steps":http://collectiveidea.com/blog/archives/2010/09/08/practical-cucumber-scenario-specific-steps/|Cucumber steps are meant to be reused.|Sept 8, 2010|
 |"Testing custom headers and ssl with Cucumber and Capybara":http://aflatter.de/2010/06/testing-headers-and-ssl-with-cucumber-and-capybara/|A little capybara hack for modifying the request environment to test custom headers|June 23 2010|
 |"Outside-In BDD: How?!":http://www.sarahmei.com/blog/2010/05/29/outside-in-bdd/|Sarah Mei gives an excellent explanation of the Outside-In workflow.|May 29 2010|
 |"Testing Javascript with Cucumber in Javascript":http://blog.josephwilk.net/ruby/testing-javascript-with-cucumber-in-javascript.html|Joseph Wilk presents the new Javascript adapter in Cucumber to write step definitions in Javascript|May 22 2010|
