@@ -32,6 +32,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Features2Cards":http://github.com/brynary/features2cards|Create PDFs from Cucumber features and scenarios for printing.|
 |"FeaturesReport":http://github.com/danlucraft/features_reports/tree/master|Create a PDF report of Cucumber features.|
 |[[FunFX and Flex]]| Test Adobe Flex applications with Cucumber|
+|"Gizmo":http://gizmo-gem.info/|Simple page model testing framework that works great with Cucumber|
 |"Greendot":http://github.com/bruce/greendot|Describe apps as state machines, with various outputs (including Cucumber features).|
 |"Groundwork":http://github.com/hectoregm/groundwork/tree/master| Rails Template using Authlogic that comes with Cucumber features|
 |"Gutkumber":http://github.com/danlucraft/gutkumber| Integration testing for "Ruby-GNOME2":http://ruby-gnome2.sourceforge.jp/.|
