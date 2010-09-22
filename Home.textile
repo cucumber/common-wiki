@@ -4,7 +4,7 @@
 
 The "official Cucumber web site":http://cukes.info/ has some more marketing blurbs and *CukeTV* episodes!
 
-Cucumber is a tool that can execute plain-text functional descriptions as automated tests. The language that Cucumber understands is called [[Gherkin]]. Here is an example:
+Cucumber is a tool that executes plain-text functional descriptions as automated tests. The language that Cucumber understands is called [[Gherkin]]. Here is an example:
 
 <pre>Feature: Search courses
   In order to ensure better utilization of courses
@@ -61,6 +61,7 @@ There are several ways to get yourself started in writing tests, depending somew
 ** [[Custom Formatters]]
 ** [[Console Colours]]
 ** [[Hooks]]
+** "essay help":http://www.realessaywriting.com - essay resources
 ** [[Profiles]]
 ** [[Running Features]]
 ** [[Using Rake]]
