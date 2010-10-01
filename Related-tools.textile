@@ -22,7 +22,8 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Clucumber":http://github.com/antifuchs/clucumber|Support for writing Cucumber step definitions in Common LISP, testing Common LISP code.|
 |"Cuke4Nuke":http://github.com/richardlawrence/Cuke4Nuke|Support for writing Cucumber step definitions in .NET.|
 |"Cuke4Lua":http://github.com/dgfitch/Cuke4Lua|Wire protocol implementation for "Lua":http://www.lua.org/|
-|"cuke4vs":http://github.com/henritersteeg/cuke4vs|Syntax highlighting, intellisense and other editing support for feature files in Visual Studio 2008.|
+|"Cuke4PHP":http://github.com/olbrich/cuke4php|Support for writing Cucumber step definitions in PHP, testing PHP code.|
+|"Cuke4Vs":http://github.com/henritersteeg/cuke4vs|Syntax highlighting, intellisense and other editing support for feature files in Visual Studio 2008.|
 |"Culerity":http://github.com/langalex/culerity/tree/master| Integrates Cucumber and Celerity to test Javascript in webapps.|
 |"DatabaseCleaner":http://github.com/bmabey/database_cleaner/tree/master|Different strategies for keeping your DB clean to ensure a clean state.  Has Cucumber support out of the box.|
 |"Eclipse plugin":http://github.com/QuBiT/cucumber-eclipse-plugin|Apparently not in a working state, but good starting point?|
