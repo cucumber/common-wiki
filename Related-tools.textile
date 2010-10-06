@@ -8,11 +8,13 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Celerity":http://github.com/jarib/celerity|Headless browser with JavaScript support (on JRuby)|
 |"cheat cucumber":http://cheat.errtheblog.com/s/cucumber/|Cucumber cheatsheet for Chris Wanstrath's "cheat":http://cheat.errtheblog.com/|
 |"Clearance":http://wiki.github.com/thoughtbot/clearance/cucumber-features| Rails Authentication System with Cucumber feature generator|
+|"Courgette":http://21croissants.github.com/courgette/|Rails engine (plugin) for Rails 2.x applications which makes your cucumber features files viewable through your browser|
 |"crb":http://wiki.github.com/maiha/crb| An irb console for cucumber world. (crb = cucumber + irb)|
 |"CuCapp":http://github.com/dparnell/cucapp | Cucumber integration with Cappuccino. |
 |"Cucover":http://github.com/mattwynne/cucover | Coverage-aware lazy / selective Cucumber feature runnner|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
 |"Cucumber Factory":http://github.com/makandra/cucumber_factory/tree/master|Create Rails model records without writing step definitions.|
+|"Cucumber Feature Manager":http://cs3b.github.com/cucumber_fm/|Help to manage with big amount of features in project, "demo":http://demo.cucumber.fm/|
 |"Cucumber Growler *fixed*":http://github.com/jeanmartin/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber >= 0.2|
 |"Cucumber Growler":http://github.com/paolodona/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber.|
 |"Cucumber Nagios":https://code.launchpad.net/cucumber-nagios|Web site monitoring with Cucumber and "Nagios":http://www.nagios.org/|
@@ -50,7 +52,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"NewGem":http://newgem.rubyforge.org/| Use <code>newgem -i cucumber</code> to generate a bunch of helpful scenario steps for gem development|
 |"Pickle":http://github.com/ianwhite/pickle/tree/master|Easy model creation/reference in cucumber - optionally leveraging your factories/blueprints|
 |"Pickler":http://github.com/tpope/pickler/tree/master|Synchronize user stories in "Pivotal Tracker":http://www.pivotaltracker.com/ with Cucumber features.|
-|"Rcumber":http://github.com/christophermoura/rcumber|RCumber is a rails plugin that gives your customers a web interface where they can view, edit and run Cucumber tests directly on your rails project.|
+|"Rcumber":http://github.com/christophermoura/rcumber| RCumber is a rails plugin that gives your customers a web interface where they can view, edit and run Cucumber tests directly on your rails project. No update since 2008|
 |"Remote Feature":http://github.com/mhennemeyer/remote_feature|Run Cucumber Features that are defined in "Writeboard":http://www.writeboard.com/.|
 |"RSpec":http://rspec.info|Use RSpec's <code>Object.should</code> and <code>Object.should_not</code> to compare values in your step definitions|
 |"rSquery":http://injecting.by2.be/blog/2009/05/rsquery.html|Using jquery matchers and more in selenium, taking the pain out of writing selenium tests.|
