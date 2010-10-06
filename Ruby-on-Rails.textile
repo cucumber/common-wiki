@@ -140,3 +140,8 @@ In the .feature, use a phrase similar to <code>Given a user is logged in as "mar
   response.body.should =~ /Logged/m  
 end
 </code></pre>
+
+h2. Rails plugins
+* "Courgette":http://21croissants.github.com/courgette/ Rails engine (plugin) for Rails 2.x applications which makes your cucumber features files viewable through your browser
+* "Cucumber Feature Manager":http://cs3b.github.com/cucumber_fm/ Help to manage with big amount of features in project, "demo":http://demo.cucumber.fm/
+
