@@ -15,7 +15,7 @@ Like Python and YAML, Gherkin is a line-oriented language that uses indentation 
 
 Comment lines are allowed anywhere in the file. They begin with zero or more spaces, followed by a sharp sign (@#@) and some amount of text.
 
-Parser divides the input into features, scenarios and steps.  When you run the feature the trailing portion (after the keyword) of each step is matched to a Ruby code block called [[Step Definitions|step definition]].
+Parser divides the input into features, scenarios and steps.  When you run the feature the trailing portion (after the keyword) of each step is matched to a Ruby code block called [[Step Definitions|step definitions]].
 
 A Gherkin source file usually looks like this
 
