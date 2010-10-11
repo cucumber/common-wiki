@@ -166,6 +166,11 @@ It is often tempting to just <em>skip ahead</em> with the analysis and complete 
 This is a hard discipline to accept but the value with this approach is that you will rarely (never) have untested code anywhere in your application and your application will only have code that satisfies required features.  Consequently, you can face design changes ( and gem updates ) with complete equanimity, secure in the knowledge that if unanticipated changes break anything else then you will know of the side-effect immediately upon running your test suite.
 
 If you do anticipate feature steps then omitting any matcher for them in the step definitions files causes these steps to be reported as missing by Cucumber, which helpfully provides a suggested method and argument to implement.  Stub step matchers have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/undefined step definitions.
+<pre><code>
+  Given /this step is not implemented yet/ do
+    pending "your message goes here"
+  end
+</code></pre>
 
 h3. What are Features and Scenarios?
 
