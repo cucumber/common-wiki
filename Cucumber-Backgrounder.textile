@@ -149,13 +149,13 @@ Constructing ones first tests, or features as BDD purists prefer, is often accom
 </code></pre>
 
 Scaffolding provides a comforting illusion of progress through its voluminous production of template code.  Said code being, for all intents and purposes, worthless save only as an example of proper syntax.  For actual employment it proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write <code>When "Bob" logs in</code> and not:
-<pre>
+<pre><code>
   Given I visit "/login"
   When I enter "Bob" in the "user name" field
     And I enter "tester" in the "password" field
     And I press the "login" button
   Then I should see the "welcome" page
-</pre>
+</code></pre>
    
 What is important about the difference in styles?  The first example, <strong>When "Bob" logs in</strong>,  is a functional requirement.  The second, much longer, example is a procedural reference.  Procedures belong in the implementation details.  What you and your client should be concerned about in your feature files is what has to happen and not how you expect it to happen.  That way, when somebody later decides that a challenge and response authentication scheme should no longer be used you simply need change the login process steps behind the scenes.  Your outward facing feature files, the ones that your clients get to see, need not change at all.  In fact, a good question to ask yourself when writing a feature clause is: <strong><em>Will this wording need to change if the implementation does</em></strong>?  If the answer is yes then the clause is poorly written and you should rework it to avoid implementation specific details.  As a side benefit, in consequence your scenarios will be a lot shorter and much easier to follow and understand.
 
@@ -175,7 +175,7 @@ A scenario is a block of instructions that exercise some behaviour desired or de
 
 Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses (steps) that are used to match test step definitions. The conventional arrangement is:
 
-<pre>Feature: Some terse yet descriptive text of what is desired
+<pre><code>Feature: Some terse yet descriptive text of what is desired
 In order that some business value is realized
 An actor with some explicit system role
 Should obtain some beneficial outcome which furthers the goal
@@ -212,7 +212,7 @@ The significant thing here is that the method (Given) takes as its argument a "r
 In the features provided above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
 When /some (.*) action/ do |match|
-Then /(*.) other action/ do |match|
+Then /(.*) other action/ do |match|
 Given /(.*) other (.*)/ do |first,second|
 But /(.*) other (.*)/ do |first,second|
 And /(.*) other (.*)/ do |first,second|
