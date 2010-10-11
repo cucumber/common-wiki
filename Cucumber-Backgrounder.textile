@@ -171,7 +171,7 @@ h3. What are Features and Scenarios?
 
 A feature can be conceptualized as an indivisible unit of functionality embedded in the project to which it belongs.  For example, an authentication challenge and response user interface is usually considered a feature while an authentication system would comprise many features.   A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</strong></em>.
 
-A scenario is a block of instructions that exercise some behaviour desired or depreciated in the feature to which it belongs.  A scenario might check that the login interface provides input fields for the requisite responses, that failures are logged or otherwise reported. that user ids are locked out after a given number of failed attempts, and so forth.  Each scenario exercises the implementation code  to prove that for each anticipated condition the expected behaviour is indeed produced.
+A scenario is a block of instructions that exercise some behaviour desired or deprecated in the feature to which it belongs.  A scenario might check that the login interface provides input fields for the requisite responses, that failures are logged or otherwise reported. that user ids are locked out after a given number of failed attempts, and so forth.  Each scenario exercises the implementation code  to prove that for each anticipated condition the expected behaviour is indeed produced.
 
 Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses (steps) that are used to match test step definitions. The conventional arrangement is:
 
