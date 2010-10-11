@@ -297,7 +297,7 @@ Feature: .  .  .
 
 h3. What are "tags"?
 
-Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong>@</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>@wip</em> tag.  However, any string may used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
+Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong>&amp;</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>&amp;wip</em> tag.  However, any string may used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
 
 <pre>
   @init
@@ -351,9 +351,9 @@ Using the default profile...
 
 The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the tags option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message.  If the <code>--strict</code> option is passed as well, as is the case with the default profile, then instead of a warning the run will fail.
 
-Limiting the number of occurrences is commonly used in conjunction with the @wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
+Limiting the number of occurrences is commonly used in conjunction with the &amp;wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
-As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em>@ignore</em>:
+As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em>&amp;ignore</em>:
 
 <pre>
 $ cucumber --require=features --tag=~@ignore features/wip
@@ -396,8 +396,6 @@ Finally, running <code>autotest</code> with the environment variable <code>AUTOF
 h3. Anything Else?
 
 The terminology for elements of Behaviour Driven Development differs somewhat from that employed by Test Driven Development.  This article, because of the introductory nature of its contents, tends to blur the semantic distinction between these two divergent philosophies.
-
-
 
 Cucumber is evolving, rapidly.  Originally, Cucumber was written for Ruby on Rails.  As discussed above this has long since ceased to be true and Cucumber now has a supplementary library, Aruba, which permits testing of Command Line Interface processes.  This article is revised to Cucumber version 0.9.0  and Cucumber-Rails version 0.3.2 but it does not cover many of the ever expanding attributes of Cucumber, Cucumber-Rails and now Aruba.  The essentials of this article remain applicable throughout all recent versions of Cucumber and Cucumber-Rails but the implementation details may have changed.  It would not be wise to use this article as a recipe.
 
