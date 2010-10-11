@@ -42,7 +42,7 @@ Then I should create the directory ./features
   .  .  .
 </pre>
 
-The foregoing gives a sample of the form that feature files often take.  The statements, called <em>feature steps</em>, make up the user interface to Cucumber testing.  These here are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ for illustrative purposes.  In practice, all those Then/And statements likely would be subsumed into one simple Declarative statement; for example: <code>I should create the Cucumber environment</code>, and the messy details of just what a Cucumber environment should comprise placed in the step definitions instead. We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
+The foregoing gives a sample of the form that feature files often take.  The statements, called <em>feature steps</em>, make up the user interface to Cucumber testing.  Those givenabove are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ for illustrative purposes.  In practice, all those Then/And statements likely would be subsumed into one simple Declarative statement; for example: <code>I should create the Cucumber environment</code>, and the messy details of just what a Cucumber environment should comprise placed in the step definitions instead. We will return to that topic later.  For the moment we deal with the logical arrangement of Cucumber files within the context of a RoR project.
 
 The root level of the archetypal RoR project directory tree looks like this:
 
@@ -148,7 +148,18 @@ Constructing ones first tests, or features as BDD purists prefer, is often accom
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
 
-While scaffolding provides a comforting illusion of progress through its voluminous production of template code, in practice it proves important to write each test/feature step <em><strong>one at a time</strong></em>.  After each new feature step is added then you should immediately create the corresponding step definition method.  After creating your new test/step definition you must prove to yourself that it fails by running it against the, as yet, non-existent application code.  Then, and only then, should you write the least application code that gets your test/step definition to pass.  Once this cycle is complete then move on to the next feature step.
+Scaffolding provides a comforting illusion of progress through its voluminous production of template code.  Said code being, for all intents and purposes, worthless save only as an example of proper syntax.  For actual employment it proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write <strong>When "Bob" logs in</strong> and not:
+<strong><pre>
+  Given I visit "/login"
+  When I enter "Bob" in the "user name" field
+    And I enter "tester" in the "password" field
+    And I press the "login" button
+  Then I should see the "welcome" page
+</pre></strong>
+   
+What is important about the difference in styles?  The first example, <strong>When "Bob" logs in</strong>,  is a functional requirement.  The second, much longer, example is a procedural reference.  Procedures belong in the implementation details.  What you and your client should be concerned about in your feature files is what has to happen and not how you expect it to happen.  That way, when somebody later decides that a challenge and response authentication scheme should no longer be used you simply need change the login process steps behind the scenes.  Your outward facing feature files, the ones that your clients get to see, need not change at all.  In fact, a good question to ask yourself when writing a feature clause is: <strong><em>Will this wording need to change if the implementation does</em></strong>?  If the answer is yes then clause is poorly written and you should rework it to avoid implementation specific details.  As a side benefit, in consequence your scenarios will be a lot shorter and much easier to follow and understand.
+
+After each new feature clause is added then you should immediately create the corresponding step definition method.  This is where you put the implementation details because, in the normal course of events, your users will never see them.  Once your new test/step definition is written then you must prove to yourself that it fails by running it against the, as yet, non-existent application code.  Then, and only then, should you write the least application code that gets your test/step definition to pass.  Once this cycle is complete then move on to the next feature step.
 
 It is often tempting to just <em>skip ahead</em> with the analysis and complete as many scenarios and feature steps as one can imagine.  In some cases limited access to domain experts and end users may require that many feature steps be completed long before coding the associated step definitions is undertaken. Nonetheless, in the long run, it has proven best practice to write feature steps and step definitions incrementally, using the absolute minimum of code; and then immediately implement the new feature step requirement in application code, also using the minimum code to satisfy it.  
 
@@ -281,7 +292,7 @@ Feature: .  .  .
 
 h3. What are "tags"?
 
-Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong>&#64;</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>&#64;wip</em> tag.  However, any string may used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
+Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong>@</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>@wip</em> tag.  However, any string may used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
 
 <pre>
   @init
@@ -333,11 +344,11 @@ Using the default profile...
 0m0.000s
 </pre>
 
-The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the tags option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message. 
+The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the tags option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message.  If the <code>--strict</code> option is passed as well, as is the case with the default profile, then instead of a warning the run will fail.
 
-Limiting the number of occurrences is commonly used in conjunction with the &#64;wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
+Limiting the number of occurrences is commonly used in conjunction with the @wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
-As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em>&#64;ignore</em>:
+As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em>@ignore</em>:
 
 <pre>
 $ cucumber --require=features --tag=~@ignore features/wip
@@ -350,11 +361,15 @@ Unless you are knowledgeable enough that you use "mocks and stubs":http://rspec.
 rake db:test:prepare
 </code></pre>
 
-However, there is an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic (for that see the Cucumber "Aruba":http://github.com/aslakhellesoy/aruba project)  and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist. 
+Frankly, except for the most trivial of cases, you should always use test data obtained from actual production environments.  You are, after all, embarked on an adventure. To discover how to make thing work.  However, to discover what actually works requires more than a passing familiarity with what is real.  And made-up data is not reality.  Since it comes from the same source as most of your errors will, your own limited understanding of the problem domain,  manufactured data is always suspect. 
 
-Testing with Cucumber can be performed in several fashions.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same features and step definitions.  
+That said, there remains an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic (for that see the Cucumber "Aruba":http://github.com/aslakhellesoy/aruba project)  and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist. 
 
-Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  As discussed above, the Cucumber Rake task recognises the <code>@wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>&#64;wip</strong>.  For example, given a feature file containing:
+Cucumber can be run in several ways.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same features and step definitions.  
+
+Running <code>rake cucumber</code> from the command line provides the simplest, if not the speediest, method to run Cucumber tests. The rake script provided with cucumber performs much of the background magic required to get the test database and requisite libraries properly loaded.  In fact, an important habit to acquire is to run cucumber as a rake task immediately after performing a migration.  This step ensures that the test database schema is kept in sync with the development database schema.  You can achieve the same effect by running <code>rake db:test:prepare</code> before your first cucumber run following a migration but developing the habit of just running <code>rake cucumber</code> or <code>rake cucumber:wip</code> is probably the better course.
+
+As discussed above, the Cucumber Rake task recognises the <code>@wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>@wip</strong>.  For example, given a feature file containing:
 
 <pre>
 Feature: .  .  .
@@ -377,7 +392,9 @@ h3. Anything Else?
 
 The terminology for elements of Behaviour Driven Development differs somewhat from that employed by Test Driven Development.  This article, because of the introductory nature of its contents, tends to blur the semantic distinction between these two divergent philosophies.
 
-Cucumber is evolving, rapidly.  This article is revised to Cucumber version 0.8.4 and Cucumber-Rails version 0.3.2 but it does not cover many of the new attributes of Cucumber and Cucumber-Rails.  The essentials of this article remain applicable throughout all the variants of Cucumber and Cucumber-Rails but the implementation details may have changed.  It would not be wise to use this article as a recipe.
+
+
+Cucumber is evolving, rapidly.  Originally, Cucumber was written for Ruby on Rails.  As discussed above this has long since ceased to be true and Cucumber now has a supplementary library, Aruba, which permits testing of Command Line Interface processes.  This article is revised to Cucumber version 0.9.0  and Cucumber-Rails version 0.3.2 but it does not cover many of the ever expanding attributes of Cucumber, Cucumber-Rails and now Aruba.  The essentials of this article remain applicable throughout all recent versions of Cucumber and Cucumber-Rails but the implementation details may have changed.  It would not be wise to use this article as a recipe.
 
 If you are testing with intent then you should be using the "ruby-debug gem":http://rubyforge.org/projects/ruby-debug/.  A really neat method to drop into an interactive debugging session _inside a Cucumber step definition_ using ruby-debug was provided by "Scott Taylor on the rspec mailing list":http://www.ruby-forum.com/topic/175732#769713.  Just put these statements inside the step definition at the point that you wish to debug:  <code>require 'rubygems'; require 'ruby-debug'; debugger</code>.  When that code interrupts then type <code>irb</code> and you open an interactive debugging session wherein you can step forwards and backwards inside the code under test to determine exactly where the breakage is happening.  Alternatively, you can add <code>require 'rubygems'; require 'ruby-debug';</code> to your <code>support/local_env.rb</code> file (see below) and just put @debugger@ wherever you desire it inside any step definition.
 
@@ -387,7 +404,7 @@ Recall that Cucumber is an <strong><em>"integration":http://en.wikipedia.org/wik
 
 Cucumber-Rails is pre-configured with support for view integration testing using either "Capybara":http://github.com/jnicklas/capybara (script/generate  cucumber --capybara) or "Webrat":http://github.com/brynary/webrat (script/generate cucumber).  If you do not know what Capybara or Webrat are or do,  and you are doing web application testing, then you should find out more about both.  The Cucumber-Rails generator will set up the necessary support files for whichever you choose. 
 
-While Capybara is emerging as the preferred testing method it does not play well with Rails' 2.x own built-in Test Assertions.  In particular, whenever Capybara is required into a Cucumber World then the response.body method of Rails Test::Unit seems to disappear.  
+While Capybara is emerging as the preferred testing method it does not play well with Rails' 2.x own built-in Test Assertions.  In particular, whenever Capybara is required into a Cucumber World then the response.body method of Rails Test::Unit is removed.  
 
 Calls for any additional Ruby libraries that your particular testing environment may require are typically placed in the <code>./features/support/local_env.rb</code> file.  I advise against putting local customization in <code>support/env.rb</code> as it is typically overwritten by <code>script/generate cucumber</code>.  As a matter of good practice you should always run <code>script/generate cucumber</code> whenever you install an updated version.  You should do the same for rspec as well.
 
@@ -405,7 +422,8 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 2010 January 17 - J. B. Byrne revised to 0.6.1
 2010 May 28 - J. B. Byrne revised 0.7.3
 2010 July 13 - J. B. Byrne revised to 0.8.4
+2010 October 11 - J. B. Byrne revised to 0.9.0
 
 h3. Postscript.
 
-A caution, Cucumber is meant to facilitate expressing required behaviours.  Indirection and excessive adherence to the principle of DRY, particularly in features, is at variance with both the intent and the major benefit of the tool.  Requirement expression in features should remain as self evident to the non-technical reader and be as self contained as possible.  Resist the temptation to effectively program features using the DSL.  Features should remain patent statements of intent.  If you feel the need to "program" in order to simplify writing a feature then you are likely doing something at considerably at odds with the intent of BDD methodology.
+A caution, Cucumber is meant to facilitate expressing required behaviours.  Indirection and excessive adherence to the principle of DRY, particularly in features, is at variance with both the intent and the major benefit of the tool.  Requirement expression in features should remain as self evident to the non-technical reader and be as self contained as possible.  Resist the temptation to effectively program features using the DSL.  "Features should remain patent statements of intent":http://mislav.uniqpath.com/2010/09/cuking-it-right/.  If you feel the need to "program" a scenario in order to simplify writing a feature then you are likely doing something at considerably at odds with the intent of BDD methodology.  In such circumstances, mentally step back and reconsider your approach to the problem.
