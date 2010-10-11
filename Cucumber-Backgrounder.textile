@@ -297,7 +297,7 @@ Feature: .  .  .
 
 h3. What are "tags"?
 
-Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong>&amp;</strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em>&amp;wip</em> tag.  However, any string may used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
+Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong><code>@</code></strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em><code>@wip</code></em> tag.  However, any string may used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
 
 <pre>
   @init
@@ -351,7 +351,7 @@ Using the default profile...
 
 The number of occurrences of a particular tag in your feature set may be controlled by appending an optional count to the end of the tag name passed to the tags option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message.  If the <code>--strict</code> option is passed as well, as is the case with the default profile, then instead of a warning the run will fail.
 
-Limiting the number of occurrences is commonly used in conjunction with the &wip tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
+Limiting the number of occurrences is commonly used in conjunction with the <code>@wip</code> tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
 As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em>&ignore</em>:
 
@@ -366,9 +366,9 @@ Unless you are knowledgeable enough that you use "mocks and stubs":http://rspec.
 rake db:test:prepare
 </code></pre>
 
-Frankly, except for the most trivial of cases, you should always use test data obtained from actual production environments.  You are, after all, embarked on an adventure. To discover how to make thing work.  However, to discover what actually works requires more than a passing familiarity with what is real.  And made-up data is not reality.  Since it comes from the same source as most of your errors will, your own limited understanding of the problem domain,  manufactured data is always suspect. 
+Frankly, except for the most trivial of cases, you should always use test data obtained from actual production environments.  You are, after all, embarked on an adventure; namely to discover how to make thing work.  However, to discover what actually works requires more than a passing familiarity with what is real.  And made-up data is not reality.  Since it comes from the same source as most of your errors will, your own limited understanding of the problem domain,  manufactured data is always suspect. 
 
-That said, there remains an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic (for that see the Cucumber "Aruba":http://github.com/aslakhellesoy/aruba project)  and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist. 
+That said, there remains an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic (for that see the Cucumber "Aruba":http://github.com/aslakhellesoy/aruba project)  and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist.  In the normal case, the end of any scenario normally results in the database being returned to a nil state.
 
 Cucumber can be run in several ways.  Be aware that <code>rake cucumber</code>, <code>cucumber features</code>, and <code>autotest</code> with <code>ENV AUTOFEATURE=true</code> do not necessarily produce the same results given the same features and step definitions.  
 
