@@ -355,7 +355,7 @@ The number of occurrences of a particular tag in your feature set may be control
 
 Limiting the number of occurrences is commonly used in conjunction with the <code>@wip</code> tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
-As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em>&ignore</em>:
+As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em><code>@ignore</code></em>:
 
 <pre>
 $ cucumber --require=features --tag=~@ignore features/wip
