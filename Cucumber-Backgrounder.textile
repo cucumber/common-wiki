@@ -148,7 +148,9 @@ Constructing ones first tests, or features as BDD purists prefer, is often accom
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
 
-Scaffolding provides a comforting illusion of progress through its voluminous production of template code.  Said code being, for all intents and purposes, worthless save only as an example of proper syntax.  For actual employment it proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write <code>When "Bob" logs in</code> and not:
+Scaffolding provides a comforting illusion of progress through its voluminous production of template code.  Said code being, for all intents and purposes, worthless save only as an example of proper syntax.  By all means take a look at the generated code but do not expect your project to design itself. 
+
+It proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write <code>When "Bob" logs in</code> and not:
 <pre><code>
   Given I visit "/login"
   When I enter "Bob" in the "user name" field
@@ -157,15 +159,17 @@ Scaffolding provides a comforting illusion of progress through its voluminous pr
   Then I should see the "welcome" page
 </code></pre>
    
-What is important about the difference in styles?  The first example, <strong>When "Bob" logs in</strong>,  is a functional requirement.  The second, much longer, example is a procedural reference.  Procedures belong in the implementation details.  What you and your client should concern yourselves with in your feature files is that which has to happen and not how you expect it to happen.  That way, when somebody later decides that challenge and response authentication schemes are passé then you simply need change the authentication process steps behind the scenes.  Your outward facing feature files, the ones that your clients get to see, need not change at all.  In fact, a good question to ask yourself when writing a feature clause is: <strong><em>Will this wording need to change if the implementation does</em></strong>?  If the answer is yes then the clause is poorly written and you should rework it to avoid implementation specific details.  As a side benefit, in consequence your scenarios will be a lot shorter and much easier to follow and understand.
+What is important about the difference in styles?  The first example, <strong>When "Bob" logs in</strong>,  is a functional requirement.  The second, much longer, example is a procedural reference.  Procedures belong in the implementation details.  
 
-After each new feature clause is added then you should immediately create the corresponding step definition method.  This is where you put the implementation details because, in the normal course of events, your users will never see them.  Once your new test/step definition is written then you must prove to yourself that it fails by running it against the, as yet, non-existent application code.  Then, and only then, should you write the least application code that gets your test/step definition to pass.  Now that you have a passing step, without changing the method change the test criteria within it to something that cannot be and prove to yourself that it fails again. Once you have assured yourself that your test is passing for the right reason then reset the criteria so that the test passes again.  Once this cycle is complete then move on to the next feature step.
+What you and your client should concern yourselves with in your feature files is that which has to happen and not how you expect it to happen.  That way, when somebody later decides that challenge and response authentication schemes are passé then you simply need change the authentication process steps behind the scenes.  Your outward facing feature files, the ones that your clients get to see, need not change at all.  In fact, a good question to ask yourself when writing a feature clause is: <strong><em>Will this wording need to change if the implementation does</em></strong>?  If the answer is yes then the clause is poorly written and you should rework it to avoid implementation specific details.  As a side benefit, in consequence your scenarios will be a lot shorter and much easier to follow and understand.
 
-It is often tempting to just <em>skip ahead</em> with the analysis and complete as many scenarios and feature steps as one can imagine.  In some cases limited access to domain experts and end users may require that many feature steps be completed long before coding the associated step definitions is undertaken. This is a false economy.  In the long run, the best results are achieved when you write feature steps and step definitions incrementally, using the absolute minimum of code; and then immediately implement the new feature step requirement in the application, also using the absolute minimum code that will satisfy it.  
+After each new feature clause is added to its scenario then you should immediately create the corresponding step definition method.  This is where you put the implementation details because, in the normal course of events, your users will never see them.  Once your new test/step definition is written then you must prove to yourself that it fails by running it against the, as yet, non-existent application code.  Then, and only then, should you write the least application code that gets your test/step definition to pass.  Now that you have a passing step, without changing the step definition's logic change the test criteria within it to something that cannot be and prove to yourself that it fails again. Once you have assured yourself that your test is passing for the right reason then reset the criteria so that the test passes again.  Once this cycle is complete then move on to the next feature clause.
 
-This is a hard discipline to accept but the value with this approach is that you will rarely (never) have untested code anywhere in your application and your application will only have code that satisfies required features.  Consequently, you can face design changes ( and gem updates ) with complete equanimity, secure in the knowledge that if unanticipated changes break anything else then you will know of the side-effect immediately upon running your test suite.
+It is tempting, sometimes irresistibly so, to just <em>skip ahead</em> with the analysis stage alone and to complete as many features, scenarios and scenario statements as one can imagine.  In some cases limited access to domain experts and end users may require that many features have their scenario details completed long before coding the associated step definitions is undertaken. When this is avoidable it should be and when it is not avoidable then every effort should be made to avoid it nonetheless.  In the long run, the best results are achieved when you write feature statements and step definitions incrementally, using the absolute minimum of code, and then immediately implement the new step requirement in the application, also using the absolute minimum code that will satisfy it.  
 
-If you do anticipate feature steps then omitting any matcher for them in the step definitions files causes these steps to be reported as missing by Cucumber, which helpfully provides a suggested method and argument to implement.  Stub step matchers have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/undefined step definitions.
+This is a hard discipline to accept but the value with this approach is that you will rarely (never) have untested code anywhere in your application and your application will only have code that satisfies required features.  Consequently, you can face design changes ( and gem updates ) with complete equanimity, secure in the knowledge that if unanticipated changes break anything anywhere in your project then you will know of this immediately upon running your test suite.
+
+If it happens that, on occasion, you do anticipate feature steps ( and we all do this however much we try not to ) then omitting any matcher for them in the step definitions files causes these steps to be reported as missing by Cucumber. Not only does Cucumber report them, it helpfully provides a suggested step matcher and argument to implement.  If you end up writing stub step matchers then you have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/undefined step definitions, together with an optional message.  These will display as defined but pending in your Cucumber runs.
 <pre><code>
   Given /this step is not implemented yet/ do
     pending "your message goes here"
@@ -174,11 +178,11 @@ If you do anticipate feature steps then omitting any matcher for them in the ste
 
 h3. What are Features and Scenarios?
 
-A feature can be conceptualized as an indivisible unit of functionality embedded in the project to which it belongs.  For example, an authentication challenge and response user interface is usually considered a feature while an authentication system would comprise many features.   A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</strong></em>.
+A feature can be conceptualized as an indivisible unit of functionality embedded in the project to which it belongs.  For example, an authentication challenge and response user interface is usually considered a feature while an entire authentication system necessarily comprises many features.   A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</strong></em>.
 
-A scenario is a block of instructions that exercise some behaviour desired or deprecated in the feature to which it belongs.  A scenario might check that the login interface provides input fields for the requisite responses, that failures are logged or otherwise reported. that user ids are locked out after a given number of failed attempts, and so forth.  Each scenario exercises the implementation code  to prove that for each anticipated condition the expected behaviour is indeed produced.
+A scenario is a block of instructions that exercise some behaviour desired or deprecated in the feature to which it belongs.  A scenario might check that the login interface provides input fields for the requisite responses, that failures are logged or otherwise reported. that user ids are locked out after a given number of failed attempts, and so forth.  Each scenario exercises the implementation code  to prove that for each anticipated condition the expected behaviour is indeed produced.  Recall that scenarios specify <strong>what</strong> and should avoid answering the question: <strong>How</strong>?
 
-Each Scenario consists of three sections, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong>.  Each section consists of one or more clauses (steps) that are used to match test step definitions. The conventional arrangement is:
+Each Scenario consists of three classes of statements, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong> which effectively divide each scenario into three stages.  Each stage of a scenario consists of one or more statements that are used to match to test step definitions. The conventional arrangement is:
 
 <pre><code>Feature: Some terse yet descriptive text of what is desired
 In order that some business value is realized
@@ -212,9 +216,9 @@ The string argument from each of these methods is compared against all the match
 end
 </code></pre>
 
-The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  Among other things, that means that all the arguments are received as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code>.
+The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  Among other things, that means that all the arguments are received as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code>.  It also means that step matchers can be followed by the special regexp modifiers, like <strong>i</strong> if you want to avoid issues involving capitalization.
 
-In the features provided above we had the statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
+In the feature provided above we had the scenario statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
 When /some (.*) action/ do |match|
 Then /(.*) other action/ do |match|
@@ -225,22 +229,22 @@ And /(.*) other (.*)/ do |first,second|
 
 The step definition match depends only upon the pattern following the Given/When/Then method and not upon the step method itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance, to me, for a matcher.
 
-If more than one matcher in all of the step definitions files matches a feature step then Cucumber complains that it found multiple step definition matches for that step and forces you to distinguish them.  You can force Cucumber to make a decision instead by passing the switch <code>--guess</code> on the command line.
+If Cucumber finds more than one matcher in all of the step definitions files matches a scenario statement then it complains that it has found multiple step definition matches for that step and forces you to distinguish them.  You can instruct Cucumber to just choose one of the candidates instead by passing it the <code>--guess</code> option on the command line.
 
-It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, all elements in the feature step clauses that are meant to be taken as values. This is only a convention and one not followed by many.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
+It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, all of the elements in the feature step clauses that are meant to be taken as values for variables passed to the step definition. This is just a convention.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly.  For example:
 <pre><code>Given Some determinable "business" situation</code></pre>
 <pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
 
-Finally, you can have step definitions call other step definitions, including those contained in other step definitions files.  For example:
+Finally, you can have step definitions call other step definitions, including those contained in other step definitions files.  This is where you can specify the procedural details by combining other steps. For example:
 
-<pre><code>When /some "(.*)" action/  do |a|
-   ...
+<pre><code>When /some "(.*)" action/  do |act|
+   .  .  .
 end
 
 When /in an invoiced non-shipped situation/ do
   Given "some \"invoiced\" action" 
   Then "some \"non-shipped\" action"
-  ...
+  .  .  .
 end
 </code></pre>
 
@@ -266,7 +270,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-The choice of method has no impact on the result but, <em>When</em> and <em>Then</em> used in this fashion seem to me to read more naturally.  You should also realize that the argument passed to the <em>Then</em> method is a string and that the string may be constructed in any manner.  For example the above <em>Then</em> statement could be passed as: 
+The choice of matcher method has no impact on the result but, <em>When</em> and <em>Then</em> used in this fashion seem to me to read more naturally.  You should also realize that the argument passed to the <em>Then</em> method is a string and that the string may be constructed in any manner.  For example the above <em>Then</em> statement could be passed as: 
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -285,7 +289,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-Keep in mind that cucumber is simply a DSL wrapper around the Ruby language, whose full expressiveness remains available to you in the step definition files.
+Keep in mind that Cucumber is simply a DSL wrapper around the Ruby language, whose full expressiveness remains available to you in the step definition files.
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Background section are run before each of the scenarios.
 
@@ -295,7 +299,7 @@ Feature: .  .  .
   Scenario: .  .  .
 </pre>  
 
-The step definitions files have corresponding method available in the <code>before(condition) do .  .  .</code> method, which has however a matching <code>after(condition) do .  .  .</code> method as well.  This is Ruby and the condition which enables the before/after block is anything that is not false or nil, like a <strong>tag</strong> for instance.
+Step definitions files have corresponding method available in the <code>before(condition) do .  .  .</code> method, which has however a matching <code>after(condition) do .  .  .</code> method as well.  Recall that we are working in Ruby and therefore the condition which enables the before/after block is anything that is not false or nil, like a <strong>tag</strong> for instance.  Also be aware that <strong>all</strong> eligible before methods are run before any scenario statements are processed, and in the order that they are encountered.  Likewise, every eligible after block will run at the completion of every scenario, again in the order that it is encountered.  These two methods are powerful tools but be aware that if you use them excessively then you will hang yourself eventually.
 
 h3. What are "tags"?
 
@@ -307,9 +311,10 @@ Cucumber provides a simple method to organize features and scenarios by user det
   .  .  .
   @wip @authent
   Scenario:  A user should authenticate before accessing any resource.
-     Given we do have a user named "testuser"
-      When I visit "the login page"
-         And I enter "testuser" in the "User ID" field
+     Given I do have a user named "testuser"
+      When the user visits the login page
+         And the user named "testuser" authenticates successfully
+     Then I should see .  .  .
          .   .  .
 </pre> 
 
@@ -339,8 +344,7 @@ default: <%= std_opts %> features
 .  .  .
 </pre>
 
-Note the trailing option <code>--tags ~@wip</code>.  If you do not specify a different profile then the default profile will
-be used.  If this is used then the <code>--tags ~@wip</code> will ignore any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
+Note the trailing option <code>--tags ~@wip</code>.  Cucumber provides for negating tags by prefacing the --tags argument with a tild character(<strong>~</strong>).  This tells Cucumber to not process features and scenarios so tagged. If you do not specify a different profile then the default profile will be used.  If the default profile is used then the <code>--tags ~@wip</code> will cause Cucumber to skip any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
 
 <pre>
 $ cucumber --tags=@authent
@@ -355,7 +359,7 @@ The number of occurrences of a particular tag in your feature set may be control
 
 Limiting the number of occurrences is commonly used in conjunction with the <code>@wip</code> tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
-As encountered above in the default profile, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em><code>@ignore</code></em>:
+As outlined above, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em><code>@ignore</code></em>:
 
 <pre>
 $ cucumber --require=features --tag=~@ignore features/wip
@@ -368,7 +372,7 @@ Unless you are knowledgeable enough that you use "mocks and stubs":http://rspec.
 rake db:test:prepare
 </code></pre>
 
-Frankly, except for the most trivial of cases, you should always use test data obtained from actual production environments.  You are, after all, embarked on an adventure; namely to discover how to make something work.  However, to discover what actually works requires more than a passing familiarity with what is real.  And made-up data is not reality.  Since it comes from the same source as most of your errors will, your own limited understanding of the problem domain,  manufactured data is always suspect. 
+As this is opinionated software my opinion is that, except for the most trivial of cases, you should always use test data obtained from actual production environments.  You are, after all, embarked on a real-world adventure; namely to discover how to make something work.  However, to discover what actually works requires more than a passing familiarity with what is real.  And made-up data is not reality.  Since it comes from the same source as most of your errors will, your own limited understanding of the problem domain,  manufactured data is always suspect. 
 
 That said, there remains an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic (for that see the Cucumber "Aruba":http://github.com/aslakhellesoy/aruba project)  and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist.  In the normal case, the end of any scenario results in the database being returned to a nil state.
 
