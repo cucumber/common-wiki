@@ -344,7 +344,7 @@ default: <%= std_opts %> features
 .  .  .
 </pre>
 
-Note the trailing option <code>--tags ~@wip</code>.  Cucumber provides for negating tags by prefacing the --tags argument with a tild character(<strong>~</strong>).  This tells Cucumber to not process features and scenarios so tagged. If you do not specify a different profile then the default profile will be used.  If the default profile is used then the <code>--tags ~@wip</code> will cause Cucumber to skip any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
+Note the trailing option <code>--tags ~@wip</code>.  Cucumber provides for negating tags by prefacing the --tags argument with a tild character(<strong><code>~</code></strong>).  This tells Cucumber to not process features and scenarios so tagged. If you do not specify a different profile then the default profile will be used.  If the default profile is used then the <code>--tags ~@wip</code> will cause Cucumber to skip any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
 
 <pre>
 $ cucumber --tags=@authent
@@ -359,7 +359,7 @@ The number of occurrences of a particular tag in your feature set may be control
 
 Limiting the number of occurrences is commonly used in conjunction with the <code>@wip</code> tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
-As outlined above, tags may be negated by prefacing the tag with the tilde (<strong>~</strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em><code>@ignore</code></em>:
+As outlined above, tags may be negated by prefacing the tag with the tilde (<strong><code>~</code></strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em><code>@ignore</code></em>:
 
 <pre>
 $ cucumber --require=features --tag=~@ignore features/wip
