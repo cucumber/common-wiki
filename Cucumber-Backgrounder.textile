@@ -344,7 +344,7 @@ default: <%= std_opts %> features
 .  .  .
 </pre>
 
-Note the trailing option <code>--tags ~@wip</code>.  Cucumber provides for negating tags by prefacing the --tags argument with a tild character(<strong><code>~</code></strong>).  This tells Cucumber to not process features and scenarios so tagged. If you do not specify a different profile then the default profile will be used.  If the default profile is used then the <code>--tags ~@wip</code> will cause Cucumber to skip any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
+Note the trailing option <code>--tags ~@wip</code>.  Cucumber provides for negating tags by prefacing the <code>--tags</code> argument with a tilde character(<strong><code>~</code></strong>).  This tells Cucumber to not process features and scenarios so tagged. If you do not specify a different profile then the default profile will be used.  If the default profile is used then the <code>--tags ~@wip</code> will cause Cucumber to skip any scenario that is so tagged.  This will override the <code>--tags=@authen</code> option passed in the command line and so you will see this:
 
 <pre>
 $ cucumber --tags=@authent
