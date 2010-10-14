@@ -14,7 +14,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Cucover":http://github.com/mattwynne/cucover | Coverage-aware lazy / selective Cucumber feature runnner|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
 |"Cucumber Factory":http://github.com/makandra/cucumber_factory/tree/master|Create Rails model records without writing step definitions.|
-|"Cucumber Feature Manager":http://cs3b.github.com/cucumber_fm/|Help to manage with big amount of features in project, "demo":http://demo.cucumber.fm/|
+|"Cucumber Feature Manager":http://github.com/cs3b/cucumber_fm|Help to manage with big amount of features in project, "demo":http://demo.cucumber.fm/|
 |"Cucumber Growler *fixed*":http://github.com/jeanmartin/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber >= 0.2|
 |"Cucumber Growler":http://github.com/paolodona/cucumber_growler|"Growl":http://growl.info/ notifications for Cucumber.|
 |"Cucumber Nagios":https://code.launchpad.net/cucumber-nagios|Web site monitoring with Cucumber and "Nagios":http://www.nagios.org/|
