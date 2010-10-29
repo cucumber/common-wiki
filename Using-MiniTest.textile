@@ -19,4 +19,11 @@ World do
 end
 </pre>
 
+Or
+
+<pre>
+require 'minitest/unit'
+World(MiniTest::Assertions)
+</pre>
+
 Also see the minitest cheat cheet "here":http://cheat.errtheblog.com/s/minitest/1
