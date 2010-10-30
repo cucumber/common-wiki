@@ -30,7 +30,7 @@ Here is how to do it:
 
 <pre><code>
 # RSpec
-require 'spec/expectations'
+require 'rspec/expectations'
 
 # Webrat
 require 'webrat'
