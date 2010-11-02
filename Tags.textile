@@ -74,6 +74,10 @@ Example: Running scenarios which match: (@billing OR @WIP) AND @important
 
 <pre><code>cucumber --tags @billing,@wip --tags @important</code></pre>
 
+Example: Skipping both @todo and @wip tags
+
+<pre><code>cucumber --tags ~@todo --tags ~@wip</code></pre>
+
 You can use this tag logic in your [[Hooks]] as well. 
 
 _This feature was originally added in version 0.4.3. The logical behaviour of tags was later reversed in version 0.6.0._
