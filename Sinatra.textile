@@ -56,7 +56,7 @@ You can also use Cucumber with "Sinatra":http://github.com/sinatra/sinatra using
 require 'rspec/expectations'
 
 # Required for RSpec to play nice with Sinatra/Test
-require 'spec/interop/test'
+require 'rspec/interop/test'
 
 # Sinatra/Test
 require 'sinatra/test'
