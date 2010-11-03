@@ -15,7 +15,7 @@ require app_file
 # Force the application name because polyglot breaks the auto-detection logic.
 Sinatra::Application.app_file = app_file
 
-require 'spec/expectations'
+require 'rspec/expectations'
 require 'rack/test'
 require 'webrat'
 
@@ -53,7 +53,7 @@ You can also use Cucumber with "Sinatra":http://github.com/sinatra/sinatra using
 <pre><code>require File.dirname(__FILE__) + "/../../your_sinatra_app"
 
 # RSpec matchers
-require 'spec/expectations'
+require 'rspec/expectations'
 
 # Required for RSpec to play nice with Sinatra/Test
 require 'spec/interop/test'
