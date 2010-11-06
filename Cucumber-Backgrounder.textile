@@ -1,4 +1,4 @@
-h2. Or: How I Learned to Stop Worrying and Love <strike>Testing</strike> Behaving
+h2. Or: How I Learned to Stop Worrying and <strike>Love Testing</strike> Start Behaving
 
 h3. Introduction
 
