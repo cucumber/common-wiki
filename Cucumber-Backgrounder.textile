@@ -360,7 +360,7 @@ Using the default profile...
 0m0.000s
 </pre>
 
-You can overcome this by adding the <code>--tags=@wip</code> to the Cucumber argument list on the command line.  This overrides the default setting in the configuration file.
+You can overcome this by adding the <code>--tags=@wip</code> to the Cucumber argument list on the command line.  This overrides the default setting in the configuration file.  Note however that @wip tags are a special case. If any scenario tagged as @wip passes all of its steps without error then Cucumber reports this as a Scenario failure.  Work in progress is not supposed to pass.
 
 The number of occurrences of a particular tag in your feature set may be controlled by appending a colon followed by a number to the end of the tag name passed to the tags option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message.  If the <code>--strict</code> option is passed as well, as is the case with the default profile, then instead of a warning the run will fail.
 
