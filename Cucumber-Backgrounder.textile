@@ -168,7 +168,7 @@ Generating scaffolds provides a comforting illusion of progress through its volu
 
 It proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write: 
 
-<code>When "Bob" logs in</code> 
+<pre><code>When "Bob" logs in</code></pre>
 
 and not:
 
