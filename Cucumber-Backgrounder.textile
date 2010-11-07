@@ -308,7 +308,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-Keep in mind that Cucumber is simply a DSL wrapper around the Ruby language, whose full expressiveness remains available to you in the step definition files.
+Keep in mind that Cucumber is simply a DSL wrapper around the Ruby language, whose full expressiveness remains available to you in the step definition files.  On the other hand, do not lose sight of the fact that the Give, When, Then clauses, even when contained within other steps, are parsed by Gherkin and must therefore conform to that syntax.
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Background section are run before each of the scenarios.
 
