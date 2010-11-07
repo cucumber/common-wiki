@@ -349,7 +349,7 @@ When /"Bob" logs in/ do |user|
   @current_session = UserSession.create(@current_user)
   .  .  .
 end
-</pre>
+</code></pre>
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Background section are run before each of the scenarios.
 
