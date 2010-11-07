@@ -332,18 +332,17 @@ When /"Bob" logs in/ do |user|
 That is acceptable usage in your step_definitions because your users are never going to see how ugly it looks.
 
 Having shown you how to call steps from steps take heed that you do not write many steps that are <strong><em>only</em></strong> called from other steps and are never found in feature files.  Sometimes this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything extensive in nature it is nearly always better to implement a custom method using the <strong>api</strong> provided by Cucumber (and its assorted extensions) and then call that from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
-<pre>
-Cucumber::Rails::World.class_eval do
+<pre><code>Cucumber::Rails::World.class_eval do
 
   def your_method(parm)
     .  .  .
   end
 
 end
-</pre>
+</code></pre>
 
 For instance, "Bob" could, and should, be authenticated in the step_definition thus:
-<pre>
+<pre><code>
 When /"Bob" logs in/ do |user|
   @current_user = User.find_by_username!(user)
   @current_session = UserSession.create(@current_user)
