@@ -347,6 +347,8 @@ For instance, "Bob" could, and should, be authenticated in the step_definition t
 When /"Bob" logs in/ do |user|
   @current_user = User.find_by_username!(user)
   @current_session = UserSession.create(@current_user)
+  .  .  .
+end
 </pre>
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Background section are run before each of the scenarios.
