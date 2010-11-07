@@ -44,7 +44,7 @@ Then I should create the directory ./features
 
 The foregoing gives a sample of the form that feature files often take.  The statements, called <em>feature steps</em> or <em>feature statements</em>, make up the user interface to Cucumber testing.  Those given above are written in the "Imperative Style":http://www.benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories/ simply for illustrative purposes.  <strong>Never put statements that look anything like these in a feature file</strong> ( <em>but you will</em> ).  In practice, all those Then/And statements should be subsumed into one simple Declarative Style statement. For example: <code>I should create the Cucumber environment</code>. The messy details of just what comprises a Cucumber environment are placed in the step definition files instead.  Instead, a feature should look more like this:
 
-<code><pre>
+<pre><code>
 Feature: Design and Build a Ruby on Rails web app using Behaviour Driven Development (BDD)
 In order to produce a web app at low cost and high speed
 A developer 
@@ -56,7 +56,7 @@ Scenario: Cucumber-Rails should be installed and configured
     And I do not have a cucumber environment
   When I run the cucumber-rails generator
   Then I should have a cucumber environment
-</pre></code>
+</code></pre>
 
 We will return to how to write features and steps later.  For the moment we deal with the logical arrangement of Cucumber files within the context of an RoR project.  The root level of the archetypal RoR project directory tree looks like this:
 
