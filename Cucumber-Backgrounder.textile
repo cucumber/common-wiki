@@ -166,7 +166,12 @@ Constructing ones first tests, or features as BDD purists prefer, is often accom
 
 Scaffolding provides a comforting illusion of progress through its voluminous production of boilerplate code.  Said code being, for all intents and purposes, worthless save only as an example of proper syntax and even the syntax is sometimes dubious.  By all means take a look at the generated code to obtain some idea of how things should look when you write your own features, but do not expect your project to design itself. 
 
-It proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write <code>When "Bob" logs in</code> and not:
+It proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write: 
+
+<code>When "Bob" logs in</code> 
+
+and not:
+
 <pre><code>
   Given I visit "/login"
   When I enter "Bob" in the "user name" field
@@ -472,4 +477,4 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 
 h3. Postscript.
 
-A caution, Cucumber is meant to facilitate expressing required behaviours.  Indirection and excessive adherence to the principle of DRY, particularly in features, is at variance with both the intent and the major benefit of the tool.  Requirement expression in features should remain as self evident to the non-technical reader and be as self contained as possible.  Resist the temptation to effectively program features using the DSL.  "Features should remain patent statements of intent":http://mislav.uniqpath.com/2010/09/cuking-it-right/.  If you feel the need to "program" a scenario in order to simplify writing a feature then you are likely doing something at considerably at odds with the intent of BDD methodology.  In such circumstances, mentally step back and reconsider your approach to the problem.
+A caution, Cucumber is meant to facilitate expressing required behaviours.  Indirection and excessive adherence to the principle of DRY, particularly in features, is at variance with both the intent and the major benefit of the tool.  Requirement expression in features should remain as self evident to the non-technical reader and be as self contained as possible.  Resist the temptation to effectively program features using the DSL.  "Features should remain patent statements of intent":http://mislav.uniqpath.com/2010/09/cuking-it-right/.  If you feel the need to "program" a scenario in order to simplify writing a feature then you are likely doing something considerably at odds with the intent of BDD methodology.  In such circumstances, mentally step back and reconsider your approach to the problem.
