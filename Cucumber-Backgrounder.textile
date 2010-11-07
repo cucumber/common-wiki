@@ -26,7 +26,7 @@ Given I have installed the gem named "rails"
   And I have the file cucumber.yml in the config directory of "my_project"
   And the file cucumber.yml contains a valid default profile
 
-When I run "script/generate cucumber"
+When I run "rails g cucumber"
 
 Then I should create the directory ./features
   And I should create the file ./features/features.feature
@@ -76,7 +76,7 @@ We will return to how to write features and steps later.  For the moment we deal
 `-- vendor
 </code></pre>
 
-Running script/generate cucumber adds this layout to the existing structure:
+Running rails g cucumber adds this layout to the existing structure:
 <pre><code>|-- features
 |-- step_definitions
 |   `-- web_steps.rb
