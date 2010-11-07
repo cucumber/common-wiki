@@ -184,7 +184,21 @@ What is important about the difference in styles?  The first example, <strong>Wh
 
 What you and your client should concern yourselves with in your feature files is that which has to happen and not how you expect it to happen.  That way, when somebody later decides that challenge and response authentication schemes are passé then you simply need change the authentication process steps behind the scenes.  Your outward facing feature files, the ones that your clients get to see, need not change at all.  In fact, a good question to ask yourself when writing a feature clause is: <strong><em>Will this wording need to change if the implementation does</em></strong>?  If the answer is yes then the clause is poorly written and you should rework it avoiding implementation specific details.  As a side benefit, in consequence your scenarios will be a lot shorter and much easier to follow and understand.
 
-After each new feature statement is added to its scenario then you should immediately create the corresponding step definition method.  This is where the implementation details are put because, in the normal course of events, your users will never see them.  Once your new step definition is written then you must prove to yourself that it fails by running it against the, as yet, non-existent application code.  Then, and only then, should you write the least application code that gets your test/step definition to pass.  Now that you have a passing step, without changing the step definition's logic change the test criteria within it to something that cannot be and prove to yourself that it fails again. Once you have assured yourself that your test is passing for the right reason then reset the criteria so that the test passes again.  Once this cycle is complete then move on to the next feature clause.
+After each new feature statement is added to its scenario then you should immediately create the corresponding step definition method.  This is where the implementation details are put because, in the normal course of events, your users will never see them.  Once your new step definition is written then you must prove to yourself that it fails by running it against the, as yet, non-existent application code.  Then, and only then, should you write the least application code that gets your test/step definition to pass.  Now that you have a passing step, without changing the step definition's logic change the test criteria within it to something that cannot be and prove to yourself that it fails again. Once you have assured yourself that your test is passing for the right reason then reset the criteria so that the test passes again.  Once this cycle is complete then move on to the next feature clause.  For example:
+<pre><code>
+Scenario: Users can enter an invoice item
+   .  .  .
+   Then I enter the sale quantity
+</code></pre>
+
+Now, immediately go to your step_definition file and do this:
+<pre><code>
+When /I enter an invoice item/ do
+  pending "TODO: Do we need to have a produce code passed or should we just create one?"
+end
+</code></pre>
+
+Think about how you are going to express this behaviour in your application and how you can detect that it occurs.  Go back and rework your feature and step until you are satisfied that it will indeed produce some testable result.  Now, go write the code to implement this requirement in your application.
 
 It is tempting, sometimes irresistibly so, to just <em>skip ahead</em> with the analysis stage alone and to complete as many features, scenarios and scenario statements as one can imagine.  In some cases limited access to domain experts and end users may require that many features have their scenario details completed long before coding the associated step definitions is undertaken. When this is avoidable it should be and when it is not avoidable then every effort should be made to avoid it nonetheless.  In the long run, the best results are achieved when you write feature statements and step definitions incrementally, using the absolute minimum of code, and then immediately implement the new step requirement in the application, also using the absolute minimum code that will satisfy it.  
 
