@@ -194,7 +194,7 @@ Scenario: Users can enter an invoice item
 Now, immediately go to your step_definition file and do this:
 <pre><code>
 When /I enter an invoice item/ do
-  pending "TODO: Do we need to have a produce code passed or should we just create one?"
+  pending "TODO: Do we need to have a product code passed or should we just create one?"
 end
 </code></pre>
 
