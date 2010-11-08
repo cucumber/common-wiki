@@ -198,7 +198,7 @@ When /I enter an invoice item/ do
 end
 </code></pre>
 
-Think about how you are going to express this behaviour in your application and how you can detect that it occurs.  Go back and rework your feature and step until you are satisfied that it will indeed produce some testable result.  Now, go write the code to implement this requirement in your application.
+Think about how you are going to express this behaviour in your application and how you can detect that it occurs.  Go back and rework your feature and step until you are satisfied that it will indeed produce some testable result <strong>and</strong> that the test fails.  Now, go write the code to implement this requirement in your application.
 
 It is tempting, sometimes irresistibly so, to just <em>skip ahead</em> with the analysis stage alone and to complete as many features, scenarios and scenario statements as one can imagine.  In some cases limited access to domain experts and end users may require that many features have their scenario details completed long before coding the associated step definitions is undertaken. When this is avoidable it should be and when it is not avoidable then every effort should be made to avoid it nonetheless.  In the long run, the best results are achieved when you write feature statements and step definitions incrementally, using the absolute minimum of code, and then immediately implement the new step requirement in the application, also using the absolute minimum code that will satisfy it.  
 
