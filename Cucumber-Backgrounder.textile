@@ -343,9 +343,19 @@ When /"Bob" logs in/ do |user|
   ) )
 </pre>
 
-That is acceptable ( <em>barely</em> ) usage in your step_definitions because your users are never going to see how ugly it looks.
+That is acceptable ( <em>barely</em> ) usage in your step_definitions because your users are never going to see how ugly it looks. Instead, given that the necessary classes and methods exist, "Bob" could, and should, be authenticated without recourse to the user interface thus:
 
-Having shown you how to call steps from steps take heed that you do not write many steps that are <strong><em>only</em></strong> called from other steps and are never found in feature files.  Sometimes this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything extensive in nature it is nearly always better to implement a custom method using the <strong>api</strong> provided by Cucumber (and its assorted extensions) and then call that from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
+<pre><code>
+When /"Bob" logs in/ do |user|
+  @current_user = User.find_by_username!(user) # ! method raises exception on failure
+  @current_session = UserSession.create!(@current_user)  # ! method raises exception on failure
+  .  .  .
+end
+</code></pre>
+
+Of course, when you are testing the login user interface the ugly approach is unavoidable.
+
+Having just shown you how to call steps from within other steps take heed that you do not write many step definitions that are <strong><em>only</em></strong> called from other steps and are never found in feature files.  Sometimes this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything extensive in nature it is nearly always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
 <pre><code>
 Cucumber::Rails::World.class_eval do
   def your_method(parm)
@@ -354,14 +364,7 @@ Cucumber::Rails::World.class_eval do
 end
 </code></pre>
 
-For instance, given that the classes and methods exist, "Bob" could, and should, be authenticated in the step_definition thus:
-<pre><code>
-When /"Bob" logs in/ do |user|
-  @current_user = User.find_by_username!(user)
-  @current_session = UserSession.create(@current_user)
-  .  .  .
-end
-</code></pre>
+My rule of thumb is that if a step definition requires more than eight to ten lines of code, and it is called from any other step definition, then its contents probably should be refactored out into a custom method.
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Background section are run before each of the scenarios.
 
