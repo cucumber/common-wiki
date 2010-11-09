@@ -77,13 +77,14 @@ We will return to how to write features and steps later.  For the moment we deal
 </code></pre>
 
 Running rails g cucumber adds this layout to the existing structure:
-<pre><code>|-- features
-|-- step_definitions
-|   `-- web_steps.rb
-`-- support
-    |-- env.rb
-    |-- hll_cuke_sample_helpers.rb
-    `-- paths.rb
+<pre><code>
+|-- features
+|   |-- step_definitions
+|   |   `-- web_steps.rb
+|   |-- support
+|   |   |-- env.rb
+|   |   |-- hll_cuke_sample_helpers.rb
+        `-- paths.rb
 </code></pre>
 
 We are now ready to begin testing with Cucumber.
