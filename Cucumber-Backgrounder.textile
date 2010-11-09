@@ -187,13 +187,13 @@ After each new feature statement is added to its scenario then you should immedi
 <pre><code>
 Scenario: Users can enter an invoice item
    .  .  .
-   Then I enter the sale quantity
+   Then I enter a product quantity of 5
 </code></pre>
 
 Now, immediately go to your step_definition file and do this:
 <pre><code>
-When /I enter an invoice item/ do
-  pending "TODO: Do we need to have a product code passed or should we just create one?"
+When /enter a product quantity of (\d+)/ do |quantity|
+  pending "TODO: Do we need to have a product code passed as well?"
 end
 </code></pre>
 
