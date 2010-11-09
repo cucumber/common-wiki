@@ -80,10 +80,10 @@ Depending upon the version of Rails, running <code>rails g cucumber</code> or <c
 <pre><code>
 |-- features
 |   |-- step_definitions
-|   |   `-- web_steps.rb
-|   |-- support
-|   |   |-- env.rb
-|   |   |-- hll_cuke_sample_helpers.rb
+`   |   `-- web_steps.rb
+    `-- support
+        |-- env.rb
+        |-- hll_cuke_sample_helpers.rb
         `-- paths.rb
 </code></pre>
 <em>If you are not using Cucumber-Rails then you can accomplish much the same thing by creating the directory tree from the command line (mkdir -p features/step_definitions) and simply ignoring the support directory and all of the (Rails specific) files</em> .  Once the features directory structure is in place then we are ready to begin testing with Cucumber.
@@ -119,7 +119,7 @@ As shown above, the default features directory tree is fairly shallow.  One can 
 |   |   |-- local_steps.rb
 |   |   |-- local_web_steps.rb
 |   |   |-- local_xml_file_steps.rb
-|   |   `-- web_steps.rb
+`   |   `-- web_steps.rb
     `-- support
         |-- env.rb
         |-- hll_cuke_sample_helpers.rb
@@ -132,17 +132,17 @@ In this case the bland initial set-up has been divided into sub-directories info
 <pre><code>|-- features
 |   |-- models
 |   |   |-- entities
-|   |   |   |-- entity.feature
-|   |   |   `-- step_definitions
-|   |   |       |-- anything.rb
-|   |   |       `-- entity_steps.rb
+|   |       |-- entity.feature
+|   |       `-- step_definitions
+|   |           |-- anything.rb
+|   |           `-- entity_steps.rb
 |   |-- views
 |   |   |-- entity_new
 |   |   `-- step_definitions
 |   |       `-- entity_new_steps.rb
 |   |-- step_definitions
 |   |   |-- local_steps.rb
-|   |   `-- web_steps.rb
+`   |   `-- web_steps.rb
     `-- support
         |-- env.rb
         |-- hll_cuke_sample_helpers.rb
