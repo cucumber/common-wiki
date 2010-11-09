@@ -140,13 +140,13 @@ In this case the bland initial set-up has been divided into sub-directories info
 |   |   |-- entity_new
 |   |   `-- step_definitions
 |   |       `-- entity_new_steps.rb
-|-- step_definitions
-|   |-- local_steps.rb
-|   `-- web_steps.rb
-`-- support
-      |-- env.rb
-      |-- hll_cuke_sample_helpers.rb
-      |-- local_env.rb
+|   |-- step_definitions
+|   |   |-- local_steps.rb
+|   |   `-- web_steps.rb
+|   `-- support
+|   |   |-- env.rb
+|   |   |-- hll_cuke_sample_helpers.rb
+|   |   |-- local_env.rb
        `-- paths.rb
 </code></pre>
 
