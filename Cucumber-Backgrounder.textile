@@ -120,11 +120,11 @@ As shown above, the default features directory tree is fairly shallow.  One can 
 |   |   |-- local_web_steps.rb
 |   |   |-- local_xml_file_steps.rb
 |   |   `-- web_steps.rb
-|   `-- support
-|   |   |-- env.rb
-|   |   |-- hll_cuke_sample_helpers.rb
-|   |   |-- local_env.rb
-|   |   `-- paths.rb
+    `-- support
+        |-- env.rb
+        |-- hll_cuke_sample_helpers.rb
+        |-- local_env.rb
+        `-- paths.rb
 </code></pre>
 
 In this case the bland initial set-up has been divided into sub-directories informed by model-centric testing.  This could equally well have been broken up in to model/controller/view hierarchies:
@@ -143,11 +143,11 @@ In this case the bland initial set-up has been divided into sub-directories info
 |   |-- step_definitions
 |   |   |-- local_steps.rb
 |   |   `-- web_steps.rb
-|   `-- support
-|   |   |-- env.rb
-|   |   |-- hll_cuke_sample_helpers.rb
-|   |   |-- local_env.rb
-       `-- paths.rb
+    `-- support
+        |-- env.rb
+        |-- hll_cuke_sample_helpers.rb
+        |-- local_env.rb
+        `-- paths.rb
 </code></pre>
 
 Consider, however, that the Cucumber feature scaffold generator will generate the files it produces in conformance with the default layout, with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>.  Further, despite the behaviour of the Cucumber-Rails generator, it is considered an anti-pattern to relate step_definition files to specific feature files.  As is the case for many programming suggestions there are exceptions and contrary opinions respecting this advice.  Nonetheless, it is probably best to follow this recommendation at the outset and depart from it only when you are experienced enough to evaluate the trade-offs between approaches.
