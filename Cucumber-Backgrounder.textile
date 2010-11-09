@@ -76,7 +76,7 @@ We will return to how to write features and steps later.  For the moment we deal
 `-- vendor
 </code></pre>
 
-Running <code>rails g cucumber</code> ( <code>script/generate cucumber</code> ) adds this layout to the existing structure:
+Depending upon the version of Rails, running <code>rails g cucumber</code> or <code>script/generate cucumber</code> adds this layout to the existing structure:
 <pre><code>
 |-- features
 |   |-- step_definitions
@@ -86,8 +86,7 @@ Running <code>rails g cucumber</code> ( <code>script/generate cucumber</code> ) 
 |   |   |-- hll_cuke_sample_helpers.rb
         `-- paths.rb
 </code></pre>
-
-We are now ready to begin testing with Cucumber.
+<em>If you are not using Cucumber-Rails then you can accomplish much the same thing by manipulating the file system directly from the command line ( mkdir -p features/support etc. ) and ignoring the files</em> .  Once the features directory structure is in place then we are ready to begin testing with Cucumber.
 
 h3.  Where do I put Tests?
 
