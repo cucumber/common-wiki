@@ -110,22 +110,21 @@ As shown above, the default features directory tree is fairly shallow.  One can 
 |   |       `-- location_steps.rb
 |   |-- sites
 |   |   `-- step_definitions
-|-- step_definitions
-|   |-- local_assert_steps.rb
-|   |-- local_crud_response_steps.rb
-|   |-- local_email_steps.rb
-|   |-- local_file_steps.rb
-|   |-- local_script_steps.rb
-|   |-- local_steps.rb
-|   |-- local_web_steps.rb
-|   |-- local_xml_file_steps.rb
-|   `-- web_steps.rb
-`-- support
-    |-- env.rb
-    |-- hll_cuke_sample_helpers.rb
-    |-- local_env.rb
-    `-- paths.rb
-
+|   |-- step_definitions
+|   |   |-- local_assert_steps.rb
+|   |   |-- local_crud_response_steps.rb
+|   |   |-- local_email_steps.rb
+|   |   |-- local_file_steps.rb
+|   |   |-- local_script_steps.rb
+|   |   |-- local_steps.rb
+|   |   |-- local_web_steps.rb
+|   |   |-- local_xml_file_steps.rb
+|   |   `-- web_steps.rb
+|   `-- support
+|   |   |-- env.rb
+|   |   |-- hll_cuke_sample_helpers.rb
+|   |   |-- local_env.rb
+|   |   `-- paths.rb
 </code></pre>
 
 In this case the bland initial set-up has been divided into sub-directories informed by model-centric testing.  This could equally well have been broken up in to model/controller/view hierarchies:
