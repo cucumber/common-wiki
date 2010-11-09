@@ -131,7 +131,7 @@ In this case the bland initial set-up has been divided into sub-directories info
 
 <pre><code>|-- features
 |   |-- models
-|   |   |-- entities
+|   |   `-- entities
 |   |       |-- entity.feature
 |   |       `-- step_definitions
 |   |           |-- anything.rb
