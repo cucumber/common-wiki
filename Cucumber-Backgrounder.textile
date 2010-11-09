@@ -86,7 +86,7 @@ Depending upon the version of Rails, running <code>rails g cucumber</code> or <c
         |-- hll_cuke_sample_helpers.rb
         `-- paths.rb
 </code></pre>
-<em>If you are not using Rails and Cucumber-Rails in your project then you can accomplish much the same thing by creating the directory tree from the command line (mkdir -p features/step_definitions) and simply ignoring the support directory and all of the (Rails specific) files</em> .  Once the features directory structure is in place then we are ready to begin testing with Cucumber.
+<em>If you are not using Rails and Cucumber-Rails in your project then you can accomplish much the same thing by creating the directory tree from the command line (mkdir -p features/step_definitions) adding the support directory and and simply ignoring all of the (Rails specific) files</em> .  Once the features directory structure is in place then we are ready to begin testing with Cucumber.
 
 h3.  Where do I put Tests?
 
