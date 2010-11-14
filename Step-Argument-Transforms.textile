@@ -1,10 +1,11 @@
-Step argument transforms help your step definitions be more by DRY by allowing you to refactor common operations performed on the step definition arguments to a common operation.  Before each step definition's captured Regexp groups are yielded as arguments to the step definition block, an attempt is made to match them against registered @Transform@ objects.  If a capture value matches one of the @Transform@ objects the result of @Transform@'s block yielded to step definition as the argument.
+Step argument transforms help your step definitions be more by DRY by allowing you to refactor common operations performed on the step definition arguments to a common operation.  Before each step definition's captured Regexp groups are yielded as arguments to the step definition block, an attempt is made to match them against registered @Transform@ objects.  If a capture value matches one of the @Transform@ objects the result of the @Transform@ block yields to step definition as the argument.
 
 
 h2. Registering a Transform
 
-
 ```ruby
+# features/step_definitions/user_steps.rb
+
 Transform /^(-?\d+)^/ do |number|
   number.to_i
 end
@@ -17,7 +18,7 @@ end
 
 h2. Transforms in Execution
 
-The above transform converts any step definition captures and converts them automatically to integers.
+The following transform converts any step definition captures that match digits and converts them automatically to integers.
 
 ```ruby
 # features/step_definitions/user_steps.rb
@@ -35,29 +36,69 @@ end
 
 h2. Transforming Tables
 
-Step argument transforms can also be used with tables. A table is matched via a comma-delimited list of the column headers and the 'table:' prefix:
-
-
 ```gherkin
 # features/table.feature
-Scenario: setting up via table
-  Given ...
-  When ...
-  Then I should have
-    | name  | age |
-    | corey | 36  |
+Feature: Users
+
+  Scenario: Creating Users
+    Given the following users:
+      | user          | followers |
+      | aslakhellesoy | 317       |
+      | jberkel       | 51        |
+      | bfaloona      | 4         |
+      | mattwynne     | 33        |
 ```
 
+h3. (Re-)Mapping Headers and Columns
+
+Table objects have two extremely useful methods: @map_column!@ and @map_headers!@.
 
 ```ruby
 # features/step_definitions/user_steps.rb
-Transform /^table:name,age$/ do |table|
-  table.hashes.map { |hash| hash[:name] }.map {|name| User.find_by_name(name)}
+
+Given /^the following customers$/ do |table|
+  # Convert all headers to lower case symbol
+  table.map_headers! {|header| header.downcase.to_sym }
+
+  # Convert all user strings to Users
+  table.map_column!(:user) {|user| User.find_by_name(user) }
+  
+  # Convert all the digits in the followers column to an Integer
+  table.map_column!(:followers) {|count| count.to_i }
+
+  table.hashes.each do |row|
+    row[:user].followers = row[:followers]
+  end
 end
 ```
 
-You can also use @Table#.map_column!@ and @Table#.map_headers!@ to modify tables. See [[RDoc]] for details.
+h3. The Whole Table
 
+A table like this one may occur again in a creation step or a validation step and Transforms will again help keep you DRY.  Transforms can also be used with tables. A table transform is matched via a comma-delimited list of the column headers prefixed with 'table:'
+
+```ruby
+# features/step_definitions/user_steps.rb
+
+Transform /^table:user,followers$/ do |table|
+  table.map_headers! {|header| headers.downcase.to_sym }
+  table.map_column!(:user) {|user| User.find_by_name(user) }
+  table.map_column!(:followers) {|count| count.to_i }
+  table
+end
+
+Given /^the following users$/ do |table|
+  table.hashes.each do |row|
+    row[:user].followers = row[:followers]
+  end
+end
+
+Then /^I expect the following users$/ do |table|
+  table.hashes.each do |row|
+    row[:user].should_not be_nil
+    row[:user].followers.should == row[:followers]
+  end
+end
+```
 
 h2. Transform Wisdom
 
@@ -104,7 +145,7 @@ end
 However, removing the caret and dollar sign will allow this step definition to match *ANY* step definition captures that have the value _a_ in it.  This will likely wreak havoc as the value 1 starts appearing in a large set of your step definitions.
 
 
-*3. In step definitions capture contextual to ensure that the correct transform is used.*
+*3. In step definition capture contextual to ensure that the correct transform is used.*
 
 ```ruby
 Transform /^a user,? named '([^']+)',?$/ do |name|
@@ -130,3 +171,5 @@ If you find that you transform is used by multiple step definitions, move the tr
 h2. Further Examples
 
 "Larry Diehl at Engine Yard":http://www.engineyard.com/blog/2009/cucumber-step-argument-transforms/
+
+
