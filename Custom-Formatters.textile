@@ -88,3 +88,4 @@ h2. Other Formatters
 # "cucumber-json":http://github.com/jnewland/cucumber-json - A cucumber output formatter that outputs JSON 
 # "SlowHandCuke":http://github.com/moredip/SlowHandCuke - Simple tweak to the Pretty formatter to display the currently running step as it is running
 # "Timestamped":http://github.com/moredip/Timestamped - Append test run timestamps to each scenario name as it is being output.
+# "Fuubar":http://github.com/martinciu/fuubar-cucumber - The instafailing progress bar formatter
