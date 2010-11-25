@@ -406,7 +406,7 @@ Opinions vary of course, but for me a <em>Good</em> step definition has the foll
 
 My template for a step definition presently looks like this:
 <pre><code>
-When /statement identifier( not)? expectation "([[^\"]+)"/ do |boolean, value|
+When /statement identifier( not)? expectation "([^\"]+)"/i do |boolean, value|
   expected = !boolean
   ...
 end
