@@ -287,6 +287,8 @@ When /in an invoiced non-shipped situation/ do
 end
 </code></pre>
 
+h3. Steps within Steps - an anti-pattern
+
 If one step definition calls another step definition then the matcher argument to the called <strong>Given/When/Then</strong> method must be enclosed with string delimiters.  Because of this, if you have adopted the practice of demarcating parameter values present in feature steps with double quotation marks, you must escape these quotation marks when calling another definition_steps.rb matcher from inside a step_definitions.rb file.  You must take care not to include the quote marks in the step_definitions parameter matchers, for <code>"(.*)"</code> is not the same as <code>(.*)</code> or <code>(".*")</code>.  If you use quote delimited values in the .feature file steps and do not account for them in the corresponding step_definition.rb matcher regexp then you will obtain variables that contain leading and trailing quotes as part of their value.
 
 <pre><code>
@@ -378,7 +380,9 @@ Cucumber::Rails::World.class_eval do
 end
 </code></pre>
 
-My rule of thumb is that if a step definition requires more than eight to ten lines of code, and it is called from any other step definition, then its contents probably should be refactored out into a custom method.
+My rule of thumb is that if a step definition requires more than eight to ten lines of code, and it is called from any other step definition, then its contents probably should be extracted out into a custom method.
+
+h3. Before, After and Background
 
 If all your feature's scenarios share the same 'setup' feature steps then Cucumber provides the <em>Background</em> section.  Steps contained within a Background section are run before each of the scenarios.
 
@@ -389,6 +393,24 @@ Feature: .  .  .
 </pre>  
 
 Step definitions files have corresponding method available in the <code>before(condition) do .  .  .</code> method, which has however a matching <code>after(condition) do .  .  .</code> method as well.  Recall that we are working in Ruby and therefore the condition which enables the before/after block is anything that is not false or nil, like a <strong>tag</strong> for instance.  Also be aware that <strong>all</strong> eligible <code>before</code> methods are run before any scenario statements are processed, and that they are run in the order encountered.  Likewise, every eligible <code>after</code> block will run at the completion of every scenario, again in the order that it is encountered.  These two methods are powerful tools, but be aware that if you use them excessively then you will hang yourself eventually.
+
+h3. What make as good Step Definition?
+
+Opinions vary of course, but for me a <em>Good</em> step definition has the following attributes:
+
+* The matcher is short.
+* The matcher handles both positive and negative (true and false) conditions.
+* The variables are clearly named
+* The body is less than ten lines of code
+* The body does not call other steps
+
+My template for a step definition presently looks like this:
+<pre><code>
+When /statement identifier( not)? expectation "([[^\"]+)"/ do |boolean, value|
+  expected = !boolean
+  ...
+end
+</code></pre>
 
 h3. What are "tags"?
 
