@@ -352,7 +352,22 @@ When /"Bob" logs in/ do |user|
 end
 </code></pre>
 
-Of course, when you are testing the login user interface the ugly approach is unavoidable.
+Of course, when you are testing the login user interface the ugly approach seems unavoidable, but in fact it is not. Providing for the purposes of testing that certain conventions are followed respecting user names and passwords the following works just as well and is much cleaner.  Plus you have removed all inter-step dependencies.
+
+feature statement:
+<pre><code>
+When "Bob" logs on through the logon page
+</code></pre>
+
+step_definition:
+<pre><code>
+When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
+  visit(logon_path)
+  fill_in( "User Name", :with => user_name )
+  fill_in( "Password", :with => user_name + "-test-passwd" )
+  click_button( "Logon" )
+end
+</code></pre>
 
 Having just shown you how to call steps from within other steps take heed that you do not write many step definitions that are <strong><em>only</em></strong> called from other steps and are never found in feature files.  Sometimes this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything extensive in nature it is nearly always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
 <pre><code>
