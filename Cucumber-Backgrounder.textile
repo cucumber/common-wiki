@@ -392,15 +392,16 @@ Feature: .  .  .
   Scenario: .  .  .
 </pre>  
 
-Step definitions files have corresponding method available in the <code>before(condition) do .  .  .</code> method, which has however a matching <code>after(condition) do .  .  .</code> method as well.  Recall that we are working in Ruby and therefore the condition which enables the before/after block is anything that is not false or nil, like a <strong>tag</strong> for instance.  Also be aware that <strong>all</strong> eligible <code>before</code> methods are run before any scenario statements are processed, and that they are run in the order encountered.  Likewise, every eligible <code>after</code> block will run at the completion of every scenario, again in the order that it is encountered.  These two methods are powerful tools, but be aware that if you use them excessively then you will hang yourself eventually.
+Step definition files have a corresponding method available in the <code>before(condition) do .  .  .</code> method, which has however a matching <code>after(condition) do .  .  .</code> method as well.  Recall that we are working in Ruby and therefore the condition which enables the before/after block is anything that is not false or nil, like a <strong>tag</strong> for instance.  Also be aware that <strong>all</strong> eligible <code>before</code> methods are run before any scenario statements are processed, and that they are run in the order encountered.  Likewise, every eligible <code>after</code> block will run at the completion of every scenario, again in the order that it is encountered.  These two methods are powerful tools, but be aware that if you use them excessively then you will hang yourself eventually.
 
-h3. What make as good Step Definition?
+h3. What is a good Step Definition?
 
-Opinions vary of course, but for me a <em>Good</em> step definition has the following attributes:
+Opinions vary of course, but for me a <strong><em>good</em></strong> step definition has the following attributes:
 
 * The matcher is short.
 * The matcher handles both positive and negative (true and false) conditions.
-* The variables are clearly named
+* The matcher has at most two value parameters
+* The parameter variables are clearly named
 * The body is less than ten lines of code
 * The body does not call other steps
 
