@@ -412,6 +412,16 @@ When /statement identifier( not)? expectation "([^\"]+)"/i do |boolean, value|
 end
 </code></pre>
 
+For example ( admittedly contrived ):
+<pre><code>
+When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, boolean, category|
+  expected = !boolean
+  message = "Product '#{product}' should#{boolean} belong to category '#{category}'"
+  this_product = Product.find_by_stock_number!( product )
+  assert( ( this_product.category == category ) == expected, message )
+end
+</code></pre>
+
 h3. What are "tags"?
 
 Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong><code>@</code></strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em><code>@wip</code></em> tag.  However, any string may used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
