@@ -61,6 +61,7 @@ There are several ways to get yourself started in writing tests, depending somew
 ** [[Custom Formatters]]
 ** [[Console Colours]]
 ** [[Hooks]]
+** [[Tags]]
 ** [[Profiles]]
 ** [[Running Features]]
 ** [[Using Rake]]
