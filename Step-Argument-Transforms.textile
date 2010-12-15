@@ -6,7 +6,7 @@ h2. Registering a Transform
 ```ruby
 # features/step_definitions/user_steps.rb
 
-Transform /^(-?\d+)^/ do |number|
+Transform /^(-?\d+)$/ do |number|
   number.to_i
 end
 ```
@@ -23,7 +23,7 @@ The following transform converts any step definition captures that match digits 
 ```ruby
 # features/step_definitions/user_steps.rb
 
-Transform /^(-?\d+)^/ do |number|
+Transform /^(-?\d+)$/ do |number|
   number.to_i
 end
 
@@ -111,12 +111,12 @@ With no capture groups specified the entire value is returned as a string to the
 
 ```ruby
 # Valid - without the capture group () specified
-Transform /^-?\d+^/ do |number|
+Transform /^-?\d+$/ do |number|
   number.to_i
 end
 
 # Invalid - Cucumber will raise an error when you execute the test suite
-Transform /^-?\d+^/ do
+Transform /^-?\d+$/ do
   number.to_i
 end
 ```
