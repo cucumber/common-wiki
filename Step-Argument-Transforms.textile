@@ -160,12 +160,12 @@ Then /^(a user, named '(?:[^']+)',) should have (\d+) followers$/ do |name,count
 end
 ```
 
-Without a transform you would have likely only wanted to match the value in the single-quotes.  However, matching only the name would likely open our transform up to a large number of arguments and we wouldn't be assured that we were getting a user.  So in you step definitions match additional contextual information that you can filter out with your Transforms.
+Without a transform you would have likely only wanted to match the value in the single-quotes.  However, matching only the name would likely open our transform up to a large number of arguments and we wouldn't be assured that we were getting a user.  So in your step definitions use additional contextual information in your matches and let your Transforms filter the data further.
 
 
 *4. Register a @Transform@ close to where it is being employed.*
 
-The best strategy is to define your transforms in the same file that they are used.  When a transform is used by a large number of step definitions move the transform to a unique file in the support directory (i.e. @step_definitions/support/numeric_transforms.rb@).
+The best strategy is to define your transforms in the same file that they are used.  When a transform is used by a large number of step definitions move the transform to a unique file in the support directory (e.g. @step_definitions/support/numeric_transforms.rb@).
 
 
 h2. Further Examples
