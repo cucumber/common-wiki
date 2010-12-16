@@ -1,4 +1,4 @@
-Step argument transforms help your step definitions be more by DRY by allowing you to refactor common operations performed on the step definition arguments to a common operation.  Before each step definition's captured Regexp groups are yielded as arguments to the step definition block, an attempt is made to match them against registered @Transform@ objects.  If a capture value matches one of the @Transform@ objects the result of the @Transform@ block yields to step definition as the argument.
+Step argument transforms help your step definitions be more by DRY by allowing you to refactor common operations that you perform on step definition arguments.  Before each match captured by a step definition is yielded as an argument to the step definition block, an attempt is made to match them against registered @Transform@ objects.  If one of those captured matches matches the regular expression of one of a @Transform@ object is original string value is replaced with the result of what the @Transform@ block yields.
 
 
 h2. Registering a Transform
@@ -18,7 +18,7 @@ end
 
 h2. Transforms in Execution
 
-The following transform converts any step definition captures that match digits and converts them automatically to integers.
+An example, the following Transform converts any step definition captures that match digits and converts them automatically to integers.
 
 ```ruby
 # features/step_definitions/user_steps.rb
@@ -74,7 +74,7 @@ end
 
 h3. The Whole Table
 
-A table like this one may occur again in a creation step or a validation step and Transforms will again help keep you DRY.  Transforms can also be used with tables. A table transform is matched via a comma-delimited list of the column headers prefixed with 'table:'
+A table like this one may occur again in a creation step and again in a validation step.  Using a Transform will keep you DRY.  Transforms can also be used with tables. A table transform is matched via a comma-delimited list of the column headers prefixed with 'table:'
 
 ```ruby
 # features/step_definitions/user_steps.rb
@@ -102,7 +102,7 @@ end
 
 h2. Transform Wisdom
 
-Transforms are powerful and it is important to take care how you implement them as mistakes with them can often introduce strange and unexpected behavior.
+Transforms are powerful and it is important to take care how you implement them.  A mistake with them can often introduce strange and unexpected behavior.
 
 
 *1. Transforms always require that you specify a block variable even if you do not specify any groups to capture.*  
@@ -145,7 +145,7 @@ end
 However, removing the caret and dollar sign will allow this step definition to match *ANY* step definition captures that have the value _a_ in it.  This will likely wreak havoc as the value 1 starts appearing in a large set of your step definitions.
 
 
-*3. In step definition capture contextual to ensure that the correct transform is used.*
+*3. Capture contextual information in your step definitions to ensure that the correct transform is used.*
 
 ```ruby
 Transform /^a user,? named '([^']+)',?$/ do |name|
@@ -160,12 +160,12 @@ Then /^(a user, named '(?:[^']+)',) should have (\d+) followers$/ do |name,count
 end
 ```
 
-Before using a transform, you would have likely only wanted to match the name, the value in single quotes, as a group  However, matching only the name would likely open our transform up to a large number of arguments and we wouldn't be assured that we were getting a user.
+Without a transform you would have likely only wanted to match the value in the single-quotes.  However, matching only the name would likely open our transform up to a large number of arguments and we wouldn't be assured that we were getting a user.  So in you step definitions match additional contextual information that you can filter out with your Transforms.
 
 
-*4. Register a @Transform@ in the same file in which they are being employed.*
+*4. Register a @Transform@ close to where it is being employed.*
 
-If you find that you transform is used by multiple step definitions, move the transform to a file in the support directory (i.e. @step_definitions/support/numeric_transforms.rb@).
+The best strategy is to define your transforms in the same file that they are used.  When a transform is used by a large number of step definitions move the transform to a unique file in the support directory (i.e. @step_definitions/support/numeric_transforms.rb@).
 
 
 h2. Further Examples
