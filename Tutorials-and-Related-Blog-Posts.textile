@@ -5,6 +5,10 @@ Please add any helpful blog posts that you have found or written about all thing
 |*Post*|*Description*|*Posting Date*|
 |"The Secret Ninja Cucumber Scrolls":http://cuke4ninja.com| Free online book on Cucumber | Dec 04 2010 |
 |"Cucumber + Cuke4Duke + Selenium (WebDriver) = Enlightenment":http://terminalvelocity-socal.blogspot.com/2010/11/cucumber-cuke4duke-selenium-webdriver.html| Nice little intro to Cuke4Duke | Nov 30 2010 |
+|"UI Tests (IV)":http://www.cheezyworld.com/2010/11/21/ui-tests-default-dat/|Default Data|Nov 21, 2010|
+|"UI Tests (III)":http://www.cheezyworld.com/2010/11/19/ui-tests-introducing-a-simple-dsl/|Using a simple DSL|Nov 19, 2010|
+|"UI Tests (II)":http://www.cheezyworld.com/2010/11/13/ui-tests-part-two/|Advanced Page Objects|Nov 13, 2010|
+|"UI Tests (I)":http://www.cheezyworld.com/2010/11/09/ui-tests-not-brittle/|Avoid brittleness|Nov 9, 2010|
 |"An Introduction to Outside-in Development":http://rubylearning.com/blog/2010/10/05/outside-in-development/|Thoughtbotter "Harold Gimenez":http://twitter.com/hgimenez walks you through Outside In on Rails3|Oct 05, 2010|
 |"Cucumber Sauce":http://saucelabs.com/blog/index.php/2010/09/cucumber-sauce-cross-browser-testing-in-parallel/|Run Cucumber tests cross-browsers in parallel via Selenium ("Repo":http://github.com/sgrove/cucumber_sauce)|Sept 20, 2010|
 |"Practical Cucumber: Organization":http://collectiveidea.com/blog/archives/2010/09/13/practical-cucumber-organization/|Advice for organizing steps and features|Sept 13, 2010|
