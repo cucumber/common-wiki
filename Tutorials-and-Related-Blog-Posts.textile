@@ -3,6 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
 
 |*Post*|*Description*|*Posting Date*|
+|"workflow: bdd of a blog part 1":http://oembot.tumblr.com/post/2346069125/bdd-of-a-simple-rails-app-with-cucumber-and-rspec| behaviour driven development of a simple blog with rails3, cucumber and rspec | Dec 17 2010|
 |"The Secret Ninja Cucumber Scrolls":http://cuke4ninja.com| Free online book on Cucumber | Dec 04 2010 |
 |"Cucumber + Cuke4Duke + Selenium (WebDriver) = Enlightenment":http://terminalvelocity-socal.blogspot.com/2010/11/cucumber-cuke4duke-selenium-webdriver.html| Nice little intro to Cuke4Duke | Nov 30 2010 |
 |"@cheezy UI Tests series part IV":http://www.cheezyworld.com/2010/11/21/ui-tests-default-dat/|Default Data|Nov 21, 2010|
