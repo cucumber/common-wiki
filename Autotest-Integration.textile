@@ -110,6 +110,9 @@ Some people have reported problems running autotest. One known issue is an error
 The error can occur because of a recent split of autotest code so that it misses a required library. Try 
 <pre><code>$ sudo gem install autotest-rails
 </code></pre>
+Sometimes having multiple versions of supporting gems might also cause this issue. Running the autotest within the bundle will solve this problem
+<pre><code>$ bundle exec autotest
+</code></pre>
 
 h4. Dirty database
 
