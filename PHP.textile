@@ -1,3 +1,9 @@
+h2. Directly testing PHP code
+
+To directly test PHP code using step definitions written in PHP, please see the "Cuke4Php":https://github.com/olbrich/cuke4php project.
+
+h2. Testing against PHP web applications
+
 Most people seem to use cucumber for rails and most of the howtos and documents on the web reflect this. But cucumber is a great tool for testing any kind of web application, no matter what language it was built in. We could use Selenium, and there are good "how-to's":http://wiki.github.com/aslakhellesoy/cucumber/setting-up-selenium for that - but Selenium is slow and clunky to setup, and should only be used if you need to test JavaScript. What if I want to write BDD stories and test a PHP app with cucumber?
 
 Turns out it is easier than I expected. Webrat has options for interfacing with a web application using rails, selenium or mechanize. All we have to do is tell webrat to use mechanize and most things will work exactly the same as in any other cucumber setup.
