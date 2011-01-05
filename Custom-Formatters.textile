@@ -89,3 +89,5 @@ h2. Other Formatters
 # "SlowHandCuke":http://github.com/moredip/SlowHandCuke - Simple tweak to the Pretty formatter to display the currently running step as it is running
 # "Timestamped":http://github.com/moredip/Timestamped - Append test run timestamps to each scenario name as it is being output.
 # "Fuubar":http://github.com/martinciu/fuubar-cucumber - The instafailing progress bar formatter
+# "Viewcumber":https://github.com/versapay/viewcumber -  Cucumber formatter which generates an HTML website to browse your scenarios and view screen capture of every single step.
+ 
