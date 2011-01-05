@@ -167,6 +167,9 @@ Without a transform you would have likely only wanted to match the value in the 
 
 The best strategy is to define your transforms in the same file that they are used.  When a transform is used by a large number of step definitions move the transform to a unique file in the support directory (e.g. @step_definitions/support/numeric_transforms.rb@).
 
+*5. The order that Transforms are loaded matter as they will take precedence over previously defined transforms.*
+
+To avoid overly confusing dependencies, a step argument may only be transformed once. The Transform defined last gets matching order precedence over previously defined transforms, giving you the ability to “override” previous transforms. As a rule of thumb, define general transforms first and get more specific last.
 
 h2. Further Examples
 
