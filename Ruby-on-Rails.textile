@@ -46,7 +46,7 @@ h2. Start a feature
 
 It's really, really recommended that you write your features by hand - in collaboration with your customer / business analyst / domain expert / interaction designer. However, to get you started you can use the feature generator to generate the first few features:
 
-<pre><code>ruby script/generate feature Frooble name:string color:string description:text
+<pre><code>ruby script/generate cucumber:feature Frooble name:string color:string description:text
 </code></pre>
 
 This will generate a simple plain text feature with associated steps. Don't get addicted to this
