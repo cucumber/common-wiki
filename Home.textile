@@ -39,6 +39,7 @@ There are several ways to get yourself started in writing tests, depending somew
 ** .NET (Microsoft.NET and Mono): [[IronRuby and .NET]], [[IronRuby and Mono]]
 ** Adobe Flex: [[FunFX|FunFX and Flex]], [[Melomel|http://melomel.info/Cucumber]]
 ** [[Python]]
+** Erlang: [[cucumberl|https://github.com/membase/cucumberl]]
 ** Web apps in any language: Drive a full or headless browser using one of these
 *** "Webrat":http://gitrdoc.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
 *** "Capybara":http://github.com/jnicklas/capybara - Acceptance testing framework with a webrat-like API and support for multiple backends, including RackTest, Selenium, Celerity and Culerity
