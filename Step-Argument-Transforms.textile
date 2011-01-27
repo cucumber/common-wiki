@@ -121,7 +121,7 @@ Transform /^-?\d+$/ do
 end
 ```
 
-When you specify capture groups, each capture will be yielded to the block as you have likely come to expect from step definitions would expect.
+When you specify capture groups, each capture will be yielded to the block as you have likely come to expect from step definitions.
 
 ```ruby
 # Converts the numeric abbreviation for KB/MB to the size 
