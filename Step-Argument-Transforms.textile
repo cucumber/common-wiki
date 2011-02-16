@@ -80,7 +80,7 @@ A table like this one may occur again in a creation step and again in a validati
 # features/step_definitions/user_steps.rb
 
 Transform /^table:user,followers$/ do |table|
-  table.map_headers! {|header| headers.downcase.to_sym }
+  table.map_headers! {|header| header.downcase.to_sym }
   table.map_column!(:user) {|user| User.find_by_name(user) }
   table.map_column!(:followers) {|count| count.to_i }
   table
