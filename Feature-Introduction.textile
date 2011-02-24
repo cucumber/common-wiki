@@ -32,7 +32,7 @@ In addition to scenario, feature may contain a background, scenario outline and 
 
 h3. Step definitions
 
-For each step Cucumber will will look for a matching *step definition*. A step definition is written in Ruby. Each step definition consists of a keyword, a string or regular expression, and a block. Example:
+For each step Cucumber will look for a matching *step definition*. A step definition is written in Ruby. Each step definition consists of a keyword, a string or regular expression, and a block. Example:
 
 <pre>
 # features/step_definitions/coffee_steps.rb
