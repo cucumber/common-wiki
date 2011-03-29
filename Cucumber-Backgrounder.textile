@@ -489,6 +489,8 @@ As outlined above, tags may be negated by prefacing the tag with the tilde (<str
 $ cucumber --require=features --tag=~@ignore features/wip
 </pre>
 
+A convention that I have adopted is tagging all scenarios created to track down a specific defect with tags of the form @issue_### where ### is the issue number assigned to the defect.  This both handles multiple related scenarios and provides a convenient and self-documenting way to verify with cucumber that a specific defect either has been completely resolved or that a regression has occurred.
+
 h3. What Way do I Run the Tests?
 
 Unless you are knowledgeable enough that you can use "mocks and stubs":http://rspec.info/documentation/mocks/ with flair then I consider it best to begin with creating a Rails migration file for the models you are testing ( or expressing features for ) followed by:
@@ -541,7 +543,7 @@ Cucumber-Rails is pre-configured with support for view integration testing using
 
 While Capybara is emerging as the preferred testing method it does not play well with Rails' own built-in Test Assertions.  In particular, whenever Capybara is required into a Cucumber World then the response.body method of Rails Test::Unit is removed.  
 
-Calls for any additional Ruby libraries that your particular testing environment may require are typically placed in the <code>./features/support/local_env.rb</code> file.  I advise against putting local customization in <code>support/env.rb</code> as it is typically overwritten by <code>script/generate cucumber</code>.  As a matter of good practice you should always run <code>script/generate cucumber</code> whenever you install an updated version.  You should do the same for rspec as well.
+Calls for any additional Ruby libraries that your particular testing environment may require are typically placed in the <code>./features/support/local_env.rb</code> file.  I advise against putting local customization in <code>support/env.rb</code> as it is typically overwritten by <code>script/generate cucumber | rails g cucumber</code>.  As a matter of good practice you should always run <code>script/generate cucumber | rails g cucumber</code> whenever you install an updated version.  You should do the same for rspec as well.
 
 Those of you that have used <code>growl</code> or <code>snarl</code> to provide desktop notifiers from autotest are advised that, as of this writing, Cucumber did not hook into the :red :green notifier capability of autotest;  so, no pop-ups when a step fails.  However, there exists a project to add a similar functionality to Cucumber. See "Cucumber_Growler":http://github.com/paolodona/cucumber_growler/tree/master.
 
@@ -559,6 +561,7 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 2010 July 13 - J. B. Byrne revised to 0.8.4
 2010 October 11 - J. B. Byrne revised to 0.9.0
 2010 November 06 - J. B. Byrne revised to 0.9.4
+2011 March 29 - J. B. Byrne revised to 0.10.0
 
 h3. Postscript.
 
