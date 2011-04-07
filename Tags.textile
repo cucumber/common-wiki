@@ -95,3 +95,9 @@ cucumber --tags @dev:2,@qa:3
 This will make cucumber fail if you have more than 2 <code>@dev</code> tags or more than 3 <code>@qa</code> tags, even if each of your scenarios pass individually.
 
 Used in conjunction with the <code>--wip</code> switch you can set up your project to enforce the WIP limits of your team.
+
+h2(#special-tags). Special Tags
+
+*@allow-rescue*: Turns off Cucumber’s exception capturing for the tagged scenario(s). Used when the code being tested is expected to raise and handle exceptions.
+
+*@javascript*: Uses a javascript-aware system to process web requests (e.g., Selenium) instead of the default (non-javascript-aware) webrat browser.
