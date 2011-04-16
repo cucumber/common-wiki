@@ -1,4 +1,4 @@
-Every <tt>.feature</tt> file conventionally consists of single feature. A line starting with the keyword *Feature* followed by free indented text starts a feature. A feature usually contains a list of scenarios. You can write whatever you want up until the first scenario, which starts with the word *Scenario* (or localized equivalent, Gherkin is localized for [[Spoken Languages|dozens of languages]]) on a new line. You can use [[Tags|tagging]] to group features and scenarios together independent of your file and directory structure.
+Every <tt>.feature</tt> file conventionally consists of a single feature. A line starting with the keyword *Feature* followed by free indented text starts a feature. A feature usually contains a list of scenarios. You can write whatever you want up until the first scenario, which starts with the word *Scenario* (or localized equivalent; Gherkin is localized for [[Spoken Languages|dozens of languages]]) on a new line. You can use [[Tags|tagging]] to group features and scenarios together independent of your file and directory structure.
 
 Every scenario consists of a list of steps, which must start with one of the keywords *Given*, *When*, *Then*, *But* or *And*. Cucumber treats them all the same, but you shouldn't. Here is an example:
 
@@ -14,7 +14,7 @@ Every scenario consists of a list of steps, which must start with one of the key
     Then I should be served a coffee
 </pre>
 
-In addition to scenario, feature may contain a background, scenario outline and examples.  Respective keywords (in English) and places to read more about them below.  You can get list of localized keywords with @cucumber --language [LANG] help@.
+In addition to a scenario, a feature may contain a background, scenario outline and examples.  Respective keywords (in English) and places to read more about them are listed below.  You can get a list of localized keywords with @cucumber --language [LANG] help@.
 
 | *keyword* | *localized* | *more info, see* |
 | name             | 'English'                | |
