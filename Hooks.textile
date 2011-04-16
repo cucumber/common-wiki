@@ -2,7 +2,7 @@ Cucumber provides a number of hooks which allow us to run blocks at various poin
 
 All defined hooks are run whenever the relevant event occurs.
 
-h2. Scenario hookss
+h2. Scenario hooks
 
 <code>Before</code> hooks will be run before the first step of each scenario. They will run in the same order of which they are registered.
 
