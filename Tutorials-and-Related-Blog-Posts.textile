@@ -3,8 +3,9 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
 
 |*Post*|*Description*|*Posting Date*|
+| "Designing Cucumber scenarios for manual verification":hhttp://andywaite.com/2011/4/24/designing-cucumber-scenarios-for-manual-verification | Andy Waite on why should write your Cucumber scenarios with manual execution in mind | April 24 2011 |
 | "top 3 ways to mess-up a cucumber functional test suite":http://blog.vinayvinay.com/top-3-ways-to-mess-up-a-cucumber-functional-t | "Vinay Patel":http://vinayvinay.com shares lessons learnt while working on a huge cucumber test suite | April 21, 2011 |
-| "Naming and structuring acceptance criteria":http://andywaite.com/2011/3/31/naming-and-structuring-acceptance-criteria | Tips on keeping your feature suite habitable | March 31 2011 |
+| "Naming and structuring acceptance criteria":http://andywaite.com/2011/3/31/naming-and-structuring-acceptance-criteria | Andy Waite on tips on keeping your feature suite habitable | March 31 2011 |
 |"Reducing step explosion by decoupling Cucumber steps from your GUI":http://watirmelon.com/2011/01/23/reducing-step-explosion-by-decoupling-cucumber-steps-from-your-gui/ | Alister Scott on why page object patterns are important | Jan 23 2011 |
 |"Simple Cucumber + Watir Page Object Pattern Framework":http://watirmelon.com/2011/01/21/my-simple-cucumber-watir-page-object-pattern-framework/ | Alister Scott on Setting up Cucumber with Watir/Watir-WebDriver/Celerity for maintainability | Jan 21 2011 |
 |"Organizing and classifying Cucumber features: Testing with Vision":http://testingwithvision.com/2011/01/06/cucumber-feature-organization-classification/ | Alister Scott on organizing and categorizing features by using tags and directories | Jan 6 2011 |
