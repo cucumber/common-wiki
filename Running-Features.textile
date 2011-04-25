@@ -16,6 +16,10 @@ For example
 
 ...will run the scenario(s) named "Failed login"
 
+<pre><code>cucumber --require features features/authentication/authenticate_user.feature</code></pre>
+
+...will run authenticate_user feature.  Any feature that is located inside a sub-directory of features directory must require features.  Note: you can also add this to your cucumber.yml.
+
 You can also use [[tags]] to specify what to run, or pass [[Environment Variables]] to Cucumber.
 
 h2. Using Rake
