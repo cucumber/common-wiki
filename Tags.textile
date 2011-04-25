@@ -1,4 +1,4 @@
-Tags is a great way to organise your features and scenarios. Consider this example:
+Tags are a great way to organise your features and scenarios. Consider this example:
 
 <pre>
 @billing
