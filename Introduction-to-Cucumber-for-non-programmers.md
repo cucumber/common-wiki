@@ -3,15 +3,15 @@ Cucumber tests are written in terms of features that are broken up into scenario
 Let’s start with an example feature file:
 ```Gherkin
 Feature: Explaining Cucumber
-	In order to gain an understanding of the Cucumber testing system
-	As a non-programmer
-	I want to have an overview of Cucumber that is understandable by non-geeks
+  In order to gain an understanding of the Cucumber testing system
+  As a non-programmer
+  I want to have an overview of Cucumber that is understandable by non-geeks
 
-	Scenario: A worker seeks an overview of Cucumber
-		Given I have a coworker who knows a lot about Cucumber
-		When I ask my coworker to give an overview of how Cucumber works
-		And I listen to their explanation
-		Then I should have a basic understanding of Cucumber
+  Scenario: A worker seeks an overview of Cucumber
+    Given I have a coworker who knows a lot about Cucumber
+    When I ask my coworker to give an overview of how Cucumber works
+    And I listen to their explanation
+    Then I should have a basic understanding of Cucumber
 ```
 
 Note that the scenarios do not go into the nitty-gritty of what the software (or, in this case, the coworker) will do. It stays focused on the perspective of the person the feature is intended to serve (in this case, “a non-programmer”).
