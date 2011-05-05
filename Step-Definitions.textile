@@ -20,7 +20,7 @@ Step Definitions start with a "preposition":http://www.merriam-webster.com/dicti
 
 When Cucumber executes the plain text, it will for each step look for a registered Step Definition with a matching Regexp. If it finds one it will execute its Proc, passing all groups from the Regexp match as arguments to the Proc.
 
-The adjective/adverb has *no* significance when Cucumber is registering or looking for Step Definitions.
+The preposition/adverb has *no* significance when Cucumber is registering or looking for Step Definitions.
 
 Also check out [[Multiline Step Arguments]] for more info on how to pass entire tables or bigger strings to your step definitions.
 
