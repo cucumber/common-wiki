@@ -1,4 +1,4 @@
-Cucumber tests are written in terms of features that are broken up into scenarios.
+Cucumber tests are written in terms of “features”. Each feature consists of one or more “scenarios”.
 
 Let’s start with an example feature file:
 ```Gherkin
