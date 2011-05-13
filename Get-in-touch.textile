@@ -15,7 +15,7 @@ h2. Before you consider asking
 Try the latest released gem: 
 <pre>gem update cucumber</pre>
 
-Use "troubleshooting":http://wiki.github.com/aslakhellesoy/cucumber/troubleshooting tips 
+Use "troubleshooting":http://wiki.github.com/cucumber/cucumber/troubleshooting tips 
 
 h2. Before you ask
 
