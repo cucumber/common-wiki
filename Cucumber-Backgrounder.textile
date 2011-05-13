@@ -260,13 +260,14 @@ end
 
 The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code>.  Among other things, that means that all the arguments are received as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code>.  It also means that step matchers can be followed by the special regexp modifiers, like <strong>i</strong> if you want to avoid issues involving capitalization.
 
-In the feature provided above we had the scenario statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
+In the feature provided above we had the scenario statement: <code>And Some Other Action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
-When /some (.*) action/ do |match|
-Then /(.*) other action/ do |match|
-Given /(.*) other (.*)/ do |first,second|
-But /(.*) other (.*)/ do |first,second|
-And /(.*) other (.*)/ do |first,second|
+When /some other Action/i do 
+When /some other (Action)/i do |action|
+Then /(\w+) other action/i do |prefix_phrase|
+Given /(\w+) other (\w+)/i do |first_word,second_word|
+But /(\w+) Other (.*)/i do |first_word,second_phrase|
+And /(.*) other (.*)/i do |first_phrase,second_phrase|
 </code></pre>
 
 The step definition match depends only upon the pattern following the Given/When/Then method and not upon the step method itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance, to me, for a matcher.
@@ -565,9 +566,9 @@ if RUBY_VERSION =~ /1.8/
   Test::Unit.run = true
 end
 require "capybara"
-</end>
+</pre>
 
-This may no longer be case following the release of cucumber-rails v0.5.0 presently in beta.
+This requirement may no longer be case following the release of cucumber-rails v0.5.0 presently in beta.
 
 h3.  Need Help?
 
