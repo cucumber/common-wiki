@@ -1,6 +1,6 @@
-*{color: red}IMPORTANT*: See Cucumber-Rails' "README":http://github.com/aslakhellesoy/cucumber-rails/blob/master/README.rdoc for updated instructions for Rails3. This page will be updated with Rails3 info later.
+*{color: red}IMPORTANT*: See Cucumber-Rails' "README":http://github.com/cucumber/cucumber-rails/blob/master/README.rdoc for updated instructions for Rails3. This page will be updated with Rails3 info later.
 
-Cucumber supports Ruby on Rails out of the box. Currently the following Rails versions are tested with "cucumber-rails-test":http://github.com/aslakhellesoy/cucumber-rails-test
+Cucumber supports Ruby on Rails out of the box. Currently the following Rails versions are tested with "cucumber-rails-test":http://github.com/cucumber/cucumber-rails-test
 
 * v3.0.0.beta
 * v2.3.5
