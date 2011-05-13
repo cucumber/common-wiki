@@ -514,7 +514,7 @@ Running <code>rake cucumber</code> from the command line provides the simplest, 
 
 As discussed above, the Cucumber Rake task recognises the <code>@wip</code> tag, so <code>rake cucumber:wip</code> will run only those scenarios tagged with <strong>@wip</strong>.  For example, given a feature file containing:
 
-<pre>
+<pre><code>
 Feature: .  .  .
 
   Scenario: A
@@ -523,7 +523,7 @@ Feature: .  .  .
   Scenario: B
 
   Scenario: C
-</pre>
+</code></pre>
 
 Then running the command <code>rake cucumber:wip</code> will run the steps contained inside Scenario B only, while running <code>rake cucumber:ok</code> will run the steps within all Scenarios other than B.
 
@@ -555,18 +555,18 @@ Those of you that have used <code>growl</code> or <code>snarl</code> to provide 
 
 <code>autotest</code> is installed via the "ZenTest":http://www.zenspider.com/ZSS/Products/ZenTest/ gem.  If you use autotest then take a look at the contents of <code>example_dot_autotest.rb</code> in the ZenTest gem root directory.
 
-h3. Note Respecting cucumber-rails v0.4.1
+h3. Note Respecting cucumber-rails v0.4.1. <em>(2011 May 13)</em>
 
-It seems that the latest versions of cucumber and cucumber-rails are oriented towards Ruby-1.9.2.  If you are using Ruby-1.8.7 and employing testunit and Capybara then the following must be added to the <code>support/env.rb</code> file produced by the rails generator:
-<pre>
-# Nonetheless, these changes are required
+It seems that the latest versions of cucumber and cucumber-rails are oriented towards Ruby-1.9.2.  If you are using Ruby-1.8.7 and you are employing testunit or Capybara then one or both of the following must be added to the <code>support/env.rb</code> file produced by the rails generator:
+<pre><code># for testunit in Ruby-1.8.7
 ENV["RAILS_ENV"] = "test"
 if RUBY_VERSION =~ /1.8/
   require 'test/unit/testresult'
   Test::Unit.run = true
-end
+end</code>
+<code># for capybara
 require "capybara"
-</pre>
+</code></pre>
 
 This requirement may no longer be case following the release of cucumber-rails v0.5.0 presently in beta.
 
