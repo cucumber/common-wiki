@@ -1,7 +1,7 @@
 It's always a good sign for a tool when other people huddle around and write tools on top. These are the known 3rd party tools that work together with Cucumber:
 
 |_.Tool |_.Description |
-|"Aruba":http://github.com/aslakhellesoy/aruba|Generic step definitions for command line programs|
+|"Aruba":http://github.com/cucumber/aruba|Generic step definitions for command line programs|
 |"AutoTest":http://www.zenspider.com/ZSS/Products/ZenTest/|Run Cucumber features in the background with Cucumber's built-in [[Autotest Integration]]|
 |"Backyard":http://github.com/senny/backyard|Name the models in your cucumbers with ease|
 |"Bermuda":http://github.com/jfirebaugh/bermuda|Capybara step library for jQuery UI widgets|
