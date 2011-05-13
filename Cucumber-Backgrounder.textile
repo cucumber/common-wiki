@@ -422,7 +422,7 @@ end
 For example ( admittedly contrived ):
 <pre><code>
 When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, boolean, category|
-  actual = ( Product.find_by_stock_number!( product ).category ) == category
+  actual = ( Product.find_by_stock_number!( product ).category ) == category 
   expected = !boolean
   message = "Product '#{product}' should#{boolean} belong to category '#{category}'"
   assert( actual == expected, message )
