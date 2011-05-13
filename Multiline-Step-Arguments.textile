@@ -102,7 +102,7 @@ actual_table.map_column!('Artist') { |text| text.strip.match(/>(.*)</)[1] }
 expected_cukes_table.diff!(actual_table)
 </pre>
 
-For a more complex example, look at <notextile><a href="http://github.com/aslakhellesoy/cucumber-rails/commit/e03ca01556adcb21354046107f7c7803efb8b3df">this commit</a></notextile> which uses a Proc to extract each column from the HTML. (This is a spec for the internal <code>_tableish</code> method - in your own code you want to use <code>tableish</code> instead and skip the 1st <code>html</code> argument).
+For a more complex example, look at <notextile><a href="http://github.com/cucumber/cucumber-rails/commit/e03ca01556adcb21354046107f7c7803efb8b3df">this commit</a></notextile> which uses a Proc to extract each column from the HTML. (This is a spec for the internal <code>_tableish</code> method - in your own code you want to use <code>tableish</code> instead and skip the 1st <code>html</code> argument).
 
 h4. Transforming tables with Transform
 
