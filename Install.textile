@@ -21,7 +21,7 @@ Install a dependency:
 
 Then get the code via Git (or download a tarball):
 
-<pre><code>git clone git://github.com/aslakhellesoy/cucumber.git
+<pre><code>git clone git://github.com/cucumber/cucumber.git
 cd cucumber
 rake install_gem
 </code></pre>
