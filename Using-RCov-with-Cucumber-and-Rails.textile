@@ -30,7 +30,7 @@ Now when you run rake features, coverage information will be in rails_root/cover
 
 h3. Other ways to run features
 
-See "Running features":http://github.com/aslakhellesoy/cucumber/wikis/running-features
+See "Running features":http://github.com/cucumber/cucumber/wikis/running-features
 
 
 h3. Options
