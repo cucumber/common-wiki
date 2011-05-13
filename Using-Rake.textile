@@ -16,7 +16,7 @@ Note, how we use the 'cucumber_opts' accessor to define our arguments passed to 
 
 h2. Using Profiles in Rake Tasks
 
-For complex feature runs that you do often it is nice to save the command line arguments as cucumber profiles.  You can read more about Cucumber profiles "here":http://github.com/aslakhellesoy/cucumber/wiki/cucumber.yml.  Once you have some profiles defined you can use it in your rake tasks like so:
+For complex feature runs that you do often it is nice to save the command line arguments as cucumber profiles.  You can read more about Cucumber profiles "here":http://github.com/cucumber/cucumber/wiki/cucumber.yml.  Once you have some profiles defined you can use it in your rake tasks like so:
 
 <pre>
 require 'rubygems'
@@ -36,7 +36,7 @@ end
 
 h2. Using RCov
 
-Please see the wiki page about "using RCov":http://wiki.github.com/aslakhellesoy/cucumber/using-rcov-with-cucumber-and-rails.
+Please see the wiki page about "using RCov":http://wiki.github.com/cucumber/cucumber/using-rcov-with-cucumber-and-rails.
 
 h2. Guarding Your Production Boxes From Cucumber
 
