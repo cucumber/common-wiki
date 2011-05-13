@@ -28,11 +28,11 @@ h2. Getting started
 
 [[Install]] Cucumber using Rubygems.
 
-Take a look at the "examples":http://github.com/aslakhellesoy/cucumber/tree/master/examples. In each subdirectory you can run the <code>cucumber</code> command. If an example directory has a <code>Rakefile</code>, run <code>rake -T</code> to see what rake tasks are available.
+Take a look at the "examples":http://github.com/cucumber/cucumber/tree/master/examples. In each subdirectory you can run the <code>cucumber</code> command. If an example directory has a <code>Rakefile</code>, run <code>rake -T</code> to see what rake tasks are available.
 
 You'll see feature files printed in green indicating passing tests. Now go into the code the features describe and deliberately make a bug. Run the features again. Note that the backtrace (stack trace) also shows you the line of the plain text feature that fails.
 
-There are several ways to get yourself started in writing tests, depending somewhat on the architecture of your application.  Digest [[Cucumber Backgrounder]] first (especially if you work with "Rails":http://wiki.github.com/aslakhellesoy/cucumber/ruby-on-rails).  Then you might want to read more about [[Gherkin]], the Cucumber language and peek into specific topics (below) regarding the various aspects of setting up Cucumber.
+There are several ways to get yourself started in writing tests, depending somewhat on the architecture of your application.  Digest [[Cucumber Backgrounder]] first (especially if you work with "Rails":http://wiki.github.com/cucumber/cucumber/ruby-on-rails).  Then you might want to read more about [[Gherkin]], the Cucumber language and peek into specific topics (below) regarding the various aspects of setting up Cucumber.
 
 * Cucumber and other languages (Cucumber's example directory has examples for some of these)
 ** Java Virtual Machine: [[JRuby and Java]]
