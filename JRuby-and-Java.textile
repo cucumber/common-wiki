@@ -1,1 +1,1 @@
-*{color:red}Please check out "Cuke4Duke":http://wiki.github.com/aslakhellesoy for instructions about Cucumber on the JVM*
+*{color:red}Please check out "Cuke4Duke":http://github.com/cucumber/cuke4duke for instructions about Cucumber on the JVM*
