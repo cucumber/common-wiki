@@ -1,1 +1,1 @@
-Please see the "cucumber.yml page":http://wiki.github.com/aslakhellesoy/cucumber/cucumber.yml
+Please see the "cucumber.yml page":http://wiki.github.com/cucumber/cucumber/cucumber.yml
