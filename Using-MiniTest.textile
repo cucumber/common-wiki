@@ -26,4 +26,12 @@ require 'minitest/unit'
 World(MiniTest::Assertions)
 </pre>
 
+Also, if you wanted to use MiniTest::Spec, the snippet would look like this:
+<pre>
+require 'minitest/unit'
+require 'minitest/spec'
+World(MiniTest::Assertions)
+MiniTest::Spec.new(nil)
+</pre>
+
 Also see the minitest cheat cheet "here":http://cheat.errtheblog.com/s/minitest/1
