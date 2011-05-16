@@ -34,4 +34,4 @@ World(MiniTest::Assertions)
 MiniTest::Spec.new(nil)
 </pre>
 
-Also see the minitest cheat cheet "here":http://cheat.errtheblog.com/s/minitest/1
+Also see the minitest cheat sheet "here":http://cheat.errtheblog.com/s/minitest/1
