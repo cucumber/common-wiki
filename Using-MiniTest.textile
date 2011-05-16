@@ -27,7 +27,8 @@ World(MiniTest::Assertions)
 </pre>
 
 Also, if you wanted to use MiniTest::Spec, the snippet would look like this:
-<pre>require 'minitest/unit'
+
+<pre>
 require 'minitest/spec'
 World(MiniTest::Assertions)
 MiniTest::Spec.new(nil)
