@@ -49,7 +49,6 @@ There are several ways to get yourself started in writing tests, depending somew
 *** "Watir":http://watir.com/ - Drives IE (Windows only) and Firefox (Windows, OSX, GNU/Linux), see: [[Setting up FireWatir]]
 *** "FireWatir":http://watir.com/ - Drives Firefox on Windows, OSX and GNU/Linux
 *** "SafariWatir":http://safariwatir.rubyforge.org/ - Drives Safari (OS X only)
-*** "ChromeWatir":http://code.google.com/p/chrome-watir/wiki/ChromeWatir - Drives Google Chrome
 *** "Celerity":http://celerity.rubyforge.org/ - Drives a fast headless browser with Javascript support. Examples "here":http://github.com/alvinschur/celerity-examples/tree/master
 *** "Culerity":http://github.com/langalex/culerity/ - For when you can't run your app under jRuby
 *** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS), see: [[Setting up Selenium]]
