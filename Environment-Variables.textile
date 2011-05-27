@@ -6,4 +6,8 @@ cucumber FOO=BAR --format progress features
 
 You can now pick up <code>ENV['FOO']</code> in ruby (for example in env.rb or a step definition) and take actions according to the value.
 
-You can also do this in [[cucumber.yml]].
+You can also do this in [[cucumber.yml]].  For example, this sets up a profile that runs a tag and sets an environment variable
+
+<pre>
+baz: --tags @mytag FOO=BAR
+</pre>
