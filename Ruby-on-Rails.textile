@@ -37,7 +37,8 @@ If you're on an OS that supports fork we recommend you use [[Spork and --drb]] a
 
 For more help on the generator you can just ask for help:
 
-<pre><code>ruby script/generate cucumber --help</code></pre>
+<pre><code>ruby script/generate cucumber --help # Rails 2
+rails generate cucumber:install --help # Rails 3</code></pre>
 
 Take a look at the generated files. If you need to, you can tweak them later.
 
