@@ -1,4 +1,4 @@
-To use RSpec's expectations (<code>should</code>), make sure the following is in features/support/env.rb:
+To use RSpec's 1.x.x expectations (<code>should</code>), make sure the following is in features/support/env.rb:
 
 <pre>
 require 'spec/expectations'
@@ -18,4 +18,11 @@ When running Cucumber from Maven (with Cuke4Duke) you need to install the RSpec 
           <gems>
 	      <gem>install cuke4duke --version 0.2.1 --source http://gems.rubyforge.org/</gem>
 	      <gem>install rspec --version 1.2.9 --source http://gems.rubyforge.org/</gem>
+</pre>
+
+To use RSpec's 2.x.x expectations (<code>should</code>), make sure the following is in features/support/env.rb:
+
+<pre>
+require 'rspec/expectations'
+World(Rspec::Matchers)
 </pre>
