@@ -161,10 +161,12 @@ Also be aware that, regardless of the directory structure employed, Cucumber eff
 h3. How do I Write Tests?
 
 Constructing ones first tests, or features as BDD purists prefer, is often accompanied by what can only be described as <em>"writer's block":http://en.wikipedia.org/wiki/Writer%27s_block</em>.  The question of "Where to begin?" seems to be a particular roadblock for some.  If you truly have no idea of where to start then I suggest that you consider what you are writing, presumably a web application, and what the initial point of contact between it and a user is, the home page.  You can do worse than simply starting with:
-<pre><code>Feature: An application to do whatever
-In order to generate revenue
-The users
-Should be able to visit our web site
+
+<pre><code>
+Feature: An application to do whatever
+  In order to generate revenue
+  The users
+  Should be able to visit our web site
 
 Scenario: The application has a home page
   Given I do have a web application
