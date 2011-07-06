@@ -1,4 +1,4 @@
-It's strongly recommended that you get familiar with changes between your current version and the version you're upgrading to. You can always find the changes in "History.txt":http://github.com/cucumber/cucumber/blob/master/History.txt
+It's strongly recommended that you get familiar with changes between your current version and the version you're upgrading to. You can always find the changes in "History.md":http://github.com/cucumber/cucumber/blob/master/History.md
 
 h2. 0.7.x
 
@@ -14,4 +14,4 @@ If you're upgrading from 0.6.x or earlier to 0.7.x you will find that feature fi
 
 h2. Ruby on Rails
 
-As of Cucumber 0.5.0 you should also install/upgrade the <code>cucumber-rails</code> gem. After doing that you must also run <code>ruby script/generate cucumber</code>. See cucumber-rails' "History.txt":http://github.com/cucumber/cucumber-rails/blob/master/History.txt for details, especially the upgrading instructions that are described for the 0.2.0 release of cucumber-rails.
+As of Cucumber 0.5.0 you should also install/upgrade the <code>cucumber-rails</code> gem. After doing that you must also run <code>ruby script/generate cucumber</code>. See cucumber-rails' "History.md":http://github.com/cucumber/cucumber-rails/blob/master/History.md for details, especially the upgrading instructions that are described for the 0.2.0 release of cucumber-rails.
