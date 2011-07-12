@@ -1,6 +1,6 @@
-h2. Pre-requisites
+*WARNING:* This guide is for setting up Selenium version 1, and is somewhat obsolete. We recommend you use "Selenium 2 / WebDriver":http://rubygems.org/gems/selenium-webdriver instead, through "Capybara":https://rubygems.org/gems/capybara if you're on Rails.
 
-*WARNING:* This guide is for setting up Selenium version 1, and is somewhat obsolete. We recommend you use Selenium 2 (WebDriver) instead, through Capybara if you're on Rails.
+h2. Pre-requisites
 
 Selenium-RC requires the Java Runtime Environment (JRE) version 1.5.0 or higher
 
