@@ -1,4 +1,4 @@
-<div style="float:right; margin: 0 0 0.5em 1em"><a href="http://www.pragprog.com/titles/achbd"><img src="http://shared2.pragprog.com/images/covers/190x228/achbd.jpg" style="border: 1px solid silver"/></a></div>
+<div style="float:right; margin: 0 0 0.5em 1em"><a href="http://www.pragprog.com/titles/hwcuc"><img src="http://cukes.info/images/hwcuc-190x228.jpg" style="border: 1px solid silver"/></a></div>
 
 !http://cukes.info/images/cucumber_logo.png!:http://cukes.info/ 
 
