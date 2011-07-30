@@ -1,9 +1,7 @@
-*{color:red}The API for Cucumber's formatters changed significantly when Cucumber 0.4 was released. See "here":https://rspec.lighthouseapp.com/projects/16211-cucumber/tickets/438-deprecate-cucumberastvisitor-and-make-formatters-simple-listeners for more details.*
-
-As Cucumber runs your features, it calls out to any number of listener objects to let them know how it's progressing. These listeners are notified at various points throughout the run of features. You can visualise this by using the 'debug' formatter. For example, look at the listener methods called for this simple feature in Cucumber's own test suite:
+As Cucumber runs your features, it calls out to any number of listener objects to let them know how it's progressing. These listeners are notified at various points throughout the run of features. You can visualise this by using the 'debug' formatter. For example, take this simple feature in Cucumber's own test suite:
 
 <pre>
-$head -7 examples/self_test/features/sample.feature
+$ head -7 examples/self_test/features/sample.feature
 # Feature comment
 @one
 Feature: Sample
@@ -11,7 +9,11 @@ Feature: Sample
     @two @three
   Scenario: Missing
     Given missing
-$cucumber --format debug examples/self_test/sample.feature:6
+</pre>
+
+Here are the events fired to a listener, shown using the debug formatter:
+<pre>
+$ cucumber --format debug examples/self_test/sample.feature:6
 before_features
   before_feature
     before_comment
@@ -39,7 +41,7 @@ before_features
 after_features
 </pre> 
 
-If you want to write your own custom formatter, just create a class that implements any of the methods you see in the output from the debug formatter. Let's have an example.
+If you want to write your own custom formatter, just create a class that implements any of the methods you see in the output from the debug formatter. Let's illustrate this with an example.
 
 Maybe you want to create a formatter that posts a message to Twitter every time a step fails? (I'm sure that would get you a lot of followers).
 
