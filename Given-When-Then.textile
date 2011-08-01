@@ -14,7 +14,7 @@ Examples:
 * It's ok to call into the layer "inside" the UI layer here (in Rails: talk to the models).
 * Log in a user (An exception to the no-interaction recommendation. Things that "happened earlier" are ok).
 
-And for all the Rails users out there - we recommend using a "Given with a multiline table argument":http://github.com/cucumber/cucumber-rails-test/blob/master/features/manage_lorries.feature to "set up records":http://github.com/cucumber/cucumber-rails-test/blob/master/features/step_definitions/lorry_steps.rb instead of fixtures. This way you can read the scenario and make sense out of it without having to look elsewhere (at the fixtures).
+And for all the Rails users out there - we recommend using a "Given with a multiline table argument":https://github.com/aslakhellesoy/cucumber-rails-test/blob/master/features/manage_lorries.feature to "set up records":https://github.com/aslakhellesoy/cucumber-rails-test/blob/master/features/step_definitions/lorry_steps.rb instead of fixtures. This way you can read the scenario and make sense out of it without having to look elsewhere (at the fixtures).
 
 h2. When
 
