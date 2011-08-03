@@ -2,7 +2,7 @@
 
 h2. Rails 3.x
 
-As of Cucumber-Rails version 0.5.0 and above, Cucumber-Rails *only* supports Rails 3.x (Rails 2 is *not* supported). See Cucumber-Rails' "README" for installation instructions.
+As of Cucumber-Rails version 0.5.0 and above, Cucumber-Rails *only* supports Rails 3.x (Rails 2 is *not* supported). See Cucumber-Rails' "README":https://github.com/cucumber/cucumber-rails/blob/master/README.md for installation instructions.
 
 h2. Rails 2.x
 
