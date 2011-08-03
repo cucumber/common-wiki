@@ -10,7 +10,7 @@ If you are on Rails 2.x you have to use an older version of Cucumber-Rails. We r
 
 h2. Install Cucumber-Rails
 
-<pre><code>[sudo] gem install cucumber-rails</code></pre>
+<pre><code>[sudo] gem install cucumber-rails -v 0.3.2</code></pre>
 
 The <code>cucumber-rails</code> gem depends on the <code>cucumber</code> gem, so you don't need to install that separately.
 
