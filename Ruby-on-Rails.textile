@@ -1,20 +1,12 @@
-*{color: red}IMPORTANT*: See Cucumber-Rails' "README":http://github.com/cucumber/cucumber-rails/blob/master/README.md for updated instructions for Rails3. This page will be updated with Rails3 info later.
+"Cucumber-Rails":http://github.com/cucumber/cucumber-rails lets you use Cucumber with Ruby on Rails.
 
-Cucumber supports Ruby on Rails out of the box. Currently the following Rails versions are tested with "cucumber-rails-test":http://github.com/cucumber/cucumber-rails-test
+h2. Rails 3.x
 
-* v3.0.0.beta
-* v2.3.5
-* v2.3.4
-* v2.3.3
-* v2.3.2
-* v2.2.2
-* v2.2.1
-* v2.2.0
-* v2.1.2
-* v2.1.1
-* v2.1.0
+As of Cucumber-Rails version 0.5.0 and above, Cucumber-Rails *only* supports Rails 3.x (Rails 2 is *not* supported). See Cucumber-Rails' "README" for installation instructions.
 
-Older versions will never be supported as it requires too much work. These instructions assume you already have a Rails project, and that you have a shell where the current directory is the root of your Rails app.
+h2. Rails 2.x
+
+If you are on Rails 2.x you have to use an older version of Cucumber-Rails. We recommend using Cucumber-Rails 0.3.2 with Capybara 0.3.9 and Cucumber 0.10.3. The rest of this page describes how to install Cucumber-Rails in a Rails 2.x application. These instructions assume you already have a Rails 2.x application, and that you have a shell where the current directory is the root of your Rails app.
 
 h2. Install Cucumber-Rails
 
@@ -22,13 +14,11 @@ h2. Install Cucumber-Rails
 
 The <code>cucumber-rails</code> gem depends on the <code>cucumber</code> gem, so you don't need to install that separately.
 
-h2. Bootstrap Cucumber-Rails
+h3. Bootstrap Cucumber-Rails
 
 Cucumber-Rails needs to add a few files to your project:
 
-<pre><code>ruby script/generate cucumber # Rails 2
-rails generate cucumber:install # Rails 3
-</code></pre>
+<pre><code>ruby script/generate cucumber</code></pre>
 
 If you're on an OS that supports fork we recommend you use [[Spork and --drb]] as this lets you start cucumber faster: 
 
@@ -36,16 +26,15 @@ If you're on an OS that supports fork we recommend you use [[Spork and --drb]] a
 
 For more help on the generator you can just ask for help:
 
-<pre><code>ruby script/generate cucumber --help # Rails 2
-rails generate cucumber:install --help # Rails 3</code></pre>
+<pre><code>ruby script/generate cucumber --help</code></pre>
 
 Take a look at the generated files. If you need to, you can tweak them later.
 
-h2. Install new dependencies
+h3. Install new dependencies
 
 <pre><code>[sudo] rake RAILS_ENV=cucumber gems:install</code></pre>
 
-h2. Start a feature
+h3. Start a feature
 
 It's really, really recommended that you write your features by hand - in collaboration with your customer / business analyst / domain expert / interaction designer. However, to get you started you can use the feature generator to generate the first few features:
 
@@ -58,7 +47,7 @@ generator - you're better off writing these by hand in the long run.
 *Important*: The generated feature will fail unless you have set up a layout in your app. This is because Webrat fails to parse HTML
 that isn't well formed (i.e. has a single <code><html></code> root node). "Here is a simple layout":http://github.com/aslakhellesoy/cucumber-rails-test/raw/master/app/views/layouts/application.html.erb you can use, but I hope you have a better one yourself.
 
-h2. Run features
+h3. Run features
 
 If working on a fresh Rails project, first set up the (empty) database:
 
@@ -103,23 +92,23 @@ autospec: --require features --require lib features
 default: --format pretty
 html: --format html --out features.html</code></pre>
 
-h2. Special tags
+h3. Special tags
 
 There are two special [[tags]] you can use to change how Cucumber runs your scenarios
 
-h3. @no-txn
+h4. @no-txn
 
 By default all scenarios will run within a database transaction that is rolled back at the end. However, scenarios tagged with <code>@no-txn</code> will run *without* a transaction. This can be useful when you have to deal with [[Browsers and Transactions]]. Beware that this will leave data in your database after that scenario, which can lead to hard-to-debug failures in subsequent scenarios. If you use this, we recommend you create a Before block that will explicitly put your database in a known state, for example using "DatabaseCleaner":http://github.com/bmabey/database_cleaner
 
-h3. @allow-rescue
+h4. @allow-rescue
 
 Scenarios tagged with <code>@allow-rescue</code> will cause Rails to rescue all errors and render error pages, more or less in the same way your application would behave in the default production environment. It's not recommended to do this for all of your scenarios, as this makes it hard to discover errors in your application.
 
-h2. Controller and View spec redundancy
+h4. Controller and View spec redundancy
 
 Since I recommend you verify outcomes (*Then* steps) by looking at the HTML, you might end up having some degree of redundancy with controller and view specs. I recommend you delete generated controller and view specs if you run into too much maintenance headaches and rely on the features instead. However, in some cases it can be handy to use them.
 
-h2. Authentication
+h3. Authentication
 
 Some guidance for authentication is provided below. It is recommended that a new user is created, rather than loaded through fixtures or etc.
 
@@ -143,8 +132,3 @@ In the .feature, use a phrase similar to <code>Given a user is logged in as "mar
   response.body.should =~ /Logged/m  
 end
 </code></pre>
-
-h2. Rails plugins
-* "Courgette":http://21croissants.github.com/courgette/ Rails engine (plugin) for Rails 2.x applications which makes your cucumber features files viewable through your browser
-* "Cucumber Feature Manager":http://github.com/cs3b/cucumber_fm Help to manage with big amount of features in project, "demo":http://demo.cucumber.fm/
-
