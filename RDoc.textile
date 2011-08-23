@@ -1,4 +1,4 @@
-The RDoc for the latest Cucumber code is hosted at http://cukes.info/cucumber/api/ruby/latest/
+The RDoc for the latest Cucumber code is hosted at "http://cukes.info/cucumber/api/ruby/latest/":http://cukes.info/cucumber/api/ruby/latest/
 This documentation always reflects the HEAD of aslakhellesoy's master branch and may therefore be slightly different from the latest gem release.
 
 If you want the RDoc for a particular version of Cucumber you must build it yourself:
