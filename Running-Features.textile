@@ -42,7 +42,7 @@ If you are using [[Ruby on Rails]] this task is defined for you already.  For mo
 
 h2. Using TextMate
 
-See the "Cucumber.tmbundle":http://github.com/bmabey/cucumber-tmbundle documentation
+See the "Cucumber.tmbundle":http://github.com/cucumber/cucumber-tmbundle documentation
 
 h2. Using RCov
 
