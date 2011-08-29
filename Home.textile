@@ -46,9 +46,8 @@ There are several ways to get yourself started in writing tests, depending somew
 *** "Steam":http://github.com/svenfuchs/steam - Drives a fast headless browser with Javascript support. Support for the normal webrat step definitions, see [[Setting up Steam]]
 *** [[PHP|Testing PHP app using Webrat]]
 *** "WebDriver":http://code.google.com/p/selenium/wiki/RubyBindings - Drives IE, Firefox, Chrome
-*** "Watir":http://watir.com/ - Drives IE (Windows only) and Firefox (Windows, OSX, GNU/Linux), see: [[Setting up FireWatir]]
-*** "FireWatir":http://watir.com/ - Drives Firefox on Windows, OSX and GNU/Linux
-*** "SafariWatir":http://safariwatir.rubyforge.org/ - Drives Safari (OS X only)
+*** "Watir":http://watir.com/ - Drives IE (Windows only) 
+*** "Watir WebDriver":http://watirwebdriver.com/ - Drives Firefox, Chrome, IE & Opera - optionally headless - Linux/Mac/Windows: "the most elegant way to use webdriver with ruby"  [[Setting up FireWatir]]
 *** "Celerity":http://celerity.rubyforge.org/ - Drives a fast headless browser with Javascript support. Examples "here":http://github.com/alvinschur/celerity-examples/tree/master
 *** "Culerity":http://github.com/langalex/culerity/ - For when you can't run your app under jRuby
 *** "Selenium":http://selenium.seleniumhq.org/ - Runs any browser (any OS), see: [[Setting up Selenium]]
