@@ -4,6 +4,8 @@ Please add any helpful blog posts that you have found or written about all thing
 
 |*Post*|*Description*|*Posting Date*|
 | "Running Cucumber/Watir-WebDriver tests on Jenkins in the cloud, for free":http://watirmelon.com/2011/08/29/running-your-watir-webdriver-tests-in-the-cloud-for-free | Alister Scott on how to see up a free EC2 micro instance to run Cucumber automated web tests in Ruby | August 29 2011 |
+| "Cucumber Regular Expressions Cheat Sheet":http://www.richardlawrence.info/2011/08/23/cucumber-regular-expressions-cheat-sheet/ | Richard Lawrence on the important bits of regular expressions for Cucumber users | August 23 2011 |
+| "Getting Started with Ruby, Cucumber, and Capybara on Windows":http://www.richardlawrence.info/2011/08/20/getting-started-with-ruby-cucumber-and-capybara-on-windows/ | Richard Lawrence on how to use Cucumber and Capybara on Windows (without Rails) | August 20 2011 |
 | "Capturing page performance times using Watir-WebDriver & Cucumber":http://watirmelon.com/2011/08/10/capturing-page-performance-times-with-my-watirmeloncucumber-framework | Alister Scott on how to use Watir-WebDriver & Cucumber to record web page performance response times | August 10 2011 |
 | "Making your cucumber step definitions more readable with RSpec binary matchers":http://watirmelon.com/2011/08/08/making-your-cucumber-step-definitions-more-readable-with-rspec-binary-matchers | Alister Scott on how to use the inbuilt RSpec matchers to improve step readability | August 8 2011 |
 | "Keeping the browser open when you're developing a new cucumber test":http://watirmelon.com/2011/08/07/keeping-the-browser-open-when-youre-writing-a-cucumber-test/ | Alister Scott on Cucumber Hooks to keep the browser open | August 7 2011|
