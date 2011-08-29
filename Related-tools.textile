@@ -77,3 +77,4 @@ Emacs packages|
 |"WebDriver":http://code.google.com/p/selenium/wiki/RubyBindings|Developer-focused browser automation tool for IE, Firefox, Chrome|
 |"WatirCraft":http://wiki.github.com/bret/watircraft| Web testing framework with Cucumber integration that builds on Watir.|
 |"watircuke":http://github.com/richdownie/watircuke/tree/master| Cucumber and H30 (watir, safariwatir, firewatir)|
+|"Watir WebDriver":http://watirwebdriver.com| the most elegant way to use webdriver with ruby |
