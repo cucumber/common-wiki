@@ -1,4 +1,4 @@
-We recommend you exercise your whole stack when using Cucumber. You *can* set up mocks with expectations in your [[Step Definitions]].
+Mocking is usually discouraged when using Cucumber. You *can* set up mocks with expectations in your [[Step Definitions]], but ideally you would exercise as much of your stack as possible. If you have a dependency on an external system we recommend using [stubs instead of mocks](http://martinfowler.com/articles/mocksArentStubs.html).
 
 h2. RSpec 2.x
 
@@ -12,4 +12,4 @@ As of RSpec 1.2.8 if you need to use stubs within Cucumber and you are using the
 
 Existing stubbing/mocking frameworks only support in-process stubbing & mocking, "cross-stub":http://github.com/ngty/cross-stub provides simple cross process stubbing, which is useful when running cucumber with selenium, culerity, steam, etc. 
 
-We recommend you only mock and stub things like Time and external services like OpenID etc.
+We recommend you only stub things like Time and external services like OpenID etc.
