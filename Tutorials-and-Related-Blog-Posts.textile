@@ -64,7 +64,6 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Slides: Cucumbered":http://blog.josephwilk.net/ruby/futureruby-talk-cucumbered.html|"Joseph Wilk":http://blog.josephwilk.net talking about Cucumber at "FutureRuby":http://futureruby.com/ with an IPhone example |Jul 12 2009|
 |"Screencast: Testing Flex Apps with Cucumber":http://onrails.org/articles/2009/07/08/screencast-testing-flex-apps-with-cucumber|Get your hands dirty with Flex, FunFX and Cucumber|Jul 08 2009|
 |"Integration test with Cucumber and Webrat":http://www.slideshare.net/gugod/integration-test-with-cucumber-and-webrat|Presentation in Chinese by Kang-min Liu|Jul 1 2009|
-|"Natural Language Acceptance Testing with Cucumber":http://dobbscodetalk.com/index.php?option=com_myblog&show=Natural-Language-Acceptance-Testing.html&Itemid=29|A nice little writeup in "Dr.Dobbs CodeTalk":http://dobbscodetalk.com/| Jun 27 2009|
 |"Introduction to BDD with Cucumber":http://www.engineyard.com/blog/2009/cucumber-introduction/|Great little introduction|Jun 23 2009|
 |"Cucumber and Celerity":http://drogomir.com/blog/2009/6/16/cucumber-and-celerity-testing-unobtrusive-javascript|Testing unobtrusive Javascript|Jun 16 2009|
 |"Adding XHTML output validation to Cucumber stories":http://swedishcampground.com/adding-xhtml-output-validation-to-cucumber-stories| Use "Easy Markup Validation":http://tenderlovemaking.com/2009/06/12/easy-markup-validation/ with Cucumber | Jun 16 2009 |
@@ -73,7 +72,6 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Webrat: Automated Acceptance Testing with RSpec or Cucumber":http://www.agileweboperations.com/webrat-automated-acceptance-testing-with-rspec-or-cucumber/|Side by side comparison of Cucumber and RSpec (in RedMine!)|Jun 11 2009|
 |"Cucumber Rocks - But it’s not a replacement for unit tests":http://www.pathf.com/blogs/2009/06/cucumber-rocks-but-its-not-a-replacement-for-unit-tests/|Don't put all your eggs in the Cucumber basket!|Jun 10 2009|
 |"Cucumber, Webrat ... Who Names These Things?":http://blog.geekdaily.org/2009/06/cucumber-webrat-who-names-these-things.html|Nice little diagram explaining how Cucumber relates to RSpec, Webrat and Selenium|Jun 10 2009|
-|"Testing Rake tasks with Cucumber":http://www.frykt.no/posts/1-2009-6-7-testing-rake-tasks-with-cucumber|Simple example on how to test rake tasks in Rails|Jun 07 2009|
 |"Cucumber scenarios that depend on Sphinx":http://opensoul.org/2009/6/1/cucumber-scenarios-that-depend-on-sphinx|How to use Cucumber with "ThinkingSphinx":http://freelancing-god.github.com/ts/en/|Jun 01 2009|
 |"Mind the gap":http://content.yudu.com/Library/A15ltd/TestMarch2009/resources/28.htm|Joseph Wilk's article in European Software Tester magazine|May 21 2009|
 |"What's Mining: Cucumber support":http://blogs.jetbrains.com/ruby/2009/05/what’s-mining-cucumber-support|The JetBrains RubyMine team is working on Cucumber support|May 13 2009|
@@ -89,8 +87,6 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Capistrano recipes with cucumber":http://pivotallabs.com/users/jdean/blog/articles/763-testing-capistrano-recipes-with-cucumber| Jeff's Blog @ Pivotal labs |Apr 5 2009 |
 |"What? NetBeans 6.5.1 Can Now Recognize My Cucumber .feature Files!":http://www.pmamediagroup.com/2009/04/what-netbeans-651-can-now-recognize-my-cucumber-feature-files/| Cucumber + Netbeans plugin| Apr 2 2009|
 |"Outside-in Development with Cucumber and RSpec":http://blog.josephwilk.net/ruby/outside-in-development-with-cucumber-and-rspec.html | Joseph Wilk's slides from Scotland on Rails | Mar 30 2009 |
-|"BDD Step-by-Step Example - part 2":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-2-refactor/ |Nicholas’ Blog | Mar 29 2009|
-|"BDD Step-by-Step Example - part 1":http://www.ozmox.com/2009/03/29/bdd-step-by-step-example-part-1/ | Nicholas’ Blog | Mar 29 2009 |
 |"Testing outbound emails Cucumber":http://drnicwilliams.com/2009/03/26/testing-outbound-emails-with-cucumber/|Emails....| Mar 26 2009 |
 |"Using Cucumber for Acceptance Testing":http://www.pathf.com/blogs/2009/03/using-cucumber-for-acceptance-testing | Using Cucumber for Acceptance Testing | Mar 20 2009 |
 |"Slides from Outside-In Development with Cucumber":http://www.benmabey.com/2009/03/14/slides-from-outside-in-development-with-cucumber/| Ben Mabey's slides from "MWRC presentation":http://mwrc2009.confreaks.com/14-mar-2009-15-00-bdd-with-cucumber-ben-mabey.html| Mar 14 2009 |
