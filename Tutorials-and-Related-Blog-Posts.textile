@@ -1,3 +1,4 @@
+
 Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind that blogs can become dated quickly with a fast moving project like Cucumber.  Cucumber's RDocs and wiki should be considered the canonical documentation source with the, hopefully, most up to date information.  Some blog posts may refer to the RSpec Story Runner but they still provide value since Cucumber started out as a rewrite of that project.
 
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
@@ -10,6 +11,8 @@ Please add any helpful blog posts that you have found or written about all thing
 | "Making your cucumber step definitions more readable with RSpec binary matchers":http://watirmelon.com/2011/08/08/making-your-cucumber-step-definitions-more-readable-with-rspec-binary-matchers | Alister Scott on how to use the inbuilt RSpec matchers to improve step readability | August 8 2011 |
 | "Keeping the browser open when you're developing a new cucumber test":http://watirmelon.com/2011/08/07/keeping-the-browser-open-when-youre-writing-a-cucumber-test/ | Alister Scott on Cucumber Hooks to keep the browser open | August 7 2011|
 | "Capturing screenshots in Watir-WebDriver and Cucumber":http://watirmelon.com/2011/08/04/capturing-screenshots-in-watir-webdriver-cucumber | Alister Scott on how to capture screenshots using Watir-WebDriver and embed them into Cucumber HTML results | August 4 2011 |
+| "Composable Features":http://blog.andrew.premdas.org/articles/2011/06/27/composable-features | Andrew Premdas talks about applying the composed method technique to features | June 27 2011 |
+| "Composable Features and Tables":http://blog.andrew.premdas.org/articles/2011/06/27/composable-features-and-tables | Andrew Premdas talks about the problems with tables, and why he thinks any table in a cucumber feature is probably a smell! | June 27 2011 |
 | "Specification by Example: a Love Story":http://watirmelon.com/2011/05/18/specification-by-example-a-love-story | Alister Scott on the process of introducing Acceptance Test Driven Development and Specification by Example, using a tool like Cucumber | May 18 2011 |
 | "Designing Cucumber scenarios for manual verification":http://andywaite.com/2011/4/24/designing-cucumber-scenarios-for-manual-verification | Andy Waite on why you should write Cucumber scenarios with manual execution in mind | April 24 2011 |
 | "top 3 ways to mess-up a cucumber functional test suite":http://blog.vinayvinay.com/top-3-ways-to-mess-up-a-cucumber-functional-t | "Vinay Patel":http://vinayvinay.com shares lessons learnt while working on a huge cucumber test suite | April 21, 2011 |
@@ -55,6 +58,7 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Testing Couchapps with Cucumber and Culerity":http://upstream-berlin.com/2009/10/25/testing-couchapps-with-cucumber-and-culerity/|CouchDB and CouchApp goodness|Oct 25 2009|
 |"How-to: Use Cucumber with .NET and C# under IronRuby":http://blog.webintellix.com/2009/10/how-to-use-cucumber-with-net-and-c.html|A short introduction|Oct 14 2009|
 |"Getting started with Cucumber, RSpec, Webrat and multiruby":http://blog.jcoglan.com/2009/10/03/getting-started-with-cucumber-rspec-webrat-and-multiruby/|Nice step-by step introduction to Cucumber using Google and Webrat+Mechanize by James Coglan| Oct 3 2009|
+| "Features, Specs and Maps":http://blog.andrew.premdas.org/articles/2009/08/31/features-specs-and-maps | Andrew Premdas explains what can be gained by thinking about features and specs as different sorts of maps to the territory that is the application| August 31, 2009|
 |"Rails: RSpec, Cucumber, Authlogic, and factory_girl":http://jjinux.blogspot.com/2009/07/rails-rspec-cucumber-authlogic-and.html|Shannon -jj Behrens explains how to get RSpec, Cucumber, Authlogic, and factory_girl to all play nicely together|July 17 2009|
 |"Rails: Cucumber, Authlogic, and Machinist":http://hasmanyfollows.com/2009/09/06/getting-cucumber-authlogic-and-machinist-to-play-together/|How to get Cucumber, Authlogic, and Machinist to work together|Sept 6 2009|
 |"15 Expert Tips for Using Cucumber":http://www.engineyard.com/blog/2009/15-expert-tips-for-using-cucumber/|BDD/TDD guru "Dave Astels":http://blog.daveastels.com/ shares great Cucumber practices|Aug 5 2009|
