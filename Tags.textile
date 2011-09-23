@@ -36,7 +36,7 @@ cucumber --tags @billing,@important           # Runs both scenarios (Scenarios w
 
 (Another way to "filter" what you want to run is to use the <code>file.feature:line</code> pattern or the <code>--scenario</code> option as described in [[Running Features]]).
 
-Tags is also a great way to "link" your Cucumber features to other documents. For example, if you have to deal with old school requirements in a different system (Word, Excel, a wiki) you can refer to numbers:
+Tags are also a great way to "link" your Cucumber features to other documents. For example, if you have to deal with old school requirements in a different system (Word, Excel, a wiki) you can refer to numbers:
 
 <pre>
 @BJ-x98.77 @BJ-z12.33
@@ -81,6 +81,18 @@ Example: Skipping both @todo and @wip tags
 You can use this tag logic in your [[Hooks]] as well. 
 
 _This feature was originally added in version 0.4.3. The logical behaviour of tags was later reversed in version 0.6.0._
+
+h2(#overriding_tags_from_profile). Overriding the tag filters from a profile
+
+It is currently not possible to override the tag filters from a profile.
+
+The default profile, for example, includes a ==<code>--tags ~@wip</code>== filter. But what if you want to use everything from the default profile __except__ the `--tags ~@wip` portion?
+
+You might think you could just append something like this to the command line to "undo" the --tags from the profile: ==<code>--tags @wip,~@wip</code>== (anything either *tagged* with @wip or *not* tagged with @wip)
+
+But because that is effectively doing an "and" between ==<code>--tags ~@wip</code>== and ==<code>--tags @wip,~@wip</code>==, it does match any scenarios.
+
+How can we override the tag filter then?
 
 h2(#tag-limits). Tag limits and WIP
 
