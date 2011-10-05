@@ -8,9 +8,10 @@ h2. Rails 2.x
 
 If you are on Rails 2.x you have to use an older version of Cucumber-Rails. These are the recommended versions for maximum compatibility with Rails 2.3.x:
 
-gem "capybara", "0.3.9"
+<pre><code>gem "capybara", "0.3.9"
 gem "cucumber", "0.9.4"
 gem "cucumber-rails", "0.3.2"
+</pre></code>
 
 The rest of this page describes how to install Cucumber-Rails in a Rails 2.x application. These instructions assume you already have a Rails 2.x application, and that you have a shell where the current directory is the root of your Rails app.
 
