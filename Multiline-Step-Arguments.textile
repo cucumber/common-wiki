@@ -7,7 +7,7 @@ and will be yielded as the last argument to the matching step definition's block
 
 Multiline step arguments come in two flavours - tables or strings.
 
-h2. Tables
+h2. Data Tables
 
 Tables as arguments to steps are handy for specifying a larger data set - usually as input to a <code>Given</code> or as expected output from a <code>Then</code>. (This is not to be confused with tables in [[Scenario outlines]] - syntactically identical, but with a different purpose). Example:
 
