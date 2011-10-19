@@ -88,7 +88,6 @@ h2. Other Formatters
 
 # "TeamCityFormatter:":http://github.com/mattwynne/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
 # "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript for Textmate (Included in the cucumber core since 0.4.5)
-# "cucumber-json":http://github.com/jnewland/cucumber-json - A cucumber output formatter that outputs JSON 
 # "SlowHandCuke":http://github.com/moredip/SlowHandCuke - Simple tweak to the Pretty formatter to display the currently running step as it is running
 # "timestamped-scenarios":https://github.com/moredip/timestamped-scenarios - Append test run timestamps to each scenario name as it is being output.
 # "Fuubar":http://github.com/martinciu/fuubar-cucumber - The instafailing progress bar formatter
