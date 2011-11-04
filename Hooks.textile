@@ -63,7 +63,7 @@ Sometimes you may want a certain hook to run only for certain scenarios. This ca
 
 For OR tags, pass the tags in a single string comma separated:
 
-<pre><code>Before('@cucumis,@sativus') do
+<pre><code>Before('@cucumis, @sativus') do
   # This will only run before scenarios tagged
   # with @cucumis OR @sativus.
 end</code></pre>
@@ -77,7 +77,7 @@ end</code></pre>
 
 You create complex tag conditions using both OR and AND on tags:
 
-<pre><code>Before('@cucumis,@sativus', '@aqua') do
+<pre><code>Before('@cucumis, @sativus', '@aqua') do
   # This will only run before scenarios tagged
   # with (@cucumis OR @sativus) AND @aqua 
 end</code></pre>
