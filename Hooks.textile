@@ -70,9 +70,9 @@ end</code></pre>
 
 For AND tags, pass the tags as separate tag strings:
 
-<pre><code>Before('@cucumis', '@sativus') do
+<pre><code>Before('@cucumis', '~@sativus') do
   # This will only run before scenarios tagged
-  # with @cucumis AND @sativus.
+  # with @cucumis AND NOT @sativus.
 end</code></pre>
 
 You create complex tag conditions using both OR and AND on tags:
