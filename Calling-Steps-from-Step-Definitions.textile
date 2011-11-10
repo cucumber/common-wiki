@@ -11,8 +11,8 @@ Given /^I log in as (.*)$/ do |name|
 end
 
 Given /^(.*) is logged in$/ do |name|
-  Given "the user #{name} exists"
-  Given "I log in as #{name}"
+  step "the user #{name} exists"
+  step "I log in as #{name}"
 end
 </pre>
 
@@ -76,7 +76,7 @@ But what if you want to call this from a step definition? There are a couple of 
 <pre>
 # ruby
 Given /A simple expense report/ do
-  Given "an expense report for Jan 2009 with the following posts:", table(%{
+  step "an expense report for Jan 2009 with the following posts:", table(%{
     | account | description | amount |
     | INT-100 | Taxi        |    114 |
     | CUC-101 | Peeler      |     22 |
@@ -89,7 +89,7 @@ Or, if you prefer a more programmatic approach:
 <pre>
 # ruby
 Given /A simple expense report/ do
-  Given "an expense report for Jan 2009 with the following posts:", table([
+  step "an expense report for Jan 2009 with the following posts:", table([
     %w{ account description amount },
     %w{ INT-100 Taxi        114    },
     %w{ CUC-101 Peeler      22     }
@@ -128,8 +128,8 @@ from a step definition, pass the string after the step:
 <pre>
 # ruby
 Given /^a document exists with content$/ do |pystring|
-  Given "I go to add a document"
-  And 'I fill in "ditacontent" with', pystring
-  And  'I press "Add to repository"'
+  step "I go to add a document"
+  step 'I fill in "ditacontent" with', pystring
+  step  'I press "Add to repository"'
 end
 </pre> 
