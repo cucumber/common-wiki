@@ -1,0 +1,346 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+import javax.swing.table.DefaultTableModel;
+
+public class FrmDtBuku extends JFrame implements ActionListener,MouseListener
+{
+
+	private Dimension Layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+	private JLabel lblKdBuku = new JLabel("Kode Buku");
+	private JTextField txtKdBuku = new JTextField(20);
+	private JLabel lblJdlBuku = new JLabel("Judul Buku");
+	private JTextField txtJdlBuku = new JTextField(20);
+	private JLabel lblJdlSingkatan = new JLabel("Judul Singkatan");
+	private JTextField txtJdlSingkatan = new JTextField(20);
+	private JLabel lblPengarang = new JLabel("Pengarang");
+	private JTextField txtPengarang = new JTextField(20);
+	private JLabel lblThnTerbit = new JLabel("Tahun Terbit");
+	private JTextField txtThnTerbit = new JTextField(20);
+	private JLabel lblNoRak = new JLabel("No Rak");
+	private JTextField txtNoRak = new JTextField(20);
+	private JLabel lblStock = new JLabel("Stock");
+	private JTextField txtStock = new JTextField(20);
+	private JLabel lblHrgBuku = new JLabel("Harga Buku");
+	private JTextField txtHrgBuku = new JTextField(20);
+
+	private JButton btnTmb = new JButton("Tambah",new ImageIcon("tambah.jpeg"));
+	private JButton btnUbh = new JButton("Ubah",new ImageIcon("ubah.jpeg"));
+	private JButton btnHps = new JButton("Hapus",new ImageIcon("trash.jpg"));
+	private JButton btnBersih = new JButton("Bersih",new ImageIcon("bersih.jpg"));
+	private JButton btnKlr = new JButton("Keluar",new ImageIcon("keluar.jpeg"));
+
+	String[] strJdl = {"Kd_Buku","Jdl_Buku","Jdl_Sgktn","Pengarang","Thn_Terbit","No_Rak","Stock","Harga"};
+	DefaultTableModel tabMode;
+	JTable tabel = new JTable();
+	JScrollPane skrTabel = new JScrollPane();
+
+	public FrmDtBuku()
+	{
+	super("Data Buku");
+	setIconImage(getToolkit().getImage("perpus.jpeg"));
+	setLocation(Layar.width/2 - getWidth()/2,Layar.height/2 - getHeight()/2 );
+	setVisible(true);
+	setSize(700,500);
+	getContentPane().setLayout(null);
+
+	tabMode = new DefaultTableModel(null,strJdl);
+	tabel.setModel(tabMode);
+	skrTabel.getViewport().add(tabel);
+	tabel.setEnabled(true);
+	skrTabel.setBounds(10,260,650,115);
+
+	lblKdBuku.setBounds(10,20,120,20);
+	txtKdBuku.setBounds(120,20,130,20);
+	lblJdlBuku.setBounds(10,50,120,20);
+	txtJdlBuku.setBounds(120,50,220,20);
+	lblJdlSingkatan.setBounds(10,80,120,20);
+	txtJdlSingkatan.setBounds(120,80,220,20);
+	lblPengarang.setBounds(10,110,120,20);
+	txtPengarang.setBounds(120,110,220,20);
+	lblThnTerbit.setBounds(10,140,120,20);
+	txtThnTerbit.setBounds(120,140,220,20);
+	lblNoRak.setBounds(10,170,120,20);
+	txtNoRak.setBounds(120,170,150,20);
+	lblStock.setBounds(10,200,120,20);
+	txtStock.setBounds(120,200,150,20);
+	lblHrgBuku.setBounds(10,230,120,20);
+	txtHrgBuku.setBounds(120,230,150,20);
+
+	btnTmb.setBounds(10,390,110,20);
+	btnUbh.setBounds(130,390,110,20);
+	btnHps.setBounds(250,390,110,20);
+	btnBersih.setBounds(370,390,110,20);
+	btnKlr.setBounds(550,390,110,20);
+
+	getContentPane().add(lblKdBuku);
+	getContentPane().add(txtKdBuku);
+	getContentPane().add(lblJdlBuku);
+	getContentPane().add(txtJdlBuku);
+	getContentPane().add(lblJdlSingkatan);
+	getContentPane().add(txtJdlSingkatan);
+	getContentPane().add(lblPengarang);
+	getContentPane().add(txtPengarang);
+	getContentPane().add(lblThnTerbit);
+	getContentPane().add(txtThnTerbit);
+	getContentPane().add(lblNoRak);
+	getContentPane().add(txtNoRak);
+	getContentPane().add(lblStock);
+	getContentPane().add(txtStock);
+	getContentPane().add(lblHrgBuku);
+	getContentPane().add(txtHrgBuku);
+	getContentPane().add(skrTabel);
+
+	getContentPane().add(btnTmb);
+	getContentPane().add(btnUbh);
+	getContentPane().add(btnHps);
+	getContentPane().add(btnBersih);
+	getContentPane().add(btnKlr);
+
+	tabel.addMouseListener(this);
+
+	bersih();
+	txtKdBuku.addActionListener(this);
+	btnTmb.addActionListener(this);
+	btnUbh.addActionListener(this);
+	btnHps.addActionListener(this);
+	btnBersih.addActionListener(this);
+	btnKlr.addActionListener(this);
+	}
+	public void mouseClicked(MouseEvent ME){
+	getDataTabel();
+	}
+	public void mouseExited(MouseEvent ME){
+	}
+	public void mouseEntered(MouseEvent ME){
+	}
+	public void mouseReleased(MouseEvent ME){
+	}
+	public void mousePressed(MouseEvent ME){
+	}
+
+	void getDataTabel()
+	{
+		txtKdBuku.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),0));
+		txtJdlBuku.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),1));
+		txtJdlSingkatan.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),2));
+		txtPengarang.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),3));
+		txtThnTerbit.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),4));
+		txtNoRak.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),5));
+		txtStock.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),6));
+		txtHrgBuku.setText(""+tabMode.getValueAt(tabel.getSelectedRow(),7));
+		//aktifNonAktifKomponen();
+		cariBuku();
+	}
+	public void actionPerformed(ActionEvent ae){
+		if (ae.getSource()==txtKdBuku){
+			cariBuku();
+		}
+		if (ae.getSource()==btnTmb){
+			tambahBuku();
+		}
+		if (ae.getSource()==btnUbh){
+			ubahBuku();
+		}
+		if (ae.getSource()==btnBersih){
+			bersih1();
+		}
+		if (ae.getSource()==btnHps){
+			hapusBuku();
+		}
+		if (ae.getSource()==btnKlr){
+			if (JOptionPane.showConfirmDialog(null,"Apakah Anda yakin akan keluar?",
+
+						"Konfirmasi",JOptionPane.OK_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE)
+
+						== JOptionPane.OK_OPTION)
+							{
+						System.exit(0);
+							}
+		}
+	}
+
+	void tampilketabel(){
+		try{
+			hapusTabel();
+	   		Koneksi ObjKoneksi = new Koneksi();
+	   		Connection con = ObjKoneksi.bukaKoneksi();
+	   		Statement st = con.createStatement();
+			String sql = "select * from DtBuku";
+			ResultSet rs = st.executeQuery(sql);
+			while(rs.next()){
+
+				String vKd_Buku = rs.getString("Kd_Buku");
+				String vJdl_Buku = rs.getString("Jdl_Buku");
+				String vJdl_Sgktn = rs.getString("Jdl_Sgktn");
+				String vPengarang = rs.getString("Pengarang");
+				String vThn_Terbit = rs.getString("Thn_Terbit");
+				String vNo_Rak = rs.getString("No_Rak");
+				String vStock = rs.getString("Stock");
+				String vHarga = rs.getString("Harga");
+				String[] data = {vKd_Buku,vJdl_Buku,vJdl_Sgktn,vPengarang,vThn_Terbit,vNo_Rak,vStock,vHarga};
+				tabMode.addRow(data);
+			}
+	   		rs.close();
+ 	  		con.close();
+		}
+		catch(Exception e){
+		}
+ 	}
+ 	void cariBuku(){
+		try{
+			Koneksi objKon = new Koneksi();
+			Connection con = objKon.bukaKoneksi();
+			Statement st = con.createStatement();
+			String sql = "Select * from DtBuku "+
+				"where Kd_Buku='"+txtKdBuku.getText()+"'";
+			ResultSet rs = st.executeQuery(sql);
+			if (rs.next()){
+				txtJdlBuku.setText(rs.getString("Jdl_Buku"));
+				txtJdlSingkatan.setText(rs.getString("Jdl_Sgktn"));
+				txtPengarang.setText(rs.getString("Pengarang"));
+				txtThnTerbit.setText(rs.getString("Thn_Terbit"));
+				txtNoRak.setText(rs.getString("No_Rak"));
+				txtStock.setText(rs.getString("Stock"));
+				txtHrgBuku.setText(rs.getString("Harga"));
+				btnTmb.setEnabled(false);
+				btnUbh.setEnabled(true);
+				btnBersih.setEnabled(true);
+				btnHps.setEnabled(true);
+			}
+			else{
+				btnTmb.setEnabled(true);
+				btnUbh.setEnabled(false);
+				btnBersih.setEnabled(false);
+				btnHps.setEnabled(false);
+			}
+			rs.close();
+			con.close();
+			txtKdBuku.requestFocus();
+		}
+		catch(Exception e){
+		}
+	}
+	public void tambahBuku()
+	{
+		try
+		{
+			Koneksi objekKoneksi = new Koneksi();
+			Connection con = objekKoneksi.bukaKoneksi();
+			Statement state = con.createStatement();
+			String sql = "insert into DtBuku values('"+txtKdBuku.getText()+"','"+txtJdlBuku.getText()+"','"+
+						txtJdlSingkatan.getText()+"','"+txtPengarang.getText()+"','"+txtThnTerbit.getText()+"','"+
+						txtNoRak.getText()+"','"+txtStock.getText()+"','"+txtHrgBuku.getText()+"')";
+			int hasil = state.executeUpdate(sql);
+			if(hasil>0)
+			{
+				JOptionPane.showMessageDialog(null,"Data Berhasil Ditambahkan","Pesan",JOptionPane.INFORMATION_MESSAGE);
+			}
+			con.close();
+			tampilketabel();
+			bersih();
+			btnUbh.setEnabled(true);
+			btnHps.setEnabled(true);
+			btnBersih.setEnabled(true);
+
+		}
+		catch(Exception ex)
+		{
+			JOptionPane.showMessageDialog(null,"Data Gagal Ditambahkan","Pesan",JOptionPane.INFORMATION_MESSAGE);
+		}
+	}
+	void ubahBuku()
+		{
+		try{
+			Koneksi objKon = new Koneksi();
+			Connection con = objKon.bukaKoneksi();
+			Statement st = con.createStatement();
+			String sql = "update DtBuku set Jdl_Buku='"+
+				txtJdlBuku.getText()+
+				"',Jdl_Sgktn='"+txtJdlSingkatan.getText()+
+				"',Pengarang='"+txtPengarang.getText()+
+				"',Thn_Terbit='"+txtThnTerbit.getText()+
+				"',No_Rak='"+txtNoRak.getText()+
+				"',Stock='"+txtStock.getText()+
+				"',Harga='"+txtHrgBuku.getText()+
+				"' where Kd_Buku='"+txtKdBuku.getText()+"'";
+			int vHasil = st.executeUpdate(sql);
+			if (vHasil==1)
+				{
+					JOptionPane.showMessageDialog(null,"Sukses Mengubah");
+				}
+			con.close();
+			bersih();
+		}
+		catch(Exception e){
+							}
+	}
+
+	void hapusBuku(){
+		try{
+			Koneksi objKon = new Koneksi();
+			Connection con = objKon.bukaKoneksi();
+			Statement st = con.createStatement();
+			String sql = "delete from DtBuku where Kd_Buku='"+
+				txtKdBuku.getText()+"'";
+
+			int vHasil = st.executeUpdate(sql);
+			if (vHasil==1){
+				JOptionPane.showMessageDialog(null,"Sukses Menghapus");
+			}
+			con.close();
+			bersih();
+		}
+		catch(Exception e){
+		}
+	}
+	void bersih(){
+		txtKdBuku.setText("");
+		txtJdlBuku.setText("");
+		txtJdlSingkatan.setText("");
+		txtPengarang.setText("");
+		txtThnTerbit.setText("");
+		txtNoRak.setText("");
+		txtStock.setText("");
+		txtHrgBuku.setText("");
+		btnTmb.setEnabled(true);
+		btnUbh.setEnabled(true);
+		btnHps.setEnabled(true);
+		btnBersih.setEnabled(true);
+		tampilketabel();
+		txtKdBuku.requestFocus();
+	}
+	void bersih1(){
+		txtKdBuku.setText("");
+		txtJdlBuku.setText("");
+		txtJdlSingkatan.setText("");
+		txtPengarang.setText("");
+		txtThnTerbit.setText("");
+		txtNoRak.setText("");
+		txtStock.setText("");
+		txtHrgBuku.setText("");
+		btnTmb.setEnabled(true);
+		txtKdBuku.requestFocus();
+	}
+	// mengosongkan isi tabel
+	void hapusTabel(){
+		int brs = tabMode.getRowCount();
+		for(int i=0;i<brs;i++){
+			tabMode.removeRow(0);
+		}
+	}
+	public static void main(String[] arr)
+	{
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		new FrmDtBuku();
+	}
+
+
+}
+
+
+
+
+
