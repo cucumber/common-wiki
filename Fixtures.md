@@ -8,6 +8,15 @@ Paste this code snippet into env.rb to load all fixtures from spec/fixtures befo
 end
 </pre>
 
+If you are using Rails 3.1, your fixtures preloader will look like that:
+<pre>Before do
+  ActiveRecord::Fixtures.reset_cache
+  fixtures_folder = File.join(Rails.root, 'spec', 'fixtures')
+  fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
+  ActiveRecord::Fixtures.create_fixtures(fixtures_folder, fixtures)
+end
+</pre>
+
 If you are using transactional fixtures in Rails then instead of loading your fixtures before each scenario you can load it just once by placing the same code in your env.rb file.  This way will be much faster than loading the fixtures before each scenario. For example:
 
 <pre># Sets up the Rails environment for Cucumber
