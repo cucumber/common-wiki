@@ -1,4 +1,4 @@
-Step argument transforms help your step definitions be more by DRY by allowing you to refactor common operations that you perform on step definition arguments.  Before each match captured by a step definition is yielded as an argument to the step definition block, an attempt is made to match them against registered @Transform@ objects.  If one of those captured matches matches the regular expression of one of a @Transform@ object is original string value is replaced with the result of what the @Transform@ block yields.
+Step argument transforms help your step definitions be more by DRY by allowing you to refactor common operations that you perform on step definition arguments.  Before each match captured by a step definition is yielded as an argument to the step definition block, an attempt is made to match them against registered @Transform@ objects.  If one of those captured matches match the regular expression of one of a @Transform@ objects, its original string value is replaced with the result of what the @Transform@ block yields.
 
 
 h2. Registering a Transform
