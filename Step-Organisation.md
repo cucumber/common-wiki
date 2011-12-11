@@ -11,7 +11,7 @@ We recommend creating a steps.rb file for each domain concept. For example, a go
 * experience_steps.rb
 * authentication_steps.rb
 
-The three first ones would define all the [[Given-When-Then]] step definitions related to creating, reading, updating and deleting the various models. The last one defines step definitions related to logging in and out.
+The first three would define all the [[Given-When-Then]] step definitions related to creating, reading, updating and deleting the various models. The last one would define step definitions related to logging in and out.
 
 If you follow this pattern you also avoid the [[Feature-Coupled Steps (Antipattern)]] antipattern.
 
