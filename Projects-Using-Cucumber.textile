@@ -7,7 +7,6 @@ Projects using Cucumber:
 * "Redcar":http://github.com/danlucraft/redcar/tree/master /plugins/*/features
 * "jeweler":http://github.com/technicalpickles/jeweler /features
 * "jekyll":http://github.com/mojombo/jekyll /features
-* "radtrack":http://github.com/jgoodsen/radtrack
 * "CarrierWave":http://github.com/jnicklas/carrierwave/ /features/
 * "RadiantCMS":http://github.com/radiant/radiant/tree/master/features/
 * "OERPScenario (linked to OpenERP)":https://launchpad.net/oerpscenario/
