@@ -1,10 +1,12 @@
 "Cucumber-Rails":http://github.com/cucumber/cucumber-rails lets you use Cucumber with Ruby on Rails.
 
-h2. Rails 3.x
+h1. Rails 3.x
 
-As of Cucumber-Rails version 0.5.0 and above, Cucumber-Rails *only* supports Rails 3.x (Rails 2 is *not* supported). See Cucumber-Rails' "README":https://github.com/cucumber/cucumber-rails/blob/master/README.md for installation instructions.
+Go to Cucumber-Rails' "README":https://github.com/cucumber/cucumber-rails/blob/master/README.md for installation instructions and ignore this page.
 
-h2. Rails 2.x
+As of Cucumber-Rails version 0.5.0 and above, Cucumber-Rails *only* supports Rails 3.x (Rails 2 is *not* supported). The following is only for Rails 2.x.
+
+h1. Rails 2.x
 
 If you are on Rails 2.x you have to use an older version of Cucumber-Rails. These are the recommended versions for maximum compatibility with Rails 2.3.x:
 
