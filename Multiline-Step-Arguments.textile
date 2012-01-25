@@ -104,6 +104,16 @@ expected_cukes_table.diff!(actual_table)
 
 For a more complex example, look at <notextile><a href="http://github.com/cucumber/cucumber-rails/commit/e03ca01556adcb21354046107f7c7803efb8b3df">this commit</a></notextile> which uses a Proc to extract each column from the HTML. (This is a spec for the internal <code>_tableish</code> method - in your own code you want to use <code>tableish</code> instead and skip the 1st <code>html</code> argument).
 
+Note that <code>tableish</code> is now *deprecated*. The example hereover could be rewrittent like:
+
+<pre>
+rows = find("table#selector").all('tr')
+table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
+expected_table.diff!(table)
+</pre>
+
+As specified on "Dennis Reimann's blog":http://dennisreimann.de/blog/capybara-finder-for-cucumber-rails-deprecated-tableish/ .
+
 h4. Transforming tables with Transform
 
 If you want to transform an entire table to another data structure, you can use [[Step Argument Transforms]].
