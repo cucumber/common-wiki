@@ -14,7 +14,7 @@ Every scenario consists of a list of steps, which must start with one of the key
     Then I should be served a coffee
 </pre>
 
-In addition to a scenario, a feature may contain a background, scenario outline and examples.  Respective keywords (in English) and places to read more about them are listed below.  You can get a list of localized keywords with @cucumber --language [LANG] help@.
+In addition to a scenario, a feature may contain a background, scenario outline and examples.  Respective keywords (in English) and places to read more about them are listed below.  You can get a list of localized keywords with @cucumber --i18n [LANG]@.
 
 | *keyword* | *localized* | *more info, see* |
 | name             | 'English'                | |
