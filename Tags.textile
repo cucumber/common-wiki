@@ -88,7 +88,7 @@ It is currently not possible to override the tag filters from a profile.
 
 The default profile, for example, includes a ==<code>--tags ~@wip</code>== filter. But what if you want to use everything from the default profile __except__ the `--tags ~@wip` portion?
 
-You might think you could just append something like this to the command line to "undo" the --tags from the profile: ==<code>--tags @wip,~@wip</code>== (anything either *tagged* with @wip or *not* tagged with @wip)
+You might think you could just append something like this to the command line to "undo" the <code>--tags</code> from the profile: ==<code>--tags @wip,~@wip</code>== (anything either *tagged* with @wip or *not* tagged with @wip)
 
 But because that is effectively doing an "and" between ==<code>--tags ~@wip</code>== and ==<code>--tags @wip,~@wip</code>==, it does match any scenarios.
 
