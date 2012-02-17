@@ -1,25 +1,28 @@
 Paste this code snippet into env.rb to load all fixtures from spec/fixtures before each scenario.
 
-<pre>Before do
+```ruby
+Before do
   Fixtures.reset_cache
   fixtures_folder = File.join(RAILS_ROOT, 'spec', 'fixtures')
   fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
   Fixtures.create_fixtures(fixtures_folder, fixtures)
 end
-</pre>
+```
 
 If you are using Rails 3.1, your fixtures preloader will look like that:
-<pre>Before do
+```ruby
+Before do
   ActiveRecord::Fixtures.reset_cache
   fixtures_folder = File.join(Rails.root, 'spec', 'fixtures')
   fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
   ActiveRecord::Fixtures.create_fixtures(fixtures_folder, fixtures)
 end
-</pre>
+```
 
 If you are using transactional fixtures in Rails then instead of loading your fixtures before each scenario you can load it just once by placing the same code in your env.rb file.  This way will be much faster than loading the fixtures before each scenario. For example:
 
-<pre># Sets up the Rails environment for Cucumber
+```ruby
+# Sets up the Rails environment for Cucumber
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 require 'cucumber/rails/world'
@@ -30,7 +33,7 @@ Fixtures.reset_cache
 fixtures_folder = File.join(RAILS_ROOT, 'spec', 'fixtures')
 fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
 Fixtures.create_fixtures(fixtures_folder, fixtures)
-</pre>
+```
 
 ## Usage
 
@@ -40,7 +43,7 @@ Once you've done one of the two load methods above (please, don't do both ;-) yo
 
 If you want to also enable the fixture helper methods, such as *users(:admin)*, you need to add the following to your env.rb file (pretty much stolen straight from the Rails guts). This includes loading of the fixtures.
 
-<pre>
+```ruby
 module FixtureAccess
 
   def self.extended(base)
@@ -73,8 +76,10 @@ module FixtureAccess
   end
 
 end
-</pre>
+```
 and then
-<pre>World(FixtureAccess)</pre>
+```ruby
+World(FixtureAccess)
+```
 
 This works for Cucumber *0.2.3.2* and later. For older versions, view "forum post":http://www.ruby-forum.com/topic/187427#822479
