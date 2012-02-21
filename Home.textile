@@ -39,7 +39,7 @@ There are several ways to get yourself started in writing tests, depending somew
 ** .NET (Microsoft.NET and Mono): [[IronRuby and .NET]], [[IronRuby and Mono]]
 ** Adobe Flex: [[FunFX|FunFX and Flex]], [[Melomel|http://melomel.info/Cucumber]]
 ** [[Python]]
-** Perl: http://search.cpan.org/~crusoe/Test-Pcuke-0.000006/lib/Test/Pcuke.pm
+** Perl: [[Test::Pcuke|http://search.cpan.org/~crusoe/Test-Pcuke-0.000006/lib/Test/Pcuke.pm]]
 ** Erlang: [[cucumberl|https://github.com/membase/cucumberl]]
 ** Web apps in any language: Drive a full or headless browser using one of these
 *** "Webrat":http://github.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
