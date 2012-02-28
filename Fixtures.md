@@ -35,6 +35,8 @@ fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.
 Fixtures.create_fixtures(fixtures_folder, fixtures)
 ```
 
+For Rails 3.1 just replace ```Fixtures``` by ```ActiveRecord::Fixtures``` and ```RAILS_ROOT``` by ```Rails.root```
+
 ## Usage
 
 Once you've done one of the two load methods above (please, don't do both ;-) you can access your fixture data from the database using *Model.find*.  Example to find the first User model you'd use User.find(:first).
