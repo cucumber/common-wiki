@@ -1,1 +1,0 @@
-*{color:red}Please check out "Cucumber-JVM":https://github.com/cucumber/cucumber-jvm for instructions about Cucumber on the JVM*
