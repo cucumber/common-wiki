@@ -92,4 +92,4 @@ h2. Other Formatters
 # "timestamped-scenarios":https://github.com/moredip/timestamped-scenarios - Append test run timestamps to each scenario name as it is being output.
 # "Fuubar":http://github.com/martinciu/fuubar-cucumber - The instafailing progress bar formatter
 # "Viewcumber":https://github.com/versapay/viewcumber -  Cucumber formatter which generates an HTML website to browse your scenarios and view screen capture of every single step.
- 
+# "cucumber_timing_presenter":https://github.com/distributedlife/cucumber_timing_presenter - formatter that calculates timing metrics as well as two graphs showing impact of step time on overall build time. 
