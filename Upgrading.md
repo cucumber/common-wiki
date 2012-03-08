@@ -1,4 +1,8 @@
-If you came here following the link provided in the post‑install message of `cucumber` then don't be alarmed. No page existed so I've created a stub. I don't know if upgrade information is documented anywhere. If it is 
-I'll be happy to include it here.
+Cucumber tries to follow the [SemVer](http://semver.org/) specification for release numbers. Essentially, that means that:
 
-Also there is already an issue open for this: https://github.com/cucumber/cucumber/issues/200
+If only the right-hand (patch) number in the release changes, you don't need to worry.
+If the middle number (minor) number in the release changes, you don't need to worry.
+If the left-hand (major) number changes, you can expect that things might break.
+
+You can read the history file to learn about the changes in every release:
+https://github.com/cucumber/cucumber/blob/master/History.md
