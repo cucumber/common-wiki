@@ -15,4 +15,7 @@ Projects using Cucumber:
 * "Broth":http://github.com/fourbeansoup/broth/
 * "Heroku Suspenders":http://github.com/dancroak/heroku_suspenders
 * "TimeFliesBy":http://github.com/esambo/TimeFliesBy
+* "Diaspora":http://github.com/diaspora/diaspora
+* "Chef":http://github.com/opscode/chef  
+
 Note: I had initially copied the [[Examples]] page. I created this page because I consider this page to be a more appropriate name.
