@@ -41,7 +41,7 @@ It's easy!
 
 That's it! When a new release of gherkin is made you can specify in a <code># language: xx</code> header in your feature files.
 
-See Gherkin's "README":http://github.com/cucumber/gherkin/blob/master/README.rdoc about building gherkin if you don't have time to wait for the next release.
+See Gherkin's "README":http://github.com/cucumber/gherkin/blob/master/README.md about building gherkin if you don't have time to wait for the next release.
 
 h2. Adding examples for a new language
 
