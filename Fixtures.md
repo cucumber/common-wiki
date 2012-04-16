@@ -9,7 +9,8 @@ Before do
 end
 ```
 
-If you are using Rails 3.1, your fixtures preloader will look like that:
+If you are using Rails 3.1, your fixtures preloader will look like this:
+
 ```ruby
 Before do
   ActiveRecord::Fixtures.reset_cache
@@ -35,7 +36,7 @@ fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.
 Fixtures.create_fixtures(fixtures_folder, fixtures)
 ```
 
-For Rails 3.1 just replace ```Fixtures``` by ```ActiveRecord::Fixtures``` and ```RAILS_ROOT``` by ```Rails.root```
+For Rails 3.1 just replace ```Fixtures``` with ```ActiveRecord::Fixtures``` and ```RAILS_ROOT``` with ```Rails.root```
 
 ## Usage
 
@@ -80,6 +81,7 @@ module FixtureAccess
 end
 ```
 and then
+
 ```ruby
 World(FixtureAccess)
 ```
