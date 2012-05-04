@@ -19,7 +19,7 @@ h2. Implementations
 * "cuke4php":https://github.com/olbrich/cuke4php (PHP)
 * "Cuke4AS3":https://github.com/flashquartermaster/Cuke4AS3 (ActionScript / Flash)
 * "CukeBins":https://github.com/paoloambrosio/cukebins (C++)
-* "CukeLua":https://github.com/featurist/cuke-lua (Lua)
+* "Cucumber-Lua":https://github.com/cucumber/cucumber-lua (Lua)
 
 h2. References
 * "http://www.richardlawrence.info/2009/09/19/cuke4nuke-cucumber-for-net-teams/":http://www.richardlawrence.info/2009/09/19/cuke4nuke-cucumber-for-net-teams/
