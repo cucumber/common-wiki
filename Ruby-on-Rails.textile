@@ -8,7 +8,7 @@ As of Cucumber-Rails version 0.5.0 and above, Cucumber-Rails *only* supports Rai
 
 h1. Rails 2.x
 
-If you are on Rails 2.x you have to use an older version of Cucumber-Rails. These are the recommended versions for maximum compatibility with Rails 2.3.x:
+If you are on Rails 2.x you have to use an older version of Cucumber-Rails. These are the recommended versions for maximum compatibility with Rails 2.3.x (though see note on javascript emulation below):
 
 <pre><code>gem "capybara", "1.1.1"
 gem "cucumber", "1.1.0"
@@ -141,3 +141,8 @@ In the .feature, use a phrase similar to <code>Given a user is logged in as "mar
   response.body.should =~ /Logged/m  
 end
 </code></pre>
+
+h3. Capybara Javascript-emulation bug workaround
+
+```undefined local variable or method `node' for #<Capybara::RackTest::Node...``` results from upgrading capybara > 0.3.2 (to get working form selectors).
+Remove the line ```require 'cucumber/rails/capybara_javascript_emulation'``` from support/env.rb. This will break any tests reliant on this behaviour, as the links will now send get requests (the javascript is ignored by rack-test). To get the right behaviour again you should tag them with @javascript, so Capybara runs them with a javascript driver (such as selenium/firefox).
