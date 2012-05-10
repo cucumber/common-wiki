@@ -182,7 +182,7 @@ From then on, the easiest thing to do for the first time tester/behaviourist is 
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
 
-This might be the easiest thing to do, but not necessarily the best thing to do.  Generating scaffolds provides a comforting illusion of progress through voluminous production of boilerplate code.  Said code being, for all intents and purposes, worthless save only as an example of proper syntax and even the syntax is sometimes dubious.  By all means take a look at the generated code to obtain some idea of how things should look when you write your own features, but do not expect your project to design itself. 
+This might be the easiest thing to do, but not necessarily the best thing to do.  Generating scaffolds provides a comforting illusion of progress through voluminous production of boilerplate code.  Said code is, for all intents and purposes, worthless, save only as an example of proper syntax – and even the syntax is sometimes dubious.  By all means take a look at the generated code to obtain some idea of how things should look when you write your own features, but do not expect your project to design itself. 
 
 Instead of simply modifying boilerplate, it proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  Detailed discussion of feature writing and step construction are provided elsewhere (see [[Given-When-Then]] and "Telling a Good Story":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html). 
 
