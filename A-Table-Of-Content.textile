@@ -64,6 +64,7 @@ h2. Integrating cukes with other tools
 # [[IronRuby and .NET]]
 # [[IronRuby and Mono]]
 # [[JRuby and Java]]
+# [[Jenkins Integration]]
 # [[Maven cucumber-maven-plugin]]
 # [[Merb]]
 # [[Migration From RSpec Stories]]
