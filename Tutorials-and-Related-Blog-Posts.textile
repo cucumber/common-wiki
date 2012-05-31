@@ -45,7 +45,6 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Testing custom headers and ssl with Cucumber and Capybara":http://aflatter.de/2010/06/testing-headers-and-ssl-with-cucumber-and-capybara/|A little capybara hack for modifying the request environment to test custom headers|June 23 2010|
 |"Outside-In BDD: How?!":http://www.sarahmei.com/blog/2010/05/29/outside-in-bdd/|Sarah Mei gives an excellent explanation of the Outside-In workflow.|May 29 2010|
 |"Testing Javascript with Cucumber in Javascript":http://blog.josephwilk.net/ruby/testing-javascript-with-cucumber-in-javascript.html|Joseph Wilk presents the new Javascript adapter in Cucumber to write step definitions in Javascript|May 22 2010|
-|"Cucumber Makes BDD Cool":http://wdvl.com/Authoring/ror/BDD_Cucumber/saurabh_bhatia03302010.html|A Basic Understanding of Cucumber based BDD|March 30, 2010|
 |"Testing a WPF UI using Ruby, Cucumber and WiPFlash.dll":http://codebetter.com/blogs/benhall/archive/2010/03/16/testing-a-wpf-ui-using-ruby-cucumber-and-wipflash-dll.aspx|by Ben Hall|Mar 16 2010|
 |"Testing Excel with Cucumber":http://adomokos.blogspot.com/2010/03/testing-excel-with-cucumber.html|Attila Domokos shows us how to use Cucumber to verify your Excel forumlas.|Mar 14 2010|
 |"Java Skeleton Web App + Cuke":http://jamesladdcode.com/?p=316 [Be wary, this site seems to host a trojan]|Java Cucumber (cuke4duke) Spring 3 and Selenium Test  - Jump Start Web Application. Cucumber is used to drive the WebDriver Browser based tests + more |Mar 7 2010|
