@@ -14,6 +14,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"crb":http://wiki.github.com/maiha/crb| An irb console for cucumber world. (crb = cucumber + irb)|
 |"CuCapp":http://github.com/dparnell/cucapp | Cucumber integration with Cappuccino. |
 |"Cucover":http://github.com/mattwynne/cucover | Coverage-aware lazy / selective Cucumber feature runnner|
+|"Cucumber-cpp":https://github.com/cucumber/cucumber-cpp | Cucumber for C++|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
 |"Cucumber Factory":http://github.com/makandra/cucumber_factory/tree/master|Create Rails model records without writing step definitions.|
 |"Cucumber Feature Manager":http://github.com/cs3b/cucumber_fm|Help to manage with big amount of features in project, "demo":http://demo.cucumber.fm/|
