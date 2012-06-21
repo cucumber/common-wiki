@@ -46,7 +46,7 @@ There are several ways to get yourself started in writing tests, depending somew
 *** "Webrat":http://github.com/brynary/webrat/tree/master/ - Ruby acceptance testing for web applications
 *** "Capybara":http://github.com/jnicklas/capybara - Acceptance testing framework with a webrat-like API and support for multiple backends, including RackTest, Selenium, Celerity and Culerity
 *** "Steam":http://github.com/svenfuchs/steam - Drives a fast headless browser with Javascript support. Support for the normal webrat step definitions, see [[Setting up Steam]]
-*** [[PHP|Testing PHP app using Webrat]]
+*** [[PHP]]
 *** "WebDriver":http://code.google.com/p/selenium/wiki/RubyBindings - Drives IE, Firefox, Chrome
 *** "Watir":http://watir.com/ - Drives IE (Windows only) 
 *** "Watir WebDriver":http://watirwebdriver.com/ - Drives Firefox, Chrome, IE & Opera - optionally headless - Linux/Mac/Windows: "the most elegant way to use webdriver with ruby"
