@@ -45,6 +45,7 @@ Emacs packages|
 |[[FunFX and Flex]]| Test Adobe Flex applications with Cucumber|
 |"Frank":http://www.testingwithfrank.com/|Test iPhone/iPad applications using Cucumber|
 |"Gizmo":http://gizmo-gem.info/|Simple page model testing framework that works great with Cucumber|
+|"Gherkin.mode for Coda2":https://github.com/takaxi/gherkin.mode/|Plugin for Coda2 that highlights syntax keywords of .feature file|
 |"Greendot":http://github.com/bruce/greendot|Describe apps as state machines, with various outputs (including Cucumber features).|
 |"Groundwork":http://github.com/hectoregm/groundwork/tree/master| Rails Template using Authlogic that comes with Cucumber features|
 |"Guard::Cucumber":http://github.com/guard/guard-cucumber| Guard::Cucumber automatically runs your features (much like autotest)|
