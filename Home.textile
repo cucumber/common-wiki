@@ -162,4 +162,4 @@ h2. Meta
 
 * [[Contributing]]
 * [[Get in touch]]
-* [[Search]] this wiki
+* "Search":http://www.google.com/cse/home?cx=007890526056528126221%3A-iaos5ttkpu&ie=UTF-8 this wiki, cukes.info, IRC rooms and mailing lists.
