@@ -26,3 +26,5 @@ To use RSpec's 2.x.x expectations (<code>should</code>), make sure the following
 require 'rspec/expectations'
 World(RSpec::Matchers)
 </pre>
+
+If you're using bundler, add the 'rspec-expectations' gem to your Gemfile.
