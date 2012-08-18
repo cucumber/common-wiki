@@ -52,7 +52,7 @@ Emacs packages|
 |"Gutkumber":http://github.com/danlucraft/gutkumber| Integration testing for "Ruby-GNOME2":http://ruby-gnome2.sourceforge.jp/.|
 |"Hydra":http://github.com/ngauthier/hydra| Distributed testing framework that can run your features in parallel.|
 |[[IronRuby and .NET]]| Test .NET applications with Cucumber|
-|"jEdit Cucumber Mode":http://pastie.org/629615|jEdit mode to add syntax highlighting for .feature files|
+|"jEdit Cucumber Mode":http://web.archive.org/web/20091004184554/http://redshades.rha7.com/|jEdit mode to add syntax highlighting for .feature files|
 |"jEdit Cucumber Mode on github":https://github.com/graza/jEditCucumberMode|jEdit mode to add multi-lingual syntax highlighting for .feature files|
 |"Jeweler":http://github.com/technicalpickles/jeweler|Craft the perfect RubyGem - with built-in Cucumber support|
 |[[JRuby and Java]]| Test Java applications with Cucumber|
