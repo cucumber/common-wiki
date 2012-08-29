@@ -10,7 +10,7 @@ Scenario: eat 5 out of 20
   Given there are 20 cucumbers
   When I eat 5 cucumbers
   Then I should have 15 cucumbers
-```g
+```
 
 Scenario outlines allow us to more concisely express these examples through the use of a template with placeholders, using `Scenario Outline`, `Examples` with tables and `< >` delimited parameters:
 
