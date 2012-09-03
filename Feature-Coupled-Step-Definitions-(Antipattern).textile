@@ -1,4 +1,4 @@
-Feature-coupled steps are steps that can't be used across features or scenarios. This is evil because it may lead to an explosion of step definitions, code duplication and high maintenance costs.
+Feature-coupled step definitions are step definitions that can't be used across features or scenarios. This is evil because it may lead to an explosion of step definitions, code duplication and high maintenance costs.
 
 h2. Example
 
