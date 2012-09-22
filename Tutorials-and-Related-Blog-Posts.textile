@@ -3,7 +3,9 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
 
 |*Post*|*Description*|*Posting Date*|
+| "How to use System Properties and Maven profiles to change Cucumber-JVM’s behaviour":http://www.weblogism.com/item/337/cucumber-jvm-and-maven-ii | Example of how system properties can be used to alter Cucumber-JVM runtime parameters, such as report format, tags, etc. | September 7th 2012 |
 | "Acceptance Testing C++ with Cucumber and the Wire Protocol":http://spin.atomicobject.com/2012/05/23/acceptance-testing-c-with-cucumber-and-the-wire-protocol/ | Overview of using cucumber-cpp for testing C++ applications by Atomic Object (Greg Williams) | May 23 2012 |
+| "Integration Tests with Cucumber-JVM, Selenium and Maven":http://www.weblogism.com/item/334/integration-tests-with-cucumber-jvm-selenium-and-maven| Example of use of Cucumber-JVM using Maven profiles to run the integration tests. | April 30th 2012 |
 |"Testing a C++ application with Cucumber":http://petriconi.net/?p=46|Felix Petriconi describes how one could pass the gap from the Cucumber/Ruby step definitions to a C++ application| December 21 2011|
 |"Testing Mule 3.2 with Cucumber":http://ricston.com/blog/?p=1984/|Leveraging Cucumber’s specifications to describe Mule tests | November 15 2011|
 |"Modern Cucumber and Rails: No More Training Wheels":http://blog.carbonfive.com/2011/11/07/modern-cucumber-and-rails-no-more-training-wheels/|Follow-up to Aslak's "The training wheels came off" article| November 7 2011|
