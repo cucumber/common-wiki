@@ -102,9 +102,9 @@ at_exit do
   my_heavy_object.undo_it
 end
 </code></pre>
-h3. Running cucumber steps before any scenario is run
+h3. Running a Before hook only once
 
-Running cucumber steps once before any scenario can be done with this trick:
+If you have a hook you only want to run once, use a global variable:
 
 <pre><code>Before do 
   if !$dunit 
@@ -114,7 +114,6 @@ Running cucumber steps once before any scenario can be done with this trick:
   end 
 end 
 </code></pre>
-In reality, this works as a BeforeAll hook and runs only once.
 
 h3. AfterConfiguration
 
