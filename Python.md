@@ -2,9 +2,9 @@
 
 Did you know that you can use cucumber to test Python code?
 
-This is possible via the excellent "rubypython":http://rubypython.rubyforge.org/ gem by Zach Raines.
+This is possible via the excellent [rubypython](http://rubypython.rubyforge.org/) gem by Zach Raines.
 
-For a simple example, check out Cucumber's "python example":http://github.com/cucumber/cucumber/tree/master/examples/python
+For a simple example, check out Cucumber's [python example](http://github.com/cucumber/cucumber/tree/master/examples/python)
 
 ## Alternative Tools
 
