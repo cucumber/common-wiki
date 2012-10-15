@@ -1,20 +1,9 @@
-Don't like RSpec's <code>should</code> methods for assertions? No problem, we won't force you to. You can use the familiar Test::Unit <code>assert</code> methods by defining your own "World":a-whole-new-world block in *versions 0.2.3.2 and later*:
+Don't like RSpec's <code>should</code> methods for assertions? No problem, we won't force you to. You can use the familiar Test::Unit <code>assert</code> methods by mixing it into your "World":a-whole-new-world.
 
 <pre>
 require 'test/unit/assertions'
 
 World(Test::Unit::Assertions)
-</pre>
-
-or in *version prior to 0.2.3.2*:
-
-<pre>
-require 'test/unit/assertions'
-
-World do |world|
-  world.extend(Test::Unit::Assertions)
-  world
-end
 </pre>
 
 You can see a full example under the "examples":http://github.com/cucumber/cucumber/tree/master/examples%2Ftest_unit
