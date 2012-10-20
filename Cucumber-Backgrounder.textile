@@ -577,7 +577,7 @@ h3. Anything Else?
 
 The terminology for elements of Behaviour Driven Development differs somewhat from that employed by Test Driven Development.  This article, because of the introductory nature of its contents, tends to blur the semantic distinction between these two divergent philosophies.
 
-Cucumber is evolving, rapidly.  Originally, Cucumber was written for Ruby on Rails.  As discussed above this has long since ceased to be true and Cucumber now has a supplementary library, Aruba, which permits testing of Command Line Interface processes.  This article is revised to Cucumber version 1.1.0 (<em>somewhat - I have a few areas to revisit</em>  and Cucumber-Rails version 0.5.0 (<em>ditto</em> but it does not cover many of the ever expanding attributes of Cucumber, Cucumber-Rails, Aruba, and only mentions the JVM version, Cuke4Duke, here.  
+Cucumber is evolving, rapidly.  Originally, Cucumber was written for Ruby on Rails.  As discussed above this has long since ceased to be true and Cucumber now has a supplementary library, Aruba, which permits testing of Command Line Interface processes.  This article is revised to Cucumber version 1.1.0 (<em>somewhat - I have a few areas to revisit</em>)  and Cucumber-Rails version 0.5.0 (<em>ditto</em>) but it does not cover many of the ever expanding attributes of Cucumber, Cucumber-Rails, Aruba, and only mentions the JVM version, Cuke4Duke, here.  
 
 Because of this consideration it would not be wise to use any of the examples from this article as a recipe. Nonetheless, the essentials of this article remain applicable throughout all recent versions of Cucumber and Cucumber-Rails even where the implementation details may have changed since this review.  
 
