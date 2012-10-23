@@ -11,6 +11,14 @@ h2. Scenario hooks
 end
 </code></pre>
 
+<pre><code>Before do |scenario|
+  # The +scenario+ argument is optional, but if you use it, you can get the title,
+  # description, or name (title + description) of the scenario that is about to be
+  # executed.
+  Rails.logger.debug "Starting scenario: #{scenario.title}"
+end
+</code></pre>
+
 <code>After</code> hooks will be run after the last step of each scenario, even when there are failing, undefined, pending or skipped steps. They will run in the *opposite* order of which they are registered.
 
 <pre><code>After do |scenario|
