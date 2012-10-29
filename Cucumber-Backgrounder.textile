@@ -181,7 +181,7 @@ or this
         |-- paths.rb
         `-- transitions.rb
 </code></pre>
-In early version of Cucumber-Rails a feature scaffold generator could generate feature files with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>.  Despite the behaviour displayed by the Cucumber-Rails feature generator it is considered an anti-pattern to relate step_definition files to specific feature files.  In fact, so anti-pattern was its behaviour that the feature generator itself was removed from version 1.1.1 and later so as to avoid giving a bad example to newcomers. 
+In early versions of Cucumber-Rails a feature scaffold generator was provided that could generate feature files with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>.  Despite the behaviour displayed by the Cucumber-Rails feature generator it is considered an anti-pattern to relate step_definition files to specific feature files.  In fact, so anti-pattern was its behaviour that the feature generator itself was removed from version 1.1.1 and later so as to avoid giving a bad example to newcomers. 
 
 As is the case for many ( <em>most? all?</em> ) programming suggestions there are exceptions and contrary opinions respecting the orthodox advice respecting mating feature files to specific step definition files.  Nonetheless, it is probably best to follow this recommendation at the outset and depart from it only when you are experienced enough to evaluate the trade-offs between approaches.
 
