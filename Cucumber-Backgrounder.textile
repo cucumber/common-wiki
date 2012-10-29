@@ -91,7 +91,7 @@ features
 └── support
     └── env.rb
 </code></pre>
-If you are not using Rails and Cucumber-Rails in your project then you can accomplish much the same thing by creating the directory tree from the command line (mkdir -p features/step_definitions) adding the support directory under features.  <em>People returning to Cucumber who are familiar with its early versions will note the absence of all the support files cucumber-rails used to provide, most significantly websteps.rb.  You have to roll your own from the get go these days.</em>  
+If you are not using Rails and Cucumber-Rails in your project then you can accomplish much the same thing by creating the directory tree from the command line (mkdir -p features/step_definitions) adding the support directory under features.  <em>People returning to Cucumber who are familiar with its early versions will note the absence of all the support files cucumber-rails used to provide, most significantly websteps.rb.  "You have to roll your own since version 1.1.0.":http://aslakhellesoy.com/post/11055981222/the-training-wheels-came-off</em>  
 
 Once the features directory structure is in place then we are ready to begin testing with Cucumber.
 
@@ -181,7 +181,9 @@ or this
         |-- paths.rb
         `-- transitions.rb
 </code></pre>
-Consider, however, that the Cucumber feature scaffold generator will generate the files it produces in conformance with the default layout, with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>.  Further, despite the behaviour provided in the Cucumber-Rails generator, it is considered an anti-pattern to relate step_definition files to specific feature files.  As is the case for many programming suggestions there are exceptions and contrary opinions respecting this advice.  Nonetheless, it is probably best to follow this recommendation at the outset and depart from it only when you are experienced enough to evaluate the trade-offs between approaches.
+The Cucumber feature scaffold generator would generate the files it produced in conformance with the default layout, with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>.  Despite the behaviour provided in the Cucumber-Rails feature generator it is considered an anti-pattern to relate step_definition files to specific feature files.  In fact, so anti-pattern was its behaviour that the feature generator was removed from version 1.1.1 and later. 
+
+As is the case for many programming suggestions there are exceptions and contrary opinions respecting the orthodox advice respecting mating feature files and step definition files.  Nonetheless, it is probably best to follow this recommendation at the outset and depart from it only when you are experienced enough to evaluate the trade-offs between approaches.
 
 Also be aware that, regardless of the directory structure employed, Cucumber effectively flattens the features directory tree when running tests.  By this I mean that anything ending in .rb under the start point for a Cucumber feature run is searched for feature matches.  Thus, a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>, providing that cucumber is invoked on a root directory common to both, <code>./features</code> in this case; or explicitly required on the command line, <code>$ cucumber -r ./features features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
 
