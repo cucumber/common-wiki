@@ -384,6 +384,7 @@ end
 Keep in mind that Cucumber is simply a DSL wrapper around the Ruby language, whose full expressiveness remains available to you in the step definition files.  On the other hand, do not lose sight that every step called as such in a step definition file is first parsed by [[Gherkin]] and therefore must conform to the same syntax as used in feature files.
 
 Returning to our example of "Bob" the user, one could define things in the step_definitions file like this:
+
 <pre>
 When /"Bob" logs in/ do |user|
   steps( %Q(
