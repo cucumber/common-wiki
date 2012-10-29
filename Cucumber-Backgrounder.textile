@@ -91,7 +91,9 @@ features
 └── support
     └── env.rb
 </code></pre>
-If you are not using Rails and Cucumber-Rails in your project then you can accomplish much the same thing by creating the directory tree from the command line (mkdir -p features/step_definitions) adding the support directory under features.  <em>People returning to Cucumber who are familiar with its early versions will note the absence of all the support files cucumber-rails used to provide, most significantly websteps.rb.  "You have to roll your own since version 1.1.0.":http://aslakhellesoy.com/post/11055981222/the-training-wheels-came-off</em>  
+If you are not using Rails and Cucumber-Rails in your project then you can accomplish much the same thing by creating the directory tree from the command line (mkdir -p features/step_definitions) adding the support directory under features.  People returning to Cucumber who are familiar with its early versions will note the absence of all the support files cucumber-rails used to provide saving only env.rb.  Most significantly websteps.rb is gone.  "You have to roll your own step definitions since version 1.1.0.":http://aslakhellesoy.com/post/11055981222/the-training-wheels-came-off.  But the old, deprecated, steps can still be found if you read the referenced blog entry.
+
+<em> It is a <strong>really</strong> good idea to read the contents of <code>./features/support/env.rb</code></em>
 
 Once the features directory structure is in place then we are ready to begin testing with Cucumber.
 
