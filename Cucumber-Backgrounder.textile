@@ -83,8 +83,6 @@ We will return to how to write features and steps later.  For the moment we deal
 </code></pre>
 
 Depending upon the version of Rails, running <code>rails g cucumber</code> or <code>script/generate cucumber:install</code> adds this layout to the existing structure:
-<em>Note Bene: Take the time to read the generator help first, <code>rails g cucumber:install --help</code></em>
-<em>Also note that the cucumber_rails gem at version 0.4.1 does not properly configure support/env.rb for use with testunit or capybara.  Details on how to remedy this are on the issues page of cucumber-rails here at github.</em>
 <pre><code>
 features
 ├── step_definitions
