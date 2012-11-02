@@ -378,7 +378,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-In Ruby one may choose to include the parameter list within parentheses or not.  Both forms of calling the step method are shown above.
+In Ruby usually one may choose to include the method parameter list within parentheses or not.  Both forms of calling the step method are shown above.
 
 Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) the embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument.  However, with this method the Gerkin methods deprecated in simple nested steps are still required:
 
