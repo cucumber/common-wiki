@@ -354,34 +354,44 @@ When /some "(.*)" action/ do |a|
   a => required
 </code></pre>
 
-In a manner similar to my convention of using only using the *When* method for step definition matchers, as When, Given, and Then are all equivalent inside the step definitions file, I have adopted the convention of calling other step definitions within matchers using the Then method, thus:
+Once-upon-a-time one could simply nest Given, When, Then matchers in step definition files and call steps from within steps directly.  This practice became more and more frowned upon until that ability was removed ( <em>well strongly deprecated</em> ) and nested steps must now be called using the <strong><code>step</code></strong> method.  You may still encounter the following forms in step definition files created before this change:
 
 <pre>
 When /my matcher named (.*)/ do |match|
   Then "my other matcher named \"#{match}\""
 end
-</pre>
 
-The choice of matcher method has no impact on the result but, <em>When</em> and <em>Then</em> used in this fashion seem to me to read more naturally.  You should also realize that the argument passed to the <em>Then</em> method is a string and that the string may be constructed in any manner.  For example the above <em>Then</em> statement could be passed as: 
-
-<pre>
 When /my matcher named (.*)/ do |match|
-  Then %Q(my other matcher named "#{match}")
+  When %Q(my other matcher named "#{match}")
 end
 </pre>
 
-This latter format removes the necessity to escape (\) the embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument:
+When encountered nested Then and When steps should be replaced with the step method:
+
+<pre>
+When /my matcher named (.*)/ do |match|
+  step( "my other matcher named \"#{match}\"" )
+end
+
+When /my matcher named (.*)/ do |match|
+  step %Q(my other matcher named "#{match}")
+end
+</pre>
+
+In Ruby one may choose to include the parameter list within parentheses or not.  Both forms of calling the step method are shown above.
+
+Using the %Q method ( <em>which is usually shortened to just <strong>%</strong></em> ) within the step method removes the necessity to escape (\) the embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument.  However, with this method the Gerkin methods deprecated in simple nested steps are still required:
 
 <pre>
 When /my matcher named (.*)/ do |match|
   steps %Q{
-    Then my other matcher named "#{match}"
+    Then step my other matcher named "#{match}" 
      And the next matcher with value "{match}"
   }
 end
 </pre>
 
-Keep in mind that Cucumber is simply a DSL wrapper around the Ruby language, whose full expressiveness remains available to you in the step definition files.  On the other hand, do not lose sight that every step called as such in a step definition file is first parsed by [[Gherkin]] and therefore must conform to the same syntax as used in feature files.
+Always keep in mind that Cucumber is simply a DSL wrapper around the Ruby language whose full expressiveness remains available to you in the step definition files ( <em>but not in the feature files</em> ).  On the other hand, do not lose sight that every step called as such in a step definition file is first parsed by [[Gherkin]] and therefore must conform to the same syntax as used in feature files.
 
 Returning to our example of "Bob" the user, one could define things in the step_definitions file like this:
 
@@ -422,7 +432,7 @@ When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
 end
 </code></pre>
 
-Having just shown you how to call steps from within other steps take heed that you do not write many step definitions that are <strong><em>only</em></strong> called from other steps and are never found in feature files.  Sometimes this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything extensive in nature it is nearly always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
+Having just shown you how to do it nonetheless take heed that you do not write many step definitions that call other steps.  Sometimes this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything beyond trivial use it is always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
 <pre><code>
 Cucumber::Rails::World.class_eval do
   def your_method(parm)
@@ -637,7 +647,7 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 2011 May 13 - J. B. Byrne revised to 0.10.2
 2011 June 28 - J. B. Byrne revised to 1.0.0
 2012 October 19 - J. B. Byrne partially revised to 1.1.0
-2012 October 29 - J. B. Byrne revised to 1.1.1
+2012 November 02 - J. B. Byrne revised to 1.1.1
 
 h3. Postscript.
 
