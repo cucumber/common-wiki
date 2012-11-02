@@ -380,7 +380,7 @@ end
 
 In Ruby one may choose to include the parameter list within parentheses or not.  Both forms of calling the step method are shown above.
 
-Using the %Q method ( <em>which is usually shortened to just <strong>%</strong></em> ) within the step method removes the necessity to escape (\) the embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument.  However, with this method the Gerkin methods deprecated in simple nested steps are still required:
+Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) the embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument.  However, with this method the Gerkin methods deprecated in simple nested steps are still required:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -432,7 +432,7 @@ When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
 end
 </code></pre>
 
-Having just shown you how to do it nonetheless take heed that you do not write many step definitions that call other steps.  Sometimes this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything beyond trivial use it is always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
+Having just shown you how to do it now take heed that you do not write many step definitions that call other steps.  At times this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything beyond trivial use it is always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
 <pre><code>
 Cucumber::Rails::World.class_eval do
   def your_method(parm)
