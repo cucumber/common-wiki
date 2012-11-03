@@ -183,7 +183,7 @@ or this
 </code></pre>
 In early versions of Cucumber-Rails a feature scaffold generator was provided that could generate feature files with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>.  Despite the behaviour displayed by the Cucumber-Rails feature generator it is considered an anti-pattern to relate step_definition files to specific feature files.  In fact, so anti-pattern was its behaviour that the feature generator itself was removed from version 1.1.1 and later so as to avoid giving a bad example to newcomers. 
 
-As is the case for many ( <em>most? all?</em> ) programming suggestions there are exceptions and contrary opinions respecting the orthodox advice respecting mating feature files to specific step definition files.  Nonetheless, it is probably best to follow this recommendation at the outset and depart from it only when you are experienced enough to evaluate the trade-offs between approaches.
+As is the case for many ( <em>most? all?</em> ) programming suggestions there are exceptions and contrary opinions respecting the orthodox position on the practice of mating step definition files to specific feature files.  Nonetheless, it is probably best to follow the recommendation to avoid feature-specific step-definition files at the outset.  Thereafter depart from it only when you are experienced enough to evaluate the trade-offs between approaches.
 
 Also be aware that, regardless of the directory structure employed, Cucumber effectively flattens the features directory tree when running tests.  By this I mean that anything ending in .rb under the start point for a Cucumber feature run is searched for feature matches.  Thus, a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>, providing that cucumber is invoked on a root directory common to both, <code>./features</code> in this case; or explicitly required on the command line, <code>$ cucumber -r ./features features/views/entity_new</code>.  It is also worth noting that step files can be called anything so long as they end in <code>.rb</code>.  
 
@@ -204,14 +204,14 @@ Scenario: The application has a home page
    And I should not see a 404 page
 </code></pre>
 
-Once upon a time the easiest thing to do for the first time tester/behaviourist was to use Cucumber's built-in scaffold generator to create a feature scaffold for each new feature desired and then modify the resulting files to suit.
+Once upon a time the easiest thing to do for the first time tester/behaviourist was to use Cucumber's now departed built-in scaffold generator to create a feature scaffold for each new feature desired and modifying the resulting files to suit.
 <pre><code>script/generate feature Frooble name color description
       exists  features/step_definitions
       create  features/manage_froobles.feature
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
 
-This might be the easiest thing to do, but not necessarily the best thing to do.  In my experience framework generated scaffolds provide only a comforting illusion of progress through voluminous production of boilerplate code.  Said code is, for all intents and purposes, worthless save only as an example of proper syntax – and even the syntax is sometimes dubious.  This fact eventually eventually led to the feature generator's removal from cucumber-rails.  Now, like step definitions, you have to write your own code ( <em>or steal somebody else's</em> ) from the outset.
+This might have been the easiest thing to do but, is was not the best thing to do.  In my experience framework generated scaffolds provide only a comforting illusion of progress through voluminous production of boilerplate code.  Said code is, for all intents and purposes, worthless save only as an example of proper syntax – and even the syntax is sometimes dubious.  This fact eventually eventually led to the feature generator's removal from cucumber-rails.  Now, like step definitions, you have to write your own code ( <em>or steal somebody else's</em> ) from the outset.
 
 In any case, in practice it proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  Detailed discussion of feature writing and step construction are provided elsewhere (see [[Given-When-Then]] and "Telling a Good Story":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html). 
 
@@ -253,9 +253,9 @@ It is tempting, sometimes irresistibly so, to just skip ahead with the analysis 
 
 This is a hard discipline to accept but, the value with this approach is that you will rarely ( <em>never</em> ) have untested code anywhere in your application.  More importantly, if you rigorously adhere to this methodology then your application will only contain code that satisfies required features.  This is an often overlooked or undervalued consideration that contributes greatly to the efficiency of coding and the robustness of the resulting code.  Avoiding diversions into technically interesting and financially pointless coding adventures concentrates resources on the tasks that count and reduces the overall complexity of the project.  <strong><em>For if the user is not asking for it then why are we writing it?</em></strong>  
 
-Sticking with this approach you can face significant design changes ( <em>and gem updates</em> ) with complete equanimity, secure in the knowledge that if unanticipated changes break anything anywhere in your project then you will know of this immediately upon running your test suite ( <em>Which is always running, right? Right??</em> ).  More importantly, you will know exactly what is broken and where it is broken.  Like any skilled tradesman, most of the value programmers provide lies in discovering what piece of code to change and not simply how to change it.  Finding the spots that need attention in an application is usually the biggest maintenance problem.  Strictly coding to features simplifies that task to the point of triviality.
+Sticking with this approach you can face significant design changes ( <em>and gem updates</em> ) with complete equanimity, secure in the knowledge that if unanticipated changes break anything anywhere in your project then you will know of this immediately upon running your test suite ( <em>Which is always running, right? Right??</em> ).  More importantly, you will know exactly what is broken and where it is broken.  Like any skilled tradesman, most of the value programmers provide lies in discovering what piece of code to change and not simply how to change it.  Finding the exact spots in an application that need attention is usually the biggest maintenance problem.  Strictly coding to features simplifies that task to the point of triviality.
 
-If it happens that, on occasion, you do anticipate feature steps ( <em>and we all do this however much we try not to</em> ) then omitting any matcher for them in the step definitions files causes these steps to be reported as missing by cucumber. Not only does cucumber report them, it helpfully provides a suggested step matcher and argument to implement.  If you end up writing stub step matchers then you have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/unspecified/stub step definitions, together with an optional message.  These step definitions will display as defined but pending in your cucumber runs.
+If it happens that, on occasion, you do anticipate feature steps ( <em>and we all do this however much we try not to</em> ) then omitting any matcher for them in the step definitions files causes those steps to be reported as missing by cucumber. Not only does cucumber report them it helpfully provides a suggested step matcher and argument to implement.  If you end up writing stub step matchers then you have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/unspecified/stub step definitions, together with an optional message.  These step definitions will display as defined but pending in your cucumber runs along with any message that you provided to the pending method.
 <pre><code>
   Given /this step is not implemented yet/ do
     pending "your message goes here"
@@ -264,9 +264,9 @@ If it happens that, on occasion, you do anticipate feature steps ( <em>and we al
 
 h3. What are Features and Scenarios?
 
-A feature can be conceptualized as an indivisible unit of functionality embedded in the project to which it belongs.  For example, an authentication challenge and response user interface is usually considered a feature while an entire authentication system necessarily comprises many features.   A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature usually consists of multiple <strong><em>Scenarios</em></strong>.
+A feature can be conceptualized as an indivisible unit of functionality embedded in the project to which it belongs.  For example, an authentication challenge and response user interface is usually considered a feature while an entire authentication system necessarily comprises many features.   A single <strong><em>Feature</em></strong> is typically contained in its own file (ending in <code>.feature</code>).  Each Feature is usually elaborated though multiple <strong><em>Scenarios</em></strong>.
 
-A  <strong><em>Scenario</em></strong> is a block of statements that describe some behaviour desired or deprecated in the feature to which it belongs.  A scenario might check that the login interface provides input fields for the requisite responses, that failures are logged or otherwise reported, that user ids are locked out after a given number of failed attempts, and so forth.  Each scenario exercises the implementation code  to prove that for each anticipated condition the expected behaviour is indeed produced.  Recall that scenarios specify <strong>What</strong> and should avoid answering the question: <strong>How</strong>?
+A <strong><em>Scenario</em></strong> is a block of statements inside a feature file that describe some behaviour desired or deprecated in the feature to which it belongs.  A scenario might check that the login interface provides input fields for the requisite responses, that failures are logged or otherwise reported, that user ids are locked out after a given number of failed attempts, and so forth.  Each scenario exercises the implementation code to prove that for each anticipated condition the expected behaviour is indeed produced.  Recall that scenarios specify <strong>What</strong> and should avoid answering the question: <strong>How</strong>?
 
 Each Scenario consists of three classes of statements, <strong>Given</strong>, <strong>When</strong> and <strong>Then</strong> which effectively divide each scenario into three stages.  Each stage of a scenario consists of one or more statements that are used to match to test step definitions. The conventional arrangement is:
 
@@ -290,9 +290,9 @@ To Increase Revenue | Reduce Costs | Protect Revenue  (pick one)
 </code></pre>
 For Cucumber features the key words used here are <strong>Feature</strong>, <strong>Scenario</strong>, <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, and <strong>And</strong>.  Feature is used to provide identification of the test group when results are reported. 
 
-At the present time ( <em>2012-Oct-29</em> ) the <code>Feature</code> statement and its descriptive text block are not used by Cucumber other than as an identifier and documentation.  However, the <code>Feature</code> statement is arguably the central piece of information contained in a feature file.  It is here that you answer the question of just why this work is being done.  And if you do not have a very good, defensible, reason that can be clearly elucidated in a few sentences then you probably should not be expending any effort on this feature at all.  First and foremost, <strong>BDD</strong> absolutely <strong>MUST</strong> have some concrete business value whose realization can be measured before you write a single line of code. <em>"(see popping the why? stack)":http://www.mattblodgett.com/2009/01/pop-stack.html</em>
+At the present time ( <em>2012-Oct-29</em> ) the <code>Feature</code> statement and its descriptive text block are not used by Cucumber other than as an identifier and documentation.  However, the <code>Feature</code> statement arguably contains the most important piece of information contained in a feature file.  It is here that you answer the question of just why this work is being done.  And if you do not have a very good, defensible, reason that can be clearly elucidated in a few sentences then you probably should not be expending any effort on this feature at all.  First and foremost, <strong>BDD</strong> absolutely <strong>MUST</strong> have some concrete business value whose realization can be measured before you write a single line of code. <em>"(see popping the why? stack)":http://www.mattblodgett.com/2009/01/pop-stack.html</em>
 
-As with <code>Feature</code>, <code>Scenario</code> is used only for identification when reporting failures and to document a piece of the work.  The clauses that make up a Scenario begin with one of: Given, When, Then, And and But ( <em> and sometimes <strong>*</strong</em> ).  These are all [[Gherkin]] keywords / Cucumber methods that take as their argument the string that follows.  They are the steps that Cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  The five keywords ( <em> and <strong>*</strong</em> ) are all equivalent to one another and completely interchangeable.
+As with <code>Feature</code>, <code>Scenario</code> is used only for identification when reporting failures and to document a piece of the work.  The clauses ( <em>steps</em> ) that make up a Scenario each begin with one of: Given, When, Then, And and But ( <em> and sometimes <strong>*</strong</em> ).  These are all [[Gherkin]] keywords / Cucumber methods that take as their argument the string that follows.  They are the steps that Cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  The five keywords ( <em> and <strong>*</strong</em> ) are all equivalent to one another and completely interchangeable.
 
 The string following the keyword is compared against all the matchers contained in all of the loaded step_definitions.rb files.  A step definitions matcher looks much like this:
 <pre><code>Given /there are (\d+) froobles/ do |n|
@@ -354,7 +354,7 @@ When /some "(.*)" action/ do |a|
   a => required
 </code></pre>
 
-Once-upon-a-time one could simply nest Given, When, Then matchers in step definition files and call steps from within steps directly.  This practice became more and more frowned upon until that ability was removed ( <em>well strongly deprecated</em> ) and nested steps must now be called using the <strong><code>step</code></strong> method.  You may still encounter the following forms in step definition files created before this change:
+Once-upon-a-time one could simply nest Given, When, Then matchers in step definition files and call steps from within steps directly.  This practice became more and more frowned upon until at last that ability was removed ( <em>well strongly deprecated</em> ) and nested steps must now be called using the <strong><code>step</code></strong> method.  You may still encounter the following forms in step definition files created before this change:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -366,7 +366,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-When encountered nested Then and When steps should be replaced with the step method:
+When encountered these nested Then and When steps should be replaced with the step method:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -380,7 +380,7 @@ end
 
 In Ruby usually one may choose to include the method parameter list within parentheses or not.  Both forms of calling the step method are shown above.
 
-Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) the embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument.  However, with this method the Gerkin methods deprecated in simple nested steps are still required:
+Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) any embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument.  However, with this method the Gerkin methods deprecated in simple nested steps are still required:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -432,7 +432,7 @@ When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
 end
 </code></pre>
 
-Having just shown you how to do it now take heed that you do not write many step definitions that call other steps.  At times this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything beyond trivial use it is always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can stick these custom methods in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) and which encloses your methods with the following block:
+Having just shown you how to do it now take heed that you do not write many step definitions that call other steps.  At times this will seem like the quickest solution to a troublesome bit of environment building.  However, for anything beyond trivial use it is always better to implement a custom method using the <strong>api</strong> provided by Cucumber ( <em>or by any other libraries you have installed</em> ) and then call that method directly from your step.  You can either keep these custom methods in the same file as the regular steps or stick them in any convenient file ending in <code>.rb</code> that is located in the support directory ( <em>well, anywhere that cucumber can find it really</em> ) in which case you must enclose your methods within the following block:
 <pre><code>
 Cucumber::Rails::World.class_eval do
   def your_method(parm)
@@ -441,7 +441,23 @@ Cucumber::Rails::World.class_eval do
 end
 </code></pre>
 
-My rule of thumb is that if a step definition requires more than eight to ten lines of code, and it is called from any other step definition, then its contents probably should be extracted out into a custom method.
+My rule of thumb is that if a step definition is called from more than one other step definition then its contents probably should be extracted out into a custom method.  For example our logon step is likely to be used repeatedly throughout our features.  Turning it into a method is probably called for.
+<pre><code>
+def logon_for_user( uname )
+  visit(logon_path)
+  fill_in( "User Name", :with => uname )
+  fill_in( "Password", :with => uname + "-test-passwd" )
+  click_button( "Logon" )
+end
+
+When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
+  logon_for_user( user_name )
+end
+
+
+
+</code></pre>
+
 
 h3. Before, After and Background
 
