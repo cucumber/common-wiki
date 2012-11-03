@@ -207,7 +207,7 @@ Once upon a time the easiest thing to do for the first time tester/behaviourist 
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
 
-This might have been the easiest thing to do but, is was not the best thing to do.  In my experience framework generated scaffolds provide only a comforting illusion of progress through voluminous production of boilerplate code.  And all too frequently said code is, for all intents and purposes, worthless; save only as an example of proper syntax and even then the syntax is oft-times of dubious quality.
+This might have been the easiest thing to do but, it was never the best thing to do.  In my experience framework generated scaffolds of all types provide nothing more than a comforting illusion of progress through voluminous production of boilerplate code.  And all too frequently said code is, for all intents and purposes, worthless; save only as an example of proper syntax and even then the syntax is oft-times of dubious quality.
 
 In any case the whole point of BDD is that it is vitally important to write each test/feature step <em><strong>one at a time, with a domain expert, and in plain language</strong></em>.  In the BDD world there is no point to feature scaffolding generators to begin with.  This fact eventually led to the feature generator's removal from cucumber-rails.  Now, like step definitions, you have to write your own code ( <em>or steal somebody else's</em> ) from the outset.
 
