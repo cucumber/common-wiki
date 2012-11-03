@@ -207,11 +207,13 @@ Once upon a time the easiest thing to do for the first time tester/behaviourist 
       create  features/step_definitions/frooble_steps.rb
 </code></pre>
 
-This might have been the easiest thing to do but, is was not the best thing to do.  In my experience framework generated scaffolds provide only a comforting illusion of progress through voluminous production of boilerplate code.  All to frequently said code is, for all intents and purposes, worthless save only as an example of proper syntax – and even the syntax is sometimes dubious.  This fact eventually eventually led to the feature generator's removal from cucumber-rails.  Now, like step definitions, you have to write your own code ( <em>or steal somebody else's</em> ) from the outset.
+This might have been the easiest thing to do but, is was not the best thing to do.  In my experience framework generated scaffolds provide only a comforting illusion of progress through voluminous production of boilerplate code.  And all too frequently said code is, for all intents and purposes, worthless; save only as an example of proper syntax and even then the syntax is oft-times of dubious quality.
 
-In any case, in practice it proves important to write each test/feature step <em><strong>one at a time and in plain language</strong></em>.  Detailed discussion of feature writing and step construction are provided elsewhere (see [[Given-When-Then]] and "Telling a Good Story":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html). 
+In any case the whole point of BDD is that it is vitally important to write each test/feature step <em><strong>one at a time, with a domain expert, and in plain language</strong></em>.  In the BDD world there is no point to feature scaffolding generators to begin with.  This fact eventually led to the feature generator's removal from cucumber-rails.  Now, like step definitions, you have to write your own code ( <em>or steal somebody else's</em> ) from the outset.
 
-"The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it. For example, for an authentication scenario you should write: 
+"The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does plain language mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it.  Detailed discussion of feature writing and step construction are provided elsewhere (see [[Given-When-Then]] and "Telling a Good Story":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html).
+
+For example, for an authentication scenario you should write: 
 
 <pre><code>When "Bob" logs in</code></pre>
 
@@ -225,7 +227,7 @@ and not:
   Then I should see the "welcome" page
 </code></pre>
    
-What is important about the difference in styles?  The first example, <strong>When "Bob" logs in</strong>,  is a functional requirement.  The second, much longer, example is a procedural reference.  Procedures belong in the implementation details.  Note that the <strong>"Plain English":http://www.plainlanguage.gov/whatisPL/definitions/Kimble.cfm</strong> folks themselves ( <em>the writing not coding English types</em> ) advocate the use of <strong>must</strong> in place of should or shall. 
+What is important about the difference in styles?  The first example, <strong>When "Bob" logs in</strong>,  is a functional requirement.  The second, much longer, example is a procedural reference.  Functional requirements are features but procedures belong in the implementation details.  Ironically, given the propensity to use the word <strong>should</strong> in BDD?TDD, that the <strong>"Plain English":http://www.plainlanguage.gov/whatisPL/definitions/Kimble.cfm</strong> folks themselves ( <em>the writing not coding English types</em> ) advocate the use of <strong>must</strong> in place of should or shall. 
 
 What you and your client should concern yourselves with in your feature files is that which has to happen and not how you expect it to happen.  That way, when somebody later decides that challenge and response authentication schemes are passé then you simply need change the authentication process steps behind the scenes.  Your outward facing feature files, the ones that your clients get to see, need not change at all.  In fact, a good question to ask yourself when writing a feature clause is: <strong><em>Will this wording need to change if the implementation does</em></strong>?  If the answer is yes then the clause is poorly written and you should rework it avoiding implementation specific details.  As a side benefit, in consequence your scenarios will be a lot shorter and much easier to follow and understand.
 
