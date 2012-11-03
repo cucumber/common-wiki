@@ -354,7 +354,7 @@ When /some "(.*)" action/ do |a|
   a => required
 </code></pre>
 
-Once-upon-a-time one could simply nest Given, When, Then matchers in step definition files and call steps from within steps directly.  This practice became more and more frowned upon until at last that ability was removed ( <em>well strongly deprecated</em> ) and nested steps must now be called using the <strong><code>step</code></strong> method.  You may still encounter the following forms in step definition files created before this change:
+Once-upon-a-time one could simply nest Given, When, Then matchers in step definition files and call steps from within other steps directly.  This practice became more and more frowned upon until at last that ability was removed ( <em>well strongly deprecated</em> ) and nested steps must now be called using the <strong><code>step</code></strong> method.  You may still encounter the following forms in step definition files created before this change:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -366,7 +366,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-When encountered these nested Then and When steps should be replaced with the step method:
+When encountered these nested Then and When keywords should be replaced with the step method:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -378,18 +378,17 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-In Ruby usually one may choose to include the method parameter list within parentheses or not.  Both forms of calling the step method are shown above.
+<em>In Ruby usually one may choose to include the method parameter list within parentheses or not.  Both forms of calling the step method are shown above.</em>
 
-Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) any embedded quotation characters (").  Multiple steps may be called using the <em>steps</em> method which itself takes a string argument.  However, with this method the Gerkin methods deprecated in simple nested steps are still required:
-
-<pre>
+Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) any embedded quotation characters (").  Multiple steps may be called en bloc using the <strong><code>steps</code></strong> ( <em>note the plural form</em> ) method which itself takes a string argument.  However, with the steps method the Gerkin keywords deprecated in simple nested steps are still required:
+<pre><code>
 When /my matcher named (.*)/ do |match|
   steps %Q{
     Then step my other matcher named "#{match}" 
      And the next matcher with value "{match}"
   }
 end
-</pre>
+</code></pre>
 
 Always keep in mind that Cucumber is simply a DSL wrapper around the Ruby language whose full expressiveness remains available to you in the step definition files ( <em>but not in the feature files</em> ).  On the other hand, do not lose sight that every step called as such in a step definition file is first parsed by [[Gherkin]] and therefore must conform to the same syntax as used in feature files.
 
@@ -441,7 +440,7 @@ Cucumber::Rails::World.class_eval do
 end
 </code></pre>
 
-My rule of thumb is that if a step definition is called from more than one other step definition then its contents probably should be extracted out into a custom method.  For example our logon step is likely to be used repeatedly throughout our features.  Turning it into a method is probably called for.
+My rule of thumb is that if a step definition is called from more than one other step definition then its contents probably should be extracted out into a custom method.  For example a logon step definition is likely to be used repeatedly throughout many features.  Turning it into a method is probably called for.
 <pre><code>
 def logon_for_user( uname )
   visit(logon_path)
@@ -453,9 +452,6 @@ end
 When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
   logon_for_user( user_name )
 end
-
-
-
 </code></pre>
 
 
