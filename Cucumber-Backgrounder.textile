@@ -33,12 +33,8 @@ When I run "rails g cucumber"
 Then I should create the directory ./features
   And I should create the file ./features/features.feature
   And I should create the directory ./features/step_definitions
-  And I should create the file ./features/step_definitions/web_steps.rb
-  And I should create the directory ./features/support
-  And I should create the file ./features/support/env.rb
-  And I should create the file ./features/support/paths.rb
-  And I should create the file ./lib/tasks/cucumber.rake
-  And I should create the file ./config/environments/environment cucumber.rb
+.  .  .
+  And I should create the file ./config/environments/environment/cucumber.rb
   And I should create the file ./config/cucumber.yml
   And I should modify ./config/database.yml
   .  .  .
