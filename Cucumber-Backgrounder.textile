@@ -161,15 +161,15 @@ In this case the bland initial set-up has been divided into sub-directories info
 
 or this
 <pre><code>|-- features
-|   |-- user.feature
-|   |-- user_auth.feature
-|   |-- product.feature
 |   |-- invoicing.feature
+|   |-- product.feature
 |   |-- step_definitions
 |   |   |-- local_steps.rb
 |   |   |-- model_steps.rb
 |   |   |-- service_steps.rb
-`   |   `-- web_steps.rb
+|   |   `-- web_steps.rb
+|   |-- user.feature
+`   |-- user_auth.feature
     `-- support
         |-- env.rb
         |-- hll_cuke_sample_helpers.rb
