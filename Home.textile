@@ -105,7 +105,7 @@ You should discuss the "In order to" part of the feature and "pop the why stack"
 
 If you're about to implement a feature that doesn't support one of those values, chances are you're about to implement a non-valuable feature. Consider tossing it altogether or pushing it down in your backlog. Focus on implementing the MMFs ("Minimum Marketable Features":http://www.softwarebynumbers.org/) that will yield the most value.
 
-Here is an example taken from an IRC chat session in "#cucumber":irc://irc.freenode.net/cucumber:
+Here is an example taken from an IRC chat session in "#cucumber":http://webchat.freenode.net/?channels=cucumber:
 
 <pre>[5:08pm] Luis_Byclosure: I'm having problems applying the "5 Why" rule, to the feature 
                          "login" (imagine an application like youtube)
