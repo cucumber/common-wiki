@@ -257,7 +257,7 @@ This is a hard discipline to accept but the value with this approach is that you
 
 Strictly following this approach permits you to face significant design changes ( <em>and gem updates</em> ) with complete equanimity. Having built your code to reproducible performance measurements you may rest secure in the knowledge that if unanticipated changes anywhere in your project break anything then you will know of this immediately upon running your test suite ( <em>Which is always running, right? Right??</em> ).  More importantly, you will know exactly what is broken and where it is broken.  
 
-Like any skilled tradesman most of the value that a programmer provides lies not so much in knowing how to do something as in knowing when and where it must be done.  The real challenge with maintaining code is simply discovering which piece of code to change.  Finding the exact spots in an application that need attention is usually the biggest maintenance problem.  By strictly coding to features you can simplify that task almost to the point of triviality.
+Like any skilled tradesman most of the value that a programmer provides lies not so much in knowing how to do something as in knowing when and where it must be done.  The real challenge with maintaining code is simply discovering which piece of code to change.  Finding the exact spots in an application that need attention is usually the biggest maintenance problem.  By strictly coding to features backed by suitable step definitions you can simplify that task almost to the point of triviality.
 
 If it happens that, on occasion, you do anticipate feature steps ( <em>and we all do this however much we try not to</em> ) then omitting any matcher for them in the step definitions files causes those steps to be reported as missing by cucumber. Not only does cucumber report them it helpfully provides a suggested step matcher and argument to implement.  If you end up writing stub step matchers prior to full implementation then you have an explicit <strong><em>pending</em></strong> method available to designate defined but pending/unspecified/stub step definitions.  The <code>pending</code> method provides for specifying an optional message.  Step definitions containing the <code>pending</code> method will display as defined but pending in your cucumber runs and will print any message that you provided it.
 <pre><code>
@@ -266,7 +266,7 @@ If it happens that, on occasion, you do anticipate feature steps ( <em>and we al
   end
 </code></pre>
 
-Oh, and never, ever, write a step definition for a clause that is not already present in one of your features.  Most such step definitions will end up as unused "cruft":en.wikipedia.org/wiki/Cruft that somebody, sometime, will end up discarding anyway.  Those that are not discarded will need rework in any case.  It is best to wait until the need each for step definition is both evident and pressing.
+Oh, and never, ever, write a step definition for a clause that is not already present in one of your features.  Most such step definitions will end up as unused "cruft":en.wikipedia.org/wiki/Cruft that somebody at sometime will end up discarding anyway.   In any case, those few that are not discarded will need rework when they are finally employed.  It is best to wait until the need each for step definition is both evident and pressing.
 
 h3. What are Features and Scenarios?
 
