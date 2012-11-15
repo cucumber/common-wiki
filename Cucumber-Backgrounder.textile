@@ -199,7 +199,6 @@ Scenario: The application has a home page
   Given I do have a web application
   When I visit the home page
   Then I should see the home page
-   And I should not see a 404 page
 </code></pre>
 
 Once upon a time the easiest thing to do for the first time tester/behaviourist was to use Cucumber's built-in scaffold generator to create a feature scaffold for each new feature desired and modify the resulting files to suit.
