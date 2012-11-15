@@ -127,14 +127,11 @@ As shown above, the generated features directory tree is fairly shallow.  One ca
 |   |   |-- local_script_steps.rb
 |   |   |-- local_steps.rb
 |   |   |-- local_web_steps.rb
-|   |   |-- local_xml_file_steps.rb
-`   |   `-- web_steps.rb
+`   |   `-- local_xml_file_steps.rb   
     `-- support
         |-- env.rb
-        |-- hll_cuke_sample_helpers.rb
         |-- local_env.rb
-        |-- paths.rb
-        `-- transitions.rb
+        `-- local_transforms.rb
 </code></pre>
 
 In this case the bland initial set-up has been divided into sub-directories informed by model-centric testing.  This could equally well have been broken up in to model/controller/view hierarchies:
@@ -151,14 +148,11 @@ In this case the bland initial set-up has been divided into sub-directories info
 |   |   `-- step_definitions
 |   |       `-- entity_new_steps.rb
 |   |-- step_definitions
-|   |   |-- local_steps.rb
-`   |   `-- web_steps.rb
+`   |   `-- local_steps.rb
     `-- support
         |-- env.rb
-        |-- hll_cuke_sample_helpers.rb
         |-- local_env.rb
-        |-- paths.rb
-        `-- transitions.rb
+        `-- local_transforms.rb
 </code></pre>
 
 or this
@@ -174,14 +168,10 @@ or this
 `   |-- user_auth.feature
     `-- support
         |-- env.rb
-        |-- hll_cuke_sample_helpers.rb
         |-- local_env.rb
-        |-- paths.rb
-        `-- transitions.rb
+        `-- local_transforms.rb
 </code></pre>
-In early versions of Cucumber-Rails a feature scaffold generator was provided that could generate feature files with the <code>manage_frooble.feature</code> file placed in <code>./features</code> and the <code>frooble_steps.rb</code> file in <code>./features/step_definitions</code>.  Despite the behaviour displayed by the Cucumber-Rails feature generator it is considered an anti-pattern to relate step_definition files to specific feature files.  In fact, so anti-pattern was its behaviour that the feature generator itself was removed from version 1.1.1 and later so as to avoid giving a bad example to newcomers. 
-
-As is the case for many ( <em>most? all?</em> ) programming suggestions there are exceptions and contrary opinions respecting the orthodox position on the practice of mating step definition files to specific feature files.  Nonetheless,  at the outset it is probably best to follow the recommendation that one avoid feature-specific step-definition files.  Thereafter you may depart from it but only when you are experienced enough to evaluate the trade-offs between approaches.
+It is considered an anti-pattern to relate step_definition files to specific feature files.  As is the case for many ( <em>most? all?</em> ) programming suggestions there are exceptions and contrary opinions respecting the orthodox position on the practice.  Nonetheless,  at the outset it is probably best to follow the recommendation that one avoid feature-specific step-definition files.  Thereafter you may depart from it but only when you are experienced enough to evaluate the trade-offs between approaches.
 
 Be aware that, regardless of the directory structure employed, Cucumber effectively flattens the features directory tree when running tests.  By this I mean that anything ending in .rb under the start point for a Cucumber feature run is searched for feature matches.  Thus, a step contained in <code>features/models/entities/step_definitions/anything.rb</code> can be used in a feature file contained in <code>features/views/entity_new</code>, providing that cucumber is invoked on a root directory common to both, <code>./features</code> in this case; or explicitly required on the command line, <code>$ cucumber -r ./features features/views/entity_new</code>.  Remember that step definition files can be called anything so long as they end in <code>.rb</code> and that anything ending in .rb anywhere under the root directory for a Cucumber run will be treated as a step definition file.  
 
