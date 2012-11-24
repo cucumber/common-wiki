@@ -412,18 +412,20 @@ end
 </code></pre>
 
 In fact, this step should be further re-factored into a method.  And said method can reside in the same .rb file as the step definition.  This both simplifies the step and encourages the reuse of the resulting method.  It also adds immeasurably to the ease of comprehension for people unfamiliar with the project history who may later have cause to review your tests.  Can you spell M A I N T E N A N C E?
-<pre><code>
+<pre>
 When /"Bob" logs in/ do |user|
   create_new_user_session_for( user )
 end
+</pre>
 
+<pre>
 def create_new_user_session_for( user_in )
   # TODO create proper setter and getter methods for instance variables
   @current_user = User.find_by_username!( user_in ) # ! method raises exception on failure
   @current_session = UserSession.create!(@current_user)  # ! method raises exception on failure
   .  .  .
 end
-</code></pre>
+</pre>
 
 Of course, when you are testing the login user interface the ugly approach seems unavoidable, but in fact it is not. Providing for the purposes of testing that certain conventions are followed respecting user names and passwords the following works just as well and is much cleaner.  Plus you have removed all inter-step dependencies.
 
