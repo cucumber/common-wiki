@@ -411,7 +411,7 @@ When /"Bob" logs in/ do |user|
 end
 </code></pre>
 
-In fact, this step should be further re-factored into a method.  And sai method can reside in the same .rb file as the step definition.  This both simplifies the step and encourages the reuse of the resulting method.  It also adds immeasurably to the ease of comprehension for people unfamiliar with the project history who may later have cause to review your tests.  Can you spell M A I N T E N A N C E?
+In fact, this step should be further re-factored into a method.  And said method can reside in the same .rb file as the step definition.  This both simplifies the step and encourages the reuse of the resulting method.  It also adds immeasurably to the ease of comprehension for people unfamiliar with the project history who may later have cause to review your tests.  Can you spell M A I N T E N A N C E?
 <pre><code>
 When /"Bob" logs in/ do |user|
   create_new_user_session_for( user )
@@ -451,7 +451,7 @@ Cucumber::Rails::World.class_eval do
 end
 </code></pre>
 
-My rule of thumb is that if a step definition is called from more than one other step definition then its contents probably should be extracted out into a custom method.  For example a logon step definition is likely to be used repeatedly throughout many features.  Turning it into a method is probably called for.
+My rule of thumb is that if a step definition is called from another step definition then its contents probably should be extracted out into a custom method.  For example a logon step definition is likely to be used repeatedly throughout many features.  Turning it into a method is probably called for.
 <pre><code>
 def logon_for_user( uname )
   visit(logon_path)
@@ -461,7 +461,7 @@ def logon_for_user( uname )
 end
 
 When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
-  logon_for_user( user_name )
+  user_logon_for( user_name )
 end
 </code></pre>
 
