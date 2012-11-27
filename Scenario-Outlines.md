@@ -38,7 +38,7 @@ The placeholders indicate that when the Examples row is run they should be subst
 
 You can also use placeholders in [[Multiline Step Arguments]].
 
-*{color:red}IMPORTANT: Your step definitions will never have to match a placeholder. They will need to match the values that will replace the placeholder*
+**IMPORTANT:** *Your step definitions will never have to match a placeholder. They will need to match the values that will replace the placeholder*
 
 So when running the first row of our example:
 
