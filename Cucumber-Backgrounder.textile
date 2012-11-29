@@ -322,7 +322,7 @@ But /(\w+) Other (.*)/i do |first_word,second_phrase|
 And /(.*) other (.*)/i do |first_phrase,second_phrase|
 </code></pre>
 
-The step definition match depends only upon the pattern given as the argument passed to the Given/When/Then method and not upon the step method name itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance, to me, for a matcher.
+The step definition match depends only upon the pattern given as the argument passed to the Given/When/Then method and not upon the step method name itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance, to me, for a matcher.  Others find that the word "Given" has a more natural language feel in this context.
 
 If Cucumber finds more than one matcher in all of the step definitions files matches a scenario statement then it complains that it has found multiple step definition matches for that step and forces you to distinguish them.  You can instruct Cucumber to just choose one of the candidates instead by passing it the <code>--guess</code> option on the command line.
 
