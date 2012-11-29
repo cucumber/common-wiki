@@ -291,7 +291,9 @@ At the present time ( <em>2012-Oct-29</em> ) the <code>Feature</code> statement 
 
 As with <code>Feature</code>, <code>Scenario</code> is used only for identification when reporting failures and to document a piece of the work.  The clauses ( <em>steps</em> ) that make up a Scenario each begin with one of: Given, When, Then, And and But ( <em> and sometimes <strong>==*==</strong</em> ).  These are all [[Gherkin]] keywords / Cucumber methods that take as their argument the string that follows.  They are the steps that Cucumber will report as passing, failing or pending based on the results of the corresponding step matchers in the step_definitions.rb files.  The five keywords ( <em> and <strong>*</strong</em> ) are all equivalent to one another and completely interchangeable.
 
-The string following the keyword is compared against all the matchers contained in all of the loaded step_definitions.rb files.  A step definitions matcher looks much like this:
+h3. What are Step Definitions?
+
+The string following the keyword in the feature file is compared against all the matchers contained in all of the loaded step_definitions.rb files.  A step definition looks much like this:
 <pre><code>Given /there are (\d+) froobles/ do |n|
   Frooble.transaction do
     Frooble.destroy_all
@@ -302,7 +304,13 @@ The string following the keyword is compared against all the matchers contained 
 end
 </code></pre>
 
-The significant thing here is that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code> ( <em>although a simple string can also be used</em> ).  Among other things, that means that all the arguments are received as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code>.  It also means that step matchers can be followed by the special regexp modifiers, like <strong>i</strong> if you want to avoid issues involving capitalization.
+The significant things here are that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code> ( <em>although a quoted "simple string" can also be used</em> ) and that the matcher method is followed by a block.  In other words, written defferently this matcher method would look like this:
+
+<pre><code>Given( /there are (\d+) froobles/ ) { |n|
+.  .  .
+}</code></pre>
+
+Among other things, this means that step defintion method blocks receive all of the matcher arguments as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code>.  It also means that step matchers themselves can be followed by the special regexp modifiers, like <strong>i</strong> if you want to avoid issues involving capitalization.
 
 In the feature provided above we had the scenario statement: <code>And Some Other Action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
@@ -496,8 +504,8 @@ My template for a step definition presently looks like this:
 When /statement identifier( not)? expectation "([^\"]+)"/i do |boolean, value|
   actual = expectation( value )
   expected = !boolean
-  message = "expectation failed for #{value}"
-  ...
+  message = "expectation failed for #{value}" 
+  assert( actual == expected, message )
 end
 </code></pre>
 
