@@ -304,13 +304,13 @@ The string following the keyword in the feature file is compared against all the
 end
 </code></pre>
 
-The significant things here are that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code> ( <em>although a quoted "simple string" can also be used</em> ) and that the matcher method is followed by a block.  In other words, written defferently this matcher method would look like this:
+The significant things here are that the method (Given) takes as its argument a "regexp":http://en.wikipedia.org/wiki/Regexp bounded by  <code>/</code> ( <em>although a quoted "simple string" can be used instead</em> ) and that the matcher method is followed by a block.  In other words, written differently in Ruby this matcher method could look like this:
 
 <pre><code>Given( /there are (\d+) froobles/ ) { |n|
 .  .  .
 }</code></pre>
 
-Among other things, this means that step defintion method blocks receive all of the matcher arguments as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code>.  It also means that step matchers themselves can be followed by the special regexp modifiers, like <strong>i</strong> if you want to avoid issues involving capitalization.
+Among other things, this means that the step definition method blocks receive all of the matcher arguments as string values.  Thus <code>n.to_i.times</code> and not simply <code>n.times</code> ( <em>but also look into Cucumber transforms</em> ).  It also means that step matchers themselves can be followed by the special regexp modifiers, like <strong>i</strong> if you want to avoid issues involving capitalization.
 
 In the feature provided above we had the scenario statement: <code>And Some Other Action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
@@ -322,7 +322,7 @@ But /(\w+) Other (.*)/i do |first_word,second_phrase|
 And /(.*) other (.*)/i do |first_phrase,second_phrase|
 </code></pre>
 
-The step definition match depends only upon the pattern following the Given/When/Then method and not upon the step method itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance, to me, for a matcher.
+The step definition match depends only upon the pattern given as the argument passed to the Given/When/Then method and not upon the step method name itself.  I have therefore adopted the practice of only using <code>When /I have a match/ do</code> in my step definitions files as *When* has a more natural appearance, to me, for a matcher.
 
 If Cucumber finds more than one matcher in all of the step definitions files matches a scenario statement then it complains that it has found multiple step definition matches for that step and forces you to distinguish them.  You can instruct Cucumber to just choose one of the candidates instead by passing it the <code>--guess</code> option on the command line.
 
