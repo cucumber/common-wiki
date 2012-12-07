@@ -573,7 +573,7 @@ Using the default profile...
 0m0.000s
 </pre>
 
-Since version 0.6.0 one can no longer overcome this default setting by adding the <code>--tags=@wip</code> to the Cucumber argument list on the command line as each separate <code>--tags</code> option are ANDed together.  Thus the combination of <code>--tags @wip</code> <strong>AND</strong> <code>--tags ~@wip</code> fails everywhere.  You either must create a special profile in <code>config/cucumber.yml</code> to deal with this or alter the default profile to suit your needs.  Note as well that @wip tags are a special case. If any scenario tagged as @wip passes all of its steps without error and the <code>--wip</code> option is also passed then Cucumber reports the run as failing since scenarios that are marked as a work in progress are not supposed to pass.  Note as well that the <code>--strict</code> and <code>--wip</code> options are mutually exclusinve.
+Since version 0.6.0 one can no longer overcome this default setting by adding the <code>--tags=@wip</code> to the Cucumber argument list on the command line beacuse now all <code>--tags</code> options are ANDed together.  Thus the combination of <code>--tags @wip</code> <strong>AND</strong> <code>--tags ~@wip</code> fails everywhere.  You either must create a special profile in <code>config/cucumber.yml</code> to deal with this or alter the default profile to suit your needs.  Note as well that @wip tags are a special case. If any scenario tagged as @wip passes all of its steps without error and the <code>--wip</code> option is also passed then Cucumber reports the run as failing since scenarios that are marked as a work in progress are not supposed to pass.  Note as well that the <code>--strict</code> and <code>--wip</code> options are mutually exclusinve.
 
 The number of occurrences of a particular tag in your feature set may be controlled by appending a colon followed by a number to the end of the tag name passed to the tags option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message.  If the <code>--strict</code> option is passed as well, as is the case with the default profile, then instead of a warning the run will fail.
 
@@ -586,6 +586,8 @@ $ cucumber --require=features --tag=~@ignore features/wip
 </pre>
 
 A convention that I have adopted is tagging all scenarios created to track down a specific defect with tags of the form @issue_### where ### is the issue number assigned to the defect.  This both handles multiple related scenarios and provides a convenient and self-documenting way to verify with cucumber that a specific defect either has been completely resolved or that a regression has occurred.
+
+Be aware that tags are heiritable within Feature files.  Scenarios inherit tags from the Feature statement.
 
 h3. What Way do I Run the Tests?
 
