@@ -545,7 +545,7 @@ $ cucumber --profile=my_profile --tags=@authent features/login
 $ cucumber --profile=my_profile --tags=@init 
 </pre>
 
-However, the following will not work, unless you build a custom rake task for it:
+However, the following will not work, unless you [[build a custom rake task|Using-Rake]] for it:
 
 <pre>
 $ rake cucumber:authent
