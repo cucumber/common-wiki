@@ -573,13 +573,13 @@ Using the default profile...
 0m0.000s
 </pre>
 
-You can overcome this by adding the <code>--tags=@wip</code> to the Cucumber argument list on the command line.  This overrides the default setting in the configuration file.  Note however that @wip tags are a special case. If any scenario tagged as @wip passes all of its steps without error then Cucumber reports this as a Scenario failure.  Work in progress is not supposed to pass.
+Since version 0.6.0 one can no longer overcome this default setting by adding the <code>--tags=@wip</code> to the Cucumber argument list on the command line as each separate <code>--tags</options> are ANDed together.  Thus the combination of --tags @wip AND --tags ~@wip fails everywhere.  You must create a special profile in <code>config/cucumber.yml</code> to deal with this or alter the default profile to suit your needs.  Note as well that @wip tags are a special case. If any scenario tagged as @wip passes all of its steps without error then Cucumber reports this as Scenario as failing since a work in progress is not supposed to pass.
 
 The number of occurrences of a particular tag in your feature set may be controlled by appending a colon followed by a number to the end of the tag name passed to the tags option, as in <code>$ cucumber --tags=@wip:3 features/log*</code>.  The existence of more than the specified number of occurrences of that tag in all the features that are exercised during a particular cucumber run will produce a warning message.  If the <code>--strict</code> option is passed as well, as is the case with the default profile, then instead of a warning the run will fail.
 
 Limiting the number of occurrences is commonly used in conjunction with the <code>@wip</code> tag to restrict the number of unspecified scenarios to manageable levels.  Those following "Kanban":http://en.wikipedia.org/wiki/kanban or "Lean Software Development":http://en.wikipedia.org/wiki/Lean_software_development based methodologies will find this facility invaluable.
 
-As outlined above, tags may be negated by prefacing the tag with the tilde (<strong><code>~</code></strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em><code>@ignore</code></em>:
+As outlined above, tags may be negated by prefacing the tag with the tilde (<strong><code>~</code></strong>) symbol.  In other words, you can exclude all scenarios that have a particular tag proviing that tag is not elsewhere passed to cucumber as a parameter.  For example, the following will only exercise all scenarios found in the directory tree rooted at <code>features/wip</code> that do not have the tag <em><code>@ignore</code></em>:
 
 <pre>
 $ cucumber --require=features --tag=~@ignore features/wip
