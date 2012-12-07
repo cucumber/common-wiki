@@ -662,7 +662,7 @@ end</code>
 require "capybara"
 </code></pre>
 
-This requirement may no longer be case following the release of cucumber-rails v0.5.1 but I have not checked this as yet.  In any case, Rails-4 is dropping support for all versions of MRI Ruby prior to v1.9.3 so do yourself a favour and just use that version or later for anything new.
+This requirement may no longer be case following the release of cucumber-rails v0.5.1 but I have not checked this against Ruby-1.8.7 as yet ( <em>and may never get around to it</em> ).  In any case, Rails-4 is dropping support for all versions of MRI Ruby prior to v1.9.3 so do yourself a favour and just use that version or later for anything new.
 
 h3.  Need Help?
 
