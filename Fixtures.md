@@ -66,7 +66,7 @@ module FixtureAccess
           @@fixture_cache[table_name] ||= {}
 
           instances = fixture_symbols.map do |fixture_symbol|
-            if fix = Fixtures.cached_fixtures(ActiveRecord::Base.connection, table_name)[fixture_symbol.to_s]
+            if fix = Fixtures.cached_fixtures(ActiveRecord::Base.connection, table_name).first.fixtures[fixture_symbol.to_s]
               @@fixture_cache[table_name][fixture_symbol] ||= fix.find  # find model.find's the instance
             else
               raise StandardError, "No fixture with name '#{fixture_symbol}' found for table '#{table_name}'"
