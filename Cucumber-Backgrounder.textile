@@ -257,7 +257,7 @@ If it happens that, on occasion, you do anticipate feature steps ( <em>and we al
   end
 </code></pre>
 
-Oh, and never, ever, write a step definition for a clause that is not already present in one of your features.  Most such step definitions will end up as unused "cruft":en.wikipedia.org/wiki/Cruft that somebody at sometime will end up discarding anyway.   And those few that are not discarded will need rework when they are finally employed.  It is best to wait until the need for each step definition is both evident and pressing.
+Oh, and never, ever, write a step definition for a clause that is not already present in one of your features.  Most such step definitions will end up as unused "cruft":http://en.wikipedia.org/wiki/Cruft that somebody at sometime will end up discarding anyway.   And those few that are not discarded will need rework when they are finally employed.  It is best to wait until the need for each step definition is both evident and pressing.
 
 h3. What are Features and Scenarios?
 
