@@ -471,7 +471,7 @@ def logon_for_user( uname )
 end
 
 When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
-  user_logon_for( user_name )
+  logon_for_user( user_name )
 end
 </code></pre>
 
