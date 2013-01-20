@@ -61,7 +61,7 @@ module Silly
       # We don't care about these - we're just twittering!
     end
 
-    def step_name(keyword, step_match, status, source_indent, background)
+    def step_name(keyword, step_match, status, source_indent, background, file_colon_line)
       if status == :failed
         step_name = step_match.format_args(lambda{|param| "*#{param}*"})
         message = "#{step_name} FAILED"
