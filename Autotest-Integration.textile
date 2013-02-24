@@ -16,6 +16,8 @@ POSIX shell:
 Windows command shell:
 <pre><code>> set AUTOFEATURE=true</code></pre>
 
+If AUTOFEATURE is not set you will get the warning <code>(Not running features.  To run features in autotest, set AUTOFEATURE=true.)</code>. Set AUTOFEATURE=false to silence this warning after https://github.com/cucumber/cucumber/pull/354 is merged.
+
 Options are declared in the [[cucumber.yml]] file (<strong>which must be present</strong> and have a default or autotest profile).  To change the way the features are run with autotest create two profiles in your [[cucumber.yml]]: 
 
 * <code>autotest</code> : Used when Autotest wants to run only the failing scenarios.
