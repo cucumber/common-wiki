@@ -596,7 +596,7 @@ Unless you are knowledgeable enough that you can use "mocks and stubs":http://rs
 rake db:test:prepare
 </code></pre>
 
-As this is opinionated software my opinion is that, except for the most trivial of cases, you should always use test data obtained from actual production environments.  You are, after all, embarked on a real-world adventure; namely to discover how to make something work.  However, to discover what actually works requires more than a passing familiarity with what is real.  And made-up data is not reality.  Since your manufactured data necessarily originates in the same place as most of your errors will, from your own limited understanding of the problem domain, it is always suspect.
+As this is opinionated software my opinion is that, except for the most trivial of cases, you should always use test data obtained from actual production environments.  You are, after all, embarked on a real-world adventure; namely to discover how to make something work.  However, to discover what actually works requires more than a passing familiarity with what is real.  And made-up data is not reality.  Since your manufactured data necessarily originates in the same place as most of your errors will come from, your own limited understanding of the problem domain, it is always suspect.
 
 That said, there remains an important environmental consideration to keep in mind when using an actual database for testing: Cucumber, by default, uses database transactions and these transactions are rolled back after each scenario.  This makes out-of-process testing problematic (for that see the Cucumber "Aruba":http://github.com/cucumber/aruba project)  and may result in some unanticipated outcomes under certain scenarios.  Transactions can be turned off, but then your features become responsible for ensuring that the database is in a condition suitable for testing.  Cucumber provides hooks to accomplish this and the gem "Database-Cleaner":http://github.com/bmabey/database_cleaner is configured in support/env.rb to assist ( <em>you have read <code>env.rb</code>, right?</em> ). In the normal case the end of any scenario results in the database being returned to a nil state.
 
@@ -622,6 +622,12 @@ Then running the command <code>rake cucumber:wip</code> will run the steps conta
 Cucumber-Rails creates a <code>cucumber.yml</code> file in the project config directory containing a number of predefined profiles, one of which is the default profile.  When Cucumber is run from the command line it is usually necessary to provide both the directory name containing the root directory of the tree containing feature files and the directory name containing references to the necessary library files.  In the typical project <code>cucumber -r features features/some/path </code> will normally suffice.  Repetitious usages can be added to user defined profiles contained in the project's <code>cucumber.yml</code> file.
 
 Finally, running <code>autotest</code> with the environment variable <code>AUTOFEATURE=true</code> will run ALL tests, including those in <code>/test</code> and (if present) <code>/rspec</code>.  As this will load all the TestUnit and RSpec fixtures as well, your test database may be left in an indefinite state when the Cucumber features are run.  It is wise, as always, to write Cucumber steps either so that they do not depend upon an empty database or they place the database in the requisite state.
+
+h3. Ruby, Rails, Bundler, RVM and RBenv
+
+Software is frequently designed to run on different environments and new software may need to co-exist with earlier efforts whose dependencies do not match those of current projects. Ruby has the "Ruby Version Manager":http://rvm.io/ (RVM) and "RBenv":https://github.com/sstephenson/rbenv.git to manage multiple vm environments on a single host.  Recent versions of Ruby on Rails ship with a dependency on "Bundler":http://gembundler.com/, a utility gem that manages project specific RubyGem dependencies such that each Rails project is unaffected by the gem requirements of another.  These are covered elsewhere but you should be aware of them from the outset of your project.
+
+The only consideration relating to these I will mention here is that if you use Bundler to support multiple gem versions in multiple Rails projects on a single development host then you must run cucumber using <code>bundle exec cucumber [options]</code>.
 
 h3. Anything Else?
 
@@ -683,6 +689,7 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 2011 June 28 - J. B. Byrne revised to 1.0.0
 2012 October 19 - J. B. Byrne partially revised to 1.1.0
 2012 November 29 - J. B. Byrne revised to 1.1.1
+2013 February 26 - J. B. Byrne revised to 1.2.1
 
 h3. Postscript.
 
