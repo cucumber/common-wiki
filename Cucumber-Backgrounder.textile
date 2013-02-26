@@ -337,8 +337,8 @@ Finally, you can have step definitions call other step definitions, including th
 end
 
 When /in an invoiced non-shipped situation/ do
-  Given "some \"invoiced\" action" 
-  Then "some \"non-shipped\" action"
+  step( "some \"invoiced\" action" )
+  step( "some \"non-shipped\" action" )
   .  .  .
 end
 </code></pre>
@@ -383,7 +383,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-<em>In Ruby usually one may choose to include the method parameter list within parentheses or not.  Both forms of calling the step method are shown above.</em>
+<blockquote><em>In Ruby programming usually one may choose to include the method parameter list within parentheses or not.  Both forms of calling the step method are shown above.</em></blockquote>
 
 Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) any embedded quotation characters (").  Multiple steps may be called en bloc using the <strong><code>steps</code></strong> ( <em>note the plural form</em> ) method which itself takes a string argument.  However, with the steps method the Gerkin keywords deprecated in simple nested steps are still required:
 <pre><code>
