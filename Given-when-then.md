@@ -32,6 +32,9 @@ Examples:
 
 `Then my total should be updated`
 
+Read More
+
+[[Step-Definitions]]
 ***
 sources:
 FOX Armando, PATTERSON, David. _Introducing and Running Cucumber and Capybara_ in Engineering Long-Lasting Software
