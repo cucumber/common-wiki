@@ -12,16 +12,3 @@ After you have installed Ruby and RubyGems, install Cucumber with the following 
 This is a good time to get familiar with <code>--help</code>
 
 <pre>cucumber --help</pre>
-
-h2. Building the Gem yourself
-
-Install a dependency:
-
-<pre>sudo gem install sdoc</pre>
-
-Then get the code via Git (or download a tarball):
-
-<pre><code>git clone git://github.com/cucumber/cucumber.git
-cd cucumber
-rake install_gem
-</code></pre>
