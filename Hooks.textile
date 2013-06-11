@@ -43,7 +43,7 @@ end
 </code></pre>
 
 
-<code>Around</code> hooks will run "around" a scenario. This can be used to wrap the execution a scenario in a block. The Around hook receives a scenario object and a block (Proc) object. The scenario will be executed when you invoke <code>block.call</code>.
+<code>Around</code> hooks will run "around" a scenario. This can be used to wrap the execution of a scenario in a block. The Around hook receives a scenario object and a block (Proc) object. The scenario will be executed when you invoke <code>block.call</code>.
 
 The following example will cause scenarios tagged with <code>@fast</code> to fail if the execution takes longer than 0.5 seconds:
 
