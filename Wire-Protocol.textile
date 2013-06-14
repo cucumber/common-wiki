@@ -18,7 +18,7 @@ h2. Implementations
 * "Clucumber":http://github.com/antifuchs/clucumber (Common Lisp)
 * "cuke4php":https://github.com/olbrich/cuke4php (PHP)
 * "Cuke4AS3":https://github.com/flashquartermaster/Cuke4AS3 (ActionScript / Flash)
-* "CukeBins":https://github.com/paoloambrosio/cukebins (C++)
+* "Cucumber-CPP":https://github.com/cucumber/cucumber-cpp (C++)
 * "Cucumber-Lua":https://github.com/cucumber/cucumber-lua (Lua)
 
 h2. References
