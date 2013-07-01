@@ -37,7 +37,7 @@ A Gherkin source file usually looks like this
 16:       ...
 </pre>
 
-First line starts the feature.  Lines 2-4 are unparsed text, which is expected to describe the business value of this feature.  Line 6 starts a scenario.  Lines 7-13 are the steps for the scenario.  Line 15 starts next scenario and so on.
+First line starts the feature. Lines 2–4 are unparsed text, which is expected to describe the business value of this feature. Line 6 starts a scenario.  Lines 7–13 are the steps for the scenario.  Line 15 starts next scenario and so on.
 
 Read more
 * [[Feature Introduction]] - general structure of a feature
