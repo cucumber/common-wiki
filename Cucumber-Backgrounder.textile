@@ -696,6 +696,7 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 2012 October 19 - J. B. Byrne partially revised to 1.1.0
 2012 November 29 - J. B. Byrne revised to 1.1.1
 2013 February 26 - J. B. Byrne revised to 1.2.1
+2013 July 09 - J. B. Byrne reviewed with minor corrections.
 
 h3. Postscript.
 
