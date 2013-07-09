@@ -327,8 +327,14 @@ The step definition match depends only upon the pattern given as the argument pa
 If Cucumber finds more than one matcher in all of the step definitions files matches a scenario statement then it complains that it has found multiple step definition matches for that step and forces you to distinguish them.  You can instruct Cucumber to just choose one of the candidates instead by passing it the <code>--guess</code> option on the command line.
 
 It is considered better form by some to surround with double quotation marks, <strong><code>" "</code></strong>, all of the elements in the feature step clauses that are meant to be taken as values for variables passed to the step definition. This is just a convention.  However, if you choose to follow this road then you must adjust your step definition matchers accordingly if the " characters are now considered part of the literal matcher string.  For example:
-<pre><code>Given some determinable "business" situation</code></pre>
-<pre><code>Given /determinable "(.*)" situation/ do |s|</code></pre>
+
+feature statement:
+<pre><code>Given some determinable "business" situation
+</code></pre>
+
+step definition:
+<pre><code>When /determinable "(.*)" situation/ do |s|
+</code></pre>
 
 Finally, you can have step definitions call other step definitions, including those contained in other step definitions files.  This is where you can specify the procedural details by combining other steps. For example:
 
@@ -442,7 +448,7 @@ feature statement:
 When "Bob" logs on through the logon page
 </code></pre>
 
-step_definition:
+step definition:
 <pre><code>
 When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
   visit(logon_path)
