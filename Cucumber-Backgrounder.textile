@@ -244,7 +244,7 @@ It is tempting, sometimes irresistibly so, to just skip ahead with the analysis 
 
 You should, in fact, treat this part somewhat as a game.  The application code that you write should literally be the minimum that will satisfy the requirement; particularly if this code is totally unsuited for production use.  This way you are forced to add additional feature scenarios to drive out exactly what is acceptable and this pressure forces the application code to evolve strictly to meet those requirements.  This might seem foolish and a waste of time but if you pre-empt the design process by writing more sophisticated code than is called for then you will inevitably fail to provide scenario coverage for some of that code.  You will also write code that will never, ever, be used. This <em><strong>will</string></em> happen and it <em><strong>will</string></em> bite you at some point. Keep the "<strong>YAGNI</strong>":http://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it principle in mind at all times.
 
-This is a hard discipline to accept but the value with this approach is that you will rarely ( <em>never</em> ) have untested code anywhere in your application.  More importantly, if you rigorously adhere to this methodology then your application will contain the minimal code that satisfies required features.  This is an often overlooked or undervalued consideration that contributes greatly to the efficiency of coding, to the robustness of the resulting code, and to the performance of the the resulting program.  Avoiding diversions into technically interesting but financially pointless coding adventures concentrates your limited resources on the tasks that count and measurably reduces the overall complexity of the project.  Whenever you find yourself led down this garden path to the creeping <em>"featuritis"</em>:http://en.wikipedia.org/wiki/Feature_creep plant ask: <strong><em>If the user did not ask for it then exactly why are we writing it?</em></strong> 
+This is a hard discipline to accept but the value with this approach is that you will rarely ( <em>never</em> ) have untested code anywhere in your application.  More importantly, if you rigorously adhere to this methodology then your application will contain the minimal code that satisfies required features.  This is an often overlooked or undervalued consideration that contributes greatly to the efficiency of coding, to the robustness of the resulting code, and to the performance of the the resulting program.  Avoiding diversions into technically interesting but financially pointless coding adventures concentrates your limited resources on the tasks that count and measurably reduces the overall complexity of the project.  Whenever you find yourself led down this garden path to the creeping "<strong><em>featuritis</em></strong>":http://en.wikipedia.org/wiki/Feature_creep plant ask: <strong><em>If the user did not ask for it then exactly why are we writing it?</em></strong> 
 
 Strictly following this approach permits you to face significant design changes ( <em>and gem updates</em> ) with complete equanimity. Having built your code to reproducible performance measurements you may rest secure in the knowledge that if unanticipated changes anywhere in your project break anything then you will know of this immediately upon running your test suite ( <em>Which is always running, right? Right??</em> ).  More importantly, you will know exactly what is broken and where it is broken.  
 
@@ -257,7 +257,7 @@ If it happens that, on occasion, you do anticipate feature steps ( <em>and we al
   end
 </code></pre>
 
-Oh, and never, ever, write a step definition for a clause that is not already present in one of your features.  Most such step definitions will end up as unused "cruft":http://en.wikipedia.org/wiki/Cruft that somebody at sometime will end up discarding anyway.   And those few that are not discarded will need rework when they are finally employed.  It is best to wait until the need for each step definition is both evident and pressing.
+By the way, never, ever, write a step definition for a clause that is not already present in one of your features.  Most such step definitions will end up as unused "cruft":http://en.wikipedia.org/wiki/Cruft that somebody at sometime will end up discarding anyway.   And those few that are not discarded will need rework when they are finally employed.  It is best to wait until the need for each step definition is both evident and pressing.
 
 h3. What are Features and Scenarios?
 
@@ -696,7 +696,7 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 2012 October 19 - J. B. Byrne partially revised to 1.1.0
 2012 November 29 - J. B. Byrne revised to 1.1.1
 2013 February 26 - J. B. Byrne revised to 1.2.1
-2013 July 09 - J. B. Byrne reviewed with minor corrections.
+2013 July 10 - J. B. Byrne reviewed with minor corrections.
 
 h3. Postscript.
 
