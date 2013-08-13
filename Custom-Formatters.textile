@@ -90,6 +90,7 @@ h2. Other Formatters
 # "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript for Textmate (Included in the cucumber core since 0.4.5)
 # "SlowHandCuke":http://github.com/moredip/SlowHandCuke - Simple tweak to the Pretty formatter to display the currently running step as it is running
 # "timestamped-scenarios":https://github.com/moredip/timestamped-scenarios - Append test run timestamps to each scenario name as it is being output.
+# "Fivemat"https://github.com/tpope/fivemat - Cucumber formatter that gives each test file its own line of dots.
 # "Fuubar":http://github.com/martinciu/fuubar-cucumber - The instafailing progress bar formatter
 # "Viewcumber":https://github.com/versapay/viewcumber -  Cucumber formatter which generates an HTML website to browse your scenarios and view screen capture of every single step.
 # "cucumber_timing_presenter":https://github.com/distributedlife/cucumber_timing_presenter - formatter that calculates timing metrics as well as two graphs showing impact of step time on overall build time. 
