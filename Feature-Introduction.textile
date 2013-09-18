@@ -28,6 +28,7 @@ In addition to a scenario, a feature may contain a background, scenario outline 
 | given            | 'Given'                  | [[Given-When-Then]] |
 | when             | 'When'                   | [[Given-When-Then]] |
 | then             | 'Then'                   | [[Given-When-Then]] |
+| and              | 'And'                    | [[Given-When-Then]] |
 | but              | 'But'                    | [[Given-When-Then]] |
 
 h3. Step definitions
