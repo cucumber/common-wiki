@@ -3,9 +3,9 @@ Every <tt>.feature</tt> file conventionally consists of a single feature. A line
 Every scenario consists of a list of steps, which must start with one of the keywords *Given*, *When*, *Then*, *But* or *And*. Cucumber treats them all the same, but you shouldn't. Here is an example:
 
 <pre>Feature: Serve coffee
-  In order to earn money
-  Customers should be able to 
-  buy coffee at all times
+    Coffee should not be served until paid for
+    Coffee should not be server until the button has been pressed
+    If there is no coffee left then money should be refunded
 
   Scenario: Buy last coffee
     Given there are 1 coffees left in the machine
