@@ -93,7 +93,7 @@ end</code></pre>
 After Step example:
 
 <pre><code>AfterStep('@cucumis', '@sativus') do
-  # This will only run before steps within scenarios tagged
+  # This will only run after steps within scenarios tagged
   # with @cucumis AND @sativus.
 end</code></pre>
 
