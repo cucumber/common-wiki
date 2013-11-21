@@ -7,8 +7,8 @@ The "official Cucumber web site":http://cukes.info/ has some more marketing blur
 Cucumber is a tool that executes plain-text functional descriptions as automated tests. The language that Cucumber understands is called [[Gherkin]]. Here is an example:
 
 <pre>Feature: Search courses
-  In order to ensure better utilization of courses
-  Potential students should be able to search for courses
+  Courses should be searchable by topic
+  Search results should provide the course code
 
   Scenario: Search by topic
     Given there are 240 courses which do not have the topic "biology"
