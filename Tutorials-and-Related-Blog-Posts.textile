@@ -42,7 +42,6 @@ Please add any helpful blog posts that you have found or written about all thing
 |"Organizing and classifying Cucumber features: Testing with Vision":http://watirmelon.com/2011/07/04/use-cucumber-feature-folders-for-functional-organization-tags-for-non-functional-classification/ | Alister Scott on organizing and categorizing features by using tags and directories | Jan 6 2011 |
 |"The elements of cucumber style":http://watirmelon.com/2011/07/04/the-elements-of-cucumber-style/ | Alister Scott on style guidelines for writing Cucumber features. | Jan 4 2011 |
 |"workflow: bdd of a blog part 1":http://oembot.tumblr.com/post/2346069125/bdd-of-a-simple-rails-app-with-cucumber-and-rspec| behaviour driven development of a simple blog with rails3, cucumber and rspec | Dec 17 2010|
-|"The Secret Ninja Cucumber Scrolls":http://cuke4ninja.com| Free online book on Cucumber | Dec 04 2010 |
 |"Cucumber + Cuke4Duke + Selenium (WebDriver) = Enlightenment":http://terminalvelocity-socal.blogspot.com/2010/11/cucumber-cuke4duke-selenium-webdriver.html| Nice little intro to Cuke4Duke | Nov 30 2010 |
 |"@cheezy UI Tests series part IV":http://www.cheezyworld.com/2010/11/21/ui-tests-default-dat/|Default Data|Nov 21, 2010|
 |"@cheezy UI Tests series part III":http://www.cheezyworld.com/2010/11/19/ui-tests-introducing-a-simple-dsl/|Using a simple DSL|Nov 19, 2010|
