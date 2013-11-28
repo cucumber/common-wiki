@@ -110,6 +110,6 @@ In Cucumber you're not allowed to use a regexp more than once in a Step Definiti
 end
 
 Given /Three (.*) mice/ do |disability|
-  # some other code.
+  # some other code..
 end
 </code></pre>
