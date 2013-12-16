@@ -696,11 +696,12 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 2012 November 29 - J. B. Byrne revised to 1.1.1
 2013 February 26 - J. B. Byrne revised to 1.2.1
 2013 July 10 - J. B. Byrne reviewed with minor corrections.
+2013 December 16 - J. B. Byrne reviewed with minor corrections to 1.3.10.
 
 h3. Postscript.
 
 A caution, Cucumber is meant to facilitate expressing required behaviours.  Indirection and excessive adherence to the principle of DRY, particularly in features, is at variance with the intent and defeats the major benefit of the tool.  Requirement expression in features should remain as self evident to the non-technical reader and be as self contained as possible.  Resist the temptation to <em>program</em> the features themselves using esoteric aspects of the DSL.  "Features should remain patent statements of intent":http://mislav.uniqpath.com/2010/09/cuking-it-right/.  If you feel the need to "program" a scenario in order to simplify writing a feature then you are likely doing something considerably at odds with the fundamental intent of BDD methodology.  In such circumstances, mentally step back and reconsider your approach to the problem.
 
-Remind yourself, frequently, that some years hence somebody else is going to have to understand what you write today and that in all likelihood you will not be around to explain it.  Do not be overly clever and needlessly terse in Feature files and Step Definitions.  Save the coding-fu for the the code and leave the tests plain, unadorned, and easy to understand.
+Remind yourself, frequently, that some years hence somebody else is going to have to understand what you write today and that in all likelihood you will not be around to explain it.  Do not be overly clever or needlessly terse either in Feature files or in Step Definition files.  Recall that while brevity may the the soul of wit it is certainly the source of much misunderstanding. Save the coding-fu for the the code and leave the tests plain, unadorned, and easy to understand.
 
 A final word of advice: Get the Cucumber Book from the Pragmatic Programmers and <strong><em>read</em></strong> it; carefully.  Details are found at http://pragprog.com/book/hwcuc/the-cucumber-book 
