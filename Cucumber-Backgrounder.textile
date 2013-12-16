@@ -68,6 +68,7 @@ We will return to how to write features and steps later.  For the moment we deal
 ├── config.ru
 ├── db
 ├── Gemfile
+├── Gemfile.lock
 ├── lib
 ├── log
 ├── public
