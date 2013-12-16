@@ -58,23 +58,21 @@ Scenario: Cucumber-Rails should be installed and configured
   Then I should have a cucumber environment
 </code></pre>
 
-We will return to how to write features and steps later.  For the moment we deal with the logical arrangement of Cucumber files within the context of an RoR project.  The root level of the archetypal RoR project directory tree looks like this:
+We will return to how to write features and steps later.  For the moment we deal with the logical arrangement of Cucumber files within the context of an RoR project.  The root level of the archetypal RoR-4.0 project directory tree looks like this:
 
 <pre><code>MyProject
 .
 ├── app
+├── bin
 ├── config
 ├── config.ru
 ├── db
-├── doc
 ├── Gemfile
-├── Gemfile.lock
 ├── lib
 ├── log
 ├── public
 ├── Rakefile
 ├── README.rdoc
-├── script
 ├── test
 ├── tmp
 └── vendor
