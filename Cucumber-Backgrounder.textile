@@ -519,8 +519,7 @@ For example ( admittedly contrived ):
 When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, boolean, category|
   actual = ( Product.find_by_stock_number!( product )category ) == category 
   expected = !boolean
-  message = "Product '#{product}' belongs to category #{actual} " +
-            "but should#{boolean} belong to category '#{category}'"
+  message = "Product '#{product}' should#{boolean} belong to category '#{category}'"
   assert( actual == expected, message )
 end
 </code></pre>
