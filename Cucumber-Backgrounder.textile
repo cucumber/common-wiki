@@ -106,69 +106,69 @@ Inside a step_definitions.rb file, steps (which strictly speaking should always 
 
 As shown above, the generated features directory tree is fairly shallow.  One can put every feature into a single file in the features directory and every step in a single file in the step_definitions directory (or even in the features directory itself) if one so chooses.  Alternatively, one can choose to have one or more feature files for each feature, together with one or more step files for each feature file, or any combination thereof.  However, Cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
 
-<pre><code>|-- features
-|   |-- entities
-|   |   |-- entity.feature
-|   |   `-- step_definitions
-|   |       |-- anything.rb
-|   |       `-- entity_steps.rb
-|   |-- locations
-|   |   |-- location.feature
-|   |   `-- step_definitions
-|   |       `-- location_steps.rb
-|   |-- sites
-|   |   `-- step_definitions
-|   |-- step_definitions
-|   |   |-- local_assert_steps.rb
-|   |   |-- local_crud_response_steps.rb
-|   |   |-- local_email_steps.rb
-|   |   |-- local_file_steps.rb
-|   |   |-- local_script_steps.rb
-|   |   |-- local_steps.rb
-|   |   |-- local_web_steps.rb
-`   |   `-- local_xml_file_steps.rb   
-    `-- support
-        |-- env.rb
-        |-- local_env.rb
-        `-- local_transforms.rb
+<pre><code>|__ features
+|   |__ entities
+|   |   |__ entity.feature
+|   |   |__ step_definitions
+|   |       |__ anything.rb
+|   |       |__ entity_steps.rb
+|   |__ locations
+|   |   |__ location.feature
+|   |   |__ step_definitions
+|   |       |__location_steps.rb
+|   |__ sites
+|   |   |__ step_definitions
+|   |__ step_definitions
+|   |   |__ local_assert_steps.rb
+|   |   |__ local_crud_response_steps.rb
+|   |   |__ local_email_steps.rb
+|   |   |__ local_file_steps.rb
+|   |   |__ local_script_steps.rb
+|   |   |__ local_steps.rb
+|   |   |__ local_web_steps.rb
+`   |   |__ local_xml_file_steps.rb   
+    |__ support
+        |__ env.rb
+        |__ local_env.rb
+        |__ local_transforms.rb
 </code></pre>
 
 In this case the bland initial set-up has been divided into sub-directories informed by model-centric testing.  This could equally well have been broken up in to model/controller/view hierarchies:
 
-<pre><code>|-- features
-|   |-- models
-|   |   `-- entities
-|   |       |-- entity.feature
-|   |       `-- step_definitions
-|   |           |-- anything.rb
-|   |           `-- entity_steps.rb
-|   |-- views
-|   |   |-- entity_new
-|   |   `-- step_definitions
-|   |       `-- entity_new_steps.rb
-|   |-- step_definitions
-`   |   `-- local_steps.rb
-    `-- support
-        |-- env.rb
-        |-- local_env.rb
-        `-- local_transforms.rb
+<pre><code>|__ features
+|   |__ models
+|   |  |__entities
+|   |     |__entity.feature
+|   |        |__step_definitions
+|   |           |__anything.rb
+|   |           |__entity_steps.rb
+|   |__views
+|   |  |__entity_new
+|   |  |__step_definitions
+|   |     |__entity_new_steps.rb
+|   |__step_definitions
+`   |  |__local_steps.rb
+    |__ support
+       |__env.rb
+       |__local_env.rb
+       |__local_transforms.rb
 </code></pre>
 
 or this
-<pre><code>|-- features
-|   |-- invoicing.feature
-|   |-- product.feature
-|   |-- step_definitions
-|   |   |-- local_steps.rb
-|   |   |-- model_steps.rb
-|   |   |-- service_steps.rb
-|   |   `-- web_steps.rb
-|   |-- user.feature
-`   |-- user_auth.feature
-    `-- support
-        |-- env.rb
-        |-- local_env.rb
-        `-- local_transforms.rb
+<pre><code>|__ features
+|   |__invoicing.feature
+|   |__product.feature
+|   |__step_definitions
+|   |  |__local_steps.rb
+|   |  |__model_steps.rb
+|   |  |__service_steps.rb
+|   |  |__web_steps.rb
+|   |__user.feature
+`   |__user_auth.feature
+    |__support
+       |__env.rb
+       |__local_env.rb
+       |__local_transforms.rb
 </code></pre>
 It is considered an anti-pattern to relate step_definition files to specific feature files.  As is the case for many ( <em>most? all?</em> ) programming suggestions there are exceptions and contrary opinions respecting the orthodox position on the practice.  Nonetheless,  at the outset it is probably best to follow the recommendation that one avoid feature-specific step-definition files.  Thereafter you may depart from it but only when you are experienced enough to evaluate the trade-offs between approaches.
 
