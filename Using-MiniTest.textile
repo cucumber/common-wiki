@@ -5,7 +5,7 @@ h3. Minitest 5
 ```ruby
 require 'minitest/spec'
 
-class MyWorld
+class MinitestWorld
   extend Minitest::Assertions
   attr_accessor :assertions
 
@@ -15,7 +15,7 @@ class MyWorld
 end
 
 World do
-  MyWorld.new
+  MinitestWorld.new
 end
 ```
 
