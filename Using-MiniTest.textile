@@ -2,7 +2,7 @@ You can also use "minitest":https://github.com/seattlerb/minitest <code>assert</
 
 h3. Minitest 5
 
-<pre>
+```ruby
 require 'minitest/spec'
 
 class MyWorld
@@ -17,42 +17,42 @@ end
 World do
   MyWorld.new
 end
-</pre>
+```
 
 h3. Older versions
 
-<pre>
+```ruby
 require 'mini/test'
 
 World do |world|
   world.extend(Mini::Test::Assertions)
   world
 end
-</pre>
+```
 
 If it doesn't work, try this one:
 
-<pre>
+```ruby
 require 'minitest/unit'
 
 World do
   extend Mini::Test::Assertions
 end
-</pre>
+```
 
 Or
 
-<pre>
+```ruby
 require 'minitest/unit'
 World(MiniTest::Assertions)
-</pre>
+```
 
 Also, if you wanted to use MiniTest::Spec, the snippet would look like this:
 
-<pre>
+```ruby
 require 'minitest/spec'
 World(MiniTest::Assertions)
 MiniTest::Spec.new(nil)
-</pre>
+```
 
 Also see the minitest cheat sheet "here":http://cheat.errtheblog.com/s/minitest/1
