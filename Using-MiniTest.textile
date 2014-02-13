@@ -1,4 +1,25 @@
-You can also use "MiniTest":http://blog.zenspider.com/minitest/ <code>assert</code> methods by defining your own "World":a-whole-new-world block:
+You can also use "minitest":https://github.com/seattlerb/minitest <code>assert</code> methods by defining your own "World":a-whole-new-world block:
+
+h3. Minitest 5
+
+<pre>
+require 'minitest/spec'
+
+class MyWorld
+  extend Minitest::Assertions
+  attr_accessor :assertions
+
+  def initialize
+    self.assertions = 0
+  end
+end
+
+World do
+  MyWorld.new
+end
+</pre>
+
+h3. Older versions
 
 <pre>
 require 'mini/test'
