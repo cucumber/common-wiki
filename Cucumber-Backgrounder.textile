@@ -716,6 +716,8 @@ The best place to go for help, that I know of, is the "Google Cucumber Group":ht
 
 If you find a bug in Cucumber, or wish a new feature added, then you should open a ticket at "GitHub":https://github.com/cucumber/cucumber/issues for it.
 
+h3.  Revision History
+
 2008 November 28 - J. B. Byrne initial
 2010 January 17 - J. B. Byrne revised to 0.6.1
 2010 May 28 - J. B. Byrne revised 0.7.3
