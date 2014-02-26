@@ -546,7 +546,7 @@ When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, 
 end
 </code></pre>
 
-On the other hand, hunting through multiple files and directories for a multi-purpose step-definition matcher is considerably more tedious than looking for an invariant string of text.  Therefor I recommend that you preface such steps with comments that cover the expected usage.  For example:
+On the other hand, hunting through multiple files and directories for a multi-purpose step-definition matcher is considerably more tedious than looking for an invariant string of text.  Therefore I recommend that you preface such steps with comments that cover the expected usage.  For example:
 
 <pre><code>
 # product should belong to category
