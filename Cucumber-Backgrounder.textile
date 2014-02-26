@@ -627,7 +627,7 @@ Be aware that tags are heritable within Feature files.  Scenarios inherit tags f
 
 h3. What Way do I Run the Tests?
 
-Unless you are knowledgeable enough that you can use "mocks and stubs":http://rspec.info/documentation/mocks/ with flair then I consider it best to begin with creating a Rails migration file for the models you are testing ( or expressing features for ) followed by:
+Unless you are knowledgeable enough that you can use "mocks and stubs":http://martinfowler.com/articles/mocksArentStubs.html with flair then I consider it best to begin with creating a Rails migration file for the models you are testing ( or expressing features for ) followed by:
 <pre><code>rake db:migrate
 rake db:test:prepare
 </code></pre>
