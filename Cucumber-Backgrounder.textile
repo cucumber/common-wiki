@@ -546,6 +546,15 @@ When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, 
 end
 </code></pre>
 
+On the other hand, hunting through multiple files and directories for a multi-purpose step-definition matcher is considerably more tedious than looking for an invariant string of text.  Therefor I recommend that you preface such steps with comments that cover the expected usage.  For example:
+
+<pre><code>
+# product should belong to category
+# product should not belong to category
+When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, boolean, category|
+. . .
+</code></pre>
+
 h3. What are "tags"?
 
 Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong><code>@</code></strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em><code>@wip</code></em> tag.  However, any string may be used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
