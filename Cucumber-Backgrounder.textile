@@ -466,7 +466,7 @@ Cucumber::Rails::World.class_eval do
 end
 </code></pre>
 
-A cleaner way of doing this is to create a class that contains only your addon methods and then instantiate it inside the Cucumber World.  Something like this:
+A cleaner way of doing this that avoids using the evil <strong><em>eval</em></stron> method is to create a class that contains only your addon methods and then instantiate it inside the Cucumber World.  Something like this:
 
 <pre><code>
 # features/support/local_env.rb
