@@ -466,6 +466,28 @@ Cucumber::Rails::World.class_eval do
 end
 </code></pre>
 
+A cleaner way of doing this is to create a class that contains only your addon methods and then instantiate it inside the Cucumber World.  Something like this:
+
+<pre><code>
+# features/support/local_env.rb
+. . .
+class LocalHelpers
+. . .
+  def execute( command )    
+    stderr_file = Tempfile.new( 'script_stdout_stderr' )
+    stderr_file.close
+    @last_stdout = `#{command} 2> #{stderr_file.path}`
+    @last_exit_status = $?.exitstatus
+    @last_stderr = IO.read( stderr_file.path )
+  end
+. . .
+end
+. . .
+World do
+  LocalHelpers.new
+end
+</code></pre>
+
 My rule of thumb is that if a step definition is called from another step definition then its contents probably should be extracted out into a custom method.  For example a logon step definition is likely to be used repeatedly throughout many features.  Turning it into a method is probably called for.
 <pre><code>
 def logon_for_user( uname )
