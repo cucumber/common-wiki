@@ -720,7 +720,7 @@ h3.  Revision History
 
 2008 November 28 - J. B. Byrne initial
 2010 January 17 - J. B. Byrne revised to 0.6.1
-2010 May 28 - J. B. Byrne revised 0.7.3
+2010 May 28 - J. B. Byrne revised to 0.7.3
 2010 July 13 - J. B. Byrne revised to 0.8.4
 2010 October 11 - J. B. Byrne revised to 0.9.0
 2010 November 06 - J. B. Byrne revised to 0.9.4
