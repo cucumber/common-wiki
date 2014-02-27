@@ -693,21 +693,6 @@ Those of you that have used <code>growl</code> or <code>snarl</code> to provide 
 
 <code>autotest</code> is installed via the "ZenTest":http://www.zenspider.com/ZSS/Products/ZenTest/ gem.  If you use autotest then take a look at the contents of <code>example_dot_autotest.rb</code> in the ZenTest gem root directory.
 
-h3. Note Respecting cucumber-rails v0.5.0. <em>(2011 June 28)</em>
-
-The latest versions of cucumber and cucumber-rails are oriented towards Ruby-1.9.3.  If you are using Ruby-1.8.7 and you are employing testunit or Capybara then one or both of the following may need to be added to the <code>support/env.rb</code> file produced by the rails generator:
-<pre><code># for testunit in Ruby-1.8.7
-ENV["RAILS_ENV"] = "test"
-if RUBY_VERSION =~ /1.8/
-  require 'test/unit/testresult'
-  Test::Unit.run = true
-end</code>
-<code># for capybara
-require "capybara"
-</code></pre>
-
-This requirement may no longer be case in releases of cucumber-rails v0.5.1 and later but I have not checked this against Ruby-1.8.7 as yet ( <em>and <strike>may</strike><strong>will never</strong> get around to it</em> ).  In any case, Rails-4 has dropped support for all versions of MRI Ruby prior to v1.9.3 and Rails-5 looks like it will require Ruby 2.1 so do yourself a favour and just use Ruby-2+.
-
 h3.  Need Help?
 
 The best place to go for help, that I know of, is the "Google Cucumber Group":http://groups.google.com/group/cukes.
@@ -718,20 +703,24 @@ h3. A Note on Ruby Syntax
 
 Cucumber is a Ruby code project at its heart and the syntax used in its user interface reflects that fact.  Specifically, all defined Ruby methods may be called containing their argument list within parenthesis or not; and all Ruby methods may be called with a following code block delimited by <code>do</code>. .  .<code>end</code> or the symbolic equivalent <code>{</code>. . .<code>}</code>.
 
-What this means is that when you see this:
-<pre><code>
-When /I have a match/i do 
-  x = 4 + 2
-end
+So, although <code>When /I have a match/i do . . . end</code> in a stepdef file may look like a language implementation it is really a semi-disguised Ruby method call that is functionally the same as <code>When( /I have a match/i ) { . . . }</code>
+
+See this discussion respecting the significance of Ruby's "<code>yield</code> statement":http://yehudakatz.com/2010/02/07/the-building-blocks-of-ruby/.
+
+h3. Note Respecting cucumber-rails v0.5.0. <em>(2011 June 28)</em>
+
+Rails-4+ requires Ruby-1.9.3+ while Cucumber and Cucumber-Rails have both passed their initial 1.0 release point. So this note is now of passing historic interest only.  However, if you are maintaining an application implemented with an older version of Rails that still uses Ruby-1.8.7; and you are employing testunit or Capybara; then one or both of the following may need to be added to the <code>support/env.rb</code> file produced by the rails generator:
+<pre><code># for testunit in Ruby-1.8.7
+ENV["RAILS_ENV"] = "test"
+if RUBY_VERSION =~ /1.8/
+  require 'test/unit/testresult'
+  Test::Unit.run = true
+end</code>
+<code># for capybara
+require "capybara"
 </code></pre>
 
-It could equally have been written this way:
-
-<pre><code>
-When( /I have a match/i ) { x = 4 + 2 }
-</code></pre>
-
-So, although <code>When /I have a match/i do . . . end</code> may look like a language implementation it is really a semi-disguised Ruby method call that is functionally the same as <code>When( /I have a match/i ) { . . . }</code>
+This requirement may no longer be case in releases of cucumber-rails v0.5.1 and later but I have not checked this against Ruby-1.8.7 as yet ( <em>and <strike>may</strike><strong>will never</strong> get around to it</em> ).  As stated above, Rails-4 has dropped support for all versions of MRI Ruby prior to v1.9.3 and Rails-5 looks like it will require Ruby-2.1+ so do yourself a favour and just use Ruby-2+.
 
 h3.  Revision History
 
