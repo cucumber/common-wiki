@@ -102,6 +102,14 @@ A particular source of potential confusion is that the term <em><strong>steps</s
 
 Inside feature.feature files, steps are the textual descriptions which form the body of a scenario.  These are prefaced with the keywords <strong>Given</strong>, <strong>When</strong>, <strong>Then</strong>, <strong>And</strong> or <strong>But</strong> (note as well that the capitalization of these five names is significant).  Alternatively, one may simply use the <strong>==*==</strong> character to stand in place of any of the foregoing.
 
+<pre><code>
+Scenario: Cucumber should be installed and configured
+Given I have installed the gem named "rails"
+    * I have installed the gem named "cucumber-rails"
+    * I have generated a RoR project named "my_project"
+. . .
+</code></pre>
+
 Inside a step_definitions.rb file, steps (which strictly speaking should always be called step definitions and are now often simply called <em>stepdefs</em>) refers to the <em>matcher</em> methods, which may be given any of the same names (Given, When, Then, And or But), each provided with a matcher <em>"string"</em> or <em>/regexp/</em> that corresponds to one or more feature steps.  Note that the method name does NOT form part of the matcher.  A Given feature clause can match a When step definition matcher.  Over time, clauses from features have come to be referred to simply as <em>features</em> while <em>steps</em> now refers almost exclusively to step definitions.
 
 As shown above, the generated features directory tree is fairly shallow.  One can put every feature into a single file in the features directory and every step in a single file in the step_definitions directory (or even in the features directory itself) if one so chooses.  Alternatively, one can choose to have one or more feature files for each feature, together with one or more step files for each feature file, or any combination thereof.  However, Cucumber is programmed with the flexibility to support a much more expressive directory structure.  For instance:
