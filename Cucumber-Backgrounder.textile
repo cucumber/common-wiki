@@ -553,6 +553,11 @@ When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, 
 . . .
 </code></pre>
 
+Which can be conveniently <:code>grep</code>ed for using:
+<pre>
+find features -name \*rb | xargs grep "product .* should belong to category"
+</pre>
+
 h3. What are "tags"?
 
 Cucumber provides a simple method to organize features and scenarios by user determined classifications.  This is implemented using the convention that any space delimited string found in a feature file that is prefaced with the commercial at (<strong><code>@</code></strong>) symbol is considered a tag.  As distributed, Cucumber-Rails builds a Rake task that recognizes the <em><code>@wip</code></em> tag.  However, any string may be used as a tag and any scenario or entire feature can have multiple tags associated with it.  For example:
