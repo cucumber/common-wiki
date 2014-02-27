@@ -553,7 +553,7 @@ When /product ([^\"]+) should( not)? belong to category ([^\"]+)/i do |product, 
 . . .
 </code></pre>
 
-Which can be conveniently <code>grep</code>ed for using:
+Which can be conveniently <code>grep</code><em>ed</em> for ( <em>on *nix systems at least</em> ) using:
 <pre><code>find features -name \*rb | xargs grep "product .* should belong to category"</code></pre>
 
 h3. What are "tags"?
