@@ -12,7 +12,7 @@ Details regarding installing the Cucumber Rubygem and its recommended support to
 
 Note that in this document I often use the terms <em>testing</em> and <em>test</em> where "BDD practitioners":http://dannorth.net/introducing-bdd prefer the terms <em>behaviour</em> and <em>expectation</em>.  When I use the word test in a BDD context I am in fact discussing expressing and verifying expected behaviour.
 
-Readers should always consider that the information contained herein may be out of date and therefore incomplete or erroneous in some respects.  However, any such defects will usually be confined to specific implementation details and should not detract greatly from the validity of the overall presentation. Nonetheless please make a note whenever you see code like <code>script/generate blah</code> in the examples and notes below that the Rails generator syntax has changed to <code>rails g blah</code> since RoR v.3.0. 
+Readers should always consider that the information contained herein may be out of date and therefore incomplete or erroneous in some respects.  However, any such defects will usually be confined to specific implementation details and should not detract greatly from the validity of the overall presentation. Nonetheless please make a note whenever you see code like <code>script/generate blah</code> in the examples and notes below that the Rails generator syntax has changed to <code>rails g blah</code> since RoR v.3.0.
 
 h3. Where to Start?
 
@@ -335,7 +335,7 @@ step definition:
 <pre><code>When /determinable "(.*)" situation/ do |s|
 </code></pre>
 
-Finally, you can have step definitions call other step definitions, including those contained in other step definitions files.  This is where you can specify the procedural details by combining other steps. For example:
+Finally, you can have step definitions call other step definitions, including those contained in other step definitions files.  This is one ( <em>but not the recommended</em> ) means by which you can specify the procedural details by combining other steps. For example:
 
 <pre><code>When /some "(.*)" action/  do |act|
    .  .  .
@@ -350,7 +350,7 @@ end
 
 h3. Steps within Steps - an anti-pattern
 
-If one step definition calls another step definition then the matcher argument to the called <strong>Given/When/Then</strong> method must be enclosed with string delimiters.  Because of this, if you have adopted the practice of demarcating parameter values present in feature steps with double quotation marks, you must escape these quotation marks when calling another definition_steps.rb matcher from inside a step_definitions.rb file.  You must take care not to include the quote marks in the step_definitions parameter matchers, for <code>"(.*)"</code> is not the same as <code>(.*)</code> or <code>(".*")</code>.  If you use quote delimited values in the .feature file steps and do not account for them in the corresponding step_definition.rb matcher regexp then you will obtain variables that contain leading and trailing quotes as part of their value.
+If one step definition calls another step definition then the matcher argument to the called <strong>Given/When/Then</strong> method must be enclosed with string delimiters.  Because of this, if you have adopted the practice of demarcating parameter values present in feature steps with double quotation marks, you must escape these quotation marks when calling another definition_steps.rb matcher from inside a step_definitions.rb file.  You must take care not to include the quote marks in the step_definitions parameter matchers, for <code>"(.*)"</code> is not the same as <code>(.*)</code> or <code>(".*")</code>.  If you use quote delimited values in the <code>.feature</code> file steps and do not account for them in the corresponding <code>step_definition.rb</code> matcher regexp then you will obtain variables that contain leading and trailing quotes as part of their value.
 
 <pre><code>
 Scenario: Quotes surround value elements
@@ -364,7 +364,7 @@ When /some "(.*)" action/ do |a|
   a => required
 </code></pre>
 
-Once-upon-a-time one could simply nest Given, When, Then matchers in step definition files and call steps from within other steps directly.  This practice became more and more frowned upon until at last that ability was removed ( <em>well strongly deprecated</em> ) and nested steps must now be called using the <strong><code>step</code></strong> method.  You may still encounter the following forms in step definition files created before this change:
+Once-upon-a-time one could simply nest <strong>Given</strong>, <strong>When</strong>, and <strong>Then</strong> matchers within step definitions and thereby directly call steps from within other steps.  This practice naturally led to increase coupling between step_definition files and thus became more and more frowned upon until at last that ability was removed ( <em>well strongly deprecated</em> ).  If you use nested steps then you must now call them using the <strong><code>step</code></strong> method.  You may still encounter the following forms in step definition files created before this change:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -376,7 +376,7 @@ When /my matcher named (.*)/ do |match|
 end
 </pre>
 
-When encountered these nested Then and When keywords should be replaced with the step method:
+When encountered these nested <strong>Then<strong> and <strong>When</strong> matcher statements should be replaced with the <code>step</code> method:
 
 <pre>
 When /my matcher named (.*)/ do |match|
@@ -387,8 +387,6 @@ When /my matcher named (.*)/ do |match|
   step %Q(my other matcher named "#{match}")
 end
 </pre>
-
-<blockquote><em>In Ruby programming usually one may choose to include the method parameter list within parentheses or not.  Both forms of calling the step method are shown above.</em></blockquote>
 
 Using the %%Q method ( <em>which is usually shortened to just <strong>%%</strong></em> ) within the step method removes the necessity to escape (\) any embedded quotation characters (").  Multiple steps may be called en bloc using the <strong><code>steps</code></strong> ( <em>note the plural form</em> ) method which itself takes a string argument.  However, with the steps method the Gerkin keywords deprecated in simple nested steps are still required:
 <pre><code>
@@ -715,6 +713,25 @@ h3.  Need Help?
 The best place to go for help, that I know of, is the "Google Cucumber Group":http://groups.google.com/group/cukes.
 
 If you find a bug in Cucumber, or wish a new feature added, then you should open a ticket at "GitHub":https://github.com/cucumber/cucumber/issues for it.
+
+h3. A Note on Ruby Syntax
+
+Cucumber is a Ruby code project at its heart and the syntax used in its user interface reflects that fact.  Specifically, all defined Ruby methods may be called containing their argument list within parenthesis or not; and all Ruby methods may be called with a following code block delimited by <code>do</code>. .  .<code>end</code> or the symbolic equivalent <code>{</code>. . .<code>}</code>.
+
+What this means is that when you see this:
+<pre><code>
+When /I have a match/i do 
+  x = 4 + 2
+end
+</code></pre>
+
+It could equally have been written this way:
+
+<pre><code>
+When( /I have a match/i ) { x = 4 + 2 }
+</code></pre>
+
+So, although <code>When /I have a match/i do . . . end</code> may look like a language implementation it is really a semi-disguised Ruby method call that is functionally the same as <code>When( /I have a match/i ) { . . . }</code>
 
 h3.  Revision History
 
