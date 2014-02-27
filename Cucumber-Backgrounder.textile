@@ -706,9 +706,9 @@ If you find a bug in Cucumber, or wish a new feature added, then you should open
 
 h3. A Note on Ruby Syntax
 
-Cucumber is a Ruby code project at its heart and the syntax used in its user interface reflects that fact.  Specifically, all defined Ruby methods may be called containing their argument list within parenthesis or not; and all Ruby methods may be called with a following code block delimited by <code>do</code>. .  .<code>end</code> or the symbolic equivalent <code>{</code>. . .<code>}</code>.
+Cucumber is a Ruby code project at its heart and the syntax used in its user interface reflects that fact.  Specifically, as noted above, you must be aware that all defined Ruby methods may be called containing their argument list within parenthesis or not; and all Ruby methods may be called with a following code block delimited by <code>do</code>. .  .<code>end</code> or the symbolic equivalent <code>{</code>. . .<code>}</code>.
 
-So, although <code>When /I have a match/i do . . . end</code> in a stepdef file may look like a language implementation it is really a semi-disguised Ruby method call that is functionally the same as <code>When( /I have a match/i ) { . . . }</code>
+So, although <code>When /I have a match/i do . . . end</code> in a stepdef file may look like a language implementation it is really a semi-disguised Ruby method call that is functionally the same as <code>When( /I have a match/i ) { . . . }</code>.  It might walk like a duck, and quack like a duck, but it is still Ruby.
 
 See this discussion respecting the significance of Ruby's "<code>yield</code> statement":http://yehudakatz.com/2010/02/07/the-building-blocks-of-ruby/.
 
