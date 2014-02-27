@@ -742,7 +742,7 @@ h3.  Revision History
 2012 November 29 - J. B. Byrne revised to 1.1.1
 2013 February 26 - J. B. Byrne revised to 1.2.1
 2013 July 10 - J. B. Byrne reviewed with minor corrections.
-2013 December 16 - J. B. Byrne reviewed with minor corrections to 1.3.10.
+2013 December 16 - J. B. Byrne revised with minor corrections to 1.3.10.
 2014 February 27 - J. B. Byrne reviewed with updates to embedded URLs and minor additions.
 
 h3. Postscript.
