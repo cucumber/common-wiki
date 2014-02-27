@@ -671,7 +671,7 @@ h3. Ruby, Rails, Bundler, RVM and RBenv
 
 Software is frequently designed to run on different environments and new software may need to co-exist with earlier efforts whose dependencies are incompatible with current projects. To deal with this circumstance Ruby has the "Ruby Version Manager":http://rvm.io/ (RVM) and "RBenv":https://github.com/sstephenson/rbenv.git ( <em>and likely other projects</em> ) that manage multiple separate Ruby vm environments running on a single host.  Additionally, recent versions of Ruby on Rails ship with a dependency on "Bundler":http://gembundler.com/, a utility gem that manages project specific RubyGem dependencies such that each Rails project is unaffected by the gem requirements of another.  All these tools are covered elsewhere but you should be aware of them from the outset of any new project.
 
-The only consideration relating to these I will mention here is that if you use Bundler to support multiple gem versions in multiple Rails projects on a single development host then you must run Cucumber ( <em>and rake, and any other library binary</em> ) using the preface <code>bundle exec</code>. For example: <coe>bundle exec cucumber -pnone features</code>.
+The only consideration relating to these I will mention here is that if you use Bundler to support multiple gem versions in multiple Rails projects on a single development host then you must run Cucumber ( <em>and rake, and any other library binary</em> ) using the preface <code>bundle exec</code>. For example: <code>bundle exec cucumber -pnone features</code>.
 
 h3. Anything Else?
 
