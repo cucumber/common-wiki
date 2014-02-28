@@ -321,6 +321,7 @@ Among other things, this means that the step definition method blocks receive al
 
 In the feature example provided above we had the scenario statement: <code>And some other action</code>.  This could be matched by any of the following step definition matchers if present in any step_definitions.rb file found under the features root directory.
 <pre><code>Given /some other action/ do
+Then "some other action" do
 When /some other Action/i do 
 When /some other (Action)/i do |action|
 Then /(\w+) other action/i do |prefix_phrase|
