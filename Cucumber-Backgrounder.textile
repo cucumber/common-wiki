@@ -760,4 +760,4 @@ A caution, Cucumber is meant to facilitate expressing required behaviours.  Indi
 
 Remind yourself, frequently, that some years hence somebody else is going to have to understand what you write today and that in all likelihood you will not be around to explain it ( <em>assuming that you still could</em> ).  Do not be overly clever or needlessly terse either in Feature files or in Step Definition files.  Recall that while brevity may the the soul of wit it is certainly the source of much misunderstanding. Save the "coding-fu":https://english.stackexchange.com/questions/3306/what-does-the-suffix-fu-mean for the the code and leave the tests plain, unadorned, and easy to understand.
 
-A final word of advice: Get the Cucumber Book from the Pragmatic Programmers and <strong><em>read it</em></strong>; carefully.  Details are found at http://pragprog.com/book/hwcuc/the-cucumber-book 
+A final word of advice: Get the <em>Cucumber Book</em> from the Pragmatic Programmers and <strong><em>read it</em></strong>; carefully.  Details are found at http://pragprog.com/book/hwcuc/the-cucumber-book 
