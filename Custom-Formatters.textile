@@ -95,3 +95,4 @@ h2. Other Formatters
 # "Viewcumber":https://github.com/versapay/viewcumber -  Cucumber formatter which generates an HTML website to browse your scenarios and view screen capture of every single step.
 # "cucumber_timing_presenter":https://github.com/distributedlife/cucumber_timing_presenter - formatter that calculates timing metrics as well as two graphs showing impact of step time on overall build time.
 # "Bilgerat":https://github.com/mdsol/bilgerat - formatter that sends failure messages to "HipChat":https://www.hipchat.com/ rooms. 
+# "cucumber_statistics":https://github.com/alienfast/cucumber_statistics - Tracks timing and displays results in a single html page with outliers highlighted in a table sortable by various metrics.
