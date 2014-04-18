@@ -83,4 +83,4 @@ Emacs packages|
 |"WatirCraft":http://wiki.github.com/bret/watircraft| Web testing framework with Cucumber integration that builds on Watir.|
 |"watircuke":http://github.com/richdownie/watircuke/tree/master| Cucumber and H30 (watir, safariwatir, firewatir)|
 |"Watir WebDriver":http://watirwebdriver.com| the most elegant way to use webdriver with ruby |
-|"YARD-Cucumber":https://github.com/burtlo/yard-cucumber|Feature documentation integration with "YARD":http://http://yardoc.org/|
+|"YARD-Cucumber":https://github.com/burtlo/yard-cucumber|Feature documentation integration with "YARD":http://yardoc.org/|
