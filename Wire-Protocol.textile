@@ -21,6 +21,7 @@ h2. Implementations
 * "Cucumber-CPP":https://github.com/cucumber/cucumber-cpp (C++)
 * "Cucumber-Lua":https://github.com/cucumber/cucumber-lua (Lua)
 * "OCCukes":https://github.com/OCCukes/OCCukes (Objective-C)
+* "Unencumbered":https://github.com/atilaneves/unencumbered (D)
 
 h2. References
 * "http://www.richardlawrence.info/2009/09/19/cuke4nuke-cucumber-for-net-teams/":http://www.richardlawrence.info/2009/09/19/cuke4nuke-cucumber-for-net-teams/
