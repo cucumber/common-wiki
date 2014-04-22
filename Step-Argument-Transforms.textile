@@ -153,7 +153,7 @@ Transform /^a user,? named '([^']+)',?$/ do |name|
 end
 
 # i.e. Then a user, named 'aslakhellesoy', should have 317 followers
-Then /^(a user, named '(?:[^']+)',) should have (\d+) followers$/ do |name,count|
+Then /^(a user, named '(?:[^']+)',) should have (\d+) followers$/ do |user,count|
   user.should_not be_nil
   user.should be_kind_of(User)
   user.friends.should == count.to_i
