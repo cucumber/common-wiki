@@ -3,6 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
 
 |*Post*|*Description*|*Posting Date*|
+| "Cucumber-JVM Hello world!":http://thomassundberg.wordpress.com/2014/05/29/cucumber-jvm-hello-world/ | A Cucumber-JVM Hello World example as presented at I T.A.K.E. Unconference 2014, Bucharest, Romania | May 30 2014 |
 | "Cucumber: An Introduction for Non-Rubyists":http://blog.codecentric.de/en/2013/08/cucumber-setup-basics/ | Setup of Cucumber and basics of Cucumber and Gherkin, written for people with no or only little Ruby experience | August 2 2013 |
 | "Testing Web Applications With Cucumber, Capybara, Poltergeist and PhantomJS":http://blog.codecentric.de/en/2013/08/cucumber-capybara-poltergeist/ | Writing beautiful acceptance tests with Cucumber and Capybara | August 2 2013 |
 | "Parallel Cross Browser Testing":https://github.com/verdi327/parallel_test_tutorial | Go from a blank rails app to using Cucumber, Capybara, and SauceLabs to achieve parallel cross browser tests | June 1 2013 |
