@@ -16,7 +16,7 @@ The Selenium gem installs a script which allows us to get Selenium-RC running
 <pre><code>selenium</code></pre>
 OR 
 you can run the jar directly
-<pre><code>java -jar selenium-server.jar.txt</code></pre>
+<pre><code>java -jar selenium-server.jar</code></pre>
 
 h2. Step 3: Run the cucumber example
 
