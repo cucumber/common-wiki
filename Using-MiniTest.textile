@@ -55,4 +55,4 @@ World(MiniTest::Assertions)
 MiniTest::Spec.new(nil)
 ```
 
-Also see the minitest cheat sheet "here":http://cheat.errtheblog.com/s/minitest/1
+Also see the minitest cheat sheet "here":https://web.archive.org/web/20120701103558/http://cheat.errtheblog.com/s/minitest/1
