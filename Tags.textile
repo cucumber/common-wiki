@@ -115,3 +115,5 @@ h2(#special-tags). Special Tags
 *@javascript*: Uses a javascript-aware system to process web requests (e.g., Selenium) instead of the default (non-javascript-aware) webrat browser.
 
 *@no-txn*: Turns off transactions. See [[Browsers and Transactions]].
+
+@ignore: Ensures the scenario is not executed
