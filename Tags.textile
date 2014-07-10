@@ -116,4 +116,4 @@ h2(#special-tags). Special Tags
 
 *@no-txn*: Turns off transactions. See [[Browsers and Transactions]].
 
-@ignore: Ensures the scenario is not executed
+*@ignore*: Ensures the scenario is not executed
