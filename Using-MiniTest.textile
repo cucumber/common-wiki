@@ -25,7 +25,7 @@ h3. Older versions
 require 'mini/test'
 
 World do |world|
-  world.extend(Mini::Test::Assertions)
+  world.extend(MiniTest::Assertions)
   world
 end
 ```
@@ -36,7 +36,7 @@ If it doesn't work, try this one:
 require 'minitest/unit'
 
 World do
-  extend Mini::Test::Assertions
+  extend MiniTest::Assertions
 end
 ```
 
