@@ -11,7 +11,7 @@ It's always a good sign for a tool when other people huddle around and write too
 |"Clearance":http://wiki.github.com/thoughtbot/clearance/cucumber-features| Rails Authentication System with Cucumber feature generator|
 |"Courgette":http://21croissants.github.com/courgette/|Rails engine (plugin) for Rails 2.x applications which makes your cucumber features files viewable through your browser|
 |"crb":http://wiki.github.com/maiha/crb| An irb console for cucumber world. (crb = cucumber + irb)|
-|"CuCapp":http://github.com/dparnell/cucapp | Cucumber integration with Cappuccino. |
+|"Cucapp":https://github.com/cappuccino/cucapp | Cucumber integration with Cappuccino. |
 |"Cucover":http://github.com/mattwynne/cucover | Coverage-aware lazy / selective Cucumber feature runnner|
 |"Cucumber-cpp":https://github.com/cucumber/cucumber-cpp | Cucumber for C++|
 |"Cucumber.el":http://github.com/michaelklishin/cucumber.el|"Emacs":http://www.gnu.org/software/emacs/ mode for editing Cucumber plain text stories.|
