@@ -3,6 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
 
 |*Post*|*Description*|*Posting Date*|
+| "Cucumber-JVM Hello world with Gradle!":http://thomassundberg.wordpress.com/2014/08/24/cucumber-jvm-hello-world-with-gradle/ | Running Cucumber-JVM with Gradle | August 24 2014 |
 | "TuteCumber":http://github.com/denford/TuteCumber | An intro-level Cucumber.js Tutorial and example project which uses Cucumber.js (obviously) in a Node.js environment and explores BDD in general | July 17 2014 |
 | "Cucumber-JVM Hello world!":http://thomassundberg.wordpress.com/2014/05/29/cucumber-jvm-hello-world/ | A Cucumber-JVM Hello World example as presented at I T.A.K.E. Unconference 2014, Bucharest, Romania | May 30 2014 |
 | "Cucumber: An Introduction for Non-Rubyists":http://blog.codecentric.de/en/2013/08/cucumber-setup-basics/ | Setup of Cucumber and basics of Cucumber and Gherkin, written for people with no or only little Ruby experience | August 2 2013 |
