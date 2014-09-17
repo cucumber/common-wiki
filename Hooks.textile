@@ -27,7 +27,7 @@ end
   # if you use it, you can inspect status with
   # the #failed?, #passed? and #exception methods.
 
-  if(scenario.failed?)
+  if scenario.failed?
     subject = "[Project X] #{scenario.exception.message}"
     send_failure_email(subject)
   end
