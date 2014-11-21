@@ -1,4 +1,4 @@
-Paste this code snippet into env.rb to load all fixtures from spec/fixtures before each scenario.
+If you are using Rails 2.x, paste this code snippet into env.rb to load all fixtures from spec/fixtures before each scenario.
 
 ```ruby
 Before do
@@ -9,7 +9,7 @@ Before do
 end
 ```
 
-If you are using Rails 3.1, your fixtures preloader will look like this:
+If you are using Rails 3.1, paste this code snippet into env.rb instead:
 
 ```ruby
 Before do
@@ -17,6 +17,17 @@ Before do
   fixtures_folder = File.join(Rails.root, 'spec', 'fixtures')
   fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
   ActiveRecord::Fixtures.create_fixtures(fixtures_folder, fixtures)
+end
+```
+
+If you are using Rails 4.x, paste this code snippet into env.rb instead:
+
+```ruby
+Before do
+  ActiveRecord::FixtureSet.reset_cache
+  fixtures_folder = File.join(Rails.root, 'spec', 'fixtures')
+  fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
+  ActiveRecord::FixtureSet.create_fixtures(fixtures_folder, fixtures)
 end
 ```
 
@@ -44,7 +55,7 @@ Once you've done one of the two load methods above (please, don't do both ;-) yo
 
 ## Fixture helper methods
 
-If you want to also enable the fixture helper methods, such as *users(:admin)*, you need to add the following to your env.rb file (pretty much stolen straight from the Rails guts). This includes loading of the fixtures.
+If you want to also enable the fixture helper methods, such as *users(:admin)*, you need to add the following to your env.rb file (pretty much stolen straight from the Rails guts). This includes loading of the fixtures. For Rails 3.x:
 
 ```ruby
 module FixtureAccess
@@ -86,4 +97,8 @@ and then
 World(FixtureAccess)
 ```
 
-This works for Cucumber *0.2.3.2* and later. For older versions, view "forum post":http://www.ruby-forum.com/topic/187427#822479
+For Rails 4.x rename any incidence of `Fixtures` above with `ActiveRecord::FixtureSet`.
+
+Rails 2.x/3.x instructions work for Cucumber *0.2.3.2* and later. For older versions, view "forum post":http://www.ruby-forum.com/topic/187427#822479
+
+Rails 4.x instructions tested with Cucumber 1.3.17.
