@@ -83,7 +83,7 @@ And a plain text step:
 
 <pre><code>Given Three blind mice</code></pre>
 
-Cucumber can't make a decision about what Step Definition to execute, and wil raise a <code>Cucumber::Ambiguous</code> error telling you to fix the ambiguity.
+Cucumber can't make a decision about what Step Definition to execute, and will raise a <code>Cucumber::Ambiguous</code> error telling you to fix the ambiguity.
 
 h3. Guess mode
 
