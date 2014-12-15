@@ -6,7 +6,7 @@ Robert C. Martin has written a "great post":https://sites.google.com/site/uncleb
 
 h2. Given
 
-The purpose of givens is to *put the system in a known state* before the user (or external system) starts interacting with the system (in the When steps). Avoid talking about user interaction in givens.  If you have worked with use cases, you would call this preconditions.
+The purpose of givens is to *put the system in a known state* before the user (or external system) starts interacting with the system (in the When steps). Avoid talking about user interaction in givens.  If you were creating use cases, givens would be your preconditions.
 
 Examples:
 
