@@ -1,13 +1,10 @@
 Writing Cucumber Tests in Perl rather than ruby
 
-These links are out of date, search CPAN for Test::BDD::Cucumber
+*Test::BDD::Cucumber*
 
-* [Test-BDD-Cucumber-0.12](http://search.cpan.org/~sargie/Test-BDD-Cucumber-0.12/)
-* [App::pherkin](http://search.cpan.org/~sargie/Test-BDD-Cucumber-0.12/lib/App/pherkin.pm)
-* [Test::BDD::Cucumber::Manual::Integration](http://search.cpan.org/~sargie/Test-BDD-Cucumber-0.12/lib/Test/BDD/Cucumber/Manual/Integration.pod)
-* [Test::BDD::Cucumber::Manual::Steps](http://search.cpan.org/~sargie/Test-BDD-Cucumber-0.12/lib/Test/BDD/Cucumber/Manual/Steps.pod)
-* [Test::BDD::Cucumber::Manual::Tutorial](http://search.cpan.org/~sargie/Test-BDD-Cucumber-0.12/lib/Test/BDD/Cucumber/Manual/Tutorial.pod)
-* [test-bdd-cucumber-perl on github](https://github.com/sheriff/test-bdd-cucumber-perl)
+[MetaCPAN](https://metacpan.org/pod/distribution/Test-BDD-Cucumber/README.pod)
+[GitHub](https://github.com/sheriff/test-bdd-cucumber-perl)
+[Tutorial](https://metacpan.org/pod/Test::BDD::Cucumber::Manual::Tutorial)
 
 and for an alternate implementation
 
