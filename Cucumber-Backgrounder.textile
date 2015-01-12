@@ -81,7 +81,7 @@ We will return to how to write features and steps later.  For the moment we deal
 └── vendor
 </code></pre>
 
-Depending upon the version of Rails, running <code>rails g cucumber:install</code> or <code>script/generate cucumber:install</code> adds this layout to the existing structure:
+With Rails-3 and later, running <code>rails generate cucumber:install</code> adds this layout to the existing structure:
 <pre><code>
 features
 ├── step_definitions
