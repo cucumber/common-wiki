@@ -16,6 +16,20 @@ Readers should always consider that the information contained herein may be out 
 
 h3. Where to Start?
 
+Before anything else make sure that you have the <em>cucumber-rails</em> gem added to the <code>:test</code> group of your project's Gemfile and that you have run <code>bundle install</code>:
+
+<pre><code>
+. . .
+group :test do
+. . .
+  # BDD framework
+  gem 'cucumber-rails', :require => false
+. . .
+end
+</pre></code>
+
+Now we can really get started.
+
 <pre><code>
 Feature: Design and Build a Ruby on Rails web app using Behaviour Driven Development (BDD)
 In order to reduce rework and produce a web app at low cost and high speed
