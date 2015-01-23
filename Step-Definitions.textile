@@ -1,16 +1,16 @@
 Step definitions are defined in ruby files under <code>features/step_definitions/*_steps.rb</code>. Here is a simple example:
 
-<pre>
+<pre lang="ruby">
 Given /^I have (\d+) cucumbers in my belly$/ do |cukes|
   # Some Ruby code here
 end
 </pre>
 
-A step definition is analogous to a _method definition /  function definition_ in any kind of OO/procedural programming language. Step definitions can take 0 or more arguments, identified by groups in the Regexp (and an equal number of arguments to the Proc). 
+A step definition is analogous to a _method definition / function definition_ in any kind of OO/procedural programming language. Step definitions can take 0 or more arguments, identified by groups in the Regexp (and an equal number of arguments to the Proc). 
 
 Some people are uncomfortable with Regular Expressions. It's also possible to define Step Definitions using strings and $variables like this:
 
-<pre>
+<pre lang="ruby">
 Given "I have $n cucumbers in my belly" do |cukes|
   # Some Ruby code here
 end
@@ -24,7 +24,7 @@ Then there are Steps. Steps are declared in your <code>features/*.feature</code>
 Given I have 93 cucumbers in my belly
 </pre>
 
-A step is analogous to a method or function _invocation_. In this example, you're "calling" the step definition above with one argument - the string "93". Cucumber matches the Step against the Step Definition's Regexp and takes all of the captures from that match and passes them to the Proc.
+A step is analogous to a method or function _invocation_. In this example, you're "calling" the step definition above with one argument — the string "93". Cucumber matches the Step against the Step Definition's Regexp and takes all of the captures from that match and passes them to the Proc.
 
 Step Definitions start with a "preposition":http://www.merriam-webster.com/dictionary/given or an "adverb":http://www.merriam-webster.com/dictionary/when (*Given*, *When*, *Then*, *And*, *But*), and can be expressed in any of Cucumber's supported [[Spoken languages]]. All Step definitions are loaded (and defined) before Cucumber starts to execute the plain text.
 
@@ -44,7 +44,7 @@ When Cucumber can't find a matching Step Definition the step gets marked as yell
 
 h2. Pending steps
 
-When a Step Definition's Proc invokes the <code>#pending</code> method, the step is marked as yellow (as with undefined ones), reminding you that you have work to do. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
+When a Step Definition's Proc invokes the <code>pending</code> method, the step is marked as yellow (as with undefined ones), reminding you that you have work to do. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
 
 h2. Failed steps
 
@@ -58,12 +58,14 @@ h2. String steps
 
 Steps can be defined using strings rather than regular expressions. Instead of writing
 
-<pre>
+<pre lang="ruby">
 Given /^I have (.*) cucumbers in my belly$/ do |cukes|
 </pre>
 
 You could write
-<pre>Given "I have $count cucumbers in my belly" do |cukes|
+
+<pre lang="ruby">
+Given "I have $count cucumbers in my belly" do |cukes|
 </pre>
 
 Note that a word preceded by a $ sign is taken to be a placeholder, and will be converted to match @.*@. The text matched by the wildcard becomes an argument to the block, and the word that appeared in the step definition is disregarded.
@@ -72,16 +74,21 @@ h2. Ambiguous steps
 
 Consider these step definitions:
 
-<pre><code>Given /Three (.*) mice/ do |disability|
+<pre lang="ruby">
+Given /Three (.*) mice/ do |disability|
+  # some code
 end
 
 Given /Three blind (.*)/ do |animal|
+  # some other code..
 end
-</code></pre>
+</pre>
 
 And a plain text step:
 
-<pre><code>Given Three blind mice</code></pre>
+<pre>
+Given Three blind mice
+</pre>
 
 Cucumber can't make a decision about what Step Definition to execute, and will raise a <code>Cucumber::Ambiguous</code> error telling you to fix the ambiguity.
 
@@ -93,9 +100,9 @@ if you run Cucumber with <code>--guess</code>, it will guess that you were aimin
 There is ranking logic that gets invoked when the option is turned on:
 
 # The longest Regexp with 0 capture groups always wins.
-# The Regexp with the most capture groups wins (when there are none with 0 groups)
-# If there are 2+ Regexen with the same number of capture groups, the one with the shortest overall captured string length wins
-# If there are still 2+ options then an Ambiguous error is raised
+# The Regexp with the most capture groups wins (when there are none with 0 groups).
+# If there are 2+ Regexen with the same number of capture groups, the one with the shortest overall captured string length wins.
+# If there are still 2+ options then an Ambiguous error is raised.
 
 So if you try <code>--guess</code> with the mice above, Cucumber will pick <code>/Three blind (.*)/</code>, because "mice" is shorter than "blind".
 
@@ -105,11 +112,12 @@ h2. Redundant Step Definitions
 
 In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the Proc), so the following would cause a <code>Cucumber::Redundant</code> error:
 
-<pre><code>Given /Three (.*) mice/ do |disability|
+<pre lang="ruby">
+Given /Three (.*) mice/ do |disability|
   # some code
 end
 
 Given /Three (.*) mice/ do |disability|
   # some other code..
 end
-</code></pre>
+</pre>
