@@ -86,7 +86,7 @@ p. This means that you have to add your <code>support</code> folder to <code>--r
 
 h2. Other Formatters
 
-# "TeamCityFormatter:":http://github.com/mattwynne/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
+# "TeamCityFormatter:":https://github.com/ankurcha/cucumber_teamcity/ prints cucumber results in a format for interpretation by a "TeamCity":http://www.jetbrains.com/teamcity/index.html  build agent
 # "TextmateFormatter:":http://github.com/raldred/cucumber_textmate/ prints cucumber results as HTML with enhanced styling and Javascript for Textmate (Included in the cucumber core since 0.4.5)
 # "SlowHandCuke":http://github.com/moredip/SlowHandCuke - Simple tweak to the Pretty formatter to display the currently running step as it is running
 # "timestamped-scenarios":https://github.com/moredip/timestamped-scenarios - Append test run timestamps to each scenario name as it is being output.
