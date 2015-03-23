@@ -28,7 +28,7 @@ When you're happy with the feature (it reproduces the bug you found, or the new 
 
 <pre>git commit -m "Implemented artificial intelligence [#982 state:open]"</pre>
 
-You can read more about commit messages "here":http://hoth.entp.com/2008/4/11/github-and-lighthouse-sitting-in-a-tree
+You can read more about commit messages "here":https://web.archive.org/web/20080415045655/http://hoth.entp.com/2008/4/11/github-and-lighthouse-sitting-in-a-tree
 
 Now, push your commits back to your repo on GitHub:
 
