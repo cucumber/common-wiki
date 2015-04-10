@@ -1,6 +1,8 @@
 <div style="float:right; margin: 0 0 0.5em 1em"><a href="http://www.pragprog.com/titles/hwcuc"><img src="http://cukes.info/images/hwcuc-190x228.jpg" style="border: 1px solid silver"/></a></div>
 
-!http://cukes.info/images/cucumber_logo.png!:http://cukes.info/ 
+!https://cukes.info/images/cucumber.png!:http://cukes.info/ 
+
+!https://cukes.info/images/cucumber.png(Cucumber Logo)!
 
 The "official Cucumber web site":http://cukes.info/ has some more marketing blurbs and *CukeTV* episodes!
 
