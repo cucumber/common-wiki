@@ -6,4 +6,4 @@ You can help us with the migration!
 
 * Go to the [new website](http://cukes.info/)
 * Find a page with missing/bad content
-* Scroll down and `CTRL-e` to edit the page
+* Scroll down and @CTRL-e@ to edit the page
