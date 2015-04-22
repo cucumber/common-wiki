@@ -1,3 +1,8 @@
+h1. Behat
+
+According to http://docs.behat.org/en/v3.0/
+bq. Since v3.0, Behat is considered an official Cucumber implementation in PHP and is part of one big family of BDD tools.
+
 h2. Directly testing PHP code
 
 To directly test PHP code using step definitions written in PHP, please see the "Cuke4Php":https://github.com/olbrich/cuke4php project.
