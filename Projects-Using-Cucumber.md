@@ -3,7 +3,7 @@ Here is a list of projects using Cucumber. I find reading them to be a great lea
 In alphabetical order:
 * [BehatMage](https://github.com/MageTest/BehatMage)
 * [Broth](https://github.com/fourbeansoup/broth)
-* [bsmi]:(https://github.com/BTHUNTERCN/bsmi)
+* [bsmi](https://github.com/BTHUNTERCN/bsmi)
 * [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
 * [Chef](https://github.com/chef/chef)
 * [Chits](https://github.com/mikeymckay/chits)
