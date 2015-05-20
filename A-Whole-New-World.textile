@@ -9,15 +9,13 @@ h2. A better world
 If you want to add any behaviour to the world, perhaps some helper methods, or logging, or whatever you can do this in support/env.rb:
 
 <pre>
-class CustomWorld
+module CustomWorld
   def a_helper
     ...
   end
 end
 
-World do
-  CustomWorld.new
-end
+World(CustomWorld)
 </pre>
 
 Now you can call <code>a_helper</code> from your step definitions. Note that every scenario is run in a separate instance of the world, so there is no implicit state-sharing from scenario to scenario.
@@ -31,7 +29,7 @@ module MyHelper
   end
 end
 
-class CustomWorld
+module CustomWorld
   include MyHelper
 
   def a_helper
@@ -39,9 +37,7 @@ class CustomWorld
   end
 end
 
-World do
-  CustomWorld.new
-end
+World(CustomWorld)
 </pre>
 
 Several other frameworks such as Webrat or RSpec have modules that provide special methods that you can include in your World this way.
