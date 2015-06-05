@@ -217,10 +217,6 @@ This might have been the <em>easiest</em> thing to do, but it was never the <em>
 
 In any case the whole point of BDD is that it is vitally important to write each test/feature scenario <em><strong>one stepdef at a time, preferably with a domain expert, and in plain language</strong></em>.  In the BDD world there is no point to feature scaffolding generators to begin with.  This fact eventually led to the feature generator's removal from cucumber-rails.  Now, like step definitions, you have to write your own code ( <em>or steal somebody else's</em> ) from the outset.
 
-But, before writing any line of code, whether it be feature, step or application, think about what you are trying to accomplish and keep in mind this statement by Dave Thomas of <em>The Pragmatic Programmer</em> fame.
-
-bq. When faced with two or more alternatives that deliver roughly the same value, take the path that makes future change easier.
-
 "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does “plain language” mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it.  Detailed discussion of feature writing and step construction are provided elsewhere (see [[Given-When-Then]] and "Telling a Good Story":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html).
 
 For example, for an authentication scenario you should write: 
@@ -283,6 +279,10 @@ If it happens that, on occasion, you do anticipate feature steps (<em>and we all
 </code></pre>
 
 By the way: never, ever, write a step definition for a clause that is not already present in one of your features.  Do not anticipate where your features will lead you. Most speculative step definitions end up as unused "cruft":http://en.wikipedia.org/wiki/Cruft that somebody (<em>probably you</em>) will, eventually, end up discarding anyway.  And any of the few that are not simply discarded will likely need significant rework when they are finally employed.  It is best to wait until the need for each step definition is both evident and pressing.
+
+Before writing any line of code, whether it be feature, step or application, think carefully about what you are actually trying to accomplish and keep in mind this statement by Dave Thomas of <em>The Pragmatic Programmer</em> fame.
+
+bq. When faced with two or more alternatives that deliver roughly the same value, take the path that makes future change easier.
 
 h3. What are Features and Scenarios?
 
