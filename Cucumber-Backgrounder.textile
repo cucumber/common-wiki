@@ -219,8 +219,7 @@ In any case the whole point of BDD is that it is vitally important to write each
 
 But, before writing any line of code, whether it be feature, step or application, think about what you are trying to accomplish and keep in mind this statement by Dave Thomas of <em>The Pragmatic Programmer</em> fame.
 
-bq.
-When faced with two or more alternatives that deliver roughly the same value, take the path that makes future change easier.
+bq. When faced with two or more alternatives that deliver roughly the same value, take the path that makes future change easier.
 
 "The use of plain language in the feature file is crucial to successful use of Cucumber":http://elabs.se/blog/15-you-re-cuking-it-wrong.  What does “plain language” mean?  Basically, it comes down to stating the result that you wish to obtain while avoiding specifying how you expect to get it.  Detailed discussion of feature writing and step construction are provided elsewhere (see [[Given-When-Then]] and "Telling a Good Story":http://blog.josephwilk.net/ruby/telling-a-good-story-rspec-stories-from-the-trenches.html).
 
