@@ -613,6 +613,8 @@ Cucumber provides a simple method to organize features and scenarios by user det
 
 Given that the forgoing is contained in a file called <code>features/login/login.feature</code> and that the <code>cucumber-rails</code> gem is installed and configured then you can exercise this scenario, along with any others that are similarly tagged, in any of the following ways:
 
+bq. <em>Note: You will probably need to preface command line instructions with</em> <code>bundle exec</code>
+
 <pre>
 $ rake cucumber:wip
 $ cucumber --profile=my_profile --tags=@wip features
