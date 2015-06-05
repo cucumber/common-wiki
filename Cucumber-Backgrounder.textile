@@ -803,7 +803,7 @@ h3.  Revision History
 * 2013 December 16 - J. B. Byrne revised with minor corrections to 1.3.10.
 * 2014 February 27 - J. B. Byrne reviewed with updates to embedded URLs and minor additions.
 * 2015 February 15 - Zearin edited with minor tweaks to formatting and phrasing.
-* 2015 June 06 - J. B. Byrne revised with minor corrections to 1.3.19.
+* 2015 June 05 - J. B. Byrne revised with minor corrections to 1.3.19.
 
 h3. Postscript.
 
