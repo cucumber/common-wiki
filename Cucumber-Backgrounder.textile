@@ -531,6 +531,7 @@ When /"([\w[\d\w]+)" logs on through the logon page/ do |user_name|
 end
 </code></pre>
 
+Before you ask: Yes, these <em>helper</em> methods can go into the same step definitions file that uses them.  I put them at the top above all the matchers.  And they can be called from elsewhere in your step definitions so you need not repeat yourself.
 
 h3. Before, After and Background
 
