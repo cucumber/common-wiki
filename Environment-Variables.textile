@@ -11,3 +11,5 @@ You can also do this in [[cucumber.yml]].  For example, this sets up a profile t
 <pre>
 baz: --tags @mytag FOO=BAR
 </pre>
+
+See [[Debugging]] for an example of using environment variables to trigger several debugging options.
