@@ -47,5 +47,26 @@ end
 If you're not using Rails you can recreate the entire <code>@no-txn</code> bevhaviour using DatabaseCleaner with the following code:
 
 <pre>
-<script src="http://gist.github.com/175778.js"></script>
+# With this you should be able to just tag the stories that need to use truncation.
+# Otherwise, the transaction strategy will be used all the other times.
+ 
+require 'database_cleaner'
+DatabaseCleaner.clean_with :truncation # clean once to ensure clean slate
+DatabaseCleaner.strategy = :transaction # use transactions by default
+ 
+Before('@no-txn') do
+  DatabaseCleaner.strategy = :truncation
+end
+ 
+Before do
+  DatabaseCleaner.start
+end
+ 
+After do
+  DatabaseCleaner.clean
+end
+ 
+After('@no-txn') do
+  DatabaseCleaner.strategy = :transaction
+end
 </pre>
