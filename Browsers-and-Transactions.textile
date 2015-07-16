@@ -46,7 +46,6 @@ end
 
 If you're not using Rails you can recreate the entire <code>@no-txn</code> bevhaviour using DatabaseCleaner with the following code:
 
-bc
 <pre>
 # With this you should be able to just tag the stories that need to use truncation.
 # Otherwise, the transaction strategy will be used all the other times.
