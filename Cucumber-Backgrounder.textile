@@ -15,8 +15,8 @@ Note that in this document I often use the terms <em>testing</em> and <em>test</
 Readers should always consider that the information contained herein may be out of date and therefore incomplete or erroneous in some respects.  However, any such defects will usually be confined to specific implementation details and should not detract greatly from the validity of the overall presentation. Nonetheless please make a note whenever you see code like <code>script/generate blah</code> in the examples and notes below that the Rails generator syntax has changed to <code>rails g blah</code> since RoR v.3.0.  Also bear in mind that with post RoR-2 projects <strong><code>bundle exec</code></strong> generally must preface most, if not all, of the command line examples given below.
 
 <em>2015-07-22Eventually I found this so distracting that I added the following aliases to my ~/.bashrc file:</em> 
-<pre><code>
-# define aliases for Ruby on Rails Bundler exec for Rake and Cucumber
+
+<pre><code># define aliases for Ruby on Rails Bundler exec for Rake and Cucumber
 alias bcuke='bundle exec cucumber'
 alias be='bundle exec'
 alias bexec='bundle exec'
