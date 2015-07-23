@@ -31,7 +31,7 @@ alias hg='history | grep'
 
 h3. Where to Start?
 
-Before anything else make sure that you have the <em>"cucumber-rails":http://cukes.info/install-cucumber-rails.html</em> installed properly into your RoR project. Now we can really get started.
+Before anything else make sure that you have the <em>"cucumber-rails":https://github.com/cucumber/cucumber-rails</em> installed properly into your RoR project. Now we can really get started.
 
 <pre><code>
 Feature: Design and Build a Ruby on Rails web app using Behaviour Driven Development (BDD)
