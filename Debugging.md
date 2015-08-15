@@ -2,12 +2,12 @@ Adding the following as the contents of `features/support/debugging.rb` can be h
 ```ruby
 # `LAUNCHY=1 cucumber` to open page on failure
 After do |scenario|
-  save_and_open_page if scenario.failed? and ENV['LAUNCHY']
+  save_and_open_page if scenario.failed? && ENV['LAUNCHY']
 end
 
 # `FAST=1 cucumber` to stop on first failure
 After do |scenario|
-  Cucumber.wants_to_quit = ENV['FAST'] and scenario.failed?
+  Cucumber.wants_to_quit = ENV['FAST'] && scenario.failed?
 end
 
 # `DEBUG=1 cucumber` to drop into debugger
