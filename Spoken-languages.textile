@@ -1,4 +1,4 @@
-Communication within a team always works better when people can use their spoken language. Cucumber supports over "40 spoken languages":http://github.com/cucumber/gherkin/blob/master/lib/gherkin/i18n.json and the number is steadily growing. This is Norwegian:
+Communication within a team always works better when people can use their spoken language. Cucumber supports over "60 spoken languages":https://github.com/cucumber/gherkin3/blob/master/gherkin-languages.json and the number is steadily growing. This is Norwegian:
 
 <pre><code># language: no
 Egenskap: Summering
