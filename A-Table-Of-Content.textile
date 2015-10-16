@@ -31,7 +31,7 @@ Feature:
 Step definition:
 # [[Step Definitions]]
 # [[Calling Steps from Step Definitions]]
-# [[Step Organisation]]
+# [[Step Organization]]
 # [[Fixtures]]
 
 Features and Step definitions:
