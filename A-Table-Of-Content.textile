@@ -37,7 +37,7 @@ Step definition:
 Features and Step definitions:
 # [[Multiline Step Arguments]]
 # [[Conjunction Steps (Antipattern)]]
-# [[Feature-Coupled Steps (Antipattern)]]
+# [[Feature Coupled Step Definitions (Antipattern)]]
 
 Other:
 # [[A Whole New World]]
