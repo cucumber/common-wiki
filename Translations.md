@@ -37,7 +37,11 @@ Of course, for Java, you'll need a full command line:
 
 (where "jars/*" is the folder that your Cucumber/Gherkin jars are located) 
 
-A # language: header on the first line of a feature file tells Cucumber what spoken language to use - for example # language: fr for French. If you omit this header, Cucumber will default to English (en).
+A # language: header on the first line of a feature file tells Cucumber what spoken language to use - for example 
+
+`# language: fr `
+
+for French. If you omit this header, Cucumber will default to English (en).
 
 **JSON data for French Language:**
 
