@@ -41,121 +41,64 @@ A # language: header on the first line of a feature file tells Cucumber what spo
 
 **JSON data for French Language:**
 
-`fr: {`
-
-`and: [`
-
-`"* ",`
-
-`"Et que ",`
-
-`"Et qu'",`
-
-`"Et "`
-
-`],`
-
-`background: [`
-
-`"Contexte"`
-
-`],`
-
-`but: [`
-
-`"* ",`
-
-`"Mais que ",`
-
-`"Mais qu'",`
-
-`"Mais "`
-
-`],`
-`examples: [`
-
-`"Exemples"`
-
-`],`
-
-`feature: [`
-
-`"Fonctionnalité"`
-
-`],`
-
-
-`given: [`
-
-`"* ",`
-
-`"Soit ",`
-
-`"Etant donné que ",`
-
-`"Etant donné qu'",`
-
-`"Etant donné ",`
-
-`"Etant donnée ",`
-
-`"Etant donnés ",`
-
-`"Etant données ",`
-
-`"Étant donné que ",`
-
-`"Étant donné qu'",`
-
-`"Étant donné ",`
-
-`"Étant donnée ",`
-
-`"Étant donnés ",`
-
-`"Étant données "`
-
-`],`
-
-`name: "French",`
-
-`native: "français",`
-
-`scenario: [`
-
-`"Scénario"`
-
-`],`
-
-`scenarioOutline: [`
-
-`"Plan du scénario",`
-
-`"Plan du Scénario"`
-
-`],`
-
-`then: [`
-
-`"* ",`
-
-`"Alors "`
-
-`],`
-
-`when: [`
-
-`"* ",`
-
-`"Quand ",`
-
-`"Lorsque ",`
-
-`"Lorsqu'"`
-
-`]`
-
-`},`
+    fr: {
+    and: [
+    "* ",
+    "Et que ",
+    "Et qu'",
+    "Et "
+    ],
+    background: [
+    "Contexte"
+    ],
+    but: [
+    "* ",
+    "Mais que ",
+    "Mais qu'",
+    "Mais "
+    ],
+    examples: [
+    "Exemples"
+    ],
+    feature: [
+    "Fonctionnalité"
+    ],
+    given: [
+    "* ",
+    "Soit ",
+    "Etant donné que ",
+    "Etant donné qu'",
+    "Etant donné ",
+    "Etant donnée ",
+    "Etant donnés ",
+    "Etant données ",
+    "Étant donné que ",
+    "Étant donné qu'",
+    "Étant donné ",
+    "Étant donnée ",
+    "Étant donnés ",
+    "Étant données "
+    ],
+    name: "French",
+    native: "français",
+    scenario: [
+    "Scénario"
+    ],
+    scenarioOutline: [
+    "Plan du scénario",
+    "Plan du Scénario"
+    ],
+    then: [
+    "* ",
+    "Alors "
+    ],
+    when: [
+    "* ",
+    "Quand ",
+    "Lorsque ",
+    "Lorsqu'"
+    ]
+    },
 
 This wiki is the result of a discuss on [stackoverflow](http://stackoverflow.com/questions/34257188/where-are-the-translations-in-cucumber-gherkin/34263505#34263505)
 Thanks to [Aravin](http://stackoverflow.com/users/3058254/aravin) and [Seb Rose](http://stackoverflow.com/users/12405/seb-rose)
