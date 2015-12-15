@@ -1,49 +1,56 @@
-All gherkins world has been translated.
+## To see Listing of available languages
 
-For instance in french : 
+    > cucumber --i18n help
 
-* Scenario - Scénario
+### Listing the keywords of a particular language
 
-* Scenario Outline - Plan du scénario or Plan du Scénario
+    > cucumber --i18n <langauge_code>
 
-* Then - Alors
+    > cucumber --i18n fr
 
-* When - Quand
+> for Java, you'll need a full command line: 
+> `java -cp "jars/*" cucumber.api.cli.Main --i18n fr `
+> (where "jars/*" is the folder that your Cucumber/Gherkin jars are located) 
 
-* AND - Et que
+### Header in Feature File
+Keep in mind that any language different from `en` should be explicitly marked with a `# language: ...` comment at the beginning of your `*.feature file`:
 
-* BUT - Mais que
+#### Example:
 
-and so on...
+    # language: fr
+    **Fonctionnalité: ...**
+    ...
+
+for French. If you omit this header, Cucumber will default to English `(en)`.
+
+> This way your features will hold all the information about its content type, which is very important for methodologies like BDD and also gives `Cucumber` the ability to have multilanguage features in one suite.
 
 
-***
-You can find all translation of Gherkin here: https://github.com/cucumber/gherkin3/blob/master/gherkin-languages.json
-***
+# All gherkins word has been translated
 
-**To see Listing the available languages**
+### For instance in french: 
 
-`cucumber --i18n help`
+* Scenario - `Scénario`
 
-**Listing the keywords of a particular language**
+* Scenario Outline - `Plan du scénario or Plan du Scénario`
 
-`cucumber --i18n <langauge_code>`
+* Then - `Alors`
 
-`cucumber --i18n fr`
+* When - `Quand`
 
-Of course, for Java, you'll need a full command line: 
+* AND - `Et que`
 
-`java -cp "jars/*" cucumber.api.cli.Main --i18n fr `
+* BUT - `Mais que`
 
-(where "jars/*" is the folder that your Cucumber/Gherkin jars are located) 
+and so on ...
 
-A # language: header on the first line of a feature file tells Cucumber what spoken language to use - for example 
 
-`# language: fr `
+### Cucumber JSON data for Language
 
-for French. If you omit this header, Cucumber will default to English (en).
+**You can find all translation of Gherkin here**: https://github.com/cucumber/gherkin3/blob/master/gherkin-languages.json
 
-**JSON data for French Language:**
+
+### JSON data for French Language
 
     fr: {
     and: [
