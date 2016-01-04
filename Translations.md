@@ -4,7 +4,7 @@
 
 ### Listing the keywords of a particular language
 
-    > cucumber --i18n <langauge_code>
+    > cucumber --i18n <language_code>
 
     > cucumber --i18n fr
 
