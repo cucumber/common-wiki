@@ -32,14 +32,14 @@ After do |scenario|
 end
 
 # `DEBUG=1 cucumber` to drop into debugger on failure
-Cucumber::Ast::StepInvocation.class_eval do
+Cucumber::Core::Test::Action.class_eval do
   ## first make sure we don't lose original accept method
   unless instance_methods.include?(:orig_failed)
     alias_method :orig_failed, :failed
   end
 
   ## wrap original accept method to catch errors in executed step
-  def failed(a, b, c)
+  def failed(*args)
     begin
       CucumberCounters.error_counter += 1
       file_name = format('tmp/capybara/error_%03d.png',
@@ -49,7 +49,7 @@ Cucumber::Ast::StepInvocation.class_eval do
       Rails.logger.info('[Cucumber] Can not make screenshot of failure')
     end
     binding.pry if ENV['DEBUG']
-    orig_failed(a, b, c)
+    orig_failed(*args)
   end
 end
 
