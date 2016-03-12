@@ -1,7 +1,7 @@
 A Jenkins Plugin is available that produces beautiful cucumber reports.
 
 Follow the install instructions here: 
-https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java
+https://github.com/jenkinsci/cucumber-reports-plugin
 
 Overview Page:
 
