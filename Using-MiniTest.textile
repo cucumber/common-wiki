@@ -6,7 +6,7 @@ h3. Minitest 5
 require 'minitest/spec'
 
 class MinitestWorld
-  extend Minitest::Assertions
+  include Minitest::Assertions
   attr_accessor :assertions
 
   def initialize
