@@ -1,5 +1,11 @@
 !https://cukes.info/images/cucumber.png(Cucumber Logo)!:http://cucumber.io/
 
+h2. Table of Contents
+
+"Available here.":https://github.com/cucumber/cucumber/wiki/A-Table-Of-Content
+
+h2. Migration
+
 We're in the process of moving the good parts of this wiki to "https://cucumber.io/":https://cucumber.io/.
 
 You can help us with the migration!
