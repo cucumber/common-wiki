@@ -10,7 +10,7 @@ If your CI server is [[using Rake]], just make sure it executes your cucumber ta
 
 h2. Ant, Maven and JUnit output
 
-Many CI servers can interpret XML files produced by the "Ant JUnit task":http://ant.apache.org/manual/OptionalTasks/junit.html and display them as HTML. Some can even create reports over time.
+Many CI servers can interpret XML files produced by the "Ant JUnit task":https://ant.apache.org/manual/Tasks/junit.html and display them as HTML. Some can even create reports over time.
 
 If you're using such a CI server we recommend you use Cucumber with the <code>junit</code> formatter.
 
