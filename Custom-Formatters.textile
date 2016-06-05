@@ -99,3 +99,4 @@ h2. Other Formatters
 # "Bilgerat":https://github.com/mdsol/bilgerat - formatter that sends failure messages to "HipChat":https://www.hipchat.com/ rooms. 
 # "cucumber_statistics":https://github.com/alienfast/cucumber_statistics - Tracks timing and displays results in a single html page with outliers highlighted in a table sortable by various metrics.
 # "cucumber_characteristics":https://github.com/singram/cucumber_characteristics - Generates html/json report on overall tests timings as well as timings and usage of steps, features and examples. Also lists unused and ambiguous (Cucumber 1.x) steps.  Compatible with cucumber 1.x and 2.1+ and ruby 1.9+.
+# "allure-cucumber":https://github.com/allure-framework/allure-cucumber - "Allure":https://github.com/allure-framework adaptor for Cucumber. This formatter generates the XML files for Allure reporting framework.  
