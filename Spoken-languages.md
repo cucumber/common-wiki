@@ -47,3 +47,7 @@ That's it! When a new release of gherkin is made you can specify in a <code># la
 The examples live in the Cucumber codebase.
 
 Just copy the `examples/i18n/en` example to a new directory with the same name as the language you added. Then translate everything in there. When you're done you should be able to run `rake i18n` from the `examples/i18n` directory. If you want this code back into the official source you have to do those changes in your own cloned Git repo and send a pull request.
+
+## Selecting a language from the command line
+
+You can select a language from the command line using the `-L` or `--language` flag, followed by the two-letter language code. Run `cucumber --i18n help` to view the list of available languages and their two-letter codes.
