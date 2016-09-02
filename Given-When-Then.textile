@@ -41,24 +41,26 @@ h2. And, But
 
 If you have several givens, whens or thens you can write
 
-<pre>  Scenario: Multiple Givens
+```gherkin
+  Scenario: Multiple Givens
     Given one thing
     Given another thing
     Given yet another thing
     When I open my eyes
     Then I see something
     Then I don't see something else
-</pre>
+```
 
 Or you can make it read more fluently by writing
 
-<pre>  Scenario: Multiple Givens
+```gherkin
+  Scenario: Multiple Givens
     Given one thing
       And another thing
       And yet another thing
     When I open my eyes
     Then I see something
       But I don't see something else
-</pre>
+```
 
 To Cucumber steps beginning with And or But are exactly the same kind of steps as all the others.
