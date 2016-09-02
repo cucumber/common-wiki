@@ -1,6 +1,6 @@
 Tags are a great way to organise your features and scenarios. Consider this example:
 
-<pre>
+```gherkin
 @billing
 Feature: Verify billing
 
@@ -8,14 +8,14 @@ Feature: Verify billing
   Scenario: Missing product description
 
   Scenario: Several products
-</pre>
+```
 
 A Scenario or feature can have as many tags as you like. Just separate them with spaces:
 
-<pre>
+```gherkin
 @billing @bicker @annoy
 Feature: Verify billing
-</pre>
+```
 
 h2. Tag Inheritance
 
@@ -38,17 +38,17 @@ cucumber --tags @billing,@important           # Runs both scenarios (Scenarios w
 
 Tags are also a great way to "link" your Cucumber features to other documents. For example, if you have to deal with old school requirements in a different system (Word, Excel, a wiki) you can refer to numbers:
 
-<pre>
+```gherkin
 @BJ-x98.77 @BJ-z12.33
 Feature: Convert transaction
-</pre>
+```
 
 Another creative way to use tags is to keep track of where in the development process a certain feature is:
 
-<pre>
+```gherkin
 @qa_ready
 Feature: Index projects
-</pre>
+```
 
 Tags are also used in Tagged [[Hooks]], which let you use tags to define what <code>Before</code> and <code>After</code> blocks get run for what scenarios.
 
