@@ -26,7 +26,7 @@ Feature:
 # [[Gherkin]]
 # [[Feature Introduction]]
 # [[Background]]
-# [[Scenario outlines]]
+# [[Scenario Outlines]]
 
 Step definition:
 # [[Step Definitions]]
