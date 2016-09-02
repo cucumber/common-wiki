@@ -2,7 +2,7 @@ Background allows you to add some context to the scenarios in a single feature. 
 
 Example:
 
-<pre>
+```gherkin
 Feature: Multiple site support
   As a Mephisto site owner
   I want to host blogs for different people
@@ -28,7 +28,7 @@ Feature: Multiple site support
     Given I am logged in as Greg
     When I try to post to "Expensive Therapy"
     Then I should see "Your article was published."
-</pre>
+```
 
 For a less explicit alternative to background, check out Tagged [[Hooks]].
 
