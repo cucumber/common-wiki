@@ -1,8 +1,8 @@
 h2. Cucumber
 
 # [[Home]]
-# [[Feature Introduction]]
-# [[Given-When-Then]]
+# [[Feature Introduction]] (Also listed under Documentation > Feature)
+# [[Given-When-Then]] (Also listed under Documentation > Feature)
 
 
 h2. Download and Installation
