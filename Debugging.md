@@ -90,7 +90,7 @@ AfterStep do |scenario|
     Rails.logger.info("[Cucumber] Can not make screenshot of #{step}")
   end
 end
-#
+
 # rubocop:disable Lint/HandleExceptions
 AfterStep do
   begin
