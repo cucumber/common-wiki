@@ -47,4 +47,4 @@ Although not listed in the output, you can also use <code>grey</code>.
 
 h2. Windows
 
-Windows users can get colours by installing "ANSICON":https://github.com/adoxa/ansicon/downloads or [cmder](http://cmder.net/)
+Windows users can get colours by installing "ANSICON":https://github.com/adoxa/ansicon/downloads or "cmder":http://cmder.net/
