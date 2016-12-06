@@ -75,6 +75,7 @@ Emacs packages|
 |"Sandwich":http://github.com/thedigitalants/sandwich|Step library aiming to provide steps for several different test areas. There are steps for model creation/reference, debugging, and interaction with web pages. Still in its infancy.|
 |"Swinger":http://github.com/demetriusnunes/swinger/tree/master|Write acceptance tests for Java/Swing Desktop apps using Cucumber!|
 |"Testjour":http://github.com/brynary/testjour|Distributed test running (for Cucumber first).|
+|"unobtainium-cucumber":https://github.com/jfinkhaeuser/unobtainium-cucumber|Integrate cucumber with configuration driven Selenium or Appium drivers.|
 |"VCR":http://github.com/myronmarston/vcr|Easily record and replay HTTP responses for fast, deterministic, accurate tests.  Cucumber integration provided through the use of tags.|
 |"Vim-Cucumber":http://github.com/tpope/vim-cucumber/tree/master|Feature syntax highlighting for "Vim":http://www.vim.org/.|
 |"Webrat":http://github.com/brynary/webrat/wikis|Interact with a web application from Ruby. Works with "Rails":http://github.com/aslakhellesoy/cucumber/wikis/ruby-on-rails, [[Sinatra]] and other web frameworks.|
