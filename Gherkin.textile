@@ -2,7 +2,7 @@ Gherkin is the language that Cucumber understands. It is a "Business Readable, D
 
 Gherkin serves two purposes — documentation and automated tests. The third is a bonus feature — when it yells in red it's talking to you, telling you what code you should write.
 
-Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase. The grammar exists in different flavours for many [[spoken languages]] (37 at the time of writing), so that your team can use the keywords in your own language.
+Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber codebase. The grammar exists in different flavours for many [[spoken languages]] (60 at the time of writing), so that your team can use the keywords in your own language.
 
 There are a few conventions.
 
