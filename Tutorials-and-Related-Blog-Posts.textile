@@ -3,6 +3,7 @@ Here is a list of Cucumber related blog posts/tutorials.  Please keep in mind th
 Please add any helpful blog posts that you have found or written about all things Cucumber. Also see [[Related Tools]].
 
 |*Post*|*Description*|*Posting Date*|
+| "Getting Started with Cucumber and CircleCI":https://circleci.com/blog/getting-started-with-cucumber-on-circleci/ | Behavior Driven Deployment and Continuous Integration | March 17 2017 |
 | "Cucumber Anti-Patterns":http://www.thinkcode.se/blog/2016/06/22/cucumber-antipatterns | Ant-pattern commonly found when using Cucumber | June 22 2016 |
 | "Gradle and Cucumber-JVM":http://www.thinkcode.se/blog/2015/12/26/gradle-and-cucumberjvm | Running Cucumber-JVM with Gradle | December 26 2015 |
 | "Cucumber-JVM Hello world with Gradle!":http://www.thinkcode.se/blog/2014/08/24/cucumberjvm-hello-world-with-gradle | Running Cucumber-JVM with Gradle | August 24 2014 |
