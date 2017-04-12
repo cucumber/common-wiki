@@ -11,7 +11,7 @@ Examples:
 |Men in Black|PG-13 |`
 
 `Given I am on the Invoice window`
-##When
+## When
 The **When** keyword specifies an action performed by the user in the given starting condition. It can involve following a link, clicking a button etc.
 
 Examples:
@@ -21,7 +21,7 @@ Examples:
 `When I press the "Find Movie" button`
 
 `When I fill the quantity with 5`
-##Then
+## Then
 The **Then** keyword defines the expected behaviour, i.e. what should happen when those conditions are met and this action is performed.
 
 Examples:
