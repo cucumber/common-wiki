@@ -1,4 +1,4 @@
-Communication within a team always works better when people can use their spoken language. Cucumber supports over [60 spoken languages](https://github.com/cucumber/gherkin3/blob/master/gherkin-languages.json) and the number is steadily growing. This is Norwegian:
+Communication within a team always works better when people can use their spoken language. Cucumber supports over [60 spoken languages](https://github.com/cucumber/cucumber/blob/master/gherkin/gherkin-languages.json) and the number is steadily growing. This is Norwegian:
 
 ```gherkin
 # language: no
@@ -37,7 +37,7 @@ For example Russian:
 It's easy! 
 
 * Make a [fork](https://help.github.com/articles/fork-a-repo/) of [Gherkin3](http://github.com/cucumber/gherkin3)
-* Add your language's keywords to [gherkin-languages.json](https://github.com/cucumber/gherkin3/blob/master/gherkin-languages.json)
+* Add your language's keywords to [gherkin-languages.json](https://github.com/cucumber/cucumber/blob/master/gherkin/gherkin-languages.json)
 * Commit and push your changes - then send a [pull request](https://help.github.com/articles/using-pull-requests/).
 
 That's it! When a new release of gherkin is made you can specify in a <code># language: xx</code> header in your feature files.
