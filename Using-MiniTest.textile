@@ -21,7 +21,9 @@ end
 
 Or, if that causes problems, try:
 
-`World(MultiTest::MinitestWorld)`
+```ruby
+World(MultiTest::MinitestWorld)
+```
 
 h3. Older versions
 
