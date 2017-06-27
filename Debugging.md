@@ -1,3 +1,5 @@
+# Ruby
+
 Adding the following as the contents of `features/support/debugging.rb` can be helpful in debugging failing steps:
 ```ruby
 # rubocop:disable Lint/Debugger
@@ -112,3 +114,22 @@ def loop_until_jquery_inactive
 end
 ```
 By setting an environment variable, you can cause Cucumber to use various debugging tools, and you can combine them by setting multiple environment variables.
+
+# Cucumber-JVM
+
+Here is how to debug your scenarios on the JVM, by stepping through the steps of each scenario:
+
+1. Set a conditional breakpoint in the method `cucumber.runtime.Utils#invoke`, at the line `return targetMethod.invoke(target, args)` (line 40 in `cucumber-jvm` v1.2.5) and specify the following snippet as the condition (see also [https://www.jetbrains.com/help/idea/2017.1/breakpoints-2.html](https://www.jetbrains.com/help/idea/2017.1/breakpoints-2.html) for more details on how to set one on IDEA):
+
+        Package pkg = target.getClass().getPackage();
+        if (pkg == null) {
+            return false;
+        }
+        return !target.getClass().getPackage().getName().startsWith("cucumber");
+ 
+2. Run your [RunCukesTest](https://github.com/cucumber/cucumber-java-skeleton/blob/master/src/test/java/skeleton/RunCukesTest.java) in debug mode
+3. Assuming you haven't set any other breakpoints, the execution will stop at `Utils#invoke`
+4. Now you can either:
+   - _Step into_ to start debugging the method implementing the first step of the scenario
+   - Or _Resume_ the execution to run the current step and jump to the next one
+5. And so on..
