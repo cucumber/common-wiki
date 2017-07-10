@@ -40,7 +40,7 @@ Features and Step definitions:
 # [[Feature Coupled Step Definitions (Antipattern)]]
 
 Other:
-# [[A Whole New World]]
+# [[Configuring the Scenario Execution Context (World)]]
 # [[Console Colours]]
 # [[Cucumber Feature]]
 # [[cucumber.yml]]
