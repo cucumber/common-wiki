@@ -1,7 +1,7 @@
 Got questions? Here is where you can get in touch:
 
 * "Cucumber on Gitter":https://gitter.im/cucumber/
-       ** (Chat moved to Gitter) "IRC":irc://irc.freenode.net/cucumber ("log":http://irclogger.com/cucumber/)
+       ** (Chat moved to Gitter) -"IRC":irc://irc.freenode.net/cucumber ("log":http://irclogger.com/cucumber/)-
 * "Mailing list (Google Groups)":http://groups.google.com/group/cukes
 * "Github Issues":http://github.com/cucumber/cucumber/issues/ (Bug reports, feature requests, patches)
 * "Twitter":http://search.twitter.com/search?q=%23cucumber
