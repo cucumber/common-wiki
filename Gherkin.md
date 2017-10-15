@@ -9,7 +9,7 @@ There are a few conventions.
 * Single Gherkin source file contains a description of a single feature. 
 * Source files have @.feature@ extension.
 
-h2. Gherkin Syntax
+## Gherkin Syntax
 
 Like Python and YAML, Gherkin is a line-oriented language that uses indentation to define structure. Line endings terminate statements (eg, steps). Either spaces or tabs may be used for indentation (but spaces are more portable). Most lines start with a keyword.
 
