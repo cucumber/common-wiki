@@ -1,4 +1,4 @@
-Gherkin is the language that Cucumber understands. It is a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html that lets you describe software's behaviour without detailing how that behaviour is implemented. 
+Cucumber understands the language Gherkin. It is a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html that lets you describe software's behaviour without detailing how that behaviour is implemented. 
 
 Gherkin serves two purposes — documentation and automated tests. The third is a bonus feature — when it yells in red it's talking to you, telling you what code you should write.
 
