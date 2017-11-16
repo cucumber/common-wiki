@@ -47,7 +47,7 @@ and so on ...
 
 ### Cucumber JSON data for Language
 
-**You can find all translation of Gherkin here**: https://github.com/cucumber/gherkin3/blob/master/gherkin-languages.json
+**You can find all translation of Gherkin here**: https://github.com/cucumber/cucumber/blob/master/gherkin/gherkin-languages.json
 
 
 ### JSON data for French Language
