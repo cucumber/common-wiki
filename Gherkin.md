@@ -1,4 +1,4 @@
-Cucumber understands the language Gherkin. It is a "Business Readable, Domain Specific Language":http://martinfowler.com/bliki/BusinessReadableDSL.html that lets you describe software's behaviour without detailing how that behaviour is implemented. 
+Cucumber understands the language Gherkin. It is a [Business Readable, Domain Specific Language](https://martinfowler.com/bliki/BusinessReadableDSL.html) that lets you describe software's behaviour without detailing how that behaviour is implemented. 
 
 Gherkin serves two purposes — documentation and automated tests. The third is a bonus feature — when it yells in red it's talking to you, telling you what code you should write.
 
@@ -7,13 +7,13 @@ Gherkin's grammar is defined in the Treetop grammar that is part of the Cucumber
 There are a few conventions.
 
 * Single Gherkin source file contains a description of a single feature. 
-* Source files have @.feature@ extension.
+* Source files have `.feature` extension.
 
 ## Gherkin Syntax
 
 Like Python and YAML, Gherkin is a line-oriented language that uses indentation to define structure. Line endings terminate statements (eg, steps). Either spaces or tabs may be used for indentation (but spaces are more portable). Most lines start with a keyword.
 
-Comment lines are allowed anywhere in the file. They begin with zero or more spaces, followed by a hash sign (@#@) and some amount of text.
+Comment lines are allowed anywhere in the file. They begin with zero or more spaces, followed by a hash sign (`#`) and some amount of text.
 
 The parser divides the input into features, scenarios and steps.  When you run the feature the trailing portion (after the keyword) of each step is matched to a Ruby code block called [[Step Definitions|step definitions]].
 
