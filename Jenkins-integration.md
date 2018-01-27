@@ -5,8 +5,8 @@ https://github.com/jenkinsci/cucumber-reports-plugin
 
 Overview Page:
 
-![jenkins cucumber report](https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java/raw/master/.README/feature-overview.png)
+![jenkins cucumber report](https://raw.githubusercontent.com/damianszczepanik/cucumber-reporting/master/.README/feature-overview.png)
 
 Report Page:
 
-![jenkins cucumber report](https://github.com/masterthought/jenkins-cucumber-jvm-reports-plugin-java/raw/master/.README/feature-passed.png)
+![jenkins cucumber report](https://github.com/damianszczepanik/cucumber-reporting/raw/master/.README/feature-passed.png)
