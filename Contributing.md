@@ -1,1 +1,1 @@
-This page has [moved](https://docs.cucumber.io/community/contributing/)
+[This page has moved](https://docs.cucumber.io/community/contributing/).
