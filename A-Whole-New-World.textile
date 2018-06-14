@@ -1,1 +1,2 @@
-The content of this page was moved to [[Configuring the Scenario Execution Context (World)]].
+[The content of this page was moved](https://docs.cucumber.io/cucumber/state/#world-object).
+
