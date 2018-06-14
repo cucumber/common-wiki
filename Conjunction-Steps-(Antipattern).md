@@ -1,0 +1,1 @@
+[This page has moved](https://docs.cucumber.io/guides/anti-patterns/#conjunction-steps).
