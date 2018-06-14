@@ -1,1 +1,1 @@
-#REDIRECT: [[Cucumber-JVM]]
+[This page has moved](https://docs.cucumber.io/installation/jruby/)
