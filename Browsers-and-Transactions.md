@@ -1,0 +1,1 @@
+[This page was moved](https://docs.cucumber.io/cucumber/state/#turn-of-transactions).
