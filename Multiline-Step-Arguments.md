@@ -1,1 +1,1 @@
-The contents from this page has been migrated to the [new cucumber documentation site](https://cucumber.io/docs/reference#step-arguments)
+[This page has moved](https://docs.cucumber.io/gherkin/reference/#step-arguments).
