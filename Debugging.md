@@ -1,6 +1,9 @@
 # Ruby
 
+(The code given below calls on [the logging facilities of Ruby on Rails](https://guides.rubyonrails.org/debugging_rails_applications.html#the-logger). If you're not using Rails, replace those calls with `puts` or `warn`.)
+
 Adding the following as the contents of `features/support/debugging.rb` can be helpful in debugging failing steps:
+
 ```ruby
 # rubocop:disable Lint/Debugger
 class CucumberCounters
