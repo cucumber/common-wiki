@@ -29,6 +29,8 @@ Available events are:
 
 In each case, the event object is passed into the block in <code>config.on_event</code>. Each event object belongs to an event class corresponding to the specific event in question, e.g., <code>Cucumber::Events::TestRunStarted</code>, <code>Cucumber::Events::GherkinSourceRead</code>, etc. Depending on the event, different objects are accessible through methods called on the event object. For instance, for the <code>Cucumber::Events::GherkinSourceRead</code> event, the Gherkin body is available using the <code>#body</code> method, and for the <code>Cucumber::Events::TestCaseStarted</code> event, the individual test cases (scenarios) are available via the <code>#test_cases</code> method.
 
+Once you've written your custom formatter, you can use it by running <code>cucumber --format CustomFormatter</code>, assuming <code>CustomFormatter</code> is in the <code>features/support</code> directory.
+
 h2. Deprecated API
 
 The older formatter API has been deprecated and will be removed in Cucumber 4. For reference purposes, we will continue to provide an overview of this here; however, you are advised to update any custom formatters to use the newer API described above.
