@@ -16,6 +16,19 @@ class CustomFormatter
 end
 ```
 
+Available events are:
+* `test_case_started`
+* `test_case_finished`
+* `test_step_started`
+* `test_step_finished`
+* `step_definition_registered`
+* `step_activated`
+* `test_run_started`
+* `test_run_finished`
+* `gherkin_source_read`
+
+In each case, the event object is passed into the block in `config.on_event`. Each event object belongs to an event class corresponding to the specific event in question, e.g., `Cucumber::Events::TestRunStarted`, `Cucumber::Events::GherkinSourceRead`, etc. Depending on the event, different objects are accessible through methods called on the event object. For instance, for the `Cucumber::Events::GherkinSourceRead` event, the Gherkin body is available using the `#body` method, and for the `Cucumber::Events::TestCaseStarted` event, the individual test cases (features) are available via the `#test_cases` method.
+
 h2. Deprecated API
 
 The older formatter API has been deprecated and will be removed in Cucumber 4. For reference purposes, we will continue to provide an overview of this here; however, you are advised to update any custom formatters to use the newer API described above.
