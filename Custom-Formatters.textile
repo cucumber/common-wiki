@@ -1,4 +1,25 @@
-As Cucumber runs your features, it calls out to any number of listener objects to let them know how it's progressing. These listeners are notified at various points throughout the run of features. You can visualise this by using the 'debug' formatter. For example, take this simple scenario in Cucumber's own test suite:
+As Cucumber runs your features, it calls out to any number of listener objects to let them know how it's progressing. These listeners are notified at various points throughout the run of features.
+
+To create a custom formatter, you will need to write a class and configure it to respond to certain events, as shown:
+```ruby
+class CustomFormatter
+  attr_reader :io
+
+  def initialize(config)
+    @io = config.out_stream
+
+    config.on_event :test_run_started do |event|
+      feature = event.test_cases.first.source.first
+      io.puts feature.short_name.upcase
+    end
+  end
+end
+```
+
+## Deprecated API ##
+The older formatter API has been deprecated and will be removed in Cucumber 4. For reference purposes, we will continue to provide an overview of this here; however, you are advised to update any custom formatters to use the newer API described above.
+
+For an example of the older API, take this simple scenario in Cucumber's own test suite:
 
 <pre>
 $ head -7 examples/self_test/features/sample.feature
