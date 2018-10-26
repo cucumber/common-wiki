@@ -27,7 +27,7 @@ Available events are:
 * test_run_finished
 * gherkin_source_read
 
-In each case, the event object is passed into the block in <code>config.on_event</code>. Each event object belongs to an event class corresponding to the specific event in question, e.g., <code>Cucumber::Events::TestRunStarted</code>, <code>Cucumber::Events::GherkinSourceRead</code>, etc. Depending on the event, different objects are accessible through methods called on the event object. For instance, for the <code>Cucumber::Events::GherkinSourceRead</code> event, the Gherkin body is available using the <code>#body</code> method, and for the <code>Cucumber::Events::TestCaseStarted</code> event, the individual test cases (features) are available via the <code>#test_cases</code> method.
+In each case, the event object is passed into the block in <code>config.on_event</code>. Each event object belongs to an event class corresponding to the specific event in question, e.g., <code>Cucumber::Events::TestRunStarted</code>, <code>Cucumber::Events::GherkinSourceRead</code>, etc. Depending on the event, different objects are accessible through methods called on the event object. For instance, for the <code>Cucumber::Events::GherkinSourceRead</code> event, the Gherkin body is available using the <code>#body</code> method, and for the <code>Cucumber::Events::TestCaseStarted</code> event, the individual test cases (scenarios) are available via the <code>#test_cases</code> method.
 
 h2. Deprecated API
 
