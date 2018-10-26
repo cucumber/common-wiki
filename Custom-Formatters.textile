@@ -9,8 +9,8 @@ class CustomFormatter
     @io = config.out_stream
 
     config.on_event :test_case_started do |event|
-      feature = event.test_cases.first.source.first
-      io.puts feature.short_name.upcase
+      feature = event.test_cases.first.feature
+      io.puts feature.name.upcase
     end
   end
 end
