@@ -17,6 +17,7 @@ end
 ```
 
 h2. Deprecated API
+
 The older formatter API has been deprecated and will be removed in Cucumber 4. For reference purposes, we will continue to provide an overview of this here; however, you are advised to update any custom formatters to use the newer API described above.
 
 For an example of the older API, take this simple scenario in Cucumber's own test suite:
