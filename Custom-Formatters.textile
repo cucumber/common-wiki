@@ -8,7 +8,7 @@ class CustomFormatter
   def initialize(config)
     @io = config.out_stream
 
-    config.on_event :test_run_started do |event|
+    config.on_event :test_case_started do |event|
       feature = event.test_cases.first.source.first
       io.puts feature.short_name.upcase
     end
