@@ -1,1 +1,1 @@
-Information on custom formatters may be found [in the docs](http://docs.cucumber.io/cucumber/reporting#custom-formatters).
+Information on custom formatters may be found "in the docs":http://docs.cucumber.io/cucumber/reporting/#custom-formatters.
