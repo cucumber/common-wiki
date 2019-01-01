@@ -1,3 +1,11 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
 You can also use "minitest":https://github.com/seattlerb/minitest <code>assert</code> methods by defining your own "World":a-whole-new-world block:
 
 h3. Minitest 5
