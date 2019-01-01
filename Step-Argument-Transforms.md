@@ -1,3 +1,11 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
 Step argument transforms help your step definitions be more by DRY by allowing you to refactor common operations that you perform on step definition arguments.  Before each match captured by a step definition is yielded as an argument to the step definition block, an attempt is made to match them against registered @Transform@ objects.  If one of those captured matches match the regular expression of one of a @Transform@ objects, its original string value is replaced with the result of what the @Transform@ block yields.
 
 
