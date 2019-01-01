@@ -1,4 +1,12 @@
-WARNING: FunFX is defunkt. Check out "Melomel":http://melomel.info/ instead.
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
+**WARNING: FunFX is defunkt.** Check out "Melomel":http://melomel.info/ instead.
 
 "FunFX":http://wiki.github.com/peternic/funfx is a Watir / SafariWatir / FireWatir extension that lets you talk to an "Adobe Flex":http://www.adobe.com/products/flex/ application straight from Ruby. It works wonderfully with Cucumber. Here is an example to get you started:
 
