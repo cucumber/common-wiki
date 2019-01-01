@@ -1,3 +1,12 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
+
 Cucumber uses Cucumber. All new features and bug fixes should have a corresponding Cucumber feature on a separate Git branch. This is important if you are [[contributing]] or reporting a bug.
 
 *Important:* If you are working on something Ruby on Rails related, please write your features in the "Cucumber Rails":http://github.com/cucumber/cucumber-rails project.
