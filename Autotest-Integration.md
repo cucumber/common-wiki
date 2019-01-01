@@ -1,8 +1,8 @@
-**Note:** This wiki is scheduled to be **[removed](https://github.com/cucumber/docs.cucumber.io/issues/144).**
+[The documentation has moved](https://docs.cucumber.io/).
 
-**Please check out the [current Cucumber documentation](https://docs.cucumber.io/).**
+Please do not make further edits to this Wiki.
 
-If this page contains information that is useful to you, please consider adding it to the [docs project on GitHub](https://github.com/cucumber/docs.cucumber.io).
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
 
 ===================================================================
 
