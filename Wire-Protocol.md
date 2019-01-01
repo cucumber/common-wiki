@@ -1,3 +1,11 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
 Cucumber supports a wire protocol that allows it to invoke step definitions implemented on any platform. 
 
 To use the wire protocol, you install Cucumber and write and run your features as you normally would, but instead of writing Step Definition files in Ruby or another supported programming language, you write a simple .wire file (using the YAML format), which tells Cucumber where to find your step definitions:
