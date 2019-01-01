@@ -1,3 +1,13 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
+
+
 h2. Or: How I Learned to Stop Worrying and <strike>Love Testing</strike> Start Behaving
 
 h3. Introduction
