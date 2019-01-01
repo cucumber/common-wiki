@@ -1,3 +1,11 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
 Cucumber not ripe? Can't find your peeler? These are some common problems people have experienced. -And how to address them.
 
 h2. Console output isn't right on Windows
