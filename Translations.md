@@ -1,3 +1,12 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
+
 ## To see Listing of available languages
 
     > cucumber --i18n help
