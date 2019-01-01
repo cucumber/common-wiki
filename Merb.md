@@ -1,3 +1,12 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
+
 h2. Install
 
 Cucumber can be used with "Merb":http://merbivore.com/ via the "merb_cucumber":http://github.com/roman/merb_cucumber plugin.
