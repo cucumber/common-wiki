@@ -1,3 +1,12 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
+
 A draft list of useful Cucumber patterns:
 * XPath Sections
 ** Description: ability to scope an inspection or webrat step to a part of the html.
