@@ -1,4 +1,4 @@
-**Note:** This wiki is scheduled to be **[removed](https://github.com/cucumber/docs.cucumber.io/issues/144).**
+**Note: This wiki is scheduled to be [removed](https://github.com/cucumber/docs.cucumber.io/issues/144).**
 
 **Please check out the [current Cucumber documentation](https://docs.cucumber.io/).**
 
