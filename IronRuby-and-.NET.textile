@@ -1,3 +1,11 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
 *{color: red}This guide is outdated*. See The most recent IronRuby articles in [[Tutorials and related blog posts]].
 
 Developing in .NET? You can use Cucumber with IronRuby. You need both IronRuby and MRI (Matz Ruby Interpreter).
