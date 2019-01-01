@@ -1,3 +1,11 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
 h2. Cucumber-Sinatra Generator
 
 The "Cucumber-Sinatra":http://github.com/bernd/cucumber-sinatra gem will generate a <code>features</code> directory structure and <code>features/support/env.rb</code> in your Sinatra project pre-configured for testing with Cucumber, "RSpec":http://github.com/dchelimsky/rspec, and "Capybara":http://github.com/jnicklas/capybara.
