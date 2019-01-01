@@ -1,3 +1,8 @@
+This wiki is scheduled to be [removed](https://github.com/cucumber/docs.cucumber.io/issues/144).
+Please check out the current [Cucumber docs](https://docs.cucumber.io/).
+
+
+
 *{color:red}Warning: autotest plugin seems to not work with --drb (spork). See "lighthouse ticket":https://rspec.lighthouseapp.com/projects/16211-cucumber/tickets/365-cucumber-out-option-does-not-worj-with-drb for details.*
 
 Cucumber comes with an autotest plugin that will hook into the regular autotest cycle to run the features after the tests/specs.  The plugin is disabled by default but can be turned on by setting the AUTOFEATURE environment variable to 'true'.  For example:
