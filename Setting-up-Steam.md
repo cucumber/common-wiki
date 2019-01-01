@@ -1,4 +1,10 @@
-"Steam":http://github.com/svenfuchs/steam is a set of ruby bindings to Java's HtmlUnit which allows you to run webrat-style step definitions against code which relies on javascript to work. It is similar to celerity/culerity but doesn't require an extra process as it is able to run inline thanks to RJB.
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+==================================================================="Steam":http://github.com/svenfuchs/steam is a set of ruby bindings to Java's HtmlUnit which allows you to run webrat-style step definitions against code which relies on javascript to work. It is similar to celerity/culerity but doesn't require an extra process as it is able to run inline thanks to RJB.
 
 The easiest way to setup cucumber for steam is to use separate profiles for javascript tests and non-javascript tests.
 
