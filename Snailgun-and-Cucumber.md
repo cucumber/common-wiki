@@ -1,3 +1,11 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
 *N.B. Snailgun's functionality overlaps significantly with [[Spork and --drb]]. You may wish to try them both out and see which works for you.*
 
 snailgun drastically reduces the startup time of each test run, by preloading a process with Rails and your chosen gems, and then forking it for each run so that only your application files are loaded. Note that it only works under Unix/Linux systems.
