@@ -1,3 +1,13 @@
+[The documentation has moved](https://docs.cucumber.io/).
+
+Please do not make further edits to this Wiki.
+
+**Note:** If this page contains information that is useful to you, please consider adding it to the docs project on GitHub.
+
+===================================================================
+
+
+
 Cucumber loves Mono.
 
 h2. Install Mono
